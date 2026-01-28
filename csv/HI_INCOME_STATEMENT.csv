@@ -1,0 +1,46 @@
+line_number,item_description,mdrm_code,call_mdrm,category,reconciliation,start_date,notes
+1,Interest income,BHCT4107,RIAD4107,Interest Income,Sum of 1.a-1.f,1976-03-31,Total interest and fee income
+1.a,Interest and fees on loans,BHCK4010,RIAD4010,Interest Income - Loans,Component of Item 1,1976-03-31,
+1.b,Interest income on balances due,BHCK4115,RIAD4115,Interest Income - Balances,Component of Item 1,1976-03-31,
+1.c,Interest on securities,BHCK4107,RIAD4107,Interest Income - Securities,Component of Item 1,1976-03-31,
+1.c.(1),US Treasury/Agency,BHCKB488,RIADB488,Interest Income - Treasury,Component of Item 1.c,1997-03-31,
+1.c.(2),MBS,BHCKB489,RIADB489,Interest Income - MBS,Component of Item 1.c,1997-03-31,
+1.c.(3),Other securities,BHCK4060,RIAD4060,Interest Income - Other Sec,Component of Item 1.c,1976-03-31,
+1.d,Interest on federal funds sold,BHCK4020,RIAD4020,Interest Income - Fed Funds,Component of Item 1,1976-03-31,
+1.e,Interest on trading assets,BHCK4069,RIAD4069,Interest Income - Trading,Component of Item 1,1995-03-31,
+1.f,Other interest income,BHCKB570,RIADB570,Interest Income - Other,Component of Item 1,1997-03-31,
+2,Interest expense,BHCT4073,RIAD4073,Interest Expense,Sum of 2.a-2.e,1976-03-31,Total interest expense
+2.a,Interest on deposits,BHCK4170,RIAD4170,Interest Expense - Deposits,Component of Item 2,1976-03-31,
+2.b,Interest on fed funds purchased,BHCK4180,RIAD4180,Interest Expense - Fed Funds,Component of Item 2,1976-03-31,
+2.c,Interest on trading liabilities,BHCK4185,RIAD4185,Interest Expense - Trading,Component of Item 2,1995-03-31,
+2.d,Interest on borrowed money,BHCK4200,RIAD4200,Interest Expense - Borrowings,Component of Item 2,1976-03-31,
+2.e,Interest on subordinated debt,BHCK4190,RIAD4190,Interest Expense - Sub Debt,Component of Item 2,1976-03-31,
+3,Net interest income,BHCT4074,RIAD4074,NII,Item 1 minus Item 2,1976-03-31,Key profitability metric
+4,Provision for loan and lease losses,BHCT4230,RIAD4230,Provision,N/A,1976-03-31,Credit cost
+5,Net interest income after provision,BHCT4433,RIAD4433,NII after Provision,Item 3 minus Item 4,1976-03-31,
+6,Noninterest income,BHCT4079,RIAD4079,Noninterest Income,Sum of 6.a-6.i,1976-03-31,Fee and other income
+6.a,Service charges on deposits,BHCK4080,RIAD4080,NIR - Service Charges,Component of Item 6,1976-03-31,
+6.b,Trading revenue,BHCKA220,RIADA220,NIR - Trading,Component of Item 6,2001-03-31,Mark-to-market gains/losses
+6.c,Fees from fiduciary activities,BHCK4070,RIAD4070,NIR - Fiduciary,Component of Item 6,1976-03-31,Trust and asset management
+6.d,Investment banking fees,BHCKC886,RIADC886,NIR - Investment Banking,Component of Item 6,2001-03-31,Underwriting; M&A advisory
+6.e,Venture capital revenue,BHCKB491,RIADB491,NIR - VC,Component of Item 6,1997-03-31,
+6.f,Net servicing fees,BHCKB492,RIADB492,NIR - Servicing,Component of Item 6,1997-03-31,Mortgage and other servicing
+6.g,Securitization income,BHCKB493,RIADB493,NIR - Securitization,Component of Item 6,1997-03-31,Gain on sale
+6.h,Insurance commissions and fees,BHCK4840,RIAD4840,NIR - Insurance,Component of Item 6,1997-03-31,
+6.i,Other noninterest income,BHCK4076,RIAD4076,NIR - Other,Component of Item 6,1976-03-31,
+7,Noninterest expense,BHCT4093,RIAD4093,Noninterest Expense,Sum of 7.a-7.g,1976-03-31,Operating costs
+7.a,Salaries and employee benefits,BHCK4135,RIAD4135,NIE - Compensation,Component of Item 7,1976-03-31,Largest expense category
+7.b,Occupancy expense,BHCK4217,RIAD4217,NIE - Occupancy,Component of Item 7,1976-03-31,
+7.c,Premises and equipment,BHCKF556,RIADF556,NIE - Equipment,Component of Item 7,2007-03-31,
+7.d,Amortization of intangibles,BHCKC232,RIADC232,NIE - Amortization,Component of Item 7,2002-03-31,
+7.e,OREO expense,BHCK4230,RIAD4230,NIE - OREO,Component of Item 7,1976-03-31,Foreclosed property costs
+7.f,FDIC assessment,BHCK4146,RIAD4146,NIE - FDIC,Component of Item 7,1976-03-31,Deposit insurance premium
+7.g,Other noninterest expense,BHCK4092,RIAD4092,NIE - Other,Component of Item 7,1976-03-31,
+8,Income before taxes,BHCT4301,RIAD4301,Pre-Tax Income,Item 5 + Item 6 - Item 7,1976-03-31,
+9,Income tax expense,BHCT4302,RIAD4302,Taxes,N/A,1976-03-31,
+10,Income before extraordinary items,BHCT4303,RIAD4303,Income Cont Ops,Item 8 minus Item 9,1976-03-31,
+11,Extraordinary items (net of tax),BHCK4320,RIAD4320,Extraordinary,N/A,1976-03-31,Discontinued since 2015
+12,Net income,BHCT4340,RIAD4340,Net Income,Item 10 + Item 11,1976-03-31,Bottom line
+M1,Cash dividends declared on common stock,BHCK4460,RIAD4460,Memorandum - Dividends,-,1976-03-31,
+M2,Cash dividends declared on preferred stock,BHCK4461,RIAD4461,Memorandum - Dividends,-,1976-03-31,
+M3,Trading revenue by product type,-,-,Memorandum - Trading,-,2001-03-31,See HI-M

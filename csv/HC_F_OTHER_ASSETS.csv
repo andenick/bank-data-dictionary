@@ -1,0 +1,20 @@
+line_number,item_description,mdrm_code,call_mdrm,category,ties_to_hc_line,start_date,notes
+1,Accrued interest receivable,BHCTB556,RCFDB556,Other Assets - Interest,HC Item 11,1984-03-31,Interest earned but not yet collected
+2,Net deferred tax assets,BHCT2148,RCFD2148,Other Assets - Tax,HC Item 11,1993-03-31,Deductible temporary differences
+3,Interest-only strips receivable (non-mortgage),BHCKC976,RCFDC976,Other Assets - Strips,HC Item 11,2001-03-31,IO strips from non-mortgage securitizations
+4,Equity investments without readily determinable FV,BHCK1752,RCFD1752,Other Assets - Equity,HC Item 11,2018-03-31,FHLB stock; FRB stock; other
+5,Life insurance assets (BOLI),BHCK4659,RCFD4659,Other Assets - BOLI,HC Item 11,1994-03-31,Bank-owned life insurance cash surrender value
+6,Premises and fixed assets,BHCT2145,RCFD2145,Other Assets - Fixed,HC Item 6,1976-03-31,Also reported as HC Item 6
+7,Other real estate owned,BHCT2150,RCFD2150,Other Assets - OREO,HC Item 7,1976-03-31,Also reported as HC Item 7; foreclosed properties
+8,Investments in unconsolidated subsidiaries,BHCT2130,RCFD2130,Other Assets - Subs,HC Item 8,1976-03-31,Also reported as HC Item 8
+9,Direct and indirect investments in real estate ventures,BHCK5372,RCFD5372,Other Assets - RE,HC Item 9,1976-03-31,Also reported as HC Item 9
+10.a,Goodwill,BHCT3163,RCFD3163,Other Assets - Intangibles,HC Item 10.a,1976-03-31,Also reported as HC Item 10.a
+10.b,Other intangible assets,BHCTC752,RCFDC752,Other Assets - Intangibles,HC Item 10.b,2002-03-31,Also reported as HC Item 10.b; MSRs; core deposits; etc
+11,All other assets,BHCTB557,RCFDB557,Other Assets - Misc,HC Item 11,1984-03-31,Residual category
+12,Total other assets,BHCT2160,RCFD2160,Other Assets - Total,HC Item 11,1976-03-31,Equals HC Item 11; Sum of Items 1-11
+M1,Mortgage servicing assets from mortgages purchased,BHCK1651,RCFD1651,Memorandum - MSA,HC Item 10.b,1993-03-31,MSA component of Item 10.b
+M2,Mortgage servicing assets from mortgages sold with servicing retained,BHCK1652,RCFD1652,Memorandum - MSA,HC Item 10.b,1993-03-31,MSA component of Item 10.b
+M3,Total mortgage servicing assets,BHCKB027,RCFDB027,Memorandum - MSA,HC Item 10.b,2007-03-31,Sum of M1 and M2
+M4,Prepaid expenses,BHCKJF85,RCFDJF85,Memorandum - Prepaid,HC Item 11,2022-03-31,Component of Item 11
+M5,Accounts receivable,BHCKJF86,RCFDJF86,Memorandum - Receivables,HC Item 11,2022-03-31,Component of Item 11
+M6,Servicing assets for assets other than mortgages,BHCKJF87,RCFDJF87,Memorandum - Non-Mtg SA,HC Item 10.b,2022-03-31,Non-mortgage servicing rights

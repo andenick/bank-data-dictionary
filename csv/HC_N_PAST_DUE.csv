@@ -1,0 +1,33 @@
+line_number,loan_category,mdrm_30_89,mdrm_90_plus,mdrm_nonaccrual,category,ties_to_hc_c,start_date,notes
+1,Loans secured by real estate,BHCK5526,BHCK5527,BHCK3492,RE Loans Total,HC-C Item 1,1976-03-31,Total RE loans past due
+1.a,Construction and land development,BHCK2759,BHCK2769,BHCK3505,RE - Construction,HC-C Item 1.a,1991-03-31,ADC loans
+1.a.(1),1-4 family residential construction,BHCKF172,BHCKF174,BHCKF176,RE - Construction 1-4,HC-C Item 1.a.(1),2007-03-31,
+1.a.(2),Other construction,BHCKF173,BHCKF175,BHCKF177,RE - Construction Other,HC-C Item 1.a.(2),2007-03-31,
+1.b,Secured by farmland,BHCK3493,BHCK3494,BHCK3495,RE - Farmland,HC-C Item 1.b,1976-03-31,
+1.c,Revolving HELOCs,BHCK5398,BHCK5399,BHCK5400,RE - HELOC,HC-C Item 1.c,1991-03-31,
+1.d,Closed-end 1-4 family residential,BHCK5401,BHCK5402,BHCK3499,RE - 1-4 Family,HC-C Item 1.d,1991-03-31,
+1.d.(1),First liens,BHCKC236,BHCKC237,BHCKC229,RE - 1-4 First Lien,HC-C Item 1.d.(1),2007-03-31,
+1.d.(2),Junior liens,BHCKC238,BHCKC239,BHCKC230,RE - 1-4 Junior Lien,HC-C Item 1.d.(2),2007-03-31,
+1.e,Multifamily,BHCK3500,BHCK3501,BHCK3502,RE - Multifamily,HC-C Item 1.e,1976-03-31,
+1.f,Nonfarm nonresidential,BHCK3503,BHCK3504,BHCK5378,RE - CRE,HC-C Item 1.f,1976-03-31,
+1.f.(1),Owner-occupied,BHCKF178,BHCKF180,BHCKF182,RE - CRE Owner-Occ,HC-C Item 1.f.(1),2007-03-31,
+1.f.(2),Non-owner occupied,BHCKF179,BHCKF181,BHCKF183,RE - CRE Non-Owner,HC-C Item 1.f.(2),2007-03-31,
+2,Loans to depository institutions,BHCK5380,BHCK5381,BHCK5382,Interbank,HC-C Item 2,1991-03-31,
+3,Agricultural production loans,BHCK1594,BHCK1597,BHCK1583,Agricultural,HC-C Item 3,1976-03-31,
+4,Commercial and industrial loans,BHCK1606,BHCK1607,BHCK1608,C&I Loans,HC-C Item 4,1976-03-31,
+4.a,US addressees,BHCKF184,BHCKF186,BHCKF188,C&I - Domestic,HC-C Item 4.a,2007-03-31,
+4.b,Non-US addressees,BHCKF185,BHCKF187,BHCKF189,C&I - Foreign,HC-C Item 4.b,2007-03-31,
+5,Loans to individuals,BHCK5383,BHCK5384,BHCK5385,Consumer Total,HC-C Item 5,1991-03-31,
+5.a,Credit cards,BHCKB575,BHCKB576,BHCKB577,Consumer - CC,HC-C Item 5.a,2001-03-31,
+5.b,Other revolving,BHCK5386,BHCK5387,BHCK5388,Consumer - Revolving,HC-C Item 5.b,1991-03-31,
+5.c,Automobile loans,BHCKK206,BHCKK207,BHCKK208,Consumer - Auto,HC-C Item 5.c,2011-03-31,
+5.d,Other consumer,BHCKK209,BHCKK210,BHCKK211,Consumer - Other,HC-C Item 5.d,2011-03-31,
+6,Loans to foreign governments,BHCK5389,BHCK5390,BHCK5391,Sovereign,HC-C Item 6,1991-03-31,
+7,Municipal loans,BHCK5392,BHCK5393,BHCK5394,Municipal,HC-C Item 7,1991-03-31,
+8,Other loans,BHCK5459,BHCK5460,BHCK5461,Other Loans,HC-C Item 8,1991-03-31,
+9,Lease financing receivables,BHCK5395,BHCK5396,BHCK5397,Leases,HC-C Item 9,1991-03-31,
+10,Total loans and leases,BHCK5524,BHCK5525,BHCK1403,Total,HC-C Item 12,1976-03-31,Sum of all categories
+M1,Restructured troubled debt (TDR),BHCK5369,BHCK5370,BHCK5371,Memorandum - TDR,-,1991-03-31,TDRs in compliance
+M2,Loans 90+ days past due and still accruing,BHCK1407,BHCK1407,-,Memorandum - 90+,-,1976-03-31,
+M3,Total nonaccrual loans,-,-,BHCK1403,Memorandum - Nonaccrual,-,1976-03-31,
+M4,Loans to finance agricultural production guaranteed by USDA,BHCKF190,BHCKF191,BHCKF192,Memorandum - USDA,-,2007-03-31,

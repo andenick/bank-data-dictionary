@@ -1,0 +1,26 @@
+line_number,item_description,mdrm_code,call_mdrm,category,part,start_date,notes
+1.a,Outstanding principal balance of 1-4 family residential loans sold and securitized,BHCKB705,RCFDB705,Originator - 1-4 Family,Part I,2001-03-31,
+1.b,Outstanding principal balance of HELOCs sold and securitized,BHCKB706,RCFDB706,Originator - HELOC,Part I,2001-03-31,
+1.c,Outstanding principal balance of credit card receivables sold and securitized,BHCKB707,RCFDB707,Originator - Credit Card,Part I,2001-03-31,
+1.d,Outstanding principal balance of auto loans sold and securitized,BHCKB708,RCFDB708,Originator - Auto,Part I,2001-03-31,
+1.e,Outstanding principal balance of other consumer loans sold and securitized,BHCKB709,RCFDB709,Originator - Other Consumer,Part I,2001-03-31,
+1.f,Outstanding principal balance of C&I loans sold and securitized,BHCKB710,RCFDB710,Originator - C&I,Part I,2001-03-31,
+1.g,Outstanding principal balance of all other loans sold and securitized,BHCKB711,RCFDB711,Originator - Other,Part I,2001-03-31,
+2,Maximum amount of credit exposure from recourse or credit enhancement,BHCKB712,RCFDB712,Originator - Exposure,Part I,2001-03-31,Retained risk
+3.a,Past due 30-89 days - 1-4 family residential,BHCKB761,RCFDB761,Originator - Past Due,Part I,2001-03-31,
+3.b,Past due 90+ days - 1-4 family residential,BHCKB762,RCFDB762,Originator - Past Due,Part I,2001-03-31,
+4,Charge-offs on loans underlying securitizations (YTD),BHCKB763,RCFDB763,Originator - Chargeoffs,Part I,2001-03-31,
+5.a,AFS securities backed by 1-4 family residential,BHCKB764,RCFDB764,Investor - 1-4 Family,Part II,2001-03-31,
+5.b,AFS securities backed by HELOCs,BHCKB765,RCFDB765,Investor - HELOC,Part II,2001-03-31,
+5.c,AFS securities backed by credit card,BHCKB766,RCFDB766,Investor - Credit Card,Part II,2001-03-31,
+5.d,AFS securities backed by auto,BHCKB767,RCFDB767,Investor - Auto,Part II,2001-03-31,
+5.e,AFS securities backed by other consumer,BHCKB768,RCFDB768,Investor - Other Consumer,Part II,2001-03-31,
+5.f,AFS securities backed by C&I,BHCKB769,RCFDB769,Investor - C&I,Part II,2001-03-31,
+5.g,AFS securities backed by other,BHCKB770,RCFDB770,Investor - Other,Part II,2001-03-31,
+6,Total ABS held as investor,BHCKB771,RCFDB771,Investor - Total ABS,Part II,2001-03-31,
+7.a,Mortgages serviced for others - 1-4 family residential,BHCKB772,RCFDB772,Servicer - 1-4 Family,Part III,2001-03-31,Unpaid principal balance
+7.b,Mortgages serviced for others - other residential,BHCKB773,RCFDB773,Servicer - Other Resi,Part III,2001-03-31,
+7.c,Mortgages serviced for others - commercial,BHCKB774,RCFDB774,Servicer - Commercial,Part III,2001-03-31,
+8,Total mortgage servicing,BHCKB775,RCFDB775,Servicer - Total Mortgage,Part III,2001-03-31,Sum of Items 7
+M1,Credit enhancements to ABCP conduits,BHCKB806,RCFDB806,Memorandum - ABCP,Part I,2004-03-31,
+M2,Liquidity facilities to ABCP conduits,BHCKB807,RCFDB807,Memorandum - ABCP,Part I,2004-03-31,

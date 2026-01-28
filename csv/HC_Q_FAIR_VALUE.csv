@@ -1,0 +1,21 @@
+line_number,item_description,mdrm_total_fv,mdrm_level_1,mdrm_level_2,mdrm_level_3,category,ties_to_hc,start_date,notes
+1,Trading assets total,BHCLF688,BHCLF689,BHCLF690,BHCLF691,Assets - Trading,HC Item 5,2013-03-31,Total trading assets by level
+1.a,Debt securities,BHCLF692,BHCLF693,BHCLF694,BHCLF695,Assets - Trading Securities,HC-D Items 1-5,2013-03-31,
+1.b,Equity securities,BHCLF696,BHCLF697,BHCLF698,BHCLF699,Assets - Trading Equity,HC-D Item 9,2013-03-31,
+1.c,Derivative assets (trading),BHCLF700,BHCLF701,BHCLF702,BHCLF703,Assets - Derivatives,HC-D Item 11,2013-03-31,
+1.d,Loans,BHCLF704,BHCLF705,BHCLF706,BHCLF707,Assets - Trading Loans,HC-D Item 6,2013-03-31,
+2,AFS debt securities,BHCL1773,BHCLF709,BHCLF710,BHCLF711,Assets - AFS,HC Item 2.b,2013-03-31,AFS securities by level
+3,Loans held for sale,BHCLF712,BHCLF713,BHCLF714,BHCLF715,Assets - HFS,HC Item 4.a,2013-03-31,
+4,Loans held for investment at FV,BHCLF716,BHCLF717,BHCLF718,BHCLF719,Assets - HFI at FV,-,2013-03-31,FVO loans
+5,Derivative assets (non-trading),BHCLF720,BHCLF721,BHCLF722,BHCLF723,Assets - Hedges,HC-L,2013-03-31,Non-trading derivatives positive FV
+6,Other financial assets at FV,BHCLF724,BHCLF725,BHCLF726,BHCLF727,Assets - Other,-,2013-03-31,
+7,Trading liabilities total,BHCLF728,BHCLF729,BHCLF730,BHCLF731,Liabilities - Trading,HC Item 15,2013-03-31,Total trading liabilities by level
+7.a,Short positions,BHCLF732,BHCLF733,BHCLF734,BHCLF735,Liabilities - Shorts,HC-D Item 13,2013-03-31,
+7.b,Derivative liabilities (trading),BHCLF736,BHCLF737,BHCLF738,BHCLF739,Liabilities - Derivatives,HC-D Item 14,2013-03-31,
+8,Derivative liabilities (non-trading),BHCLF740,BHCLF741,BHCLF742,BHCLF743,Liabilities - Hedges,HC-L,2013-03-31,Non-trading derivatives negative FV
+9,Other financial liabilities at FV,BHCLF744,BHCLF745,BHCLF746,BHCLF747,Liabilities - Other,-,2013-03-31,
+M1,Intangible assets at FV,BHCLF748,BHCLF749,BHCLF750,BHCLF751,Memorandum - Intangibles,HC Item 10,2013-03-31,
+M2,MSAs,BHCLF752,-,-,BHCLF755,Memorandum - MSA,HC Item 10.b,2013-03-31,MSAs typically Level 3
+M3,Transfers into Level 3,BHCLF756,-,-,BHCLF756,Memorandum - Transfers,-,2013-03-31,During period
+M4,Transfers out of Level 3,BHCLF757,-,-,BHCLF757,Memorandum - Transfers,-,2013-03-31,During period
+M5,Unpaid principal balance of loans at FV,BHCKF760,-,-,-,Memorandum - UPB,-,2013-03-31,For FVO loans

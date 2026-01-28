@@ -1,0 +1,13 @@
+line_number,item_description,mdrm_code,call_mdrm,category,ties_to_hc_line,start_date,notes
+1,"Interest accrued and unpaid on deposits (in domestic offices)",BHCK4172,RCON4172,Other Liabilities - Interest,HC Item 20,1976-03-31,Accrued deposit interest
+1.a,Interest accrued on deposits in domestic offices,BHCK4172,RCON4172,Other Liabilities - Interest,HC Item 20,1976-03-31,
+1.b,Interest accrued on deposits in foreign offices,BHCKB557,RCFNB557,Other Liabilities - Interest,HC Item 20,1997-03-31,Foreign office deposit interest
+2,"Other expenses accrued and unpaid",BHCTB558,RCFDB558,Other Liabilities - Accrued,HC Item 20,1984-03-31,Accrued expenses payable
+3,Net deferred tax liabilities,BHCT3049,RCFD3049,Other Liabilities - Tax,HC Item 20,1993-03-31,Taxable temporary differences
+4,"Allowance for credit losses on off-balance sheet credit exposures",BHCKB559,RCFDB559,Other Liabilities - ACL OBS,HC Item 20,2001-03-31,Reserve for unfunded commitments
+5,All other liabilities,BHCTB560,RCFDB560,Other Liabilities - Misc,HC Item 20,1984-03-31,Residual category
+6,Total other liabilities,BHCT2930,RCFD2930,Other Liabilities - Total,HC Item 20,1976-03-31,Equals HC Item 20; Sum of Items 1-5
+M1,Accounts payable,BHCKJF88,RCFDJF88,Memorandum - AP,HC Item 20,2022-03-31,Component of Item 5
+M2,Operating lease liabilities,BHCKHW60,RCFDHW60,Memorandum - Leases,HC Item 20,2019-03-31,ASC 842 lease liability
+M3,Deferred compensation liabilities,BHCKJF89,RCFDJF89,Memorandum - Deferred Comp,HC Item 20,2022-03-31,Component of Item 5
+M4,Dividends declared but not yet payable,BHCKJF90,RCFDJF90,Memorandum - Dividends,HC Item 20,2022-03-31,Component of Item 5

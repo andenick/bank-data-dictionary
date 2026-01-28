@@ -1,0 +1,30 @@
+line_number,item_description,mdrm_afs_amortized_cost,mdrm_afs_fair_value,mdrm_htm_amortized_cost,mdrm_htm_fair_value,category,ties_to_hc_line,start_date,notes
+1,U.S. Treasury securities,BHCK1286,BHCK1287,BHCK0211,BHCK0213,Debt Securities - US Treasury,HC Item 2,1976-03-31,Safest asset class
+2,U.S. Government agency obligations (excluding MBS),BHCKJF77,BHCKJF78,BHCK1289,BHCK1290,Debt Securities - Agency,HC Item 2,1976-03-31,GNMA/FNMA/FHLMC non-MBS
+3.a,Residential MBS pass-through - GNMA,BHCKG300,BHCKG301,BHCKG303,BHCKG304,MBS - Residential Agency,HC Item 2,2011-03-31,Agency residential pass-through
+3.b,Residential MBS pass-through - FNMA/FHLMC,BHCKG308,BHCKG309,BHCKG311,BHCKG312,MBS - Residential Agency,HC Item 2,2011-03-31,Agency residential pass-through
+3.c,Other residential MBS (non-agency),BHCKG316,BHCKG317,BHCKG319,BHCKG320,MBS - Residential Non-Agency,HC Item 2,2011-03-31,Private label RMBS
+4.a,Commercial MBS - agency issued,BHCKK142,BHCKK143,BHCKK145,BHCKK146,MBS - Commercial Agency,HC Item 2,2011-03-31,Agency CMBS
+4.b,Commercial MBS - other (non-agency),BHCKK150,BHCKK151,BHCKK153,BHCKK154,MBS - Commercial Non-Agency,HC Item 2,2011-03-31,Private label CMBS
+5,Asset-backed securities,BHCKC026,BHCKC027,BHCK1737,BHCK1738,ABS,HC Item 2,1997-03-31,Auto ABS; credit card ABS; other
+5.a,ABS - Credit card receivables,BHCKB838,BHCKB839,BHCKB840,BHCKB841,ABS - Credit Card,HC Item 2,2011-03-31,
+5.b,ABS - Home equity lines,BHCKB842,BHCKB843,BHCKB844,BHCKB845,ABS - HELOC,HC Item 2,2011-03-31,
+5.c,ABS - Automobile loans,BHCKB846,BHCKB847,BHCKB848,BHCKB849,ABS - Auto,HC Item 2,2011-03-31,
+5.d,ABS - Other consumer loans,BHCKB850,BHCKB851,BHCKB852,BHCKB853,ABS - Other Consumer,HC Item 2,2011-03-31,
+5.e,ABS - Commercial and industrial loans,BHCKB854,BHCKB855,BHCKB856,BHCKB857,ABS - C&I,HC Item 2,2011-03-31,CLO tranches
+5.f,ABS - Other,BHCKB858,BHCKB859,BHCKB860,BHCKB861,ABS - Other,HC Item 2,2011-03-31,Student loans; equipment; etc
+6.a,Other debt securities - Domestic issuers,BHCK1739,BHCK1741,BHCK1742,BHCK1743,Debt Securities - Domestic Other,HC Item 2,1976-03-31,Corporate bonds; domestic
+6.b,Other debt securities - Foreign issuers,BHCK1744,BHCK1746,BHCK1747,BHCK1748,Debt Securities - Foreign Other,HC Item 2,1976-03-31,Corporate bonds; foreign
+7,Securities issued by states and political subdivisions,BHCK8496,BHCK8497,BHCK8498,BHCK8499,Municipal Securities,HC Item 2,1976-03-31,Tax-exempt munis
+8,Total,BHCT1772,BHCT1773,BHCT1754,BHCTJJ34,Total Securities,-,1976-03-31,Sum of Items 1-7
+M1,Pledged securities,BHCT0416,BHCT0416,BHCT0417,BHCT0417,Memorandum,HC Item 2,1976-03-31,Securities pledged as collateral
+M2.a,Structured financial products - Investment grade,BHCKC989,BHCKC989,-,-,Memorandum - SFP,HC Item 2,2009-03-31,CDOs; CLOs rated IG
+M2.b,Structured financial products - Below investment grade,BHCKC990,BHCKC990,-,-,Memorandum - SFP,HC Item 2,2009-03-31,CDOs; CLOs rated below IG
+M3,AOCI on AFS securities (pre-tax),BHCK8434,BHCK8434,-,-,Memorandum - AOCI,-,1998-03-31,Unrealized gains/losses in equity
+M4,Fair value of HTM that are callable,BHCKA510,BHCKA510,BHCKA511,BHCKA511,Memorandum - Callable,-,2002-03-31,
+M5,Equity securities with readily determinable FV,-,BHCTJJ32,-,-,Equity Securities,HC Item 2.c,2018-03-31,ASU 2016-01 FV through income
+M5.a,Equity securities - Mutual funds,BHCKJJ33,BHCKJJ33,-,-,Equity - Mutual Funds,HC Item 2.c,2018-03-31,
+M5.b,Equity securities - Other,BHCKJJ35,BHCKJJ35,-,-,Equity - Other,HC Item 2.c,2018-03-31,
+M6,Equity securities without readily determinable FV,BHCK1752,BHCK1752,-,-,Equity - No FV,HC-F Item 4,1976-03-31,FHLB/FRB stock; other
+M7,Securities with credit deterioration at acquisition,-,BHCKJF80,-,BHCKJF81,Memorandum - PCD,-,2020-03-31,CECL PCD assets
+M8,Total amortized cost of debt securities,BHCT1771,BHCT1771,BHCT1754,BHCT1754,Memorandum - Amortized Cost,-,2020-03-31,
