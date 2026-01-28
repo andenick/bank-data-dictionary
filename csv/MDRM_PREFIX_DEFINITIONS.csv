@@ -1,0 +1,15 @@
+prefix,form,scope,description,typical_use,consolidated,period,notes
+BHCK,FR Y-9C,BHC domestic operations only,Bank Holding Company domestic,HC schedules pre-2018,No,Point-in-time,Pre-2018 for items now split domestic/foreign
+BHCM,FR Y-9C,BHC domestic (post-2018 breakout),Bank Holding Company domestic office,HC schedules post-2018,No,Point-in-time,Introduced 2018 for domestic/foreign split items
+BHCT,FR Y-9C,BHC total consolidated,Bank Holding Company total,HC totals,Yes,Point-in-time,Primary prefix for consolidated totals
+BHCFA,FR Y-9C,BHC regulatory capital,Bank Holding Company capital items,HC-R schedule,Yes,Point-in-time,Schedule HC-R capital ratios
+BHCA,FR Y-9C,BHC risk-weighted assets,Bank Holding Company RWA,HC-R Part II,Yes,Point-in-time,Schedule HC-R RWA items
+BHCAP,FR Y-9C,BHC advanced approaches,Bank Holding Company advanced capital,HC-R advanced,Yes,Point-in-time,Basel III advanced approaches
+RCFD,Call Report,Bank full domestic,Bank domestic + foreign branches,RC schedules,Yes,Point-in-time,Most comprehensive bank-level view
+RCON,Call Report,Bank domestic offices only,Bank domestic offices only,RC schedules,No,Point-in-time,Excludes foreign branches/agencies
+RCFA,Call Report,Bank regulatory capital,Bank regulatory capital items,RC-R schedule,Yes,Point-in-time,Schedule RC-R capital ratios
+RCFN,Call Report,Bank foreign operations,Bank foreign offices only,RC schedules,No,Point-in-time,Foreign office items only
+RIAD,Call Report / FR Y-9C,Income and dividends,Income statement items,RI/HI schedules,Yes,Flow (YTD),Year-to-date income items
+UBPR,Uniform Bank Performance Report,Calculated ratios,UBPR-specific calculations,UBPR,-,Derived,Pre-calculated regulatory ratios
+UBPRE,Uniform Bank Performance Report,Earnings ratios,Earnings-based UBPR items,UBPR,-,Derived,
+UBPRM,Uniform Bank Performance Report,Management ratios,Management UBPR items,UBPR,-,Derived,

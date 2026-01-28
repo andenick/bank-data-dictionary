@@ -1,0 +1,19 @@
+entity_name,rssd_id,fdic_cert,lei,occ_charter,fed_district,gsib_bucket,gsib_surcharge,total_assets_2024Q4,primary_regulator,notes
+JPMORGAN CHASE & CO.,1039502,-,8I5DZWZKVSZI1NUHU748,-,2 - New York,4,3.5%,"$3,900B",Federal Reserve,Largest US BHC by assets
+JPMORGAN CHASE BANK NA,-,628,7H6GLXDRUGQFU57RNE97,8,2 - New York,-,-,"$3,400B",OCC,Lead bank subsidiary
+BANK OF AMERICA CORPORATION,1073757,-,9DJT3UXIJIZJI4WXO774,-,5 - Richmond,3,2.5%,"$3,300B",Federal Reserve,Second largest US BHC
+BANK OF AMERICA NA,-,3510,B4TYDEB6GKMZO031MB27,13044,5 - Richmond,-,-,"$2,500B",OCC,Lead bank subsidiary
+CITIGROUP INC.,1951350,-,6SHGI4ZSSLCXXQSBB395,-,2 - New York,3,2.5%,"$2,400B",Federal Reserve,
+CITIBANK NA,-,7213,E57ODZWZ7FF32TWEFA76,1461,2 - New York,-,-,"$1,700B",OCC,Lead bank subsidiary
+WELLS FARGO & COMPANY,1120754,-,PBLD0EJDB5FWOLXP3B76,-,12 - San Francisco,2,1.5%,"$1,900B",Federal Reserve,
+WELLS FARGO BANK NA,-,3511,KB1H1DSPRFMYMCUFXT09,1741,12 - San Francisco,-,-,"$1,700B",OCC,Lead bank subsidiary
+THE GOLDMAN SACHS GROUP INC.,2380443,-,784F5XWPLTWKTBV3E584,-,2 - New York,2,1.5%,"$1,700B",Federal Reserve,Investment bank focused
+GOLDMAN SACHS BANK USA,-,33124,KD3XUN7C6T14EZ2HEZ39,-,2 - New York,-,-,"$540B",NY State DFS (Fed member),State-chartered Fed member
+MORGAN STANLEY,2162966,-,IGJSJL3JD5P30I6NJZ34,-,2 - New York,2,1.5%,"$1,200B",Federal Reserve,Investment bank focused
+MORGAN STANLEY BANK NA,-,32992,4PQEDPD3FRDQL8YWXK02,24908,2 - New York,-,-,"$430B",OCC,
+THE BANK OF NEW YORK MELLON CORPORATION,3587146,-,WFLLPEPC7FZXENRZV188,-,2 - New York,1,1.0%,"$410B",Federal Reserve,Custody bank
+STATE STREET CORPORATION,1111435,-,549300ZFEEJ2IP5VME73,-,1 - Boston,1,1.0%,"$340B",Federal Reserve,Custody bank
+U.S. BANCORP,1119794,-,N1GZ7BBF3NP8GI976H15,-,9 - Minneapolis,0,0.0%,"$680B",Federal Reserve,Regional becoming national
+PNC FINANCIAL SERVICES GROUP INC.,1069778,-,CFGNEKW22840RUZQ5N05,-,4 - Cleveland,0,0.0%,"$560B",Federal Reserve,Super-regional
+TRUIST FINANCIAL CORPORATION,3242838,-,549300DRQQI75D2JP341,-,5 - Richmond,0,0.0%,"$530B",Federal Reserve,BB&T + SunTrust merger
+CAPITAL ONE FINANCIAL CORPORATION,2277860,-,ZUE8T73ROZOF6FLBAR73,-,5 - Richmond,0,0.0%,"$480B",Federal Reserve,Credit card focus

@@ -1,0 +1,31 @@
+line_number,item_description,mdrm_current,mdrm_legacy,category,asset_liability,start_date,end_date,reconciliation_parent,notes
+1,U.S. Treasury securities,BHCM3531,BHCK3531,Trading Assets - Securities,Asset,2008-03-31,9999-12-31,Item 12,Current MDRM for domestic+foreign; Pre-2018 domestic only
+2,U.S. Government agency and corporation obligations,BHCM3532,BHCK3532,Trading Assets - Securities,Asset,2008-03-31,9999-12-31,Item 12,Includes GNMA/FNMA/FHLMC non-MBS
+3,Securities issued by states and political subdivisions,BHCM3533,BHCK3533,Trading Assets - Securities,Asset,2008-03-31,9999-12-31,Item 12,Municipal bonds held for trading
+4.a.(1),Residential MBS pass-through securities - GNMA,BHCKK197,-,Trading Assets - MBS,Asset,2011-03-31,9999-12-31,Item 12,Agency residential MBS; Added Q1 2011
+4.a.(2),Residential MBS pass-through securities - FNMA/FHLMC,BHCKK198,-,Trading Assets - MBS,Asset,2011-03-31,9999-12-31,Item 12,Agency residential MBS; Added Q1 2011
+4.b,All other residential MBS,BHCKK199,-,Trading Assets - MBS,Asset,2011-03-31,9999-12-31,Item 12,Non-agency residential MBS
+4.c.(1),Commercial MBS - agency issued,BHCKK200,-,Trading Assets - MBS,Asset,2011-03-31,9999-12-31,Item 12,FNMA/FHLMC/GNMA commercial MBS
+4.c.(2),Commercial MBS - all other,BHCKK201,-,Trading Assets - MBS,Asset,2011-03-31,9999-12-31,Item 12,Non-agency commercial MBS
+4 (legacy),MBS pass-through securities (combined),BHCK3534,-,Trading Assets - MBS,Asset,1995-03-31,2009-03-31,Item 12,Pre-2009 combined MBS pass-through
+4 (legacy),All other mortgage-backed securities,BHCK3536,-,Trading Assets - MBS,Asset,1995-03-31,2009-03-31,Item 12,Pre-2009 other MBS
+5.a,Structured financial products,BHCKHT62,-,Trading Assets - Debt Securities,Asset,2018-06-30,9999-12-31,Item 12,Post-2018 breakout for CDOs/CLOs/etc
+5.b,Other debt securities (including ABS),BHCKK202,-,Trading Assets - Debt Securities,Asset,2011-03-31,9999-12-31,Item 12,Includes asset-backed securities
+5 (legacy),Other debt securities,BHCK3537,-,Trading Assets - Debt Securities,Asset,1995-03-31,2009-03-31,Item 12,Pre-2009 other debt
+6.a,Loans secured by 1-4 family residential properties,BHCKHT63,-,Trading Assets - Loans,Asset,2018-06-30,9999-12-31,Item 12,Post-2018 loan breakout
+6.b,All other loans secured by real estate,BHCKHT64,-,Trading Assets - Loans,Asset,2018-06-30,9999-12-31,Item 12,Post-2018 loan breakout
+6.c,Commercial and industrial loans,BHCKF614,-,Trading Assets - Loans,Asset,2008-03-31,9999-12-31,Item 12,C&I loans held for trading
+6.d,Consumer loans,BHCKHT65,-,Trading Assets - Loans,Asset,2018-06-30,9999-12-31,Item 12,Post-2018 loan breakout
+6.e,Other loans,BHCKF618,-,Trading Assets - Loans,Asset,2008-03-31,9999-12-31,Item 12,Other loans held for trading
+7,NOT IN USE,-,-,Reserved,-,-,-,-,Line item not currently used
+8,NOT IN USE,-,-,Reserved,-,-,-,-,Line item not currently used
+9,Other trading assets,BHCM3541,BHCK3541,Trading Assets - Other,Asset,2008-03-31,9999-12-31,Item 12,Residual trading assets
+10,NOT IN USE,-,-,Reserved,-,-,-,-,Line item not currently used
+11,Derivative contracts with gross positive fair value,BHCT3543,BHCK3543,Trading Assets - Derivatives,Asset,2009-06-30,9999-12-31,Item 12,Links to HC-L fair value section; Sum of trading positive FV
+12,TOTAL TRADING ASSETS,BHCT3545,BHCK3545,Trading Assets - Total,Asset,1995-12-31,9999-12-31,Schedule HC Item 5,Equals Schedule HC Item 5; Sum of Items 1-11
+13.a.(1),Short positions - Equity securities,BHCKG209,-,Trading Liabilities - Short Positions,Liability,2009-03-31,9999-12-31,Item 15,Short sales of equity
+13.a.(2),Short positions - Debt securities,BHCKG210,-,Trading Liabilities - Short Positions,Liability,2009-03-31,9999-12-31,Item 15,Short sales of debt
+13.a.(3),Short positions - All other assets,BHCKG211,-,Trading Liabilities - Short Positions,Liability,2009-03-31,9999-12-31,Item 15,Other short positions
+13.b,Other trading liabilities,BHCKF624,-,Trading Liabilities - Other,Liability,2008-03-31,9999-12-31,Item 15,Residual trading liabilities
+14,Derivative contracts with gross negative fair value,BHCT3547,BHCK3547,Trading Liabilities - Derivatives,Liability,2009-06-30,9999-12-31,Item 15,Links to HC-L fair value section; Sum of trading negative FV
+15,TOTAL TRADING LIABILITIES,BHCT3548,BHCK3548,Trading Liabilities - Total,Liability,1989-09-30,9999-12-31,Schedule HC Item 15,Equals Schedule HC Item 15; Sum of Items 13-14

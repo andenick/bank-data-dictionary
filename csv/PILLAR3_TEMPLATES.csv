@@ -1,0 +1,26 @@
+template_id,template_name,description,category,frequency,links_to_y9c,links_to_call,key_metrics,disclosure_requirement,notes
+KM1,Key Metrics,Overview of regulatory capital and liquidity ratios,Overview,Quarterly,HC-R,RC-R,CET1 ratio; Tier 1 ratio; Total capital ratio; Leverage ratio; LCR; NSFR,Mandatory,Summary metrics template
+KM2,Key Metrics (TLAC),TLAC-related key metrics,Overview,Quarterly,HC-R,RC-R,TLAC ratio; TLAC leverage ratio,Mandatory for G-SIBs,Total loss-absorbing capacity
+OV1,Overview of RWA,Risk-weighted assets overview by risk type,Overview,Quarterly,HC-R,RC-R,Credit RWA; Market RWA; Operational RWA; Total RWA,Mandatory,RWA composition
+CR1,Credit Risk Quality,Credit quality of assets by exposure class,Credit Risk,Quarterly,HC-N; HC-C,RC-N; RC-C,Defaulted exposures; Allowances; Net values,Mandatory,Asset quality disclosure
+CR2,Changes in Defaulted Exposures,Movement in defaulted loan and debt exposures,Credit Risk,Quarterly,HC-N,RC-N,Opening default; New defaults; Cured; Write-offs; Closing default,Mandatory,Default flow analysis
+CR3,Credit Risk Mitigation,Credit risk mitigation techniques,Credit Risk,Quarterly,HC-L,RC-L,Collateral; Guarantees; Credit derivatives,Mandatory,Risk mitigation overview
+CR4,Credit Risk SA,Standardized approach credit risk exposures,Credit Risk,Quarterly,HC-R,RC-R,Exposure by asset class; RWA by asset class,Mandatory for SA banks,Standardized approach detail
+CR5,Credit Risk IRB,IRB approach exposures by PD grade,Credit Risk,Quarterly,HC-R,RC-R,PD; LGD; EAD; RWA by grade,Mandatory for IRB banks,Internal ratings detail
+MR1,Market Risk IMA,Market risk under internal models approach,Market Risk,Quarterly,HC-D; HC-L,RC-D; RC-L,VaR; Stressed VaR; IRC; CRM; Capital requirement,Mandatory for IMA banks,Trading book risk capital
+MR2,Market Risk RWA Flow,RWA flow statement for market risk,Market Risk,Quarterly,HC-R,RC-R,Opening RWA; Movement; Closing RWA,Mandatory for IMA banks,Market RWA changes
+MR3,IMA Values,VaR and backtesting,Market Risk,Quarterly,HC-L,RC-L,Daily VaR max/min/average; Backtesting exceptions,Mandatory for IMA banks,Model performance
+MR4,Comparison of VaR,Comparison of VaR estimates with actual outcomes,Market Risk,Quarterly,HC-L,RC-L,VaR vs P&L comparison,Mandatory for IMA banks,Model validation
+CCR1,Counterparty Credit Risk,Analysis of CCR by approach,Counterparty Risk,Quarterly,HC-L,RC-L,Replacement cost; PFE; EAD; RWA,Mandatory,CCR exposure measurement
+CCR2,CVA Capital,Credit valuation adjustment capital charge,Counterparty Risk,Quarterly,HC-L,RC-L,CVA; DVA; Capital requirement,Mandatory,CVA risk capital
+CCR3,CCR SA,Standardized approach for CCR,Counterparty Risk,Quarterly,HC-L,RC-L,EAD by exposure class; RWA,Mandatory for SA banks,
+CCR5,Collateral for CCR,Collateral used in derivative transactions,Counterparty Risk,Quarterly,HC-L,RC-L,Cash collateral; Securities collateral; Segregated,Mandatory,Collateral composition
+CCR6,Credit Derivatives,Credit derivative exposures,Counterparty Risk,Quarterly,HC-L,RC-L,Protection bought; Protection sold; Notional,Mandatory,CDS activity
+CCR8,CCP Exposures,Exposures to central counterparties,Counterparty Risk,Quarterly,HC-L,RC-L,Qualified CCP; Non-qualified CCP; Default fund,Mandatory,CCP clearing exposure
+LIQ1,Liquidity Coverage Ratio,LCR calculation disclosure,Liquidity,Quarterly,FR 2052a,-,HQLA; Outflows; Inflows; LCR,Mandatory for large banks,Basel III liquidity
+LIQ2,Net Stable Funding Ratio,NSFR calculation disclosure,Liquidity,Annual,FR 2052a,-,ASF; RSF; NSFR,Mandatory for large banks,Structural liquidity
+SEC1,Securitization Banking Book,Banking book securitization exposures,Securitization,Quarterly,HC-S,RC-S,Traditional; Synthetic; Exposure; RWA,Mandatory,Non-trading securitization
+SEC2,Securitization Trading Book,Trading book securitization exposures,Securitization,Quarterly,HC-D,RC-D,Long; Short; Exposure; Capital,Mandatory,Trading securitization
+OR1,Operational Risk,Operational risk capital and historical losses,Operational Risk,Annual,HC-R,RC-R,Op risk capital; Historical losses,Mandatory,Operational risk
+REM1,Remuneration,Remuneration awarded during year,Remuneration,Annual,-,-,Fixed; Variable; Deferred,Mandatory,Executive compensation
+REM2,Special Payments,Sign-on and severance payments,Remuneration,Annual,-,-,Number; Amount,Mandatory,

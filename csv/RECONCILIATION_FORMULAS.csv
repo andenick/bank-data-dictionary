@@ -1,0 +1,21 @@
+formula_id,formula_name,result_mdrm,result_description,component_mdrms,formula_expression,schedule,validation_type,notes
+F001,Total Trading Assets,BHCT3545,Total Trading Assets (HC-D Item 12),BHCM3531|BHCM3532|BHCM3533|BHCKK197|BHCKK198|BHCKK199|BHCKK200|BHCKK201|BHCKHT62|BHCKK202|BHCKHT63|BHCKHT64|BHCKF614|BHCKHT65|BHCKF618|BHCM3541|BHCT3543,Sum of Items 1-11,HC-D,Balance,Must equal Schedule HC Item 5
+F002,Total Trading Liabilities,BHCT3548,Total Trading Liabilities (HC-D Item 15),BHCKG209|BHCKG210|BHCKG211|BHCKF624|BHCT3547,Sum of Items 13-14,HC-D,Balance,Must equal Schedule HC Item 15
+F003,Derivatives Positive FV,BHCT3543,Gross Positive Fair Value Derivatives,BHCK8733|BHCK8734|BHCK8735|BHCK8736|BHCK8741|BHCK8742|BHCK8743|BHCK8744,Sum of trading + non-trading positive FV,HC-L to HC-D,Cross-schedule,Links HC-L fair values to HC-D Item 11
+F004,Derivatives Negative FV,BHCT3547,Gross Negative Fair Value Derivatives,BHCK8737|BHCK8738|BHCK8739|BHCK8740|BHCK8745|BHCK8746|BHCK8747|BHCK8748,Sum of trading + non-trading negative FV,HC-L to HC-D,Cross-schedule,Links HC-L fair values to HC-D Item 14
+F005,Trading Positive FV Only,SUM_TRADING_POS,Trading Book Derivatives Positive FV,BHCK8733|BHCK8734|BHCK8735|BHCK8736,BHCK8733 + BHCK8734 + BHCK8735 + BHCK8736,HC-L,Subtotal,Trading book portion only
+F006,Trading Negative FV Only,SUM_TRADING_NEG,Trading Book Derivatives Negative FV,BHCK8737|BHCK8738|BHCK8739|BHCK8740,BHCK8737 + BHCK8738 + BHCK8739 + BHCK8740,HC-L,Subtotal,Trading book portion only
+F007,Total Assets Check,BHCT2170,Total Assets,BHCT0081|BHCT1773|BHCTJJ34|BHCTB528|BHCT3545|BHCT3163|BHCTC752|BHCT2160,...,Sum of all asset line items,HC,Balance,Schedule HC balance sheet
+F008,Tier 1 Capital,BHCFA223,Tier 1 Capital,BHCAP859|BHCAA227,CET1 + Additional Tier 1,HC-R,Capital,Basel III Tier 1 = CET1 + AT1
+F009,Total Capital,BHCFA225,Total Risk-Based Capital,BHCFA223|BHCFA224,Tier 1 + Tier 2,HC-R,Capital,Basel III Total = Tier 1 + Tier 2
+F010,CET1 Ratio,CET1_RATIO,Common Equity Tier 1 Ratio,BHCAP859|BHCAA223,BHCAP859 / BHCAA223,HC-R,Ratio,CET1 Capital / RWA
+F011,Tier 1 Ratio,T1_RATIO,Tier 1 Capital Ratio,BHCFA223|BHCAA223,BHCFA223 / BHCAA223,HC-R,Ratio,Tier 1 Capital / RWA
+F012,Total Capital Ratio,TC_RATIO,Total Capital Ratio,BHCFA225|BHCAA223,BHCFA225 / BHCAA223,HC-R,Ratio,Total Capital / RWA
+F013,Leverage Ratio,LEV_RATIO,Tier 1 Leverage Ratio,BHCFA223|BHCT2170,BHCFA223 / BHCT2170,HC-R/HC,Ratio,Tier 1 / Total Assets (simplified)
+F014,MBS Total,MBS_TRADING,Total MBS Trading Assets,BHCKK197|BHCKK198|BHCKK199|BHCKK200|BHCKK201,K197 + K198 + K199 + K200 + K201,HC-D,Subtotal,All MBS trading assets
+F015,Loans Trading Total,LOANS_TRADING,Total Loans Trading Assets,BHCKHT63|BHCKHT64|BHCKF614|BHCKHT65|BHCKF618,Sum of loan Items 6.a-6.e,HC-D,Subtotal,All loans in trading book
+F016,Short Positions Total,SHORT_TOTAL,Total Short Positions,BHCKG209|BHCKG210|BHCKG211,G209 + G210 + G211,HC-D,Subtotal,All short position types
+F017,Credit Derivatives Sold,CDS_SOLD_TOTAL,Total Credit Derivatives Protection Sold,BHCKC968|BHCKC970|BHCKC974,C968 + C970 + C974,HC-L,Subtotal,All credit protection sold
+F018,Credit Derivatives Bought,CDS_BOUGHT_TOTAL,Total Credit Derivatives Protection Bought,BHCKC969|BHCKC971|BHCKC975,C969 + C971 + C975,HC-L,Subtotal,All credit protection purchased
+F019,Net Credit Derivatives,CDS_NET,Net Credit Derivatives Exposure,BHCKC969|BHCKC971|BHCKC975|BHCKC968|BHCKC970|BHCKC974,(C969+C971+C975) - (C968+C970+C974),HC-L,Net,Bought minus Sold
+F020,ROA,ROA,Return on Assets,BHCT4340|BHCT2170,BHCT4340 / BHCT2170,HI/HC,Ratio,Net Income / Total Assets

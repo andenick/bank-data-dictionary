@@ -1,0 +1,19 @@
+form,schedule,schedule_name,description,frequency,reporter,links_to_y9c,links_to_call,key_fields,volcker_relevance,notes
+Y-14A,A.1,Income Statement,Projected income statement under stress scenarios,Annual,BHCs >$100B,HI,RI,Net interest income; Noninterest income; Trading revenue,MEDIUM,CCAR/DFAST projections
+Y-14A,A.2,Balance Sheet,Projected balance sheet under stress scenarios,Annual,BHCs >$100B,HC,RC,Total assets; Loans; Securities; Deposits,MEDIUM,Stress scenario impacts
+Y-14A,A.3,Capital,Projected capital ratios under stress scenarios,Annual,BHCs >$100B,HC-R,RC-R,CET1; Tier 1; Total Capital; RWA,HIGH,Capital adequacy assessment
+Y-14A,A.4,RWA,Risk-weighted assets by exposure type,Annual,BHCs >$100B,HC-R,RC-R,Credit RWA; Market RWA; Op Risk RWA,HIGH,RWA decomposition
+Y-14A,A.5,MSR,Mortgage servicing rights valuation,Annual,BHCs >$100B with MSR,HC,RC,MSR fair value; Prepayment assumptions,LOW,
+Y-14A,A.6,AOCI,Accumulated other comprehensive income,Annual,BHCs >$100B,HC,RC,AOCI components; AFS unrealized gains/losses,MEDIUM,
+Y-14Q,G.1,Trading Revenue,Trading revenue by product type,Quarterly,BHCs with significant trading,HC-D; HI,RC-D; RI,IR revenue; FX revenue; Equity revenue; Commodity revenue,CRITICAL,P&L attribution for trading
+Y-14Q,G.2,VaR,Value-at-Risk and Stressed VaR,Quarterly,BHCs with significant trading,HC-L,RC-L,Daily VaR; Stressed VaR; VaR breaches,CRITICAL,Market risk metrics
+Y-14Q,E.1,Counterparty,Top counterparty exposures,Quarterly,BHCs >$100B,HC-L,RC-L,Top 50 counterparties; Exposure; Collateral,HIGH,Derivatives counterparty risk
+Y-14Q,E.2,CVA,Credit valuation adjustment,Quarterly,BHCs >$100B,HC-L,RC-L,CVA by counterparty; CVA reserve,HIGH,Counterparty credit risk
+Y-14Q,H,PPNR,Pre-Provision Net Revenue,Quarterly,BHCs >$100B,HI,RI,NII; Noninterest income; Noninterest expense,MEDIUM,Revenue projections
+Y-14Q,D,Securities,Securities portfolio detail,Quarterly,BHCs >$100B,HC-B,RC-B,AFS; HTM; Fair value levels,MEDIUM,Investment portfolio
+Y-14Q,B,Loans,Loan portfolio characteristics,Quarterly,BHCs >$100B,HC-C,RC-C,Loan types; Vintage; FICO; LTV,LOW,Credit risk
+Y-14Q,F,Retail,Retail loan performance,Quarterly,BHCs >$100B,HC-C,RC-C,Delinquency; Charge-offs; Modifications,LOW,Consumer credit
+Y-14M,1,Residential Mortgage,Loan-level mortgage data,Monthly,BHCs >$100B,HC-C,RC-C,UPB; FICO; LTV; DTI; Performance,LOW,Granular mortgage data
+Y-14M,2,Home Equity,Loan-level HELOC data,Monthly,BHCs >$100B,HC-C,RC-C,Credit limit; Utilization; FICO; LTV,LOW,
+Y-14M,3,Credit Card,Account-level card data,Monthly,BHCs >$100B,HC-C,RC-C,Credit limit; Balance; FICO; Utilization,LOW,
+Y-14M,4,First Lien Originated,New mortgage originations,Monthly,BHCs >$100B,HC-C,RC-C,Loan amount; FICO; LTV; DTI; Rate,LOW,

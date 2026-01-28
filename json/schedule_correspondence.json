@@ -1,0 +1,312 @@
+{
+  "metadata": {
+    "title": "Bank Regulatory Schedule Correspondence Map",
+    "version": "1.0",
+    "created": "2026-01-28",
+    "description": "Cross-schedule linkages and reconciliation mappings for bank regulatory filings"
+  },
+
+  "balance_sheet_to_detail": {
+    "trading_assets": {
+      "parent": {
+        "schedule": "HC",
+        "item": "5",
+        "mdrm": "BHCT3545",
+        "description": "Trading Assets"
+      },
+      "detail_schedule": "HC-D",
+      "detail_item": "12",
+      "relationship": "EQUALS",
+      "components": [
+        {"category": "Securities", "items": ["1", "2", "3", "4", "5"]},
+        {"category": "Loans", "items": ["6"]},
+        {"category": "Other", "items": ["9"]},
+        {"category": "Derivatives", "items": ["11"]}
+      ]
+    },
+    "trading_liabilities": {
+      "parent": {
+        "schedule": "HC",
+        "item": "15",
+        "mdrm": "BHCT3548",
+        "description": "Trading Liabilities"
+      },
+      "detail_schedule": "HC-D",
+      "detail_item": "15",
+      "relationship": "EQUALS",
+      "components": [
+        {"category": "Short Positions", "items": ["13.a.(1)", "13.a.(2)", "13.a.(3)"]},
+        {"category": "Other", "items": ["13.b"]},
+        {"category": "Derivatives", "items": ["14"]}
+      ]
+    }
+  },
+
+  "hc_d_to_hc_l": {
+    "derivatives_positive_fair_value": {
+      "source": {
+        "schedule": "HC-D",
+        "item": "11",
+        "mdrm": "BHCT3543",
+        "description": "Derivative contracts with gross positive fair value"
+      },
+      "target": {
+        "schedule": "HC-L",
+        "section": "Fair Values"
+      },
+      "formula": {
+        "expression": "Trading_Positive_FV + NonTrading_Positive_FV",
+        "trading_components": [
+          {"asset_class": "Interest Rate", "mdrm": "BHCK8733"},
+          {"asset_class": "Foreign Exchange", "mdrm": "BHCK8734"},
+          {"asset_class": "Equity", "mdrm": "BHCK8735"},
+          {"asset_class": "Commodity/Other", "mdrm": "BHCK8736"}
+        ],
+        "non_trading_components": [
+          {"asset_class": "Interest Rate", "mdrm": "BHCK8741"},
+          {"asset_class": "Foreign Exchange", "mdrm": "BHCK8742"},
+          {"asset_class": "Equity", "mdrm": "BHCK8743"},
+          {"asset_class": "Commodity/Other", "mdrm": "BHCK8744"}
+        ]
+      }
+    },
+    "derivatives_negative_fair_value": {
+      "source": {
+        "schedule": "HC-D",
+        "item": "14",
+        "mdrm": "BHCT3547",
+        "description": "Derivative contracts with gross negative fair value"
+      },
+      "target": {
+        "schedule": "HC-L",
+        "section": "Fair Values"
+      },
+      "formula": {
+        "expression": "Trading_Negative_FV + NonTrading_Negative_FV",
+        "trading_components": [
+          {"asset_class": "Interest Rate", "mdrm": "BHCK8737"},
+          {"asset_class": "Foreign Exchange", "mdrm": "BHCK8738"},
+          {"asset_class": "Equity", "mdrm": "BHCK8739"},
+          {"asset_class": "Commodity/Other", "mdrm": "BHCK8740"}
+        ],
+        "non_trading_components": [
+          {"asset_class": "Interest Rate", "mdrm": "BHCK8745"},
+          {"asset_class": "Foreign Exchange", "mdrm": "BHCK8746"},
+          {"asset_class": "Equity", "mdrm": "BHCK8747"},
+          {"asset_class": "Commodity/Other", "mdrm": "BHCK8748"}
+        ]
+      }
+    }
+  },
+
+  "hc_l_structure": {
+    "notional_amounts": {
+      "futures_exchange_traded": {
+        "interest_rate": "BHCK8693",
+        "foreign_exchange": "BHCK8694",
+        "equity": "BHCK8695",
+        "commodity_other": "BHCK8696"
+      },
+      "forwards_otc": {
+        "interest_rate": "BHCK8697",
+        "foreign_exchange": "BHCK8698",
+        "equity": "BHCK8699",
+        "commodity_other": "BHCK8700"
+      },
+      "swaps": {
+        "interest_rate": "BHCK3450",
+        "cross_currency": "BHCK3826",
+        "equity": "BHCK8719",
+        "commodity_other": "BHCK8720"
+      },
+      "options_exchange_written": {
+        "interest_rate": "BHCK8701",
+        "foreign_exchange": "BHCK8702",
+        "equity": "BHCK8703",
+        "commodity_other": "BHCK8704"
+      },
+      "options_exchange_purchased": {
+        "interest_rate": "BHCK8705",
+        "foreign_exchange": "BHCK8706",
+        "equity": "BHCK8707",
+        "commodity_other": "BHCK8708"
+      },
+      "options_otc_written": {
+        "interest_rate": "BHCK8709",
+        "foreign_exchange": "BHCK8710",
+        "equity": "BHCK8711",
+        "commodity_other": "BHCK8712"
+      },
+      "options_otc_purchased": {
+        "interest_rate": "BHCK8713",
+        "foreign_exchange": "BHCK8714",
+        "equity": "BHCK8715",
+        "commodity_other": "BHCK8716"
+      },
+      "credit_derivatives": {
+        "cds_protection_sold": "BHCKC968",
+        "cds_protection_bought": "BHCKC969",
+        "trs_protection_sold": "BHCKC970",
+        "trs_protection_bought": "BHCKC971",
+        "other_credit_sold": "BHCKC974",
+        "other_credit_bought": "BHCKC975"
+      }
+    },
+    "fair_values": {
+      "trading_positive": {
+        "interest_rate": "BHCK8733",
+        "foreign_exchange": "BHCK8734",
+        "equity": "BHCK8735",
+        "commodity_other": "BHCK8736"
+      },
+      "trading_negative": {
+        "interest_rate": "BHCK8737",
+        "foreign_exchange": "BHCK8738",
+        "equity": "BHCK8739",
+        "commodity_other": "BHCK8740"
+      },
+      "non_trading_positive": {
+        "interest_rate": "BHCK8741",
+        "foreign_exchange": "BHCK8742",
+        "equity": "BHCK8743",
+        "commodity_other": "BHCK8744"
+      },
+      "non_trading_negative": {
+        "interest_rate": "BHCK8745",
+        "foreign_exchange": "BHCK8746",
+        "equity": "BHCK8747",
+        "commodity_other": "BHCK8748"
+      }
+    }
+  },
+
+  "y9c_to_call_correspondence": {
+    "trading_assets_total": {
+      "y9c": {"mdrm": "BHCT3545", "schedule": "HC-D", "item": "12"},
+      "call": {"mdrm": "RCFD3545", "schedule": "RC-D", "item": "12"}
+    },
+    "trading_liabilities_total": {
+      "y9c": {"mdrm": "BHCT3548", "schedule": "HC-D", "item": "15"},
+      "call": {"mdrm": "RCFD3548", "schedule": "RC-D", "item": "15"}
+    },
+    "derivatives_positive_fv": {
+      "y9c": {"mdrm": "BHCT3543", "schedule": "HC-D", "item": "11"},
+      "call": {"mdrm": "RCFD3543", "schedule": "RC-D", "item": "11"}
+    },
+    "derivatives_negative_fv": {
+      "y9c": {"mdrm": "BHCT3547", "schedule": "HC-D", "item": "14"},
+      "call": {"mdrm": "RCFD3547", "schedule": "RC-D", "item": "14"}
+    },
+    "ir_swaps_notional": {
+      "y9c": {"mdrm": "BHCK3450", "schedule": "HC-L"},
+      "call": {"mdrm": "RCFD3450", "schedule": "RC-L"}
+    },
+    "cds_sold": {
+      "y9c": {"mdrm": "BHCKC968", "schedule": "HC-L"},
+      "call": {"mdrm": "RCFDC968", "schedule": "RC-L"}
+    },
+    "cds_bought": {
+      "y9c": {"mdrm": "BHCKC969", "schedule": "HC-L"},
+      "call": {"mdrm": "RCFDC969", "schedule": "RC-L"}
+    }
+  },
+
+  "prefix_conversion": {
+    "y9c_to_call": {
+      "BHCK": "RCFD",
+      "BHCM": "RCFD",
+      "BHCT": "RCFD",
+      "BHCFA": "RCFAA",
+      "BHCA": "RCFDA",
+      "BHCAP": "RCFAP"
+    },
+    "note": "Item numbers typically remain the same; only prefix changes"
+  },
+
+  "capital_reconciliation": {
+    "total_capital": {
+      "formula": "Tier 1 Capital + Tier 2 Capital",
+      "result_mdrm": "BHCFA225",
+      "components": {
+        "tier1": "BHCFA223",
+        "tier2": "BHCFA224"
+      }
+    },
+    "tier1_capital": {
+      "formula": "CET1 Capital + Additional Tier 1",
+      "result_mdrm": "BHCFA223",
+      "components": {
+        "cet1": "BHCAP859",
+        "at1": "BHCAA227"
+      }
+    },
+    "ratios": {
+      "cet1_ratio": {"formula": "BHCAP859 / BHCAA223", "minimum": "4.5%"},
+      "tier1_ratio": {"formula": "BHCFA223 / BHCAA223", "minimum": "6.0%"},
+      "total_capital_ratio": {"formula": "BHCFA225 / BHCAA223", "minimum": "8.0%"}
+    }
+  },
+
+  "historical_transitions": {
+    "2018_prefix_split": {
+      "date": "2018-03-31",
+      "description": "Domestic/foreign split for many items",
+      "affected_items": ["3531", "3532", "3533", "3541", "3543", "3547"],
+      "change": "BHCK prefix split into BHCM (domestic) and BHCT (total)"
+    },
+    "2011_mbs_breakout": {
+      "date": "2011-03-31",
+      "description": "Granular MBS categories added",
+      "old_codes": ["BHCK3534", "BHCK3536"],
+      "new_codes": ["BHCKK197", "BHCKK198", "BHCKK199", "BHCKK200", "BHCKK201"]
+    },
+    "2009_short_positions": {
+      "date": "2009-03-31",
+      "description": "Short position reporting added",
+      "new_codes": ["BHCKG209", "BHCKG210", "BHCKG211"]
+    },
+    "2006_credit_derivatives": {
+      "date": "2006-03-31",
+      "description": "Credit derivatives reporting added",
+      "new_codes": ["BHCKC968", "BHCKC969", "BHCKC970", "BHCKC971", "BHCKC974", "BHCKC975"]
+    },
+    "2014_basel3": {
+      "date": "2014-03-31",
+      "description": "Basel III capital framework implementation",
+      "new_codes": ["BHCAP859", "BHCFA223", "BHCFA224", "BHCFA225", "BHCAA223"]
+    }
+  },
+
+  "validation_rules": [
+    {
+      "rule_id": "V001",
+      "name": "Trading Assets Balance",
+      "formula": "HC Item 5 == HC-D Item 12",
+      "mdrm_check": "BHCT3545 (both places)"
+    },
+    {
+      "rule_id": "V002",
+      "name": "Trading Liabilities Balance",
+      "formula": "HC Item 15 == HC-D Item 15",
+      "mdrm_check": "BHCT3548 (both places)"
+    },
+    {
+      "rule_id": "V003",
+      "name": "Derivatives Positive FV Reconciliation",
+      "formula": "HC-D Item 11 == Sum(HC-L Trading Positive FV) + Sum(HC-L Non-Trading Positive FV)",
+      "mdrm_check": "BHCT3543 == (8733+8734+8735+8736) + (8741+8742+8743+8744)"
+    },
+    {
+      "rule_id": "V004",
+      "name": "Derivatives Negative FV Reconciliation",
+      "formula": "HC-D Item 14 == Sum(HC-L Trading Negative FV) + Sum(HC-L Non-Trading Negative FV)",
+      "mdrm_check": "BHCT3547 == (8737+8738+8739+8740) + (8745+8746+8747+8748)"
+    },
+    {
+      "rule_id": "V005",
+      "name": "Total Capital Composition",
+      "formula": "Total Capital == Tier 1 + Tier 2",
+      "mdrm_check": "BHCFA225 == BHCFA223 + BHCFA224"
+    }
+  ]
+}

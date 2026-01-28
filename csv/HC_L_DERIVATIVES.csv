@@ -1,0 +1,51 @@
+section,product_type,instrument,position,mdrm,call_mdrm,start_date,end_date,links_to_hc_d,notes
+Notional,Interest Rate,Futures,Exchange-traded,BHCK8693,RCFD8693,1995-03-31,9999-12-31,-,Exchange-traded IR futures
+Notional,Foreign Exchange,Futures,Exchange-traded,BHCK8694,RCFD8694,1995-03-31,9999-12-31,-,Exchange-traded FX futures
+Notional,Equity,Futures,Exchange-traded,BHCK8695,RCFD8695,1995-03-31,9999-12-31,-,Exchange-traded equity futures
+Notional,Commodity/Other,Futures,Exchange-traded,BHCK8696,RCFD8696,1995-03-31,9999-12-31,-,Exchange-traded commodity futures
+Notional,Interest Rate,Forwards,OTC,BHCK8697,RCFD8697,1995-03-31,9999-12-31,-,OTC IR forwards
+Notional,Foreign Exchange,Forwards,OTC,BHCK8698,RCFD8698,1995-03-31,9999-12-31,-,OTC FX forwards (includes spots > 2 days)
+Notional,Equity,Forwards,OTC,BHCK8699,RCFD8699,1995-03-31,9999-12-31,-,OTC equity forwards
+Notional,Commodity/Other,Forwards,OTC,BHCK8700,RCFD8700,1995-03-31,9999-12-31,-,OTC commodity forwards
+Notional,Interest Rate,Swaps,OTC,BHCK3450,RCFD3450,1995-03-31,9999-12-31,-,Interest rate swaps - largest category by notional
+Notional,Foreign Exchange,Swaps,OTC,BHCK3826,RCFD3826,1995-03-31,9999-12-31,-,Cross-currency swaps
+Notional,Equity,Swaps,OTC,BHCK8719,RCFD8719,1995-03-31,9999-12-31,-,Equity swaps
+Notional,Commodity/Other,Swaps,OTC,BHCK8720,RCFD8720,1995-03-31,9999-12-31,-,Commodity swaps
+Notional,Interest Rate,Options Written,Exchange-traded,BHCK8701,RCFD8701,1995-03-31,9999-12-31,-,Written IR options (exchange)
+Notional,Foreign Exchange,Options Written,Exchange-traded,BHCK8702,RCFD8702,1995-03-31,9999-12-31,-,Written FX options (exchange)
+Notional,Equity,Options Written,Exchange-traded,BHCK8703,RCFD8703,1995-03-31,9999-12-31,-,Written equity options (exchange)
+Notional,Commodity/Other,Options Written,Exchange-traded,BHCK8704,RCFD8704,1995-03-31,9999-12-31,-,Written commodity options (exchange)
+Notional,Interest Rate,Options Purchased,Exchange-traded,BHCK8705,RCFD8705,1995-03-31,9999-12-31,-,Purchased IR options (exchange)
+Notional,Foreign Exchange,Options Purchased,Exchange-traded,BHCK8706,RCFD8706,1995-03-31,9999-12-31,-,Purchased FX options (exchange)
+Notional,Equity,Options Purchased,Exchange-traded,BHCK8707,RCFD8707,1995-03-31,9999-12-31,-,Purchased equity options (exchange)
+Notional,Commodity/Other,Options Purchased,Exchange-traded,BHCK8708,RCFD8708,1995-03-31,9999-12-31,-,Purchased commodity options (exchange)
+Notional,Interest Rate,Options Written,OTC,BHCK8709,RCFD8709,1995-03-31,9999-12-31,-,Written IR options (OTC)
+Notional,Foreign Exchange,Options Written,OTC,BHCK8710,RCFD8710,1995-03-31,9999-12-31,-,Written FX options (OTC)
+Notional,Equity,Options Written,OTC,BHCK8711,RCFD8711,1995-03-31,9999-12-31,-,Written equity options (OTC)
+Notional,Commodity/Other,Options Written,OTC,BHCK8712,RCFD8712,1995-03-31,9999-12-31,-,Written commodity options (OTC)
+Notional,Interest Rate,Options Purchased,OTC,BHCK8713,RCFD8713,1995-03-31,9999-12-31,-,Purchased IR options (OTC)
+Notional,Foreign Exchange,Options Purchased,OTC,BHCK8714,RCFD8714,1995-03-31,9999-12-31,-,Purchased FX options (OTC)
+Notional,Equity,Options Purchased,OTC,BHCK8715,RCFD8715,1995-03-31,9999-12-31,-,Purchased equity options (OTC)
+Notional,Commodity/Other,Options Purchased,OTC,BHCK8716,RCFD8716,1995-03-31,9999-12-31,-,Purchased commodity options (OTC)
+Notional,Credit,CDS,Guarantor (Protection Sold),BHCKC968,RCFDC968,2006-03-31,9999-12-31,-,CDS protection sold - credit risk seller
+Notional,Credit,CDS,Beneficiary (Protection Bought),BHCKC969,RCFDC969,2006-03-31,9999-12-31,-,CDS protection purchased - credit risk buyer
+Notional,Credit,Total Return Swap,Guarantor (Protection Sold),BHCKC970,RCFDC970,2006-03-31,9999-12-31,-,TRS protection sold
+Notional,Credit,Total Return Swap,Beneficiary (Protection Bought),BHCKC971,RCFDC971,2006-03-31,9999-12-31,-,TRS protection purchased
+Notional,Credit,Other Credit Derivatives,Guarantor (Protection Sold),BHCKC974,RCFDC974,2006-03-31,9999-12-31,-,Other credit derivatives sold
+Notional,Credit,Other Credit Derivatives,Beneficiary (Protection Bought),BHCKC975,RCFDC975,2006-03-31,9999-12-31,-,Other credit derivatives purchased
+Fair Value,Interest Rate,All Trading,Positive,BHCK8733,RCFD8733,1995-03-31,9999-12-31,Item 11,Gross positive FV - IR trading derivatives
+Fair Value,Foreign Exchange,All Trading,Positive,BHCK8734,RCFD8734,1995-03-31,9999-12-31,Item 11,Gross positive FV - FX trading derivatives
+Fair Value,Equity,All Trading,Positive,BHCK8735,RCFD8735,1995-03-31,9999-12-31,Item 11,Gross positive FV - Equity trading derivatives
+Fair Value,Commodity/Other,All Trading,Positive,BHCK8736,RCFD8736,1995-03-31,9999-12-31,Item 11,Gross positive FV - Commodity trading derivatives
+Fair Value,Interest Rate,All Trading,Negative,BHCK8737,RCFD8737,1995-03-31,9999-12-31,Item 14,Gross negative FV - IR trading derivatives
+Fair Value,Foreign Exchange,All Trading,Negative,BHCK8738,RCFD8738,1995-03-31,9999-12-31,Item 14,Gross negative FV - FX trading derivatives
+Fair Value,Equity,All Trading,Negative,BHCK8739,RCFD8739,1995-03-31,9999-12-31,Item 14,Gross negative FV - Equity trading derivatives
+Fair Value,Commodity/Other,All Trading,Negative,BHCK8740,RCFD8740,1995-03-31,9999-12-31,Item 14,Gross negative FV - Commodity trading derivatives
+Fair Value,Interest Rate,Non-Trading Hedges,Positive,BHCK8741,RCFD8741,1995-03-31,9999-12-31,Item 11,Gross positive FV - IR non-trading
+Fair Value,Foreign Exchange,Non-Trading Hedges,Positive,BHCK8742,RCFD8742,1995-03-31,9999-12-31,Item 11,Gross positive FV - FX non-trading
+Fair Value,Equity,Non-Trading Hedges,Positive,BHCK8743,RCFD8743,1995-03-31,9999-12-31,Item 11,Gross positive FV - Equity non-trading
+Fair Value,Commodity/Other,Non-Trading Hedges,Positive,BHCK8744,RCFD8744,1995-03-31,9999-12-31,Item 11,Gross positive FV - Commodity non-trading
+Fair Value,Interest Rate,Non-Trading Hedges,Negative,BHCK8745,RCFD8745,1995-03-31,9999-12-31,Item 14,Gross negative FV - IR non-trading
+Fair Value,Foreign Exchange,Non-Trading Hedges,Negative,BHCK8746,RCFD8746,1995-03-31,9999-12-31,Item 14,Gross negative FV - FX non-trading
+Fair Value,Equity,Non-Trading Hedges,Negative,BHCK8747,RCFD8747,1995-03-31,9999-12-31,Item 14,Gross negative FV - Equity non-trading
+Fair Value,Commodity/Other,Non-Trading Hedges,Negative,BHCK8748,RCFD8748,1995-03-31,9999-12-31,Item 14,Gross negative FV - Commodity non-trading

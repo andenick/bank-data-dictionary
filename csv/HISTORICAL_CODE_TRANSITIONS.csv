@@ -1,0 +1,29 @@
+transition_date,schedule,item,old_mdrm,new_mdrm,description,reason,impact,notes
+2018-03-31,HC-D,1,BHCK3531,BHCM3531,U.S. Treasury securities,Domestic/foreign split,Prefix change,BHCM for domestic only; BHCT for total
+2018-03-31,HC-D,2,BHCK3532,BHCM3532,U.S. Government agency obligations,Domestic/foreign split,Prefix change,
+2018-03-31,HC-D,3,BHCK3533,BHCM3533,Securities - states/political subdivisions,Domestic/foreign split,Prefix change,
+2018-03-31,HC-D,9,BHCK3541,BHCM3541,Other trading assets,Domestic/foreign split,Prefix change,
+2018-03-31,HC-D,11,BHCK3543,BHCT3543,Derivatives positive fair value,Domestic/foreign split,Prefix change,BHCT for consolidated total
+2018-03-31,HC-D,14,BHCK3547,BHCT3547,Derivatives negative fair value,Domestic/foreign split,Prefix change,
+2018-06-30,HC-D,5.a,NEW,BHCKHT62,Structured financial products,Granular breakout,New line item,CDOs/CLOs/structured products breakout
+2018-06-30,HC-D,6.a,NEW,BHCKHT63,Loans - 1-4 family residential,Granular breakout,New line item,Post-2018 loan detail
+2018-06-30,HC-D,6.b,NEW,BHCKHT64,Loans - other real estate,Granular breakout,New line item,
+2018-06-30,HC-D,6.d,NEW,BHCKHT65,Consumer loans,Granular breakout,New line item,
+2011-03-31,HC-D,4.a.(1),BHCK3534,BHCKK197,Residential MBS - GNMA,MBS granular breakout,New line item,Replaced combined MBS items
+2011-03-31,HC-D,4.a.(2),BHCK3534,BHCKK198,Residential MBS - FNMA/FHLMC,MBS granular breakout,New line item,
+2011-03-31,HC-D,4.b,BHCK3536,BHCKK199,Other residential MBS,MBS granular breakout,New line item,
+2011-03-31,HC-D,4.c.(1),BHCK3536,BHCKK200,Commercial MBS - agency,MBS granular breakout,New line item,
+2011-03-31,HC-D,4.c.(2),BHCK3536,BHCKK201,Commercial MBS - other,MBS granular breakout,New line item,
+2011-03-31,HC-D,5.b,BHCK3537,BHCKK202,Other debt securities,Debt securities breakout,Code change,
+2009-03-31,HC-D,13.a.(1),NEW,BHCKG209,Short positions - Equity,Crisis-era addition,New line item,Post-crisis short position disclosure
+2009-03-31,HC-D,13.a.(2),NEW,BHCKG210,Short positions - Debt,Crisis-era addition,New line item,
+2009-03-31,HC-D,13.a.(3),NEW,BHCKG211,Short positions - Other,Crisis-era addition,New line item,
+2009-03-31,HC-D,4 (retired),BHCK3534,RETIRED,MBS pass-through (combined),Replaced by K197/K198,Discontinued,See 2011 granular breakout
+2009-03-31,HC-D,4 (retired),BHCK3536,RETIRED,All other MBS (combined),Replaced by K199/K200/K201,Discontinued,
+2006-03-31,HC-L,18.a.(1),NEW,BHCKC968,CDS - protection sold,Credit derivatives added,New line item,Post-2005 credit derivative disclosure
+2006-03-31,HC-L,18.a.(2),NEW,BHCKC969,CDS - protection purchased,Credit derivatives added,New line item,
+2006-03-31,HC-L,18.b.(1),NEW,BHCKC970,TRS - protection sold,Credit derivatives added,New line item,
+2006-03-31,HC-L,18.b.(2),NEW,BHCKC971,TRS - protection purchased,Credit derivatives added,New line item,
+2014-03-31,HC-R,CET1,NEW,BHCAP859,Common Equity Tier 1 Capital,Basel III implementation,New concept,Basel III capital reform
+2014-03-31,HC-R,RWA,BHCK7205,BHCAA223,Risk-Weighted Assets,Basel III implementation,Code change,New RWA calculation
+1995-03-31,HC-D,12,BHCK3545,BHCT3545,Total Trading Assets,Form revision,Available from,Core trading data begins

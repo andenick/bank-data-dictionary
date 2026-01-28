@@ -1,0 +1,297 @@
+{
+  "metadata": {
+    "title": "Bank Regulatory Data Taxonomy",
+    "version": "1.0",
+    "created": "2026-01-28",
+    "description": "Comprehensive taxonomy for U.S. bank regulatory filings data"
+  },
+
+  "regulatory_hierarchy": {
+    "level_1_bhc": {
+      "form": "FR Y-9C",
+      "regulator": "Federal Reserve",
+      "frequency": "Quarterly",
+      "reporter": "All BHCs/SLHCs with $5B+ consolidated assets",
+      "description": "Consolidated Financial Statements for Holding Companies",
+      "key_schedules": ["HC", "HC-B", "HC-C", "HC-D", "HC-L", "HC-N", "HC-Q", "HC-R", "HI"]
+    },
+    "level_1_bank": {
+      "form": "FFIEC Call Report",
+      "regulator": "FFIEC (Fed, OCC, FDIC)",
+      "frequency": "Quarterly",
+      "reporter": "All FDIC-insured banks",
+      "description": "Report of Condition and Income",
+      "forms": {
+        "FFIEC_031": "Banks with foreign offices",
+        "FFIEC_041": "Domestic banks $5B+",
+        "FFIEC_051": "Domestic banks <$5B"
+      },
+      "key_schedules": ["RC", "RC-B", "RC-C", "RC-D", "RC-L", "RC-N", "RC-Q", "RC-R", "RI"]
+    },
+    "level_2_stress_test": {
+      "form": "FR Y-14",
+      "regulator": "Federal Reserve",
+      "reporter": "BHCs with $100B+ total consolidated assets",
+      "description": "Capital Assessments and Stress Testing - CCAR/DFAST",
+      "components": {
+        "Y-14A": {
+          "frequency": "Annual",
+          "description": "Comprehensive capital planning",
+          "schedules": ["A.1 Income", "A.2 Balance Sheet", "A.3 Capital", "A.4 RWA"]
+        },
+        "Y-14Q": {
+          "frequency": "Quarterly",
+          "description": "Ongoing positions and risk metrics",
+          "schedules": ["G.1 Trading Revenue", "G.2 VaR", "E.1 Counterparty", "E.2 CVA", "H PPNR"]
+        },
+        "Y-14M": {
+          "frequency": "Monthly",
+          "description": "Loan-level portfolio data",
+          "schedules": ["1 Residential Mortgage", "2 Home Equity", "3 Credit Card"]
+        }
+      }
+    },
+    "level_2_liquidity": {
+      "form": "FR 2052a",
+      "regulator": "Federal Reserve",
+      "frequency": "Daily/Monthly",
+      "reporter": "Large BHCs, IHCs, covered savings/loan HCs",
+      "description": "Complex Institution Liquidity Monitoring Report",
+      "key_metrics": ["LCR", "NSFR", "maturity_mismatches", "funding_concentrations"]
+    },
+    "level_3_disclosure": {
+      "form": "Pillar 3",
+      "regulator": "Basel Committee (via Fed implementation)",
+      "frequency": "Quarterly/Annual",
+      "reporter": "G-SIBs and large internationally active banks",
+      "description": "Basel III Public Disclosure Requirements",
+      "key_templates": ["KM1", "KM2", "OV1", "CR1-CR5", "MR1-MR4", "CCR1-CCR8", "LIQ1-LIQ2"]
+    }
+  },
+
+  "mdrm_prefix_definitions": {
+    "FR_Y9C": {
+      "BHCK": {
+        "scope": "BHC domestic operations only",
+        "period": "Pre-2018 for items later split",
+        "consolidated": false
+      },
+      "BHCM": {
+        "scope": "BHC domestic (post-2018 breakout)",
+        "period": "2018+ for domestic/foreign split items",
+        "consolidated": false
+      },
+      "BHCT": {
+        "scope": "BHC total consolidated",
+        "period": "Primary prefix for consolidated totals",
+        "consolidated": true
+      },
+      "BHCFA": {
+        "scope": "BHC regulatory capital",
+        "period": "Schedule HC-R capital items",
+        "consolidated": true
+      },
+      "BHCA": {
+        "scope": "BHC risk-weighted assets",
+        "period": "Schedule HC-R Part II",
+        "consolidated": true
+      },
+      "BHCAP": {
+        "scope": "BHC advanced approaches capital",
+        "period": "Basel III advanced",
+        "consolidated": true
+      }
+    },
+    "Call_Report": {
+      "RCFD": {
+        "scope": "Bank full domestic + foreign branches",
+        "period": "Most comprehensive bank-level view",
+        "consolidated": true
+      },
+      "RCON": {
+        "scope": "Bank domestic offices only",
+        "period": "Excludes foreign branches/agencies",
+        "consolidated": false
+      },
+      "RIAD": {
+        "scope": "Income and dividends",
+        "period": "Used for income statement items",
+        "consolidated": true
+      },
+      "RCFA": {
+        "scope": "Regulatory capital",
+        "period": "Schedule RC-R capital items",
+        "consolidated": true
+      }
+    }
+  },
+
+  "schedule_taxonomy": {
+    "balance_sheet": {
+      "y9c_schedule": "HC",
+      "call_schedule": "RC",
+      "description": "Consolidated Balance Sheet",
+      "key_items": {
+        "total_assets": {"y9c": "BHCT2170", "call": "RCFD2170"},
+        "trading_assets": {"y9c": "BHCT3545", "call": "RCFD3545"},
+        "trading_liabilities": {"y9c": "BHCT3548", "call": "RCFD3548"},
+        "total_equity": {"y9c": "BHCT3210", "call": "RCFD3210"}
+      }
+    },
+    "securities": {
+      "y9c_schedule": "HC-B",
+      "call_schedule": "RC-B",
+      "description": "Securities",
+      "key_items": {
+        "afs_total": {"y9c": "BHCT1773", "call": "RCFD1773"},
+        "htm_total": {"y9c": "BHCTJJ34", "call": "RCFDJJ34"}
+      }
+    },
+    "trading": {
+      "y9c_schedule": "HC-D",
+      "call_schedule": "RC-D",
+      "description": "Trading Assets and Liabilities",
+      "categories": ["Securities", "MBS", "Loans", "Other", "Derivatives", "Short Positions"],
+      "key_items": {
+        "total_trading_assets": {"y9c": "BHCT3545", "call": "RCFD3545", "line": "12"},
+        "total_trading_liabilities": {"y9c": "BHCT3548", "call": "RCFD3548", "line": "15"},
+        "derivatives_pos_fv": {"y9c": "BHCT3543", "call": "RCFD3543", "line": "11"},
+        "derivatives_neg_fv": {"y9c": "BHCT3547", "call": "RCFD3547", "line": "14"}
+      }
+    },
+    "derivatives": {
+      "y9c_schedule": "HC-L",
+      "call_schedule": "RC-L",
+      "description": "Derivatives and Off-Balance Sheet Items",
+      "sections": {
+        "notional_amounts": {
+          "products": ["Futures", "Forwards", "Swaps", "Options", "Credit Derivatives"],
+          "asset_classes": ["Interest Rate", "Foreign Exchange", "Equity", "Commodity/Other", "Credit"]
+        },
+        "fair_values": {
+          "categories": ["Trading", "Non-Trading Hedges"],
+          "positions": ["Positive", "Negative"],
+          "asset_classes": ["Interest Rate", "Foreign Exchange", "Equity", "Commodity/Other"]
+        }
+      }
+    },
+    "fair_value": {
+      "y9c_schedule": "HC-Q",
+      "call_schedule": "RC-Q",
+      "description": "Assets and Liabilities Measured at Fair Value",
+      "levels": {
+        "level_1": "Quoted prices in active markets",
+        "level_2": "Observable inputs other than Level 1",
+        "level_3": "Unobservable inputs"
+      }
+    },
+    "capital": {
+      "y9c_schedule": "HC-R",
+      "call_schedule": "RC-R",
+      "description": "Regulatory Capital",
+      "key_items": {
+        "cet1_capital": {"y9c": "BHCAP859", "call": "RCFAP859"},
+        "tier1_capital": {"y9c": "BHCFA223", "call": "RCFAA223"},
+        "tier2_capital": {"y9c": "BHCFA224", "call": "RCFAA224"},
+        "total_capital": {"y9c": "BHCFA225", "call": "RCFAA225"},
+        "rwa": {"y9c": "BHCAA223", "call": "RCFDA223"}
+      }
+    },
+    "income": {
+      "y9c_schedule": "HI",
+      "call_schedule": "RI",
+      "description": "Consolidated Income Statement",
+      "key_items": {
+        "net_income": {"y9c": "BHCT4340", "call": "RIAD4340"},
+        "trading_revenue": {"y9c": "BHCKA220", "call": "RIADA220"}
+      }
+    }
+  },
+
+  "camels_classification": {
+    "C": {
+      "name": "Capital Adequacy",
+      "description": "Ability to absorb losses",
+      "key_schedules": ["HC-R", "RC-R"],
+      "key_variables": ["tier1_capital", "tier1_ratio", "cet1_ratio", "leverage_ratio"]
+    },
+    "A": {
+      "name": "Asset Quality",
+      "description": "Quality of loan portfolio and other assets",
+      "key_schedules": ["HC-N", "RC-N"],
+      "key_variables": ["npl_ratio", "charge_offs", "allowance_ratio", "oreo"]
+    },
+    "M": {
+      "name": "Management Quality",
+      "description": "Quality of management and operations",
+      "key_schedules": ["HC", "RC", "HI", "RI"],
+      "key_variables": ["efficiency_ratio", "assets", "growth_rates"]
+    },
+    "E": {
+      "name": "Earnings",
+      "description": "Quantity and quality of earnings",
+      "key_schedules": ["HI", "RI"],
+      "key_variables": ["roa", "roe", "nim", "net_income"]
+    },
+    "L": {
+      "name": "Liquidity",
+      "description": "Ability to meet obligations",
+      "key_schedules": ["RC-E", "FR 2052a"],
+      "key_variables": ["liquid_ratio", "deposit_funding", "wholesale_funding", "lcr"]
+    },
+    "S": {
+      "name": "Sensitivity to Market Risk",
+      "description": "Exposure to market risk factors",
+      "key_schedules": ["HC-D", "HC-L", "RC-D", "RC-L"],
+      "key_variables": ["trading_assets", "derivatives_notional", "var"]
+    }
+  },
+
+  "entity_identifiers": {
+    "rssd_id": {
+      "source": "Federal Reserve",
+      "description": "Research, Statistics, Supervision, and Discount identifier",
+      "used_in": ["FR Y-9C", "FR Y-14", "FR 2052a", "NIC database"]
+    },
+    "fdic_cert": {
+      "source": "FDIC",
+      "description": "FDIC Certificate Number",
+      "used_in": ["Call Reports", "FDIC databases"]
+    },
+    "lei": {
+      "source": "GLEIF",
+      "description": "Legal Entity Identifier",
+      "used_in": ["Pillar 3", "international reporting"]
+    },
+    "occ_charter": {
+      "source": "OCC",
+      "description": "OCC Charter Number",
+      "used_in": ["National bank identification"]
+    }
+  },
+
+  "data_sources": {
+    "ffiec_cdr": {
+      "url": "https://cdr.ffiec.gov/",
+      "description": "FFIEC Central Data Repository",
+      "content": ["Call Reports", "FR Y-9C"],
+      "format": ["Online", "Bulk Download", "XBRL"]
+    },
+    "fed_nic": {
+      "url": "https://www.ffiec.gov/NPW/",
+      "description": "National Information Center",
+      "content": ["Organization data", "RSSD lookups"]
+    },
+    "chicago_fed": {
+      "url": "https://www.chicagofed.org/banking/financial-institution-reports/",
+      "description": "Federal Reserve Bank of Chicago Historical Data",
+      "content": ["Historical FR Y-9C"],
+      "coverage": "1986-present"
+    },
+    "fdic_bankfind": {
+      "url": "https://banks.data.fdic.gov/",
+      "description": "FDIC BankFind Suite",
+      "content": ["Summary of Deposits", "Financial data", "Failure info"]
+    }
+  }
+}

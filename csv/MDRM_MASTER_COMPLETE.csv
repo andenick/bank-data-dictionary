@@ -1,0 +1,101 @@
+concept_id,concept_name,description,y9c_mdrm,y9c_schedule,y9c_line_item,call_mdrm,call_schedule,call_line_item,y14_field,y14_schedule,pillar3_template,camels_category,asset_or_liability,start_date,end_date,legacy_mdrm,adds_to,notes
+TRADING_ASSETS_TOTAL,Total Trading Assets,Total trading assets per balance sheet,BHCT3545,HC-D,12,RCFD3545,RC-D,12,PPNR-G,Y-14Q Schedule G,MR1,S,Asset,1995-12-31,9999-12-31,BHCK3545,HC_ITEM_5,Equals Schedule HC Item 5
+TRADING_LIAB_TOTAL,Total Trading Liabilities,Total trading liabilities per balance sheet,BHCT3548,HC-D,15,RCFD3548,RC-D,15,PPNR-G,Y-14Q Schedule G,MR1,S,Liability,1989-09-30,9999-12-31,BHCK3548,HC_ITEM_15,Equals Schedule HC Item 15
+DERIV_POS_FV,Derivatives Positive Fair Value,Derivative contracts with gross positive fair value,BHCT3543,HC-D,11,RCFD3543,RC-D,11,-,-,-,S,Asset,2009-06-30,9999-12-31,BHCK3543,TRADING_ASSETS_TOTAL,Links to HC-L fair value section
+DERIV_NEG_FV,Derivatives Negative Fair Value,Derivative contracts with gross negative fair value,BHCT3547,HC-D,14,RCFD3547,RC-D,14,-,-,-,S,Liability,2009-06-30,9999-12-31,BHCK3547,TRADING_LIAB_TOTAL,Links to HC-L fair value section
+TREAS_SECURITIES,U.S. Treasury Securities (Trading),U.S. Treasury securities in trading book,BHCM3531,HC-D,1,RCFD3531,RC-D,1,-,-,-,S,Asset,2008-03-31,9999-12-31,BHCK3531,TRADING_ASSETS_TOTAL,Current MDRM for domestic+foreign
+AGENCY_SECURITIES,Agency Securities (Trading),U.S. Government agency obligations,BHCM3532,HC-D,2,RCFD3532,RC-D,2,-,-,-,S,Asset,2008-03-31,9999-12-31,BHCK3532,TRADING_ASSETS_TOTAL,
+MUNI_SECURITIES,Municipal Securities (Trading),Securities of states and political subdivisions,BHCM3533,HC-D,3,RCFD3533,RC-D,3,-,-,-,S,Asset,2008-03-31,9999-12-31,BHCK3533,TRADING_ASSETS_TOTAL,
+MBS_GNMA,GNMA MBS Pass-Through (Trading),Residential MBS pass-through GNMA,BHCKK197,HC-D,4.a.(1),RCFDK197,RC-D,4.a.(1),-,-,-,S,Asset,2011-03-31,9999-12-31,-,MBS_TOTAL,Residential agency pass-through
+MBS_FNMA_FHLMC,FNMA/FHLMC MBS Pass-Through (Trading),Residential MBS pass-through FNMA/FHLMC,BHCKK198,HC-D,4.a.(2),RCFDK198,RC-D,4.a.(2),-,-,-,S,Asset,2011-03-31,9999-12-31,-,MBS_TOTAL,Residential agency pass-through
+MBS_OTHER_RESI,Other Residential MBS (Trading),All other residential MBS,BHCKK199,HC-D,4.b,RCFDK199,RC-D,4.b,-,-,-,S,Asset,2011-03-31,9999-12-31,-,MBS_TOTAL,Non-agency residential MBS
+MBS_CMBS_AGENCY,Commercial MBS Agency (Trading),Commercial MBS issued by agencies,BHCKK200,HC-D,4.c.(1),RCFDK200,RC-D,4.c.(1),-,-,-,S,Asset,2011-03-31,9999-12-31,-,MBS_TOTAL,FNMA/FHLMC/GNMA commercial MBS
+MBS_CMBS_OTHER,Commercial MBS Other (Trading),Commercial MBS non-agency,BHCKK201,HC-D,4.c.(2),RCFDK201,RC-D,4.c.(2),-,-,-,S,Asset,2011-03-31,9999-12-31,-,MBS_TOTAL,Non-agency commercial MBS
+STRUCTURED_PRODUCTS,Structured Financial Products (Trading),Structured financial products,BHCKHT62,HC-D,5.a,RCFDHT62,RC-D,5.a,-,-,-,S,Asset,2018-06-30,9999-12-31,-,TRADING_ASSETS_TOTAL,Post-2018 breakout
+OTHER_DEBT_SECURITIES,Other Debt Securities (Trading),Other debt securities including ABS,BHCKK202,HC-D,5.b,RCFDK202,RC-D,5.b,-,-,-,S,Asset,2011-03-31,9999-12-31,-,TRADING_ASSETS_TOTAL,
+LOANS_1_4_FAMILY,1-4 Family Residential Loans (Trading),Loans secured by 1-4 family residential,BHCKHT63,HC-D,6.a,RCFDHT63,RC-D,6.a,-,-,-,S,Asset,2018-06-30,9999-12-31,-,LOANS_TRADING_TOTAL,Post-2018 loan breakout
+LOANS_OTHER_RE,Other Real Estate Loans (Trading),All other loans secured by real estate,BHCKHT64,HC-D,6.b,RCFDHT64,RC-D,6.b,-,-,-,S,Asset,2018-06-30,9999-12-31,-,LOANS_TRADING_TOTAL,Post-2018 loan breakout
+LOANS_CI,C&I Loans (Trading),Commercial and industrial loans,BHCKF614,HC-D,6.c,RCFDF614,RC-D,6.c,-,-,-,S,Asset,2008-03-31,9999-12-31,-,LOANS_TRADING_TOTAL,
+LOANS_CONSUMER,Consumer Loans (Trading),Consumer loans,BHCKHT65,HC-D,6.d,RCFDHT65,RC-D,6.d,-,-,-,S,Asset,2018-06-30,9999-12-31,-,LOANS_TRADING_TOTAL,Post-2018 loan breakout
+LOANS_OTHER,Other Loans (Trading),Other loans,BHCKF618,HC-D,6.e,RCFDF618,RC-D,6.e,-,-,-,S,Asset,2008-03-31,9999-12-31,-,LOANS_TRADING_TOTAL,
+OTHER_TRADING_ASSETS,Other Trading Assets,Other trading assets,BHCM3541,HC-D,9,RCFD3541,RC-D,9,-,-,-,S,Asset,2008-03-31,9999-12-31,BHCK3541,TRADING_ASSETS_TOTAL,Current MDRM
+SHORT_EQUITY,Short Positions - Equity,Short positions in equity securities,BHCKG209,HC-D,13.a.(1),RCFDG209,RC-D,13.a.(1),-,-,-,S,Liability,2009-03-31,9999-12-31,-,TRADING_LIAB_TOTAL,Short sales of equity
+SHORT_DEBT,Short Positions - Debt,Short positions in debt securities,BHCKG210,HC-D,13.a.(2),RCFDG210,RC-D,13.a.(2),-,-,-,S,Liability,2009-03-31,9999-12-31,-,TRADING_LIAB_TOTAL,Short sales of debt
+SHORT_OTHER,Short Positions - Other,Short positions in all other assets,BHCKG211,HC-D,13.a.(3),RCFDG211,RC-D,13.a.(3),-,-,-,S,Liability,2009-03-31,9999-12-31,-,TRADING_LIAB_TOTAL,Other short positions
+OTHER_TRADING_LIAB,Other Trading Liabilities,Other trading liabilities,BHCKF624,HC-D,13.b,RCFDF624,RC-D,13.b,-,-,-,S,Liability,2008-03-31,9999-12-31,-,TRADING_LIAB_TOTAL,Residual trading liabilities
+IR_FUTURES_NOTIONAL,Interest Rate Futures Notional,Exchange-traded IR futures notional amount,BHCK8693,HC-L,11.a,RCFD8693,RC-L,11.a,-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,Exchange-traded IR futures
+FX_FUTURES_NOTIONAL,Foreign Exchange Futures Notional,Exchange-traded FX futures notional amount,BHCK8694,HC-L,11.b,RCFD8694,RC-L,11.b,-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,Exchange-traded FX futures
+EQUITY_FUTURES_NOTIONAL,Equity Futures Notional,Exchange-traded equity futures notional amount,BHCK8695,HC-L,11.c,RCFD8695,RC-L,11.c,-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,Exchange-traded equity futures
+COMMODITY_FUTURES_NOTIONAL,Commodity Futures Notional,Exchange-traded commodity futures notional amount,BHCK8696,HC-L,11.d,RCFD8696,RC-L,11.d,-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,Exchange-traded commodity futures
+IR_FORWARDS_NOTIONAL,Interest Rate Forwards Notional,OTC IR forwards notional amount,BHCK8697,HC-L,12.a,RCFD8697,RC-L,12.a,-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,OTC IR forwards
+FX_FORWARDS_NOTIONAL,Foreign Exchange Forwards Notional,OTC FX forwards notional amount (includes spots > 2 days),BHCK8698,HC-L,12.b,RCFD8698,RC-L,12.b,-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,OTC FX forwards
+EQUITY_FORWARDS_NOTIONAL,Equity Forwards Notional,OTC equity forwards notional amount,BHCK8699,HC-L,12.c,RCFD8699,RC-L,12.c,-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,OTC equity forwards
+COMMODITY_FORWARDS_NOTIONAL,Commodity Forwards Notional,OTC commodity forwards notional amount,BHCK8700,HC-L,12.d,RCFD8700,RC-L,12.d,-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,OTC commodity forwards
+IR_SWAPS_NOTIONAL,Interest Rate Swaps Notional,Interest rate swaps notional amount,BHCK3450,HC-L,13.a,RCFD3450,RC-L,13.a,-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,Interest rate swaps
+FX_SWAPS_NOTIONAL,Cross-Currency Swaps Notional,Cross-currency swaps notional amount,BHCK3826,HC-L,13.b,RCFD3826,RC-L,13.b,-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,Cross-currency swaps
+EQUITY_SWAPS_NOTIONAL,Equity Swaps Notional,Equity swaps notional amount,BHCK8719,HC-L,13.c,RCFD8719,RC-L,13.c,-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,Equity swaps
+COMMODITY_SWAPS_NOTIONAL,Commodity Swaps Notional,Commodity swaps notional amount,BHCK8720,HC-L,13.d,RCFD8720,RC-L,13.d,-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,Commodity swaps
+IR_OPTIONS_WRITTEN_EXCHANGE,IR Options Written (Exchange),Exchange-traded written IR options notional,BHCK8701,HC-L,14.a.(1),RCFD8701,RC-L,14.a.(1),-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,
+IR_OPTIONS_PURCHASED_EXCHANGE,IR Options Purchased (Exchange),Exchange-traded purchased IR options notional,BHCK8705,HC-L,14.a.(2),RCFD8705,RC-L,14.a.(2),-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,
+IR_OPTIONS_WRITTEN_OTC,IR Options Written (OTC),OTC written IR options notional,BHCK8709,HC-L,14.b.(1),RCFD8709,RC-L,14.b.(1),-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,
+IR_OPTIONS_PURCHASED_OTC,IR Options Purchased (OTC),OTC purchased IR options notional,BHCK8713,HC-L,14.b.(2),RCFD8713,RC-L,14.b.(2),-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,
+FX_OPTIONS_WRITTEN_EXCHANGE,FX Options Written (Exchange),Exchange-traded written FX options notional,BHCK8702,HC-L,15.a.(1),RCFD8702,RC-L,15.a.(1),-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,
+FX_OPTIONS_PURCHASED_EXCHANGE,FX Options Purchased (Exchange),Exchange-traded purchased FX options notional,BHCK8706,HC-L,15.a.(2),RCFD8706,RC-L,15.a.(2),-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,
+FX_OPTIONS_WRITTEN_OTC,FX Options Written (OTC),OTC written FX options notional,BHCK8710,HC-L,15.b.(1),RCFD8710,RC-L,15.b.(1),-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,
+FX_OPTIONS_PURCHASED_OTC,FX Options Purchased (OTC),OTC purchased FX options notional,BHCK8714,HC-L,15.b.(2),RCFD8714,RC-L,15.b.(2),-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,
+EQUITY_OPTIONS_WRITTEN_EXCHANGE,Equity Options Written (Exchange),Exchange-traded written equity options notional,BHCK8703,HC-L,16.a.(1),RCFD8703,RC-L,16.a.(1),-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,
+EQUITY_OPTIONS_PURCHASED_EXCHANGE,Equity Options Purchased (Exchange),Exchange-traded purchased equity options notional,BHCK8707,HC-L,16.a.(2),RCFD8707,RC-L,16.a.(2),-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,
+EQUITY_OPTIONS_WRITTEN_OTC,Equity Options Written (OTC),OTC written equity options notional,BHCK8711,HC-L,16.b.(1),RCFD8711,RC-L,16.b.(1),-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,
+EQUITY_OPTIONS_PURCHASED_OTC,Equity Options Purchased (OTC),OTC purchased equity options notional,BHCK8715,HC-L,16.b.(2),RCFD8715,RC-L,16.b.(2),-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,
+COMMODITY_OPTIONS_WRITTEN_EXCHANGE,Commodity Options Written (Exchange),Exchange-traded written commodity options notional,BHCK8704,HC-L,17.a.(1),RCFD8704,RC-L,17.a.(1),-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,
+COMMODITY_OPTIONS_PURCHASED_EXCHANGE,Commodity Options Purchased (Exchange),Exchange-traded purchased commodity options notional,BHCK8708,HC-L,17.a.(2),RCFD8708,RC-L,17.a.(2),-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,
+COMMODITY_OPTIONS_WRITTEN_OTC,Commodity Options Written (OTC),OTC written commodity options notional,BHCK8712,HC-L,17.b.(1),RCFD8712,RC-L,17.b.(1),-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,
+COMMODITY_OPTIONS_PURCHASED_OTC,Commodity Options Purchased (OTC),OTC purchased commodity options notional,BHCK8716,HC-L,17.b.(2),RCFD8716,RC-L,17.b.(2),-,-,MR3,S,Off-Balance,1995-03-31,9999-12-31,-,-,
+CDS_PROTECTION_SOLD,CDS Protection Sold Notional,Credit default swaps - protection sold (guarantor),BHCKC968,HC-L,18.a.(1),RCFDC968,RC-L,18.a.(1),-,-,MR3,S,Off-Balance,2006-03-31,9999-12-31,-,-,Credit risk seller
+CDS_PROTECTION_BOUGHT,CDS Protection Bought Notional,Credit default swaps - protection purchased (beneficiary),BHCKC969,HC-L,18.a.(2),RCFDC969,RC-L,18.a.(2),-,-,MR3,S,Off-Balance,2006-03-31,9999-12-31,-,-,Credit risk buyer
+TRS_PROTECTION_SOLD,Total Return Swaps Sold Notional,Total return swaps - protection sold (guarantor),BHCKC970,HC-L,18.b.(1),RCFDC970,RC-L,18.b.(1),-,-,MR3,S,Off-Balance,2006-03-31,9999-12-31,-,-,
+TRS_PROTECTION_BOUGHT,Total Return Swaps Bought Notional,Total return swaps - protection purchased (beneficiary),BHCKC971,HC-L,18.b.(2),RCFDC971,RC-L,18.b.(2),-,-,MR3,S,Off-Balance,2006-03-31,9999-12-31,-,-,
+OTHER_CREDIT_DERIV_SOLD,Other Credit Derivatives Sold Notional,Other credit derivatives - sold,BHCKC974,HC-L,18.c.(1),RCFDC974,RC-L,18.c.(1),-,-,MR3,S,Off-Balance,2006-03-31,9999-12-31,-,-,
+OTHER_CREDIT_DERIV_BOUGHT,Other Credit Derivatives Bought Notional,Other credit derivatives - purchased,BHCKC975,HC-L,18.c.(2),RCFDC975,RC-L,18.c.(2),-,-,MR3,S,Off-Balance,2006-03-31,9999-12-31,-,-,
+IR_TRADING_POS_FV,Interest Rate Trading Positive FV,Gross positive fair value - IR trading derivatives,BHCK8733,HC-L,19.a.(1),RCFD8733,RC-L,19.a.(1),-,-,MR1,S,Asset,1995-03-31,9999-12-31,-,DERIV_POS_FV,
+FX_TRADING_POS_FV,Foreign Exchange Trading Positive FV,Gross positive fair value - FX trading derivatives,BHCK8734,HC-L,19.a.(2),RCFD8734,RC-L,19.a.(2),-,-,MR1,S,Asset,1995-03-31,9999-12-31,-,DERIV_POS_FV,
+EQUITY_TRADING_POS_FV,Equity Trading Positive FV,Gross positive fair value - equity trading derivatives,BHCK8735,HC-L,19.a.(3),RCFD8735,RC-L,19.a.(3),-,-,MR1,S,Asset,1995-03-31,9999-12-31,-,DERIV_POS_FV,
+COMMODITY_TRADING_POS_FV,Commodity Trading Positive FV,Gross positive fair value - commodity trading derivatives,BHCK8736,HC-L,19.a.(4),RCFD8736,RC-L,19.a.(4),-,-,MR1,S,Asset,1995-03-31,9999-12-31,-,DERIV_POS_FV,
+IR_TRADING_NEG_FV,Interest Rate Trading Negative FV,Gross negative fair value - IR trading derivatives,BHCK8737,HC-L,19.b.(1),RCFD8737,RC-L,19.b.(1),-,-,MR1,S,Liability,1995-03-31,9999-12-31,-,DERIV_NEG_FV,
+FX_TRADING_NEG_FV,Foreign Exchange Trading Negative FV,Gross negative fair value - FX trading derivatives,BHCK8738,HC-L,19.b.(2),RCFD8738,RC-L,19.b.(2),-,-,MR1,S,Liability,1995-03-31,9999-12-31,-,DERIV_NEG_FV,
+EQUITY_TRADING_NEG_FV,Equity Trading Negative FV,Gross negative fair value - equity trading derivatives,BHCK8739,HC-L,19.b.(3),RCFD8739,RC-L,19.b.(3),-,-,MR1,S,Liability,1995-03-31,9999-12-31,-,DERIV_NEG_FV,
+COMMODITY_TRADING_NEG_FV,Commodity Trading Negative FV,Gross negative fair value - commodity trading derivatives,BHCK8740,HC-L,19.b.(4),RCFD8740,RC-L,19.b.(4),-,-,MR1,S,Liability,1995-03-31,9999-12-31,-,DERIV_NEG_FV,
+IR_NONTRADING_POS_FV,Interest Rate Non-Trading Positive FV,Gross positive fair value - IR non-trading hedges,BHCK8741,HC-L,20.a.(1),RCFD8741,RC-L,20.a.(1),-,-,-,S,Asset,1995-03-31,9999-12-31,-,DERIV_POS_FV,
+FX_NONTRADING_POS_FV,Foreign Exchange Non-Trading Positive FV,Gross positive fair value - FX non-trading hedges,BHCK8742,HC-L,20.a.(2),RCFD8742,RC-L,20.a.(2),-,-,-,S,Asset,1995-03-31,9999-12-31,-,DERIV_POS_FV,
+EQUITY_NONTRADING_POS_FV,Equity Non-Trading Positive FV,Gross positive fair value - equity non-trading hedges,BHCK8743,HC-L,20.a.(3),RCFD8743,RC-L,20.a.(3),-,-,-,S,Asset,1995-03-31,9999-12-31,-,DERIV_POS_FV,
+COMMODITY_NONTRADING_POS_FV,Commodity Non-Trading Positive FV,Gross positive fair value - commodity non-trading hedges,BHCK8744,HC-L,20.a.(4),RCFD8744,RC-L,20.a.(4),-,-,-,S,Asset,1995-03-31,9999-12-31,-,DERIV_POS_FV,
+IR_NONTRADING_NEG_FV,Interest Rate Non-Trading Negative FV,Gross negative fair value - IR non-trading hedges,BHCK8745,HC-L,20.b.(1),RCFD8745,RC-L,20.b.(1),-,-,-,S,Liability,1995-03-31,9999-12-31,-,DERIV_NEG_FV,
+FX_NONTRADING_NEG_FV,Foreign Exchange Non-Trading Negative FV,Gross negative fair value - FX non-trading hedges,BHCK8746,HC-L,20.b.(2),RCFD8746,RC-L,20.b.(2),-,-,-,S,Liability,1995-03-31,9999-12-31,-,DERIV_NEG_FV,
+EQUITY_NONTRADING_NEG_FV,Equity Non-Trading Negative FV,Gross negative fair value - equity non-trading hedges,BHCK8747,HC-L,20.b.(3),RCFD8747,RC-L,20.b.(3),-,-,-,S,Liability,1995-03-31,9999-12-31,-,DERIV_NEG_FV,
+COMMODITY_NONTRADING_NEG_FV,Commodity Non-Trading Negative FV,Gross negative fair value - commodity non-trading hedges,BHCK8748,HC-L,20.b.(4),RCFD8748,RC-L,20.b.(4),-,-,-,S,Liability,1995-03-31,9999-12-31,-,DERIV_NEG_FV,
+TOTAL_ASSETS,Total Assets,Total consolidated assets,BHCT2170,HC,12,RCFD2170,RC,12,-,-,OV1,M,Asset,1976-03-31,9999-12-31,-,-,Primary size metric
+TOTAL_EQUITY,Total Equity Capital,Total equity capital,BHCT3210,HC,28,RCFD3210,RC,28,-,-,CR1,C,Equity,1976-03-31,9999-12-31,-,-,
+TOTAL_DEPOSITS,Total Deposits,Total deposits (domestic),BHCM2200,HC,13,RCON2200,RC,13,-,-,-,L,Liability,1976-03-31,9999-12-31,-,-,
+TIER1_CAPITAL,Tier 1 Capital,Tier 1 regulatory capital,BHCFA223,HC-R,Part I-32,RCFAA223,RC-R,Part I-32,-,-,CR1,C,Capital,2014-03-31,9999-12-31,-,-,Basel III
+TIER2_CAPITAL,Tier 2 Capital,Tier 2 regulatory capital,BHCFA224,HC-R,Part I-34,RCFAA224,RC-R,Part I-34,-,-,CR1,C,Capital,2014-03-31,9999-12-31,-,-,Basel III
+TOTAL_CAPITAL,Total Risk-Based Capital,Total risk-based capital,BHCFA225,HC-R,Part I-35,RCFAA225,RC-R,Part I-35,-,-,CR1,C,Capital,2014-03-31,9999-12-31,-,-,
+RWA,Risk-Weighted Assets,Total risk-weighted assets,BHCAA223,HC-R,Part II-26,RCFDA223,RC-R,Part II-26,-,-,CR1,C,Capital,2014-03-31,9999-12-31,-,-,
+CET1_CAPITAL,Common Equity Tier 1 Capital,CET1 capital,BHCAP859,HC-R,Part I-31,RCFAP859,RC-R,Part I-31,-,-,CR1,C,Capital,2014-03-31,9999-12-31,-,-,Basel III
+SECURITIES_AFS,Available-for-Sale Securities,Securities held available for sale,BHCT1773,HC-B,M1,RCFD1773,RC-B,M1,-,-,-,M,Asset,1994-03-31,9999-12-31,-,-,
+SECURITIES_HTM,Held-to-Maturity Securities,Securities held to maturity,BHCTJJ34,HC-B,M2,RCFDJJ34,RC-B,M2,-,-,-,M,Asset,2014-03-31,9999-12-31,-,-,
+NET_INCOME,Net Income,Net income (year-to-date),BHCT4340,HI,14,RIAD4340,RI,14,-,-,-,E,Income,1976-03-31,9999-12-31,-,-,
+PROVISION_LLP,Provision for Loan Losses,Provision for loan and lease losses,BHCT4230,HI,4,RIAD4230,RI,4,-,-,-,A,Expense,1976-03-31,9999-12-31,-,-,
+NPL_TOTAL,Total Nonperforming Loans,Total nonperforming loans,BHCT1403,HC-N,M7.a,RCFD1403,RC-N,M7.a,-,-,-,A,Asset,1976-03-31,9999-12-31,-,-,
+LOANS_NET,Loans and Leases Net,Loans and leases net of unearned income,BHCTB528,HC,4.b,RCFDB528,RC,4.b,-,-,-,A,Asset,1976-03-31,9999-12-31,-,-,
+CASH_BALANCES,Cash and Balances Due,Cash and balances due from depository institutions,BHCT0081,HC,1,RCFD0081,RC,1,-,-,-,L,Asset,1976-03-31,9999-12-31,-,-,
+FED_FUNDS_SOLD,Federal Funds Sold,Federal funds sold and securities purchased under resale agreements,BHCTB987,HC,3,RCFDB987,RC,3,-,-,-,L,Asset,1976-03-31,9999-12-31,-,-,
+ALLOWANCE_LLP,Allowance for Loan Losses,Allowance for loan and lease losses,BHCT3123,HC,4.c,RCFD3123,RC,4.c,-,-,-,A,Contra-Asset,1976-03-31,9999-12-31,-,-,
+GOODWILL,Goodwill,Goodwill,BHCT3163,HC,10.a,RCFD3163,RC,10.a,-,-,-,M,Asset,1976-03-31,9999-12-31,-,-,
+INTANGIBLE_ASSETS,Other Intangible Assets,Other intangible assets,BHCTC752,HC,10.b,RCFDC752,RC,10.b,-,-,-,M,Asset,2002-03-31,9999-12-31,-,-,
+OTHER_ASSETS,Other Assets,Other assets,BHCT2160,HC,11,RCFD2160,RC,11,-,-,-,M,Asset,1976-03-31,9999-12-31,-,-,
+TOTAL_LIABILITIES,Total Liabilities,Total liabilities,BHCT2948,HC,21,RCFD2948,RC,21,-,-,-,M,Liability,1976-03-31,9999-12-31,-,-,
+OTHER_BORROWED_MONEY,Other Borrowed Money,Other borrowed money,BHCT3190,HC,16,RCFD3190,RC,16,-,-,-,L,Liability,1976-03-31,9999-12-31,-,-,
+SUBORDINATED_DEBT,Subordinated Notes and Debentures,Subordinated notes and debentures,BHCT3200,HC,19,RCFD3200,RC,19,-,-,-,C,Liability,1976-03-31,9999-12-31,-,-,
+INTEREST_INCOME_LOANS,Interest Income on Loans,Interest and fee income on loans,BHCK4010,HI,1.a,RIAD4010,RI,1.a,-,-,-,E,Income,1976-03-31,9999-12-31,-,-,
+INTEREST_EXPENSE_DEPOSITS,Interest Expense on Deposits,Interest expense on deposits,BHCK4170,HI,2.a,RIAD4170,RI,2.a,-,-,-,E,Expense,1976-03-31,9999-12-31,-,-,
+TRADING_REVENUE,Trading Revenue,Trading revenue,BHCKA220,HI-M,8.a,RIADA220,RI-M,8.a,-,-,MR1,S,Income,2001-03-31,9999-12-31,-,-,Net gains/losses on trading
