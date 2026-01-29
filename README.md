@@ -33,6 +33,7 @@ bank-regulatory-data-dictionary/
 │   ├── HC_R_CAPITAL.csv                    # Schedule HC-R regulatory capital (~120 items)
 │   ├── HC_S_SECURITIZATION.csv             # Schedule HC-S securitization
 │   ├── HI_INCOME_STATEMENT.csv             # Schedule HI income statement (~40 items)
+│   ├── MARKET_RISK_TRADING_COMPLETE.csv    # Complete market risk analysis (~100 items)
 │   │
 │   ├── Reference Files:
 │   ├── CALL_REPORT_RC_SCHEDULES.csv        # RC-D, RC-L, RC-B, RC-Q mappings
@@ -65,7 +66,8 @@ bank-regulatory-data-dictionary/
 │   ├── HC_R_CAPITAL_GUIDE.md               # Schedule HC-R guide
 │   ├── HC_S_SECURITIZATION_GUIDE.md        # Schedule HC-S guide
 │   ├── HI_INCOME_STATEMENT_GUIDE.md        # Schedule HI guide
-│   └── TRADING_ACTIVITIES_GUIDE.md         # Comprehensive trading guide
+│   ├── TRADING_ACTIVITIES_GUIDE.md         # Comprehensive trading guide
+│   └── MARKET_RISK_TRADING_GUIDE.md        # Market risk deep dive (~100 items)
 │
 ├── json/                                   # Machine-readable data
 │   ├── data_taxonomy.json                  # Full regulatory taxonomy
@@ -85,6 +87,7 @@ bank-regulatory-data-dictionary/
 | `HC_B_SECURITIES.csv` | HC-B | AFS/HTM securities by type | ~40 |
 | `HC_C_LOANS.csv` | HC-C | Loan portfolio breakdown | ~60 |
 | `HC_D_TRADING_ASSETS.csv` | HC-D | Trading assets and liabilities | ~30 |
+| `MARKET_RISK_TRADING_COMPLETE.csv` | Multiple | Complete market risk/trading analysis | ~100 |
 | `HC_F_OTHER_ASSETS.csv` | HC-F | Other assets detail | ~20 |
 | `HC_G_OTHER_LIABILITIES.csv` | HC-G | Other liabilities detail | ~15 |
 | `HC_H_INTEREST_SENSITIVITY.csv` | HC-H | Repricing gap analysis | ~50 |
@@ -103,6 +106,7 @@ bank-regulatory-data-dictionary/
 | `VERIFICATION_REPORT.md` | Verification of all MDRM codes against official sources |
 | `RECONCILIATION_MATRIX.md` | How all schedules tie together |
 | `[SCHEDULE]_GUIDE.md` | Detailed guide for each schedule with MDRM codes, formulas, and analysis |
+| `MARKET_RISK_TRADING_GUIDE.md` | Complete market risk/trading analysis with hierarchies and reconciliations |
 
 ## Core Concepts
 
@@ -244,6 +248,7 @@ MIT License - See LICENSE file for details.
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 2.1 | 2026-01-28 | Added complete market risk/trading analysis (~100 MDRM codes) |
 | 2.0 | 2026-01-28 | Added comprehensive schedule coverage (14 schedules) |
 | 1.0 | 2026-01-28 | Initial release with trading focus |
 

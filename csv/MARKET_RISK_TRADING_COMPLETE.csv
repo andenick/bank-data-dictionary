@@ -1,0 +1,102 @@
+section,category,line_item,mdrm_code,call_mdrm,description,component_of,risk_type,schedule,start_date,notes
+Trading Revenue,Interest Rate,M.7.a,BHCKA221,RIADA221,Trading revenue from interest rate exposures,BHCKA220,Interest Rate,HI-M,2001-03-31,IR swaps; futures; options; bonds
+Trading Revenue,Foreign Exchange,M.7.b,BHCKA222,RIADA222,Trading revenue from foreign exchange exposures,BHCKA220,FX,HI-M,2001-03-31,Spot; forwards; swaps; options
+Trading Revenue,Equity,M.7.c,BHCKA223,RIADA223,Trading revenue from equity exposures,BHCKA220,Equity,HI-M,2001-03-31,Cash equities; equity derivatives
+Trading Revenue,Commodity,M.7.d,BHCKA224,RIADA224,Trading revenue from commodity and other exposures,BHCKA220,Commodity,HI-M,2001-03-31,Precious metals; energy; agriculture
+Trading Revenue,Credit,M.7.e,BHCKHT79,RIADHT79,Trading revenue from credit exposures,BHCKA220,Credit,HI-M,2018-06-30,CDS; TRS; credit-linked products
+Trading Revenue,Total,6.b,BHCKA220,RIADA220,Total trading revenue,NIR Total,All,HI,2001-03-31,Sum of M.7.a through M.7.e; HI Item 6.b
+Trading Assets,Treasury Securities,1,BHCM3531,RCFDM3531,U.S. Treasury securities,BHCT3545,Interest Rate,HC-D,2008-03-31,Domestic and foreign combined
+Trading Assets,Agency Securities,2,BHCM3532,RCFDM3532,U.S. Government agency obligations,BHCT3545,Interest Rate,HC-D,2008-03-31,Non-MBS agency debt
+Trading Assets,Municipal Securities,3,BHCM3533,RCFDM3533,Securities issued by states and political subdivisions,BHCT3545,Interest Rate/Credit,HC-D,2008-03-31,State and local bonds
+Trading Assets,MBS - GNMA RMBS,4.a.(1),BHCKK197,RCFDK197,Residential MBS pass-through - GNMA,BHCT3545,Interest Rate/Prepay,HC-D,2011-03-31,Agency residential MBS
+Trading Assets,MBS - FNMA/FHLMC RMBS,4.a.(2),BHCKK198,RCFDK198,Residential MBS pass-through - FNMA/FHLMC,BHCT3545,Interest Rate/Prepay,HC-D,2011-03-31,Agency residential MBS
+Trading Assets,MBS - Other RMBS,4.b,BHCKK199,RCFDK199,All other residential MBS,BHCT3545,Credit/Prepay,HC-D,2011-03-31,Non-agency RMBS
+Trading Assets,MBS - Agency CMBS,4.c.(1),BHCKK200,RCFDK200,Commercial MBS - agency issued,BHCT3545,Interest Rate/Credit,HC-D,2011-03-31,Agency CMBS
+Trading Assets,MBS - Other CMBS,4.c.(2),BHCKK201,RCFDK201,Commercial MBS - all other,BHCT3545,Credit,HC-D,2011-03-31,Non-agency CMBS
+Trading Assets,Structured Products,5.a,BHCKHT62,RCFDHT62,Structured financial products,BHCT3545,Credit,HC-D,2018-06-30,CDOs; CLOs; other structured
+Trading Assets,Other Debt/ABS,5.b,BHCKK202,RCFDK202,Other debt securities including ABS,BHCT3545,Credit,HC-D,2011-03-31,Asset-backed securities; corporate bonds
+Trading Assets,Loans - 1-4 Family,6.a,BHCKHT63,RCFDHT63,Loans secured by 1-4 family residential properties,BHCT3545,Credit/Prepay,HC-D,2018-06-30,Trading loans - residential
+Trading Assets,Loans - Other RE,6.b,BHCKHT64,RCFDHT64,All other loans secured by real estate,BHCT3545,Credit,HC-D,2018-06-30,Trading loans - CRE; other RE
+Trading Assets,Loans - C&I,6.c,BHCKF614,RCFDF614,Commercial and industrial loans,BHCT3545,Credit,HC-D,2008-03-31,Trading loans - C&I
+Trading Assets,Loans - Consumer,6.d,BHCKHT65,RCFDHT65,Consumer loans,BHCT3545,Credit,HC-D,2018-06-30,Trading loans - consumer
+Trading Assets,Loans - Other,6.e,BHCKF618,RCFDF618,Other loans,BHCT3545,Credit,HC-D,2008-03-31,Trading loans - other
+Trading Assets,Other Trading Assets,9,BHCM3541,RCFDM3541,Other trading assets,BHCT3545,Various,HC-D,2008-03-31,Residual trading assets
+Trading Assets,Derivatives Positive FV,11,BHCT3543,RCFDT3543,Derivative contracts with gross positive fair value,BHCT3545,All,HC-D,2009-06-30,Sum of HC-L positive FV items
+Trading Assets,Total Trading Assets,12,BHCT3545,RCFDT3545,TOTAL TRADING ASSETS,HC Item 5,All,HC-D,1995-12-31,Equals Schedule HC Item 5
+Trading Liabilities,Short - Equity,13.a.(1),BHCKG209,RCFDG209,Short positions in equity securities,BHCT3548,Equity,HC-D,2009-03-31,Short sales of equity
+Trading Liabilities,Short - Debt,13.a.(2),BHCKG210,RCFDG210,Short positions in debt securities,BHCT3548,Interest Rate/Credit,HC-D,2009-03-31,Short sales of bonds
+Trading Liabilities,Short - Other,13.a.(3),BHCKG211,RCFDG211,Short positions in all other assets,BHCT3548,Commodity,HC-D,2009-03-31,Commodity and other short positions
+Trading Liabilities,Other Trading Liabs,13.b,BHCKF624,RCFDF624,Other trading liabilities,BHCT3548,Various,HC-D,2008-03-31,Residual trading liabilities
+Trading Liabilities,Derivatives Negative FV,14,BHCT3547,RCFDT3547,Derivative contracts with gross negative fair value,BHCT3548,All,HC-D,2009-06-30,Sum of HC-L negative FV items
+Trading Liabilities,Total Trading Liabs,15,BHCT3548,RCFDT3548,TOTAL TRADING LIABILITIES,HC Item 15,All,HC-D,1989-09-30,Equals Schedule HC Item 15
+Derivatives Notional,Interest Rate Futures,12.a.(1),BHCK8693,RCFD8693,Interest rate contracts - Futures (exchange-traded),Notional Total,Interest Rate,HC-L,1995-03-31,Exchange-traded IR futures
+Derivatives Notional,Interest Rate Forwards,12.a.(2),BHCK8697,RCFD8697,Interest rate contracts - Forwards (OTC),Notional Total,Interest Rate,HC-L,1995-03-31,OTC IR forwards
+Derivatives Notional,Interest Rate Swaps,12.b,BHCK3450,RCFD3450,Interest rate contracts - Swaps (OTC),Notional Total,Interest Rate,HC-L,1995-03-31,IR swaps - largest by notional
+Derivatives Notional,IR Options Written - Exchange,12.c.(1),BHCK8701,RCFD8701,Interest rate contracts - Options written (exchange),Notional Total,Interest Rate,HC-L,1995-03-31,Written IR options (exchange)
+Derivatives Notional,IR Options Purchased - Exchange,12.c.(2),BHCK8705,RCFD8705,Interest rate contracts - Options purchased (exchange),Notional Total,Interest Rate,HC-L,1995-03-31,Purchased IR options (exchange)
+Derivatives Notional,IR Options Written - OTC,12.c.(3),BHCK8709,RCFD8709,Interest rate contracts - Options written (OTC),Notional Total,Interest Rate,HC-L,1995-03-31,Written IR options (OTC)
+Derivatives Notional,IR Options Purchased - OTC,12.c.(4),BHCK8713,RCFD8713,Interest rate contracts - Options purchased (OTC),Notional Total,Interest Rate,HC-L,1995-03-31,Purchased IR options (OTC)
+Derivatives Notional,FX Futures,13.a.(1),BHCK8694,RCFD8694,Foreign exchange contracts - Futures (exchange-traded),Notional Total,FX,HC-L,1995-03-31,Exchange-traded FX futures
+Derivatives Notional,FX Forwards,13.a.(2),BHCK8698,RCFD8698,Foreign exchange contracts - Forwards (OTC),Notional Total,FX,HC-L,1995-03-31,OTC FX forwards; includes spots >2 days
+Derivatives Notional,FX Swaps,13.b,BHCK3826,RCFD3826,Foreign exchange contracts - Swaps (OTC),Notional Total,FX,HC-L,1995-03-31,Cross-currency swaps
+Derivatives Notional,FX Options Written - Exchange,13.c.(1),BHCK8702,RCFD8702,Foreign exchange contracts - Options written (exchange),Notional Total,FX,HC-L,1995-03-31,Written FX options (exchange)
+Derivatives Notional,FX Options Purchased - Exchange,13.c.(2),BHCK8706,RCFD8706,Foreign exchange contracts - Options purchased (exchange),Notional Total,FX,HC-L,1995-03-31,Purchased FX options (exchange)
+Derivatives Notional,FX Options Written - OTC,13.c.(3),BHCK8710,RCFD8710,Foreign exchange contracts - Options written (OTC),Notional Total,FX,HC-L,1995-03-31,Written FX options (OTC)
+Derivatives Notional,FX Options Purchased - OTC,13.c.(4),BHCK8714,RCFD8714,Foreign exchange contracts - Options purchased (OTC),Notional Total,FX,HC-L,1995-03-31,Purchased FX options (OTC)
+Derivatives Notional,Equity Futures,14.a.(1),BHCK8695,RCFD8695,Equity derivative contracts - Futures (exchange-traded),Notional Total,Equity,HC-L,1995-03-31,Exchange-traded equity futures
+Derivatives Notional,Equity Forwards,14.a.(2),BHCK8699,RCFD8699,Equity derivative contracts - Forwards (OTC),Notional Total,Equity,HC-L,1995-03-31,OTC equity forwards
+Derivatives Notional,Equity Swaps,14.b,BHCK8719,RCFD8719,Equity derivative contracts - Swaps (OTC),Notional Total,Equity,HC-L,1995-03-31,Equity swaps
+Derivatives Notional,Equity Options Written - Exchange,14.c.(1),BHCK8703,RCFD8703,Equity derivative contracts - Options written (exchange),Notional Total,Equity,HC-L,1995-03-31,Written equity options (exchange)
+Derivatives Notional,Equity Options Purchased - Exchange,14.c.(2),BHCK8707,RCFD8707,Equity derivative contracts - Options purchased (exchange),Notional Total,Equity,HC-L,1995-03-31,Purchased equity options (exchange)
+Derivatives Notional,Equity Options Written - OTC,14.c.(3),BHCK8711,RCFD8711,Equity derivative contracts - Options written (OTC),Notional Total,Equity,HC-L,1995-03-31,Written equity options (OTC)
+Derivatives Notional,Equity Options Purchased - OTC,14.c.(4),BHCK8715,RCFD8715,Equity derivative contracts - Options purchased (OTC),Notional Total,Equity,HC-L,1995-03-31,Purchased equity options (OTC)
+Derivatives Notional,Commodity Futures,15.a.(1),BHCK8696,RCFD8696,Commodity contracts - Futures (exchange-traded),Notional Total,Commodity,HC-L,1995-03-31,Exchange-traded commodity futures
+Derivatives Notional,Commodity Forwards,15.a.(2),BHCK8700,RCFD8700,Commodity contracts - Forwards (OTC),Notional Total,Commodity,HC-L,1995-03-31,OTC commodity forwards
+Derivatives Notional,Commodity Swaps,15.b,BHCK8720,RCFD8720,Commodity contracts - Swaps (OTC),Notional Total,Commodity,HC-L,1995-03-31,Commodity swaps
+Derivatives Notional,Commodity Options Written - Exchange,15.c.(1),BHCK8704,RCFD8704,Commodity contracts - Options written (exchange),Notional Total,Commodity,HC-L,1995-03-31,Written commodity options (exchange)
+Derivatives Notional,Commodity Options Purchased - Exchange,15.c.(2),BHCK8708,RCFD8708,Commodity contracts - Options purchased (exchange),Notional Total,Commodity,HC-L,1995-03-31,Purchased commodity options (exchange)
+Derivatives Notional,Commodity Options Written - OTC,15.c.(3),BHCK8712,RCFD8712,Commodity contracts - Options written (OTC),Notional Total,Commodity,HC-L,1995-03-31,Written commodity options (OTC)
+Derivatives Notional,Commodity Options Purchased - OTC,15.c.(4),BHCK8716,RCFD8716,Commodity contracts - Options purchased (OTC),Notional Total,Commodity,HC-L,1995-03-31,Purchased commodity options (OTC)
+Credit Derivatives,CDS Protection Sold,16.a,BHCKC968,RCFDC968,Credit derivatives - CDS protection sold (guarantor),Notional Total,Credit,HC-L,2006-03-31,CDS seller = credit risk seller
+Credit Derivatives,CDS Protection Bought,16.b,BHCKC969,RCFDC969,Credit derivatives - CDS protection purchased (beneficiary),Notional Total,Credit,HC-L,2006-03-31,CDS buyer = credit risk buyer
+Credit Derivatives,TRS Protection Sold,17.a,BHCKC970,RCFDC970,Credit derivatives - Total return swaps protection sold,Notional Total,Credit,HC-L,2006-03-31,TRS seller
+Credit Derivatives,TRS Protection Bought,17.b,BHCKC971,RCFDC971,Credit derivatives - Total return swaps protection purchased,Notional Total,Credit,HC-L,2006-03-31,TRS buyer
+Credit Derivatives,Other Credit Deriv Sold,18.a,BHCKC974,RCFDC974,Credit derivatives - Other credit derivatives sold,Notional Total,Credit,HC-L,2006-03-31,Other credit deriv (guarantor)
+Credit Derivatives,Other Credit Deriv Bought,18.b,BHCKC975,RCFDC975,Credit derivatives - Other credit derivatives purchased,Notional Total,Credit,HC-L,2006-03-31,Other credit deriv (beneficiary)
+Derivatives Fair Value,IR Trading Positive,19.a,BHCK8733,RCFD8733,Interest rate - Trading contracts gross positive FV,BHCT3543,Interest Rate,HC-L,1995-03-31,IR trading positive fair value
+Derivatives Fair Value,FX Trading Positive,19.b,BHCK8734,RCFD8734,Foreign exchange - Trading contracts gross positive FV,BHCT3543,FX,HC-L,1995-03-31,FX trading positive fair value
+Derivatives Fair Value,Equity Trading Positive,19.c,BHCK8735,RCFD8735,Equity - Trading contracts gross positive FV,BHCT3543,Equity,HC-L,1995-03-31,Equity trading positive fair value
+Derivatives Fair Value,Commodity Trading Positive,19.d,BHCK8736,RCFD8736,Commodity - Trading contracts gross positive FV,BHCT3543,Commodity,HC-L,1995-03-31,Commodity trading positive fair value
+Derivatives Fair Value,IR Trading Negative,20.a,BHCK8737,RCFD8737,Interest rate - Trading contracts gross negative FV,BHCT3547,Interest Rate,HC-L,1995-03-31,IR trading negative fair value
+Derivatives Fair Value,FX Trading Negative,20.b,BHCK8738,RCFD8738,Foreign exchange - Trading contracts gross negative FV,BHCT3547,FX,HC-L,1995-03-31,FX trading negative fair value
+Derivatives Fair Value,Equity Trading Negative,20.c,BHCK8739,RCFD8739,Equity - Trading contracts gross negative FV,BHCT3547,Equity,HC-L,1995-03-31,Equity trading negative fair value
+Derivatives Fair Value,Commodity Trading Negative,20.d,BHCK8740,RCFD8740,Commodity - Trading contracts gross negative FV,BHCT3547,Commodity,HC-L,1995-03-31,Commodity trading negative fair value
+Derivatives Fair Value,IR Non-Trading Positive,21.a,BHCK8741,RCFD8741,Interest rate - Non-trading contracts gross positive FV,Other Assets,Interest Rate,HC-L,1995-03-31,IR hedging positive fair value
+Derivatives Fair Value,FX Non-Trading Positive,21.b,BHCK8742,RCFD8742,Foreign exchange - Non-trading contracts gross positive FV,Other Assets,FX,HC-L,1995-03-31,FX hedging positive fair value
+Derivatives Fair Value,Equity Non-Trading Positive,21.c,BHCK8743,RCFD8743,Equity - Non-trading contracts gross positive FV,Other Assets,Equity,HC-L,1995-03-31,Equity hedging positive fair value
+Derivatives Fair Value,Commodity Non-Trading Positive,21.d,BHCK8744,RCFD8744,Commodity - Non-trading contracts gross positive FV,Other Assets,Commodity,HC-L,1995-03-31,Commodity hedging positive fair value
+Derivatives Fair Value,IR Non-Trading Negative,22.a,BHCK8745,RCFD8745,Interest rate - Non-trading contracts gross negative FV,Other Liabs,Interest Rate,HC-L,1995-03-31,IR hedging negative fair value
+Derivatives Fair Value,FX Non-Trading Negative,22.b,BHCK8746,RCFD8746,Foreign exchange - Non-trading contracts gross negative FV,Other Liabs,FX,HC-L,1995-03-31,FX hedging negative fair value
+Derivatives Fair Value,Equity Non-Trading Negative,22.c,BHCK8747,RCFD8747,Equity - Non-trading contracts gross negative FV,Other Liabs,Equity,HC-L,1995-03-31,Equity hedging negative fair value
+Derivatives Fair Value,Commodity Non-Trading Negative,22.d,BHCK8748,RCFD8748,Commodity - Non-trading contracts gross negative FV,Other Liabs,Commodity,HC-L,1995-03-31,Commodity hedging negative fair value
+Market Risk RWA,RWA - 0% Weight,RWA1,BHCKA221,RCFDA221,Balance sheet assets at 0% risk weight,BHCAA223,Low Risk,HC-R Part II,2014-03-31,Cash; Treasuries; reserves
+Market Risk RWA,RWA - 20% Weight,RWA2,BHCKS396,RCFDS396,Balance sheet assets at 20% risk weight,BHCAA223,Low-Medium,HC-R Part II,2014-03-31,GSE; munis; interbank
+Market Risk RWA,RWA - 50% Weight,RWA3,BHCKS397,RCFDS397,Balance sheet assets at 50% risk weight,BHCAA223,Medium,HC-R Part II,2014-03-31,Residential mortgages
+Market Risk RWA,RWA - 100% Weight,RWA4,BHCKS398,RCFDS398,Balance sheet assets at 100% risk weight,BHCAA223,High,HC-R Part II,2014-03-31,C&I; CRE; most loans
+Market Risk RWA,RWA - 150% Weight,RWA5,BHCKS399,RCFDS399,Balance sheet assets at 150% risk weight,BHCAA223,Very High,HC-R Part II,2014-03-31,HVCRE; non-IG exposures
+Market Risk RWA,RWA - Securitization,RWA6,BHCKS400,RCFDS400,Securitization exposures RWA,BHCAA223,Securitization,HC-R Part II,2014-03-31,ABS; MBS; other securitization
+Market Risk RWA,RWA - Equity,RWA7,BHCKS401,RCFDS401,Equity exposures RWA,BHCAA223,Equity,HC-R Part II,2014-03-31,Equity investment risk weight
+Market Risk RWA,RWA - Derivatives,RWA8,BHCKS402,RCFDS402,Derivative exposures RWA,BHCAA223,Derivatives,HC-R Part II,2014-03-31,CCR from derivatives
+Market Risk RWA,RWA - Off-Balance Sheet,RWA9,BHCKS403,RCFDS403,Off-balance sheet exposures RWA,BHCAA223,OBS,HC-R Part II,2014-03-31,Commitments; guarantees
+Market Risk RWA,Market Risk RWA,RWA10,BHCKA222,RCFDA222,Market risk-weighted assets,BHCAA223,Trading Book,HC-R Part II,2014-03-31,VaR; sVaR; IRC; CRM capital
+Market Risk RWA,Total RWA,Total,BHCAA223,RCFDA223,Total risk-weighted assets,N/A,All,HC-R Part II,2014-03-31,Sum of all RWA components
+Capital Ratios,CET1 Capital,Cap1,BHCAP859,RCFAP859,Common equity Tier 1 capital,N/A,Capital,HC-R Part I,2014-03-31,Highest quality capital
+Capital Ratios,Tier 1 Capital,Cap2,BHCFA223,RCFAA223,Tier 1 capital,N/A,Capital,HC-R Part I,2014-03-31,CET1 + AT1
+Capital Ratios,Total Capital,Cap3,BHCFA225,RCFAA225,Total capital,N/A,Capital,HC-R Part I,2014-03-31,Tier 1 + Tier 2
+Capital Ratios,CET1 Ratio,Ratio1,BHCAP793,RCFAP793,CET1 capital ratio,N/A,Ratio,HC-R Part I,2014-03-31,CET1 / RWA
+Capital Ratios,Tier 1 Ratio,Ratio2,BHCAP794,RCFAP794,Tier 1 capital ratio,N/A,Ratio,HC-R Part I,2014-03-31,Tier 1 / RWA
+Capital Ratios,Total Capital Ratio,Ratio3,BHCAP795,RCFAP795,Total capital ratio,N/A,Ratio,HC-R Part I,2014-03-31,Total capital / RWA
+Capital Ratios,Leverage Ratio,Ratio4,BHCAP796,RCFAP796,Tier 1 leverage ratio,N/A,Ratio,HC-R Part I,2014-03-31,Tier 1 / Avg assets
+Capital Ratios,SLR,Ratio5,BHCKA224,RCFDA224,Supplementary leverage ratio,N/A,Ratio,HC-R Part I,2018-03-31,Advanced approaches only
+Interest Income,Trading Asset Interest,Int1,BHCK4069,RIAD4069,Interest income on trading assets,BHCT4107,Interest,HI,1995-03-31,Component of total interest income
+Interest Expense,Trading Liability Interest,Int2,BHCK4185,RIAD4185,Interest expense on trading liabilities,BHCT4073,Interest,HI,1995-03-31,Component of total interest expense
