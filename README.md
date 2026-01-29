@@ -35,6 +35,14 @@ bank-regulatory-data-dictionary/
 │   ├── HI_INCOME_STATEMENT.csv             # Schedule HI income statement (~40 items)
 │   ├── MARKET_RISK_TRADING_COMPLETE.csv    # Complete market risk analysis (~100 items)
 │   │
+│   ├── Advanced Capital & Regulatory Forms:
+│   ├── FFIEC_101_ADVANCED_CAPITAL.csv      # Advanced approaches capital (~3000 items)
+│   ├── FFIEC_102_MARKET_RISK.csv           # Market risk report (~100 items)
+│   ├── FR_Y15_SYSTEMIC_RISK.csv            # G-SIB systemic risk (~600 items)
+│   ├── FR_Y9LP_PARENT_ONLY.csv             # Parent company only (~230 items)
+│   ├── FFIEC_009_COUNTRY_EXPOSURE.csv      # Country exposure (~190 items)
+│   ├── FR_Y11_FOREIGN_SUBSIDIARY.csv       # Foreign subsidiary (~500 items)
+│   │
 │   ├── Reference Files:
 │   ├── CALL_REPORT_RC_SCHEDULES.csv        # RC-D, RC-L, RC-B, RC-Q mappings
 │   ├── Y14_SCHEDULE_MAP.csv                # FR Y-14 schedule reference
@@ -67,7 +75,15 @@ bank-regulatory-data-dictionary/
 │   ├── HC_S_SECURITIZATION_GUIDE.md        # Schedule HC-S guide
 │   ├── HI_INCOME_STATEMENT_GUIDE.md        # Schedule HI guide
 │   ├── TRADING_ACTIVITIES_GUIDE.md         # Comprehensive trading guide
-│   └── MARKET_RISK_TRADING_GUIDE.md        # Market risk deep dive (~100 items)
+│   ├── MARKET_RISK_TRADING_GUIDE.md        # Market risk deep dive (~100 items)
+│   │
+│   ├── Advanced Form Guides:
+│   ├── FFIEC_101_ADVANCED_CAPITAL_GUIDE.md # Advanced capital framework
+│   ├── FFIEC_102_MARKET_RISK_GUIDE.md      # Market risk regulatory report
+│   ├── FR_Y15_SYSTEMIC_RISK_GUIDE.md       # G-SIB systemic risk guide
+│   ├── FR_Y9LP_PARENT_ONLY_GUIDE.md        # Parent company only guide
+│   ├── FFIEC_009_COUNTRY_EXPOSURE_GUIDE.md # Country exposure guide
+│   └── FR_Y11_FOREIGN_SUBSIDIARY_GUIDE.md  # Foreign subsidiary guide
 │
 ├── json/                                   # Machine-readable data
 │   ├── data_taxonomy.json                  # Full regulatory taxonomy
@@ -98,6 +114,17 @@ bank-regulatory-data-dictionary/
 | `HC_R_CAPITAL.csv` | HC-R | Regulatory capital | ~120 |
 | `HC_S_SECURITIZATION.csv` | HC-S | Securitization activities | ~30 |
 | `HI_INCOME_STATEMENT.csv` | HI | Income statement | ~40 |
+
+### Advanced Capital & Regulatory Forms
+
+| File | Form | Content | Items |
+|------|------|---------|-------|
+| `FFIEC_101_ADVANCED_CAPITAL.csv` | FFIEC 101 | Advanced approaches capital | ~3,000 |
+| `FFIEC_102_MARKET_RISK.csv` | FFIEC 102 | Market risk VaR/sVaR/IRC | ~100 |
+| `FR_Y15_SYSTEMIC_RISK.csv` | FR Y-15 | G-SIB indicator data | ~600 |
+| `FR_Y9LP_PARENT_ONLY.csv` | FR Y-9LP | Parent company balance sheet | ~230 |
+| `FFIEC_009_COUNTRY_EXPOSURE.csv` | FFIEC 009 | Country exposure claims | ~190 |
+| `FR_Y11_FOREIGN_SUBSIDIARY.csv` | FR Y-11 | Nonbank subsidiary data | ~500 |
 
 ### Documentation
 
@@ -248,6 +275,7 @@ MIT License - See LICENSE file for details.
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 3.0 | 2026-01-29 | Added FFIEC 101/102, FR Y-15/Y-9LP/Y-11, FFIEC 009 (~4,700 new MDRM codes) |
 | 2.1 | 2026-01-28 | Added complete market risk/trading analysis (~100 MDRM codes) |
 | 2.0 | 2026-01-28 | Added comprehensive schedule coverage (14 schedules) |
 | 1.0 | 2026-01-28 | Initial release with trading focus |
