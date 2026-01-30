@@ -1,0 +1,71 @@
+test_id,bank_name,bank_rssd,period,rule_id,input_values,expected_result,description,notes
+# ============================================================================
+# VALIDATION TEST CASES - Sample Test Data for Validation Rules
+# Version: 1.0 | Created: 2026-01-29
+# Purpose: Test data for validating reconciliation rules and validation logic
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# BALANCE SHEET TESTS
+# ----------------------------------------------------------------------------
+TEST_001,JPMorgan Chase,1039502,2024Q4,VAL_001,"{""BHCT2170"": 4000000, ""BHCT2948"": 3600000, ""BHCK3000"": 0, ""BHCT3210"": 400000}",PASS,Balance sheet balances correctly,Assets = Liab + Equity
+TEST_002,Test Bank Fail,9999999,2024Q4,VAL_001,"{""BHCT2170"": 4000000, ""BHCT2948"": 3600000, ""BHCK3000"": 0, ""BHCT3210"": 300000}",FAIL,Balance sheet does not balance,Assets != Liab + Equity (100K diff)
+TEST_003,Bank of America,1073757,2024Q4,VAL_001,"{""BHCT2170"": 3300000, ""BHCT2948"": 2970000, ""BHCK3000"": 30000, ""BHCT3210"": 300000}",PASS,Balance sheet with minority interest,Includes minority interest
+
+# ----------------------------------------------------------------------------
+# TRADING ASSETS TESTS
+# ----------------------------------------------------------------------------
+TEST_004,Goldman Sachs,2380443,2024Q4,VAL_023,"{""BHCT3545"": 500000}",PASS,Trading assets present,Major trading firm
+TEST_005,Community Bank,8888888,2024Q4,VAL_023,"{""BHCT3545"": 0}",PASS,No trading assets,Community bank with no trading
+
+# ----------------------------------------------------------------------------
+# CAPITAL TESTS
+# ----------------------------------------------------------------------------
+TEST_006,JPMorgan Chase,1039502,2024Q4,VAL_029,"{""BHCFA223"": 300000, ""BHCAP859"": 280000, ""BHCAP856"": 20000}",PASS,Tier 1 = CET1 + AT1,Capital composition correct
+TEST_007,Test Bank Fail,9999999,2024Q4,VAL_029,"{""BHCFA223"": 300000, ""BHCAP859"": 280000, ""BHCAP856"": 30000}",FAIL,Tier 1 does not equal CET1 + AT1,Components exceed Tier 1
+TEST_008,Citigroup,1951350,2024Q4,VAL_030,"{""BHCFA225"": 350000, ""BHCFA223"": 300000, ""BHCFA224"": 50000}",PASS,Total Capital = Tier 1 + Tier 2,Capital reconciles
+
+# ----------------------------------------------------------------------------
+# CAPITAL RATIO TESTS
+# ----------------------------------------------------------------------------
+TEST_009,JPMorgan Chase,1039502,2024Q4,VAL_032,"{""BHCAP793"": 0.14}",PASS,CET1 ratio 14% within range,Well capitalized
+TEST_010,Well Capitalized Bank,7777777,2024Q4,VAL_032,"{""BHCAP793"": 0.18}",PASS,CET1 ratio 18% within range,Very well capitalized
+TEST_011,Undercapitalized Bank,6666666,2024Q4,VAL_032,"{""BHCAP793"": 0.04}",FAIL,CET1 ratio 4% below minimum,Below 4.5% minimum
+TEST_012,Overcapitalized Test,5555555,2024Q4,VAL_032,"{""BHCAP793"": 0.35}",FAIL,CET1 ratio 35% above expected max,Unusual ratio - investigate
+
+# ----------------------------------------------------------------------------
+# INCOME STATEMENT TESTS
+# ----------------------------------------------------------------------------
+TEST_013,JPMorgan Chase,1039502,2024Q4,VAL_037,"{""BHCT4074"": 50000, ""BHCT4107"": 100000, ""BHCT4073"": 50000}",PASS,NII = Int Income - Int Expense,Income statement reconciles
+TEST_014,Test Bank Fail,9999999,2024Q4,VAL_037,"{""BHCT4074"": 55000, ""BHCT4107"": 100000, ""BHCT4073"": 50000}",FAIL,NII does not reconcile,5K difference in NII
+
+# ----------------------------------------------------------------------------
+# SIGN TESTS
+# ----------------------------------------------------------------------------
+TEST_015,JPMorgan Chase,1039502,2024Q4,VAL_006,"{""BHCT2170"": 4000000}",PASS,Total assets positive,Normal positive assets
+TEST_016,Negative Assets Test,4444444,2024Q4,VAL_006,"{""BHCT2170"": -1000}",FAIL,Negative total assets,Data error - investigate
+
+# ----------------------------------------------------------------------------
+# LOANS TESTS
+# ----------------------------------------------------------------------------
+TEST_017,Wells Fargo,1120754,2024Q4,VAL_017,"{""BHCTB528"": 900000, ""BHCTB529"": 900000}",PASS,Loans net tie to HC-C,Cross-schedule tie correct
+TEST_018,Test Bank Fail,3333333,2024Q4,VAL_022,"{""BHCT3123"": 150000, ""BHCTB528"": 1000000}",FAIL,ALLL ratio 15% too high,ALLL/Loans > 10% threshold
+
+# ----------------------------------------------------------------------------
+# DERIVATIVES TESTS
+# ----------------------------------------------------------------------------
+TEST_019,Goldman Sachs,2380443,2024Q4,VAL_025,"{""BHCT3543"": 80000, ""BHCK8733"": 40000, ""BHCK8734"": 20000, ""BHCK8735"": 10000, ""BHCK8736"": 5000, ""BHCK8741"": 3000, ""BHCK8742"": 1000, ""BHCK8743"": 500, ""BHCK8744"": 500}",PASS,Derivatives +FV reconciles to HC-L,Sum of FV components matches total
+TEST_020,Test Bank Fail,2222222,2024Q4,VAL_025,"{""BHCT3543"": 80000, ""BHCK8733"": 40000, ""BHCK8734"": 20000, ""BHCK8735"": 10000, ""BHCK8736"": 5000}",FAIL,Derivatives +FV missing components,Only trading FV present
+
+# ----------------------------------------------------------------------------
+# COMPREHENSIVE TESTS (Multiple Rules)
+# ----------------------------------------------------------------------------
+TEST_021,JPMorgan Chase,1039502,2024Q4,ALL,"{""BHCT2170"": 4000000, ""BHCT2948"": 3600000, ""BHCK3000"": 0, ""BHCT3210"": 400000, ""BHCT3545"": 600000, ""BHCAP859"": 280000, ""BHCAP856"": 20000, ""BHCFA223"": 300000, ""BHCFA224"": 50000, ""BHCFA225"": 350000, ""BHCAP793"": 0.14, ""BHCT4074"": 50000, ""BHCT4107"": 100000, ""BHCT4073"": 50000}",PASS,Full validation suite passes,All major checks pass
+TEST_022,Problem Bank,1111111,2024Q4,ALL,"{""BHCT2170"": 1000000, ""BHCT2948"": 950000, ""BHCK3000"": 0, ""BHCT3210"": 40000, ""BHCAP793"": 0.03}",FAIL,Multiple validation failures,Balance sheet + capital ratio fail
+
+# ----------------------------------------------------------------------------
+# EDGE CASES
+# ----------------------------------------------------------------------------
+TEST_023,Zero Trading Bank,0000001,2024Q4,VAL_023,"{""BHCT3545"": 0}",PASS,Zero trading assets is valid,Small banks may have no trading
+TEST_024,Missing Data,0000002,2024Q4,VAL_001,"{}",FAIL,Missing required data,No MDRM codes provided
+TEST_025,Rounding Test,0000003,2024Q4,VAL_001,"{""BHCT2170"": 4000000.01, ""BHCT2948"": 3600000, ""BHCK3000"": 0, ""BHCT3210"": 400000.01}",PASS,Rounding difference acceptable,Small rounding diff ok

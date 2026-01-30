@@ -1,0 +1,89 @@
+rule_id,rule_type,schedule,condition,expected_result,severity,description,mdrm_codes,error_message
+# ============================================================================
+# VALIDATION RULES - Structured Rules for Automated Data Checking
+# Version: 1.0 | Created: 2026-01-29
+# Purpose: 40+ validation rules for regulatory data quality assurance
+# Rule Types: balance, sum, ratio, range, cross_schedule, time_series, sign
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# SECTION 1: BALANCE SHEET VALIDATION (10 rules)
+# ----------------------------------------------------------------------------
+VAL_001,balance,HC,BHCT2170,BHCT2948 + BHCK3000 + BHCT3210,CRITICAL,Assets must equal Liabilities + Minority Interest + Equity,BHCT2170;BHCT2948;BHCK3000;BHCT3210,Balance sheet does not balance: Assets != L + MI + E
+VAL_002,balance,HC,BHCT2170,BHCT3300,CRITICAL,Total Assets must equal Total Liabilities and Equity (Item 29),BHCT2170;BHCT3300,Total assets does not match total L+E
+VAL_003,sum,HC,BHCT2170,Sum(Items 1-11),CRITICAL,Total Assets must equal sum of all asset line items,BHCT0081;BHCT8641;BHCTB987;BHCT2122;BHCT3545;...,Total assets does not equal sum of components
+VAL_004,sum,HC,BHCT2948,Sum(Items 13-20),CRITICAL,Total Liabilities must equal sum of all liability line items,BHCT2200;BHCTB993;BHCT3548;BHCT3190;BHCT3200;BHCT2930,Total liabilities does not equal sum of components
+VAL_005,sum,HC,BHCT3210,Sum(Items 23-27),HIGH,Total Equity must equal sum of equity components,BHCT3838;BHCT3230;BHCT3839;BHCT3632;BHCTB530,Total equity does not equal sum of components
+VAL_006,sign,HC,BHCT2170,>= 0,CRITICAL,Total Assets must be non-negative,BHCT2170,Total assets is negative
+VAL_007,sign,HC,BHCT2948,>= 0,CRITICAL,Total Liabilities must be non-negative,BHCT2948,Total liabilities is negative
+VAL_008,sign,HC,BHCT3210,>= 0,HIGH,Total Equity should typically be positive,BHCT3210,Total equity is negative - investigate
+VAL_009,sum,HC,BHCT0081,BHCT0395 + BHCT0397,HIGH,Cash must equal noninterest-bearing + interest-bearing,BHCT0081;BHCT0395;BHCT0397,Cash subtotals do not add up
+VAL_010,sum,HC,BHCT2200,BHCM2200 + BHCKB536,HIGH,Total Deposits must equal domestic + foreign deposits,BHCT2200;BHCM2200;BHCKB536,Deposit subtotals do not add up
+
+# ----------------------------------------------------------------------------
+# SECTION 2: SECURITIES VALIDATION - HC-B (6 rules)
+# ----------------------------------------------------------------------------
+VAL_011,cross_schedule,HC/HC-B,BHCTJJ34,HC-B Item 8 Col C,CRITICAL,HTM securities on HC must equal HC-B total HTM,BHCTJJ34;BHCT1754,HTM securities do not tie between HC and HC-B
+VAL_012,cross_schedule,HC/HC-B,BHCT1773,HC-B Item 8 Col B,CRITICAL,AFS securities on HC must equal HC-B total AFS,BHCT1773,AFS securities do not tie between HC and HC-B
+VAL_013,sum,HC-B,BHCT1773,Sum(AFS FV Items 1-7),HIGH,AFS total must equal sum of AFS security types,BHCK1287;BHCKJF78;BHCKG301;...,AFS components do not sum to total
+VAL_014,sum,HC-B,BHCT1754,Sum(HTM AC Items 1-7),HIGH,HTM total must equal sum of HTM security types,BHCK0211;BHCK1289;BHCKG303;...,HTM components do not sum to total
+VAL_015,sign,HC-B,BHCT1773,>= 0,HIGH,AFS fair value must be non-negative,BHCT1773,AFS fair value is negative
+VAL_016,sign,HC-B,BHCT1754,>= 0,HIGH,HTM amortized cost must be non-negative,BHCT1754,HTM amortized cost is negative
+
+# ----------------------------------------------------------------------------
+# SECTION 3: LOANS VALIDATION - HC-C (6 rules)
+# ----------------------------------------------------------------------------
+VAL_017,cross_schedule,HC/HC-C,BHCTB528,HC-C Item 12,CRITICAL,Gross loans on HC must equal HC-C total,BHCTB528;BHCTB529,Loans do not tie between HC and HC-C
+VAL_018,cross_schedule,HC/HC-C,BHCT3123,HC-C Item 11,CRITICAL,ALLL on HC must equal HC-C ALLL,BHCT3123,Allowance does not tie between HC and HC-C
+VAL_019,sum,HC-C,BHCTB529,Sum(Items 1-9) - Item 10 - Item 11,HIGH,Net loans must equal gross loans - unearned - allowance,BHCT1410;BHCK1288;...;BHCT2123;BHCT3123,Loan calculation does not reconcile
+VAL_020,sum,HC-C,BHCT1410,Sum(Items 1.a through 1.f),HIGH,RE loans must equal sum of RE subcategories,BHCT1415;BHCT1420;BHCK1797;BHCT5367;BHCT1460;BHCT1480,RE loan components do not sum
+VAL_021,sign,HC-C,BHCT3123,>= 0,HIGH,Loan loss allowance must be non-negative,BHCT3123,ALLL is negative
+VAL_022,ratio,HC-C,BHCT3123/BHCTB528,>= 0 AND <= 0.10,MEDIUM,ALLL ratio should be between 0% and 10%,BHCT3123;BHCTB528,ALLL ratio outside normal range
+
+# ----------------------------------------------------------------------------
+# SECTION 4: TRADING VALIDATION - HC-D and HC-L (6 rules)
+# ----------------------------------------------------------------------------
+VAL_023,cross_schedule,HC/HC-D,BHCT3545,HC-D Item 12,CRITICAL,Trading assets on HC must equal HC-D total,BHCT3545,Trading assets do not tie between HC and HC-D
+VAL_024,cross_schedule,HC/HC-D,BHCT3548,HC-D Item 15,CRITICAL,Trading liabilities on HC must equal HC-D total,BHCT3548,Trading liabilities do not tie between HC and HC-D
+VAL_025,cross_schedule,HC-D/HC-L,BHCT3543,Sum(HC-L Positive FV),CRITICAL,Derivatives positive FV must reconcile to HC-L,BHCT3543;BHCK8733;BHCK8734;...,Derivatives positive FV does not reconcile
+VAL_026,cross_schedule,HC-D/HC-L,BHCT3547,Sum(HC-L Negative FV),CRITICAL,Derivatives negative FV must reconcile to HC-L,BHCT3547;BHCK8737;BHCK8738;...,Derivatives negative FV does not reconcile
+VAL_027,sum,HC-D,BHCT3545,Sum(Items 1-11),HIGH,Trading assets must equal sum of components,BHCM3531;BHCM3532;...;BHCT3543,Trading assets components do not sum
+VAL_028,sign,HC-L,BHCK8733,>= 0,HIGH,Positive fair value must be non-negative,BHCK8733,Positive FV value is negative
+
+# ----------------------------------------------------------------------------
+# SECTION 5: CAPITAL VALIDATION - HC-R (8 rules)
+# ----------------------------------------------------------------------------
+VAL_029,sum,HC-R,BHCFA223,BHCAP859 + BHCAP856,CRITICAL,Tier 1 must equal CET1 + Additional Tier 1,BHCFA223;BHCAP859;BHCAP856,Tier 1 capital does not reconcile
+VAL_030,sum,HC-R,BHCFA225,BHCFA223 + BHCFA224,CRITICAL,Total Capital must equal Tier 1 + Tier 2,BHCFA225;BHCFA223;BHCFA224,Total capital does not reconcile
+VAL_031,derived,HC-R,BHCAP859,BHCAP840 - BHCAP852,HIGH,CET1 must equal CET1 before adjustments - deductions,BHCAP859;BHCAP840;BHCAP852,CET1 calculation does not reconcile
+VAL_032,range,HC-R,BHCAP793,>= 0.045 AND <= 0.30,MEDIUM,CET1 ratio should be between 4.5% and 30%,BHCAP793,CET1 ratio outside normal range
+VAL_033,range,HC-R,BHCAP794,>= 0.06 AND <= 0.30,MEDIUM,Tier 1 ratio should be between 6% and 30%,BHCAP794,Tier 1 ratio outside normal range
+VAL_034,range,HC-R,BHCAP795,>= 0.08 AND <= 0.35,MEDIUM,Total capital ratio should be between 8% and 35%,BHCAP795,Total capital ratio outside normal range
+VAL_035,range,HC-R,BHCAP796,>= 0.04 AND <= 0.15,MEDIUM,Leverage ratio should be between 4% and 15%,BHCAP796,Leverage ratio outside normal range
+VAL_036,sign,HC-R,BHCAA223,> 0,CRITICAL,Risk-weighted assets must be positive,BHCAA223,RWA is zero or negative
+
+# ----------------------------------------------------------------------------
+# SECTION 6: INCOME STATEMENT VALIDATION - HI (5 rules)
+# ----------------------------------------------------------------------------
+VAL_037,derived,HI,BHCT4074,BHCT4107 - BHCT4073,CRITICAL,NII must equal Interest Income - Interest Expense,BHCT4074;BHCT4107;BHCT4073,NII calculation does not reconcile
+VAL_038,sum,HI,BHCT4107,Sum(Interest Income Items 1.a-1.f),HIGH,Interest income must equal sum of sources,BHCK4010;BHCK4065;BHCK4115;BHCK4060;BHCKK130;BHCK4069,Interest income components do not sum
+VAL_039,sum,HI,BHCT4073,Sum(Interest Expense Items 2.a-2.d),HIGH,Interest expense must equal sum of sources,BHCK4508;BHCK4148;BHCK4180;BHCK4185,Interest expense components do not sum
+VAL_040,range,HI,BHCT4074/BHCT2170,>= -0.05 AND <= 0.10,MEDIUM,NII/Assets ratio should be reasonable,BHCT4074;BHCT2170,NII ratio outside normal range
+VAL_041,sign,HI,BHCT4107,>= 0,HIGH,Interest income should be non-negative,BHCT4107,Interest income is negative
+
+# ----------------------------------------------------------------------------
+# SECTION 7: OTHER ASSETS/LIABILITIES VALIDATION (4 rules)
+# ----------------------------------------------------------------------------
+VAL_042,cross_schedule,HC/HC-F,BHCT2160,HC-F Item 12,CRITICAL,Other assets on HC must equal HC-F total,BHCT2160,Other assets do not tie between HC and HC-F
+VAL_043,cross_schedule,HC/HC-G,BHCT2930,HC-G Item 5,CRITICAL,Other liabilities on HC must equal HC-G total,BHCT2930,Other liabilities do not tie between HC and HC-G
+VAL_044,sum,HC-F,BHCT2160,Sum(Items 1-11),HIGH,Other assets must equal sum of HC-F components,BHCKC749;BHCK2148;...;BHCK2155,Other assets components do not sum
+VAL_045,sum,HC-G,BHCT2930,Sum(Items 1-4),HIGH,Other liabilities must equal sum of HC-G components,BHCK3645;BHCK3049;BHCKC439;BHCK2750,Other liabilities components do not sum
+
+# ----------------------------------------------------------------------------
+# SECTION 8: TIME SERIES VALIDATION (5 rules)
+# ----------------------------------------------------------------------------
+VAL_046,time_series,HC,BHCT2170,Change <= 50% QoQ,MEDIUM,Total assets should not change more than 50% quarter over quarter,BHCT2170,Unusually large change in total assets
+VAL_047,time_series,HC,BHCT3210,Change <= 30% QoQ,MEDIUM,Total equity should not change more than 30% quarter over quarter,BHCT3210,Unusually large change in equity
+VAL_048,time_series,HI,BHCT4340,Existence in prior period,LOW,Net income should exist in prior periods (continuity check),BHCT4340,Missing historical net income data
+VAL_049,time_series,HC-R,BHCAP793,Change <= 0.05 QoQ,LOW,CET1 ratio should not change more than 500bps QoQ,BHCAP793,Unusually large change in CET1 ratio
+VAL_050,time_series,HC,BHCT3545,Change <= 100% QoQ if > $1B,LOW,Large trading asset changes should be investigated,BHCT3545,Unusually large change in trading assets

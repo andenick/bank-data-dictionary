@@ -1,0 +1,31 @@
+schedule,sub_schedule,item,description,data_type,frequency,cross_form_reference,confidentiality,notes
+A.1,Income Projections,Net Interest Income,9-quarter forward NII projection,Currency,Annual,HI (BHCT4074),Confidential,Baseline and stress scenarios
+A.1,Income Projections,Provision for Credit Losses,Projected provisions under stress,Currency,Annual,HI (BHCT4230),Confidential,Key stress output
+A.1,Income Projections,Noninterest Income,Projected fee and trading revenue,Currency,Annual,HI (BHCT4079),Confidential,Includes trading revenue
+A.1,Income Projections,Noninterest Expense,Projected operating expenses,Currency,Annual,HI (BHCT4093),Confidential,
+A.1,Income Projections,Trading Revenue,Projected trading P&L,Currency,Annual,HI (BHCKA220),Confidential,Decomposed by desk
+A.1,Income Projections,Net Income,Bottom line under stress,Currency,Annual,HI (BHCT4340),Confidential,
+A.2,Balance Sheet Projections,Total Assets,9-quarter forward total assets,Currency,Annual,HC (BHCT2170),Confidential,
+A.2,Balance Sheet Projections,Total Loans,Projected loan portfolio,Currency,Annual,HC (BHCT2122),Confidential,By loan type
+A.2,Balance Sheet Projections,Securities,Projected securities portfolio,Currency,Annual,HC-B,Confidential,AFS + HTM
+A.2,Balance Sheet Projections,Trading Assets,Projected trading book,Currency,Annual,HC-D (BHCT3545),Confidential,
+A.2,Balance Sheet Projections,Total Deposits,Projected deposits,Currency,Annual,HC (BHCM2200),Confidential,By type
+A.2,Balance Sheet Projections,Total Equity,Projected equity capital,Currency,Annual,HC (BHCT3210),Confidential,
+A.3,Capital Projections,CET1 Capital,Projected CET1 components,Currency,Annual,HC-R (BHCAP859),Confidential,Under stress scenarios
+A.3,Capital Projections,CET1 Ratio,CET1 / Projected RWA,Ratio,Annual,HC-R,Confidential,Minimum ratio under stress
+A.3,Capital Projections,Tier 1 Ratio,Tier 1 / Projected RWA,Ratio,Annual,HC-R (BHCFA223),Confidential,
+A.3,Capital Projections,Total Capital Ratio,Total Capital / Projected RWA,Ratio,Annual,HC-R (BHCFA225),Confidential,
+A.3,Capital Projections,Leverage Ratio,Tier 1 / Avg Assets,Ratio,Annual,HC-R,Confidential,
+A.4,RWA Projections,Credit Risk RWA,Projected credit risk RWA,Currency,Annual,HC-R Part II,Confidential,By exposure category
+A.4,RWA Projections,Market Risk RWA,Projected market risk RWA,Currency,Annual,FFIEC 102,Confidential,
+A.4,RWA Projections,Operational Risk RWA,Projected operational risk RWA,Currency,Annual,FFIEC 101 Sched E,Confidential,
+A.4,RWA Projections,Total RWA,Sum of all risk categories,Currency,Annual,HC-R (BHCAA223),Confidential,
+A.5,Operational Risk,Loss Events,Historical and projected op losses,Currency,Annual,FFIEC 101 Sched E,Confidential,By Basel event type
+A.5,Operational Risk,Scenario Analysis,Tail risk scenarios,Currency,Annual,-,Confidential,Internal models
+A.6,PPNR Methodology,Revenue Models,PPNR projection methodology,Text,Annual,HI,Confidential,Model documentation
+F.2,Counterparty Default,Top 10 Exposures,Largest counterparty EAD under stress,Currency,Annual,HC-L,Confidential,
+F.2,Counterparty Default,Loss Impact,P&L impact of largest default,Currency,Annual,Y-14Q Sched E,Confidential,
+RCI,Regulatory Capital Instruments,Instrument Detail,Debt/equity instrument characteristics,Mixed,Annual,HC-R,Confidential,Instrument-level
+CECL,CECL Supplemental,Model Parameters,Expected credit loss methodology inputs,Mixed,Annual,HC-N,Confidential,CECL model detail
+OpRisk,Operational Risk Form,Event Data,Operational loss events and scenarios,Mixed,Annual,FFIEC 101 Sched E,Confidential,
+Scenario,Scenario Template,Macro Variables,GDP; unemployment; rates; housing; etc.,Mixed,Annual,External,Public,Fed-provided scenarios

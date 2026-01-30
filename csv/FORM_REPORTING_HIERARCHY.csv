@@ -1,0 +1,76 @@
+form_id,form_name,data_source_forms,aggregation_level,reporter_threshold,frequency,purpose,primary_schedules,key_data_elements
+# ============================================================================
+# FORM REPORTING HIERARCHY - Which Forms Feed Into Which
+# Version: 1.0 | Created: 2026-01-29
+# Purpose: Shows data flow and relationships between regulatory forms
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# TIER 1: PRIMARY SOURCE FORMS (Bank-Level Data)
+# ----------------------------------------------------------------------------
+FFIEC_031,Call Report - Foreign Offices,N/A,Bank level,All FDIC-insured banks with foreign offices,Quarterly,Universal bank-level filing for banks with foreign operations,RC;RC-B;RC-C;RC-D;RC-L;RC-N;RC-Q;RC-R;RI,Total Assets;Loans;Deposits;Capital;Income
+FFIEC_041,Call Report - Domestic Only,N/A,Bank level,All FDIC-insured banks domestic only,Quarterly,Universal bank-level filing for domestic-only banks,RC;RC-B;RC-C;RC-D;RC-L;RC-N;RC-Q;RC-R;RI,Total Assets;Loans;Deposits;Capital;Income
+FFIEC_051,Call Report - Small Banks,N/A,Bank level,Banks <$5B domestic only,Quarterly,Simplified filing for smaller banks,RC;RC-B;RC-C;RC-R;RI,Total Assets;Loans;Deposits;Capital;Income
+
+# ----------------------------------------------------------------------------
+# TIER 2: CONSOLIDATED BHC FORMS (Aggregated from Bank Data)
+# ----------------------------------------------------------------------------
+FR_Y9C,Consolidated BHC Report,FFIEC 031/041/051,BHC consolidated,$5B+ consolidated assets,Quarterly,Primary BHC regulatory filing consolidating subsidiary banks,HC;HC-B;HC-C;HC-D;HC-L;HC-N;HC-Q;HC-R;HI,Total Assets;Securities;Loans;Trading;Derivatives;Capital
+FR_Y9LP,Parent Company Only,FR Y-9C,BHC parent only,$5B+ non-complex BHCs,Quarterly,Parent company only financial statements (non-consolidated),PC-A;PC-B;PC-C,Parent Assets;Intercompany;Double Leverage
+FR_Y9SP,Small BHC Report,FFIEC 031/041/051,BHC consolidated,$500M-$5B consolidated,Semi-Annual,Simplified BHC filing for smaller holding companies,Abbreviated schedules,Summary financials
+
+# ----------------------------------------------------------------------------
+# TIER 3: STRESS TESTING FORMS (Supplements Y-9C Data)
+# ----------------------------------------------------------------------------
+FR_Y14A,Capital Assessment Annual,FR Y-9C + granular,BHC consolidated,$100B+ consolidated,Annual,Comprehensive Capital Analysis annual submission for CCAR,A.1 Income;A.2 Balance Sheet;A.3 Capital;A.4 RWA,Scenario projections;PPNR;Losses;Capital
+FR_Y14Q,Capital Assessment Quarterly,FR Y-9C + granular,BHC consolidated,$100B+ consolidated,Quarterly,Quarterly CCAR data including trading and counterparty,G Trading;H PPNR;E Counterparty;F Securities,Trading detail;PPNR drivers;CVA
+FR_Y14M,Capital Assessment Monthly,FR Y-9C + granular,BHC consolidated,$100B+ consolidated,Monthly,Monthly loan-level portfolio data for stress testing,Mortgage;HELOC;Credit Card;C&I;CRE,Loan-level data;LTV;FICO;DTI
+
+# ----------------------------------------------------------------------------
+# TIER 4: LIQUIDITY MONITORING (Daily/Monthly Data)
+# ----------------------------------------------------------------------------
+FR_2052a,Liquidity Monitoring,FR Y-9C,BHC/IHC consolidated,Large BHCs and IHCs,Daily/Monthly,Complex institution liquidity monitoring for LCR/NSFR,Inflows;Outflows;Supplemental,HQLA;Inflows;Outflows;LCR;NSFR
+FR_2052b,Liquidity Monitoring Lite,FR Y-9C,BHC/IHC consolidated,Medium BHCs,Monthly,Simplified liquidity monitoring,Summary schedules,LCR components
+
+# ----------------------------------------------------------------------------
+# TIER 5: ADVANCED CAPITAL APPROACHES
+# ----------------------------------------------------------------------------
+FFIEC_101,Advanced Capital Report,FR Y-9C,Bank/BHC level,Advanced approaches banks,Quarterly,Advanced approaches regulatory capital calculation,Schedule A (Credit);B (Securitization);C (Equity);D (Op Risk),IRB parameters;PD;LGD;EAD;Op Risk
+FFIEC_102,Market Risk Report,FR Y-9C,Bank/BHC level,Banks with significant trading,Quarterly,Market risk regulatory capital using VaR/sVaR/IRC,VaR;sVaR;IRC;CRM;Correlation,VaR 99%;sVaR;Specific Risk;IRC
+
+# ----------------------------------------------------------------------------
+# TIER 6: SYSTEMIC RISK AND G-SIB
+# ----------------------------------------------------------------------------
+FR_Y15,Systemic Risk Report,FR Y-9C + Y-14,BHC consolidated,$100B+ consolidated,Annual,G-SIB systemic risk indicator data for Method 1 and 2,G-SIB indicators;TLAC,Size;Interconnectedness;Substitutability;Complexity;Cross-border
+FR_Y15Q,Systemic Risk Quarterly,FR Y-9C,BHC consolidated,$100B+ consolidated,Quarterly,Quarterly systemic risk indicators,Subset of Y-15,STWF;Derivatives;Securities
+
+# ----------------------------------------------------------------------------
+# TIER 7: INTERNATIONAL OPERATIONS
+# ----------------------------------------------------------------------------
+FFIEC_009,Country Exposure,FFIEC 031/041,Bank level,Banks with significant foreign exposure,Quarterly,Country exposure information for foreign claims,Country claims;Transfer risk,Immediate;Ultimate;Local;Outward
+FFIEC_009a,Country Exposure Supplement,FFIEC 009,Bank level,Significant foreign exposure,Quarterly,Supplement for maturity distribution,Maturity buckets,Maturity by country
+FR_Y11,Foreign Subsidiary,FR Y-9C,Subsidiary level,Foreign subs of US BHCs,Quarterly,Assets and liabilities of large foreign offices,Balance sheet;P&L,Foreign subsidiary financials
+FFIEC_002,US Branches of Foreign Banks,N/A,Branch level,All US branches of foreign banks,Quarterly,Assets and liabilities of US branches/agencies,Assets;Liabilities;OBS,Foreign bank US operations
+
+# ----------------------------------------------------------------------------
+# TIER 8: PUBLIC DISCLOSURE (Pillar 3)
+# ----------------------------------------------------------------------------
+PILLAR3,Basel III Public Disclosure,FR Y-9C + FFIEC 101,Public disclosure,G-SIBs and large international,Quarterly/Annual,Basel III Pillar 3 public disclosure requirements,KM1;CR1-CR5;MR1-MR4;LIQ1-LIQ2;CCR1-CCR8,Capital ratios;RWA;Credit risk;Market risk;Liquidity
+
+# ----------------------------------------------------------------------------
+# TIER 9: RESOLUTION PLANNING
+# ----------------------------------------------------------------------------
+FR_YG1,Resolution Plan,FR Y-9C + Y-14 + Y-15,BHC consolidated,G-SIBs,Annual/Every 2 years,Living will resolution planning information,QFC;Critical ops;Core lines,Resolution strategy;CIDI;Material entities
+FR_Y10,Foreign Bank Structure,N/A,FBO level,Foreign banking organizations,Annual,Structure and operations of FBOs in US,Structure;Ops,FBO US operations
+
+# ----------------------------------------------------------------------------
+# DATA FLOW SUMMARY
+# ----------------------------------------------------------------------------
+# Level 1: Bank Call Reports (031/041/051) - Foundational bank-level data
+# Level 2: FR Y-9C consolidates bank call reports into BHC view
+# Level 3: FR Y-14A/Q/M supplements Y-9C with stress testing detail
+# Level 4: FR 2052a provides liquidity data (daily/monthly)
+# Level 5: FFIEC 101/102 for advanced capital approaches
+# Level 6: FR Y-15 for G-SIB systemic risk assessment
+# Level 7: FFIEC 009, FR Y-11 for international operations
+# Level 8: Pillar 3 public disclosure from all above sources

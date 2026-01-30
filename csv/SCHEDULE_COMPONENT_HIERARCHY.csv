@@ -1,0 +1,297 @@
+parent_schedule,parent_item,parent_mdrm,child_schedule,child_item,child_mdrm,relationship,level
+# ============================================================================
+# SCHEDULE COMPONENT HIERARCHY - Complete Parent-Child Relationships
+# Version: 1.0 | Created: 2026-01-29
+# Purpose: Explicit hierarchical relationships for all FR Y-9C schedules
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# HC BALANCE SHEET TO DETAIL SCHEDULE MAPPINGS (Level 1)
+# ----------------------------------------------------------------------------
+HC,1,BHCT0081,HC,1.a,BHCT0395,sum_component,2
+HC,1,BHCT0081,HC,1.b,BHCT0397,sum_component,2
+HC,2,BHCT8641,HC-B,8,BHCT8641,equals,1
+HC,2.a,BHCTJJ34,HC-B,8 Col C,BHCT1754,equals,1
+HC,2.b,BHCT1773,HC-B,8 Col B,BHCT1773,equals,1
+HC,2.c,BHCTJJ32,HC-B,M5,BHCTJJ32,equals,1
+HC,3,BHCTB987,HC,3.a,BHCTB989,sum_component,2
+HC,3,BHCTB987,HC,3.b,BHCTB995,sum_component,2
+HC,4,BHCT2122,HC-C,Total,BHCTB528,derived,1
+HC,4.a,BHCT5369,HC-C,10,BHCT5369,equals,1
+HC,4.b,BHCTB528,HC-C,12,BHCTB528,equals,1
+HC,4.c,BHCT3123,HC-C,11,BHCT3123,equals,1
+HC,5,BHCT3545,HC-D,12,BHCT3545,equals,1
+HC,6,BHCT2145,HC-F,6,BHCT2145,equals,1
+HC,7,BHCT2150,HC-F,7,BHCT2150,equals,1
+HC,8,BHCT2130,HC-F,8,BHCT2130,equals,1
+HC,9,BHCK5372,HC-F,9,BHCK5372,equals,1
+HC,10,BHCT2143,HC,10.a,BHCT3163,sum_component,2
+HC,10,BHCT2143,HC,10.b,BHCTC752,sum_component,2
+HC,10.a,BHCT3163,HC-F,10.a,BHCT3163,equals,1
+HC,10.b,BHCTC752,HC-F,10.b,BHCTC752,equals,1
+HC,11,BHCT2160,HC-F,12,BHCT2160,equals,1
+HC,13,BHCT2200,HC,13.a,BHCM2200,sum_component,2
+HC,13,BHCT2200,HC,13.b,BHCKB536,sum_component,2
+HC,13.a,BHCM2200,HC,13.a.(1),BHCM6631,sum_component,3
+HC,13.a,BHCM2200,HC,13.a.(2),BHCM6636,sum_component,3
+HC,13.b,BHCKB536,HC,13.b.(1),BHCKB537,sum_component,3
+HC,13.b,BHCKB536,HC,13.b.(2),BHCKB538,sum_component,3
+HC,14,BHCTB993,HC,14.a,BHCTB985,sum_component,2
+HC,14,BHCTB993,HC,14.b,BHCTB994,sum_component,2
+HC,15,BHCT3548,HC-D,15,BHCT3548,equals,1
+HC,20,BHCT2930,HC-G,5,BHCT2930,equals,1
+HC,28,BHCT3210,HC-R,19,BHCAP859,related,1
+
+# ----------------------------------------------------------------------------
+# HC-B SECURITIES HIERARCHY (AFS and HTM Components)
+# ----------------------------------------------------------------------------
+HC-B,8 Col B,BHCT1773,HC-B,1 AFS FV,BHCK1287,sum_component,2
+HC-B,8 Col B,BHCT1773,HC-B,2 AFS FV,BHCKJF78,sum_component,2
+HC-B,8 Col B,BHCT1773,HC-B,3.a AFS FV,BHCKG301,sum_component,2
+HC-B,8 Col B,BHCT1773,HC-B,3.b AFS FV,BHCKG309,sum_component,2
+HC-B,8 Col B,BHCT1773,HC-B,3.c AFS FV,BHCKG317,sum_component,2
+HC-B,8 Col B,BHCT1773,HC-B,4.a AFS FV,BHCKK143,sum_component,2
+HC-B,8 Col B,BHCT1773,HC-B,4.b AFS FV,BHCKK151,sum_component,2
+HC-B,8 Col B,BHCT1773,HC-B,5 AFS FV,BHCKC027,sum_component,2
+HC-B,8 Col B,BHCT1773,HC-B,6.a AFS FV,BHCK1741,sum_component,2
+HC-B,8 Col B,BHCT1773,HC-B,6.b AFS FV,BHCK1746,sum_component,2
+HC-B,8 Col B,BHCT1773,HC-B,7 AFS FV,BHCK8497,sum_component,2
+HC-B,8 Col C,BHCT1754,HC-B,1 HTM AC,BHCK0211,sum_component,2
+HC-B,8 Col C,BHCT1754,HC-B,2 HTM AC,BHCK1289,sum_component,2
+HC-B,8 Col C,BHCT1754,HC-B,3.a HTM AC,BHCKG303,sum_component,2
+HC-B,8 Col C,BHCT1754,HC-B,3.b HTM AC,BHCKG311,sum_component,2
+HC-B,8 Col C,BHCT1754,HC-B,3.c HTM AC,BHCKG319,sum_component,2
+HC-B,8 Col C,BHCT1754,HC-B,4.a HTM AC,BHCKK145,sum_component,2
+HC-B,8 Col C,BHCT1754,HC-B,4.b HTM AC,BHCKK153,sum_component,2
+HC-B,8 Col C,BHCT1754,HC-B,5 HTM AC,BHCK1737,sum_component,2
+HC-B,8 Col C,BHCT1754,HC-B,6.a HTM AC,BHCK1742,sum_component,2
+HC-B,8 Col C,BHCT1754,HC-B,6.b HTM AC,BHCK1747,sum_component,2
+HC-B,8 Col C,BHCT1754,HC-B,7 HTM AC,BHCK8498,sum_component,2
+HC-B,5 AFS,BHCKC027,HC-B,5.a AFS,BHCKB839,sum_component,3
+HC-B,5 AFS,BHCKC027,HC-B,5.b AFS,BHCKB843,sum_component,3
+HC-B,5 AFS,BHCKC027,HC-B,5.c AFS,BHCKB847,sum_component,3
+HC-B,5 AFS,BHCKC027,HC-B,5.d AFS,BHCKB851,sum_component,3
+HC-B,5 AFS,BHCKC027,HC-B,5.e AFS,BHCKB855,sum_component,3
+HC-B,5 AFS,BHCKC027,HC-B,5.f AFS,BHCKB859,sum_component,3
+HC-B,M5,BHCTJJ32,HC-B,M5.a,BHCKJJ33,sum_component,2
+HC-B,M5,BHCTJJ32,HC-B,M5.b,BHCKJJ35,sum_component,2
+
+# ----------------------------------------------------------------------------
+# HC-C LOANS HIERARCHY (Loan Portfolio Components)
+# ----------------------------------------------------------------------------
+HC-C,12,BHCTB529,HC-C,1,BHCT1410,sum_component,2
+HC-C,12,BHCTB529,HC-C,2,BHCK1288,sum_component,2
+HC-C,12,BHCTB529,HC-C,3,BHCK1590,sum_component,2
+HC-C,12,BHCTB529,HC-C,4,BHCT1766,sum_component,2
+HC-C,12,BHCTB529,HC-C,5,BHCK1975,sum_component,2
+HC-C,12,BHCTB529,HC-C,6,BHCK1296,sum_component,2
+HC-C,12,BHCTB529,HC-C,7,BHCT1709,sum_component,2
+HC-C,12,BHCTB529,HC-C,8,BHCT1563,sum_component,2
+HC-C,12,BHCTB529,HC-C,9,BHCTB541,sum_component,2
+HC-C,12,BHCTB529,HC-C,10,BHCT5369,deduction,2
+HC-C,12,BHCTB529,HC-C,11,BHCT3123,deduction,2
+HC-C,1,BHCT1410,HC-C,1.a,BHCT1415,sum_component,3
+HC-C,1,BHCT1410,HC-C,1.b,BHCT1420,sum_component,3
+HC-C,1,BHCT1410,HC-C,1.c,BHCK1797,sum_component,3
+HC-C,1,BHCT1410,HC-C,1.d,BHCT5367,sum_component,3
+HC-C,1,BHCT1410,HC-C,1.e,BHCT1460,sum_component,3
+HC-C,1,BHCT1410,HC-C,1.f,BHCT1480,sum_component,3
+HC-C,1.a,BHCT1415,HC-C,1.a.(1),BHCKF158,sum_component,4
+HC-C,1.a,BHCT1415,HC-C,1.a.(2),BHCKF159,sum_component,4
+HC-C,1.d,BHCT5367,HC-C,1.d.(1),BHCTC236,sum_component,4
+HC-C,1.d,BHCT5367,HC-C,1.d.(2),BHCTC238,sum_component,4
+HC-C,1.e,BHCT1460,HC-C,1.e.(1),BHCKKX57,sum_component,4
+HC-C,1.e,BHCT1460,HC-C,1.e.(2),BHCKKX58,sum_component,4
+HC-C,1.f,BHCT1480,HC-C,1.f.(1),BHCTF160,sum_component,4
+HC-C,1.f,BHCT1480,HC-C,1.f.(2),BHCTF162,sum_component,4
+HC-C,2,BHCK1288,HC-C,2.a,BHCKB532,sum_component,3
+HC-C,2,BHCK1288,HC-C,2.b,BHCKB533,sum_component,3
+HC-C,2,BHCK1288,HC-C,2.c,BHCKB534,sum_component,3
+HC-C,4,BHCT1766,HC-C,4.a,BHCKB531,sum_component,3
+HC-C,4,BHCT1766,HC-C,4.b,BHCK1763,sum_component,3
+HC-C,5,BHCK1975,HC-C,5.a,BHCKB538,sum_component,3
+HC-C,5,BHCK1975,HC-C,5.b,BHCKB539,sum_component,3
+HC-C,5,BHCK1975,HC-C,5.c,BHCKK137,sum_component,3
+HC-C,5,BHCK1975,HC-C,5.d,BHCKB540,sum_component,3
+HC-C,5.a,BHCKB538,HC-C,5.a.(1),BHCKB561,sum_component,4
+HC-C,5.a,BHCKB538,HC-C,5.a.(2),BHCKK137,sum_component,4
+HC-C,5.c,BHCKK137,HC-C,5.c.(1),BHCKK138,sum_component,4
+HC-C,5.c,BHCKK137,HC-C,5.c.(2),BHCKK139,sum_component,4
+HC-C,8,BHCT1563,HC-C,8.a,BHCK1545,sum_component,3
+HC-C,8,BHCT1563,HC-C,8.b,BHCK1564,sum_component,3
+HC-C,9,BHCTB541,HC-C,9.a,BHCKF164,sum_component,3
+HC-C,9,BHCTB541,HC-C,9.b,BHCTF165,sum_component,3
+
+# ----------------------------------------------------------------------------
+# HC-D TRADING ASSETS TO HC-L DERIVATIVES HIERARCHY
+# ----------------------------------------------------------------------------
+HC-D,12,BHCT3545,HC-D,1,BHCM3531,sum_component,2
+HC-D,12,BHCT3545,HC-D,2,BHCM3532,sum_component,2
+HC-D,12,BHCT3545,HC-D,3,BHCM3533,sum_component,2
+HC-D,12,BHCT3545,HC-D,4,BHCKHT59,sum_component,2
+HC-D,12,BHCT3545,HC-D,5,BHCKMBS_TOTAL,sum_component,2
+HC-D,12,BHCT3545,HC-D,6,BHCKLOANS_TRADING,sum_component,2
+HC-D,12,BHCT3545,HC-D,9,BHCM3541,sum_component,2
+HC-D,12,BHCT3545,HC-D,11,BHCT3543,sum_component,2
+HC-D,5,BHCKMBS_TOTAL,HC-D,5.a,BHCKK197,sum_component,3
+HC-D,5,BHCKMBS_TOTAL,HC-D,5.b,BHCKK198,sum_component,3
+HC-D,5,BHCKMBS_TOTAL,HC-D,5.c,BHCKK199,sum_component,3
+HC-D,5,BHCKMBS_TOTAL,HC-D,5.d,BHCKK200,sum_component,3
+HC-D,5,BHCKMBS_TOTAL,HC-D,5.e,BHCKK201,sum_component,3
+HC-D,6,BHCKLOANS_TRADING,HC-D,6.a,BHCKHT63,sum_component,3
+HC-D,6,BHCKLOANS_TRADING,HC-D,6.b,BHCKHT64,sum_component,3
+HC-D,6,BHCKLOANS_TRADING,HC-D,6.c,BHCKF614,sum_component,3
+HC-D,6,BHCKLOANS_TRADING,HC-D,6.d,BHCKHT65,sum_component,3
+HC-D,6,BHCKLOANS_TRADING,HC-D,6.e,BHCKF618,sum_component,3
+HC-D,11,BHCT3543,HC-L,FV Trading Pos,BHCK8733,sum_component,2
+HC-D,11,BHCT3543,HC-L,FV Trading Pos,BHCK8734,sum_component,2
+HC-D,11,BHCT3543,HC-L,FV Trading Pos,BHCK8735,sum_component,2
+HC-D,11,BHCT3543,HC-L,FV Trading Pos,BHCK8736,sum_component,2
+HC-D,11,BHCT3543,HC-L,FV NonTrading Pos,BHCK8741,sum_component,2
+HC-D,11,BHCT3543,HC-L,FV NonTrading Pos,BHCK8742,sum_component,2
+HC-D,11,BHCT3543,HC-L,FV NonTrading Pos,BHCK8743,sum_component,2
+HC-D,11,BHCT3543,HC-L,FV NonTrading Pos,BHCK8744,sum_component,2
+HC-D,15,BHCT3548,HC-D,13,BHCKSHORT_TOTAL,sum_component,2
+HC-D,15,BHCT3548,HC-D,14,BHCT3547,sum_component,2
+HC-D,13,BHCKSHORT_TOTAL,HC-D,13.a.(1),BHCKG209,sum_component,3
+HC-D,13,BHCKSHORT_TOTAL,HC-D,13.a.(2),BHCKG210,sum_component,3
+HC-D,13,BHCKSHORT_TOTAL,HC-D,13.a.(3),BHCKG211,sum_component,3
+HC-D,13,BHCKSHORT_TOTAL,HC-D,13.b,BHCKF624,sum_component,3
+HC-D,14,BHCT3547,HC-L,FV Trading Neg,BHCK8737,sum_component,2
+HC-D,14,BHCT3547,HC-L,FV Trading Neg,BHCK8738,sum_component,2
+HC-D,14,BHCT3547,HC-L,FV Trading Neg,BHCK8739,sum_component,2
+HC-D,14,BHCT3547,HC-L,FV Trading Neg,BHCK8740,sum_component,2
+HC-D,14,BHCT3547,HC-L,FV NonTrading Neg,BHCK8745,sum_component,2
+HC-D,14,BHCT3547,HC-L,FV NonTrading Neg,BHCK8746,sum_component,2
+HC-D,14,BHCT3547,HC-L,FV NonTrading Neg,BHCK8747,sum_component,2
+HC-D,14,BHCT3547,HC-L,FV NonTrading Neg,BHCK8748,sum_component,2
+
+# ----------------------------------------------------------------------------
+# HC-F OTHER ASSETS HIERARCHY
+# ----------------------------------------------------------------------------
+HC-F,12,BHCT2160,HC-F,1,BHCKC749,sum_component,2
+HC-F,12,BHCT2160,HC-F,2,BHCK2148,sum_component,2
+HC-F,12,BHCT2160,HC-F,3,BHCKK038,sum_component,2
+HC-F,12,BHCT2160,HC-F,4,BHCK1752,sum_component,2
+HC-F,12,BHCT2160,HC-F,5,BHCKK185,sum_component,2
+HC-F,12,BHCT2160,HC-F,6,BHCT2145,sum_component,2
+HC-F,12,BHCT2160,HC-F,7,BHCT2150,sum_component,2
+HC-F,12,BHCT2160,HC-F,8,BHCT2130,sum_component,2
+HC-F,12,BHCT2160,HC-F,9,BHCK5372,sum_component,2
+HC-F,12,BHCT2160,HC-F,10,BHCT2143,sum_component,2
+HC-F,12,BHCT2160,HC-F,11,BHCK2155,sum_component,2
+HC-F,10,BHCT2143,HC-F,10.a,BHCT3163,sum_component,3
+HC-F,10,BHCT2143,HC-F,10.b,BHCTC752,sum_component,3
+
+# ----------------------------------------------------------------------------
+# HC-G OTHER LIABILITIES HIERARCHY
+# ----------------------------------------------------------------------------
+HC-G,5,BHCT2930,HC-G,1,BHCK3645,sum_component,2
+HC-G,5,BHCT2930,HC-G,2,BHCK3049,sum_component,2
+HC-G,5,BHCT2930,HC-G,3,BHCKC439,sum_component,2
+HC-G,5,BHCT2930,HC-G,4,BHCK2750,sum_component,2
+
+# ----------------------------------------------------------------------------
+# HC-R CAPITAL HIERARCHY (Basel III Components)
+# ----------------------------------------------------------------------------
+HC-R,19,BHCAP859,HC-R,6,BHCAP840,derived,1
+HC-R,19,BHCAP859,HC-R,18,BHCAP852,deduction,1
+HC-R,6,BHCAP840,HC-R,1,BHCAP742,sum_component,2
+HC-R,6,BHCAP840,HC-R,2,BHCAP743,sum_component,2
+HC-R,6,BHCAP840,HC-R,3,BHCAP744,sum_component,2
+HC-R,6,BHCAP840,HC-R,4,BHCAP838,sum_component,2
+HC-R,6,BHCAP840,HC-R,5,BHCAP839,sum_component,2
+HC-R,18,BHCAP852,HC-R,7,BHCAP841,sum_component,2
+HC-R,18,BHCAP852,HC-R,8,BHCAP842,sum_component,2
+HC-R,18,BHCAP852,HC-R,9,BHCAP843,sum_component,2
+HC-R,18,BHCAP852,HC-R,10,BHCAP844,sum_component,2
+HC-R,18,BHCAP852,HC-R,11,BHCAP845,sum_component,2
+HC-R,18,BHCAP852,HC-R,12,BHCAP846,sum_component,2
+HC-R,18,BHCAP852,HC-R,13,BHCAP847,sum_component,2
+HC-R,18,BHCAP852,HC-R,14,BHCAP848,sum_component,2
+HC-R,18,BHCAP852,HC-R,15,BHCAP849,sum_component,2
+HC-R,18,BHCAP852,HC-R,16,BHCAP850,sum_component,2
+HC-R,18,BHCAP852,HC-R,17,BHCAP851,sum_component,2
+HC-R,24,BHCFA223,HC-R,19,BHCAP859,sum_component,1
+HC-R,24,BHCFA223,HC-R,23,BHCAP856,sum_component,1
+HC-R,23,BHCAP856,HC-R,20,BHCAP853,sum_component,2
+HC-R,23,BHCAP856,HC-R,21,BHCAP854,sum_component,2
+HC-R,23,BHCAP856,HC-R,22,BHCAP855,deduction,2
+HC-R,30,BHCFA225,HC-R,24,BHCFA223,sum_component,1
+HC-R,30,BHCFA225,HC-R,29,BHCFA224,sum_component,1
+HC-R,29,BHCFA224,HC-R,25,BHCAP857,sum_component,2
+HC-R,29,BHCFA224,HC-R,26,BHCAP858,sum_component,2
+HC-R,29,BHCFA224,HC-R,27,BHCFA224,sum_component,2
+HC-R,29,BHCFA224,HC-R,28,BHCKP856,deduction,2
+HC-R,31,BHCAA223,HC-R,RWA1,BHCKA221,sum_component,2
+HC-R,31,BHCAA223,HC-R,RWA2,BHCKS396,sum_component,2
+HC-R,31,BHCAA223,HC-R,RWA3,BHCKS397,sum_component,2
+HC-R,31,BHCAA223,HC-R,RWA4,BHCKS398,sum_component,2
+HC-R,31,BHCAA223,HC-R,RWA5,BHCKS399,sum_component,2
+HC-R,31,BHCAA223,HC-R,RWA6,BHCKS400,sum_component,2
+HC-R,31,BHCAA223,HC-R,RWA7,BHCKS401,sum_component,2
+HC-R,31,BHCAA223,HC-R,RWA8,BHCKS402,sum_component,2
+HC-R,31,BHCAA223,HC-R,RWA9,BHCKS403,sum_component,2
+HC-R,31,BHCAA223,HC-R,RWA10,BHCKA222,sum_component,2
+
+# ----------------------------------------------------------------------------
+# HC-L DERIVATIVES STRUCTURE (Notional Amounts by Product Type)
+# ----------------------------------------------------------------------------
+HC-L,Total IR,BHCK_IR_TOTAL,HC-L,Futures IR,BHCK8693,sum_component,2
+HC-L,Total IR,BHCK_IR_TOTAL,HC-L,Forwards IR,BHCK8697,sum_component,2
+HC-L,Total IR,BHCK_IR_TOTAL,HC-L,Swaps IR,BHCK3450,sum_component,2
+HC-L,Total IR,BHCK_IR_TOTAL,HC-L,Options Written IR,BHCK8701,sum_component,2
+HC-L,Total IR,BHCK_IR_TOTAL,HC-L,Options Purchased IR,BHCK8705,sum_component,2
+HC-L,Total IR,BHCK_IR_TOTAL,HC-L,OTC Options Written IR,BHCK8709,sum_component,2
+HC-L,Total IR,BHCK_IR_TOTAL,HC-L,OTC Options Purchased IR,BHCK8713,sum_component,2
+HC-L,Total FX,BHCK_FX_TOTAL,HC-L,Futures FX,BHCK8694,sum_component,2
+HC-L,Total FX,BHCK_FX_TOTAL,HC-L,Forwards FX,BHCK8698,sum_component,2
+HC-L,Total FX,BHCK_FX_TOTAL,HC-L,Swaps FX,BHCK3826,sum_component,2
+HC-L,Total FX,BHCK_FX_TOTAL,HC-L,Options Written FX,BHCK8702,sum_component,2
+HC-L,Total FX,BHCK_FX_TOTAL,HC-L,Options Purchased FX,BHCK8706,sum_component,2
+HC-L,Total FX,BHCK_FX_TOTAL,HC-L,OTC Options Written FX,BHCK8710,sum_component,2
+HC-L,Total FX,BHCK_FX_TOTAL,HC-L,OTC Options Purchased FX,BHCK8714,sum_component,2
+HC-L,Total Equity,BHCK_EQ_TOTAL,HC-L,Futures Equity,BHCK8695,sum_component,2
+HC-L,Total Equity,BHCK_EQ_TOTAL,HC-L,Forwards Equity,BHCK8699,sum_component,2
+HC-L,Total Equity,BHCK_EQ_TOTAL,HC-L,Swaps Equity,BHCK8719,sum_component,2
+HC-L,Total Equity,BHCK_EQ_TOTAL,HC-L,Options Written Equity,BHCK8703,sum_component,2
+HC-L,Total Equity,BHCK_EQ_TOTAL,HC-L,Options Purchased Equity,BHCK8707,sum_component,2
+HC-L,Total Equity,BHCK_EQ_TOTAL,HC-L,OTC Options Written Equity,BHCK8711,sum_component,2
+HC-L,Total Equity,BHCK_EQ_TOTAL,HC-L,OTC Options Purchased Equity,BHCK8715,sum_component,2
+HC-L,CDS Total,BHCK_CDS_TOTAL,HC-L,CDS Sold,BHCKC968,sum_component,2
+HC-L,CDS Total,BHCK_CDS_TOTAL,HC-L,CDS Bought,BHCKC969,sum_component,2
+HC-L,TRS Total,BHCK_TRS_TOTAL,HC-L,TRS Sold,BHCKC970,sum_component,2
+HC-L,TRS Total,BHCK_TRS_TOTAL,HC-L,TRS Bought,BHCKC971,sum_component,2
+HC-L,Other Credit Total,BHCK_OCD_TOTAL,HC-L,Other Credit Sold,BHCKC974,sum_component,2
+HC-L,Other Credit Total,BHCK_OCD_TOTAL,HC-L,Other Credit Bought,BHCKC975,sum_component,2
+
+# ----------------------------------------------------------------------------
+# HI INCOME STATEMENT HIERARCHY
+# ----------------------------------------------------------------------------
+HI,4,BHCT4074,HI,1,BHCT4107,derived,1
+HI,4,BHCT4074,HI,2,BHCT4073,derived,1
+HI,12,BHCT4340,HI,4,BHCT4074,sum_component,2
+HI,12,BHCT4340,HI,5,BHCT4230,deduction,2
+HI,12,BHCT4340,HI,6,BHCT4079,sum_component,2
+HI,12,BHCT4340,HI,7,BHCT4093,deduction,2
+HI,12,BHCT4340,HI,8,BHCT4301,sum_component,2
+HI,12,BHCT4340,HI,10,BHCT4302,deduction,2
+HI,1,BHCT4107,HI,1.a,BHCK4010,sum_component,3
+HI,1,BHCT4107,HI,1.b,BHCK4065,sum_component,3
+HI,1,BHCT4107,HI,1.c,BHCK4115,sum_component,3
+HI,1,BHCT4107,HI,1.d,BHCK4060,sum_component,3
+HI,1,BHCT4107,HI,1.e,BHCKK130,sum_component,3
+HI,1,BHCT4107,HI,1.f,BHCK4069,sum_component,3
+HI,2,BHCT4073,HI,2.a,BHCK4508,sum_component,3
+HI,2,BHCT4073,HI,2.b,BHCK4148,sum_component,3
+HI,2,BHCT4073,HI,2.c,BHCK4180,sum_component,3
+HI,2,BHCT4073,HI,2.d,BHCK4185,sum_component,3
+HI,6,BHCT4079,HI,6.a,BHCK4070,sum_component,3
+HI,6,BHCT4079,HI,6.b,BHCKB492,sum_component,3
+HI,6,BHCT4079,HI,6.c,BHCKA220,sum_component,3
+HI,6,BHCT4079,HI,6.d,BHCKB497,sum_component,3
+HI,6,BHCT4079,HI,6.e,BHCK5416,sum_component,3
+HI,6,BHCT4079,HI,6.f,BHCK5415,sum_component,3
+HI,7,BHCT4093,HI,7.a,BHCK4135,sum_component,3
+HI,7,BHCT4093,HI,7.b,BHCK4217,sum_component,3
+HI,7,BHCT4093,HI,7.c,BHCK4092,sum_component,3

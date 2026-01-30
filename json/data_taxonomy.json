@@ -1,8 +1,9 @@
 {
   "metadata": {
     "title": "Bank Regulatory Data Taxonomy",
-    "version": "1.0",
+    "version": "2.0",
     "created": "2026-01-28",
+    "updated": "2026-01-29",
     "description": "Comprehensive taxonomy for U.S. bank regulatory filings data"
   },
 
@@ -57,7 +58,40 @@
       "frequency": "Daily/Monthly",
       "reporter": "Large BHCs, IHCs, covered savings/loan HCs",
       "description": "Complex Institution Liquidity Monitoring Report",
-      "key_metrics": ["LCR", "NSFR", "maturity_mismatches", "funding_concentrations"]
+      "key_metrics": ["LCR", "NSFR", "maturity_mismatches", "funding_concentrations"],
+      "product_hierarchy": ["Inflows", "Outflows", "Supplemental (HQLA, Collateral, Balance Sheet)"]
+    },
+    "level_2_advanced_capital": {
+      "form": "FFIEC 101",
+      "regulator": "FFIEC",
+      "frequency": "Quarterly",
+      "reporter": "Banks/BHCs using advanced approaches",
+      "description": "Regulatory Capital Reporting for Advanced Capital Adequacy Framework",
+      "schedules": ["A Capital Components", "B General RWA", "C Securitization", "D Market Risk", "E Operational Risk", "F Supplementary Leverage Ratio"]
+    },
+    "level_2_market_risk": {
+      "form": "FFIEC 102",
+      "regulator": "FFIEC",
+      "frequency": "Quarterly",
+      "reporter": "Banks/BHCs with $1B+ trading assets",
+      "description": "Market Risk Regulatory Report",
+      "components": ["VaR", "Stressed VaR", "IRC", "CRM", "Standardized Specific Risk", "De Minimis"]
+    },
+    "level_2_country_exposure": {
+      "form": "FFIEC 009",
+      "regulator": "FFIEC",
+      "frequency": "Quarterly",
+      "reporter": "Banks with significant international exposure",
+      "description": "Country Exposure Report",
+      "parts": ["Part I Claims", "Part II Risk Transfers"]
+    },
+    "level_2_foreign_subsidiary": {
+      "form": "FR Y-11",
+      "regulator": "Federal Reserve",
+      "frequency": "Quarterly/Annual",
+      "reporter": "Foreign subsidiaries of U.S. BHCs with $250M+ assets",
+      "description": "Report of Foreign Banking Organizations",
+      "sections": ["Balance Sheet", "Income Statement", "Memoranda"]
     },
     "level_3_disclosure": {
       "form": "Pillar 3",

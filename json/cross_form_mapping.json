@@ -1,0 +1,310 @@
+{
+  "metadata": {
+    "title": "Cross-Form Concept Mapping",
+    "version": "1.0",
+    "created": "2026-01-29",
+    "description": "Maps identical concepts across different regulatory forms for consistency validation"
+  },
+
+  "concepts": {
+    "total_assets": {
+      "concept_id": "TOTAL_ASSETS",
+      "description": "Total consolidated assets",
+      "forms": {
+        "FR_Y9C": {"schedule": "HC", "item": "12", "mdrm": "BHCT2170"},
+        "Call_Report_031": {"schedule": "RC", "item": "12", "mdrm": "RCFD2170"},
+        "Call_Report_041": {"schedule": "RC", "item": "12", "mdrm": "RCFD2170"},
+        "FFIEC_101": {"schedule": "A", "item": "1", "mdrm": "AAAD2170"},
+        "FR_Y9LP": {"schedule": "PC", "item": "12", "mdrm": "BHCP2170"},
+        "FR_Y15": {"schedule": "A", "item": "1", "mdrm": "RISKN542"}
+      },
+      "validation": "All should match for same entity/period (with consolidation adjustments)"
+    },
+
+    "total_liabilities": {
+      "concept_id": "TOTAL_LIABILITIES",
+      "description": "Total consolidated liabilities",
+      "forms": {
+        "FR_Y9C": {"schedule": "HC", "item": "21", "mdrm": "BHCT2948"},
+        "Call_Report_031": {"schedule": "RC", "item": "21", "mdrm": "RCFD2948"},
+        "Call_Report_041": {"schedule": "RC", "item": "21", "mdrm": "RCFD2948"},
+        "FR_Y9LP": {"schedule": "PC", "item": "21", "mdrm": "BHCP2948"}
+      },
+      "validation": "All should match for same entity/period"
+    },
+
+    "total_equity": {
+      "concept_id": "TOTAL_EQUITY",
+      "description": "Total equity capital",
+      "forms": {
+        "FR_Y9C": {"schedule": "HC", "item": "28", "mdrm": "BHCT3210"},
+        "Call_Report_031": {"schedule": "RC", "item": "28", "mdrm": "RCFD3210"},
+        "Call_Report_041": {"schedule": "RC", "item": "28", "mdrm": "RCFD3210"},
+        "FR_Y9LP": {"schedule": "PC", "item": "28", "mdrm": "BHCP3210"},
+        "Pillar3": {"template": "KM1", "row": "1", "mdrm": "N/A"}
+      },
+      "validation": "All should match for same entity/period"
+    },
+
+    "cet1_capital": {
+      "concept_id": "CET1_CAPITAL",
+      "description": "Common Equity Tier 1 capital",
+      "forms": {
+        "FR_Y9C": {"schedule": "HC-R", "item": "19", "mdrm": "BHCAP859"},
+        "Call_Report_031": {"schedule": "RC-R", "item": "19", "mdrm": "RCFAP859"},
+        "Call_Report_041": {"schedule": "RC-R", "item": "19", "mdrm": "RCFAP859"},
+        "FFIEC_101": {"schedule": "A", "item": "CET1", "mdrm": "AAADP859"},
+        "FR_Y14A": {"schedule": "A.3", "item": "CET1", "mdrm": "N/A"},
+        "Pillar3": {"template": "KM1", "row": "CET1", "mdrm": "N/A"}
+      },
+      "validation": "Critical - must match across all forms"
+    },
+
+    "tier1_capital": {
+      "concept_id": "TIER1_CAPITAL",
+      "description": "Tier 1 capital (CET1 + AT1)",
+      "forms": {
+        "FR_Y9C": {"schedule": "HC-R", "item": "24", "mdrm": "BHCFA223"},
+        "Call_Report_031": {"schedule": "RC-R", "item": "24", "mdrm": "RCFAA223"},
+        "Call_Report_041": {"schedule": "RC-R", "item": "24", "mdrm": "RCFAA223"},
+        "FFIEC_101": {"schedule": "A", "item": "T1", "mdrm": "AADAA223"},
+        "FR_Y14A": {"schedule": "A.3", "item": "T1", "mdrm": "N/A"},
+        "Pillar3": {"template": "KM1", "row": "T1", "mdrm": "N/A"}
+      },
+      "validation": "Critical - must match across all forms"
+    },
+
+    "total_capital": {
+      "concept_id": "TOTAL_CAPITAL",
+      "description": "Total regulatory capital (Tier 1 + Tier 2)",
+      "forms": {
+        "FR_Y9C": {"schedule": "HC-R", "item": "30", "mdrm": "BHCFA225"},
+        "Call_Report_031": {"schedule": "RC-R", "item": "30", "mdrm": "RCFAA225"},
+        "Call_Report_041": {"schedule": "RC-R", "item": "30", "mdrm": "RCFAA225"},
+        "FFIEC_101": {"schedule": "A", "item": "TC", "mdrm": "AADAA225"},
+        "Pillar3": {"template": "KM1", "row": "TC", "mdrm": "N/A"}
+      },
+      "validation": "Critical - must match across all forms"
+    },
+
+    "risk_weighted_assets": {
+      "concept_id": "TOTAL_RWA",
+      "description": "Total risk-weighted assets",
+      "forms": {
+        "FR_Y9C": {"schedule": "HC-R", "item": "31", "mdrm": "BHCAA223"},
+        "Call_Report_031": {"schedule": "RC-R", "item": "31", "mdrm": "RCFDA223"},
+        "Call_Report_041": {"schedule": "RC-R", "item": "31", "mdrm": "RCFDA223"},
+        "FFIEC_101": {"schedule": "A", "item": "RWA", "mdrm": "AADAA223"},
+        "FR_Y14A": {"schedule": "A.4", "item": "RWA", "mdrm": "N/A"},
+        "Pillar3": {"template": "KM1", "row": "RWA", "mdrm": "N/A"}
+      },
+      "validation": "Critical for capital ratio calculations"
+    },
+
+    "cet1_ratio": {
+      "concept_id": "CET1_RATIO",
+      "description": "Common Equity Tier 1 ratio (CET1/RWA)",
+      "forms": {
+        "FR_Y9C": {"schedule": "HC-R", "item": "32", "mdrm": "BHCAP793"},
+        "Call_Report_031": {"schedule": "RC-R", "item": "32", "mdrm": "RCFAP793"},
+        "FFIEC_101": {"schedule": "A", "item": "CET1R", "mdrm": "AAADP793"},
+        "Pillar3": {"template": "KM1", "row": "CET1R", "mdrm": "N/A"}
+      },
+      "validation": "Ratio should match when recalculated from components"
+    },
+
+    "total_loans": {
+      "concept_id": "TOTAL_LOANS_NET",
+      "description": "Total loans and leases, net of allowance",
+      "forms": {
+        "FR_Y9C": {"schedule": "HC-C", "item": "12", "mdrm": "BHCTB529"},
+        "Call_Report_031": {"schedule": "RC-C", "item": "12", "mdrm": "RCFDB529"},
+        "Call_Report_041": {"schedule": "RC-C", "item": "12", "mdrm": "RCFDB529"},
+        "FR_Y14Q": {"schedule": "H", "item": "Loans", "mdrm": "N/A"}
+      },
+      "validation": "Should match between balance sheet and loan schedule"
+    },
+
+    "total_securities": {
+      "concept_id": "TOTAL_SECURITIES",
+      "description": "Total securities (AFS + HTM)",
+      "forms": {
+        "FR_Y9C": {"schedule": "HC", "item": "2", "mdrm": "BHCT8641"},
+        "Call_Report_031": {"schedule": "RC", "item": "2", "mdrm": "RCFD8641"},
+        "Call_Report_041": {"schedule": "RC", "item": "2", "mdrm": "RCFD8641"},
+        "FR_Y14Q": {"schedule": "F", "item": "Securities", "mdrm": "N/A"}
+      },
+      "validation": "Should match between balance sheet and securities schedule"
+    },
+
+    "trading_assets": {
+      "concept_id": "TRADING_ASSETS",
+      "description": "Total trading assets",
+      "forms": {
+        "FR_Y9C": {"schedule": "HC", "item": "5", "mdrm": "BHCT3545"},
+        "FR_Y9C_detail": {"schedule": "HC-D", "item": "12", "mdrm": "BHCT3545"},
+        "Call_Report_031": {"schedule": "RC", "item": "5", "mdrm": "RCFD3545"},
+        "Call_Report_031_detail": {"schedule": "RC-D", "item": "12", "mdrm": "RCFD3545"},
+        "FFIEC_102": {"schedule": "VaR", "item": "Trading", "mdrm": "N/A"},
+        "FR_Y14Q": {"schedule": "G", "item": "Total", "mdrm": "N/A"}
+      },
+      "validation": "Must tie between HC and HC-D; across forms for same entity"
+    },
+
+    "trading_liabilities": {
+      "concept_id": "TRADING_LIABILITIES",
+      "description": "Total trading liabilities",
+      "forms": {
+        "FR_Y9C": {"schedule": "HC", "item": "15", "mdrm": "BHCT3548"},
+        "FR_Y9C_detail": {"schedule": "HC-D", "item": "15", "mdrm": "BHCT3548"},
+        "Call_Report_031": {"schedule": "RC", "item": "15", "mdrm": "RCFD3548"},
+        "Call_Report_031_detail": {"schedule": "RC-D", "item": "15", "mdrm": "RCFD3548"}
+      },
+      "validation": "Must tie between HC and HC-D"
+    },
+
+    "derivatives_positive_fv": {
+      "concept_id": "DERIV_POS_FV",
+      "description": "Derivatives with gross positive fair value",
+      "forms": {
+        "FR_Y9C": {"schedule": "HC-D", "item": "11", "mdrm": "BHCT3543"},
+        "FR_Y9C_detail": {"schedule": "HC-L", "item": "Sum FV", "mdrm": "Sum(8733-8744)"},
+        "Call_Report_031": {"schedule": "RC-D", "item": "11", "mdrm": "RCFD3543"},
+        "Call_Report_031_detail": {"schedule": "RC-L", "item": "Sum FV", "mdrm": "Sum(RCFD8733-8744)"},
+        "Pillar3": {"template": "CCR1", "row": "Derivatives", "mdrm": "N/A"}
+      },
+      "validation": "Must reconcile between HC-D and HC-L"
+    },
+
+    "derivatives_negative_fv": {
+      "concept_id": "DERIV_NEG_FV",
+      "description": "Derivatives with gross negative fair value",
+      "forms": {
+        "FR_Y9C": {"schedule": "HC-D", "item": "14", "mdrm": "BHCT3547"},
+        "FR_Y9C_detail": {"schedule": "HC-L", "item": "Sum FV", "mdrm": "Sum(8737-8748)"},
+        "Call_Report_031": {"schedule": "RC-D", "item": "14", "mdrm": "RCFD3547"},
+        "Call_Report_031_detail": {"schedule": "RC-L", "item": "Sum FV", "mdrm": "Sum(RCFD8737-8748)"}
+      },
+      "validation": "Must reconcile between HC-D and HC-L"
+    },
+
+    "ir_swaps_notional": {
+      "concept_id": "IR_SWAPS_NOTIONAL",
+      "description": "Interest rate swaps notional amount",
+      "forms": {
+        "FR_Y9C": {"schedule": "HC-L", "item": "Swaps IR", "mdrm": "BHCK3450"},
+        "Call_Report_031": {"schedule": "RC-L", "item": "Swaps IR", "mdrm": "RCFD3450"},
+        "FFIEC_102": {"schedule": "SA", "item": "IR Swaps", "mdrm": "N/A"},
+        "FR_Y15": {"schedule": "Derivatives", "item": "IR Notional", "mdrm": "N/A"}
+      },
+      "validation": "Notional amounts should be consistent"
+    },
+
+    "total_deposits": {
+      "concept_id": "TOTAL_DEPOSITS",
+      "description": "Total deposits",
+      "forms": {
+        "FR_Y9C": {"schedule": "HC", "item": "13", "mdrm": "BHCT2200"},
+        "Call_Report_031": {"schedule": "RC", "item": "13", "mdrm": "RCFD2200"},
+        "Call_Report_041": {"schedule": "RC", "item": "13", "mdrm": "RCFD2200"},
+        "FR_2052a": {"schedule": "Outflows", "item": "Deposits", "mdrm": "N/A"}
+      },
+      "validation": "Should match; FR 2052a may have different treatment"
+    },
+
+    "net_income": {
+      "concept_id": "NET_INCOME",
+      "description": "Net income",
+      "forms": {
+        "FR_Y9C": {"schedule": "HI", "item": "12", "mdrm": "BHCT4340"},
+        "Call_Report_031": {"schedule": "RI", "item": "14", "mdrm": "RIAD4340"},
+        "Call_Report_041": {"schedule": "RI", "item": "14", "mdrm": "RIAD4340"},
+        "FR_Y14A": {"schedule": "A.1", "item": "Net Income", "mdrm": "N/A"}
+      },
+      "validation": "Flow data; Y-9C should consolidate bank-level income"
+    },
+
+    "net_interest_income": {
+      "concept_id": "NET_INTEREST_INCOME",
+      "description": "Net interest income",
+      "forms": {
+        "FR_Y9C": {"schedule": "HI", "item": "4", "mdrm": "BHCT4074"},
+        "Call_Report_031": {"schedule": "RI", "item": "3", "mdrm": "RIAD4074"},
+        "Call_Report_041": {"schedule": "RI", "item": "3", "mdrm": "RIAD4074"},
+        "FR_Y14A": {"schedule": "A.1", "item": "NII", "mdrm": "N/A"},
+        "FR_Y14Q": {"schedule": "H", "item": "NII", "mdrm": "N/A"}
+      },
+      "validation": "Should match calculation: Interest Income - Interest Expense"
+    },
+
+    "allowance_loan_losses": {
+      "concept_id": "ALLL",
+      "description": "Allowance for loan and lease losses",
+      "forms": {
+        "FR_Y9C": {"schedule": "HC", "item": "4.c", "mdrm": "BHCT3123"},
+        "FR_Y9C_detail": {"schedule": "HC-C", "item": "11", "mdrm": "BHCT3123"},
+        "Call_Report_031": {"schedule": "RC", "item": "4.c", "mdrm": "RCFD3123"},
+        "Call_Report_031_detail": {"schedule": "RC-C", "item": "11", "mdrm": "RCFD3123"}
+      },
+      "validation": "Must tie between HC and HC-C"
+    },
+
+    "leverage_exposure": {
+      "concept_id": "LEVERAGE_EXPOSURE",
+      "description": "Total leverage exposure (SLR denominator)",
+      "forms": {
+        "FR_Y9C": {"schedule": "HC-R", "item": "M2", "mdrm": "BHCKP793"},
+        "Call_Report_031": {"schedule": "RC-R", "item": "M2", "mdrm": "RCFDP793"},
+        "FFIEC_101": {"schedule": "SLR", "item": "Exposure", "mdrm": "N/A"},
+        "Pillar3": {"template": "KM2", "row": "Leverage Exposure", "mdrm": "N/A"}
+      },
+      "validation": "Critical for SLR calculation"
+    }
+  },
+
+  "prefix_mappings": {
+    "FR_Y9C_to_Call_Report": {
+      "BHCK": "RCFD",
+      "BHCM": "RCON",
+      "BHCT": "RCFD",
+      "BHCFA": "RCFAA",
+      "BHCA": "RCFDA",
+      "BHCAP": "RCFAP",
+      "BHCAA": "RCFDA"
+    },
+    "notes": "Item numbers typically remain the same; only prefix changes. BHCM maps to RCON (domestic) while BHCK/BHCT map to RCFD (total/foreign)."
+  },
+
+  "validation_checks": [
+    {
+      "check_id": "XF001",
+      "description": "CET1 consistency across Y-9C and Call Report",
+      "formula": "BHCAP859 should equal sum of subsidiary RCFAP859 (with eliminations)",
+      "severity": "CRITICAL"
+    },
+    {
+      "check_id": "XF002",
+      "description": "Total assets consolidation",
+      "formula": "BHCT2170 should equal sum of subsidiary RCFD2170 (with eliminations)",
+      "severity": "CRITICAL"
+    },
+    {
+      "check_id": "XF003",
+      "description": "Trading assets match across schedules",
+      "formula": "Y-9C HC.5 = Y-9C HC-D.12 = Sum(Call Report RC.5)",
+      "severity": "HIGH"
+    },
+    {
+      "check_id": "XF004",
+      "description": "Derivatives fair value reconciliation",
+      "formula": "HC-D.11 must reconcile to HC-L fair values",
+      "severity": "CRITICAL"
+    },
+    {
+      "check_id": "XF005",
+      "description": "Capital ratios consistent across Pillar 3",
+      "formula": "Y-9C ratios should match Pillar 3 KM1 disclosure",
+      "severity": "HIGH"
+    }
+  ]
+}
