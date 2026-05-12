@@ -768,7 +768,7 @@ Before using trading data, verify:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0 | 2026-01-28 | Arcanum KB | Initial trading activities guide |
+| 1.0 | 2026-01-28 | N. Anderson | Initial trading activities guide |
 
 ---
 

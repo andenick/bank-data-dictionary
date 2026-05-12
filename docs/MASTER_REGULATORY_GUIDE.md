@@ -783,7 +783,7 @@ Variables are classified by CAMELS category:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0 | 2026-01-28 | Arcanum KB | Initial comprehensive guide |
+| 1.0 | 2026-01-28 | N. Anderson | Initial comprehensive guide |
 
 ---
 

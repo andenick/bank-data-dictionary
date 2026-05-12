@@ -1,8 +1,25 @@
 # Bank Regulatory Data Dictionary
 
-A comprehensive, downloadable reference for U.S. bank regulatory filings data, including MDRM codes, form mappings, reconciliation formulas, and detailed guides for every FR Y-9C schedule.
+**A comprehensive, downloadable reference for U.S. bank regulatory filings data — MDRM codes, form mappings, reconciliation formulas, and detailed guides for every FR Y-9C schedule.**
 
 **Version 5.0** | Updated: 2026-01-29
+
+---
+
+## Why This Exists
+
+Bank regulatory filings (FR Y-9C, Call Reports, DFAST, Pillar 3) use thousands of MDRM variable codes across dozens of schedules. Analysts spend hours mapping between forms, deciphering code prefixes, and verifying that balance sheet components actually add up. This repository puts all of that reference material in one place — as CSV tables for programmatic use, JSON schemas for AI agents, and Markdown guides for human readers.
+
+---
+
+## Quick Start
+
+```bash
+git clone https://github.com/andenick/bank-data-dictionary.git
+cd bank-data-dictionary
+```
+
+No installation required — all data is in CSV, JSON, and Markdown files ready to use.
 
 ---
 
@@ -359,10 +376,17 @@ asset_quality = {
 
 This repository is maintained as a reference resource. Issues and suggestions are welcome.
 
+## Citation
+
+```bibtex
+@software{bank_data_dictionary2026,
+  title = {Bank Regulatory Data Dictionary},
+  author = {Anderson, Nicholas},
+  year = {2026},
+  url = {https://github.com/andenick/bank-data-dictionary}
+}
+```
+
 ## License
 
-MIT License - See LICENSE file for details.
-
----
-
-*Created as part of the Arcanum knowledge base for bank regulatory data analysis.*
+MIT License — See [LICENSE](LICENSE) file for details.
