@@ -1,6 +1,6 @@
 # MDRM Code Verification Report
 
-**Repository**: github.com/andenick/nic_dissection
+**Repository**: github.com/andenick/bank-data-dictionary
 **Verification Date**: 2026-01-28
 **Total Codes Verified**: 100
 **Source**: Federal Reserve MDRM Data Dictionary (https://www.federalreserve.gov/apps/mdrm/data-dictionary)
