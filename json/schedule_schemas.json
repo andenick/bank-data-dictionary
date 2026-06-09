@@ -562,21 +562,21 @@
       {
         "item": "24",
         "name": "Tier 1 capital",
-        "mdrm": "BHCFA223",
+        "mdrm": "BHCA8274",
         "category": "Tier 1 Total",
         "reconciliation": "CET1 + AT1 = Item 19 + Item 23"
       },
       {
         "item": "29",
         "name": "Tier 2 capital",
-        "mdrm": "BHCFA224",
+        "mdrm": "BHCA5311",
         "category": "T2 Total",
         "reconciliation": "Items 25-28"
       },
       {
         "item": "30",
         "name": "Total capital",
-        "mdrm": "BHCFA225",
+        "mdrm": "BHCA3792",
         "category": "Total Capital",
         "reconciliation": "Tier 1 + Tier 2 = Item 24 + Item 29"
       },
@@ -617,8 +617,8 @@
     ],
     "capital_cascade": {
       "cet1": {"mdrm": "BHCAP859", "minimum": "4.5%"},
-      "tier1": {"mdrm": "BHCFA223", "minimum": "6.0%"},
-      "total": {"mdrm": "BHCFA225", "minimum": "8.0%"},
+      "tier1": {"mdrm": "BHCA8274", "minimum": "6.0%"},
+      "total": {"mdrm": "BHCA3792", "minimum": "8.0%"},
       "leverage": {"mdrm": "BHCAP796", "minimum": "4.0%"}
     }
   },

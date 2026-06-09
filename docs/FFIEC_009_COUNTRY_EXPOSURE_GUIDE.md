@@ -21,8 +21,8 @@ Claims are reported on an immediate-counterparty basis (country of the obligor) 
 
 | Schedule | Description |
 |----------|-------------|
-| Schedule C — Part I | Claims by country (immediate-counterparty basis) with redistribution to ultimate-risk basis; cross-border and foreign-office claims on foreign residents by counterparty country and sector (bank / public / other) |
-| Schedule C — Part II | Additional claims detail / memoranda *(UNVERIFIED exact title — confirm against the live FFIEC 009 form)* |
+| Schedule C — Part I — Claims on an Immediate-Counterparty Basis | Cross-border and foreign-office claims on foreign residents by counterparty country and sector (bank / public / other), including the inward/outward redistribution columns (risk transfers) |
+| Schedule C — Part II — Claims on a Guarantor Basis | Claims restated to the country of the guarantor / collateral provider (ultimate-risk basis), plus memorandum items (e.g., held-to-maturity, trading, and risk-transfer detail) |
 | Schedule 1 / 1.a | Foreign-Office Liabilities by Country of Foreign Office and by Country of Creditor (with memorandum items) |
 | Schedule 2 | Derivatives and foreign-office detail: positive fair value of derivative contracts; claims on related foreign branches with no guarantee from parent; foreign-office claims on local residents and foreign-office liabilities |
 
@@ -76,6 +76,7 @@ The FFIEC 009 data enables:
 ## Data Sources
 
 - **Instructions:** [FFIEC 009 Instructions](https://www.ffiec.gov/resources/reporting-forms/ffiec009)
+- **Form/instructions (Schedule C Part I/II titles verified here):** [ffiec009-report-form-instructions.pdf](https://www.ffiec.gov/sites/default/files/data/reporting-forms/ffiec009-report-form-instructions.pdf) — Schedule C—Claims: Part I "Claims on an Immediate-Counterparty Basis"; Part II "Claims on a Guarantor Basis"
 - **Data Dictionary:** `csv/FFIEC_009_COUNTRY_EXPOSURE.csv`
 - **Country Codes:** ISO 3166 and FIPS country codes
 

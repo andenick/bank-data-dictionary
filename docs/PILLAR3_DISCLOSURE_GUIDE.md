@@ -56,7 +56,7 @@ G-SIBs and large internationally active banking organizations. In the U.S., this
 
 | Pillar 3 | Primary Source | Key MDRM Codes |
 |----------|---------------|-----------------|
-| KM1 | HC-R | BHCAP859, BHCFA223, BHCFA225, BHCAA223 |
+| KM1 | HC-R | BHCAP859, BHCA8274, BHCA3792, BHCAA223 |
 | CR1-CR2 | HC-N | BHCK1403, BHCK5524, BHCK5525 |
 | CCR1-CCR8 | HC-L | BHCK8693-8740, BHCKC968-C975 |
 | MR1-MR4 | FFIEC 102 | VaR, sVaR, IRC, CRM components |

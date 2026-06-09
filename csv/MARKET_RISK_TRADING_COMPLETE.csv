@@ -91,8 +91,8 @@ Market Risk RWA,RWA - Off-Balance Sheet,RWA9,BHCKS403,RCFDS403,Off-balance sheet
 Market Risk RWA,Market Risk RWA,RWA10,BHCKA222,RCFDA222,Market risk-weighted assets,BHCAA223,Trading Book,HC-R Part II,2014-03-31,VaR; sVaR; IRC; CRM capital
 Market Risk RWA,Total RWA,Total,BHCAA223,RCFDA223,Total risk-weighted assets,N/A,All,HC-R Part II,2014-03-31,Sum of all RWA components
 Capital Ratios,CET1 Capital,Cap1,BHCAP859,RCFAP859,Common equity Tier 1 capital,N/A,Capital,HC-R Part I,2014-03-31,Highest quality capital
-Capital Ratios,Tier 1 Capital,Cap2,BHCFA223,RCFAA223,Tier 1 capital,N/A,Capital,HC-R Part I,2014-03-31,CET1 + AT1
-Capital Ratios,Total Capital,Cap3,BHCFA225,RCFAA225,Total capital,N/A,Capital,HC-R Part I,2014-03-31,Tier 1 + Tier 2
+Capital Ratios,Tier 1 Capital,Cap2,BHCA8274,RCFAA223,Tier 1 capital,N/A,Capital,HC-R Part I,2014-03-31,CET1 + AT1
+Capital Ratios,Total Capital,Cap3,BHCA3792,RCFAA225,Total capital,N/A,Capital,HC-R Part I,2014-03-31,Tier 1 + Tier 2
 Capital Ratios,CET1 Ratio,Ratio1,BHCAP793,RCFAP793,CET1 capital ratio,N/A,Ratio,HC-R Part I,2014-03-31,CET1 / RWA
 Capital Ratios,Tier 1 Ratio,Ratio2,BHCAP794,RCFAP794,Tier 1 capital ratio,N/A,Ratio,HC-R Part I,2014-03-31,Tier 1 / RWA
 Capital Ratios,Total Capital Ratio,Ratio3,BHCAP795,RCFAP795,Total capital ratio,N/A,Ratio,HC-R Part I,2014-03-31,Total capital / RWA

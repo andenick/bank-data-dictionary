@@ -216,7 +216,7 @@ Pillar 3,CMS1,,Comparison of modelled and standardized RWA (full standardized),"
 Pillar 3,CMS2,,Comparison of modelled and standardized RWA for credit risk by asset class,"Output-floor comparison by asset class; d455",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
 FFIEC 002,RAL,,Assets and Liabilities,"Summary balance sheet of the reporting branch/agency; nets due-from/due-to related institutions",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec002
 FFIEC 002,A,,Cash and Balances Due from Depository Institutions,"Cash and interbank balances; IBF detail reported separately",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec002
-FFIEC 002,C,,Loans,"Loans by type (Part I loans and leases; Part II additional loan detail); IBF detail separate; Part II title UNVERIFIED",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec002
+FFIEC 002,C,,Loans,"Loans by type (Part I Loans and Leases; Part II Loans to Small Businesses and Small Farms, completed annually as of June 30); IBF detail reported separately",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec002
 FFIEC 002,E,,Deposit Liabilities and Credit Balances,"Deposits and credit balances; IBF detail reported separately",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec002
 FFIEC 002,K,,Quarterly Averages,"Average daily (or weekly) balances for the quarter",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec002
 FFIEC 002,L,,Derivatives and Off-Balance-Sheet Items,"Commitments, contingencies, derivative contracts",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec002
@@ -226,7 +226,7 @@ FFIEC 002,O,,Other Data for Deposit Insurance Assessments,"Items supporting FDIC
 FFIEC 002,P,,Other Borrowed Money,"Borrowings detail",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec002
 FFIEC 002S,002S,,Report of a Non-U.S. Branch Managed or Controlled by a U.S. Branch or Agency,"Assets and liabilities of each non-US branch the reporting US branch/agency manages or controls",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec002s
 FFIEC 009,C,Part I,Claims by country (immediate-counterparty basis with redistribution to ultimate-risk basis),"Cross-border and foreign-office claims on foreign residents by counterparty country and sector (bank/public/other)",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec009
-FFIEC 009,C,Part II,Additional claims detail / memoranda,"Supplementary claims breakdowns; exact title UNVERIFIED",,,,UNVERIFIED,https://www.ffiec.gov/resources/reporting-forms/ffiec009
+FFIEC 009,C,Part II,Claims on a Guarantor Basis,"Claims restated to the country of the guarantor/collateral (ultimate-risk basis), plus memorandum items",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec009
 FFIEC 009,1/1.a,,Foreign-Office Liabilities by Country of Foreign Office and by Country of Creditor,"Liabilities of foreign offices, with memorandum items",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec009
 FFIEC 009,2,,Derivatives and foreign-office detail,"Positive fair value of derivative contracts; claims on related foreign branches; foreign-office claims on local residents and liabilities",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec009
 FFIEC 009a,Part A,,Country exposures meeting the disclosure threshold,"Per-country amounts where exposure > 1% of assets or 20% of capital",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec009

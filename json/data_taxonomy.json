@@ -225,9 +225,9 @@
       "description": "Regulatory Capital",
       "key_items": {
         "cet1_capital": {"y9c": "BHCAP859", "call": "RCFAP859"},
-        "tier1_capital": {"y9c": "BHCFA223", "call": "RCFAA223"},
-        "tier2_capital": {"y9c": "BHCFA224", "call": "RCFAA224"},
-        "total_capital": {"y9c": "BHCFA225", "call": "RCFAA225"},
+        "tier1_capital": {"y9c": "BHCA8274", "call": "RCFAA223"},
+        "tier2_capital": {"y9c": "BHCA5311", "call": "RCFAA224"},
+        "total_capital": {"y9c": "BHCA3792", "call": "RCFAA225"},
         "rwa": {"y9c": "BHCAA223", "call": "RCFDA223"}
       }
     },

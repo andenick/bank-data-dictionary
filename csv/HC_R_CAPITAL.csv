@@ -22,13 +22,13 @@ line_number,item_description,mdrm_code,call_mdrm,category,part,start_date,notes
 21,Tier 1 minority interest,BHCAP854,RCFAP854,AT1 Components,Part I,2014-03-31,
 22,LESS: AT1 deductions,BHCAP855,RCFAP855,AT1 Deductions,Part I,2014-03-31,
 23,Additional Tier 1 capital,BHCAP856,RCFAP856,AT1 Total,Part I,2014-03-31,Items 20-22
-24,Tier 1 capital,BHCFA223,RCFAA223,Tier 1 Total,Part I,2014-03-31,CET1 + AT1
+24,Tier 1 capital,BHCA8274,RCFAA223,Tier 1 Total,Part I,2014-03-31,CET1 + AT1
 25,Tier 2 capital instruments,BHCAP857,RCFAP857,T2 Components,Part I,2014-03-31,Sub debt; qualifying
 26,Tier 2 minority interest,BHCAP858,RCFAP858,T2 Components,Part I,2014-03-31,
-27,Eligible allowance for credit losses,BHCFA224,RCFAA224,T2 Components,Part I,2014-03-31,Limited to 1.25% of RWA
+27,Eligible allowance for credit losses,BHCA5311,RCFAA224,T2 Components,Part I,2014-03-31,Limited to 1.25% of RWA
 28,LESS: Tier 2 deductions,BHCKP856,RCFDP856,T2 Deductions,Part I,2014-03-31,
-29,Tier 2 capital,BHCFA224,RCFAA224,T2 Total,Part I,2014-03-31,Items 25-28
-30,Total capital,BHCFA225,RCFAA225,Total Capital,Part I,2014-03-31,Tier 1 + Tier 2
+29,Tier 2 capital,BHCA5311,RCFAA224,T2 Total,Part I,2014-03-31,Items 25-28
+30,Total capital,BHCA3792,RCFAA225,Total Capital,Part I,2014-03-31,Tier 1 + Tier 2
 31,Total risk-weighted assets,BHCAA223,RCFDA223,RWA Total,Part II,2014-03-31,Sum of Part II items
 32,CET1 capital ratio,BHCAP793,RCFAP793,Capital Ratios,Part I,2014-03-31,CET1 / RWA
 33,Tier 1 capital ratio,BHCAP794,RCFAP794,Capital Ratios,Part I,2014-03-31,Tier 1 / RWA

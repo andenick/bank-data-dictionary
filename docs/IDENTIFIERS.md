@@ -151,8 +151,12 @@ Transformations tables, ownership graph, merger lineage), see
   not recycled.** Maps a filer to all of its filings.
 - **Datasets that key on it:** SEC EDGAR submissions / XBRL APIs and all SEC filings.
 - **Linking caveat:** CIK is independent of RSSD/CERT; joining public-BHC financials to
-  regulatory data requires an external CIK↔RSSD crosswalk. **UNVERIFIED** that any
-  official SEC↔Fed CIK/RSSD mapping is published.
+  regulatory data requires an external CIK↔RSSD crosswalk. The NIC/NPW Attributes table
+  *does* carry an SEC **reporting-status** indicator (`SEC_RPTG_STATUS`, an integer code
+  0–5 keyed to §13(a)/15(d) of the Securities Exchange Act of 1934 and §404 of
+  Sarbanes-Oxley), but it **does not carry the CIK itself** — there is no CIK column in
+  NIC/NPW. No official SEC↔Fed CIK↔RSSD mapping is published by the SEC, FFIEC, or NIC,
+  so the link is commonly built **CIK → FDIC cert → RSSD**.
 
 ### 1.10 CUSIP / Ticker
 
@@ -221,9 +225,11 @@ bridge the pre-2018 and post-2018 HMDA regimes
 - **RTN is not an entity key.** Routing numbers map many-to-one to institutions, are
   reassigned on merger, and are reusable across non-concurrent entities; never use an
   RTN as a persistent entity identifier.
-- **CIK is independent.** No official CIK↔RSSD crosswalk is published (**UNVERIFIED**);
-  linking SEC public-company data to Fed/FDIC regulatory data requires an external
-  crosswalk (commonly built CIK → cert → RSSD).
+- **CIK is independent.** NIC/NPW carries only an SEC *reporting-status* flag
+  (`SEC_RPTG_STATUS`, per the NPW Data Dictionary) — **not** the CIK; no official
+  CIK↔RSSD crosswalk is published by the SEC, FFIEC, or NIC. Linking SEC public-company
+  data to Fed/FDIC regulatory data therefore requires an external crosswalk, commonly
+  built **CIK → FDIC cert → RSSD**.
 
 ### 2.3 Real-world example — the difficulty of cross-source linking
 

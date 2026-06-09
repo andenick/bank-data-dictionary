@@ -27,9 +27,9 @@ transition_date,schedule,item,old_mdrm,new_mdrm,description,reason,impact,notes
 2011-03-31,HC-N,Memo_7,NEW,BHCKK158,Troubled Debt Restructurings Total,TDR disclosure,New line item,Post-crisis TDR reporting requirement
 2014-03-31,HC-R,Part_I_26,NEW,BHCAP859,Common Equity Tier 1 Capital,Basel III implementation,New concept,Basel III capital reform
 2014-03-31,HC-R,Part_II,BHCK7205,BHCAA223,Risk-Weighted Assets,Basel III implementation,Code change,New RWA calculation methodology
-2014-03-31,HC-R,Part_I_44,BHCK8274,BHCFA223,Tier 1 Capital,Basel III implementation,Code change,Redefined under Basel III
-2014-03-31,HC-R,Part_I_59,BHCK5311,BHCFA224,Tier 2 Capital,Basel III implementation,Code change,Redefined under Basel III
-2014-03-31,HC-R,Part_I_60,BHCK3792,BHCFA225,Total Capital,Basel III implementation,Code change,Redefined under Basel III
+2014-03-31,HC-R,Part_I_44,BHCK8274,BHCA8274,Tier 1 Capital,Basel III implementation,Code change,Redefined under Basel III
+2014-03-31,HC-R,Part_I_59,BHCK5311,BHCA5311,Tier 2 Capital,Basel III implementation,Code change,Redefined under Basel III
+2014-03-31,HC-R,Part_I_60,BHCK3792,BHCA3792,Total Capital,Basel III implementation,Code change,Redefined under Basel III
 2014-03-31,HC-B,HTM,NEW,BHCTJJ34,Held-to-Maturity Securities Total,ASU 2013-12,New code,New HTM amortized cost reporting
 2014-03-31,HC-Q,1.d,NEW,BHCKJF86,Derivative Assets Fair Value,SFAS 157 update,New line item,Separate derivative FV disclosure
 2014-03-31,HC-Q,2.d,NEW,BHCKJF87,Derivative Liabilities Fair Value,SFAS 157 update,New line item,

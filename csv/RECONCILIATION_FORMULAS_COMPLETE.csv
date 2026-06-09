@@ -68,10 +68,10 @@ RECON_TRD_008,HC-D,13,CALCULATED,HC-D,13.a.(1) + 13.a.(2) + 13.a.(3) + 13.b,Shor
 RECON_CAP_001,HC-R,19,BHCAP859,HC-R,6 - 18,CET1 = CET1 Before Adjustments - CET1 Deductions,derived,CRITICAL,CET1 capital = gross CET1 - deductions
 RECON_CAP_002,HC-R,6,BHCAP840,HC-R,Sum(1-5),CET1 Before Adj = Sum(Items 1-5),sum,HIGH,CET1 before deductions = sum of components
 RECON_CAP_003,HC-R,18,BHCAP852,HC-R,Sum(7-17),CET1 Deductions = Sum(Items 7-17),sum,HIGH,CET1 deductions = sum of all deduction items
-RECON_CAP_004,HC-R,24,BHCFA223,HC-R,19 + 23,Tier 1 = CET1 + Additional Tier 1,sum,CRITICAL,Tier 1 capital = CET1 + AT1
+RECON_CAP_004,HC-R,24,BHCA8274,HC-R,19 + 23,Tier 1 = CET1 + Additional Tier 1,sum,CRITICAL,Tier 1 capital = CET1 + AT1
 RECON_CAP_005,HC-R,23,BHCAP856,HC-R,20 + 21 - 22,Additional Tier 1 = AT1 instruments + MI - deductions,derived,HIGH,AT1 = instruments + minority - deductions
-RECON_CAP_006,HC-R,30,BHCFA225,HC-R,24 + 29,Total Capital = Tier 1 + Tier 2,sum,CRITICAL,Total capital = Tier 1 + Tier 2
-RECON_CAP_007,HC-R,29,BHCFA224,HC-R,25 + 26 + 27 - 28,Tier 2 = T2 instruments + MI + ACL - deductions,derived,HIGH,T2 = instruments + minority + allowance - deductions
+RECON_CAP_006,HC-R,30,BHCA3792,HC-R,24 + 29,Total Capital = Tier 1 + Tier 2,sum,CRITICAL,Total capital = Tier 1 + Tier 2
+RECON_CAP_007,HC-R,29,BHCA5311,HC-R,25 + 26 + 27 - 28,Tier 2 = T2 instruments + MI + ACL - deductions,derived,HIGH,T2 = instruments + minority + allowance - deductions
 RECON_CAP_008,HC-R,31,BHCAA223,HC-R,Sum(RWA1-RWA10),Total RWA = Sum(all RWA buckets),sum,CRITICAL,Total RWA = sum of all risk-weighted categories
 RECON_CAP_009,HC-R,32,BHCAP793,HC-R,19 / 31,CET1 Ratio = CET1 Capital / Total RWA,ratio,CRITICAL,CET1 ratio calculation
 RECON_CAP_010,HC-R,33,BHCAP794,HC-R,24 / 31,Tier 1 Ratio = Tier 1 Capital / Total RWA,ratio,CRITICAL,Tier 1 ratio calculation

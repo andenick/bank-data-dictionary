@@ -85,8 +85,8 @@
 | **Total Liabilities** | M | BHCT2948 | RCFD2948 | A.2 | - |
 | **Total Equity** | C | BHCT3210 | RCFD3210 | A.3 | KM1 |
 | **CET1 Capital** | C | BHCAP859 | RCFAP859 | A.3 | KM1 |
-| **Tier 1 Capital** | C | BHCFA223 | RCFAA223 | A.3 | KM1 |
-| **Total Capital** | C | BHCFA225 | RCFAA225 | A.3 | KM1 |
+| **Tier 1 Capital** | C | BHCA8274 | RCFAA223 | A.3 | KM1 |
+| **Total Capital** | C | BHCA3792 | RCFAA225 | A.3 | KM1 |
 | **Total RWA** | C | BHCAA223 | RCFDA223 | A.4 | KM1 |
 | **CET1 Ratio** | C | BHCAP793 | RCFAP793 | - | KM1 |
 | **Total Loans Net** | A | BHCTB529 | RCFDB529 | - | CR1 |
@@ -178,7 +178,9 @@ print(f"CET1 minimum: {capital['cet1']['minimum']}")
 
 | Resource | Purpose | File |
 |----------|---------|------|
-| MDRM Master | Complete MDRM crosswalk | [MDRM_MASTER_COMPLETE.csv](../csv/MDRM_MASTER_COMPLETE.csv) |
+| MDRM Master | Curated cross-form concept spine (~100) | [MDRM_MASTER_COMPLETE.csv](../csv/MDRM_MASTER_COMPLETE.csv) |
+| MDRM Crosswalk (expanded) | 677 MDRM-verified codes, cross-scope mapping | [MDRM_CROSSWALK_EXPANDED.csv](../csv/MDRM_CROSSWALK_EXPANDED.csv) |
+| MDRM Namespaces | Full mnemonic namespace catalogue | [MDRM_NAMESPACES.csv](../csv/MDRM_NAMESPACES.csv) |
 | MDRM Prefixes | Prefix definitions | [MDRM_PREFIX_DEFINITIONS.csv](../csv/MDRM_PREFIX_DEFINITIONS.csv) |
 | G-SIB Entities | Bank identifiers | [GSIB_ENTITY_IDENTIFIERS.csv](../csv/GSIB_ENTITY_IDENTIFIERS.csv) |
 | Historical Transitions | Legacy code mappings | [HISTORICAL_CODE_TRANSITIONS.csv](../csv/HISTORICAL_CODE_TRANSITIONS.csv) |
@@ -197,4 +199,4 @@ print(f"CET1 minimum: {capital['cet1']['minimum']}")
 
 ---
 
-*Last updated: 2026-06-09 | Version 6.0*
+*Last updated: 2026-06-09 | Version 6.1*

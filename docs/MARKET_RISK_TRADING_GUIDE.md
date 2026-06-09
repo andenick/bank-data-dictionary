@@ -436,9 +436,9 @@ BHCAA223 (Total RWA)
 | Ratio | MDRM | Formula |
 |-------|------|---------|
 | CET1 Ratio | BHCAP793 | BHCAP859 / BHCAA223 |
-| Tier 1 Ratio | BHCAP794 | BHCFA223 / BHCAA223 |
-| Total Capital Ratio | BHCAP795 | BHCFA225 / BHCAA223 |
-| Leverage Ratio | BHCAP796 | BHCFA223 / Avg Assets |
+| Tier 1 Ratio | BHCAP794 | BHCA8274 / BHCAA223 |
+| Total Capital Ratio | BHCAP795 | BHCA3792 / BHCAA223 |
+| Leverage Ratio | BHCAP796 | BHCA8274 / Avg Assets |
 
 ### Regulatory Minimums (Basel III)
 
@@ -509,8 +509,8 @@ HC-R (Regulatory Capital)
 │
 ├── Part I: Capital Components
 │   ├── CET1 (BHCAP859)
-│   ├── Tier 1 (BHCFA223)
-│   └── Total Capital (BHCFA225)
+│   ├── Tier 1 (BHCA8274)
+│   └── Total Capital (BHCA3792)
 │
 └── Part II: Risk-Weighted Assets
     ├── Credit RWA (by risk weight bucket)
@@ -667,8 +667,8 @@ net_cds = cds_bought - cds_sold
 - BHCAA223: Total RWA
 - BHCKA222: Market Risk RWA
 - BHCAP859: CET1
-- BHCFA223: Tier 1
-- BHCFA225: Total Capital
+- BHCA8274: Tier 1
+- BHCA3792: Total Capital
 
 ---
 

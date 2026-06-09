@@ -85,24 +85,30 @@ The scope split on the FR Y-9C is therefore:
 | **BHCW** | **Consolidated** — Schedule HC-R advanced-approaches/Basel III capital (2014+) | **VERIFIED** (item 3792) |
 | **BHCP** | **Parent company only** — reported on **FR Y-9LP** (not Y-9C) | **VERIFIED** |
 | **BHSP** | **Parent company only** (small HCs) — **FR Y-9SP** | **VERIFIED** |
-| BHCT, BHCM, BHCB, BHCAP, BHCFA | scope **UNVERIFIED** — see below | **UNVERIFIED** |
+| **BHCT** | **Consolidated** — total/aggregate items (e.g. `BHCT2170` total assets); also some FR Y-11 | **VERIFIED** |
+| **BHCM** | **Consolidated** — small set incl. HC-D trading detail (e.g. `BHCM3531`) | **VERIFIED** |
+| **BHCB** | **Consolidated** — deposit detail (e.g. `BHCB2210` demand deposits) | **VERIFIED** |
+| ~~BHCAP~~ | **Not a mnemonic** — `BHCAP859` = `BHCA` + item `P859` (CET1) | **CLARIFIED** |
+| ~~BHCFA~~ | **Not a mnemonic** — does not exist in MDRM (see correction below) | **CORRECTED** |
 
-**Still UNVERIFIED** (could not confirm against an official MDRM item page; prior labels are
-*not* corroborated — do **not** treat the old labels as fact):
+**Resolved 2026-06-09** against the full Fed MDRM dictionary (item counts per mnemonic):
 
-- `BHCT` — prior label "total consolidated" is unconfirmed; note `BHCK` is already the confirmed
-  consolidated-total series. Candidate: a per-schedule "total" variant.
-- `BHCM` — prior label "domestic post-2018 breakout" is unconfirmed. Candidate readings:
-  memoranda items, or domestic-office items.
-- `BHCB` — not confirmed against MDRM.
-- `BHCAP` — prior label "advanced approaches" is unconfirmed; the **confirmed** advanced-
-  approaches capital series is `BHCW`, not `BHCAP`.
-- `BHCFA` — prior label "regulatory capital" is unconfirmed; confirmed HC-R series are `BHCA`
-  and `BHCW`.
+- `BHCT` (46 items, FR Y-9C + FR Y-11), `BHCM` (9 items, FR Y-9C incl. HC-D trading detail),
+  `BHCB` (7 items, FR Y-9C deposit detail) — all **VERIFIED** as consolidated FR Y-9C series.
+  `BHCK` remains the primary consolidated prefix; these are smaller specialized series.
+- `BHCAP` and `BHCFA` are **not 4-character mnemonics.** The mnemonic `BHCAP` has **0** MDRM
+  items and `BHCF`/`BHCFA` have **0**; the real mnemonic is `BHCA` (91 items). 8-character
+  strings decompose as mnemonic (4) + item (4): `BHCAP859` = `BHCA`+`P859` (CET1 capital),
+  `BHCAA223` = `BHCA`+`A223` (RWA).
 
-These are flagged `UNVERIFIED` in `csv/MDRM_PREFIX_DEFINITIONS.csv` and
-`csv/MDRM_NAMESPACES.csv` with their candidate readings. Resolve them by looking up a known
-item on each series at the Fed MDRM Data Dictionary before relying on them.
+> **CAPITAL-CODE CORRECTION (v6.0).** Earlier releases used the non-existent codes
+> `BHCFA223` / `BHCFA224` / `BHCFA225` for Tier 1 / Tier 2 / Total capital. The correct,
+> MDRM-verified codes are **`BHCA8274`** (Tier 1 capital), **`BHCA5311`** (Tier 2 capital),
+> and **`BHCA3792`** (Total risk-based capital). At the 2014 Basel III transition the mnemonic
+> changed `BHCK` → `BHCA` (so the pre-2014 codes were `BHCK8274` / `BHCK5311` / `BHCK3792`).
+> All occurrences across this repository were corrected.
+
+These resolutions are reflected in `csv/MDRM_PREFIX_DEFINITIONS.csv` and `csv/MDRM_NAMESPACES.csv`.
 
 ---
 
@@ -198,3 +204,23 @@ count, so treat **~87,000+** as an order-of-magnitude figure — **UNVERIFIED** 
 
 See also: **[`csv/MDRM_PREFIX_DEFINITIONS.csv`](../csv/MDRM_PREFIX_DEFINITIONS.csv)** and
 **[`csv/MDRM_NAMESPACES.csv`](../csv/MDRM_NAMESPACES.csv)**.
+
+---
+
+## 8. Crosswalk files in this repository
+
+Two complementary cross-form crosswalks ship here:
+
+| File | Rows | What it is |
+|---|---|---|
+| [`csv/MDRM_MASTER_COMPLETE.csv`](../csv/MDRM_MASTER_COMPLETE.csv) | ~100 | **Curated concept spine** — one row per analytical concept (Total Assets, CET1, …) hand-mapped across FR Y-9C / Call Report / FR Y-14 / Pillar 3, with CAMELS category and `adds_to` reconciliation links. |
+| [`csv/MDRM_CROSSWALK_EXPANDED.csv`](../csv/MDRM_CROSSWALK_EXPANDED.csv) | **677** | **Verified breadth** — every MDRM code referenced by the repo's FR Y-9C/Call schedule files, enriched from the official MDRM with the item name, reporting form, and effective dates, plus the parallel code under each standard scope (`y9c_consolidated`/`y9c_domestic`/`y9c_foreign`/`call_consolidated`/`call_domestic`/`call_foreign`/`income_ytd`) and `all_mnemonics_for_item`. |
+
+**How the expanded crosswalk is built (no fabrication):** every code in
+`MDRM_CROSSWALK_EXPANDED.csv` is taken from the curated schedule files and then
+**confirmed to exist in the Fed MDRM** dictionary; a scope column is populated only when
+that parallel code (e.g. `RCFD` + the same item number) is itself present in MDRM —
+otherwise it is left blank. This is the mechanism behind the item-number-reuse principle in
+§2: the same item appears under many mnemonics, and the crosswalk simply lists the ones the
+Fed actually publishes. 473 of the 677 rows have a confirmed FR Y-9C ↔ Call Report
+consolidated pair.

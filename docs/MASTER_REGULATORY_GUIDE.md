@@ -505,9 +505,9 @@ Reports Basel III regulatory capital components and ratios.
 |------|-------------|------|
 | CET1 | Common Equity Tier 1 Capital | BHCAP859 |
 | AT1 | Additional Tier 1 Capital | BHCAA227 |
-| T1 | Tier 1 Capital (CET1 + AT1) | BHCFA223 |
-| T2 | Tier 2 Capital | BHCFA224 |
-| TC | Total Capital (T1 + T2) | BHCFA225 |
+| T1 | Tier 1 Capital (CET1 + AT1) | BHCA8274 |
+| T2 | Tier 2 Capital | BHCA5311 |
+| TC | Total Capital (T1 + T2) | BHCA3792 |
 | RWA | Total Risk-Weighted Assets | BHCAA223 |
 
 #### Key Ratios
@@ -585,8 +585,8 @@ Non-Trading Negative FV = BHCK8745 + BHCK8746 + BHCK8747 + BHCK8748
 ### 5.3 Capital Reconciliation
 
 ```
-Total Capital (BHCFA225) = Tier 1 (BHCFA223) + Tier 2 (BHCFA224)
-Tier 1 (BHCFA223) = CET1 (BHCAP859) + AT1 (BHCAA227)
+Total Capital (BHCA3792) = Tier 1 (BHCA8274) + Tier 2 (BHCA5311)
+Tier 1 (BHCA8274) = CET1 (BHCAP859) + AT1 (BHCAA227)
 ```
 
 ### 5.4 Common Validation Checks
@@ -760,9 +760,9 @@ Key capital variables:
 | Variable | Description | MDRM |
 |----------|-------------|------|
 | CET1 Capital | Common Equity Tier 1 | BHCAP859 |
-| Tier 1 Capital | Total Tier 1 | BHCFA223 |
-| Tier 2 Capital | Tier 2 | BHCFA224 |
-| Total Capital | Total Risk-Based | BHCFA225 |
+| Tier 1 Capital | Total Tier 1 | BHCA8274 |
+| Tier 2 Capital | Tier 2 | BHCA5311 |
+| Total Capital | Total Risk-Based | BHCA3792 |
 | RWA | Risk-Weighted Assets | BHCAA223 |
 
 ### 9.4 CAMELS Categories

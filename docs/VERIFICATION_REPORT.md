@@ -266,9 +266,9 @@ The legacy `MDRM_PREFIX_DEFINITIONS.csv` labelled **BHCK** as "domestic operatio
 
 | Concept ID | MDRM Code | Schedule | Line | Status | Notes |
 |------------|-----------|----------|------|--------|-------|
-| TIER1_CAPITAL | BHCFA223 | HC-R | Part I-32 | **MINOR** | Line number format differs from current instructions |
-| TIER2_CAPITAL | BHCFA224 | HC-R | Part I-34 | **MINOR** | Line number format differs from current instructions |
-| TOTAL_CAPITAL | BHCFA225 | HC-R | Part I-35 | **VERIFIED** | Total risk-based capital |
+| TIER1_CAPITAL | BHCA8274 | HC-R | Part I-32 | **MINOR** | Line number format differs from current instructions |
+| TIER2_CAPITAL | BHCA5311 | HC-R | Part I-34 | **MINOR** | Line number format differs from current instructions |
+| TOTAL_CAPITAL | BHCA3792 | HC-R | Part I-35 | **VERIFIED** | Total risk-based capital |
 | RWA | BHCAA223 | HC-R | Part II-31 | **FIXED (v6.0)** | corrected from Part II-26 → Part II item 31 (Total RWA) |
 | CET1_CAPITAL | BHCAP859 | HC-R | Part I-31 | **VERIFIED** | CET1 capital |
 
@@ -312,8 +312,8 @@ The legacy `MDRM_PREFIX_DEFINITIONS.csv` labelled **BHCK** as "domestic operatio
 ### Minor Discrepancies (3 codes)
 
 1. **TOTAL_DEPOSITS (BHCM2200)**: Line item could be more precisely specified as 13.a
-2. **TIER1_CAPITAL (BHCFA223)**: Line number format "Part I-32" should match current instructions
-3. **TIER2_CAPITAL (BHCFA224)**: Line number format should match current instructions
+2. **TIER1_CAPITAL (BHCA8274)**: Line number format "Part I-32" should match current instructions
+3. **TIER2_CAPITAL (BHCA5311)**: Line number format should match current instructions
 
 ### Codes Requiring Update — resolved in v6.0
 

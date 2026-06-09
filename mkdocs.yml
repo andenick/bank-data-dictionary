@@ -1,0 +1,109 @@
+site_name: "Bank Regulatory Data Dictionary"
+site_description: "A catalogue and field-level mapping of the U.S. bank regulatory data universe — Federal Reserve, FFIEC, FDIC, NCUA, OCC and more."
+site_url: https://github.com/andenick/bank-data-dictionary
+repo_url: https://github.com/andenick/bank-data-dictionary
+repo_name: andenick/bank-data-dictionary
+
+docs_dir: docs
+
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - navigation.tracking
+    - search.suggest
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+# Guides intentionally link to ../csv/ and ../json/ data files that live in the repo
+# but OUTSIDE docs_dir, so MkDocs cannot resolve them as documentation pages. Downgrade
+# in-page link/anchor checks to INFO so `mkdocs build --strict` does not abort on them,
+# while keeping nav validation strict (a bad nav entry still fails the build).
+validation:
+  links:
+    not_found: info
+    anchors: info
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.highlight
+
+nav:
+  - Home:
+      - Overview: index.md
+      - Navigation Index: NAVIGATION.md
+  - Overview:
+      - Collections Catalog: COLLECTIONS_CATALOG.md
+      - Coverage & Provenance: COVERAGE_PROVENANCE.md
+      - Master Regulatory Guide: MASTER_REGULATORY_GUIDE.md
+  - Core systems:
+      - MDRM Meta-Dictionary: MDRM_GUIDE.md
+      - Entity Identifiers: IDENTIFIERS.md
+      - NIC Structure: NIC_STRUCTURE_GUIDE.md
+  - FR Y-9C schedules:
+      - HC — Balance Sheet: HC_BALANCE_SHEET_GUIDE.md
+      - HC-B — Securities: HC_B_SECURITIES_GUIDE.md
+      - HC-C — Loans: HC_C_LOANS_GUIDE.md
+      - HC-D — Trading: HC_D_TRADING_GUIDE.md
+      - HC-F — Other Assets: HC_F_OTHER_ASSETS_GUIDE.md
+      - HC-G — Other Liabilities: HC_G_OTHER_LIABILITIES_GUIDE.md
+      - HC-H — Interest Sensitivity: HC_H_INTEREST_SENSITIVITY_GUIDE.md
+      - HC-K — Quarterly Averages: HC_K_QUARTERLY_AVERAGES_GUIDE.md
+      - HC-L — Derivatives: HC_L_DERIVATIVES_GUIDE.md
+      - HC-N — Past Due: HC_N_PAST_DUE_GUIDE.md
+      - HC-Q — Fair Value: HC_Q_FAIR_VALUE_GUIDE.md
+      - HC-R — Capital: HC_R_CAPITAL_GUIDE.md
+      - HC-S — Securitization: HC_S_SECURITIZATION_GUIDE.md
+      - HI — Income Statement: HI_INCOME_STATEMENT_GUIDE.md
+      - Reconciliation Hierarchy: RECONCILIATION_HIERARCHY.md
+      - Reconciliation Matrix: RECONCILIATION_MATRIX.md
+  - Call Report:
+      - Call Report Overview: CALL_REPORT_GUIDE.md
+      - RC — Balance Sheet: CALL_REPORT_RC_GUIDE.md
+      - RC-C — Loans: CALL_REPORT_RC_C_LOANS_GUIDE.md
+      - RC-E — Deposits: CALL_REPORT_RC_E_DEPOSITS_GUIDE.md
+      - RC-N — Past Due: CALL_REPORT_RC_N_PAST_DUE_GUIDE.md
+      - RI — Income Statement: CALL_REPORT_RI_INCOME_GUIDE.md
+  - Other collections:
+      - Foreign & Structure: FOREIGN_AND_STRUCTURE_GUIDE.md
+      - FDIC / NCUA / OCC / UBPR: FDIC_NCUA_OCC_UBPR_GUIDE.md
+      - FFIEC 009 — Country Exposure: FFIEC_009_COUNTRY_EXPOSURE_GUIDE.md
+      - FFIEC 101 — Advanced Capital: FFIEC_101_ADVANCED_CAPITAL_GUIDE.md
+      - FFIEC 102 — Market Risk: FFIEC_102_MARKET_RISK_GUIDE.md
+      - FR Y-14 — Capital Assessment: FR_Y14_CAPITAL_ASSESSMENT_GUIDE.md
+      - FR Y-15 — Systemic Risk: FR_Y15_SYSTEMIC_RISK_GUIDE.md
+      - FR Y-9LP — Parent Only: FR_Y9LP_PARENT_ONLY_GUIDE.md
+      - FR Y-11 — Foreign Subsidiary: FR_Y11_FOREIGN_SUBSIDIARY_GUIDE.md
+      - FR 2052a — Liquidity: FR_2052a_LIQUIDITY_GUIDE.md
+      - Pillar 3 — Disclosure: PILLAR3_DISCLOSURE_GUIDE.md
+      - Market Risk & Trading: MARKET_RISK_TRADING_GUIDE.md
+      - Trading Activities: TRADING_ACTIVITIES_GUIDE.md
+  - Reference:
+      - Verification Report: VERIFICATION_REPORT.md

@@ -2,7 +2,7 @@
 
 **The most detailed open catalogue of U.S. bank regulatory data — every major information collection and its subschedules, the MDRM code system, the FFIEC NIC institutional-structure data, the identifier crosswalk, cross-form mappings, and reconciliation formulas.**
 
-**Version 6.0** | Updated: 2026-06-09
+**Version 6.1** | Updated: 2026-06-09
 
 > This repository is a **catalogue / mapping reference** — it documents *what the datasets are, how they are structured, and how they relate to each other*. For a data-*access* package (download and query the actual filings), see the companion project **[FreeNIC](https://github.com/andenick/FreeNIC)**.
 
@@ -23,7 +23,7 @@ git clone https://github.com/andenick/bank-data-dictionary.git
 cd bank-data-dictionary
 ```
 
-No installation required — all data is in CSV, JSON, and Markdown files ready to use. Start with [`docs/INDEX.md`](docs/INDEX.md) for navigation or [`docs/COLLECTIONS_CATALOG.md`](docs/COLLECTIONS_CATALOG.md) for the full data universe.
+No installation required — all data is in CSV, JSON, and Markdown files ready to use. Start with [`docs/NAVIGATION.md`](docs/NAVIGATION.md) for navigation or [`docs/COLLECTIONS_CATALOG.md`](docs/COLLECTIONS_CATALOG.md) for the full data universe.
 
 ---
 
@@ -114,8 +114,8 @@ No installation required — all data is in CSV, JSON, and Markdown files ready 
 | 2 | Trading Assets | BHCT3545 (HC) = BHCT3545 (HC-D) | CRITICAL |
 | 3 | Trading Liabilities | BHCT3548 (HC) = BHCT3548 (HC-D) | CRITICAL |
 | 4 | Loans Net | BHCTB528 (HC) = BHCTB529 (HC-C) | CRITICAL |
-| 5 | Tier 1 Capital | BHCFA223 = BHCAP859 + BHCAP856 | CRITICAL |
-| 6 | Total Capital | BHCFA225 = BHCFA223 + BHCFA224 | CRITICAL |
+| 5 | Tier 1 Capital | BHCA8274 = BHCAP859 + BHCAP856 | CRITICAL |
+| 6 | Total Capital | BHCA3792 = BHCA8274 + BHCA5311 | CRITICAL |
 | 7 | Derivatives +FV | BHCT3543 = Sum(HC-L Positive FV) | CRITICAL |
 | 8 | Derivatives -FV | BHCT3547 = Sum(HC-L Negative FV) | CRITICAL |
 | 9 | Securities | BHCT8641 = BHCT1773 + BHCTJJ34 | HIGH |
@@ -129,7 +129,8 @@ No installation required — all data is in CSV, JSON, and Markdown files ready 
 bank-regulatory-data-dictionary/
 │
 ├── csv/                                    # All CSV data tables
-│   ├── MDRM_MASTER_COMPLETE.csv            # Master variable crosswalk (400+ vars)
+│   ├── MDRM_MASTER_COMPLETE.csv            # Curated cross-form concept spine (~100 concepts)
+│   ├── MDRM_CROSSWALK_EXPANDED.csv         # 677 MDRM-verified codes w/ cross-scope mapping (NEW v6.1)
 │   │
 │   ├── Schedule-Specific Files (14 Y-9C schedules):
 │   │   ├── HC_BALANCE_SHEET.csv            # Schedule HC master balance sheet
@@ -182,7 +183,8 @@ bank-regulatory-data-dictionary/
 │       └── HISTORICAL_CODE_TRANSITIONS.csv # Legacy codes
 │
 ├── docs/                                   # Documentation (43 guides)
-│   ├── INDEX.md                            # Master navigation
+│   ├── index.md                            # Site landing page (GitHub Pages home)
+│   ├── NAVIGATION.md                       # Master navigation
 │   ├── COLLECTIONS_CATALOG.md              # The full data universe — 42 collections (NEW v6.0)
 │   ├── NIC_STRUCTURE_GUIDE.md              # FFIEC NIC entities/relationships/transformations (NEW v6.0)
 │   ├── IDENTIFIERS.md                      # RSSD/FDIC/OCC/NCUA/LEI/ABA/EIN/CIK crosswalk (NEW v6.0)
@@ -337,8 +339,8 @@ income = {
 # Regulatory capital
 capital = {
     'cet1': 'BHCAP859',
-    'tier1': 'BHCFA223',
-    'total_capital': 'BHCFA225',
+    'tier1': 'BHCA8274',
+    'total_capital': 'BHCA3792',
     'rwa': 'BHCAA223',
 }
 
@@ -400,6 +402,7 @@ This repository is the **catalogue / mapping** product. Its sibling, **[FreeNIC]
 
 | Version | Date | Changes |
 |---------|------|---------|
+| **6.1** | 2026-06-09 | **Capital-code correction + crosswalk expansion + docs site.** Fixed the non-existent `BHCFA223/224/225` codes repo-wide → verified `BHCA8274` (Tier 1) / `BHCA5311` (Tier 2) / `BHCA3792` (Total). Resolved prefix scopes against the full Fed MDRM (BHCT/BHCM/BHCB verified; BHCAP/BHCFA shown to be non-mnemonics = `BHCA`+item). Added `MDRM_CROSSWALK_EXPANDED.csv` (677 MDRM-verified codes with cross-scope mapping). Resolved FFIEC 002/009 Schedule C Part II titles + CIK↔RSSD note. Added a MkDocs Material GitHub Pages site. |
 | **6.0** | 2026-06-09 | **Major expansion from FR Y-9C focus to the full U.S. bank-data universe.** Added: master Collections Catalogue (42 collections) + Schedules Catalogue (every subschedule); FFIEC NIC institutional-structure layer (entity/relationship/transformation schemas + 40 code lists, 274 codes); identifier crosswalk (RSSD/FDIC/OCC/NCUA/LEI/ABA/EIN/CIK); complete Call Report (031/041/051) guide; foreign/structure guide (FFIEC 002/009, FR Y-7/10/11/12/6/8); FDIC/NCUA/OCC/UBPR guide; MDRM meta-dictionary + namespace catalogue; coverage/provenance guide. **Fixed:** BHCK mislabel (it is consolidated, not domestic); FR Y-11 and FFIEC 009 schedule lists; cross-form line-item references. |
 | 5.0 | 2026-01-29 | Complete reconciliation system (60+ formulas), validation rules (50), schedule schemas JSON, cross-form mapping JSON, component hierarchies, 5 Call Report guides, INDEX.md, RECONCILIATION_HIERARCHY.md |
 | 4.0 | 2026-01-29 | Added Y-14A/Q, 2052a hierarchy, Pillar 3 G-SIB disclosure |

@@ -64,7 +64,7 @@
       "concept_id": "TIER1_CAPITAL",
       "description": "Tier 1 capital (CET1 + AT1)",
       "forms": {
-        "FR_Y9C": {"schedule": "HC-R", "item": "24", "mdrm": "BHCFA223"},
+        "FR_Y9C": {"schedule": "HC-R", "item": "24", "mdrm": "BHCA8274"},
         "Call_Report_031": {"schedule": "RC-R", "item": "24", "mdrm": "RCFAA223"},
         "Call_Report_041": {"schedule": "RC-R", "item": "24", "mdrm": "RCFAA223"},
         "FFIEC_101": {"schedule": "A", "item": "T1", "mdrm": "AADAA223"},
@@ -78,7 +78,7 @@
       "concept_id": "TOTAL_CAPITAL",
       "description": "Total regulatory capital (Tier 1 + Tier 2)",
       "forms": {
-        "FR_Y9C": {"schedule": "HC-R", "item": "30", "mdrm": "BHCFA225"},
+        "FR_Y9C": {"schedule": "HC-R", "item": "30", "mdrm": "BHCA3792"},
         "Call_Report_031": {"schedule": "RC-R", "item": "30", "mdrm": "RCFAA225"},
         "Call_Report_041": {"schedule": "RC-R", "item": "30", "mdrm": "RCFAA225"},
         "FFIEC_101": {"schedule": "A", "item": "TC", "mdrm": "AADAA225"},

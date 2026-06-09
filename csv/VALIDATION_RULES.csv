@@ -53,8 +53,8 @@ VAL_028,sign,HC-L,BHCK8733,>= 0,HIGH,Positive fair value must be non-negative,BH
 # ----------------------------------------------------------------------------
 # SECTION 5: CAPITAL VALIDATION - HC-R (8 rules)
 # ----------------------------------------------------------------------------
-VAL_029,sum,HC-R,BHCFA223,BHCAP859 + BHCAP856,CRITICAL,Tier 1 must equal CET1 + Additional Tier 1,BHCFA223;BHCAP859;BHCAP856,Tier 1 capital does not reconcile
-VAL_030,sum,HC-R,BHCFA225,BHCFA223 + BHCFA224,CRITICAL,Total Capital must equal Tier 1 + Tier 2,BHCFA225;BHCFA223;BHCFA224,Total capital does not reconcile
+VAL_029,sum,HC-R,BHCA8274,BHCAP859 + BHCAP856,CRITICAL,Tier 1 must equal CET1 + Additional Tier 1,BHCA8274;BHCAP859;BHCAP856,Tier 1 capital does not reconcile
+VAL_030,sum,HC-R,BHCA3792,BHCA8274 + BHCA5311,CRITICAL,Total Capital must equal Tier 1 + Tier 2,BHCA3792;BHCA8274;BHCA5311,Total capital does not reconcile
 VAL_031,derived,HC-R,BHCAP859,BHCAP840 - BHCAP852,HIGH,CET1 must equal CET1 before adjustments - deductions,BHCAP859;BHCAP840;BHCAP852,CET1 calculation does not reconcile
 VAL_032,range,HC-R,BHCAP793,>= 0.045 AND <= 0.30,MEDIUM,CET1 ratio should be between 4.5% and 30%,BHCAP793,CET1 ratio outside normal range
 VAL_033,range,HC-R,BHCAP794,>= 0.06 AND <= 0.30,MEDIUM,Tier 1 ratio should be between 6% and 30%,BHCAP794,Tier 1 ratio outside normal range

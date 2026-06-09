@@ -80,7 +80,7 @@ Schedule HC-R is the cornerstone of regulatory capital reporting under Basel III
 
 | MDRM | Formula |
 |------|---------|
-| BHCFA223 | CET1 + AT1 = Item 19 + Item 23 |
+| BHCA8274 | CET1 + AT1 = Item 19 + Item 23 |
 
 ### Tier 2 Capital
 
@@ -88,15 +88,15 @@ Schedule HC-R is the cornerstone of regulatory capital reporting under Basel III
 |------|------|-------------|
 | 25 | BHCAP857 | Tier 2 instruments (sub debt) |
 | 26 | BHCAP858 | Tier 2 minority interest |
-| 27 | BHCFA224 | Eligible ALLL (max 1.25% of RWA) |
+| 27 | BHCA5311 | Eligible ALLL (max 1.25% of RWA) |
 | 28 | BHCKP856 | Tier 2 deductions |
-| 29 | BHCFA224 | **Tier 2 capital** |
+| 29 | BHCA5311 | **Tier 2 capital** |
 
 ### Total Capital (Item 30)
 
 | MDRM | Formula |
 |------|---------|
-| BHCFA225 | Tier 1 + Tier 2 = Item 24 + Item 29 |
+| BHCA3792 | Tier 1 + Tier 2 = Item 24 + Item 29 |
 
 ---
 
@@ -269,9 +269,9 @@ Measures profitability relative to regulatory capital consumption
 | Concept | MDRM | Description |
 |---------|------|-------------|
 | CET1 Capital | BHCAP859 | Common Equity Tier 1 |
-| Tier 1 Capital | BHCFA223 | CET1 + AT1 |
-| Tier 2 Capital | BHCFA224 | Sub debt + eligible ALLL |
-| Total Capital | BHCFA225 | Tier 1 + Tier 2 |
+| Tier 1 Capital | BHCA8274 | CET1 + AT1 |
+| Tier 2 Capital | BHCA5311 | Sub debt + eligible ALLL |
+| Total Capital | BHCA3792 | Tier 1 + Tier 2 |
 | Total RWA | BHCAA223 | Risk-weighted assets |
 | CET1 Ratio | BHCAP793 | CET1 / RWA |
 | Tier 1 Ratio | BHCAP794 | Tier 1 / RWA |

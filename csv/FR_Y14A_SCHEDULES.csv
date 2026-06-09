@@ -13,8 +13,8 @@ A.2,Balance Sheet Projections,Total Deposits,Projected deposits,Currency,Annual,
 A.2,Balance Sheet Projections,Total Equity,Projected equity capital,Currency,Annual,HC (BHCT3210),Confidential,
 A.3,Capital Projections,CET1 Capital,Projected CET1 components,Currency,Annual,HC-R (BHCAP859),Confidential,Under stress scenarios
 A.3,Capital Projections,CET1 Ratio,CET1 / Projected RWA,Ratio,Annual,HC-R,Confidential,Minimum ratio under stress
-A.3,Capital Projections,Tier 1 Ratio,Tier 1 / Projected RWA,Ratio,Annual,HC-R (BHCFA223),Confidential,
-A.3,Capital Projections,Total Capital Ratio,Total Capital / Projected RWA,Ratio,Annual,HC-R (BHCFA225),Confidential,
+A.3,Capital Projections,Tier 1 Ratio,Tier 1 / Projected RWA,Ratio,Annual,HC-R (BHCA8274),Confidential,
+A.3,Capital Projections,Total Capital Ratio,Total Capital / Projected RWA,Ratio,Annual,HC-R (BHCA3792),Confidential,
 A.3,Capital Projections,Leverage Ratio,Tier 1 / Avg Assets,Ratio,Annual,HC-R,Confidential,
 A.4,RWA Projections,Credit Risk RWA,Projected credit risk RWA,Currency,Annual,HC-R Part II,Confidential,By exposure category
 A.4,RWA Projections,Market Risk RWA,Projected market risk RWA,Currency,Annual,FFIEC 102,Confidential,

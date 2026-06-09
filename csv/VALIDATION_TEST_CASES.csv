@@ -21,9 +21,9 @@ TEST_005,Community Bank,8888888,2024Q4,VAL_023,"{""BHCT3545"": 0}",PASS,No tradi
 # ----------------------------------------------------------------------------
 # CAPITAL TESTS
 # ----------------------------------------------------------------------------
-TEST_006,JPMorgan Chase,1039502,2024Q4,VAL_029,"{""BHCFA223"": 300000, ""BHCAP859"": 280000, ""BHCAP856"": 20000}",PASS,Tier 1 = CET1 + AT1,Capital composition correct
-TEST_007,Test Bank Fail,9999999,2024Q4,VAL_029,"{""BHCFA223"": 300000, ""BHCAP859"": 280000, ""BHCAP856"": 30000}",FAIL,Tier 1 does not equal CET1 + AT1,Components exceed Tier 1
-TEST_008,Citigroup,1951350,2024Q4,VAL_030,"{""BHCFA225"": 350000, ""BHCFA223"": 300000, ""BHCFA224"": 50000}",PASS,Total Capital = Tier 1 + Tier 2,Capital reconciles
+TEST_006,JPMorgan Chase,1039502,2024Q4,VAL_029,"{""BHCA8274"": 300000, ""BHCAP859"": 280000, ""BHCAP856"": 20000}",PASS,Tier 1 = CET1 + AT1,Capital composition correct
+TEST_007,Test Bank Fail,9999999,2024Q4,VAL_029,"{""BHCA8274"": 300000, ""BHCAP859"": 280000, ""BHCAP856"": 30000}",FAIL,Tier 1 does not equal CET1 + AT1,Components exceed Tier 1
+TEST_008,Citigroup,1951350,2024Q4,VAL_030,"{""BHCA3792"": 350000, ""BHCA8274"": 300000, ""BHCA5311"": 50000}",PASS,Total Capital = Tier 1 + Tier 2,Capital reconciles
 
 # ----------------------------------------------------------------------------
 # CAPITAL RATIO TESTS
@@ -60,7 +60,7 @@ TEST_020,Test Bank Fail,2222222,2024Q4,VAL_025,"{""BHCT3543"": 80000, ""BHCK8733
 # ----------------------------------------------------------------------------
 # COMPREHENSIVE TESTS (Multiple Rules)
 # ----------------------------------------------------------------------------
-TEST_021,JPMorgan Chase,1039502,2024Q4,ALL,"{""BHCT2170"": 4000000, ""BHCT2948"": 3600000, ""BHCK3000"": 0, ""BHCT3210"": 400000, ""BHCT3545"": 600000, ""BHCAP859"": 280000, ""BHCAP856"": 20000, ""BHCFA223"": 300000, ""BHCFA224"": 50000, ""BHCFA225"": 350000, ""BHCAP793"": 0.14, ""BHCT4074"": 50000, ""BHCT4107"": 100000, ""BHCT4073"": 50000}",PASS,Full validation suite passes,All major checks pass
+TEST_021,JPMorgan Chase,1039502,2024Q4,ALL,"{""BHCT2170"": 4000000, ""BHCT2948"": 3600000, ""BHCK3000"": 0, ""BHCT3210"": 400000, ""BHCT3545"": 600000, ""BHCAP859"": 280000, ""BHCAP856"": 20000, ""BHCA8274"": 300000, ""BHCA5311"": 50000, ""BHCA3792"": 350000, ""BHCAP793"": 0.14, ""BHCT4074"": 50000, ""BHCT4107"": 100000, ""BHCT4073"": 50000}",PASS,Full validation suite passes,All major checks pass
 TEST_022,Problem Bank,1111111,2024Q4,ALL,"{""BHCT2170"": 1000000, ""BHCT2948"": 950000, ""BHCK3000"": 0, ""BHCT3210"": 40000, ""BHCAP793"": 0.03}",FAIL,Multiple validation failures,Balance sheet + capital ratio fail
 
 # ----------------------------------------------------------------------------

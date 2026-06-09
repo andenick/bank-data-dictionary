@@ -226,15 +226,15 @@
   "capital_reconciliation": {
     "total_capital": {
       "formula": "Tier 1 Capital + Tier 2 Capital",
-      "result_mdrm": "BHCFA225",
+      "result_mdrm": "BHCA3792",
       "components": {
-        "tier1": "BHCFA223",
-        "tier2": "BHCFA224"
+        "tier1": "BHCA8274",
+        "tier2": "BHCA5311"
       }
     },
     "tier1_capital": {
       "formula": "CET1 Capital + Additional Tier 1",
-      "result_mdrm": "BHCFA223",
+      "result_mdrm": "BHCA8274",
       "components": {
         "cet1": "BHCAP859",
         "at1": "BHCAA227"
@@ -242,8 +242,8 @@
     },
     "ratios": {
       "cet1_ratio": {"formula": "BHCAP859 / BHCAA223", "minimum": "4.5%"},
-      "tier1_ratio": {"formula": "BHCFA223 / BHCAA223", "minimum": "6.0%"},
-      "total_capital_ratio": {"formula": "BHCFA225 / BHCAA223", "minimum": "8.0%"}
+      "tier1_ratio": {"formula": "BHCA8274 / BHCAA223", "minimum": "6.0%"},
+      "total_capital_ratio": {"formula": "BHCA3792 / BHCAA223", "minimum": "8.0%"}
     }
   },
 
@@ -273,7 +273,7 @@
     "2014_basel3": {
       "date": "2014-03-31",
       "description": "Basel III capital framework implementation",
-      "new_codes": ["BHCAP859", "BHCFA223", "BHCFA224", "BHCFA225", "BHCAA223"]
+      "new_codes": ["BHCAP859", "BHCA8274", "BHCA5311", "BHCA3792", "BHCAA223"]
     }
   },
 
@@ -306,7 +306,7 @@
       "rule_id": "V005",
       "name": "Total Capital Composition",
       "formula": "Total Capital == Tier 1 + Tier 2",
-      "mdrm_check": "BHCFA225 == BHCFA223 + BHCFA224"
+      "mdrm_check": "BHCA3792 == BHCA8274 + BHCA5311"
     }
   ]
 }

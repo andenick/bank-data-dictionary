@@ -39,7 +39,7 @@ loans, and deposit schedules (A, C, E), separate detail is reported on IBF balan
 |-----|-------|-------------|-------|
 | RAL | Assets and Liabilities | Summary balance sheet of the reporting branch/agency | Anchor schedule; nets due-from/due-to related institutions |
 | A   | Cash and Balances Due from Depository Institutions | Cash and interbank balances | IBF detail reported separately |
-| C   | Loans | Loans by type (Part I — loans and leases; Part II — additional loan detail) | IBF detail reported separately; Part II exact title **UNVERIFIED** |
+| C   | Loans | Loans by type (Part I — Loans and Leases; Part II — Loans to Small Businesses and Small Farms, completed annually as of June 30) | IBF detail reported separately |
 | E   | Deposit Liabilities and Credit Balances | Deposits and credit balances | IBF detail reported separately |
 | K   | Quarterly Averages | Average daily (or weekly) balances for the quarter | Reporter may use daily or Wednesday-weekly averaging |
 | L   | Derivatives and Off-Balance-Sheet Items | Commitments, contingencies, derivative contracts | |
@@ -85,8 +85,8 @@ redistributed to an **ultimate-risk basis** (country of the guarantor / collater
 
 | id | title | description | notes |
 |----|-------|-------------|-------|
-| C — Part I | Claims by country (immediate-counterparty basis), with redistribution to ultimate-risk basis | Cross-border and foreign-office claims on foreign residents by counterparty country and sector (bank / public / other) | Core schedule |
-| C — Part II | Additional claims detail / memoranda | Supplementary claims breakdowns | exact title **UNVERIFIED** — confirm against live FFIEC 009 form |
+| C — Part I — Claims on an Immediate-Counterparty Basis | Cross-border and foreign-office claims on foreign residents by counterparty country and sector (bank / public / other), incl. the inward/outward risk-transfer (redistribution) columns | Core schedule |
+| C — Part II — Claims on a Guarantor Basis | Claims restated to the country of the guarantor / collateral (ultimate-risk basis), plus memorandum items | |
 | 1 / 1.a | Foreign-Office Liabilities by Country of Foreign Office and by Country of Creditor | Liabilities of foreign offices, with memorandum items | |
 | 2 | Derivatives and foreign-office detail | Positive fair value of derivative contracts; claims on related foreign branches with no guarantee from parent; foreign-office claims on local residents and foreign-office liabilities | |
 
@@ -306,10 +306,12 @@ See also: `FR_Y11_FOREIGN_SUBSIDIARY_GUIDE.md`.
 
 - FFIEC 002 — FFIEC: https://www.ffiec.gov/resources/reporting-forms/ffiec002 ·
   Fed index: https://www.federalreserve.gov/apps/reportingforms/Report/Index/FFIEC_002 ·
+  form facsimile (Schedule C—Loans: Part I "Loans and Leases", Part II "Loans to Small Businesses and Small Farms"): https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC002_202512_f.pdf ·
   OMB supporting statement (reginfo, objectID 144008501): https://www.reginfo.gov/public/do/DownloadDocument?objectID=144008501
 - FFIEC 002S — https://www.ffiec.gov/resources/reporting-forms/ffiec002s
 - FFIEC 009 / 009a — FFIEC: https://www.ffiec.gov/resources/reporting-forms/ffiec009 ·
   Fed index: https://www.federalreserve.gov/apps/reportingforms/Report/Index/FFIEC_009FFIEC_009a ·
+  form/instructions (Schedule C—Claims: Part I "Claims on an Immediate-Counterparty Basis", Part II "Claims on a Guarantor Basis"): https://www.ffiec.gov/sites/default/files/data/reporting-forms/ffiec009-report-form-instructions.pdf ·
   OMB supporting statement (reginfo, objectID 10141401): https://www.reginfo.gov/public/do/DownloadDocument?objectID=10141401
 - FR Y-7 — https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-7 ·
   instructions: https://www.federalreserve.gov/reportforms/forms/FR_Y-720180228_i.pdf

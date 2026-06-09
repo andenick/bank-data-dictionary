@@ -271,18 +271,18 @@ HC-D Total Trading Liabilities (BHCT3548) - Item 15
 ### Basel III Capital Cascade
 
 ```
-Total Capital (BHCFA225) = Tier 1 (BHCFA223) + Tier 2 (BHCFA224)
+Total Capital (BHCA3792) = Tier 1 (BHCA8274) + Tier 2 (BHCA5311)
                                 |                    |
                                 |                    |
                                 v                    v
 +---------------------------+  +---------------------------+
 |    TIER 1 CAPITAL         |  |    TIER 2 CAPITAL         |
-|    (BHCFA223)             |  |    (BHCFA224)             |
+|    (BHCA8274)             |  |    (BHCA5311)             |
 +---------------------------+  +---------------------------+
 |                           |  |                           |
 | CET1 (BHCAP859)           |  | T2 Instruments (BHCAP857) |
 |   |                       |  | T2 Minority Int (BHCAP858)|
-|   +-- CET1 Before Adj     |  | ACL Eligible (BHCFA224)   |
+|   +-- CET1 Before Adj     |  | ACL Eligible (BHCA5311)   |
 |   |   (BHCAP840)          |  | LESS: T2 Deductions       |
 |   |   +-- Common Stock    |  |                           |
 |   |   |   (BHCAP742)      |  +---------------------------+
@@ -323,13 +323,13 @@ Total Capital (BHCFA225) = Tier 1 (BHCFA223) + Tier 2 (BHCFA224)
 CET1 Ratio (BHCAP793)  = CET1 Capital (BHCAP859) / Total RWA (BHCAA223)
                          Minimum: 4.5%
 
-Tier 1 Ratio (BHCAP794) = Tier 1 Capital (BHCFA223) / Total RWA (BHCAA223)
+Tier 1 Ratio (BHCAP794) = Tier 1 Capital (BHCA8274) / Total RWA (BHCAA223)
                           Minimum: 6.0%
 
-Total Capital Ratio (BHCAP795) = Total Capital (BHCFA225) / Total RWA (BHCAA223)
+Total Capital Ratio (BHCAP795) = Total Capital (BHCA3792) / Total RWA (BHCAA223)
                                  Minimum: 8.0%
 
-Leverage Ratio (BHCAP796) = Tier 1 Capital (BHCFA223) / Average Total Assets
+Leverage Ratio (BHCAP796) = Tier 1 Capital (BHCA8274) / Average Total Assets
                             Minimum: 4.0%
 ```
 
@@ -510,8 +510,8 @@ Use this checklist when validating regulatory data:
 - [ ] Other Liabilities: BHCT2930 (HC.20) = BHCT2930 (HC-G.5)
 - [ ] Derivatives Pos FV: BHCT3543 = Sum(HC-L Positive FV)
 - [ ] Derivatives Neg FV: BHCT3547 = Sum(HC-L Negative FV)
-- [ ] Tier 1 Capital: BHCFA223 = BHCAP859 + BHCAP856
-- [ ] Total Capital: BHCFA225 = BHCFA223 + BHCFA224
+- [ ] Tier 1 Capital: BHCA8274 = BHCAP859 + BHCAP856
+- [ ] Total Capital: BHCA3792 = BHCA8274 + BHCA5311
 - [ ] CET1 Ratio: BHCAP793 = BHCAP859 / BHCAA223
 
 ---

@@ -6,12 +6,12 @@ F004,Derivatives Negative FV,BHCT3547,Gross Negative Fair Value Derivatives,BHCK
 F005,Trading Positive FV Only,SUM_TRADING_POS,Trading Book Derivatives Positive FV,BHCK8733|BHCK8734|BHCK8735|BHCK8736,BHCK8733 + BHCK8734 + BHCK8735 + BHCK8736,HC-L,Subtotal,Trading book portion only
 F006,Trading Negative FV Only,SUM_TRADING_NEG,Trading Book Derivatives Negative FV,BHCK8737|BHCK8738|BHCK8739|BHCK8740,BHCK8737 + BHCK8738 + BHCK8739 + BHCK8740,HC-L,Subtotal,Trading book portion only
 F007,Total Assets Check,BHCT2170,Total Assets,BHCT0081|BHCT1773|BHCTJJ34|BHCTB528|BHCT3545|BHCT3163|BHCTC752|BHCT2160,Sum of all asset line items,HC,Balance,Schedule HC balance sheet
-F008,Tier 1 Capital,BHCFA223,Tier 1 Capital,BHCAP859|BHCAA227,CET1 + Additional Tier 1,HC-R,Capital,Basel III Tier 1 = CET1 + AT1
-F009,Total Capital,BHCFA225,Total Risk-Based Capital,BHCFA223|BHCFA224,Tier 1 + Tier 2,HC-R,Capital,Basel III Total = Tier 1 + Tier 2
+F008,Tier 1 Capital,BHCA8274,Tier 1 Capital,BHCAP859|BHCAA227,CET1 + Additional Tier 1,HC-R,Capital,Basel III Tier 1 = CET1 + AT1
+F009,Total Capital,BHCA3792,Total Risk-Based Capital,BHCA8274|BHCA5311,Tier 1 + Tier 2,HC-R,Capital,Basel III Total = Tier 1 + Tier 2
 F010,CET1 Ratio,CET1_RATIO,Common Equity Tier 1 Ratio,BHCAP859|BHCAA223,BHCAP859 / BHCAA223,HC-R,Ratio,CET1 Capital / RWA
-F011,Tier 1 Ratio,T1_RATIO,Tier 1 Capital Ratio,BHCFA223|BHCAA223,BHCFA223 / BHCAA223,HC-R,Ratio,Tier 1 Capital / RWA
-F012,Total Capital Ratio,TC_RATIO,Total Capital Ratio,BHCFA225|BHCAA223,BHCFA225 / BHCAA223,HC-R,Ratio,Total Capital / RWA
-F013,Leverage Ratio,LEV_RATIO,Tier 1 Leverage Ratio,BHCFA223|BHCT2170,BHCFA223 / BHCT2170,HC-R/HC,Ratio,Tier 1 / Total Assets (simplified)
+F011,Tier 1 Ratio,T1_RATIO,Tier 1 Capital Ratio,BHCA8274|BHCAA223,BHCA8274 / BHCAA223,HC-R,Ratio,Tier 1 Capital / RWA
+F012,Total Capital Ratio,TC_RATIO,Total Capital Ratio,BHCA3792|BHCAA223,BHCA3792 / BHCAA223,HC-R,Ratio,Total Capital / RWA
+F013,Leverage Ratio,LEV_RATIO,Tier 1 Leverage Ratio,BHCA8274|BHCT2170,BHCA8274 / BHCT2170,HC-R/HC,Ratio,Tier 1 / Total Assets (simplified)
 F014,MBS Total,MBS_TRADING,Total MBS Trading Assets,BHCKK197|BHCKK198|BHCKK199|BHCKK200|BHCKK201,K197 + K198 + K199 + K200 + K201,HC-D,Subtotal,All MBS trading assets
 F015,Loans Trading Total,LOANS_TRADING,Total Loans Trading Assets,BHCKHT63|BHCKHT64|BHCKF614|BHCKHT65|BHCKF618,Sum of loan Items 6.a-6.e,HC-D,Subtotal,All loans in trading book
 F016,Short Positions Total,SHORT_TOTAL,Total Short Positions,BHCKG209|BHCKG210|BHCKG211,G209 + G210 + G211,HC-D,Subtotal,All short position types

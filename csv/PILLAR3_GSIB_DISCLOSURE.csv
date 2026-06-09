@@ -1,5 +1,5 @@
 template,template_name,category,description,frequency,key_metrics,cross_form_reference,data_type,notes
-KM1,Key Metrics,Overview,Summary capital and liquidity ratios,Quarterly,"CET1 ratio, Tier 1 ratio, Total capital ratio, Leverage ratio, LCR, NSFR",HC-R (BHCAP859/BHCFA223/BHCFA225),Ratios,Primary summary template
+KM1,Key Metrics,Overview,Summary capital and liquidity ratios,Quarterly,"CET1 ratio, Tier 1 ratio, Total capital ratio, Leverage ratio, LCR, NSFR",HC-R (BHCAP859/BHCA8274/BHCA3792),Ratios,Primary summary template
 KM2,Key Metrics - TLAC,Overview,TLAC metrics for G-SIBs,Quarterly,"TLAC amount, TLAC ratio, TLAC leverage ratio",FR Y-15 Schedule H,Ratios,G-SIB only
 OV1,Overview of RWA,Overview,RWA by risk category,Quarterly,"Credit RWA, Market RWA, OpRisk RWA, Total RWA",HC-R Part II (BHCAA223),Currency,
 LI1,Accounting vs Regulatory Scope,Linkages,Differences between GAAP and regulatory consolidation,Annual,Consolidation adjustments,-,Mixed,
