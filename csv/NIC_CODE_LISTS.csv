@@ -1,0 +1,275 @@
+code_list,code,value_label,notes
+BHC_IND,0,N/A,
+BHC_IND,1,Entity is a BHC,
+BHC_IND,2,Not a BHC but directly/indirectly controls a grandfathered non-bank bank,
+FHC_IND,0,N/A,
+FHC_IND,1,Entity is an FHC,
+FHC_IND,2,Entity is an SLHC designated an FHC,
+SLHC_IND,0,N/A,Also applies to rows with DT_START<20110721
+SLHC_IND,1,Entity is a savings & loan holding company,Eff. 2011-07-21; entity controlling both banks & thrifts is a BHC not SLHC
+IHC_IND,0,N/A,
+IHC_IND,1,Entity is an IHC,
+FBO_4C9_IND,,FBO exemption from non-bank activity restrictions (BHC 4(c)9 / Reg K 211.23),"UNVERIFIED: digest describes the indicator but does not enumerate discrete 0/1 code values; eligible if (disregarding U.S. banking) >half of worldwide business is banking and >half of banking business is outside the U.S."
+BNK_TYPE_ANALYS_CD,0,N/A,
+BNK_TYPE_ANALYS_CD,1,Bankers bank subject to reserve requirements,
+BNK_TYPE_ANALYS_CD,2,Bankers bank NOT subject to reserve requirements,
+BNK_TYPE_ANALYS_CD,3,Grandfathered non-bank bank,
+BNK_TYPE_ANALYS_CD,4,Primarily credit-card activities,
+BNK_TYPE_ANALYS_CD,5,Wholesale bank (commercial bank charter),
+BNK_TYPE_ANALYS_CD,6,Standalone Internet Bank (SAIB),
+BNK_TYPE_ANALYS_CD,7,Workout entity,
+BNK_TYPE_ANALYS_CD,8,Depository Institution National Bank (DINB),
+BNK_TYPE_ANALYS_CD,9,Depository trust company,
+BNK_TYPE_ANALYS_CD,10,Bridge entity,
+BNK_TYPE_ANALYS_CD,11,Banking Edge or Agreement Corp,
+BNK_TYPE_ANALYS_CD,12,Investment Edge or Agreement Corp,
+BNK_TYPE_ANALYS_CD,13,Data processing services,
+BNK_TYPE_ANALYS_CD,14,Trust preferred securities subsidiary,
+BNK_TYPE_ANALYS_CD,15,Cash management banks,
+BNK_TYPE_ANALYS_CD,16,Farm credit system institution,
+BNK_TYPE_ANALYS_CD,17,10L Election (state savings bank deemed savings assoc under HOLA 10(l)),
+BNK_TYPE_ANALYS_CD,18,Grandfathered SLHC,
+BNK_TYPE_ANALYS_CD,19,Securities Holding Company,
+BNK_TYPE_ANALYS_CD,20,Designated Financial Market Utility,
+BROAD_REG_CD,0,N/A (branches/non-head-office),
+BROAD_REG_CD,1,Banks per BHC Act/Reg Y,"Full statutory bank definition NPW PDF pp.7-8; excludes foreign banks, certain savings assocs, trust-only, limited credit-card banks, private banks, deposit-or-loan-only, Edge/Agreement, credit unions"
+BROAD_REG_CD,2,Other depository institution,"Accepts deposits per FRA 19(b)(1)(A) / Reg D 204.2 (m,n,o,p)"
+BROAD_REG_CD,3,Non-depository institution,
+BROAD_REG_CD,4,Inactive institution,
+CHTR_AUTH_CD,0,N/A,"Non-U.S. chartered by non-U.S. authorities, pseudo entities, non-banking charter types"
+CHTR_AUTH_CD,1,Federal (National),
+CHTR_AUTH_CD,2,State (or equivalent),
+CHTR_TYPE_CD,0,Not available/N/A (branches),
+CHTR_TYPE_CD,110,Government Agency / GSE,e.g. farm credit banks
+CHTR_TYPE_CD,200,Commercial Bank,"Incl. depository trust cos, credit-card cos w/ commercial bank charters, private banks, development banks, limited-charter banks (BNK_TYPE_ANALYS_CD 4,5), foreign banks"
+CHTR_TYPE_CD,250,Non-deposit Trust Company,
+CHTR_TYPE_CD,300,Savings Bank,
+CHTR_TYPE_CD,310,Savings & Loan Association,
+CHTR_TYPE_CD,320,Cooperative Bank,
+CHTR_TYPE_CD,330,Credit Union,Excl. corporate credit union
+CHTR_TYPE_CD,340,Industrial Bank,Incl. industrial loan cos & Morris Plan banks
+CHTR_TYPE_CD,400,Edge or Agreement Corporation,
+CHTR_TYPE_CD,500,Holding Company only,Not itself any other charter type; not necessarily a BHC
+CHTR_TYPE_CD,550,Insurance Broker/Agent and/or Insurance Company,Incl. underwriting
+CHTR_TYPE_CD,610,Employee Stock Ownership Plan/Trust (ESOP/ESOT),
+CHTR_TYPE_CD,700,Securities Broker and/or Dealer,Incl. underwriting
+CHTR_TYPE_CD,710,Utility Company or Electric Power Co-generator,
+CHTR_TYPE_CD,720,Other Non-Depository Institution,Incl. credit-card cos w/o commercial bank charters
+CNSRVTR_CD,0,N/A,
+CNSRVTR_CD,1,In conservatorship - RTC,Not valid after 19951231
+CNSRVTR_CD,2,OCC,
+CNSRVTR_CD,3,FDIC,
+CNSRVTR_CD,4,STATE,
+CNSRVTR_CD,5,NCUA,
+EST_TYPE_CD,1,Headquarters (head office),
+EST_TYPE_CD,2,Full service branch / regional office of regulatory agency,"Excl. 8,9"
+EST_TYPE_CD,3,Limited service branch,"Excl. 8,9"
+EST_TYPE_CD,5,Agency,"Excl. 8,9"
+EST_TYPE_CD,6,Back office money operation (non-deposit-taking),
+EST_TYPE_CD,7,Military facility,
+EST_TYPE_CD,8,Super agency (state-licensed full-service branch under IBA),
+EST_TYPE_CD,9,"Limited super agency (state-licensed limited branch under IBA, international business only)",
+EST_TYPE_CD,11,Check processing center,
+EST_TYPE_CD,12,Other branch/non-independent facility (non-deposit),
+EST_TYPE_CD,13,Loan production office,
+EST_TYPE_CD,14,Representative office of a foreign bank,
+EST_TYPE_CD,15,Non-U.S. branch managed/controlled by a U.S. branch/agency of a foreign bank,
+EST_TYPE_CD,16,Non-U.S. branch managed by >1 U.S. branch/agency of a foreign bank,"FFIEC 002s pseudo branch, ""002s Reporter"" suffix"
+EST_TYPE_CD,17,Office/division/branch of a non-bank entity,e.g. DPS non-bank head offices
+EST_TYPE_CD,18,"Trust (trust-only, no deposits)",
+EST_TYPE_CD,19,Electronic Banking,Remote phone/PC/website facility
+ENTITY_TYPE,AGB,Agreement Corp - Banking,
+ENTITY_TYPE,AGI,Agreement Corp - Investment,
+ENTITY_TYPE,BHC,Bank Holding Company,
+ENTITY_TYPE,CPB,Cooperative Bank,
+ENTITY_TYPE,CSA,Covered Savings Institution,
+ENTITY_TYPE,DBR,Domestic Branch of a Domestic Bank,
+ENTITY_TYPE,DEO,Domestic Entity Other,
+ENTITY_TYPE,DPS,Data Processing Servicer,
+ENTITY_TYPE,EBR,Edge Corp - Domestic Branch,
+ENTITY_TYPE,EDB,Edge Corp - Banking,
+ENTITY_TYPE,EDI,Edge Corp - Investment,
+ENTITY_TYPE,FBH,Foreign Banking Organization as a BHC,
+ENTITY_TYPE,FBK,Foreign Bank,
+ENTITY_TYPE,FBO,Foreign Banking Organization,
+ENTITY_TYPE,FCU,Federal Credit Union,
+ENTITY_TYPE,FEO,Foreign Entity Other,
+ENTITY_TYPE,FHD,Financial Holding Company / BHC (domestic or foreign-domiciled),
+ENTITY_TYPE,FHF,Financial Holding Company / FBO,
+ENTITY_TYPE,FNC,Finance Company,
+ENTITY_TYPE,FSB,Federal Savings Bank,
+ENTITY_TYPE,IBK,International Bank of a U.S. Depository (Edge or Trust Co.),
+ENTITY_TYPE,IBR,Foreign Branch of a U.S. Bank,
+ENTITY_TYPE,IHC,Intermediate Holding Company,
+ENTITY_TYPE,IFB,Insured Federal Branch of an FBO,
+ENTITY_TYPE,INB,International Non-bank Subs of Domestic Entities,
+ENTITY_TYPE,ISB,Insured State Branch of an FBO,
+ENTITY_TYPE,MTC,Non-deposit Trust Company - Member,
+ENTITY_TYPE,NAT,National Bank,
+ENTITY_TYPE,NMB,Non-member Bank,
+ENTITY_TYPE,NTC,Non-deposit Trust Company - Non-member,
+ENTITY_TYPE,NYI,New York Investment Company,
+ENTITY_TYPE,PST,Non-U.S. Branch managed by a U.S. Branch/Agency of a Foreign Bank for 002's reporting (Pseudo Twig),
+ENTITY_TYPE,REP,Representative Office,
+ENTITY_TYPE,SAL,Savings & Loan Association,
+ENTITY_TYPE,SBD,Securities Broker / Dealer,
+ENTITY_TYPE,SCU,State Credit Union,
+ENTITY_TYPE,SLHC,Savings & Loan Holding Company,
+ENTITY_TYPE,SMB,State Member Bank,
+ENTITY_TYPE,SSB,State Savings Bank,
+ENTITY_TYPE,TWG,Non-U.S. Branch managed by a U.S. Branch/Agency of a Foreign Bank - TWIG,
+ENTITY_TYPE,UFA,Uninsured Federal Agency of an FBO,
+ENTITY_TYPE,UFB,Uninsured Federal Branch of an FBO,
+ENTITY_TYPE,USA,Uninsured State Agency of an FBO,
+ENTITY_TYPE,USB,Uninsured State Branch of an FBO,
+FUNC_REG,0,N/A,
+FUNC_REG,1,SEC/CFTC (both),
+FUNC_REG,2,SEC,
+FUNC_REG,3,State Securities Department,
+FUNC_REG,4,State Insurance Regulator,
+FUNC_REG,5,CFTC,
+FUNC_REG,6,Other,
+FNCL_SUB_HOLDER,0,N/A,
+FNCL_SUB_HOLDER,1,Holds >=1 financial subsidiary,
+FNCL_SUB_HOLDER,2,Other,
+FNCL_SUB_IND,0,N/A,
+FNCL_SUB_IND,1,Conducting expanded financial-in-nature activities,
+FNCL_SUB_IND,2,Other,
+IBF_IND,0,Does not operate an IBF,
+IBF_IND,1,Operates an IBF,Earliest DT_START 19811203
+INSUR_PRI_CD,0,N/A or not insured,
+INSUR_PRI_CD,1,FDIC/BIF (Bank Insurance Fund),Pre-1989-08-09 meant FDIC; not valid after 20060330
+INSUR_PRI_CD,2,FDIC/SAIF (Savings Assoc Insurance Fund),Pre-1989-08-09 meant FSLIC; not valid after 20060330
+INSUR_PRI_CD,3,NCUSIF (Nat'l Credit Union Share Insurance Fund),Eff. 19710104
+INSUR_PRI_CD,4,State,
+INSUR_PRI_CD,5,Other,
+INSUR_PRI_CD,6,FDIC/BIF and FDIC/SAIF,Eff. 1989-08-09; not valid after 20060330
+INSUR_PRI_CD,7,DIF (Deposit Insurance Fund),FDIC merged BIF+SAIF; not valid before 20060331
+MBR_FHLBS_IND,0,N/A/non-member,
+MBR_FHLBS_IND,1,Member,
+MBR_FRS_IND,0,N/A/non-member,
+MBR_FRS_IND,1,Member,
+MJR_OWN_MNRTY,0,N/A,
+MJR_OWN_MNRTY,1,African American,
+MJR_OWN_MNRTY,5,Caucasian Women,
+MJR_OWN_MNRTY,10,Hispanic,
+MJR_OWN_MNRTY,20,Asian American,
+MJR_OWN_MNRTY,30,Native American,
+MJR_OWN_MNRTY,35,Eskimo,
+MJR_OWN_MNRTY,37,Aleuts,
+MJR_OWN_MNRTY,39,Low Income Credit Union,
+MJR_OWN_MNRTY,99,Other Minorities,
+ORG_TYPE_CD,0,N/A (branches),
+ORG_TYPE_CD,1,Corporation (stock),
+ORG_TYPE_CD,2,General Partnership,
+ORG_TYPE_CD,3,Limited Partnership,
+ORG_TYPE_CD,4,Business Trust (fiduciary),
+ORG_TYPE_CD,5,Sole Proprietorship,
+ORG_TYPE_CD,6,Mutual,
+ORG_TYPE_CD,9,Cooperative,
+ORG_TYPE_CD,10,LLP,
+ORG_TYPE_CD,11,LLC/C,
+ORG_TYPE_CD,12,Estate Trust,
+ORG_TYPE_CD,13,Limited Liability Limited Partnership,
+ORG_TYPE_CD,99,Other,
+PRIM_FED_REG,FCA,Farm Credit Administration,
+PRIM_FED_REG,FDIC,Federal Deposit Insurance Corporation,
+PRIM_FED_REG,FHFA,Federal Housing Finance Agency,
+PRIM_FED_REG,FRS,Federal Reserve System,
+PRIM_FED_REG,NCUA,National Credit Union Administration,
+PRIM_FED_REG,OCC,Office of the Comptroller of the Currency,
+PRIM_FED_REG,OTS,Office of Thrift Supervision,Only valid until 2011-07-21
+REASON_TERM_CD,0,N/A or entity continues to exist,"Non-failure; in a merger entity continues under same ID_RSSD (incl. head office->branch)"
+REASON_TERM_CD,1,Voluntary liquidation,Non-failure; no merger/failure; no Transformations row
+REASON_TERM_CD,2,Closure,"Non-failure; head office closes, does not continue after a merger; branches may continue under a new head office; Transformation row should be present"
+REASON_TERM_CD,3,Entity inactive or no longer FRS-regulated,Non-failure
+REASON_TERM_CD,4,Failure - entity continues to exist,Resolution by FDIC/RTC/NCUA/State/other; no Transformation row
+REASON_TERM_CD,5,Failure - entity ceases to exist,Resolution by FDIC/RTC/NCUA/State/other; Transformation row may or may not be present
+SEC_RPTG_STATUS,0,N/A,
+SEC_RPTG_STATUS,1,Registered with the SEC,Not valid after 20051231
+SEC_RPTG_STATUS,2,Not registered with the SEC,
+SEC_RPTG_STATUS,3,Subject to 13(a)/15(d) of '34 Act AND 404 of Sarbanes-Oxley,Eff. 20051231
+SEC_RPTG_STATUS,4,Subject to 13(a)/15(d) of '34 Act and NOT 404 SOX,Eff. 20051231
+SEC_RPTG_STATUS,5,Terminated/suspended reporting requirements under 13(a)/15(d) of '34 Act,Eff. 20051231
+SLHC_TYPE_IND,0,N/A,"Not SLHC, or rows DT_START<20110721"
+SLHC_TYPE_IND,1,HOLA Mutual Holding Company holding a savings bank that made a 10L election,
+SLHC_TYPE_IND,2,HOLA Stock Holding Company holding a savings bank that made a 10L election,
+SLHC_TYPE_IND,3,Mutual Holding Company (non-HOLA) holding a savings association,
+SLHC_TYPE_IND,4,Stock Holding Company (non-HOLA) holding a savings association,
+SLHC_TYPE_IND,5,Trust (family or estate) Holding Company,
+DIST_FRS,0,N/A,Shared map used by both DIST_FRS (physical) and AUTH_REG_DIST_FRS (regulatory)
+DIST_FRS,01,Boston,
+DIST_FRS,02,New York,
+DIST_FRS,03,Philadelphia,
+DIST_FRS,04,Cleveland,
+DIST_FRS,05,Richmond,
+DIST_FRS,06,Atlanta,
+DIST_FRS,07,Chicago,
+DIST_FRS,08,St. Louis,
+DIST_FRS,09,Minneapolis,
+DIST_FRS,10,Kansas City,
+DIST_FRS,11,Dallas,
+DIST_FRS,12,San Francisco,
+DOMESTIC_IND,N,Not U.S.,
+DOMESTIC_IND,Y,U.S.,
+CTRL_IND,0,N/A,
+CTRL_IND,1,Controlled,"When REG_IND=1: legal authority (>=25% voting securities, control over majority of directors/general partners, or controlling influence per Reg Y 225.2(e)/12 CFR 574); when REG_IND=2: by ownership % or FRS determination"
+CTRL_IND,2,Non-controlled,
+EQUITY_IND,0,Other basis of control (voting equity not the basis),
+EQUITY_IND,1,"Ownership/control is in a BHC, SLHC, bank or FBO",Exact % reported
+EQUITY_IND,2,Ownership/control is in a non-banking company,% reported as bracket
+FC_IND,0,N/A,
+FC_IND,1,Yes,Company consolidated in reporter's financials
+FC_IND,2,No,
+OTHER_BASIS_IND,0,Other is not a basis,
+OTHER_BASIS_IND,1,Other basis of ownership/control (non-voting),"e.g. management contract, election of majority of directors, fiduciary"
+OTHER_BASIS_IND,2,Non-voting equity,
+OTHER_BASIS_IND,3,Voting securities in a merchant banking/insurance company investment,
+OTHER_BASIS_IND,4,Subordinated debt,
+OTHER_BASIS_IND,5,Limited partnership,
+OTHER_BASIS_IND,6,Subordinated debt and non-voting equity,
+OTHER_BASIS_IND,7,Subordinated debt and limited partnership,
+OTHER_BASIS_IND,8,Assets (interest in merchant-banking/insurance investment is in assets),
+OTHER_BASIS_IND,9,Total equity in a merchant-banking/insurance company investment,
+PCT_EQUITY_BRACKET,100*,100 percent,*100 bracket separated 2007-06-30; pre-2007 the bracket was 80-100
+PCT_EQUITY_BRACKET,80 - <100,80 to under 100 percent,
+PCT_EQUITY_BRACKET,>50 - <80,Over 50 to under 80 percent,
+PCT_EQUITY_BRACKET,25 - 50,25 to 50 percent,
+PCT_EQUITY_BRACKET,< 25,Under 25 percent,
+PCT_EQUITY_BRACKET,0,Zero / N/A,
+PCT_EQUITY_FORMAT,Other,EQUITY_IND=0,
+PCT_EQUITY_FORMAT,Exact,EQUITY_IND=1,
+PCT_EQUITY_FORMAT,Bracket,EQUITY_IND=2,
+REASON_ROW_CRTD,1,Initial relationship record,
+REASON_ROW_CRTD,2,Increase/decrease in voting rights,Incl. non-participation in capital increase
+REASON_ROW_CRTD,3,Reestablishment of a relationship,Reacquisition/resumed reportability
+REASON_ROW_CRTD,4,Change in basis for relationship or change in relationship,
+REASON_ROW_CRTD,5,Change in Control Indicator,
+REASON_ROW_CRTD,6,Change in Regulatory Indicator,
+REASON_ROW_CRTD,7,Change in Regulatory Indicator along with reasons 2 and/or 4,
+REASON_ROW_CRTD,8,Other,
+REASON_TERM_RELN,0,N/A (ongoing),
+REASON_TERM_RELN,1,Termination for reasons other than 2-6 with no remaining basis,Also termination of indirect records when only one/no parent continues
+REASON_TERM_RELN,2,Parent terminates by selling/transferring all control,Also if Parent merged into another & Offspring not simultaneously merged
+REASON_TERM_RELN,3,Relationship terminated because Offspring liquidated or merged,Also if both simultaneously merged into survivors
+REASON_TERM_RELN,4,Termination of regulation because Offspring control criteria fell below reportable level,
+REASON_TERM_RELN,5,Termination of regulation because Parent ceased to be controlled/reportable,
+REASON_TERM_RELN,6,Termination of regulation due to change in regulatory reporting criteria,
+REG_IND,1,Regulated,
+REG_IND,2,Unregulated,"Never/not yet/no longer governed by U.S. banking statutes but with FRS supervisory interest: SLHCs not also BHCs; sub-5% relationships; pre-1956 BHCs & 1970 amendments by bank count; foreign central banks & jointly-acting foreign owners"
+REGK_INV,0,N/A,
+REGK_INV,1,Portfolio Investment (neither JV nor subsidiary),
+REGK_INV,2,Joint Venture,FR Y-10 reporter holds 20-50% of non-banking co's voting shares
+REGK_INV,3,Subsidiary,>50% voting / general partner / >50% equity / otherwise controls; not valid before 20040601
+RELN_LVL,1,Direct relationship,Parent = immediate holder; Offspring = owned/controlled
+RELN_LVL,2,Indirect relationship,Intervening controlled/regulated company; ties Offspring to overall regulated position of the top-tier U.S. BHC or FBO
+RELN_LVL,3,2G3 relationship,"BHCA 2(g)(3): control continued when BHC transfers shares to an indebted individual/company, or common officers/directors/trustees/beneficiaries; 2(g)(3) repealed 1996-09-30, no longer reportable"
+RELN_LVL,4,Debt Previously Contracted (DPC) relationship,"Parent acquired Offspring and must divest; BHC 3 Exemption A(ii), BHC 4(c)2, Reg K 211.5(e); not valid after 2001-08-31 except banks/BHCs holding DPC"
+ACCT_METHOD,0,N/A,
+ACCT_METHOD,1,Pooling of interests or entities under common control,Assets/liabilities/capital added line-by-line at book value; income combined
+ACCT_METHOD,2,Purchase/Acquisition,"One entity buys some/all assets & assumes some/all liabilities; income NOT combined; recorded at market value; applies when survivor CHTR_TYPE_CD is 200/250/340"
+TRNSFM_CD,1,Charter Discontinued (Merger or Purchase & Assumption),"Predecessor transfers assets to Successor(s), ceases as head office, one charter discontinued; no failure, no gov't assistance"
+TRNSFM_CD,5,Split,Predecessor transfers 40-94% of assets to newly-formed Successor(s); both continue; no failure
+TRNSFM_CD,7,Sale of Assets,Predecessor transfers 40-94% of assets to existing Successor(s); both continue; no failure
+TRNSFM_CD,9,Charter Retained (Merger or P&A),Predecessor transfers >=95% of assets; charter continues and a new ID_RSSD is assigned; no failure
+TRNSFM_CD,50,Failure - Government Assistance Provided,Predecessor fails and ceases; disposition arranged by FDIC/RTC/NCUA/other; assets may be distributed

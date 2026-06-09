@@ -1,22 +1,85 @@
-# MDRM Code Verification Report
+# Verification Report
 
-**Repository**: github.com/andenick/bank-data-dictionary
-**Verification Date**: 2026-01-28
-**Total Codes Verified**: 100
-**Source**: Federal Reserve MDRM Data Dictionary (https://www.federalreserve.gov/apps/mdrm/data-dictionary)
+> **Version 6.0 | 2026-06-09** — verification gate for the v6.0 rebuild.
+> **Repository**: github.com/andenick/bank-data-dictionary
+> Supersedes the v5.0 MDRM-code report (2026-01-28), whose per-code tables are retained below.
 
 ---
 
-## Executive Summary
+## v6.0 rebuild — what was verified this round
 
-This report documents the verification of 100 MDRM codes in the `MDRM_MASTER_COMPLETE.csv` against official Federal Reserve MDRM Data Dictionary definitions. The verification covers:
+The v6.0 rebuild expanded the repo from an FR Y-9C-centric reference into a full collections + sub-schedule catalogue (42 collections, 265 enumerated schedules/templates) plus a NIC entity layer, identifier semantics, and a larger MDRM/namespace catalogue. This section records the verification performed on that rebuild; the original 100-code MDRM verification follows unchanged from §"Detailed Verification Results" onward (with the two line-item fixes applied).
 
-- **Prefix Validity**: Ensuring MDRM prefixes follow standard conventions
-- **Code Format**: Verifying 4-character alphanumeric identifiers
-- **Schedule Assignment**: Confirming codes map to correct FR Y-9C schedules
-- **Line Item Accuracy**: Validating line numbers match official form instructions
-- **Date Ranges**: Checking effective/end dates are accurate
-- **Description Accuracy**: Comparing descriptions against official definitions
+### Mechanical validation (PASS)
+
+`_rebuild/validate.py` re-run after edits: **csv_problems=0, json_problems=0, broken_links=0**. All 47 CSVs parse with consistent column counts; all 6 JSON files parse; all internal markdown links resolve.
+
+### Count reconciliations (PASS)
+
+| Check | Result |
+|-------|--------|
+| Call Report schedules — distinct lettered | **27 / 24 / 19** (031 / 041 / 051) |
+| Call Report schedules — catalog part-rows | **30 / 27 / 22** (= distinct + 3 split Part I/II rows: RI-B, RC-C, RC-R) |
+| Pillar 3 templates/tables in `SCHEDULES_CATALOG.csv` | **77** (no invented, no duplicate ids) |
+| `collections.json` Pillar 3 `schedule_count` | **77** (matches CSV) |
+
+The +3 Call Report gap is fully explained by Part I/II granularity — **no invented schedules**. A clarifying note was added to both `CALL_REPORT_GUIDE.md` and `COLLECTIONS_CATALOG.md`.
+
+### Pillar 3 audit against BCBS DIS / d455 (PASS)
+
+All 77 ids map to genuine Basel disclosure templates/tables. Two ids that looked suspicious were adversarially checked and **confirmed real**: **CDC** = "Capital distribution constraints"; **CRB-A** = "Additional disclosure: prudential treatment of problem assets". **MR4** is the legacy pre-FRTB VaR-backtesting template, retained for the transition period and noted as a version-variant. No removals were warranted; the "~55" figure in some summaries counts only quantitative templates or one framework vintage.
+
+### Line-item fixes applied to `MDRM_MASTER_COMPLETE.csv`
+
+| Concept | Field | Was | Now | Basis |
+|---------|-------|-----|-----|-------|
+| RWA (BHCAA223) | y9c & call line | Part II-26 | **Part II-31** | RC-R/HC-R Part II item 31 = Total RWA (FDIC RC-R Part II, FR Y-9C HC-R) |
+| TOTAL_DEPOSITS (BHCM2200) | y9c & call line | 13 | **13.a** | item 13.a = deposits in domestic offices (13.b = foreign) |
+| NET_INCOME (BHCT4340) | HI / RI line | 14 | **14 (unchanged)** | RIAD4340 "must equal Schedule RI item 14" — the v5.0 "should be item 12" recommendation is **REFUTED** |
+
+### BHCK correction (applied in v6.0 content)
+
+The legacy `MDRM_PREFIX_DEFINITIONS.csv` labelled **BHCK** as "domestic operations only". The FR Y-9C heads its **consolidated** statements with BHCK (BHDM = domestic-only). v6.0 docs treat **BHCK = consolidated**; see `COLLECTIONS_CATALOG.md` repo-correction note. (The legacy per-prefix-count table later in this report still carries the old "domestic" wording and is left as a historical artifact.)
+
+### Adversarial spot-check (14 facts, all CONFIRMED)
+
+| # | Claim | Verdict | Source |
+|---|-------|---------|--------|
+| 1 | FR Y-11 OMB = 7100-0244 | CONFIRMED (form PDF header; note: 2025 migration toward 7100-0073) | federalreserve.gov FR_Y-11 form |
+| 2 | FFIEC 002 OMB = 7100-0032 | CONFIRMED (002 & 002S) | reginfo.gov / ffiec.gov |
+| 3 | FR Y-10 OMB = 7100-0297 | CONFIRMED | federalreserve.gov FR_Y-10 form |
+| 4 | FFIEC 101 has Schedules A–S | CONFIRMED | ffiec.gov FFIEC101 instructions |
+| 5 | FR Y-15 has Schedules A–G | CONFIRMED | federalreserve.gov FR Y-15 instructions |
+| 6 | Pillar 3 CDC is a real template | CONFIRMED | bis.org d455 (Capital distribution constraints) |
+| 7 | Pillar 3 CRB-A is a real table | CONFIRMED | bis.org d455 (problem-assets disclosure) |
+| 8 | RWA = HC-R/RC-R Part II item 31 | CONFIRMED | fdic.gov RC-R Part II |
+| 9 | RIAD4340 = RI item 14 (not 12) | CONFIRMED — refutes the v5.0 defect claim | fdic.gov RI instructions |
+| 10 | HC/RC deposits 13.a = domestic offices | CONFIRMED | federalreserve.gov FR Y-9C HC |
+| 11 | NIC ENTITY_TYPE BHC/FBK/NAT/SMB | CONFIRMED | ffiec.gov NPW Data Dictionary |
+| 12 | BHCK = consolidated (FR Y-9C) | CONFIRMED | FR Y-9C user guide / MDRM |
+| 13 | FR Y-9C carries HI-A/HI-B/HC-E/HC-I/HC-M/HC-P/HC-V | CONFIRMED | FR Y-9C form (22-schedule set) |
+| 14 | NIC TRNSFM_CD (charter-discontinued / failure codes) | CONFIRMED | ffiec.gov NPW Data Dictionary |
+
+### Known limitations / UNVERIFIED items (carried forward)
+
+- Pillar 3 **TLAC1/TLAC2/TLAC3** — US-jurisdiction inclusion UNVERIFIED.
+- Pillar 3 rows cite `d455.pdf` as the source for all 77, though some predate d455 (d309/d356) — a provenance simplification, not an error.
+- **FFIEC 101** Schedules H/I/J (counterparty/netting) and retail M/N exact titles UNVERIFIED.
+- **FR 2052a** supplemental table S.L label UNVERIFIED.
+- **FFIEC 002 / 009** Schedule C Part II exact titles UNVERIFIED.
+- **FR Y-9ES** asset cutoff; **FR Y-9CS** schedule structure UNVERIFIED.
+- Call Report **RC-R** RCOA-vs-RCFA per-line column assignment not line-confirmed.
+- FFIEC 031/041/051, UBPR, FDIC/NCUA/OCC/SEC/HMDA OMB numbers shown n/a (not stated in sources).
+- MDRM "~87,000 codes" is an order-of-magnitude estimate; SEC↔RSSD crosswalk not officially published.
+
+---
+
+## Legacy MDRM Code Verification (v5.0, 2026-01-28)
+
+*The following is the original 100-code MDRM verification, retained for provenance. The RWA and TOTAL_DEPOSITS line-item references have been corrected in the CSV per the v6.0 fixes above; the NET_INCOME "should be item 12" recommendation has been refuted (correct value is item 14).*
+
+**Total Codes Verified**: 100
+**Source**: Federal Reserve MDRM Data Dictionary (https://www.federalreserve.gov/apps/mdrm/data-dictionary)
 
 ### Verification Results Summary
 
@@ -183,7 +246,7 @@ This report documents the verification of 100 MDRM codes in the `MDRM_MASTER_COM
 |------------|-----------|----------|------|--------|-------|
 | TOTAL_ASSETS | BHCT2170 | HC | 12 | **VERIFIED** | Total consolidated assets |
 | TOTAL_EQUITY | BHCT3210 | HC | 28 | **VERIFIED** | Total equity capital |
-| TOTAL_DEPOSITS | BHCM2200 | HC | 13 | **MINOR** | Line should be 13.a for domestic deposits |
+| TOTAL_DEPOSITS | BHCM2200 | HC | 13.a | **FIXED (v6.0)** | corrected from 13 → 13.a (deposits in domestic offices) |
 | LOANS_NET | BHCTB528 | HC | 4.b | **VERIFIED** | Net loans and leases |
 | CASH_BALANCES | BHCT0081 | HC | 1 | **VERIFIED** | Cash and balances due |
 | FED_FUNDS_SOLD | BHCTB987 | HC | 3 | **VERIFIED** | Fed funds sold and reverse repos |
@@ -206,7 +269,7 @@ This report documents the verification of 100 MDRM codes in the `MDRM_MASTER_COM
 | TIER1_CAPITAL | BHCFA223 | HC-R | Part I-32 | **MINOR** | Line number format differs from current instructions |
 | TIER2_CAPITAL | BHCFA224 | HC-R | Part I-34 | **MINOR** | Line number format differs from current instructions |
 | TOTAL_CAPITAL | BHCFA225 | HC-R | Part I-35 | **VERIFIED** | Total risk-based capital |
-| RWA | BHCAA223 | HC-R | Part II-26 | **UPDATE** | Current line is Part II Item 31 |
+| RWA | BHCAA223 | HC-R | Part II-31 | **FIXED (v6.0)** | corrected from Part II-26 → Part II item 31 (Total RWA) |
 | CET1_CAPITAL | BHCAP859 | HC-R | Part I-31 | **VERIFIED** | CET1 capital |
 
 **Note on HC-R**: Schedule HC-R underwent significant restructuring with Basel III implementation. Line numbers should be verified against current FR Y-9C instructions (March 2024 version).
@@ -226,13 +289,13 @@ This report documents the verification of 100 MDRM codes in the `MDRM_MASTER_COM
 
 | Concept ID | MDRM Code | Schedule | Line | Status | Notes |
 |------------|-----------|----------|------|--------|-------|
-| NET_INCOME | BHCT4340 | HI | 14 | **UPDATE** | Current line is HI Item 12 |
+| NET_INCOME | BHCT4340 | HI | 14 | **VERIFIED** | RIAD4340 "must equal Schedule RI item 14"; the v5.0 "item 12" claim is refuted (item 12 = pre-NCI-split aggregate, code G104) |
 | PROVISION_LLP | BHCT4230 | HI | 4 | **VERIFIED** | Provision for loan losses |
 | INTEREST_INCOME_LOANS | BHCK4010 | HI | 1.a | **VERIFIED** | Interest income on loans |
 | INTEREST_EXPENSE_DEPOSITS | BHCK4170 | HI | 2.a | **VERIFIED** | Interest expense on deposits |
 | TRADING_REVENUE | BHCKA220 | HI-M | 8.a | **VERIFIED** | Trading revenue |
 
-**Note on NET_INCOME**: The line item reference should be updated to reflect current HI schedule structure.
+**Note on NET_INCOME**: Re-verified in v6.0. BHCT4340 / RIAD4340 is the bottom-line "net income attributable to holding company/bank" = **HI/RI item 14** (the FDIC RI instructions state RIAD4340 "must equal Schedule RI, item 14"). The v5.0 recommendation to change this to item 12 was incorrect and is **withdrawn**; item 12 is the pre-noncontrolling-interest aggregate (a different code, G104). No change made.
 
 ---
 
@@ -252,17 +315,13 @@ This report documents the verification of 100 MDRM codes in the `MDRM_MASTER_COM
 2. **TIER1_CAPITAL (BHCFA223)**: Line number format "Part I-32" should match current instructions
 3. **TIER2_CAPITAL (BHCFA224)**: Line number format should match current instructions
 
-### Codes Requiring Update (2 codes)
+### Codes Requiring Update — resolved in v6.0
 
-1. **RWA (BHCAA223)**:
-   - Current: Part II-26
-   - Should be: Part II Item 31
-   - Reason: HC-R restructuring in Basel III implementation
+1. **RWA (BHCAA223)** — **FIXED**: Part II-26 → **Part II item 31** (Total risk-weighted assets), applied to both the Y-9C and Call references.
 
-2. **NET_INCOME (BHCT4340)**:
-   - Current: HI Item 14
-   - Should be: HI Item 12
-   - Reason: HI schedule restructuring
+2. **NET_INCOME (BHCT4340)** — **NO CHANGE (claim refuted)**: the correct line is **HI/RI item 14** (RIAD4340 "must equal Schedule RI, item 14"). The earlier "should be item 12" was wrong (item 12 = pre-NCI aggregate, code G104).
+
+3. **TOTAL_DEPOSITS (BHCM2200)** — **FIXED**: line 13 → **13.a** (deposits in domestic offices).
 
 ---
 
@@ -319,10 +378,11 @@ All FR Y-9C codes have corresponding FFIEC Call Report equivalents with appropri
 
 ## Recommendations
 
-### Immediate Updates Required
+### Immediate Updates — completed in v6.0
 
-1. Update RWA line item reference from "Part II-26" to "Part II Item 31"
-2. Update NET_INCOME line item reference from "HI Item 14" to "HI Item 12"
+1. RWA line reference updated "Part II-26" → "Part II item 31" (done).
+2. NET_INCOME left at "item 14" — the prior "item 12" recommendation was refuted (done).
+3. TOTAL_DEPOSITS line reference updated "13" → "13.a" (done).
 
 ### Documentation Enhancements
 
@@ -360,5 +420,5 @@ The MDRM_MASTER_COMPLETE.csv dataset demonstrates **95% accuracy** against offic
 
 ---
 
-*Report generated: 2026-01-28*
+*Legacy report generated: 2026-01-28. v6.0 verification gate appended: 2026-06-09.*
 *Verified by: Claude Code Regulatory Data Verification*

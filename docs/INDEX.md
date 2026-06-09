@@ -2,7 +2,7 @@
 
 > **Master index for navigating the complete regulatory data dictionary**
 >
-> Version 5.0 | Updated: 2026-01-29
+> Version 6.0 | Updated: 2026-06-09
 
 ---
 
@@ -10,12 +10,23 @@
 
 | I Need To... | Go To |
 |--------------|-------|
-| Look up an MDRM code | [csv/MDRM_MASTER_COMPLETE.csv](../csv/MDRM_MASTER_COMPLETE.csv) |
-| Understand a specific schedule | [Schedule Guides](#by-schedule) below |
+| See the whole data universe (42 collections) | [COLLECTIONS_CATALOG.md](COLLECTIONS_CATALOG.md) · [csv](../csv/COLLECTIONS_CATALOG.csv) |
+| Find a specific schedule across all forms | [csv/SCHEDULES_CATALOG.csv](../csv/SCHEDULES_CATALOG.csv) |
+| Understand bank corporate structure (NIC) | [NIC_STRUCTURE_GUIDE.md](NIC_STRUCTURE_GUIDE.md) |
+| Reconcile entity identifiers (RSSD/Cert/LEI…) | [IDENTIFIERS.md](IDENTIFIERS.md) |
+| Understand the MDRM code system | [MDRM_GUIDE.md](MDRM_GUIDE.md) · [namespaces](../csv/MDRM_NAMESPACES.csv) |
+| Look up an MDRM concept crosswalk | [csv/MDRM_MASTER_COMPLETE.csv](../csv/MDRM_MASTER_COMPLETE.csv) |
+| Understand the Call Report (031/041/051) | [CALL_REPORT_GUIDE.md](CALL_REPORT_GUIDE.md) |
+| Work with foreign/structure forms | [FOREIGN_AND_STRUCTURE_GUIDE.md](FOREIGN_AND_STRUCTURE_GUIDE.md) |
+| Work with FDIC/NCUA/OCC/UBPR data | [FDIC_NCUA_OCC_UBPR_GUIDE.md](FDIC_NCUA_OCC_UBPR_GUIDE.md) |
+| Understand a specific FR Y-9C schedule | [Schedule Guides](#by-form) below |
 | Validate data reconciliation | [Reconciliation Section](#reconciliation-quick-reference) |
 | Build automated pipelines | [JSON Schemas](#json-schemas-for-ai-agents) |
 | Map Y-9C to Call Report | [json/cross_form_mapping.json](../json/cross_form_mapping.json) |
 | See what adds up to what | [RECONCILIATION_HIERARCHY.md](RECONCILIATION_HIERARCHY.md) |
+| Check temporal coverage & vintages | [COVERAGE_PROVENANCE.md](COVERAGE_PROVENANCE.md) |
+
+> **New in v6.0:** the dictionary now spans the full U.S. bank-data universe (Federal Reserve, FFIEC-joint, FDIC, NCUA, OCC, SEC, CFPB), not just FR Y-9C. Start at [COLLECTIONS_CATALOG.md](COLLECTIONS_CATALOG.md). Companion data-access package: **[FreeNIC](https://github.com/andenick/FreeNIC)**.
 
 ---
 
@@ -186,4 +197,4 @@ print(f"CET1 minimum: {capital['cet1']['minimum']}")
 
 ---
 
-*Last updated: 2026-01-29 | Version 5.0*
+*Last updated: 2026-06-09 | Version 6.0*

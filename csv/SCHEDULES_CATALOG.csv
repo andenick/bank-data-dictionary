@@ -1,0 +1,266 @@
+form_code,schedule_id,part,title,description,in_031,in_041,in_051,status,source_url
+FR Y-9C,HI,,Consolidated Income Statement,"Interest income/expense, noninterest income/expense, provisions, taxes, net income (YTD); headed BHCK Amount",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HI-A,,Changes in Holding Company Equity Capital,"Roll-forward of total equity from beginning to end of period (net income, dividends, stock, OCI)",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HI-B,Part I,Charge-Offs and Recoveries on Loans and Leases,"Charge-offs and recoveries by loan/lease category",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HI-B,Part II,Changes in Allowances for Credit Losses,"Changes in the allowance(s) for credit losses (ACL)",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HI-C,,Disaggregated Data on the Allowance for Loan and Lease Losses,"ALLL disaggregated by loan category x measurement method; applies only to institutions that have not adopted CECL",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HC,,Consolidated Balance Sheet,"Assets, liabilities, equity at period end (equity total = BHCT3210; total assets = BHCK/BHCT2170)",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HC-B,,Securities,"Held-to-maturity and available-for-sale securities by type (amortized cost / fair value)",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HC-C,,Loans and Lease Financing Receivables,"Loans and leases by category (RE, C&I, consumer, etc.), domestic vs consolidated",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HC-D,,Trading Assets and Liabilities,"Trading-book assets and liabilities by instrument; trading-activity-threshold filers",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HC-E,,Deposit Liabilities,"Deposits by type and by domestic office (transaction vs nontransaction)",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HC-F,,Other Assets,"Components of the other assets line on HC",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HC-G,,Other Liabilities,"Components of the other liabilities line on HC",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HC-H,,Interest Sensitivity,"Repricing/maturity buckets for interest-rate-sensitive assets and liabilities",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HC-I,,Insurance-Related Underwriting Activities (Including Reinsurance),"Insurance underwriting / reinsurance activity detail",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HC-K,,Quarterly Averages,"Quarter-average balances for major balance-sheet categories (mix of BHCK / BHDM)",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HC-L,,Derivatives and Off-Balance-Sheet Items,"Notional amounts and fair values of derivatives; unused commitments, guarantees, other OBS",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HC-M,,Memoranda,"Miscellaneous supplemental items (intangibles, related-party, captive insurance, etc.)",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HC-N,,"Past Due and Nonaccrual Loans, Leases, and Other Assets","Delinquency (30-89, 90+, nonaccrual) by asset category",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HC-P,,Closed-End 1-4 Family Residential Mortgage Banking Activities,"Originations, sales, repurchases, servicing of 1-4 family mortgages; mortgage-banking-threshold filers",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HC-Q,,Financial Assets and Liabilities Measured at Fair Value,"Recurring-basis fair-value measurements by Level 1/2/3",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HC-R,Part I,Regulatory Capital - Components and Ratios,"Regulatory-capital components and ratios (CET1, Tier 1, Total, buffers, leverage); headed BHCA Amount",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HC-R,Part II,Regulatory Capital - Risk-Weighted Assets,"Risk-weighted assets by exposure category",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HC-S,,"Servicing, Securitization, and Asset Sale Activities","Securitization exposures, servicing assets, asset sales with recourse",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9C,HC-V,,Variable Interest Entities,"Assets and liabilities of consolidated VIEs",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9C20180930_f.pdf
+FR Y-9LP,PI,,Parent Company Only Income Statement,"Income and expense of the parent on an unconsolidated basis (YTD)",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9LP20170630_i.pdf
+FR Y-9LP,PI-A,,Cash Flow Statement,"Parent-company statement of cash flows",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9LP20170630_i.pdf
+FR Y-9LP,PC,,Parent Company Only Balance Sheet,"Parent-only assets, liabilities, equity (incl. balances due to/from subsidiaries)",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9LP20170630_i.pdf
+FR Y-9LP,PC-A,,Investments in Subsidiaries and Associated Companies,"Detail of the parent's equity investments in, and advances to, subsidiaries/associated companies",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9LP20170630_i.pdf
+FR Y-9LP,PC-B,,Memoranda,"Supplemental parent-company memoranda (incl. debt-maturity / intercompany items)",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_Y-9LP20170630_i.pdf
+FR Y-9SP,(1),,Income Statement,"Parent-company income and expense (calendar-year-to-date); prefix BHSP",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-9SP
+FR Y-9SP,(2),,Balance Sheet,"Parent-company assets, liabilities, equity; prefix BHSP",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-9SP
+FR Y-9SP,(3),,Memoranda,"Cash dividends/distributions and other supplemental items",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-9SP
+FR Y-9SP,(4),,Notes to the Financial Statements,"Free-text notes (TEXT items)",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-9SP
+FR Y-9ES,(1),,Statement of Changes in Net Assets Available for Benefits,"Year's additions/deductions to plan net assets (calendar year); prefix ESOP",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-9ES
+FR Y-9ES,(2),,Statement of Net Assets Available for Benefits,"Plan assets and liabilities at year end; prefix ESOP",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-9ES
+FR Y-9ES,(3),,Memoranda,"Sponsoring employer, shares held, SOP 76-3 / SOP 93-6 indicator, etc.",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-9ES
+FR Y-9ES,(4),,Notes to the Financial Statements,"Free-text notes",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-9ES
+FR Y-9CS,—,,Supplement (no fixed schedules),"Flexible supplement with no permanent lettered schedule structure; line items defined per collection",,,,UNVERIFIED,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-9CS
+Call Report,RI,,Income Statement,"Interest income/expense, noninterest income/expense, gains/losses, net income - year-to-date",yes,yes,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RI-A,,Changes in (Bank) Equity Capital,"Reconciliation of beginning to ending equity capital",yes,yes,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RI-B,Part I,Charge-offs and Recoveries on Loans and Leases,"Charge-offs/recoveries on loans and leases",yes,yes,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RI-B,Part II,Changes in Allowances for Credit Losses,"Changes in allowances for credit losses (ACL/CECL)",yes,yes,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RI-C,,Disaggregated Data on the Allowance for Loan and Lease Losses,"Allowance disaggregated by portfolio segment/measurement method; on 031/041 split into Part I (ALLL) + Part II (ACL); 051 carries a single non-split schedule",yes,yes,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RI-D,,Income from Foreign Offices,"Interest/noninterest income attributable to foreign offices (FFIEC 031 only)",yes,no,no,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RI-E,,Explanations,"Narrative/itemized explanations of amounts reported elsewhere in RI",yes,yes,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC,,Balance Sheet,"Assets, liabilities, and equity capital - the core balance sheet",yes,yes,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-A,,Cash and Balances Due from Depository Institutions,"Currency/coin, balances due from banks (domestic and foreign), Federal Reserve balances; omitted from 051",yes,yes,no,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-B,,Securities,"HTM and AFS securities by type (Treasuries, agency, MBS, ABS, etc.), amortized cost and fair value",yes,yes,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-C,Part I,Loans and Lease Financing Receivables,"Loans and leases by category",yes,yes,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-C,Part II,Loans to Small Businesses and Small Farms,"Small-business and small-farm loans; generally reported in the June report (annual)",yes,yes,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-D,,Trading Assets and Liabilities,"Detail of trading-account assets/liabilities at fair value; omitted from 051; threshold-triggered on 031/041",yes,yes,no,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-E,,Deposit Liabilities,"Deposits by type/holder; 031 splits into Part I (domestic) + Part II (foreign offices); 041/051 domestic only",yes,yes,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-F,,Other Assets,"Accrued interest receivable, deferred tax assets, equity securities without readily determinable FV, other",yes,yes,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-G,,Other Liabilities,"Accrued expenses, deferred tax liabilities, allowance for off-B/S credit exposures, other",yes,yes,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-H,,Selected Balance Sheet Items for Domestic Offices,"Domestic-office balance-sheet detail carved out of the consolidated total (FFIEC 031 only)",yes,no,no,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-I,,Assets and Liabilities of IBFs,"Balance-sheet items of International Banking Facilities (FFIEC 031 only)",yes,no,no,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-K,,Quarterly Averages,"Quarter-average balances for major asset/liability categories",yes,yes,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-L,,Derivatives and Off-Balance-Sheet Items,"Commitments, guarantees, letters of credit, notional derivatives, etc.",yes,yes,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-M,,Memoranda,"Insider extensions of credit, BOLI, brokered/reciprocal deposits, intangibles, other memoranda",yes,yes,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-N,,"Past Due and Nonaccrual Loans, Leases, and Other Assets","Delinquency aging (30-89 days, 90+ days, nonaccrual) by category",yes,yes,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-O,,Other Data for Deposit Insurance Assessments,"Deposit-insurance assessment base and components (FDIC)",yes,yes,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-P,,1-4 Family Residential Mortgage Banking Activities,"Originations, sales, repurchases, servicing of 1-4 family mortgages; omitted from 051",yes,yes,no,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-Q,,Assets and Liabilities Measured at Fair Value on a Recurring Basis,"Fair-value hierarchy (Level 1/2/3) detail; omitted from 051; threshold-triggered on 031/041",yes,yes,no,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-R,Part I,Regulatory Capital - Components and Ratios,"Regulatory capital components and ratios (CET1, Tier 1, Total, leverage)",yes,yes,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-R,Part II,Regulatory Capital - Risk-Weighted Assets,"Risk-weighted assets; uses RCOA/RCFA capital prefixes",yes,yes,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-S,,"Servicing, Securitization, and Asset Sale Activities","Securitization exposures, servicing, recourse/credit enhancement; omitted from 051",yes,yes,no,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-T,,Fiduciary and Related Services,"Trust/fiduciary assets, accounts, income; frequency varies with fiduciary-activity size",yes,yes,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,RC-V,,Variable Interest Entities,"Consolidated VIE assets/liabilities; omitted from 051",yes,yes,no,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/FFIEC031_FFIEC041_202503_i.pdf
+Call Report,SU,,Supplemental Information,"Streamlined-form supplement: mostly yes/no triggers for complex/specialized activities (FFIEC 051 only)",no,no,yes,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/hv-051/FFIEC051_202412_i.pdf
+FFIEC 101,A,,Advanced Approaches Regulatory Capital,"CET1/AT1/Tier 2 components, regulatory adjustments and deductions, Basel III common-disclosure template, and the supplementary leverage ratio (SLR)",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec101
+FFIEC 101,B,,Summary Risk-Weighted Asset Information,"Summary RWA by risk type; outstanding balances and aggregated risk-parameter drivers for credit-risk exposures",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec101
+FFIEC 101,C,,Wholesale Exposures - Corporate,"A-IRB risk parameters (PD/LGD/EAD) and RWA for corporate exposures",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec101
+FFIEC 101,D,,Wholesale Exposures - Bank,"A-IRB parameters and RWA for bank exposures",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec101
+FFIEC 101,E,,Wholesale Exposures - Sovereign,"A-IRB parameters and RWA for sovereign exposures",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec101
+FFIEC 101,F,,Wholesale Exposures - Income-Producing Real Estate (IPRE),"A-IRB parameters and RWA for IPRE",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec101
+FFIEC 101,G,,Wholesale Exposures - High Volatility Commercial Real Estate (HVCRE),"A-IRB parameters and RWA for HVCRE",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec101
+FFIEC 101,H,,Wholesale - Eligible Margin Loans/Repo-Style/OTC Derivatives and netting sets (part 1),"Counterparty-exposure detail for EMLs/repo-style/OTC derivatives subject to a qualifying master netting agreement",,,,UNVERIFIED,https://www.ffiec.gov/resources/reporting-forms/ffiec101
+FFIEC 101,I,,Wholesale - Eligible Margin Loans/Repo-Style/OTC Derivatives (part 2),"Continuation of the counterparty/netting wholesale group",,,,UNVERIFIED,https://www.ffiec.gov/resources/reporting-forms/ffiec101
+FFIEC 101,J,,Wholesale - Combinations subject to qualifying master netting (part 3),"Continuation of the counterparty/netting wholesale group",,,,UNVERIFIED,https://www.ffiec.gov/resources/reporting-forms/ffiec101
+FFIEC 101,K,,Retail Exposures - Residential Mortgage - Closed-end First Lien,"A-IRB retail parameters and RWA, closed-end first-lien mortgages",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec101
+FFIEC 101,L,,Retail Exposures - Residential Mortgage - Closed-end Junior Lien,"A-IRB retail parameters and RWA, closed-end junior-lien mortgages",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec101
+FFIEC 101,M,,Retail Exposures - Residential Mortgage - Revolving (HELOC),"A-IRB retail parameters and RWA for revolving residential exposures",,,,UNVERIFIED,https://www.ffiec.gov/resources/reporting-forms/ffiec101
+FFIEC 101,N,,Retail Exposures - Qualifying Revolving Exposures (QRE),"A-IRB parameters and RWA for qualifying revolving retail exposures",,,,UNVERIFIED,https://www.ffiec.gov/resources/reporting-forms/ffiec101
+FFIEC 101,O,,Retail Exposures - Other Retail,"A-IRB parameters and RWA for other retail exposures",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec101
+FFIEC 101,P,,Securitization Exposures,"Securitization exposures and capital (ratings-based / internal-assessment / supervisory-formula approaches)",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec101
+FFIEC 101,Q,,Cleared Transactions,"Exposures to central counterparties / cleared transactions and associated RWA",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec101
+FFIEC 101,R,,Equity Exposures,"Equity exposures (simple risk-weight, full/partial internal-models approach) and equity exposures to investment funds",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec101
+FFIEC 101,S,,Operational Risk,"Historical operational losses, modeling inputs (scenarios, distribution assumptions, loss caps), and operational-risk RWA under AMA",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec101
+FFIEC 102,§1,,VaR-Based Measure,"Previous-day VaR; 60-business-day average VaR; multiplication factor; VaR-based capital requirement",,,,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/ffiec102-report-form.pdf
+FFIEC 102,§2,,Stressed VaR-Based Measure,"Most-recent stressed VaR; 60-day average stressed VaR; multiplication factor; stressed-VaR capital requirement",,,,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/ffiec102-report-form.pdf
+FFIEC 102,§3,,Specific Risk Add-Ons,"Standardized specific-risk capital for debt, securitization, correlation-trading, and equity positions not captured by models",,,,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/ffiec102-report-form.pdf
+FFIEC 102,§4,,Incremental Risk Capital (IRC),"Default and migration risk for non-securitization credit positions",,,,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/ffiec102-report-form.pdf
+FFIEC 102,§5,,Comprehensive Risk Measure (CRM),"Modeled risk for the correlation-trading portfolio; standardized and advanced CRM with pre-/post-approval surcharge floors",,,,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/ffiec102-report-form.pdf
+FFIEC 102,§6,,Standardized Measurement Method / De Minimis Positions,"Standardized specific-risk charge and de-minimis exposures excluded from models",,,,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/ffiec102-report-form.pdf
+FFIEC 102,§7,,Market Risk Weighted Assets,"Total market-risk capital requirement x 12.5 = market RWA",,,,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/ffiec102-report-form.pdf
+FFIEC 102,§M,,Memoranda,"22 supplemental line items giving insight into trading-book risk profile",,,,current,https://www.ffiec.gov/sites/default/files/data/reporting-forms/ffiec102-report-form.pdf
+FR Y-14A,A,,Summary,"9-quarter projections of income statement, balance sheet, capital, RWA, retail repurchase, AFS/HTM securities, PPNR, and embedded Trading and Counterparty worksheets across scenarios",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14A
+FR Y-14A,B,,Macro Scenario,"Macroeconomic variables for each projected period under supervisory and firm scenarios; includes the market-risk shock",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14A
+FR Y-14A,C,,Regulatory Capital Instruments (RCI),"Projected issuances/redemptions and characteristics of capital instruments; filed in SCB and CCAR versions",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14A
+FR Y-14A,D,,Regulatory Capital,"Projected regulatory-capital components and ratios (CET1, Tier 1, Total, leverage, SLR) by quarter under each scenario",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14A
+FR Y-14A,E,,Operational Risk,"Projected operational-risk losses by Basel event type; scenario analysis",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14A
+FR Y-14A,F,,Business Plan Changes,"Effects of material business-plan changes (M&A, divestitures, capital actions) on projections",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14A
+FR Y-14Q,A,,Retail,"Segment-level retail loan data for portfolios not collected monthly on FR Y-14M",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q
+FR Y-14Q,B,,Securities,"Security-level (CUSIP) detail: par/amortized cost, fair value, AFS/HTM, duration, rating",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q
+FR Y-14Q,C,,Regulatory Capital Instruments,"Capital-instrument inventory and quarterly issuances/repurchases/redemptions",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q
+FR Y-14Q,D,,Regulatory Capital,"Current-period regulatory-capital components and ratios (CET1/Tier1/Total/leverage/SLR)",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q
+FR Y-14Q,E,,Operational Risk,"Quarterly operational-loss events and loss history by Basel event type",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q
+FR Y-14Q,F,,Trading,"Position/risk detail for trading book; trading revenue by asset class; VaR/stressed-VaR; private-equity component",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q
+FR Y-14Q,G,,PPNR,"Pre-provision net revenue detail: net interest income, fee income, expense components; PPNR projection metrics",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q
+FR Y-14Q,H,,Wholesale,"Loan-level wholesale credit data (H.1 Corporate Loan; H.2 Commercial Real Estate)",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q
+FR Y-14Q,J,,Retail Fair Value Option / Held-for-Sale (FVO/HFS),"Retail loans carried at fair-value-option or held-for-sale",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q
+FR Y-14Q,K,,Supplemental,"Additional/supplemental data items supporting stress projections",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q
+FR Y-14Q,L,,Counterparty,"Top-counterparty exposures, EAD, derivatives/SFT/lending components, CVA, wrong-way risk",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q
+FR Y-14Q,M,,Balances,"Summary balance-sheet/aggregate position data reconciling the granular schedules",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q
+FR Y-14M,A,,Domestic First Lien Closed-end 1-4 Family Residential Loan,"Loan-level first-lien mortgage data: UPB, FICO, LTV, DTI, rate, performance/delinquency",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M
+FR Y-14M,B,,Domestic Home Equity Loan and Home Equity Line,"Loan-level HELOAN/HELOC data: credit limit, utilization, FICO, LTV, performance",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M
+FR Y-14M,C,,Address Matching Loan-Level Data Collection,"Property-address data used to match/dedupe loans across reporters",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M
+FR Y-14M,D,,Domestic Credit Card Data Collection,"Account-level credit-card data: credit limit, balance, FICO, utilization, performance",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M
+FR Y-15,A,,Size Indicator,"Total exposures (leverage-ratio exposure measure) - the size component",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-15
+FR Y-15,B,,Interconnectedness Indicators,"Intra-financial-system assets and liabilities; securities outstanding",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-15
+FR Y-15,C,,Substitutability Indicators,"Payments activity, assets under custody, underwriting, and trading-volume indicators",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-15
+FR Y-15,D,,Complexity Indicators,"OTC derivatives notional, trading and AFS securities (incl. Level 3), and HFT/AFS adjusted values",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-15
+FR Y-15,E,,Cross-Jurisdictional Activity Indicators,"Cross-jurisdictional claims and liabilities (ultimate-risk and immediate-counterparty bases); ties to FFIEC 009",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-15
+FR Y-15,F,,Ancillary Indicators,"Additional monitoring indicators (total liabilities, retail funding, net/gross revenue, foreign net revenue, number of jurisdictions)",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-15
+FR Y-15,G,,Short-Term Wholesale Funding (STWF) Indicator,"Weighted short-term wholesale funding amount used in the US method-2 G-SIB surcharge",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-15
+FR 2052a,I.A,,Inflows - Assets,"Unencumbered assets / asset cash inflows (incl. HQLA-eligible securities, maturing assets)",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_2052a20220429_f.pdf
+FR 2052a,I.S,,Inflows - Secured,"Secured lending inflows: reverse repo, securities borrowing, margin lending (by collateral class)",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_2052a20220429_f.pdf
+FR 2052a,I.U,,Inflows - Unsecured,"Unsecured lending inflows: fed funds sold, interbank loans, loan cash flows, receivables",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_2052a20220429_f.pdf
+FR 2052a,I.O,,Inflows - Other,"Other inflows, incl. derivative/collateral inflows and other contractual receipts",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_2052a20220429_f.pdf
+FR 2052a,O.D,,Outflows - Deposits,"Deposit outflows by type (stable/less-stable retail, operational, non-operational) with run-off treatment",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_2052a20220429_f.pdf
+FR 2052a,O.S,,Outflows - Secured,"Secured funding outflows: repo, securities lending, other collateralized borrowing",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_2052a20220429_f.pdf
+FR 2052a,O.W,,Outflows - Wholesale,"Unsecured wholesale funding: CP, MTNs, FHLB advances, non-op FI/corporate deposits",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_2052a20220429_f.pdf
+FR 2052a,O.O,,Outflows - Other,"Other outflows: undrawn commitments/liquidity facilities, derivative outflows, margin/rating-trigger calls, trade finance",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_2052a20220429_f.pdf
+FR 2052a,S.I,,Supplemental - Informational,"Funding available for transfer, other informational items",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_2052a20220429_f.pdf
+FR 2052a,S.DC,,Supplemental - Derivatives and Collateral,"Derivatives and collateral detail (posted/received, rehypothecation)",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_2052a20220429_f.pdf
+FR 2052a,S.FX,,Supplemental - Foreign Exchange,"FX spot, forwards/futures, and swaps",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_2052a20220429_f.pdf
+FR 2052a,S.B,,Supplemental - Balance Sheet,"Balance-sheet items for NSFR ASF/RSF calculation",,,,current,https://www.federalreserve.gov/reportforms/forms/FR_2052a20220429_f.pdf
+FR 2052a,S.L,,Supplemental - Liquidity Risk Measurement (LRM),"Liquidity-risk-measurement items (e.g. wholesale-funding metrics); exact label UNVERIFIED",,,,UNVERIFIED,https://www.federalreserve.gov/reportforms/forms/FR_2052a20220429_f.pdf
+Pillar 3,OVA,,Overview of risk management,"Qualitative risk-management approach (Table)",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,KM1,,Key metrics,"Capital, RWA, leverage, LCR, NSFR headline ratios",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,KM2,,Key metrics - TLAC,"TLAC ratios/leverage for G-SIB resolution groups",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,OV1,,Overview of RWA,"RWA and minimum capital by risk type",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,LI1,,Differences between accounting and regulatory scopes of consolidation,"Maps financial-statement categories to regulatory risk categories",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,LI2,,Main sources of differences (regulatory exposure vs carrying values),"Reconciliation of exposure amounts",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,LIA,,Explanations of differences between accounting and regulatory exposure amounts,"Qualitative (Table)",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,PV1,,Prudent valuation adjustments,"PVA by asset class",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CC1,,Composition of regulatory capital,"Line-by-line CET1/AT1/Tier 2 and deductions",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CC2,,Reconciliation of regulatory capital to balance sheet,"Step-2 reconciliation to published balance sheet",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CCA,,Main features of regulatory capital instruments,"Instrument-by-instrument key terms (Table)",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CDC,,Capital distribution constraints,"Buffer/distribution-constraint disclosure",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,TLAC1,,TLAC composition (resolution group),"TLAC resources for G-SIBs; exact inclusion by jurisdiction UNVERIFIED",,,,UNVERIFIED,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,TLAC2,,Creditor ranking - subordinated TLAC,"Entity-level subordinated instrument ranking; G-SIB only",,,,UNVERIFIED,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,TLAC3,,Creditor ranking - resolution entity,"Resolution-entity instrument ranking; G-SIB only",,,,UNVERIFIED,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,GSIB1,,G-SIB indicators,"The 12 systemic indicators used for G-SIB scoring; parallels FR Y-15",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CCyB1,,Geographical distribution of credit exposures (countercyclical buffer),"Private-sector credit exposures by jurisdiction for CCyB",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,LR1,,Summary comparison of accounting assets vs leverage-ratio exposure,"Reconciliation to leverage exposure measure",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,LR2,,Leverage ratio common disclosure,"Leverage-ratio components and ratio",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,LIQA,,Liquidity risk management,"Qualitative liquidity framework (Table)",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,LIQ1,,Liquidity Coverage Ratio (LCR),"HQLA, outflows, inflows, LCR; fed by FR 2052a",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,LIQ2,,Net Stable Funding Ratio (NSFR),"ASF, RSF, NSFR; fed by FR 2052a",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CRA,,General qualitative information about credit risk,"Qualitative (Table)",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CR1,,Credit quality of exposures,"Defaulted/non-defaulted exposures, allowances, net values",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CR2,,Changes in defaulted loans and debt securities,"Flow of defaulted exposures",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CRB,,Additional disclosure related to credit quality of assets,"Qualitative (Table)",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CRB-A,,Additional disclosure - prudential treatment of problem assets,"Qualitative (Table); added in d455",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CRC,,Qualitative disclosures - credit risk mitigation (CRM),"Qualitative (Table)",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CR3,,Credit risk mitigation techniques - overview,"Secured/unsecured, collateral, guarantees, credit derivatives",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CRD,,Qualitative disclosures - use of ECAI ratings (standardized),"Qualitative (Table)",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CR4,,Standardized approach - credit-risk exposure and CRM effects,"Pre/post-CRM exposure and RWA",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CR5,,Standardized approach - exposures by asset class and risk weight,"Exposures by asset class and risk weight",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CRE,,Qualitative disclosures - IRB models,"Qualitative (Table)",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CR6,,IRB - credit-risk exposures by portfolio and PD range,"PD/LGD/EAD/RWA by grade",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CR7,,IRB - effect on RWA of credit derivatives used as CRM,"Effect on RWA of credit derivatives used as CRM",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CR8,,RWA flow statement - IRB credit-risk exposures,"RWA flow statement for IRB credit-risk exposures",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CR9,,IRB - back-testing of PD per portfolio,"Back-testing of PD per portfolio",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CR10,,IRB - specialized lending (supervisory slotting),"Specialized lending under supervisory slotting",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CCRA,,Qualitative disclosures - counterparty credit risk (CCR),"Qualitative (Table)",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CCR1,,Analysis of CCR exposure by approach,"RC, PFE, EAD, RWA",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CCR2,,CVA capital charge,"CVA risk capital; in d455 disclosed via CVA1-CVA4, retained from d400",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CCR3,,Standardized approach - CCR exposures by asset class and risk weight,"CCR exposures by asset class and risk weight",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CCR4,,IRB - CCR exposures by portfolio and PD range,"CCR exposures by portfolio and PD range",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CCR5,,Composition of collateral for CCR exposures,"Composition of collateral for CCR exposures",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CCR6,,Credit derivatives exposures,"Protection bought/sold, notional",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CCR7,,RWA flow statement - CCR under IMM,"RWA flow statement for CCR under IMM",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CCR8,,Exposures to central counterparties (CCPs),"QCCP/non-QCCP, default-fund",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CVAA,,General qualitative disclosures - CVA risk,"Qualitative (Table); d455 (FRTB-CVA)",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CVA1,,Reduced basic approach for CVA (BA-CVA),"Reduced BA-CVA; d455",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CVA2,,Full basic approach for CVA (BA-CVA),"Full BA-CVA; d455",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CVAB,,Qualitative disclosures - banks using SA-CVA,"Qualitative (Table); d455",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CVA3,,Standardized approach for CVA (SA-CVA),"SA-CVA; d455",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CVA4,,RWA flow statement - CVA under SA-CVA,"RWA flow statement for CVA under SA-CVA; d455",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,SECA,,Qualitative disclosures - securitization,"Qualitative (Table)",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,SEC1,,Securitization exposures in the banking book,"Securitization exposures in the banking book",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,SEC2,,Securitization exposures in the trading book,"Securitization exposures in the trading book",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,SEC3,,Securitization exposures (banking book) and capital - bank as originator,"Securitization exposures and capital, bank as originator",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,SEC4,,Securitization exposures (banking book) and capital - bank as investor,"Securitization exposures and capital, bank as investor",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,MRA,,Qualitative disclosures - market risk,"Qualitative (Table)",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,MRB,,Additional qualitative disclosures - banks using the internal models approach (IMA),"Qualitative (Table)",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,MR1,,Market risk under the standardized approach,"Capital/RWA by risk class (FRTB-revised); pre-FRTB MR1 = STM components",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,MR2,,Market risk under IMA (RWA flow statement),"IMA RWA movements",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,MR3,,IMA values for trading portfolios,"VaR/sVaR/IRC/CRM max/min/avg",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,MR4,,Comparison of VaR estimates with gains/losses (backtesting),"Model validation / exceptions (pre-FRTB framework)",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,ORA,,General qualitative information - operational-risk framework,"Qualitative (Table); d455",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,OR1,,Historical losses,"Aggregate annual operational losses; d455 (SA for op-risk)",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,OR2,,Business indicator and subcomponents,"BI / ILM inputs; d455",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,OR3,,Minimum required operational-risk capital,"Op-risk capital requirement; d455",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,IRRBBA,,Interest rate risk in the banking book - objectives and policies,"Qualitative (Table)",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,IRRBB1,,Quantitative information on IRRBB,"Delta-EVE / delta-NII under shocks",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,REMA,,Remuneration policy,"Qualitative (Table)",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,REM1,,Remuneration awarded during the financial year,"Fixed/variable, by staff group",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,REM2,,Special payments,"Guaranteed bonuses, sign-on, severance",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,REM3,,Deferred remuneration,"Vested/unvested, paid-out",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,ENC,,Asset encumbrance,"Encumbered vs unencumbered assets",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CMS1,,Comparison of modelled and standardized RWA (full standardized),"Output-floor comparison; d455",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+Pillar 3,CMS2,,Comparison of modelled and standardized RWA for credit risk by asset class,"Output-floor comparison by asset class; d455",,,,current,https://www.bis.org/bcbs/publ/d455.pdf
+FFIEC 002,RAL,,Assets and Liabilities,"Summary balance sheet of the reporting branch/agency; nets due-from/due-to related institutions",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec002
+FFIEC 002,A,,Cash and Balances Due from Depository Institutions,"Cash and interbank balances; IBF detail reported separately",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec002
+FFIEC 002,C,,Loans,"Loans by type (Part I loans and leases; Part II additional loan detail); IBF detail separate; Part II title UNVERIFIED",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec002
+FFIEC 002,E,,Deposit Liabilities and Credit Balances,"Deposits and credit balances; IBF detail reported separately",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec002
+FFIEC 002,K,,Quarterly Averages,"Average daily (or weekly) balances for the quarter",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec002
+FFIEC 002,L,,Derivatives and Off-Balance-Sheet Items,"Commitments, contingencies, derivative contracts",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec002
+FFIEC 002,M,,Due from / Due to Related Institutions in the U.S. and in Foreign Countries,"Claims on and liabilities to the foreign-bank head office and other related institutions (Part I claims, Part II liabilities)",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec002
+FFIEC 002,N,,"Past Due, Nonaccrual, and Restructured Loans","Asset-quality detail",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec002
+FFIEC 002,O,,Other Data for Deposit Insurance Assessments,"Items supporting FDIC assessment (insured branches)",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec002
+FFIEC 002,P,,Other Borrowed Money,"Borrowings detail",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec002
+FFIEC 002S,002S,,Report of a Non-U.S. Branch Managed or Controlled by a U.S. Branch or Agency,"Assets and liabilities of each non-US branch the reporting US branch/agency manages or controls",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec002s
+FFIEC 009,C,Part I,Claims by country (immediate-counterparty basis with redistribution to ultimate-risk basis),"Cross-border and foreign-office claims on foreign residents by counterparty country and sector (bank/public/other)",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec009
+FFIEC 009,C,Part II,Additional claims detail / memoranda,"Supplementary claims breakdowns; exact title UNVERIFIED",,,,UNVERIFIED,https://www.ffiec.gov/resources/reporting-forms/ffiec009
+FFIEC 009,1/1.a,,Foreign-Office Liabilities by Country of Foreign Office and by Country of Creditor,"Liabilities of foreign offices, with memorandum items",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec009
+FFIEC 009,2,,Derivatives and foreign-office detail,"Positive fair value of derivative contracts; claims on related foreign branches; foreign-office claims on local residents and liabilities",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec009
+FFIEC 009a,Part A,,Country exposures meeting the disclosure threshold,"Per-country amounts where exposure > 1% of assets or 20% of capital",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec009
+FFIEC 009a,Part B,,List of additional countries (lower band),"Countries with exposure 0.75-1% of assets or 15-20% of capital (names only)",,,,current,https://www.ffiec.gov/resources/reporting-forms/ffiec009
+FR Y-7N,BS,,Balance Sheet,"Assets, liabilities, equity of the nonbank subsidiary",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-7NFR_Y-7NS
+FR Y-7N,BS-A,,Loans and Lease Financing Receivables,"Loan/lease detail",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-7NFR_Y-7NS
+FR Y-7N,BS-M,,Memoranda,"Off-balance-sheet and other memoranda items",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-7NFR_Y-7NS
+FR Y-7N,IS,,Income Statement,"Calendar year-to-date income statement",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-7NFR_Y-7NS
+FR Y-7N,IS-A,,Changes in Equity Capital,"Equity roll-forward",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-7NFR_Y-7NS
+FR Y-7N,IS-B,,Changes in Allowance for Credit Losses,"Charge-offs, recoveries, provision",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-7NFR_Y-7NS
+FR Y-11,BS,,Balance Sheet,"Assets, liabilities, equity of the nonbank subsidiary",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-11FR_Y-11S
+FR Y-11,BS-A,,Loans and Lease Financing Receivables,"Loan/lease detail",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-11FR_Y-11S
+FR Y-11,BS-M,,Memoranda,"Off-balance-sheet and other memoranda items",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-11FR_Y-11S
+FR Y-11,IS,,Income Statement,"Revenue, expense, net income (calendar year-to-date)",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-11FR_Y-11S
+FR Y-11,IS-A,,Changes in Equity Capital,"Equity roll-forward",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-11FR_Y-11S
+FR Y-11,IS-B,,Changes in Allowance for Credit Losses,"Charge-offs, recoveries, provision (retitled from ALLL under CECL)",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-11FR_Y-11S
+FR Y-12,1,,Type of Investments,"Investments by investment type/authority",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-12
+FR Y-12,2,,Type of Security,"Investments by type of security held",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-12
+FR Y-12,3,,Type of Entity within the Banking Organization,"Investments by holding entity within the organization",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-12
+FR Y-12,4,,Nonfinancial Investment Transactions During the Reporting Period,"Acquisitions/dispositions during the period",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-12
+FR Y-10,1,,Banking,"Acquisition/establishment/change in a bank or bank-like entity",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-10
+FR Y-10,2,,Savings and Loan Holding Company,"Events for SLHC reporters and their thrift interests",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-10
+FR Y-10,3,,Nonbanking,"Interests in nonbanking companies",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-10
+FR Y-10,4,,Merger,"Mergers/consolidations within the reporter's structure",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-10
+FR Y-10,5,,4(k),"Financial-holding-company activities/investments under BHC Act 4(k)",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-10
+FR Y-10,6,,Domestic Branch,"Opening/closing/relocation of domestic depository branches",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-10
+FR Y-10,7,,Foreign Branches of U.S. Banking Organizations,"Foreign branches of member banks, Edge/agreement corps, BHCs, foreign subs (successor to FR 2058)",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-10
+FR Y-10,8,,"Branch, Agency, and Representative Office","US branch/agency/representative-office events of FBOs (successor to FR Y-10F detail)",,,,current,https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-10
+NCUA 5300,FS,,Statement of Financial Condition,"Balance sheet (assets, liabilities, equity)",,,,current,https://ncua.gov/files/publications/regulations/call-report-form-march-2025.pdf
+NCUA 5300,IS,,Statement of Income and Expense,"Income statement",,,,current,https://ncua.gov/files/publications/regulations/call-report-form-march-2025.pdf
+NCUA 5300,A,,Schedule A - Loans,"Outstanding loans and YTD grants; delinquent loans; charge-offs/recoveries; other loan info; indirect loans; loans purchased/sold; 1-4 family residential RE; commercial loans",,,,current,https://ncua.gov/files/publications/regulations/call-report-form-march-2025.pdf
+NCUA 5300,B,,Schedule B - Investments,"Investments and securities (sections 1-4)",,,,current,https://ncua.gov/files/publications/regulations/call-report-form-march-2025.pdf
+NCUA 5300,C,,Schedule C - Liquidity,"Liquidity (sections 1-5)",,,,current,https://ncua.gov/files/publications/regulations/call-report-form-march-2025.pdf
+NCUA 5300,D,,Schedule D - Member/Deposit (Shares),"Member / deposit (shares) data (sections 1-3)",,,,current,https://ncua.gov/files/publications/regulations/call-report-form-march-2025.pdf
+NCUA 5300,G,,Schedule G - PCA Net-Worth Calculation,"Prompt-corrective-action net-worth calculation",,,,current,https://ncua.gov/files/publications/regulations/call-report-form-march-2025.pdf
+NCUA 5300,H,,Schedule H - Complex Credit-Union Leverage Ratio,"Complex credit-union leverage ratio",,,,current,https://ncua.gov/files/publications/regulations/call-report-form-march-2025.pdf
+NCUA 5300,I,,Schedule I - Risk-Based Capital Ratio,"Risk-based capital ratio calculation",,,,current,https://ncua.gov/files/publications/regulations/call-report-form-march-2025.pdf

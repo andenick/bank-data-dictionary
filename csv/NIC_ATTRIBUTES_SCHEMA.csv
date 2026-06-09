@@ -1,0 +1,75 @@
+field,type,description,notes
+ACT_PRIM_CD,CHAR[6],Primary Activity Code: 5- or 6-digit NAICS code of the entity's primary activity,"0 = N/A (branches) or inactive, except Edge/Agreement Corps and electric-power co-generators on FR 2009a/b/c"
+AUTH_REG_DIST_FRS,INTEGER,"Authority Regulatory District (ARDF): 2-digit Federal Reserve district of regulatory authority","Used when an institution elects a district other than its physical one (Regs D & I, eff. 1997-10-01); see DIST_FRS code map"
+BANK_CNT,INTEGER,Bank Count: derived count of U.S. banking subsidiaries in a BHC's structure during the row's date range,"Derived where BHC_IND=1, banking sub BROAD_REG_CD=1, relationship CTRL_IND=1"
+BHC_IND,INTEGER,Bank Holding Company Indicator,See code list BHC_IND (0/1/2)
+BNK_TYPE_ANALYS_CD,INTEGER,Bank Type Analysis Code: special-analysis classification flag,See code list BNK_TYPE_ANALYS_CD
+BROAD_REG_CD,INTEGER,Broad Regulatory Code: depository/legal status re Reg Y and BHC Act,See code list BROAD_REG_CD; full statutory bank definition NPW PDF pp.7-8
+CHTR_AUTH_CD,INTEGER,Authority Charter: chartering authority,See code list CHTR_AUTH_CD (0/1/2)
+CHTR_TYPE_CD,INTEGER,Charter Type,See code list CHTR_TYPE_CD
+CITY,CHAR[25],City/town of physical location,
+CNSRVTR_CD,INTEGER,Conservatorship Code,See code list CNSRVTR_CD
+CNTRY_CD,DECIMAL[5],Country Code (Treasury Geographic Classification),"1007 region; US-specific codes assigned"
+CNTRY_INC_CD,INTEGER,Country of Incorporation Code,
+CNTRY_INC_NM,CHAR[40],Country of Incorporation Name,
+CNTRY_NM,CHAR[40],Country Name (alpha),
+COUNTY_CD,INTEGER,County Code (FIPS 6-4),"Meaningful only with state code; 0 = N/A (non-U.S.)"
+D_DT_END,DATETIME,DB2 DATETIME form of DT_END,"Format 'YYYY-MM-DD HH:MM:SS'; must be quoted in queries"
+D_DT_EXIST_CMNC,DATE,DB2 form of entity commencement-of-existence date,
+D_DT_EXIST_TERM,DATETIME,DB2 form of final day of existence,
+D_DT_INSUR,DATETIME,DB2 form of date insured,
+D_DT_OPEN,DATE,DB2 form of date of opening,
+D_DT_START,DATETIME,DB2 DATETIME form of DT_START,Primary-key component (ID_RSSD + D_DT_START)
+DIST_FRS,INTEGER,Federal Reserve District Code (physical) derived from state/county,See code list DIST_FRS (0-12)
+DOMESTIC_IND,CHAR[1],Domestic Indicator derived from COUNTRY_CD,N = Not U.S.; Y = U.S.
+DT_END,INTEGER,Date End: last date record info known valid (YYYYMMDD),99991231 = non-terminated record
+DT_EXIST_CMNC,INTEGER,Commencement of Existence (YYYYMMDD),0 = N/A
+DT_EXIST_TERM,INTEGER,Final Day of Existence (YYYYMMDD),99991231 = non-terminated entity
+DT_INSUR,INTEGER,Date Insured: insurance effective date (YYYYMMDD),0 = N/A
+DT_OPEN,INTEGER,Date of Opening: GL first opened / entity became active (YYYYMMDD),
+DT_START,INTEGER,Date Start: first date record info known valid (YYYYMMDD),Primary-key component (ID_RSSD + DT_START)
+ENTITY_TYPE,CHAR[4],Derived entity type,"See code list ENTITY_TYPE (44 values, verified against NPW PDF)"
+EST_TYPE_CD,INTEGER,Establishment Type Code: physical establishment scope,See code list EST_TYPE_CD
+FBO_4C9_IND,INTEGER,FBO/4C9 Qualification Indicator,Whether an FBO is exempt from non-bank activity restrictions under BHC Act 4(c)9 / Reg K 211.23
+FHC_IND,INTEGER,Financial Holding Company Indicator,See code list FHC_IND (0/1/2)
+FISC_YREND_MMDD,DECIMAL[4],Date of Fiscal Year End (MMDD) for BHC/SLHC/FBO/other FR Y-7 filers,0 = N/A (not a Y-7 filer)
+FNCL_SUB_HOLDER,INTEGER,Financial Subsidiary Holder: bank holds a financial subsidiary per GLB Act / BHC 4(k),See code list FNCL_SUB_HOLDER (0/1/2)
+FNCL_SUB_IND,INTEGER,"Financial Subsidiary Indicator: non-bank sub conducting financial-in-nature activities per BHC 4(k)4","Cannot start before 2000-03-13; see code list FNCL_SUB_IND"
+FUNC_REG,INTEGER,Functional Regulator of financial subsidiaries,See code list FUNC_REG
+IBF_IND,INTEGER,IBF (International Banking Facility) Indicator,See code list IBF_IND; earliest DT_START 1981-12-03
+ID_ABA_PRIM,INTEGER,"Primary ABA routing number (identifies the primary account, not the entity)","Assigned by Accuity / FRB district; reusable across non-concurrent entities; no two concurrent entities share one"
+ID_CUSIP,CHAR[15],CUSIP ID (6-char issuer id; securities identification),
+ID_FDIC_CERT,INTEGER,FDIC Certificate ID assigned to each head-office depository by the FDIC (no check digits),0 = N/A
+ID_LEI,CHAR[20],Legal Entity Identifier: 20-char alphanumeric,Issued by LOUs under GLEIF / LEI ROC
+ID_NCUA,INTEGER,NCUA Charter ID (credit unions),"0 = N/A; 1-59999 Federal; 60000-79999 Federally Insured State Chartered; 80000+ Non-Federally Insured"
+ID_OCC,INTEGER,OCC Charter ID (granted by Office of the Comptroller of the Currency),"Since 2011-07-21 also stores national thrifts = thrift docket + 700000; 0 = N/A"
+ID_RSSD,INTEGER,RSSD ID: primary key of the entire database,"Unique one-up number with check digit, assigned by RSSD software at first entry; never changes, never reused; one per entity for its life; persists after closure"
+ID_RSSD_HD_OFF,INTEGER,Head Office ID RSSD: the ID_RSSD of the head office of branches/agencies/non-independent facilities (EST_TYPE_CD > 1),0 = N/A (head offices EST_TYPE_CD=1)
+ID_TAX,INTEGER,"Tax ID: federal EIN (9-digit, IRS)",Effective 2008-12-31
+ID_THRIFT,INTEGER,Thrift ID: OTS docket number for CHTR_TYPE_CD 300/310 that are FHLB members,"Field 9 chars but only 5 (right-most) used; 0 = N/A"
+ID_THRIFT_HC,CHAR[6],"Thrift Holding Company ID: OTS-assigned ""H""+5 numbers for entities owning S&Ls / federal savings banks",0 = N/A
+IHC_IND,SMALL INTEGER,Intermediate Holding Company Indicator,See code list IHC_IND (0/1)
+INSUR_PRI_CD,INTEGER,Primary Insurer: highest level of deposit insurance,See code list INSUR_PRI_CD
+MBR_FHLBS_IND,INTEGER,FHLBS Membership Indicator (Federal Home Loan Bank System),0 = N/A/non-member; 1 = Member
+MBR_FRS_IND,INTEGER,FRS Membership Indicator (Federal Reserve System),0 = N/A/non-member; 1 = Member
+MJR_OWN_MNRTY,INTEGER,"Majority-Owned by Minorities or Women (>50% owned by minorities/women)",See code list MJR_OWN_MNRTY
+NM_LGL,CHAR[120],Legal Name as on charter/formation doc,"Leading ""The""/""A"" stored at end after a comma; branches store only branch portion; required"
+NM_SHORT,CHAR[30],Short Name: abbreviated legal name for processing,Required
+NM_SRCH_CD,INTEGER,Numeric Search Code derived from NM_LGL to speed name search,
+ORG_TYPE_CD,INTEGER,Organization Type: legal structure,See code list ORG_TYPE_CD
+PLACE_CD,INTEGER,"Physical Place Code (incorporated/CDP places, county divisions, GNIS, etc.)","Required pre-2003-06-01 for New England MSA derivation; 0 = N/A"
+PRIM_FED_REG,CHAR[20],Primary Federal Regulator,"See code list PRIM_FED_REG; can change over history; null for branches/non-bank subs; derived nightly"
+PROV_REGION,CHAR[40],Province Region: territorial unit within a country/state of physical location,
+REASON_TERM_CD,INTEGER,Reason for Termination of an Entity (head offices only),See code list REASON_TERM_CD
+SEC_RPTG_STATUS,INTEGER,SEC Reporting Status (1934 Act registration/reporting),See code list SEC_RPTG_STATUS
+SLHC_IND,INTEGER,"Savings & Loan Holding Company Indicator (FRS-regulated, eff. 2011-07-21)","Entity controlling both banks & thrifts is a BHC not SLHC; see code list SLHC_IND"
+SLHC_TYPE_IND,INTEGER,SLHC Type,See code list SLHC_TYPE_IND
+STATE_ABBR_NM,CHAR[2],Abbreviated State Name (FIPS 5-2),
+STATE_CD,INTEGER,Physical State Code (2-digit FIPS 5-2),0 = N/A (non-U.S.)
+STATE_HOME_CD,INTEGER,"Home State (FIPS) of an FBO (IBA 5(a)/(b), BHC 3(d) home-state limits)",0 = N/A
+STATE_INC_ABBR_NM,CHAR[2],Abbreviated State of Incorporation (FIPS 5-2),
+STATE_INC_CD,INTEGER,State of Incorporation (FIPS 5-2; implemented 2012-01-01),"0 = N/A (non-U.S., national banks, ESOPs)"
+STREET_LINE1,CHAR[40],Physical first street line,
+STREET_LINE2,CHAR[40],Physical second street line,No P.O. boxes / conflicting info
+URL,CHAR[255],Web site of the reporting company,
+ZIP_CD,CHAR[9],ZIP / foreign mailing code of physical location,

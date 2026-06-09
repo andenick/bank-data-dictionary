@@ -1,0 +1,7 @@
+field,type,description,notes
+ACCT_METHOD,DECIMAL[2],"Accounting Method for non-failure mergers where survivor is domestic/private bank, trust co, or industrial bank","Applies when survivor CHTR_TYPE_CD is 200/250/340; see code list ACCT_METHOD"
+D_DT_TRANS,DATETIME,DB2 DATETIME form of DT_TRANS,Must be quoted in queries
+DT_TRANS,INTEGER,Date of Transformation: effective date (YYYYMMDD),Primary-key component
+ID_RSSD_PRECESSOR,INTEGER,RSSD ID of Predecessor: entity transformed by the TRNSFM_CD event; in a merger the non-survivor,"Column name is ID_RSSD_PRECESSOR (Fed's spelling) though dictionary prose says ""PREDECESSOR""; joins to Attributes ID_RSSD; primary-key component"
+ID_RSSD_SUCCESSOR,INTEGER,RSSD ID of Successor: entity that comes into / continues existence; in a merger the survivor,Joins to Attributes ID_RSSD; primary-key component
+TRNSFM_CD,DECIMAL[2],Transformation Type Code,"See code list TRNSFM_CD; 50 = failure with government assistance"

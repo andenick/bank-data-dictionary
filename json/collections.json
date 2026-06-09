@@ -1,0 +1,1816 @@
+{
+  "FR Y-9C": {
+    "name": "Consolidated Financial Statements for Holding Companies",
+    "regulator": "Federal Reserve",
+    "filer": "Top-tier BHCs, SLHCs, IHCs and SHCs with total consolidated assets of $3 billion or more",
+    "frequency": "Quarterly",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [
+      "BHCK",
+      "BHDM",
+      "BHCT",
+      "BHCA",
+      "BHCM"
+    ],
+    "omb_number": "7100-0128",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-9C",
+    "schedule_count": 24,
+    "schedules": [
+      {
+        "id": "HI",
+        "title": "Consolidated Income Statement"
+      },
+      {
+        "id": "HI-A",
+        "title": "Changes in Holding Company Equity Capital"
+      },
+      {
+        "id": "HI-B Part I",
+        "title": "Charge-Offs and Recoveries on Loans and Leases"
+      },
+      {
+        "id": "HI-B Part II",
+        "title": "Changes in Allowances for Credit Losses"
+      },
+      {
+        "id": "HI-C",
+        "title": "Disaggregated Data on the Allowance for Loan and Lease Losses"
+      },
+      {
+        "id": "HC",
+        "title": "Consolidated Balance Sheet"
+      },
+      {
+        "id": "HC-B",
+        "title": "Securities"
+      },
+      {
+        "id": "HC-C",
+        "title": "Loans and Lease Financing Receivables"
+      },
+      {
+        "id": "HC-D",
+        "title": "Trading Assets and Liabilities"
+      },
+      {
+        "id": "HC-E",
+        "title": "Deposit Liabilities"
+      },
+      {
+        "id": "HC-F",
+        "title": "Other Assets"
+      },
+      {
+        "id": "HC-G",
+        "title": "Other Liabilities"
+      },
+      {
+        "id": "HC-H",
+        "title": "Interest Sensitivity"
+      },
+      {
+        "id": "HC-I",
+        "title": "Insurance-Related Underwriting Activities (Including Reinsurance)"
+      },
+      {
+        "id": "HC-K",
+        "title": "Quarterly Averages"
+      },
+      {
+        "id": "HC-L",
+        "title": "Derivatives and Off-Balance-Sheet Items"
+      },
+      {
+        "id": "HC-M",
+        "title": "Memoranda"
+      },
+      {
+        "id": "HC-N",
+        "title": "Past Due and Nonaccrual Loans, Leases, and Other Assets"
+      },
+      {
+        "id": "HC-P",
+        "title": "Closed-End 1-4 Family Residential Mortgage Banking Activities"
+      },
+      {
+        "id": "HC-Q",
+        "title": "Financial Assets and Liabilities Measured at Fair Value"
+      },
+      {
+        "id": "HC-R Part I",
+        "title": "Regulatory Capital - Components and Ratios"
+      },
+      {
+        "id": "HC-R Part II",
+        "title": "Regulatory Capital - Risk-Weighted Assets"
+      },
+      {
+        "id": "HC-S",
+        "title": "Servicing, Securitization, and Asset Sale Activities"
+      },
+      {
+        "id": "HC-V",
+        "title": "Variable Interest Entities"
+      }
+    ]
+  },
+  "FR Y-9LP": {
+    "name": "Parent Company Only Financial Statements for Large Holding Companies",
+    "regulator": "Federal Reserve",
+    "filer": "Parent of each top-tier holding company that files the FR Y-9C (one per Y-9C filer per tier)",
+    "frequency": "Quarterly",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [
+      "BHCP"
+    ],
+    "omb_number": "7100-0128",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-9LP",
+    "schedule_count": 5,
+    "schedules": [
+      {
+        "id": "PI",
+        "title": "Parent Company Only Income Statement"
+      },
+      {
+        "id": "PI-A",
+        "title": "Cash Flow Statement"
+      },
+      {
+        "id": "PC",
+        "title": "Parent Company Only Balance Sheet"
+      },
+      {
+        "id": "PC-A",
+        "title": "Investments in Subsidiaries and Associated Companies"
+      },
+      {
+        "id": "PC-B",
+        "title": "Memoranda"
+      }
+    ]
+  },
+  "FR Y-9SP": {
+    "name": "Parent Company Only Financial Statements for Small Holding Companies",
+    "regulator": "Federal Reserve",
+    "filer": "Top-tier domestic BHCs, SLHCs and SHCs with total consolidated assets of less than $3 billion",
+    "frequency": "Semiannual",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [
+      "BHSP"
+    ],
+    "omb_number": "7100-0128",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-9SP",
+    "schedule_count": 4,
+    "schedules": [
+      {
+        "id": "(1)",
+        "title": "Income Statement"
+      },
+      {
+        "id": "(2)",
+        "title": "Balance Sheet"
+      },
+      {
+        "id": "(3)",
+        "title": "Memoranda"
+      },
+      {
+        "id": "(4)",
+        "title": "Notes to the Financial Statements"
+      }
+    ]
+  },
+  "FR Y-9ES": {
+    "name": "Financial Statements for Employee Stock Ownership Plan Holding Companies",
+    "regulator": "Federal Reserve",
+    "filer": "All ESOP bank holding companies and ESOP savings-and-loan holding companies",
+    "frequency": "Annual",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [
+      "ESOP"
+    ],
+    "omb_number": "7100-0128",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-9ES",
+    "schedule_count": 4,
+    "schedules": [
+      {
+        "id": "(1)",
+        "title": "Statement of Changes in Net Assets Available for Benefits"
+      },
+      {
+        "id": "(2)",
+        "title": "Statement of Net Assets Available for Benefits"
+      },
+      {
+        "id": "(3)",
+        "title": "Memoranda"
+      },
+      {
+        "id": "(4)",
+        "title": "Notes to the Financial Statements"
+      }
+    ]
+  },
+  "FR Y-9CS": {
+    "name": "Supplement to the Consolidated Financial Statements for Holding Companies",
+    "regulator": "Federal Reserve",
+    "filer": "Domestic BHCs, SLHCs, IHCs and SHCs filing the FR Y-9C or FR Y-9SP, as designated when activated",
+    "frequency": "Quarterly or semiannual when activated",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0128",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-9CS",
+    "schedule_count": 1,
+    "schedules": [
+      {
+        "id": "—",
+        "title": "Supplement (no fixed schedules)"
+      }
+    ]
+  },
+  "FFIEC 031": {
+    "name": "Consolidated Reports of Condition and Income (banks with domestic and foreign offices)",
+    "regulator": "FFIEC (collected by FDIC/Federal Reserve/OCC)",
+    "filer": "Banks of any size with a foreign office; also domestic-only advanced-approaches banks or banks with total assets of $100 billion or more",
+    "frequency": "Quarterly",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [
+      "RCFD",
+      "RCON",
+      "RCFN",
+      "RIAD",
+      "RCFA"
+    ],
+    "omb_number": "",
+    "official_url": "https://www.ffiec.gov/resources/reporting-forms/ffiec031",
+    "schedule_count": 30,
+    "schedules": [
+      {
+        "id": "RI",
+        "title": "Income Statement"
+      },
+      {
+        "id": "RI-A",
+        "title": "Changes in (Bank) Equity Capital"
+      },
+      {
+        "id": "RI-B Part I",
+        "title": "Charge-offs and Recoveries on Loans and Leases"
+      },
+      {
+        "id": "RI-B Part II",
+        "title": "Changes in Allowances for Credit Losses"
+      },
+      {
+        "id": "RI-C",
+        "title": "Disaggregated Data on the Allowance for Loan and Lease Losses"
+      },
+      {
+        "id": "RI-D",
+        "title": "Income from Foreign Offices"
+      },
+      {
+        "id": "RI-E",
+        "title": "Explanations"
+      },
+      {
+        "id": "RC",
+        "title": "Balance Sheet"
+      },
+      {
+        "id": "RC-A",
+        "title": "Cash and Balances Due from Depository Institutions"
+      },
+      {
+        "id": "RC-B",
+        "title": "Securities"
+      },
+      {
+        "id": "RC-C Part I",
+        "title": "Loans and Lease Financing Receivables"
+      },
+      {
+        "id": "RC-C Part II",
+        "title": "Loans to Small Businesses and Small Farms"
+      },
+      {
+        "id": "RC-D",
+        "title": "Trading Assets and Liabilities"
+      },
+      {
+        "id": "RC-E",
+        "title": "Deposit Liabilities"
+      },
+      {
+        "id": "RC-F",
+        "title": "Other Assets"
+      },
+      {
+        "id": "RC-G",
+        "title": "Other Liabilities"
+      },
+      {
+        "id": "RC-H",
+        "title": "Selected Balance Sheet Items for Domestic Offices"
+      },
+      {
+        "id": "RC-I",
+        "title": "Assets and Liabilities of IBFs"
+      },
+      {
+        "id": "RC-K",
+        "title": "Quarterly Averages"
+      },
+      {
+        "id": "RC-L",
+        "title": "Derivatives and Off-Balance-Sheet Items"
+      },
+      {
+        "id": "RC-M",
+        "title": "Memoranda"
+      },
+      {
+        "id": "RC-N",
+        "title": "Past Due and Nonaccrual Loans, Leases, and Other Assets"
+      },
+      {
+        "id": "RC-O",
+        "title": "Other Data for Deposit Insurance Assessments"
+      },
+      {
+        "id": "RC-P",
+        "title": "1-4 Family Residential Mortgage Banking Activities"
+      },
+      {
+        "id": "RC-Q",
+        "title": "Assets and Liabilities Measured at Fair Value on a Recurring Basis"
+      },
+      {
+        "id": "RC-R Part I",
+        "title": "Regulatory Capital - Components and Ratios"
+      },
+      {
+        "id": "RC-R Part II",
+        "title": "Regulatory Capital - Risk-Weighted Assets"
+      },
+      {
+        "id": "RC-S",
+        "title": "Servicing, Securitization, and Asset Sale Activities"
+      },
+      {
+        "id": "RC-T",
+        "title": "Fiduciary and Related Services"
+      },
+      {
+        "id": "RC-V",
+        "title": "Variable Interest Entities"
+      }
+    ]
+  },
+  "FFIEC 041": {
+    "name": "Consolidated Reports of Condition and Income (banks with domestic offices only)",
+    "regulator": "FFIEC (collected by FDIC/Federal Reserve/OCC)",
+    "filer": "Banks with domestic offices only and total consolidated assets of less than $100 billion that are not advanced-approaches institutions",
+    "frequency": "Quarterly",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [
+      "RCON",
+      "RCFD",
+      "RIAD",
+      "RCOA"
+    ],
+    "omb_number": "",
+    "official_url": "https://www.ffiec.gov/resources/reporting-forms/ffiec041",
+    "schedule_count": 27,
+    "schedules": [
+      {
+        "id": "RI",
+        "title": "Income Statement"
+      },
+      {
+        "id": "RI-A",
+        "title": "Changes in (Bank) Equity Capital"
+      },
+      {
+        "id": "RI-B Part I",
+        "title": "Charge-offs and Recoveries on Loans and Leases"
+      },
+      {
+        "id": "RI-B Part II",
+        "title": "Changes in Allowances for Credit Losses"
+      },
+      {
+        "id": "RI-C",
+        "title": "Disaggregated Data on the Allowance for Loan and Lease Losses"
+      },
+      {
+        "id": "RI-E",
+        "title": "Explanations"
+      },
+      {
+        "id": "RC",
+        "title": "Balance Sheet"
+      },
+      {
+        "id": "RC-A",
+        "title": "Cash and Balances Due from Depository Institutions"
+      },
+      {
+        "id": "RC-B",
+        "title": "Securities"
+      },
+      {
+        "id": "RC-C Part I",
+        "title": "Loans and Lease Financing Receivables"
+      },
+      {
+        "id": "RC-C Part II",
+        "title": "Loans to Small Businesses and Small Farms"
+      },
+      {
+        "id": "RC-D",
+        "title": "Trading Assets and Liabilities"
+      },
+      {
+        "id": "RC-E",
+        "title": "Deposit Liabilities"
+      },
+      {
+        "id": "RC-F",
+        "title": "Other Assets"
+      },
+      {
+        "id": "RC-G",
+        "title": "Other Liabilities"
+      },
+      {
+        "id": "RC-K",
+        "title": "Quarterly Averages"
+      },
+      {
+        "id": "RC-L",
+        "title": "Derivatives and Off-Balance-Sheet Items"
+      },
+      {
+        "id": "RC-M",
+        "title": "Memoranda"
+      },
+      {
+        "id": "RC-N",
+        "title": "Past Due and Nonaccrual Loans, Leases, and Other Assets"
+      },
+      {
+        "id": "RC-O",
+        "title": "Other Data for Deposit Insurance Assessments"
+      },
+      {
+        "id": "RC-P",
+        "title": "1-4 Family Residential Mortgage Banking Activities"
+      },
+      {
+        "id": "RC-Q",
+        "title": "Assets and Liabilities Measured at Fair Value on a Recurring Basis"
+      },
+      {
+        "id": "RC-R Part I",
+        "title": "Regulatory Capital - Components and Ratios"
+      },
+      {
+        "id": "RC-R Part II",
+        "title": "Regulatory Capital - Risk-Weighted Assets"
+      },
+      {
+        "id": "RC-S",
+        "title": "Servicing, Securitization, and Asset Sale Activities"
+      },
+      {
+        "id": "RC-T",
+        "title": "Fiduciary and Related Services"
+      },
+      {
+        "id": "RC-V",
+        "title": "Variable Interest Entities"
+      }
+    ]
+  },
+  "FFIEC 051": {
+    "name": "Consolidated Reports of Condition and Income (streamlined report for small domestic banks)",
+    "regulator": "FFIEC (collected by FDIC/Federal Reserve/OCC)",
+    "filer": "Banks with domestic offices only and total assets of less than $5 billion (excluding advanced-approaches/Category III and large/highly-complex assessment filers)",
+    "frequency": "Quarterly",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [
+      "RCON",
+      "RIAD",
+      "RCOA"
+    ],
+    "omb_number": "",
+    "official_url": "https://www.ffiec.gov/resources/reporting-forms/ffiec051",
+    "schedule_count": 22,
+    "schedules": [
+      {
+        "id": "RI",
+        "title": "Income Statement"
+      },
+      {
+        "id": "RI-A",
+        "title": "Changes in (Bank) Equity Capital"
+      },
+      {
+        "id": "RI-B Part I",
+        "title": "Charge-offs and Recoveries on Loans and Leases"
+      },
+      {
+        "id": "RI-B Part II",
+        "title": "Changes in Allowances for Credit Losses"
+      },
+      {
+        "id": "RI-C",
+        "title": "Disaggregated Data on the Allowance for Loan and Lease Losses"
+      },
+      {
+        "id": "RI-E",
+        "title": "Explanations"
+      },
+      {
+        "id": "RC",
+        "title": "Balance Sheet"
+      },
+      {
+        "id": "RC-B",
+        "title": "Securities"
+      },
+      {
+        "id": "RC-C Part I",
+        "title": "Loans and Lease Financing Receivables"
+      },
+      {
+        "id": "RC-C Part II",
+        "title": "Loans to Small Businesses and Small Farms"
+      },
+      {
+        "id": "RC-E",
+        "title": "Deposit Liabilities"
+      },
+      {
+        "id": "RC-F",
+        "title": "Other Assets"
+      },
+      {
+        "id": "RC-G",
+        "title": "Other Liabilities"
+      },
+      {
+        "id": "RC-K",
+        "title": "Quarterly Averages"
+      },
+      {
+        "id": "RC-L",
+        "title": "Derivatives and Off-Balance-Sheet Items"
+      },
+      {
+        "id": "RC-M",
+        "title": "Memoranda"
+      },
+      {
+        "id": "RC-N",
+        "title": "Past Due and Nonaccrual Loans, Leases, and Other Assets"
+      },
+      {
+        "id": "RC-O",
+        "title": "Other Data for Deposit Insurance Assessments"
+      },
+      {
+        "id": "RC-R Part I",
+        "title": "Regulatory Capital - Components and Ratios"
+      },
+      {
+        "id": "RC-R Part II",
+        "title": "Regulatory Capital - Risk-Weighted Assets"
+      },
+      {
+        "id": "RC-T",
+        "title": "Fiduciary and Related Services"
+      },
+      {
+        "id": "SU",
+        "title": "Supplemental Information"
+      }
+    ]
+  },
+  "FFIEC 002": {
+    "name": "Report of Assets and Liabilities of U.S. Branches and Agencies of Foreign Banks",
+    "regulator": "FFIEC",
+    "filer": "All US branches and agencies of foreign (and Puerto Rican) banks, federally or state licensed, insured or uninsured, including their IBFs",
+    "frequency": "Quarterly",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0032",
+    "official_url": "https://www.ffiec.gov/resources/reporting-forms/ffiec002",
+    "schedule_count": 10,
+    "schedules": [
+      {
+        "id": "RAL",
+        "title": "Assets and Liabilities"
+      },
+      {
+        "id": "A",
+        "title": "Cash and Balances Due from Depository Institutions"
+      },
+      {
+        "id": "C",
+        "title": "Loans"
+      },
+      {
+        "id": "E",
+        "title": "Deposit Liabilities and Credit Balances"
+      },
+      {
+        "id": "K",
+        "title": "Quarterly Averages"
+      },
+      {
+        "id": "L",
+        "title": "Derivatives and Off-Balance-Sheet Items"
+      },
+      {
+        "id": "M",
+        "title": "Due from / Due to Related Institutions in the U.S. and in Foreign Countries"
+      },
+      {
+        "id": "N",
+        "title": "Past Due, Nonaccrual, and Restructured Loans"
+      },
+      {
+        "id": "O",
+        "title": "Other Data for Deposit Insurance Assessments"
+      },
+      {
+        "id": "P",
+        "title": "Other Borrowed Money"
+      }
+    ]
+  },
+  "FFIEC 002S": {
+    "name": "Report of Assets and Liabilities of a Non-U.S. Branch Managed or Controlled by a U.S. Branch or Agency of a Foreign Bank",
+    "regulator": "FFIEC",
+    "filer": "Any US branch/agency filing the FFIEC 002 that manages or controls one or more non-US branches of its parent bank",
+    "frequency": "Quarterly",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0032",
+    "official_url": "https://www.ffiec.gov/resources/reporting-forms/ffiec002s",
+    "schedule_count": 1,
+    "schedules": [
+      {
+        "id": "002S",
+        "title": "Report of a Non-U.S. Branch Managed or Controlled by a U.S. Branch or Agency"
+      }
+    ]
+  },
+  "FFIEC 009": {
+    "name": "Country Exposure Report",
+    "regulator": "FFIEC",
+    "filer": "US commercial banks, savings associations, bank/SLHC and IHCs with $30 million or more in total claims on residents of foreign countries",
+    "frequency": "Quarterly",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0035",
+    "official_url": "https://www.ffiec.gov/resources/reporting-forms/ffiec009",
+    "schedule_count": 4,
+    "schedules": [
+      {
+        "id": "C Part I",
+        "title": "Claims by country (immediate-counterparty basis with redistribution to ultimate-risk basis)"
+      },
+      {
+        "id": "C Part II",
+        "title": "Additional claims detail / memoranda"
+      },
+      {
+        "id": "1/1.a",
+        "title": "Foreign-Office Liabilities by Country of Foreign Office and by Country of Creditor"
+      },
+      {
+        "id": "2",
+        "title": "Derivatives and foreign-office detail"
+      }
+    ]
+  },
+  "FFIEC 009a": {
+    "name": "Country Exposure Information Report",
+    "regulator": "FFIEC",
+    "filer": "Same filers as FFIEC 009 with material foreign-country exposures (over 1% of assets or 20% of capital)",
+    "frequency": "Quarterly",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0035",
+    "official_url": "https://www.ffiec.gov/resources/reporting-forms/ffiec009",
+    "schedule_count": 2,
+    "schedules": [
+      {
+        "id": "Part A",
+        "title": "Country exposures meeting the disclosure threshold"
+      },
+      {
+        "id": "Part B",
+        "title": "List of additional countries (lower band)"
+      }
+    ]
+  },
+  "FFIEC 101": {
+    "name": "Regulatory Capital Reporting for Institutions Subject to the Advanced Capital Adequacy Framework",
+    "regulator": "FFIEC",
+    "filer": "Banks, savings associations, BHCs and SLHCs subject to the Advanced Capital Adequacy Framework (generally >= $250B assets or >= $10B foreign exposure) plus their depository subsidiaries",
+    "frequency": "Quarterly",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0319 / 1557-0239 / 3064-0159",
+    "official_url": "https://www.ffiec.gov/resources/reporting-forms/ffiec101",
+    "schedule_count": 19,
+    "schedules": [
+      {
+        "id": "A",
+        "title": "Advanced Approaches Regulatory Capital"
+      },
+      {
+        "id": "B",
+        "title": "Summary Risk-Weighted Asset Information"
+      },
+      {
+        "id": "C",
+        "title": "Wholesale Exposures - Corporate"
+      },
+      {
+        "id": "D",
+        "title": "Wholesale Exposures - Bank"
+      },
+      {
+        "id": "E",
+        "title": "Wholesale Exposures - Sovereign"
+      },
+      {
+        "id": "F",
+        "title": "Wholesale Exposures - Income-Producing Real Estate (IPRE)"
+      },
+      {
+        "id": "G",
+        "title": "Wholesale Exposures - High Volatility Commercial Real Estate (HVCRE)"
+      },
+      {
+        "id": "H",
+        "title": "Wholesale - Eligible Margin Loans/Repo-Style/OTC Derivatives and netting sets (part 1)"
+      },
+      {
+        "id": "I",
+        "title": "Wholesale - Eligible Margin Loans/Repo-Style/OTC Derivatives (part 2)"
+      },
+      {
+        "id": "J",
+        "title": "Wholesale - Combinations subject to qualifying master netting (part 3)"
+      },
+      {
+        "id": "K",
+        "title": "Retail Exposures - Residential Mortgage - Closed-end First Lien"
+      },
+      {
+        "id": "L",
+        "title": "Retail Exposures - Residential Mortgage - Closed-end Junior Lien"
+      },
+      {
+        "id": "M",
+        "title": "Retail Exposures - Residential Mortgage - Revolving (HELOC)"
+      },
+      {
+        "id": "N",
+        "title": "Retail Exposures - Qualifying Revolving Exposures (QRE)"
+      },
+      {
+        "id": "O",
+        "title": "Retail Exposures - Other Retail"
+      },
+      {
+        "id": "P",
+        "title": "Securitization Exposures"
+      },
+      {
+        "id": "Q",
+        "title": "Cleared Transactions"
+      },
+      {
+        "id": "R",
+        "title": "Equity Exposures"
+      },
+      {
+        "id": "S",
+        "title": "Operational Risk"
+      }
+    ]
+  },
+  "FFIEC 102": {
+    "name": "Market Risk Regulatory Report for Institutions Subject to the Market Risk Capital Rule",
+    "regulator": "FFIEC",
+    "filer": "Banks/BHCs/SLHCs subject to the market-risk capital rule (generally trading assets+liabilities >= $1B or >= 10% of total assets)",
+    "frequency": "Quarterly",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0365 / 1557-0325 / 3064-0199",
+    "official_url": "https://www.ffiec.gov/resources/reporting-forms/ffiec102",
+    "schedule_count": 8,
+    "schedules": [
+      {
+        "id": "§1",
+        "title": "VaR-Based Measure"
+      },
+      {
+        "id": "§2",
+        "title": "Stressed VaR-Based Measure"
+      },
+      {
+        "id": "§3",
+        "title": "Specific Risk Add-Ons"
+      },
+      {
+        "id": "§4",
+        "title": "Incremental Risk Capital (IRC)"
+      },
+      {
+        "id": "§5",
+        "title": "Comprehensive Risk Measure (CRM)"
+      },
+      {
+        "id": "§6",
+        "title": "Standardized Measurement Method / De Minimis Positions"
+      },
+      {
+        "id": "§7",
+        "title": "Market Risk Weighted Assets"
+      },
+      {
+        "id": "§M",
+        "title": "Memoranda"
+      }
+    ]
+  },
+  "FR Y-7": {
+    "name": "Annual Report of Foreign Banking Organizations",
+    "regulator": "Federal Reserve",
+    "filer": "Each FBO engaged in banking in the US through a subsidiary bank, Edge/agreement corporation, commercial-lending company, or its own branches/agencies",
+    "frequency": "Annual",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0125",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-7",
+    "schedule_count": 0,
+    "schedules": []
+  },
+  "FR Y-7N": {
+    "name": "Financial Statements of U.S. Nonbank Subsidiaries Held by Foreign Banking Organizations",
+    "regulator": "Federal Reserve",
+    "filer": "FBOs, per US nonbank subsidiary, by asset-size thresholds",
+    "frequency": "Quarterly or annual",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0073",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-7NFR_Y-7NS",
+    "schedule_count": 6,
+    "schedules": [
+      {
+        "id": "BS",
+        "title": "Balance Sheet"
+      },
+      {
+        "id": "BS-A",
+        "title": "Loans and Lease Financing Receivables"
+      },
+      {
+        "id": "BS-M",
+        "title": "Memoranda"
+      },
+      {
+        "id": "IS",
+        "title": "Income Statement"
+      },
+      {
+        "id": "IS-A",
+        "title": "Changes in Equity Capital"
+      },
+      {
+        "id": "IS-B",
+        "title": "Changes in Allowance for Credit Losses"
+      }
+    ]
+  },
+  "FR Y-7NS": {
+    "name": "Abbreviated Financial Statements of U.S. Nonbank Subsidiaries Held by Foreign Banking Organizations",
+    "regulator": "Federal Reserve",
+    "filer": "FBOs with US nonbank subsidiaries of assets $250M-$500M",
+    "frequency": "Annual",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0073",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-7NFR_Y-7NS",
+    "schedule_count": 0,
+    "schedules": []
+  },
+  "FR Y-7Q": {
+    "name": "Capital and Asset Report for Foreign Banking Organizations",
+    "regulator": "Federal Reserve",
+    "filer": "All FBOs with US banking operations",
+    "frequency": "Quarterly (FHC FBOs) or annual",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0125",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-7Q",
+    "schedule_count": 0,
+    "schedules": []
+  },
+  "FR Y-10": {
+    "name": "Report of Changes in Organizational Structure",
+    "regulator": "Federal Reserve",
+    "filer": "Top-tier BHCs/FHCs, top-tier SLHCs, state member banks not controlled by a BHC/FBO, Edge and agreement corporations, FBOs, and SHCs",
+    "frequency": "Event-based (within 30 days)",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0297",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-10",
+    "schedule_count": 8,
+    "schedules": [
+      {
+        "id": "1",
+        "title": "Banking"
+      },
+      {
+        "id": "2",
+        "title": "Savings and Loan Holding Company"
+      },
+      {
+        "id": "3",
+        "title": "Nonbanking"
+      },
+      {
+        "id": "4",
+        "title": "Merger"
+      },
+      {
+        "id": "5",
+        "title": "4(k)"
+      },
+      {
+        "id": "6",
+        "title": "Domestic Branch"
+      },
+      {
+        "id": "7",
+        "title": "Foreign Branches of U.S. Banking Organizations"
+      },
+      {
+        "id": "8",
+        "title": "Branch, Agency, and Representative Office"
+      }
+    ]
+  },
+  "FR Y-11": {
+    "name": "Financial Statements of U.S. Nonbank Subsidiaries of U.S. Holding Companies",
+    "regulator": "Federal Reserve",
+    "filer": "Top-tier holding companies, per nonbank subsidiary, by thresholds",
+    "frequency": "Quarterly or annual",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0244",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-11FR_Y-11S",
+    "schedule_count": 6,
+    "schedules": [
+      {
+        "id": "BS",
+        "title": "Balance Sheet"
+      },
+      {
+        "id": "BS-A",
+        "title": "Loans and Lease Financing Receivables"
+      },
+      {
+        "id": "BS-M",
+        "title": "Memoranda"
+      },
+      {
+        "id": "IS",
+        "title": "Income Statement"
+      },
+      {
+        "id": "IS-A",
+        "title": "Changes in Equity Capital"
+      },
+      {
+        "id": "IS-B",
+        "title": "Changes in Allowance for Credit Losses"
+      }
+    ]
+  },
+  "FR Y-11S": {
+    "name": "Abbreviated Financial Statements of U.S. Nonbank Subsidiaries of U.S. Holding Companies",
+    "regulator": "Federal Reserve",
+    "filer": "Top-tier holding companies with nonbank subsidiaries of assets $250M-$500M below quarterly criteria",
+    "frequency": "Annual",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0244",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-11FR_Y-11S",
+    "schedule_count": 0,
+    "schedules": []
+  },
+  "FR Y-12": {
+    "name": "Consolidated Holding Company Report of Equity Investments in Nonfinancial Companies",
+    "regulator": "Federal Reserve",
+    "filer": "Top-tier domestic holding companies that file the FR Y-9C or FR Y-9SP and meet the investment-size thresholds",
+    "frequency": "Quarterly or semiannual",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0300",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-12",
+    "schedule_count": 4,
+    "schedules": [
+      {
+        "id": "1",
+        "title": "Type of Investments"
+      },
+      {
+        "id": "2",
+        "title": "Type of Security"
+      },
+      {
+        "id": "3",
+        "title": "Type of Entity within the Banking Organization"
+      },
+      {
+        "id": "4",
+        "title": "Nonfinancial Investment Transactions During the Reporting Period"
+      }
+    ]
+  },
+  "FR Y-12A": {
+    "name": "Annual Report of Merchant Banking Investments Held for an Extended Period",
+    "regulator": "Federal Reserve",
+    "filer": "Financial holding companies holding nonfinancial merchant-banking investments beyond the routine holding period",
+    "frequency": "Annual",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0300",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-12A",
+    "schedule_count": 0,
+    "schedules": []
+  },
+  "FR Y-6": {
+    "name": "Annual Report of Holding Companies",
+    "regulator": "Federal Reserve",
+    "filer": "All top-tier holding companies (BHCs, SLHCs, SHCs; certain ESOPs; non-QFBO foreign organizations)",
+    "frequency": "Annual",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0124",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-6",
+    "schedule_count": 0,
+    "schedules": []
+  },
+  "FR Y-8": {
+    "name": "The Bank Holding Company Report of Insured Depository Institutions' Section 23A Transactions",
+    "regulator": "Federal Reserve",
+    "filer": "All top-tier US BHCs (incl. FHCs and IHCs), all SLHCs, and all FBOs that directly own a US subsidiary bank",
+    "frequency": "Quarterly",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0126",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-8",
+    "schedule_count": 0,
+    "schedules": []
+  },
+  "FR Y-14A": {
+    "name": "Capital Assessments and Stress Testing Report - Annual",
+    "regulator": "Federal Reserve",
+    "filer": "US BHCs, IHCs of foreign banking organizations, and covered SLHCs with total consolidated assets of $100 billion or more",
+    "frequency": "Annual",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0341",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14A",
+    "schedule_count": 6,
+    "schedules": [
+      {
+        "id": "A",
+        "title": "Summary"
+      },
+      {
+        "id": "B",
+        "title": "Macro Scenario"
+      },
+      {
+        "id": "C",
+        "title": "Regulatory Capital Instruments (RCI)"
+      },
+      {
+        "id": "D",
+        "title": "Regulatory Capital"
+      },
+      {
+        "id": "E",
+        "title": "Operational Risk"
+      },
+      {
+        "id": "F",
+        "title": "Business Plan Changes"
+      }
+    ]
+  },
+  "FR Y-14Q": {
+    "name": "Capital Assessments and Stress Testing Report - Quarterly",
+    "regulator": "Federal Reserve",
+    "filer": "US BHCs, IHCs, covered SLHCs with $100 billion or more in total consolidated assets",
+    "frequency": "Quarterly",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0341",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q",
+    "schedule_count": 12,
+    "schedules": [
+      {
+        "id": "A",
+        "title": "Retail"
+      },
+      {
+        "id": "B",
+        "title": "Securities"
+      },
+      {
+        "id": "C",
+        "title": "Regulatory Capital Instruments"
+      },
+      {
+        "id": "D",
+        "title": "Regulatory Capital"
+      },
+      {
+        "id": "E",
+        "title": "Operational Risk"
+      },
+      {
+        "id": "F",
+        "title": "Trading"
+      },
+      {
+        "id": "G",
+        "title": "PPNR"
+      },
+      {
+        "id": "H",
+        "title": "Wholesale"
+      },
+      {
+        "id": "J",
+        "title": "Retail Fair Value Option / Held-for-Sale (FVO/HFS)"
+      },
+      {
+        "id": "K",
+        "title": "Supplemental"
+      },
+      {
+        "id": "L",
+        "title": "Counterparty"
+      },
+      {
+        "id": "M",
+        "title": "Balances"
+      }
+    ]
+  },
+  "FR Y-14M": {
+    "name": "Capital Assessments and Stress Testing Report - Monthly",
+    "regulator": "Federal Reserve",
+    "filer": "US BHCs, IHCs, covered SLHCs with $100 billion or more in total consolidated assets that hold the relevant portfolios",
+    "frequency": "Monthly",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0341",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M",
+    "schedule_count": 4,
+    "schedules": [
+      {
+        "id": "A",
+        "title": "Domestic First Lien Closed-end 1-4 Family Residential Loan"
+      },
+      {
+        "id": "B",
+        "title": "Domestic Home Equity Loan and Home Equity Line"
+      },
+      {
+        "id": "C",
+        "title": "Address Matching Loan-Level Data Collection"
+      },
+      {
+        "id": "D",
+        "title": "Domestic Credit Card Data Collection"
+      }
+    ]
+  },
+  "FR Y-15": {
+    "name": "Banking Organization Systemic Risk Report",
+    "regulator": "Federal Reserve",
+    "filer": "US BHCs and covered SLHCs >= $100B; FBOs with combined US assets >= $100B; and US firms designated as G-SIBs",
+    "frequency": "Quarterly",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0352",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-15",
+    "schedule_count": 7,
+    "schedules": [
+      {
+        "id": "A",
+        "title": "Size Indicator"
+      },
+      {
+        "id": "B",
+        "title": "Interconnectedness Indicators"
+      },
+      {
+        "id": "C",
+        "title": "Substitutability Indicators"
+      },
+      {
+        "id": "D",
+        "title": "Complexity Indicators"
+      },
+      {
+        "id": "E",
+        "title": "Cross-Jurisdictional Activity Indicators"
+      },
+      {
+        "id": "F",
+        "title": "Ancillary Indicators"
+      },
+      {
+        "id": "G",
+        "title": "Short-Term Wholesale Funding (STWF) Indicator"
+      }
+    ]
+  },
+  "FR 2052a": {
+    "name": "Complex Institution Liquidity Monitoring Report",
+    "regulator": "Federal Reserve",
+    "filer": "Large banking organizations subject to LCR/NSFR - primarily Category I-III firms",
+    "frequency": "Daily (largest) or monthly",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0361",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_2052a",
+    "schedule_count": 13,
+    "schedules": [
+      {
+        "id": "I.A",
+        "title": "Inflows - Assets"
+      },
+      {
+        "id": "I.S",
+        "title": "Inflows - Secured"
+      },
+      {
+        "id": "I.U",
+        "title": "Inflows - Unsecured"
+      },
+      {
+        "id": "I.O",
+        "title": "Inflows - Other"
+      },
+      {
+        "id": "O.D",
+        "title": "Outflows - Deposits"
+      },
+      {
+        "id": "O.S",
+        "title": "Outflows - Secured"
+      },
+      {
+        "id": "O.W",
+        "title": "Outflows - Wholesale"
+      },
+      {
+        "id": "O.O",
+        "title": "Outflows - Other"
+      },
+      {
+        "id": "S.I",
+        "title": "Supplemental - Informational"
+      },
+      {
+        "id": "S.DC",
+        "title": "Supplemental - Derivatives and Collateral"
+      },
+      {
+        "id": "S.FX",
+        "title": "Supplemental - Foreign Exchange"
+      },
+      {
+        "id": "S.B",
+        "title": "Supplemental - Balance Sheet"
+      },
+      {
+        "id": "S.L",
+        "title": "Supplemental - Liquidity Risk Measurement (LRM)"
+      }
+    ]
+  },
+  "FR 2900": {
+    "name": "Report of Transaction Accounts, Other Deposits, and Vault Cash",
+    "regulator": "Federal Reserve",
+    "filer": "Depository institutions (commercial banks, savings institutions, credit unions, US branches/agencies of foreign banks) under Regulation D",
+    "frequency": "Weekly or quarterly",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [],
+    "omb_number": "7100-0087",
+    "official_url": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_2900_(Commercial_Banks)",
+    "schedule_count": 0,
+    "schedules": []
+  },
+  "Pillar 3": {
+    "name": "Basel III Public Disclosure Templates and Tables",
+    "regulator": "Basel Committee on Banking Supervision (BIS); US disclosures via FFIEC 101/102 and the market-risk rule",
+    "filer": "Internationally large/advanced banks; in the US, advanced-approaches and market-risk-rule institutions",
+    "frequency": "Mixed (quarterly/semiannual/annual by template)",
+    "primary_identifier": "N/A",
+    "mdrm_prefixes": [],
+    "omb_number": "",
+    "official_url": "https://www.bis.org/bcbs/publ/d455.pdf",
+    "schedule_count": 77,
+    "schedules": [
+      {
+        "id": "OVA",
+        "title": "Overview of risk management"
+      },
+      {
+        "id": "KM1",
+        "title": "Key metrics"
+      },
+      {
+        "id": "KM2",
+        "title": "Key metrics - TLAC"
+      },
+      {
+        "id": "OV1",
+        "title": "Overview of RWA"
+      },
+      {
+        "id": "LI1",
+        "title": "Differences between accounting and regulatory scopes of consolidation"
+      },
+      {
+        "id": "LI2",
+        "title": "Main sources of differences (regulatory exposure vs carrying values)"
+      },
+      {
+        "id": "LIA",
+        "title": "Explanations of differences between accounting and regulatory exposure amounts"
+      },
+      {
+        "id": "PV1",
+        "title": "Prudent valuation adjustments"
+      },
+      {
+        "id": "CC1",
+        "title": "Composition of regulatory capital"
+      },
+      {
+        "id": "CC2",
+        "title": "Reconciliation of regulatory capital to balance sheet"
+      },
+      {
+        "id": "CCA",
+        "title": "Main features of regulatory capital instruments"
+      },
+      {
+        "id": "CDC",
+        "title": "Capital distribution constraints"
+      },
+      {
+        "id": "TLAC1",
+        "title": "TLAC composition (resolution group)"
+      },
+      {
+        "id": "TLAC2",
+        "title": "Creditor ranking - subordinated TLAC"
+      },
+      {
+        "id": "TLAC3",
+        "title": "Creditor ranking - resolution entity"
+      },
+      {
+        "id": "GSIB1",
+        "title": "G-SIB indicators"
+      },
+      {
+        "id": "CCyB1",
+        "title": "Geographical distribution of credit exposures (countercyclical buffer)"
+      },
+      {
+        "id": "LR1",
+        "title": "Summary comparison of accounting assets vs leverage-ratio exposure"
+      },
+      {
+        "id": "LR2",
+        "title": "Leverage ratio common disclosure"
+      },
+      {
+        "id": "LIQA",
+        "title": "Liquidity risk management"
+      },
+      {
+        "id": "LIQ1",
+        "title": "Liquidity Coverage Ratio (LCR)"
+      },
+      {
+        "id": "LIQ2",
+        "title": "Net Stable Funding Ratio (NSFR)"
+      },
+      {
+        "id": "CRA",
+        "title": "General qualitative information about credit risk"
+      },
+      {
+        "id": "CR1",
+        "title": "Credit quality of exposures"
+      },
+      {
+        "id": "CR2",
+        "title": "Changes in defaulted loans and debt securities"
+      },
+      {
+        "id": "CRB",
+        "title": "Additional disclosure related to credit quality of assets"
+      },
+      {
+        "id": "CRB-A",
+        "title": "Additional disclosure - prudential treatment of problem assets"
+      },
+      {
+        "id": "CRC",
+        "title": "Qualitative disclosures - credit risk mitigation (CRM)"
+      },
+      {
+        "id": "CR3",
+        "title": "Credit risk mitigation techniques - overview"
+      },
+      {
+        "id": "CRD",
+        "title": "Qualitative disclosures - use of ECAI ratings (standardized)"
+      },
+      {
+        "id": "CR4",
+        "title": "Standardized approach - credit-risk exposure and CRM effects"
+      },
+      {
+        "id": "CR5",
+        "title": "Standardized approach - exposures by asset class and risk weight"
+      },
+      {
+        "id": "CRE",
+        "title": "Qualitative disclosures - IRB models"
+      },
+      {
+        "id": "CR6",
+        "title": "IRB - credit-risk exposures by portfolio and PD range"
+      },
+      {
+        "id": "CR7",
+        "title": "IRB - effect on RWA of credit derivatives used as CRM"
+      },
+      {
+        "id": "CR8",
+        "title": "RWA flow statement - IRB credit-risk exposures"
+      },
+      {
+        "id": "CR9",
+        "title": "IRB - back-testing of PD per portfolio"
+      },
+      {
+        "id": "CR10",
+        "title": "IRB - specialized lending (supervisory slotting)"
+      },
+      {
+        "id": "CCRA",
+        "title": "Qualitative disclosures - counterparty credit risk (CCR)"
+      },
+      {
+        "id": "CCR1",
+        "title": "Analysis of CCR exposure by approach"
+      },
+      {
+        "id": "CCR2",
+        "title": "CVA capital charge"
+      },
+      {
+        "id": "CCR3",
+        "title": "Standardized approach - CCR exposures by asset class and risk weight"
+      },
+      {
+        "id": "CCR4",
+        "title": "IRB - CCR exposures by portfolio and PD range"
+      },
+      {
+        "id": "CCR5",
+        "title": "Composition of collateral for CCR exposures"
+      },
+      {
+        "id": "CCR6",
+        "title": "Credit derivatives exposures"
+      },
+      {
+        "id": "CCR7",
+        "title": "RWA flow statement - CCR under IMM"
+      },
+      {
+        "id": "CCR8",
+        "title": "Exposures to central counterparties (CCPs)"
+      },
+      {
+        "id": "CVAA",
+        "title": "General qualitative disclosures - CVA risk"
+      },
+      {
+        "id": "CVA1",
+        "title": "Reduced basic approach for CVA (BA-CVA)"
+      },
+      {
+        "id": "CVA2",
+        "title": "Full basic approach for CVA (BA-CVA)"
+      },
+      {
+        "id": "CVAB",
+        "title": "Qualitative disclosures - banks using SA-CVA"
+      },
+      {
+        "id": "CVA3",
+        "title": "Standardized approach for CVA (SA-CVA)"
+      },
+      {
+        "id": "CVA4",
+        "title": "RWA flow statement - CVA under SA-CVA"
+      },
+      {
+        "id": "SECA",
+        "title": "Qualitative disclosures - securitization"
+      },
+      {
+        "id": "SEC1",
+        "title": "Securitization exposures in the banking book"
+      },
+      {
+        "id": "SEC2",
+        "title": "Securitization exposures in the trading book"
+      },
+      {
+        "id": "SEC3",
+        "title": "Securitization exposures (banking book) and capital - bank as originator"
+      },
+      {
+        "id": "SEC4",
+        "title": "Securitization exposures (banking book) and capital - bank as investor"
+      },
+      {
+        "id": "MRA",
+        "title": "Qualitative disclosures - market risk"
+      },
+      {
+        "id": "MRB",
+        "title": "Additional qualitative disclosures - banks using the internal models approach (IMA)"
+      },
+      {
+        "id": "MR1",
+        "title": "Market risk under the standardized approach"
+      },
+      {
+        "id": "MR2",
+        "title": "Market risk under IMA (RWA flow statement)"
+      },
+      {
+        "id": "MR3",
+        "title": "IMA values for trading portfolios"
+      },
+      {
+        "id": "MR4",
+        "title": "Comparison of VaR estimates with gains/losses (backtesting)"
+      },
+      {
+        "id": "ORA",
+        "title": "General qualitative information - operational-risk framework"
+      },
+      {
+        "id": "OR1",
+        "title": "Historical losses"
+      },
+      {
+        "id": "OR2",
+        "title": "Business indicator and subcomponents"
+      },
+      {
+        "id": "OR3",
+        "title": "Minimum required operational-risk capital"
+      },
+      {
+        "id": "IRRBBA",
+        "title": "Interest rate risk in the banking book - objectives and policies"
+      },
+      {
+        "id": "IRRBB1",
+        "title": "Quantitative information on IRRBB"
+      },
+      {
+        "id": "REMA",
+        "title": "Remuneration policy"
+      },
+      {
+        "id": "REM1",
+        "title": "Remuneration awarded during the financial year"
+      },
+      {
+        "id": "REM2",
+        "title": "Special payments"
+      },
+      {
+        "id": "REM3",
+        "title": "Deferred remuneration"
+      },
+      {
+        "id": "ENC",
+        "title": "Asset encumbrance"
+      },
+      {
+        "id": "CMS1",
+        "title": "Comparison of modelled and standardized RWA (full standardized)"
+      },
+      {
+        "id": "CMS2",
+        "title": "Comparison of modelled and standardized RWA for credit risk by asset class"
+      }
+    ]
+  },
+  "FDIC SDI": {
+    "name": "Statistics on Depository Institutions",
+    "regulator": "Federal Deposit Insurance Corporation",
+    "filer": "All FDIC-insured commercial banks and savings institutions (sourced from their Call Reports)",
+    "frequency": "Quarterly",
+    "primary_identifier": "FDIC Certificate number (CERT)",
+    "mdrm_prefixes": [],
+    "omb_number": "",
+    "official_url": "https://www.fdic.gov/node/118336",
+    "schedule_count": 0,
+    "schedules": []
+  },
+  "FDIC SOD": {
+    "name": "Summary of Deposits",
+    "regulator": "Federal Deposit Insurance Corporation (jointly with OCC for the survey)",
+    "filer": "All FDIC-insured institutions with branch offices, including insured US branches of foreign banks",
+    "frequency": "Annual (as of June 30)",
+    "primary_identifier": "FDIC Certificate number (CERT)",
+    "mdrm_prefixes": [],
+    "omb_number": "",
+    "official_url": "https://www.fdic.gov/bank-financial-reports/summary-deposits",
+    "schedule_count": 0,
+    "schedules": []
+  },
+  "FDIC Failures": {
+    "name": "Failures and Assistance Transactions (Research Information System / RIS)",
+    "regulator": "Federal Deposit Insurance Corporation",
+    "filer": "Failed and FDIC-assisted institutions (records back to the 1930s)",
+    "frequency": "Updated weekly",
+    "primary_identifier": "FDIC Certificate number (CERT)",
+    "mdrm_prefixes": [],
+    "omb_number": "",
+    "official_url": "https://www.fdic.gov/bank-failures/failed-bank-list",
+    "schedule_count": 0,
+    "schedules": []
+  },
+  "NCUA 5300": {
+    "name": "NCUA 5300 Call Report (Credit Unions) and Profile (FS220A)",
+    "regulator": "National Credit Union Administration",
+    "filer": "All federally insured credit unions (FICUs)",
+    "frequency": "Quarterly",
+    "primary_identifier": "NCUA Charter / ID number",
+    "mdrm_prefixes": [
+      "FS220"
+    ],
+    "omb_number": "",
+    "official_url": "https://ncua.gov/regulation-supervision/regulatory-reporting/cuonline/5300-call-report-faqs",
+    "schedule_count": 9,
+    "schedules": [
+      {
+        "id": "FS",
+        "title": "Statement of Financial Condition"
+      },
+      {
+        "id": "IS",
+        "title": "Statement of Income and Expense"
+      },
+      {
+        "id": "A",
+        "title": "Schedule A - Loans"
+      },
+      {
+        "id": "B",
+        "title": "Schedule B - Investments"
+      },
+      {
+        "id": "C",
+        "title": "Schedule C - Liquidity"
+      },
+      {
+        "id": "D",
+        "title": "Schedule D - Member/Deposit (Shares)"
+      },
+      {
+        "id": "G",
+        "title": "Schedule G - PCA Net-Worth Calculation"
+      },
+      {
+        "id": "H",
+        "title": "Schedule H - Complex Credit-Union Leverage Ratio"
+      },
+      {
+        "id": "I",
+        "title": "Schedule I - Risk-Based Capital Ratio"
+      }
+    ]
+  },
+  "OCC Historical": {
+    "name": "OCC Historical National Bank Reports (Annual Report of the Comptroller of the Currency)",
+    "regulator": "Office of the Comptroller of the Currency",
+    "filer": "National banks (federally chartered commercial banks) via periodic Reports of Condition, 1863-1941",
+    "frequency": "Annual / periodic (historical)",
+    "primary_identifier": "OCC Charter number",
+    "mdrm_prefixes": [],
+    "omb_number": "",
+    "official_url": "https://fraser.stlouisfed.org/title/annual-report-comptroller-currency-56",
+    "schedule_count": 0,
+    "schedules": []
+  },
+  "UBPR": {
+    "name": "Uniform Bank Performance Report",
+    "regulator": "FFIEC",
+    "filer": "All banks - items are computed/derived from each bank's Call Report (FFIEC 031/041/051), not directly filed",
+    "frequency": "Quarterly",
+    "primary_identifier": "RSSD ID",
+    "mdrm_prefixes": [
+      "UBPR"
+    ],
+    "omb_number": "",
+    "official_url": "https://www.ffiec.gov/data/ubpr/uniform-bank-performance-report",
+    "schedule_count": 0,
+    "schedules": []
+  },
+  "NIC/NPW": {
+    "name": "National Information Center / NPW Institutional-Structure Bulk Data",
+    "regulator": "Federal Reserve (FFIEC portal)",
+    "filer": "All entities the Fed tracks: banks, BHCs/FHCs, branches, savings institutions, holding-company tiers, some foreign and non-bank entities",
+    "frequency": "Refreshed regularly (as-of date per file)",
+    "primary_identifier": "RSSD ID (ID_RSSD)",
+    "mdrm_prefixes": [],
+    "omb_number": "",
+    "official_url": "https://www.ffiec.gov/NPW",
+    "schedule_count": 0,
+    "schedules": []
+  },
+  "SEC EDGAR": {
+    "name": "SEC EDGAR (bank holding company filings)",
+    "regulator": "U.S. Securities and Exchange Commission",
+    "filer": "Public bank holding companies and other registrants (10-K, 10-Q, 8-K, DEF 14A, XBRL)",
+    "frequency": "Event-based / periodic",
+    "primary_identifier": "CIK (Central Index Key)",
+    "mdrm_prefixes": [],
+    "omb_number": "",
+    "official_url": "https://www.sec.gov/edgar/search/",
+    "schedule_count": 0,
+    "schedules": []
+  },
+  "HMDA": {
+    "name": "Home Mortgage Disclosure Act Loan/Application Register (LAR)",
+    "regulator": "CFPB / FFIEC",
+    "filer": "Covered depository institutions (banks, savings associations, credit unions) and non-depository mortgage lenders meeting coverage tests",
+    "frequency": "Annual",
+    "primary_identifier": "LEI (2018-forward; pre-2018 Agency Code + Respondent ID)",
+    "mdrm_prefixes": [],
+    "omb_number": "",
+    "official_url": "https://ffiec.cfpb.gov",
+    "schedule_count": 0,
+    "schedules": []
+  },
+  "MDRM": {
+    "name": "Micro Data Reference Manual",
+    "regulator": "Federal Reserve",
+    "filer": "Meta-dictionary - defines the coded variables used across (nearly) every Fed/FFIEC reporting form",
+    "frequency": "N/A",
+    "primary_identifier": "N/A (8-char MDRM code = 4-char mnemonic + 4-char item)",
+    "mdrm_prefixes": [
+      "All prefixes"
+    ],
+    "omb_number": "",
+    "official_url": "https://www.federalreserve.gov/apps/mdrm/",
+    "schedule_count": 0,
+    "schedules": []
+  }
+}

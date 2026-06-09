@@ -17,12 +17,14 @@ The FFIEC 009 (Country Exposure Report) collects detailed information on the dis
 
 ## Key Schedules
 
+Claims are reported on an immediate-counterparty basis (country of the obligor) and redistributed to an ultimate-risk basis (country of the guarantor / collateral). The report comprises Schedule C plus the numbered schedules below.
+
 | Schedule | Description |
 |----------|-------------|
-| Schedule C | Claims on Unrelated Foreigners |
-| Schedule D | Derivative Claims |
-| Schedule L | Foreign Office Liabilities |
-| Schedule O | Off-Balance Sheet Items |
+| Schedule C — Part I | Claims by country (immediate-counterparty basis) with redistribution to ultimate-risk basis; cross-border and foreign-office claims on foreign residents by counterparty country and sector (bank / public / other) |
+| Schedule C — Part II | Additional claims detail / memoranda *(UNVERIFIED exact title — confirm against the live FFIEC 009 form)* |
+| Schedule 1 / 1.a | Foreign-Office Liabilities by Country of Foreign Office and by Country of Creditor (with memorandum items) |
+| Schedule 2 | Derivatives and foreign-office detail: positive fair value of derivative contracts; claims on related foreign branches with no guarantee from parent; foreign-office claims on local residents and foreign-office liabilities |
 
 ## Exposure Categories
 

@@ -1,0 +1,23 @@
+field,type,description,notes
+CTRL_IND,DECIMAL[1],Control Indicator: does Parent control Offspring,"See code list CTRL_IND; when REG_IND=1 control = legal authority (>=25% voting securities, majority-of-directors, or controlling influence per Reg Y 225.2(e)/12 CFR 574); when REG_IND=2 by ownership % or FRS determination"
+D_DT_END,DATETIME,DB2 DATETIME form of DT_END,Must be quoted in queries
+D_DT_RELN_EST,DATETIME,DB2 form of date relationship established,
+D_DT_START,DATETIME,DB2 DATETIME form of DT_START,Primary-key component
+DT_END,INTEGER,Date End (YYYYMMDD),99991231 = non-terminated; current relationships filtered by DT_END=99991231
+DT_RELN_EST,INTEGER,Date Relationship Established (YYYYMMDD),"Equals initial-row Date Start except where relationship predates regulation (pre-1956/1970 BHCs, pre-1978 FBOs, pre-existing entities)"
+DT_START,INTEGER,Date Start (YYYYMMDD): effective date relationship became regulated/known,For indirect relationships = when Offspring became controlled by the BHC/FBO; primary-key component
+EQUITY_IND,DECIMAL[1],Equity Indicator: form of ownership/control by direct holder,See code list EQUITY_IND (0/1/2)
+FC_IND,DECIMAL[1],Financial Consolidation Indicator: is the company consolidated in reporter's financials,See code list FC_IND (0/1/2)
+ID_RSSD_OFFSPRING,INTEGER,RSSD ID of Offspring: entity owned/controlled by Parent,Primary-key component; joins to Attributes ID_RSSD
+ID_RSSD_PARENT,INTEGER,RSSD ID of Parent: entity that owns/controls Offspring,"Direct: owns/controls, common director/officer/employee, or top-tier BHC/FBO per FR Y-10; indirect: top-tier BHC/FBO or intervening BHC; primary-key component; joins to Attributes ID_RSSD"
+MB_COST,DECIMAL[8],"Merchant Banking / Insurance Company Investment: $ amount (millions) of FHC investments","Under BHC 4(k)(4)(H) merchant-bank authority or 4(k)(4)(I) insurance; not valid before 2001-09-01"
+OTHER_BASIS_IND,DECIMAL[1],Other Basis for Relationship Indicator,See code list OTHER_BASIS_IND
+PCT_EQUITY,"DECIMAL[5,2]",Percent of Equity Voting Control: Parent's % ownership/control of Offspring,"Exact for BHC/bank/FBO direct holders; lower-range value for non-banking / Reg K subpart A or C; 0 = N/A"
+PCT_EQUITY_BRACKET,CHAR[8],Percent Equity Bracket derived from PCT_EQUITY,See code list PCT_EQUITY_BRACKET
+PCT_EQUITY_FORMAT,CHAR[8],Percent Equity Format derived from EQUITY_IND,See code list PCT_EQUITY_FORMAT (Other/Exact/Bracket)
+PCT_OTHER,"DECIMAL[5,2]",Percent of Other Voting Control: Parent's % when basis is non-voting or merchant-banking/insurance investment,"Offspring must be BHC/bank/FBO or merchant-bank investment; 0 = N/A"
+REASON_ROW_CRTD,DECIMAL[1],Reason for Creation of the Relationship,See code list REASON_ROW_CRTD
+REASON_TERM_RELN,DECIMAL[1],Reason for Termination of the Relationship,See code list REASON_TERM_RELN
+REG_IND,DECIMAL[1],Regulated Indicator: relationship governed by banking statutes,See code list REG_IND (1=Regulated / 2=Unregulated)
+REGK_INV,DECIMAL[1],Regulation K Subpart A Investment in a non-banking company,See code list REGK_INV; not valid before 2004-06-01
+RELN_LVL,DECIMAL[1],Relationship Level,"See code list RELN_LVL (1=Direct, 2=Indirect, 3=2G3, 4=DPC); primary-key component"

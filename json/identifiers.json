@@ -1,0 +1,120 @@
+{
+  "rssd": {
+    "name": "RSSD ID",
+    "issuer": "Federal Reserve Board (National Information Center / RSSD database)",
+    "format": "Sequential integer with check digit; no fixed length; carries no inherent attribute information",
+    "scope": "Every entity the Fed tracks: banks, BHCs/FHCs, branches, savings institutions, holding-company tiers, and some foreign and non-bank entities",
+    "reuse_rule": "Never changes, never reused; one per entity for its entire life cycle; persists after liquidation or closure",
+    "primary_in": [
+      "NIC/NPW",
+      "FFIEC Call Report (RSSD9001)",
+      "FR Y-9C and the FR Y-series"
+    ],
+    "notes": "The canonical crosswalk spine and most stable join key across charter changes and over time. Field name ID_RSSD in NIC. Also carried by FDIC datasets (FED_RSSD), FFIEC CDR, FRED bank series, academic panels, and HMDA pre-2018 (agency code 2)."
+  },
+  "fdic_cert": {
+    "name": "FDIC Certificate number",
+    "issuer": "Federal Deposit Insurance Corporation",
+    "format": "Sequential integer (no check digits)",
+    "scope": "Every FDIC-insured depository institution (banks and savings institutions); assigned per head-office depository",
+    "reuse_rule": "Unique per insured institution; assigned at insurance and retained through life; not recycled in practice",
+    "primary_in": [
+      "FDIC BankFind",
+      "FDIC SDI (Statistics on Depository Institutions)",
+      "FDIC Summary of Deposits",
+      "FDIC failures lists"
+    ],
+    "notes": "Sequential-integer system: not globally unique without an agency qualifier. Field name ID_FDIC_CERT in NIC. Also appears as a HMDA pre-2018 respondent id (agency code 3); FDIC records carry RSSD as FED_RSSD."
+  },
+  "occ_charter": {
+    "name": "OCC Charter number",
+    "issuer": "Office of the Comptroller of the Currency",
+    "format": "Sequential integer",
+    "scope": "National banks and (since 2011-07-21) federal savings associations / federal thrifts",
+    "reuse_rule": "Assigned at chartering and retained through the institution's life",
+    "primary_in": [
+      "OCC chartering data"
+    ],
+    "notes": "Since 2011-07-21 the OCC Charter field also stores national thrifts as thrift docket + 700000. Field name ID_OCC in NIC. Also appears as a HMDA pre-2018 respondent id (agency code 1)."
+  },
+  "ncua": {
+    "name": "NCUA Charter / ID number",
+    "issuer": "National Credit Union Administration",
+    "format": "Sequential integer; banded 1-59999 Federal, 60000-79999 Federally Insured State Chartered, 80000+ Non-Federally Insured",
+    "scope": "Federally insured credit unions (and some non-federally-insured)",
+    "reuse_rule": "Assigned at chartering and retained through life",
+    "primary_in": [
+      "NCUA Call Report",
+      "NCUA Research-a-Credit-Union"
+    ],
+    "notes": "Sequential-integer system: not globally unique without an agency qualifier. Field name ID_NCUA in NIC. Also appears as a HMDA pre-2018 respondent id (agency code 5)."
+  },
+  "lei": {
+    "name": "LEI (Legal Entity Identifier, ISO 17442)",
+    "issuer": "GLEIF governs; codes issued by accredited Local Operating Units (LOUs) overseen by the LEI Regulatory Oversight Committee (ROC)",
+    "format": "20-char alphanumeric: chars 1-4 LOU prefix, chars 5-18 entity-unique string, chars 19-20 MOD-97-10 checksum (ISO/IEC 7064)",
+    "scope": "Any legal entity participating in financial transactions, globally",
+    "reuse_rule": "Permanently unique to one entity; never reused; must be renewed annually to stay active but the code itself persists",
+    "primary_in": [
+      "HMDA (filer id), 2018-forward"
+    ],
+    "notes": "Exists only from ~2012 forward and only for entities that obtained one; cannot back-fill pre-2012 panels (coverage gap). Field name ID_LEI in NIC. Also used in SEC/CFTC swap reporting, FR Y-series LEI fields, and the GLEIF golden-copy file."
+  },
+  "aba": {
+    "name": "ABA Routing Transit Number (RTN)",
+    "issuer": "American Bankers Association via its registrar (currently LexisNexis Risk Solutions; historically Accuity / Thomson Financial)",
+    "format": "9 digits FFFF AAAA C: Fed routing symbol (4) + ABA institution id (4) + MOD-10 check digit (1)",
+    "scope": "Financial institutions eligible for a Federal Reserve master account; identifies a payment-routing account, not the legal entity",
+    "reuse_rule": "Tied to payment routing not entity identity; reassignable/retirable after mergers; reusable across non-concurrent entities; one institution may hold many",
+    "primary_in": [
+      "Fedwire/ACH routing files",
+      "FedACH",
+      "E-Payments Routing Directory"
+    ],
+    "notes": "NOT an entity key - never use an RTN as a persistent entity identifier. Field name ID_ABA_PRIM in NIC (no two concurrent entities share one)."
+  },
+  "ots": {
+    "name": "OTS Docket number / Thrift ID",
+    "issuer": "(former) Office of Thrift Supervision - defunct since 2011-07-21",
+    "format": "Numeric docket; NIC field is 9 chars but only the right-most 5 are used",
+    "scope": "Savings institutions / thrifts (legacy)",
+    "reuse_rule": "Legacy identifier; OTS functions transferred to OCC/FDIC/Fed under Dodd-Frank; new thrift supervision uses OCC Charter / RSSD",
+    "primary_in": [
+      "Legacy thrift datasets",
+      "Historical TFR (Thrift Financial Report) data"
+    ],
+    "notes": "Field names ID_THRIFT and ID_THRIFT_HC (OTS-assigned 'H'+5-digit holding-company id) in NIC. Also a HMDA pre-2018 respondent id (agency code 4, legacy)."
+  },
+  "ein": {
+    "name": "Federal Tax ID / EIN",
+    "issuer": "Internal Revenue Service",
+    "format": "9 digits NN-NNNNNNN",
+    "scope": "Any US entity with tax obligations",
+    "reuse_rule": "Permanently assigned to a legal entity; not recycled to another entity",
+    "primary_in": [],
+    "notes": "Not a primary bank-regulatory key. Multiple entities under one parent each have their own EIN. Field name ID_TAX in NIC (effective 2008-12-31). Also appears in SEC filings and as a HMDA pre-2018 fallback respondent id."
+  },
+  "cik": {
+    "name": "CIK (Central Index Key)",
+    "issuer": "SEC EDGAR",
+    "format": "Integer, zero-padded to 10 digits in API paths (CIK##########)",
+    "scope": "Any EDGAR filer: companies (including public BHCs), funds, and individuals",
+    "reuse_rule": "Assigned at filer signup; unique to the filer and not recycled",
+    "primary_in": [
+      "SEC EDGAR submissions / XBRL APIs",
+      "All SEC filings"
+    ],
+    "notes": "Independent of RSSD/CERT; joining public-BHC financials to regulatory data requires an external crosswalk (commonly CIK -> cert -> RSSD). UNVERIFIED that any official SEC<->Fed CIK/RSSD mapping is published."
+  },
+  "cusip": {
+    "name": "CUSIP",
+    "issuer": "CUSIP Global Services (operated for the American Bankers Association)",
+    "format": "9 chars: 6-char issuer + 2-char issue + 1 check digit",
+    "scope": "Securities (equity/debt) of issuers, including public BHCs",
+    "reuse_rule": "Identifies a security, not the legal entity; reassignment governed by CGS rules",
+    "primary_in": [
+      "securities datasets"
+    ],
+    "notes": "Field name ID_CUSIP in NIC; a searchable field in SEC EDGAR full-text search. Related: ticker symbols (issued by the listing exchange NYSE/Nasdaq, 1-5 alpha chars) can change or be reused across issuers and are likewise not a stable entity key."
+  }
+}

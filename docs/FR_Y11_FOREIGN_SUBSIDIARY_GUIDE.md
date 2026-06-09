@@ -21,17 +21,20 @@ The FR Y-11 collects financial data for individual U.S. nonbank subsidiaries of 
 - Assets >= $250 million but < $500 million
 - Not meeting quarterly filing thresholds
 
-**OMB Control Number:** 7100-0073
+**OMB Control Number:** 7100-0244
+
+> The legacy 7100-0073 cited in older materials is superseded for the FR Y-11; 7100-0073 now covers the FR Y-7N family (US nonbank subsidiaries of foreign banking organizations).
 
 ## Key Schedules
 
 | Schedule | Description |
 |----------|-------------|
 | Schedule BS | Balance Sheet |
-| Schedule BS-M | Memoranda (Off-Balance Sheet) |
-| Schedule IS | Income Statement |
-| Schedule IS-M | Income Memoranda |
-| Schedule EQ | Changes in Equity Capital |
+| Schedule BS-A | Loans and Lease Financing Receivables |
+| Schedule BS-M | Memoranda (off-balance-sheet and other memoranda items) |
+| Schedule IS | Income Statement (calendar year-to-date) |
+| Schedule IS-A | Changes in Equity Capital |
+| Schedule IS-B | Changes in Allowance for Credit Losses (retitled from "Allowance for Loan and Lease Losses" under CECL) |
 
 ## Covered Subsidiary Types
 

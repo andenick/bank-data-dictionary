@@ -1,7 +1,6 @@
 # Bank Regulatory Filings Master Guide
 
-**Version**: 1.0
-**Last Updated**: 2026-01-28
+**Version**: 6.0 | 2026-06-09
 **Scope**: Comprehensive reference for U.S. bank regulatory reporting
 
 ---
@@ -102,7 +101,7 @@ U.S. bank regulatory reporting operates at multiple levels:
 
 #### Data Availability
 
-- **Historical coverage**: 1986 to present (Robin Database)
+- **Historical coverage**: 1986 to present (FR Y-9C panel)
 - **Public access**: Federal Reserve NIC database, FFIEC CDR
 - **Machine-readable**: Available via bulk download
 
@@ -645,13 +644,15 @@ Tier 1 (BHCFA223) = CET1 (BHCAP859) + AT1 (BHCAA227)
 - Historical data
 - Failure information
 
-### 6.5 Robin Y9 Database
+### 6.5 Chicago Fed Bank Holding Company Database
 
-**Description**: Comprehensive FR Y-9C panel database
+**URL**: https://www.chicagofed.org/banking/financial-institution-reports/bhc-data
 
-**Coverage**: 1986-2024 (123.5M observations)
+**Description**: Public historical FR Y-9C holding-company panel
 
-**Content**: All Y-9C variables, cleaned and standardized
+**Coverage**: 1986 to present
+
+**Content**: All Y-9C variables in downloadable bulk files
 
 ### 6.6 Wharton Research Data Services (WRDS)
 
@@ -784,6 +785,7 @@ Variables are classified by CAMELS category:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2026-01-28 | N. Anderson | Initial comprehensive guide |
+| 6.0 | 2026-06-09 | N. Anderson | Aligned to v6.0 rebuild (NIC entity layer, full collection/sub-schedule catalogue, identifier semantics, coverage/provenance, expanded MDRM/namespace catalogue) |
 
 ---
 

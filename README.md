@@ -1,25 +1,29 @@
 # Bank Regulatory Data Dictionary
 
-**A comprehensive, downloadable reference for U.S. bank regulatory filings data — MDRM codes, form mappings, reconciliation formulas, and detailed guides for every FR Y-9C schedule.**
+**The most detailed open catalogue of U.S. bank regulatory data — every major information collection and its subschedules, the MDRM code system, the FFIEC NIC institutional-structure data, the identifier crosswalk, cross-form mappings, and reconciliation formulas.**
 
-**Version 5.0** | Updated: 2026-01-29
+**Version 6.0** | Updated: 2026-06-09
+
+> This repository is a **catalogue / mapping reference** — it documents *what the datasets are, how they are structured, and how they relate to each other*. For a data-*access* package (download and query the actual filings), see the companion project **[FreeNIC](https://github.com/andenick/FreeNIC)**.
 
 ---
 
 ## Why This Exists
 
-Bank regulatory filings (FR Y-9C, Call Reports, DFAST, Pillar 3) use thousands of MDRM variable codes across dozens of schedules. Analysts spend hours mapping between forms, deciphering code prefixes, and verifying that balance sheet components actually add up. This repository puts all of that reference material in one place — as CSV tables for programmatic use, JSON schemas for AI agents, and Markdown guides for human readers.
+U.S. bank regulators run dozens of overlapping data collections — FR Y-9C, the Call Report (FFIEC 031/041/051), FFIEC 101/102/002/009, the FR Y-7/Y-10/Y-11/Y-12/Y-14/Y-15 family, FR 2052a, Pillar 3, plus FDIC (SDI/SOD/failures), NCUA 5300, OCC historical returns, and the NIC/NPW structure files — together using **tens of thousands of MDRM variable codes across hundreds of schedules**. Analysts spend hours mapping between forms, deciphering code prefixes, tracing corporate hierarchies, reconciling identifiers, and verifying that balance-sheet components actually add up. This repository puts all of that reference material in one place — as CSV tables for programmatic use, JSON for AI agents, and Markdown guides for human readers.
+
+**What v6.0 adds over the original FR Y-9C/trading focus:** a master [collections catalogue](docs/COLLECTIONS_CATALOG.md) of **42 collections** with a [schedule catalogue](csv/SCHEDULES_CATALOG.csv) of every subschedule; the full [FFIEC NIC institutional-structure layer](docs/NIC_STRUCTURE_GUIDE.md) (entities, relationships, transformations, 40+ code lists); an [identifier crosswalk](docs/IDENTIFIERS.md) (RSSD / FDIC Cert / OCC / NCUA / LEI / ABA / EIN / CIK); the complete [Call Report](docs/CALL_REPORT_GUIDE.md), [foreign/structure](docs/FOREIGN_AND_STRUCTURE_GUIDE.md), and [FDIC/NCUA/OCC/UBPR](docs/FDIC_NCUA_OCC_UBPR_GUIDE.md) guides; and an [MDRM meta-dictionary](docs/MDRM_GUIDE.md) + namespace catalogue.
 
 ---
 
-## Quick Start
+## Get the Repo
 
 ```bash
 git clone https://github.com/andenick/bank-data-dictionary.git
 cd bank-data-dictionary
 ```
 
-No installation required — all data is in CSV, JSON, and Markdown files ready to use.
+No installation required — all data is in CSV, JSON, and Markdown files ready to use. Start with [`docs/INDEX.md`](docs/INDEX.md) for navigation or [`docs/COLLECTIONS_CATALOG.md`](docs/COLLECTIONS_CATALOG.md) for the full data universe.
 
 ---
 
@@ -161,15 +165,33 @@ bank-regulatory-data-dictionary/
 │   │   ├── SCHEDULE_COMPONENT_HIERARCHY.csv # Component hierarchies (NEW v5.0)
 │   │   └── FORM_REPORTING_HIERARCHY.csv    # Form data flow (NEW v5.0)
 │   │
+│   ├── Catalogue & Structure (NEW v6.0):
+│   │   ├── COLLECTIONS_CATALOG.csv         # All 42 collections
+│   │   ├── SCHEDULES_CATALOG.csv           # Every subschedule (265 rows)
+│   │   ├── NIC_ATTRIBUTES_SCHEMA.csv       # NIC entity attributes (74 fields)
+│   │   ├── NIC_RELATIONSHIPS_SCHEMA.csv    # NIC relationships (22 fields)
+│   │   ├── NIC_TRANSFORMATIONS_SCHEMA.csv  # NIC mergers/failures (6 fields)
+│   │   ├── NIC_CODE_LISTS.csv              # 40 NIC code lists (274 codes)
+│   │   ├── IDENTIFIERS.csv                 # Identifier systems crosswalk
+│   │   └── MDRM_NAMESPACES.csv             # Full mnemonic namespace catalogue
+│   │
 │   └── Reference Files:
-│       ├── MDRM_PREFIX_DEFINITIONS.csv     # BHCK, RCFD, etc.
+│       ├── MDRM_PREFIX_DEFINITIONS.csv     # BHCK (consolidated), RCFD, etc.
 │       ├── FORM_HIERARCHY.csv              # Form relationships
 │       ├── GSIB_ENTITY_IDENTIFIERS.csv     # Bank identifiers
 │       └── HISTORICAL_CODE_TRANSITIONS.csv # Legacy codes
 │
-├── docs/                                   # Documentation (33 guides)
-│   ├── INDEX.md                            # Master navigation (NEW v5.0)
-│   ├── RECONCILIATION_HIERARCHY.md         # What adds up to what (NEW v5.0)
+├── docs/                                   # Documentation (43 guides)
+│   ├── INDEX.md                            # Master navigation
+│   ├── COLLECTIONS_CATALOG.md              # The full data universe — 42 collections (NEW v6.0)
+│   ├── NIC_STRUCTURE_GUIDE.md              # FFIEC NIC entities/relationships/transformations (NEW v6.0)
+│   ├── IDENTIFIERS.md                      # RSSD/FDIC/OCC/NCUA/LEI/ABA/EIN/CIK crosswalk (NEW v6.0)
+│   ├── CALL_REPORT_GUIDE.md                # Complete FFIEC 031/041/051 (NEW v6.0)
+│   ├── FOREIGN_AND_STRUCTURE_GUIDE.md      # FFIEC 002/009, FR Y-7/10/11/12/6/8 (NEW v6.0)
+│   ├── FDIC_NCUA_OCC_UBPR_GUIDE.md         # Non-Fed collections + UBPR (NEW v6.0)
+│   ├── MDRM_GUIDE.md                       # MDRM meta-dictionary + namespaces (NEW v6.0)
+│   ├── COVERAGE_PROVENANCE.md              # Temporal coverage & vintages (NEW v6.0)
+│   ├── RECONCILIATION_HIERARCHY.md         # What adds up to what
 │   ├── MASTER_REGULATORY_GUIDE.md          # Comprehensive reference
 │   ├── RECONCILIATION_MATRIX.md            # Cross-schedule tie-outs
 │   │
@@ -187,8 +209,10 @@ bank-regulatory-data-dictionary/
 │       └── PILLAR3_DISCLOSURE_GUIDE.md
 │
 ├── json/                                   # Machine-readable data
-│   ├── schedule_schemas.json               # Schedule structures (NEW v5.0)
-│   ├── cross_form_mapping.json             # Concept mapping (NEW v5.0)
+│   ├── collections.json                    # All 42 collections (NEW v6.0)
+│   ├── identifiers.json                     # Identifier systems (NEW v6.0)
+│   ├── schedule_schemas.json               # Schedule structures
+│   ├── cross_form_mapping.json             # Concept mapping
 │   ├── data_taxonomy.json                  # Full regulatory taxonomy
 │   └── schedule_correspondence.json        # Cross-schedule linkages
 │
@@ -220,14 +244,18 @@ BHCT3545
 
 | Prefix | Form | Scope |
 |--------|------|-------|
-| BHCK | FR Y-9C | Bank-level item |
-| BHCM | FR Y-9C | Domestic offices |
-| BHCT | FR Y-9C | Total (domestic + foreign) |
-| BHCAP | FR Y-9C | Capital items (Part I) |
-| BHCFA | FR Y-9C | Capital Tier items |
-| RCFD | Call Report | Total |
-| RCON | Call Report | Domestic |
-| RIAD | Call Report | Income statement |
+| BHCK | FR Y-9C | **Consolidated** (domestic + foreign) — the primary Y-9C series |
+| BHDM | FR Y-9C | Domestic offices only |
+| BHFN | FR Y-9C | Foreign offices only |
+| BHCP | FR Y-9LP | Parent company only (large) |
+| BHSP | FR Y-9SP | Parent company only (small) |
+| BHCA | FR Y-9C | Consolidated regulatory capital (HC-R) |
+| RCFD | Call Report | Consolidated (domestic + foreign) |
+| RCON | Call Report | Domestic offices only |
+| RCFN | Call Report | Foreign offices only |
+| RIAD | Call Report / FR Y-9C | Income statement (year-to-date) |
+
+> **Correction (v6.0):** earlier releases mislabeled `BHCK` as "domestic only." `BHCK` is the **consolidated** series; domestic-only is `BHDM` and foreign-only is `BHFN` (confirmed against the Federal Reserve MDRM). See [`docs/MDRM_GUIDE.md`](docs/MDRM_GUIDE.md) and [`csv/MDRM_NAMESPACES.csv`](csv/MDRM_NAMESPACES.csv) for the full namespace catalogue.
 
 ---
 
@@ -339,10 +367,19 @@ asset_quality = {
 
 | Source | URL | Content |
 |--------|-----|---------|
-| FFIEC CDR | https://cdr.ffiec.gov/ | Call Reports, Y-9C |
-| MDRM Dictionary | https://www.federalreserve.gov/apps/mdrm/ | Official definitions |
-| Fed NIC | https://www.ffiec.gov/NPW/ | Organization data |
-| FDIC BankFind | https://banks.data.fdic.gov/ | Bank financials |
+| FFIEC CDR | https://cdr.ffiec.gov/ | Call Reports, FR Y-9C, FFIEC 101/102/002/009 |
+| MDRM Dictionary | https://www.federalreserve.gov/apps/mdrm/ | Official variable definitions (~87,000+ codes) |
+| Fed Reporting Forms | https://www.federalreserve.gov/apps/reportingforms/ | FR Y-series forms + instructions |
+| Fed NIC / NPW | https://www.ffiec.gov/NPW/ | Institutional structure, relationships, transformations |
+| FDIC BankFind | https://banks.data.fdic.gov/ | SDI financials, SOD, failures, locations |
+| NCUA | https://ncua.gov/analysis/credit-union-corporate-call-report-data | 5300 credit-union Call Reports (FS220) |
+| FRASER (OCC) | https://fraser.stlouisfed.org/ | Historical OCC national-bank reports (1863–1941) |
+
+---
+
+## Companion Project: FreeNIC
+
+This repository is the **catalogue / mapping** product. Its sibling, **[FreeNIC](https://github.com/andenick/FreeNIC)**, is the **data-access** package — it lets you download and query ~2.3 billion rows of the actual filings (1863–2026) via Python/SQL. Use this repo to understand *what the data is and how it fits together*; use FreeNIC to *get and query it*.
 
 ---
 
@@ -363,7 +400,8 @@ asset_quality = {
 
 | Version | Date | Changes |
 |---------|------|---------|
-| **5.0** | 2026-01-29 | Complete reconciliation system (60+ formulas), validation rules (50), schedule schemas JSON, cross-form mapping JSON, component hierarchies, 5 Call Report guides, INDEX.md, RECONCILIATION_HIERARCHY.md |
+| **6.0** | 2026-06-09 | **Major expansion from FR Y-9C focus to the full U.S. bank-data universe.** Added: master Collections Catalogue (42 collections) + Schedules Catalogue (every subschedule); FFIEC NIC institutional-structure layer (entity/relationship/transformation schemas + 40 code lists, 274 codes); identifier crosswalk (RSSD/FDIC/OCC/NCUA/LEI/ABA/EIN/CIK); complete Call Report (031/041/051) guide; foreign/structure guide (FFIEC 002/009, FR Y-7/10/11/12/6/8); FDIC/NCUA/OCC/UBPR guide; MDRM meta-dictionary + namespace catalogue; coverage/provenance guide. **Fixed:** BHCK mislabel (it is consolidated, not domestic); FR Y-11 and FFIEC 009 schedule lists; cross-form line-item references. |
+| 5.0 | 2026-01-29 | Complete reconciliation system (60+ formulas), validation rules (50), schedule schemas JSON, cross-form mapping JSON, component hierarchies, 5 Call Report guides, INDEX.md, RECONCILIATION_HIERARCHY.md |
 | 4.0 | 2026-01-29 | Added Y-14A/Q, 2052a hierarchy, Pillar 3 G-SIB disclosure |
 | 3.0 | 2026-01-29 | Added FFIEC 101/102, FR Y-15/Y-9LP/Y-11, FFIEC 009 |
 | 2.1 | 2026-01-28 | Market risk/trading analysis |
