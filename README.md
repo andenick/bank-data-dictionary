@@ -2,7 +2,7 @@
 
 **The most detailed open catalogue of U.S. bank regulatory data — every major information collection and its subschedules, the MDRM code system, the FFIEC NIC institutional-structure data, the identifier crosswalk, cross-form mappings, and reconciliation formulas.**
 
-**Version 6.1** | Updated: 2026-06-09
+**Version 6.2** | Updated: 2026-06-09
 
 > This repository is a **catalogue / mapping reference** — it documents *what the datasets are, how they are structured, and how they relate to each other*. For a data-*access* package (download and query the actual filings), see the companion project **[FreeNIC](https://github.com/andenick/FreeNIC)**.
 
@@ -130,7 +130,8 @@ bank-regulatory-data-dictionary/
 │
 ├── csv/                                    # All CSV data tables
 │   ├── MDRM_MASTER_COMPLETE.csv            # Curated cross-form concept spine (~100 concepts)
-│   ├── MDRM_CROSSWALK_EXPANDED.csv         # 677 MDRM-verified codes w/ cross-scope mapping (NEW v6.1)
+│   ├── MDRM_CROSSWALK_EXPANDED.csv         # 984 MDRM-verified codes w/ cross-scope mapping
+│   ├── CODE_VALIDATION_AUDIT.csv           # Every code validated vs MDRM (NEW v6.2)
 │   │
 │   ├── Schedule-Specific Files (14 Y-9C schedules):
 │   │   ├── HC_BALANCE_SHEET.csv            # Schedule HC master balance sheet
@@ -398,10 +399,25 @@ This repository is the **catalogue / mapping** product. Its sibling, **[FreeNIC]
 
 ---
 
+## Data Quality & Verification
+
+Every MDRM-code-shaped token in this repo is validated against the full Federal Reserve MDRM
+dictionary; results are in [`csv/CODE_VALIDATION_AUDIT.csv`](csv/CODE_VALIDATION_AUDIT.csv)
+(**81% of 2,180 codes validate exactly**). The v6.0+ layer — the Collections/Schedules
+catalogue, NIC structure, identifier crosswalk, MDRM namespace catalogue, and the
+[984-code expanded crosswalk](csv/MDRM_CROSSWALK_EXPANDED.csv) — is **MDRM-verified by
+construction.** The remaining ~19% of flagged codes are concentrated in the **original
+(pre-v6.0) per-schedule CSVs** (a recurring pattern of Call-Report item numbers placed under
+BHC mnemonics) and are tracked for a per-schedule remediation pass — see the
+[verification report](docs/VERIFICATION_REPORT.md#code-validation-audit-v61-2026-06-09).
+**For guaranteed-valid codes, prefer `MDRM_CROSSWALK_EXPANDED.csv` over the legacy per-schedule
+files** until remediation is complete.
+
 ## Version History
 
 | Version | Date | Changes |
 |---------|------|---------|
+| **6.2** | 2026-06-09 | **Code audit + crosswalk growth + browsable data tables.** Repo-wide MDRM-code validation (`CODE_VALIDATION_AUDIT.csv`; 81% valid) — flags ~412 codes in the legacy per-schedule CSVs (Call-Report items under BHC mnemonics) for remediation; fixed `BHCAA227`→`BHCAP865`. Expanded `MDRM_CROSSWALK_EXPANDED.csv` 677→**984** codes (added FFIEC 101/102, FR Y-15/Y-9LP/Y-11, FFIEC 009). Pages site: CSV catalogues rendered as searchable/sortable tables. |
 | **6.1** | 2026-06-09 | **Capital-code correction + crosswalk expansion + docs site.** Fixed the non-existent `BHCFA223/224/225` codes repo-wide → verified `BHCA8274` (Tier 1) / `BHCA5311` (Tier 2) / `BHCA3792` (Total). Resolved prefix scopes against the full Fed MDRM (BHCT/BHCM/BHCB verified; BHCAP/BHCFA shown to be non-mnemonics = `BHCA`+item). Added `MDRM_CROSSWALK_EXPANDED.csv` (677 MDRM-verified codes with cross-scope mapping). Resolved FFIEC 002/009 Schedule C Part II titles + CIK↔RSSD note. Added a MkDocs Material GitHub Pages site. |
 | **6.0** | 2026-06-09 | **Major expansion from FR Y-9C focus to the full U.S. bank-data universe.** Added: master Collections Catalogue (42 collections) + Schedules Catalogue (every subschedule); FFIEC NIC institutional-structure layer (entity/relationship/transformation schemas + 40 code lists, 274 codes); identifier crosswalk (RSSD/FDIC/OCC/NCUA/LEI/ABA/EIN/CIK); complete Call Report (031/041/051) guide; foreign/structure guide (FFIEC 002/009, FR Y-7/10/11/12/6/8); FDIC/NCUA/OCC/UBPR guide; MDRM meta-dictionary + namespace catalogue; coverage/provenance guide. **Fixed:** BHCK mislabel (it is consolidated, not domestic); FR Y-11 and FFIEC 009 schedule lists; cross-form line-item references. |
 | 5.0 | 2026-01-29 | Complete reconciliation system (60+ formulas), validation rules (50), schedule schemas JSON, cross-form mapping JSON, component hierarchies, 5 Call Report guides, INDEX.md, RECONCILIATION_HIERARCHY.md |

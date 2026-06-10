@@ -45,6 +45,14 @@ validation:
 plugins:
   - search
 
+# DataTables (CDN) powers the interactive tables on the "Data tables" pages.
+extra_css:
+  - https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css
+
+extra_javascript:
+  - https://code.jquery.com/jquery-3.7.1.min.js
+  - https://cdn.datatables.net/2.1.8/js/dataTables.min.js
+
 markdown_extensions:
   - admonition
   - tables
@@ -105,5 +113,15 @@ nav:
       - Pillar 3 — Disclosure: PILLAR3_DISCLOSURE_GUIDE.md
       - Market Risk & Trading: MARKET_RISK_TRADING_GUIDE.md
       - Trading Activities: TRADING_ACTIVITIES_GUIDE.md
+  - Data tables:
+      - Overview: data/index.md
+      - Collections Catalog: data/collections_catalog.md
+      - Schedules Catalog: data/schedules_catalog.md
+      - MDRM Crosswalk (Expanded): data/mdrm_crosswalk_expanded.md
+      - MDRM Namespaces: data/mdrm_namespaces.md
+      - MDRM Prefix Definitions: data/mdrm_prefix_definitions.md
+      - NIC Code Lists: data/nic_code_lists.md
+      - Entity Identifiers: data/identifiers.md
+      - Code Validation Audit: data/code_validation_audit.md
   - Reference:
       - Verification Report: VERIFICATION_REPORT.md

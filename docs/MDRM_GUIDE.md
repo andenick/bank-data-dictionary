@@ -214,7 +214,7 @@ Two complementary cross-form crosswalks ship here:
 | File | Rows | What it is |
 |---|---|---|
 | [`csv/MDRM_MASTER_COMPLETE.csv`](../csv/MDRM_MASTER_COMPLETE.csv) | ~100 | **Curated concept spine** — one row per analytical concept (Total Assets, CET1, …) hand-mapped across FR Y-9C / Call Report / FR Y-14 / Pillar 3, with CAMELS category and `adds_to` reconciliation links. |
-| [`csv/MDRM_CROSSWALK_EXPANDED.csv`](../csv/MDRM_CROSSWALK_EXPANDED.csv) | **677** | **Verified breadth** — every MDRM code referenced by the repo's FR Y-9C/Call schedule files, enriched from the official MDRM with the item name, reporting form, and effective dates, plus the parallel code under each standard scope (`y9c_consolidated`/`y9c_domestic`/`y9c_foreign`/`call_consolidated`/`call_domestic`/`call_foreign`/`income_ytd`) and `all_mnemonics_for_item`. |
+| [`csv/MDRM_CROSSWALK_EXPANDED.csv`](../csv/MDRM_CROSSWALK_EXPANDED.csv) | **984** | **Verified breadth** — every MDRM code referenced by the repo's FR Y-9C / Call Report / FFIEC 101/102 / FR Y-15 / Y-9LP / Y-11 / FFIEC 009 schedule files, enriched from the official MDRM with the item name, reporting form, and effective dates, plus the parallel code under each standard scope (`y9c_consolidated`/`y9c_domestic`/`y9c_foreign`/`call_consolidated`/`call_domestic`/`call_foreign`/`income_ytd`) and `all_mnemonics_for_item`. |
 
 **How the expanded crosswalk is built (no fabrication):** every code in
 `MDRM_CROSSWALK_EXPANDED.csv` is taken from the curated schedule files and then
@@ -222,5 +222,5 @@ Two complementary cross-form crosswalks ship here:
 that parallel code (e.g. `RCFD` + the same item number) is itself present in MDRM —
 otherwise it is left blank. This is the mechanism behind the item-number-reuse principle in
 §2: the same item appears under many mnemonics, and the crosswalk simply lists the ones the
-Fed actually publishes. 473 of the 677 rows have a confirmed FR Y-9C ↔ Call Report
+Fed actually publishes. 489 of the 984 rows have a confirmed FR Y-9C ↔ Call Report
 consolidated pair.

@@ -18,3 +18,7 @@ venv/
 
 # MkDocs build output
 site/
+
+# Generated interactive data-table pages (regenerated from csv/ by
+# scripts/gen_data_pages.py at build time)
+docs/data/

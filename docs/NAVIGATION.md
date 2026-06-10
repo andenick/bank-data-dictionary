@@ -179,9 +179,10 @@ print(f"CET1 minimum: {capital['cet1']['minimum']}")
 | Resource | Purpose | File |
 |----------|---------|------|
 | MDRM Master | Curated cross-form concept spine (~100) | [MDRM_MASTER_COMPLETE.csv](../csv/MDRM_MASTER_COMPLETE.csv) |
-| MDRM Crosswalk (expanded) | 677 MDRM-verified codes, cross-scope mapping | [MDRM_CROSSWALK_EXPANDED.csv](../csv/MDRM_CROSSWALK_EXPANDED.csv) |
+| MDRM Crosswalk (expanded) | 984 MDRM-verified codes, cross-scope mapping | [MDRM_CROSSWALK_EXPANDED.csv](../csv/MDRM_CROSSWALK_EXPANDED.csv) |
 | MDRM Namespaces | Full mnemonic namespace catalogue | [MDRM_NAMESPACES.csv](../csv/MDRM_NAMESPACES.csv) |
 | MDRM Prefixes | Prefix definitions | [MDRM_PREFIX_DEFINITIONS.csv](../csv/MDRM_PREFIX_DEFINITIONS.csv) |
+| Code Validation Audit | Every code validated vs MDRM (81% valid) | [CODE_VALIDATION_AUDIT.csv](../csv/CODE_VALIDATION_AUDIT.csv) |
 | G-SIB Entities | Bank identifiers | [GSIB_ENTITY_IDENTIFIERS.csv](../csv/GSIB_ENTITY_IDENTIFIERS.csv) |
 | Historical Transitions | Legacy code mappings | [HISTORICAL_CODE_TRANSITIONS.csv](../csv/HISTORICAL_CODE_TRANSITIONS.csv) |
 
@@ -199,4 +200,4 @@ print(f"CET1 minimum: {capital['cet1']['minimum']}")
 
 ---
 
-*Last updated: 2026-06-09 | Version 6.1*
+*Last updated: 2026-06-09 | Version 6.2*

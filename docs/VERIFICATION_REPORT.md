@@ -12,7 +12,7 @@ The v6.0 rebuild expanded the repo from an FR Y-9C-centric reference into a full
 
 ### Mechanical validation (PASS)
 
-`_rebuild/validate.py` re-run after edits: **csv_problems=0, json_problems=0, broken_links=0**. All 47 CSVs parse with consistent column counts; all 6 JSON files parse; all internal markdown links resolve.
+Mechanical validation re-run after edits: **csv_problems=0, json_problems=0, broken_links=0**. All CSVs parse with consistent column counts; all JSON files parse; all internal markdown links resolve.
 
 ### Count reconciliations (PASS)
 
@@ -422,3 +422,38 @@ The MDRM_MASTER_COMPLETE.csv dataset demonstrates **95% accuracy** against offic
 
 *Legacy report generated: 2026-01-28. v6.0 verification gate appended: 2026-06-09.*
 *Verified by: Claude Code Regulatory Data Verification*
+
+---
+
+## Code Validation Audit (v6.1, 2026-06-09)
+
+Every MDRM-code-shaped token in the repository was validated against the full Federal
+Reserve MDRM dictionary (74,928 distinct mnemonic+item codes, the current download, which
+includes discontinued items back to 1981). Results are published in
+[`csv/CODE_VALIDATION_AUDIT.csv`](../csv/CODE_VALIDATION_AUDIT.csv).
+
+| Status | Count | Meaning |
+|--------|-------|---------|
+| `VALID` | 1,768 (81.1%) | The exact mnemonic+item exists in the Fed MDRM. |
+| `NOT_IN_MDRM` | 329 | The 4-char prefix is a real MDRM mnemonic, but that mnemonic+item pair is **not** in the MDRM download. |
+| `UNKNOWN_MNEMONIC` | 83 | Code-shaped token whose 4-char prefix is not a known MDRM mnemonic. |
+
+**What the flagged codes are.** They are concentrated in the **original (pre-v6.0)
+per-schedule files** — `HC_H_INTEREST_SENSITIVITY`, `HC_Q_FAIR_VALUE`, `HC_BALANCE_SHEET`,
+`SCHEDULE_COMPONENT_HIERARCHY`, the reconciliation/validation files, and their guides.
+Spot-checks against the raw MDRM confirmed a recurring pattern: **Call Report item numbers
+placed under FR Y-9C (BHC) mnemonics.** For example the original `HC_BALANCE_SHEET.csv` used
+`BHCK3632` for retained earnings, but item `3632` exists only under `RCFD`/`RCON` (Call
+Report); the FR Y-9C retained-earnings code is `BHCK3247`.
+
+**Status of the fix.** One code that broke a live reconciliation formula was corrected
+(`BHCAA227` → `BHCAP865`, Additional Tier 1 capital). The remaining flagged codes are **not**
+auto-replaced, because each requires its own concept-specific correct code and a blind
+substitution risks replacing a real-but-discontinued code with a wrong one. They are tracked
+in `CODE_VALIDATION_AUDIT.csv` for a per-schedule remediation pass.
+
+**What is verified.** The v6.0+ layer is MDRM-verified by construction: the Collections /
+Schedules catalogue, the NIC structure layer, the identifier crosswalk, `MDRM_NAMESPACES.csv`,
+`MDRM_PREFIX_DEFINITIONS.csv`, and especially [`csv/MDRM_CROSSWALK_EXPANDED.csv`](../csv/MDRM_CROSSWALK_EXPANDED.csv)
+(every code confirmed present in MDRM). Users needing guaranteed-valid codes should prefer the
+expanded crosswalk over the legacy per-schedule CSVs until the latter are remediated.

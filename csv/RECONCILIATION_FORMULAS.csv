@@ -6,7 +6,7 @@ F004,Derivatives Negative FV,BHCT3547,Gross Negative Fair Value Derivatives,BHCK
 F005,Trading Positive FV Only,SUM_TRADING_POS,Trading Book Derivatives Positive FV,BHCK8733|BHCK8734|BHCK8735|BHCK8736,BHCK8733 + BHCK8734 + BHCK8735 + BHCK8736,HC-L,Subtotal,Trading book portion only
 F006,Trading Negative FV Only,SUM_TRADING_NEG,Trading Book Derivatives Negative FV,BHCK8737|BHCK8738|BHCK8739|BHCK8740,BHCK8737 + BHCK8738 + BHCK8739 + BHCK8740,HC-L,Subtotal,Trading book portion only
 F007,Total Assets Check,BHCT2170,Total Assets,BHCT0081|BHCT1773|BHCTJJ34|BHCTB528|BHCT3545|BHCT3163|BHCTC752|BHCT2160,Sum of all asset line items,HC,Balance,Schedule HC balance sheet
-F008,Tier 1 Capital,BHCA8274,Tier 1 Capital,BHCAP859|BHCAA227,CET1 + Additional Tier 1,HC-R,Capital,Basel III Tier 1 = CET1 + AT1
+F008,Tier 1 Capital,BHCA8274,Tier 1 Capital,BHCAP859|BHCAP865,CET1 + Additional Tier 1,HC-R,Capital,Basel III Tier 1 = CET1 + AT1
 F009,Total Capital,BHCA3792,Total Risk-Based Capital,BHCA8274|BHCA5311,Tier 1 + Tier 2,HC-R,Capital,Basel III Total = Tier 1 + Tier 2
 F010,CET1 Ratio,CET1_RATIO,Common Equity Tier 1 Ratio,BHCAP859|BHCAA223,BHCAP859 / BHCAA223,HC-R,Ratio,CET1 Capital / RWA
 F011,Tier 1 Ratio,T1_RATIO,Tier 1 Capital Ratio,BHCA8274|BHCAA223,BHCA8274 / BHCAA223,HC-R,Ratio,Tier 1 Capital / RWA

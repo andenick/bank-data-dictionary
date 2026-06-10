@@ -25,6 +25,13 @@ discoverable, joinable and machine-readable.
 Looking for a specific schedule or concept? The [Navigation Index](NAVIGATION.md) maps
 every form, schedule, concept and reconciliation check to its guide and data file.
 
+## Browse the data
+
+Prefer to explore the catalogues directly? The [**Data tables**](data/index.md) section
+renders the key CSVs as interactive, searchable and sortable tables — the collections and
+schedules catalogs, the MDRM crosswalk and namespaces, NIC code lists, identifiers and the
+code-validation audit — each with a one-click raw-CSV download.
+
 ## Machine-readable data
 
 Every guide is backed by structured data. The repository ships the underlying **CSV** and

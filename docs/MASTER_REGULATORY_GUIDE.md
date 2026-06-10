@@ -504,7 +504,7 @@ Reports Basel III regulatory capital components and ratios.
 | Item | Description | MDRM |
 |------|-------------|------|
 | CET1 | Common Equity Tier 1 Capital | BHCAP859 |
-| AT1 | Additional Tier 1 Capital | BHCAA227 |
+| AT1 | Additional Tier 1 Capital | BHCAP865 |
 | T1 | Tier 1 Capital (CET1 + AT1) | BHCA8274 |
 | T2 | Tier 2 Capital | BHCA5311 |
 | TC | Total Capital (T1 + T2) | BHCA3792 |
@@ -586,7 +586,7 @@ Non-Trading Negative FV = BHCK8745 + BHCK8746 + BHCK8747 + BHCK8748
 
 ```
 Total Capital (BHCA3792) = Tier 1 (BHCA8274) + Tier 2 (BHCA5311)
-Tier 1 (BHCA8274) = CET1 (BHCAP859) + AT1 (BHCAA227)
+Tier 1 (BHCA8274) = CET1 (BHCAP859) + AT1 (BHCAP865)
 ```
 
 ### 5.4 Common Validation Checks
