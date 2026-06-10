@@ -143,7 +143,7 @@ Higher coverage = more reserved against expected losses
 
 ```
 Texas Ratio = NPL + OREO / (Tangible Equity + Allowance)
-            = (BHCK1403 + BHCK5525 + BHCT2150) / (BHCT3210 - BHCT3163 + BHCT3123)
+            = (BHCK1403 + BHCK5525 + BHCT2150) / (BHCT3210 - BHCK3163 + BHCT3123)
 
 >100% = Potentially troubled
 ```
@@ -215,7 +215,7 @@ Monitor for:
 
 | Category | 30-89 Days | 90+ Days | Nonaccrual |
 |----------|------------|----------|------------|
-| RE Total | BHCK5526 | BHCK5527 | BHCK3492 |
+| RE Total | BHCK5526 | BHCK1422 | BHCK3492 |
 | Construction | BHCK2759 | BHCK2769 | BHCK3505 |
 | 1-4 Family | BHCK5401 | BHCK5402 | BHCK3499 |
 | CRE | BHCK3503 | BHCK3504 | BHCK5378 |

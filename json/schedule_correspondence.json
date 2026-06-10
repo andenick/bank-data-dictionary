@@ -214,10 +214,10 @@
   "prefix_conversion": {
     "y9c_to_call": {
       "BHCK": "RCFD",
-      "BHCM": "RCFD",
+      "BHCM": "RCON",
       "BHCT": "RCFD",
       "BHCFA": "RCFAA",
-      "BHCA": "RCFDA",
+      "BHCA": "RCFA",
       "BHCAP": "RCFAP"
     },
     "note": "Item numbers typically remain the same; only prefix changes"

@@ -38,8 +38,8 @@ Schedule HC-R is the cornerstone of regulatory capital reporting under Basel III
 | Item | MDRM | Description |
 |------|------|-------------|
 | 1 | BHCAP742 | Common stock plus surplus |
-| 2 | BHCAP743 | Retained earnings |
-| 3 | BHCAP744 | AOCI (if opt-out elected) |
+| 2 | BHCAKW00 | Retained earnings |
+| 3 | BHCAB530 | AOCI (if opt-out elected) |
 | 4 | BHCAP838 | AOCI included in CET1 |
 | 5 | BHCAP839 | CET1 minority interest |
 | 6 | BHCAP840 | **CET1 before adjustments** |
@@ -142,19 +142,19 @@ Schedule HC-R is the cornerstone of regulatory capital reporting under Basel III
 
 | MDRM | Formula | Minimum |
 |------|---------|---------|
-| BHCAP794 | Tier 1 / RWA | 6.0% |
+| BHCA7206 | Tier 1 / RWA | 6.0% |
 
 ### Total Capital Ratio
 
 | MDRM | Formula | Minimum |
 |------|---------|---------|
-| BHCAP795 | Total Capital / RWA | 8.0% |
+| BHCA7205 | Total Capital / RWA | 8.0% |
 
 ### Leverage Ratio
 
 | MDRM | Formula | Minimum |
 |------|---------|---------|
-| BHCAP796 | Tier 1 / Avg Total Assets | 4.0% |
+| BHCA7204 | Tier 1 / Avg Total Assets | 4.0% |
 
 ### Supplementary Leverage Ratio (G-SIBs)
 
@@ -274,9 +274,9 @@ Measures profitability relative to regulatory capital consumption
 | Total Capital | BHCA3792 | Tier 1 + Tier 2 |
 | Total RWA | BHCAA223 | Risk-weighted assets |
 | CET1 Ratio | BHCAP793 | CET1 / RWA |
-| Tier 1 Ratio | BHCAP794 | Tier 1 / RWA |
-| Total Capital Ratio | BHCAP795 | Total / RWA |
-| Leverage Ratio | BHCAP796 | Tier 1 / Avg Assets |
+| Tier 1 Ratio | BHCA7206 | Tier 1 / RWA |
+| Total Capital Ratio | BHCA7205 | Total / RWA |
+| Leverage Ratio | BHCA7204 | Tier 1 / Avg Assets |
 
 ---
 

@@ -16,13 +16,13 @@ line_number,item_description,mdrm_afs_amortized_cost,mdrm_afs_fair_value,mdrm_ht
 6.a,Other debt securities - Domestic issuers,BHCK1739,BHCK1741,BHCK1742,BHCK1743,Debt Securities - Domestic Other,HC Item 2,1976-03-31,Corporate bonds; domestic
 6.b,Other debt securities - Foreign issuers,BHCK1744,BHCK1746,BHCK1747,BHCK1748,Debt Securities - Foreign Other,HC Item 2,1976-03-31,Corporate bonds; foreign
 7,Securities issued by states and political subdivisions,BHCK8496,BHCK8497,BHCK8498,BHCK8499,Municipal Securities,HC Item 2,1976-03-31,Tax-exempt munis
-8,Total,BHCT1772,BHCT1773,BHCT1754,BHCTJJ34,Total Securities,-,1976-03-31,Sum of Items 1-7
-M1,Pledged securities,BHCT0416,BHCT0416,BHCT0417,BHCT0417,Memorandum,HC Item 2,1976-03-31,Securities pledged as collateral
+8,Total,BHCK1772,BHCT1773,BHCT1754,BHCKJJ34,Total Securities,-,1976-03-31,Sum of Items 1-7
+M1,Pledged securities,BHCK0416,BHCK0416,BHCK0416,BHCK0416,Memorandum,HC Item 2,1976-03-31,Securities pledged as collateral
 M2.a,Structured financial products - Investment grade,BHCKC989,BHCKC989,-,-,Memorandum - SFP,HC Item 2,2009-03-31,CDOs; CLOs rated IG
 M2.b,Structured financial products - Below investment grade,BHCKC990,BHCKC990,-,-,Memorandum - SFP,HC Item 2,2009-03-31,CDOs; CLOs rated below IG
 M3,AOCI on AFS securities (pre-tax),BHCK8434,BHCK8434,-,-,Memorandum - AOCI,-,1998-03-31,Unrealized gains/losses in equity
 M4,Fair value of HTM that are callable,BHCKA510,BHCKA510,BHCKA511,BHCKA511,Memorandum - Callable,-,2002-03-31,
-M5,Equity securities with readily determinable FV,-,BHCTJJ32,-,-,Equity Securities,HC Item 2.c,2018-03-31,ASU 2016-01 FV through income
+M5,Equity securities with readily determinable FV,-,BHCKJA22,-,-,Equity Securities,HC Item 2.c,2018-03-31,ASU 2016-01 FV through income
 M5.a,Equity securities - Mutual funds,BHCKJJ33,BHCKJJ33,-,-,Equity - Mutual Funds,HC Item 2.c,2018-03-31,
 M5.b,Equity securities - Other,BHCKJJ35,BHCKJJ35,-,-,Equity - Other,HC Item 2.c,2018-03-31,
 M6,Equity securities without readily determinable FV,BHCK1752,BHCK1752,-,-,Equity - No FV,HC-F Item 4,1976-03-31,FHLB/FRB stock; other

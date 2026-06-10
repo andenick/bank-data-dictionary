@@ -303,10 +303,10 @@ The main balance sheet schedule provides high-level asset and liability totals.
 
 | Line | Description | Y-9C MDRM | Call MDRM |
 |------|-------------|-----------|-----------|
-| 1 | Cash and balances due | BHCT0081 | RCFD0081 |
+| 1 | Cash and balances due | BHCK0010 | RCFD0081 |
 | 2 | Securities | BHCT1754 | RCFD1754 |
-| 3 | Fed funds sold/reverse repos | BHCTB987 | RCFDB987 |
-| 4 | Loans and leases, net | BHCTB529 | RCFDB529 |
+| 3 | Fed funds sold/reverse repos | BHCKC225 | RCFDB987 |
+| 4 | Loans and leases, net | BHCKB529 | RCFDB529 |
 | **5** | **Trading assets** | **BHCT3545** | **RCFD3545** |
 | 10 | Goodwill and intangibles | BHCT2143 | RCFD2143 |
 | 11 | Other assets | BHCT2160 | RCFD2160 |
@@ -317,18 +317,18 @@ The main balance sheet schedule provides high-level asset and liability totals.
 | Line | Description | Y-9C MDRM | Call MDRM |
 |------|-------------|-----------|-----------|
 | 13 | Total deposits | BHCM2200 | RCON2200 |
-| 14 | Fed funds purchased/repos | BHCTB993 | RCFDB993 |
+| 14 | Fed funds purchased/repos | BHCK2800 | RCFDB993 |
 | **15** | **Trading liabilities** | **BHCT3548** | **RCFD3548** |
 | 16 | Other borrowed money | BHCT3190 | RCFD3190 |
-| 19 | Subordinated debt | BHCT3200 | RCFD3200 |
-| **21** | **Total liabilities** | **BHCT2948** | **RCFD2948** |
+| 19 | Subordinated debt | BHCK4062 | RCFD3200 |
+| **21** | **Total liabilities** | **BHCK2948** | **RCFD2948** |
 
 #### Equity Items
 
 | Line | Description | Y-9C MDRM | Call MDRM |
 |------|-------------|-----------|-----------|
 | 28 | Total equity capital | BHCT3210 | RCFD3210 |
-| 29 | Total liabilities and equity | BHCT3300 | RCFD3300 |
+| 29 | Total liabilities and equity | BHCK3300 | RCFD3300 |
 
 ### 4.2 Schedule HC-B / RC-B: Securities
 
@@ -345,11 +345,11 @@ Reports securities held in the investment portfolio (not trading).
 
 | Description | HTM MDRM | AFS MDRM |
 |-------------|----------|----------|
-| U.S. Treasury | BHCT0211 | BHCT1286 |
-| U.S. Government agency | BHCT0213 | BHCT1287 |
+| U.S. Treasury | BHCK0211 | BHCT1286 |
+| U.S. Government agency | BHCK0213 | BHCT1287 |
 | MBS - residential | Various | Various |
 | MBS - commercial | Various | Various |
-| **Total HTM** | **BHCTJJ34** | - |
+| **Total HTM** | **BHCKJJ34** | - |
 | **Total AFS** | - | **BHCT1773** |
 
 ### 4.3 Schedule HC-D / RC-D: Trading Assets and Liabilities

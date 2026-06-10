@@ -71,7 +71,7 @@ LOAN PORTFOLIO
 |-----------|------|-------------|
 | Domestic | BHCK1410 | RE loans - domestic offices |
 | Foreign | BHCK1411 | RE loans - foreign offices |
-| Total | BHCT1410 | Total RE loans |
+| Total | BHCK1410 | Total RE loans |
 
 **Reconciliation**:
 ```
@@ -84,7 +84,7 @@ Item 1 = Item 1.a + Item 1.b + Item 1.c + Item 1.d + Item 1.e + Item 1.f
 
 | Sub-Item | MDRM | Description | Risk Weight |
 |----------|------|-------------|-------------|
-| 1.a (Total) | BHCT1415 | Total construction | 100-150% |
+| 1.a (Total) | BHCK1415 | Total construction | 100-150% |
 | 1.a.(1) | BHCKF158 | 1-4 family construction | 50-100% |
 | 1.a.(2) | BHCKF159 | Other construction | 100-150% |
 
@@ -102,7 +102,7 @@ Item 1 = Item 1.a + Item 1.b + Item 1.c + Item 1.d + Item 1.e + Item 1.f
 
 | MDRM | Description |
 |------|-------------|
-| BHCT1420 | Loans secured by farmland |
+| BHCK1420 | Loans secured by farmland |
 
 **Characteristics**:
 - Long-term agricultural real estate
@@ -132,8 +132,8 @@ Item 1 = Item 1.a + Item 1.b + Item 1.c + Item 1.d + Item 1.e + Item 1.f
 | Sub-Item | MDRM | Description | Risk Weight |
 |----------|------|-------------|-------------|
 | 1.d (Total) | BHCT5367 | Total closed-end 1-4 family | 35-100% |
-| 1.d.(1) | BHCTC236 | First liens | 35-50% |
-| 1.d.(2) | BHCTC238 | Junior liens | 100% |
+| 1.d.(1) | BHCK5367 | First liens | 35-50% |
+| 1.d.(2) | BHCK5368 | Junior liens | 100% |
 
 **First Lien Risk Weights** (Basel III):
 - LTV ≤ 60%: 35%
@@ -146,7 +146,7 @@ Item 1 = Item 1.a + Item 1.b + Item 1.c + Item 1.d + Item 1.e + Item 1.f
 
 | MDRM | Description |
 |------|-------------|
-| BHCT1460 | Multifamily residential |
+| BHCK1460 | Multifamily residential |
 
 **Sub-Items (2022+)**:
 | MDRM | Description | Risk Weight |
@@ -165,9 +165,9 @@ Item 1 = Item 1.a + Item 1.b + Item 1.c + Item 1.d + Item 1.e + Item 1.f
 
 | Sub-Item | MDRM | Description | Risk Weight |
 |----------|------|-------------|-------------|
-| 1.f (Total) | BHCT1480 | Total CRE | 100% |
-| 1.f.(1) | BHCTF160 | Owner-occupied | 100% |
-| 1.f.(2) | BHCTF162 | Non-owner occupied | 100% |
+| 1.f (Total) | BHCK1480 | Total CRE | 100% |
+| 1.f.(1) | BHCKF160 | Owner-occupied | 100% |
+| 1.f.(2) | BHCKF161 | Non-owner occupied | 100% |
 
 **Owner-Occupied CRE**: Repayment depends on business operations, not rental income
 **Non-Owner Occupied CRE**: Investment property; repayment from rental income
@@ -186,9 +186,9 @@ Item 1 = Item 1.a + Item 1.b + Item 1.c + Item 1.d + Item 1.e + Item 1.f
 | Sub-Item | MDRM | Description | Risk Weight |
 |----------|------|-------------|-------------|
 | 2 (Total) | BHCK1288 | Total interbank | 20-100% |
-| 2.a | BHCKB532 | US banks and thrifts | 20% |
-| 2.b | BHCKB533 | Foreign banks | 20-150% |
-| 2.c | BHCKB534 | Acceptances of other banks | 20% |
+| 2.a | BHCK1292 | US banks and thrifts | 20% |
+| 2.b | BHCK1296 | Foreign banks | 20-150% |
+| 2.c | BHCK1755 | Acceptances of other banks | 20% |
 
 **Nature**: Short-term lending between financial institutions
 
@@ -211,8 +211,8 @@ Item 1 = Item 1.a + Item 1.b + Item 1.c + Item 1.d + Item 1.e + Item 1.f
 
 | Sub-Item | MDRM | Description | Risk Weight |
 |----------|------|-------------|-------------|
-| 4 (Total) | BHCT1766 | Total C&I | 100% |
-| 4.a | BHCKB531 | US addressees | 100% |
+| 4 (Total) | BHCK1766 | Total C&I | 100% |
+| 4.a | BHCK1763 | US addressees | 100% |
 | 4.b | BHCK1763 | Non-US addressees | 100% |
 
 **C&I Loan Types**:
@@ -232,13 +232,13 @@ Item 1 = Item 1.a + Item 1.b + Item 1.c + Item 1.d + Item 1.e + Item 1.f
 |----------|------|-------------|-------------|
 | 5 (Total) | BHCK1975 | Total consumer | 75-100% |
 | 5.a | BHCKB538 | Credit cards | 100% |
-| 5.a.(1) | BHCKB561 | Consumer credit cards | 100% |
+| 5.a.(1) | BHDMB561 | Consumer credit cards | 100% |
 | 5.a.(2) | BHCKK137 | Commercial credit cards | 100% |
 | 5.b | BHCKB539 | Other revolving | 100% |
 | 5.c | BHCKK137 | Automobile loans | 75% |
 | 5.c.(1) | BHCKK138 | New vehicles | 75% |
 | 5.c.(2) | BHCKK139 | Used vehicles | 75% |
-| 5.d | BHCKB540 | Other consumer | 100% |
+| 5.d | BHCKK207 | Other consumer | 100% |
 
 **Credit Card Segmentation**:
 - Consumer cards (5.a.1): Personal use
@@ -274,7 +274,7 @@ Item 1 = Item 1.a + Item 1.b + Item 1.c + Item 1.d + Item 1.e + Item 1.f
 
 | Sub-Item | MDRM | Description |
 |----------|------|-------------|
-| 8 (Total) | BHCT1563 | Total other loans |
+| 8 (Total) | BHCK1563 | Total other loans |
 | 8.a | BHCK1545 | Loans for purchasing/carrying securities |
 | 8.b | BHCK1564 | All other loans |
 
@@ -286,9 +286,9 @@ Item 1 = Item 1.a + Item 1.b + Item 1.c + Item 1.d + Item 1.e + Item 1.f
 
 | Sub-Item | MDRM | Description |
 |----------|------|-------------|
-| 9 (Total) | BHCTB541 | Total leases |
+| 9 (Total) | BHCK2165 | Total leases |
 | 9.a | BHCKF164 | Consumer leases |
-| 9.b | BHCTF165 | Commercial leases |
+| 9.b | BHCKF163 | Commercial leases |
 
 **Lease Types**:
 - Direct financing leases
@@ -301,7 +301,7 @@ Item 1 = Item 1.a + Item 1.b + Item 1.c + Item 1.d + Item 1.e + Item 1.f
 
 | MDRM | Description |
 |------|-------------|
-| BHCT2123 | Unearned income on loans |
+| BHCK2123 | Unearned income on loans |
 
 **Nature**: Deferred loan fees and discounts that will be recognized over loan life
 
@@ -327,7 +327,7 @@ Coverage Ratio = BHCT3123 / Nonperforming Loans (HC-N)
 
 | MDRM | Formula | Ties To |
 |------|---------|---------|
-| BHCTB529 | Items 1-9 - Item 10 - Item 11 | HC Item 4.d |
+| BHCKB529 | Items 1-9 - Item 10 - Item 11 | HC Item 4.d |
 
 ---
 
@@ -338,7 +338,7 @@ SCHEDULE HC-C                           SCHEDULE HC
 ═══════════════════════════════════════════════════════════════════════
 
 Item 12 (Net Loans)            ────────► HC Item 4.d (Net loans)
-BHCTB529                                 BHCTB529
+BHCKB529                                 BHCKB529
 
 Items 1-9 minus Item 10        ────────► HC Item 4.b (Loans net of unearned)
                                          BHCTB528
@@ -437,21 +437,21 @@ Loan Growth = (Current Period - Prior Period) / Prior Period
 
 | Item | MDRM | Description |
 |------|------|-------------|
-| 1 | BHCT1410 | Real estate loans (total) |
-| 1.a | BHCT1415 | Construction |
+| 1 | BHCK1410 | Real estate loans (total) |
+| 1.a | BHCK1415 | Construction |
 | 1.c | BHCK1797 | HELOCs |
 | 1.d | BHCT5367 | 1-4 family closed-end |
-| 1.e | BHCT1460 | Multifamily |
-| 1.f | BHCT1480 | Nonfarm nonresidential (CRE) |
+| 1.e | BHCK1460 | Multifamily |
+| 1.f | BHCK1480 | Nonfarm nonresidential (CRE) |
 | 3 | BHCK1590 | Agricultural |
-| 4 | BHCT1766 | C&I loans |
+| 4 | BHCK1766 | C&I loans |
 | 5 | BHCK1975 | Consumer loans |
 | 5.a | BHCKB538 | Credit cards |
 | 5.c | BHCKK137 | Auto loans |
-| 9 | BHCTB541 | Leases |
-| 10 | BHCT2123 | Unearned income |
+| 9 | BHCK2165 | Leases |
+| 10 | BHCK2123 | Unearned income |
 | 11 | BHCT3123 | **ALLOWANCE** |
-| 12 | BHCTB529 | **NET LOANS** |
+| 12 | BHCKB529 | **NET LOANS** |
 
 ---
 

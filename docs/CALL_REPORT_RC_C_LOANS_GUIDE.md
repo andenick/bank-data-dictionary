@@ -28,19 +28,19 @@ Schedule RC-C provides detailed breakdowns of a bank's loan portfolio by loan ty
 
 | Item | Description | MDRM Total | MDRM Domestic | Y-9C Equiv |
 |------|-------------|------------|---------------|------------|
-| 1 | Loans secured by real estate | RCFD1410 | RCON1410 | BHCT1410 |
-| 1.a | Construction & land development | RCFD1415 | RCON1415 | BHCT1415 |
+| 1 | Loans secured by real estate | RCFD1410 | RCON1410 | BHCK1410 |
+| 1.a | Construction & land development | RCFD1415 | RCON1415 | BHCK1415 |
 | 1.a.(1) | 1-4 family residential ADC | RCFDF158 | - | BHCKF158 |
 | 1.a.(2) | Other construction/land | RCFDF159 | - | BHCKF159 |
-| 1.b | Secured by farmland | RCFD1420 | RCON1420 | BHCT1420 |
+| 1.b | Secured by farmland | RCFD1420 | RCON1420 | BHCK1420 |
 | 1.c | HELOCs | RCON1797 | RCON1797 | BHCK1797 |
 | 1.d | 1-4 family closed-end | RCFD5367 | RCON5367 | BHCT5367 |
-| 1.d.(1) | First liens | RCFDC236 | RCONC236 | BHCTC236 |
-| 1.d.(2) | Junior liens | RCFDC238 | RCONC238 | BHCTC238 |
-| 1.e | Multifamily (5+ units) | RCFD1460 | RCON1460 | BHCT1460 |
-| 1.f | Nonfarm nonresidential | RCFD1480 | RCON1480 | BHCT1480 |
-| 1.f.(1) | Owner-occupied | RCFDF160 | RCONF160 | BHCTF160 |
-| 1.f.(2) | Non-owner-occupied | RCFDF162 | RCONF162 | BHCTF162 |
+| 1.d.(1) | First liens | RCFDC236 | RCONC236 | BHCK5367 |
+| 1.d.(2) | Junior liens | RCFDC238 | RCONC238 | BHCK5368 |
+| 1.e | Multifamily (5+ units) | RCFD1460 | RCON1460 | BHCK1460 |
+| 1.f | Nonfarm nonresidential | RCFD1480 | RCON1480 | BHCK1480 |
+| 1.f.(1) | Owner-occupied | RCFDF160 | RCONF160 | BHCKF160 |
+| 1.f.(2) | Non-owner-occupied | RCFDF162 | RCONF162 | BHCKF161 |
 
 ### Commercial and Other Loans
 
@@ -48,26 +48,26 @@ Schedule RC-C provides detailed breakdowns of a bank's loan portfolio by loan ty
 |------|-------------|------------|------------|-------|
 | 2 | Loans to depository institutions | RCFD1288 | BHCK1288 | Interbank |
 | 3 | Loans to finance agricultural | RCON1590 | BHCK1590 | Farm operating |
-| 4 | Commercial and industrial | RCFD1766 | BHCT1766 | C&I loans |
-| 4.a | To US addressees | RCONB531 | BHCKB531 | Domestic |
+| 4 | Commercial and industrial | RCFD1766 | BHCK1766 | C&I loans |
+| 4.a | To US addressees | RCONB531 | BHCK1763 | Domestic |
 | 4.b | To non-US addressees | RCFN1763 | BHCK1763 | Foreign |
 | 5 | Loans to individuals | RCON1975 | BHCK1975 | Consumer |
 | 5.a | Credit cards | RCONB538 | BHCKB538 | |
 | 5.b | Other revolving | RCONB539 | BHCKB539 | |
 | 5.c | Automobile loans | RCONK137 | BHCKK137 | |
-| 5.d | Other consumer | RCONB540 | BHCKB540 | |
+| 5.d | Other consumer | RCONB540 | BHCKK207 | |
 | 6 | Loans to foreign governments | RCFN1296 | BHCK1296 | Sovereign |
 | 7 | Loans to states/munis | RCFD1709 | BHCT1709 | |
-| 8 | Other loans | RCFD1563 | BHCT1563 | |
-| 9 | Lease financing receivables | RCFDB541 | BHCTB541 | |
+| 8 | Other loans | RCFD1563 | BHCK1563 | |
+| 9 | Lease financing receivables | RCFDB541 | BHCK2165 | |
 
 ### Totals and Adjustments
 
 | Item | Description | MDRM | Y-9C Equiv | Notes |
 |------|-------------|------|------------|-------|
-| 10 | LESS: Unearned income | RCFD2123 | BHCT2123 | Contra |
+| 10 | LESS: Unearned income | RCFD2123 | BHCK2123 | Contra |
 | 11 | LESS: Allowance | RCFD3123 | BHCT3123 | ALLL/ACL |
-| **12** | **Total loans net** | **RCFDB529** | **BHCTB529** | Ties to RC Item 4 |
+| **12** | **Total loans net** | **RCFDB529** | **BHCKB529** | Ties to RC Item 4 |
 
 ---
 
@@ -130,7 +130,7 @@ For each RC-C MDRM code, the Y-9C equivalent is:
 - Replace RCON with BHCK (domestic bank) or BHCM (BHC domestic)
 - Replace RCFN with BHCK (foreign)
 
-Example: RCFDB529 (Call) = BHCTB529 (Y-9C)
+Example: RCFDB529 (Call) = BHCKB529 (Y-9C)
 
 ---
 

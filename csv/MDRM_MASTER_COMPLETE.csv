@@ -82,20 +82,20 @@ TOTAL_CAPITAL,Total Risk-Based Capital,Total risk-based capital,BHCA3792,HC-R,Pa
 RWA,Risk-Weighted Assets,Total risk-weighted assets,BHCAA223,HC-R,Part II-31,RCFDA223,RC-R,Part II-31,-,-,CR1,C,Capital,2014-03-31,9999-12-31,-,-,Total RWA = HC-R/RC-R Part II item 31 (verified Mar 2025 FFIEC 031/041 RC-R Part II & FR Y-9C HC-R; prior 'Part II-26' was a pre-2015 Basel I vintage)
 CET1_CAPITAL,Common Equity Tier 1 Capital,CET1 capital,BHCAP859,HC-R,Part I-31,RCFAP859,RC-R,Part I-31,-,-,CR1,C,Capital,2014-03-31,9999-12-31,-,-,Basel III
 SECURITIES_AFS,Available-for-Sale Securities,Securities held available for sale,BHCT1773,HC-B,M1,RCFD1773,RC-B,M1,-,-,-,M,Asset,1994-03-31,9999-12-31,-,-,
-SECURITIES_HTM,Held-to-Maturity Securities,Securities held to maturity,BHCTJJ34,HC-B,M2,RCFDJJ34,RC-B,M2,-,-,-,M,Asset,2014-03-31,9999-12-31,-,-,
+SECURITIES_HTM,Held-to-Maturity Securities,Securities held to maturity,BHCKJJ34,HC-B,M2,RCFDJJ34,RC-B,M2,-,-,-,M,Asset,2014-03-31,9999-12-31,-,-,
 NET_INCOME,Net Income,Net income (year-to-date),BHCT4340,HI,14,RIAD4340,RI,14,-,-,-,E,Income,1976-03-31,9999-12-31,-,-,VERIFIED item 14: RIAD4340 'must equal Schedule RI item 14' (net income attributable to bank/holding company); item 12 is the pre-NCI-split aggregate (code G104) so the 'should be item 12' claim is refuted
 PROVISION_LLP,Provision for Loan Losses,Provision for loan and lease losses,BHCT4230,HI,4,RIAD4230,RI,4,-,-,-,A,Expense,1976-03-31,9999-12-31,-,-,
 NPL_TOTAL,Total Nonperforming Loans,Total nonperforming loans,BHCT1403,HC-N,M7.a,RCFD1403,RC-N,M7.a,-,-,-,A,Asset,1976-03-31,9999-12-31,-,-,
 LOANS_NET,Loans and Leases Net,Loans and leases net of unearned income,BHCTB528,HC,4.b,RCFDB528,RC,4.b,-,-,-,A,Asset,1976-03-31,9999-12-31,-,-,
-CASH_BALANCES,Cash and Balances Due,Cash and balances due from depository institutions,BHCT0081,HC,1,RCFD0081,RC,1,-,-,-,L,Asset,1976-03-31,9999-12-31,-,-,
-FED_FUNDS_SOLD,Federal Funds Sold,Federal funds sold and securities purchased under resale agreements,BHCTB987,HC,3,RCFDB987,RC,3,-,-,-,L,Asset,1976-03-31,9999-12-31,-,-,
+CASH_BALANCES,Cash and Balances Due,Cash and balances due from depository institutions,BHCK0010,HC,1,RCFD0081,RC,1,-,-,-,L,Asset,1976-03-31,9999-12-31,-,-,
+FED_FUNDS_SOLD,Federal Funds Sold,Federal funds sold and securities purchased under resale agreements,BHCKC225,HC,3,RCFDB987,RC,3,-,-,-,L,Asset,1976-03-31,9999-12-31,-,-,
 ALLOWANCE_LLP,Allowance for Loan Losses,Allowance for loan and lease losses,BHCT3123,HC,4.c,RCFD3123,RC,4.c,-,-,-,A,Contra-Asset,1976-03-31,9999-12-31,-,-,
-GOODWILL,Goodwill,Goodwill,BHCT3163,HC,10.a,RCFD3163,RC,10.a,-,-,-,M,Asset,1976-03-31,9999-12-31,-,-,
-INTANGIBLE_ASSETS,Other Intangible Assets,Other intangible assets,BHCTC752,HC,10.b,RCFDC752,RC,10.b,-,-,-,M,Asset,2002-03-31,9999-12-31,-,-,
+GOODWILL,Goodwill,Goodwill,BHCK3163,HC,10.a,RCFD3163,RC,10.a,-,-,-,M,Asset,1976-03-31,9999-12-31,-,-,
+INTANGIBLE_ASSETS,Other Intangible Assets,Other intangible assets,BHCK0426,HC,10.b,RCFD0426,RC,10.b,-,-,-,M,Asset,2002-03-31,9999-12-31,-,-,
 OTHER_ASSETS,Other Assets,Other assets,BHCT2160,HC,11,RCFD2160,RC,11,-,-,-,M,Asset,1976-03-31,9999-12-31,-,-,
-TOTAL_LIABILITIES,Total Liabilities,Total liabilities,BHCT2948,HC,21,RCFD2948,RC,21,-,-,-,M,Liability,1976-03-31,9999-12-31,-,-,
+TOTAL_LIABILITIES,Total Liabilities,Total liabilities,BHCK2948,HC,21,RCFD2948,RC,21,-,-,-,M,Liability,1976-03-31,9999-12-31,-,-,
 OTHER_BORROWED_MONEY,Other Borrowed Money,Other borrowed money,BHCT3190,HC,16,RCFD3190,RC,16,-,-,-,L,Liability,1976-03-31,9999-12-31,-,-,
-SUBORDINATED_DEBT,Subordinated Notes and Debentures,Subordinated notes and debentures,BHCT3200,HC,19,RCFD3200,RC,19,-,-,-,C,Liability,1976-03-31,9999-12-31,-,-,
+SUBORDINATED_DEBT,Subordinated Notes and Debentures,Subordinated notes and debentures,BHCK4062,HC,19,RCFD3200,RC,19,-,-,-,C,Liability,1976-03-31,9999-12-31,-,-,
 INTEREST_INCOME_LOANS,Interest Income on Loans,Interest and fee income on loans,BHCK4010,HI,1.a,RIAD4010,RI,1.a,-,-,-,E,Income,1976-03-31,9999-12-31,-,-,
-INTEREST_EXPENSE_DEPOSITS,Interest Expense on Deposits,Interest expense on deposits,BHCK4170,HI,2.a,RIAD4170,RI,2.a,-,-,-,E,Expense,1976-03-31,9999-12-31,-,-,
+INTEREST_EXPENSE_DEPOSITS,Interest Expense on Deposits,Interest expense on deposits,RIAD4170,HI,2.a,RIAD4170,RI,2.a,-,-,-,E,Expense,1976-03-31,9999-12-31,-,-,
 TRADING_REVENUE,Trading Revenue,Trading revenue,BHCKA220,HI-M,8.a,RIADA220,RI-M,8.a,-,-,MR1,S,Income,2001-03-31,9999-12-31,-,-,Net gains/losses on trading

@@ -16,7 +16,7 @@ Bank Holding Companies (BHCs), Intermediate Holding Companies (IHCs), and covere
 
 ### A.1 - Income Statement Projections
 Projects income statement items over 9 quarters under baseline and stress scenarios:
-- Net Interest Income (cross-ref: HI, BHCT4074)
+- Net Interest Income (cross-ref: HI, BHCK4074)
 - Trading Revenue (cross-ref: HI, BHCKA220)
 - Provision for Credit Losses (cross-ref: HI, BHCT4230)
 - Net Income (cross-ref: HI, BHCT4340)

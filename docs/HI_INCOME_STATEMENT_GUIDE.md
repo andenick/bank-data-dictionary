@@ -87,7 +87,7 @@ NET INCOME (Item 12)
 
 | Sub-Item | MDRM | Call MDRM | Description |
 |----------|------|-----------|-------------|
-| 1 (Total) | BHCT4107 | RIAD4107 | Total interest income |
+| 1 (Total) | BHCK4107 | RIAD4107 | Total interest income |
 | 1.a | BHCK4010 | RIAD4010 | Interest/fees on loans |
 | 1.b | BHCK4115 | RIAD4115 | Interest on balances due |
 | 1.c | BHCK4107 | RIAD4107 | Interest on securities |
@@ -96,24 +96,24 @@ NET INCOME (Item 12)
 | 1.c.(3) | BHCK4060 | RIAD4060 | Other securities |
 | 1.d | BHCK4020 | RIAD4020 | Fed funds sold/reverse repos |
 | 1.e | BHCK4069 | RIAD4069 | Trading assets |
-| 1.f | BHCKB570 | RIADB570 | Other interest income |
+| 1.f | BHCKB570 | RIAD4518 | Other interest income |
 
 ### Item 2: Interest Expense
 
 | Sub-Item | MDRM | Call MDRM | Description |
 |----------|------|-----------|-------------|
-| 2 (Total) | BHCT4073 | RIAD4073 | Total interest expense |
-| 2.a | BHCK4170 | RIAD4170 | Deposits |
+| 2 (Total) | BHCK4073 | RIAD4073 | Total interest expense |
+| 2.a | RIAD4170 | RIAD4170 | Deposits |
 | 2.b | BHCK4180 | RIAD4180 | Fed funds purchased/repos |
 | 2.c | BHCK4185 | RIAD4185 | Trading liabilities |
-| 2.d | BHCK4200 | RIAD4200 | Borrowed money |
-| 2.e | BHCK4190 | RIAD4190 | Subordinated debt |
+| 2.d | RIAD4190 | RIAD4200 | Borrowed money |
+| 2.e | RIAD4200 | RIAD4190 | Subordinated debt |
 
 ### Item 3: Net Interest Income
 
 | MDRM | Formula |
 |------|---------|
-| BHCT4074 | Item 1 - Item 2 |
+| BHCK4074 | Item 1 - Item 2 |
 
 **Key Metric**: Net Interest Margin (NIM) = Item 3 / Average Earning Assets (HC-K)
 
@@ -129,22 +129,22 @@ NET INCOME (Item 12)
 
 | Sub-Item | MDRM | Call MDRM | Description |
 |----------|------|-----------|-------------|
-| 6 (Total) | BHCT4079 | RIAD4079 | Total noninterest income |
-| 6.a | BHCK4080 | RIAD4080 | Service charges on deposits |
+| 6 (Total) | BHCK4079 | RIAD4079 | Total noninterest income |
+| 6.a | BHCK4483 | RIAD4080 | Service charges on deposits |
 | 6.b | BHCKA220 | RIADA220 | Trading revenue |
 | 6.c | BHCK4070 | RIAD4070 | Fiduciary activities |
 | 6.d | BHCKC886 | RIADC886 | Investment banking fees |
 | 6.e | BHCKB491 | RIADB491 | Venture capital revenue |
 | 6.f | BHCKB492 | RIADB492 | Net servicing fees |
 | 6.g | BHCKB493 | RIADB493 | Securitization income |
-| 6.h | BHCK4840 | RIAD4840 | Insurance commissions |
+| 6.h | BHCKB494 | RIAD4840 | Insurance commissions |
 | 6.i | BHCK4076 | RIAD4076 | Other noninterest income |
 
 ### Item 7: Noninterest Expense
 
 | Sub-Item | MDRM | Call MDRM | Description |
 |----------|------|-----------|-------------|
-| 7 (Total) | BHCT4093 | RIAD4093 | Total noninterest expense |
+| 7 (Total) | BHCK4093 | RIAD4093 | Total noninterest expense |
 | 7.a | BHCK4135 | RIAD4135 | Salaries and benefits |
 | 7.b | BHCK4217 | RIAD4217 | Occupancy |
 | 7.c | BHCKF556 | RIADF556 | Premises and equipment |
@@ -223,7 +223,7 @@ Schedule HI Memoranda provides trading revenue breakdown:
 | Foreign exchange | BHCKA222 | FX trading gains/losses |
 | Equity | BHCKA223 | Equity trading gains/losses |
 | Commodity | BHCKA224 | Commodity trading gains/losses |
-| Credit | BHCKHT79 | Credit trading gains/losses |
+| Credit | BHCKF186 | Credit trading gains/losses |
 
 **Ties To**: Item 6.b total trading revenue
 
@@ -275,19 +275,19 @@ Yield calculations use:
 
 | Item | MDRM | Description |
 |------|------|-------------|
-| 1 | BHCT4107 | Interest income |
+| 1 | BHCK4107 | Interest income |
 | 1.a | BHCK4010 | Interest on loans |
-| 2 | BHCT4073 | Interest expense |
-| 2.a | BHCK4170 | Interest on deposits |
-| **3** | **BHCT4074** | **Net interest income** |
+| 2 | BHCK4073 | Interest expense |
+| 2.a | RIAD4170 | Interest on deposits |
+| **3** | **BHCK4074** | **Net interest income** |
 | 4 | BHCT4230 | Provision for loan losses |
 | 5 | BHCT4433 | NII after provision |
-| 6 | BHCT4079 | Noninterest income |
+| 6 | BHCK4079 | Noninterest income |
 | 6.b | BHCKA220 | Trading revenue |
-| 7 | BHCT4093 | Noninterest expense |
+| 7 | BHCK4093 | Noninterest expense |
 | 7.a | BHCK4135 | Salaries and benefits |
-| 8 | BHCT4301 | Pre-tax income |
-| 9 | BHCT4302 | Income tax expense |
+| 8 | BHCK4301 | Pre-tax income |
+| 9 | BHCK4302 | Income tax expense |
 | **12** | **BHCT4340** | **Net income** |
 
 ---

@@ -243,17 +243,17 @@ Item 5 = Item 5.a + 5.b + 5.c + 5.d + 5.e + 5.f
 
 | Column | MDRM | Description | Ties To |
 |--------|------|-------------|---------|
-| A | BHCT1772 | Total AFS amortized cost | - |
+| A | BHCK1772 | Total AFS amortized cost | - |
 | B | BHCT1773 | Total AFS fair value | HC Item 2.b |
 | C | BHCT1754 | Total HTM amortized cost | HC Item 2.a |
-| D | BHCTJJ34 | Total HTM fair value | - |
+| D | BHCKJJ34 | Total HTM fair value | - |
 
 **Reconciliation**:
 ```
 Item 8 = Sum(Items 1-7) for each column
 
 Schedule HC Ties:
-HC Item 2.a (HTM securities) = HC-B Item 8, Column C (BHCTJJ34)
+HC Item 2.a (HTM securities) = HC-B Item 8, Column C (BHCKJJ34)
 HC Item 2.b (AFS securities) = HC-B Item 8, Column B (BHCT1773)
 ```
 
@@ -265,8 +265,8 @@ HC Item 2.b (AFS securities) = HC-B Item 8, Column B (BHCT1773)
 
 | MDRM | Description |
 |------|-------------|
-| BHCT0416 | AFS securities pledged |
-| BHCT0417 | HTM securities pledged |
+| BHCK0416 | AFS securities pledged |
+| BHCK0416 | HTM securities pledged |
 
 **Purpose**: Identifies securities encumbered as collateral for:
 - Public deposits
@@ -298,7 +298,7 @@ HC Item 2.b (AFS securities) = HC-B Item 8, Column B (BHCT1773)
 **Calculation**:
 ```
 AOCI = AFS Fair Value (Col B) - AFS Amortized Cost (Col A)
-     = BHCT1773 - BHCT1772
+     = BHCT1773 - BHCK1772
 ```
 
 **Impact**: Flows through to equity (HC Item 27.a) but excluded from regulatory capital for most banks under AOCI opt-out
@@ -309,7 +309,7 @@ AOCI = AFS Fair Value (Col B) - AFS Amortized Cost (Col A)
 
 | MDRM | Description | Ties To |
 |------|-------------|---------|
-| BHCTJJ32 | Total equity securities with determinable FV | HC Item 2.c |
+| BHCKJA22 | Total equity securities with determinable FV | HC Item 2.c |
 | BHCKJJ33 | Mutual funds and ETFs | - |
 | BHCKJJ35 | Other equity securities | - |
 
@@ -357,10 +357,10 @@ Item 8, Column B (AFS FV)      ────────► HC Item 2.b (AFS secu
 BHCT1773                                 BHCT1773
 
 Item 8, Column C (HTM Cost)    ────────► HC Item 2.a (HTM securities)
-BHCTJJ34                                 BHCTJJ34
+BHCKJJ34                                 BHCKJJ34
 
 M5 (Equity with FV)            ────────► HC Item 2.c (Equity securities)
-BHCTJJ32                                 BHCTJJ32
+BHCKJA22                                 BHCKJA22
 
 
 SCHEDULE HC-B                           SCHEDULE HC-R (Capital)
@@ -392,8 +392,8 @@ HTM % = Column C Total / (Column B + Column C Totals)
 ### Unrealized Gain/Loss
 ```
 Unrealized G/L = Fair Value - Amortized Cost
-AFS Unrealized = BHCT1773 - BHCT1772
-HTM Unrealized = BHCTJJ34 - BHCT1754 (disclosed but not recognized)
+AFS Unrealized = BHCT1773 - BHCK1772
+HTM Unrealized = BHCKJJ34 - BHCT1754 (disclosed but not recognized)
 ```
 
 ---

@@ -39,19 +39,19 @@ Schedule RC is the master balance sheet for Call Reports filed by FDIC-insured b
 
 | Item | Description | MDRM | Y-9C Equivalent | Notes |
 |------|-------------|------|-----------------|-------|
-| 1 | Cash and balances due | RCFD0081 | BHCT0081 | Same item number |
-| 1.a | Noninterest-bearing | RCON0395 | BHCT0395 | Domestic only in RCON |
-| 1.b | Interest-bearing | RCON0397 | BHCT0397 | Domestic only in RCON |
+| 1 | Cash and balances due | RCFD0081 | BHCK0010 | Same item number |
+| 1.a | Noninterest-bearing | RCON0395 | BHCK0081 | Domestic only in RCON |
+| 1.b | Interest-bearing | RCON0397 | BHCK0395 | Domestic only in RCON |
 | 2 | Securities | RCFD8641 | BHCT8641 | Total securities |
-| 2.a | HTM securities | RCFDJJ34 | BHCTJJ34 | At amortized cost |
+| 2.a | HTM securities | RCFDJJ34 | BHCKJJ34 | At amortized cost |
 | 2.b | AFS securities | RCFD1773 | BHCT1773 | At fair value |
-| 3 | Fed funds sold | RCFDB987 | BHCTB987 | + resale agreements |
+| 3 | Fed funds sold | RCFDB987 | BHCKC225 | + resale agreements |
 | 4 | Loans and leases | RCFD2122 | BHCT2122 | Net of allowance |
 | 4.a | Loans held for sale | RCFD5369 | BHCT5369 | |
 | 4.b | Loans net of unearned | RCFDB528 | BHCTB528 | Ties to RC-C |
 | 4.c | LESS: Allowance | RCFD3123 | BHCT3123 | ALLL/ACL |
 | 5 | Trading assets | RCFD3545 | BHCT3545 | Ties to RC-D |
-| 6 | Premises and fixed | RCFD2145 | BHCT2145 | |
+| 6 | Premises and fixed | RCFD2145 | BHCK2145 | |
 | 7 | Other real estate | RCFD2150 | BHCT2150 | OREO |
 | 10 | Intangible assets | RCFD2143 | BHCT2143 | Goodwill + other |
 | 11 | Other assets | RCFD2160 | BHCT2160 | Ties to RC-F |
@@ -64,24 +64,24 @@ Schedule RC is the master balance sheet for Call Reports filed by FDIC-insured b
 | 13 | Deposits | RCFD2200 | BHCT2200 | Total deposits |
 | 13.a | Domestic deposits | RCON2200 | BHCM2200 | |
 | 13.b | Foreign deposits | RCFNB536 | BHCKB536 | If applicable |
-| 14 | Fed funds purchased | RCFDB993 | BHCTB993 | + repos |
+| 14 | Fed funds purchased | RCFDB993 | BHCK2800 | + repos |
 | 15 | Trading liabilities | RCFD3548 | BHCT3548 | Ties to RC-D |
 | 16 | Other borrowed money | RCFD3190 | BHCT3190 | |
-| 19 | Subordinated debt | RCFD3200 | BHCT3200 | |
-| 20 | Other liabilities | RCFD2930 | BHCT2930 | Ties to RC-G |
-| **21** | **Total liabilities** | **RCFD2948** | **BHCT2948** | |
+| 19 | Subordinated debt | RCFD3200 | BHCK4062 | |
+| 20 | Other liabilities | RCFD2930 | BHCK2750 | Ties to RC-G |
+| **21** | **Total liabilities** | **RCFD2948** | **BHCK2948** | |
 
 ### Equity Capital
 
 | Item | Description | MDRM | Y-9C Equivalent | Notes |
 |------|-------------|------|-----------------|-------|
-| 23 | Perpetual preferred | RCFD3838 | BHCT3838 | |
-| 24 | Common stock | RCFD3230 | BHCT3230 | |
-| 25 | Surplus | RCFD3839 | BHCT3839 | APIC |
-| 26 | Retained earnings | RCFD3632 | BHCT3632 | |
-| 27 | AOCI | RCFDB530 | BHCTB530 | |
+| 23 | Perpetual preferred | RCFD3838 | BHCK3283 | |
+| 24 | Common stock | RCFD3230 | BHCK3230 | |
+| 25 | Surplus | RCFD3839 | BHCK3240 | APIC |
+| 26 | Retained earnings | RCFD3632 | BHCK3247 | |
+| 27 | AOCI | RCFDB530 | BHCKB530 | |
 | **28** | **Total equity capital** | **RCFD3210** | **BHCT3210** | |
-| **29** | **Total L + E** | **RCFD3300** | **BHCT3300** | Must = Item 12 |
+| **29** | **Total L + E** | **RCFD3300** | **BHCK3300** | Must = Item 12 |
 
 ---
 

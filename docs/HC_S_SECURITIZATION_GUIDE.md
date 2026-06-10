@@ -84,8 +84,8 @@ PART III: SERVICER ACTIVITIES
 | 5.d | Auto | BHCKB767 | RCFDB767 |
 | 5.e | Other consumer | BHCKB768 | RCFDB768 |
 | 5.f | C&I | BHCKB769 | RCFDB769 |
-| 5.g | Other | BHCKB770 | RCFDB770 |
-| 6 | **Total ABS held** | BHCKB771 | RCFDB771 |
+| 5.g | Other | BHCKB770 | RIADB770 |
+| 6 | **Total ABS held** | BHCKB771 | RIADB771 |
 
 **Reconciliation**: Item 6 should tie to HC-B ABS holdings (Item 5)
 
@@ -97,10 +97,10 @@ PART III: SERVICER ACTIVITIES
 
 | Item | Property Type | MDRM | Call MDRM |
 |------|---------------|------|-----------|
-| 7.a | 1-4 family residential | BHCKB772 | RCFDB772 |
-| 7.b | Other residential | BHCKB773 | RCFDB773 |
-| 7.c | Commercial | BHCKB774 | RCFDB774 |
-| 8 | **Total mortgage servicing** | BHCKB775 | RCFDB775 |
+| 7.a | 1-4 family residential | BHCKB772 | RIADB772 |
+| 7.b | Other residential | BHCKB773 | RIADB773 |
+| 7.c | Commercial | BHCKB774 | RIADB774 |
+| 8 | **Total mortgage servicing** | BHCKB775 | RIADB775 |
 
 **Nature**: Unpaid principal balance (UPB) of mortgages serviced for third parties.
 

@@ -59,9 +59,9 @@ BALANCING (Item 29)
 
 | Sub-Item | MDRM | Description |
 |----------|------|-------------|
-| 1 (Total) | BHCT0081 | Total cash and due from |
-| 1.a | BHCT0395 | Noninterest-bearing balances and currency/coin |
-| 1.b | BHCT0397 | Interest-bearing balances |
+| 1 (Total) | BHCK0010 | Total cash and due from |
+| 1.a | BHCK0081 | Noninterest-bearing balances and currency/coin |
+| 1.b | BHCK0395 | Interest-bearing balances |
 
 **Components**:
 - Currency and coin on hand
@@ -81,9 +81,9 @@ Item 1 = Item 1.a + Item 1.b
 | Sub-Item | MDRM | Description | Ties To |
 |----------|------|-------------|---------|
 | 2 (Total) | BHCT8641 | Total securities | HC-B |
-| 2.a | BHCTJJ34 | HTM securities (amortized cost) | HC-B Item 8 Col C |
+| 2.a | BHCKJJ34 | HTM securities (amortized cost) | HC-B Item 8 Col C |
 | 2.b | BHCT1773 | AFS debt securities (fair value) | HC-B Item 8 Col B |
-| 2.c | BHCTJJ32 | Equity securities with determinable FV | HC-B M5 |
+| 2.c | BHCKJA22 | Equity securities with determinable FV | HC-B M5 |
 
 **Key Distinctions**:
 - **HTM**: Carried at amortized cost; positive intent and ability to hold to maturity
@@ -105,9 +105,9 @@ Item 2.b = HC-B Item 8, Column B (Total AFS fair value)
 
 | Sub-Item | MDRM | Description |
 |----------|------|-------------|
-| 3 (Total) | BHCTB987 | Total fed funds sold and reverse repos |
-| 3.a | BHCTB989 | Federal funds sold |
-| 3.b | BHCTB995 | Securities purchased under resale agreements |
+| 3 (Total) | BHCKC225 | Total fed funds sold and reverse repos |
+| 3.a | BHCKB987 | Federal funds sold |
+| 3.b | BHCKB989 | Securities purchased under resale agreements |
 
 **Nature**:
 - Short-term lending to other financial institutions
@@ -123,7 +123,7 @@ Item 2.b = HC-B Item 8, Column B (Total AFS fair value)
 | 4.a | BHCT5369 | Loans and leases held for sale | HC-C Item 10 |
 | 4.b | BHCTB528 | Loans and leases, net of unearned income | HC-C Items 1-9 minus Item 10 |
 | 4.c | BHCT3123 | LESS: Allowance for loan losses | HC-C Item 11 |
-| 4.d | BHCTB529 | Net loans and leases | Item 4.a + Item 4.b - Item 4.c |
+| 4.d | BHCKB529 | Net loans and leases | Item 4.a + Item 4.b - Item 4.c |
 
 **Reconciliation to HC-C**:
 ```
@@ -143,7 +143,7 @@ HC Item 4.d = HC Item 4.a + HC Item 4.b - HC Item 4.c
 | Sub-Item | MDRM | Description | Ties To |
 |----------|------|-------------|---------|
 | 5 (Total) | BHCT3545 | Total trading assets | HC-D Item 12 |
-| 5.a | BHCT3546 | Trading assets in domestic offices | - |
+| 5.a | BHDM3545 | Trading assets in domestic offices | - |
 
 **Reconciliation to HC-D**:
 ```
@@ -164,12 +164,12 @@ Item 5 = HC-D Item 12
 
 | Item | MDRM | Description | Ties To |
 |------|------|-------------|---------|
-| 6 | BHCT2145 | Premises and fixed assets | HC-F Item 6 |
+| 6 | BHCK2145 | Premises and fixed assets | HC-F Item 6 |
 | 7 | BHCT2150 | Other real estate owned | HC-F Item 7 |
-| 8 | BHCT2130 | Investments in unconsolidated subs | HC-F Item 8 |
-| 9 | BHCK5372 | Direct/indirect RE venture investments | HC-F Item 9 |
-| 10.a | BHCT3163 | Goodwill | HC-F Item 10.a |
-| 10.b | BHCTC752 | Other intangible assets | HC-F Item 10.b |
+| 8 | BHCK2130 | Investments in unconsolidated subs | HC-F Item 8 |
+| 9 | BHCK3656 | Direct/indirect RE venture investments | HC-F Item 9 |
+| 10.a | BHCK3163 | Goodwill | HC-F Item 10.a |
+| 10.b | BHCK0426 | Other intangible assets | HC-F Item 10.b |
 
 ---
 
@@ -215,10 +215,10 @@ Total Assets = Cash + Securities + Fed Funds + Net Loans + Trading Assets
 |----------|------|-------------|
 | 13 (Total) | BHCT2200 | Total deposits |
 | 13.a | BHCM2200 | Domestic office deposits |
-| 13.a.(1) | BHCM6631 | Domestic noninterest-bearing |
-| 13.a.(2) | BHCM6636 | Domestic interest-bearing |
+| 13.a.(1) | BHDM6631 | Domestic noninterest-bearing |
+| 13.a.(2) | BHDM6636 | Domestic interest-bearing |
 | 13.b | BHCKB536 | Foreign office deposits |
-| 13.b.(1) | BHCKB537 | Foreign noninterest-bearing |
+| 13.b.(1) | BHFN6631 | Foreign noninterest-bearing |
 | 13.b.(2) | BHCKB538 | Foreign interest-bearing |
 
 **Reconciliation**:
@@ -234,9 +234,9 @@ Item 13.b = Item 13.b.(1) + Item 13.b.(2)
 
 | Item | MDRM | Description |
 |------|------|-------------|
-| 14 | BHCTB993 | Fed funds purchased and repos |
-| 14.a | BHCTB985 | Federal funds purchased |
-| 14.b | BHCTB994 | Securities sold under repo |
+| 14 | BHCK2800 | Fed funds purchased and repos |
+| 14.a | BHCKB993 | Federal funds purchased |
+| 14.b | BHCKB995 | Securities sold under repo |
 | 15 | BHCT3548 | Trading liabilities (ties to HC-D Item 15) |
 | 16 | BHCT3190 | Other borrowed money |
 
@@ -246,7 +246,7 @@ Item 13.b = Item 13.b.(1) + Item 13.b.(2)
 
 | MDRM | Description |
 |------|-------------|
-| BHCT3200 | Subordinated notes and debentures |
+| BHCK4062 | Subordinated notes and debentures |
 
 **Regulatory Significance**: May qualify as Tier 2 capital if meeting specified criteria (maturity, subordination, etc.)
 
@@ -256,7 +256,7 @@ Item 13.b = Item 13.b.(1) + Item 13.b.(2)
 
 | MDRM | Description | Ties To |
 |------|-------------|---------|
-| BHCT2930 | Other liabilities | HC-G Item 5 |
+| BHCK2750 | Other liabilities | HC-G Item 5 |
 
 **Reconciliation to HC-G**:
 ```
@@ -270,7 +270,7 @@ Item 20 = HC-G Item 5
 
 | MDRM | Formula |
 |------|---------|
-| BHCT2948 | Sum(Items 13 through 20) |
+| BHCK2948 | Sum(Items 13 through 20) |
 
 ---
 
@@ -281,12 +281,12 @@ Item 20 = HC-G Item 5
 | Item | MDRM | Description |
 |------|------|-------------|
 | 22 | BHCK3000 | Minority interest / noncontrolling interest |
-| 23 | BHCT3838 | Perpetual preferred stock |
-| 24 | BHCT3230 | Common stock |
-| 25 | BHCT3839 | Surplus (APIC) |
-| 26 | BHCT3632 | Retained earnings |
-| 27 | BHCTB530 | Accumulated other comprehensive income (AOCI) |
-| 27.a | BHCT8434 | AOCI - unrealized gains/losses on AFS securities |
+| 23 | BHCK3283 | Perpetual preferred stock |
+| 24 | BHCK3230 | Common stock |
+| 25 | BHCK3240 | Surplus (APIC) |
+| 26 | BHCK3247 | Retained earnings |
+| 27 | BHCKB530 | Accumulated other comprehensive income (AOCI) |
+| 27.a | BHCK8434 | AOCI - unrealized gains/losses on AFS securities |
 
 **AOCI Components**:
 - Unrealized gains/losses on AFS securities
@@ -310,12 +310,12 @@ Item 20 = HC-G Item 5
 
 | MDRM | Formula | Validation |
 |------|---------|------------|
-| BHCT3300 | Item 21 + Item 22 + Item 28 | Must equal Item 12 |
+| BHCK3300 | Item 21 + Item 22 + Item 28 | Must equal Item 12 |
 
 **Balance Check**:
 ```
 Total Assets (Item 12) = Total Liabilities (Item 21) + Minority Interest (Item 22) + Total Equity (Item 28)
-BHCT2170 = BHCT2948 + BHCK3000 + BHCT3210
+BHCK2170 = BHCK2948 + BHCK3210 (= BHCK3300; BHCK2948 already includes minority interest, so BHCK3000 is NOT added separately)
 ```
 
 ---
@@ -368,7 +368,7 @@ Item 28 (Equity)              ──────► HC-R (Regulatory Capital)
 ### Primary Balance Equation
 ```
 Total Assets = Total Liabilities + Minority Interest + Total Equity
-BHCT2170 = BHCT2948 + BHCK3000 + BHCT3210
+BHCK2170 = BHCK2948 + BHCK3210 (= BHCK3300; BHCK2948 already includes minority interest, so BHCK3000 is NOT added separately)
 ```
 
 ### Sub-Total Validations
@@ -432,23 +432,23 @@ HC Item 20 = HC-G Item 5
 
 | Item | MDRM | Description |
 |------|------|-------------|
-| 1 | BHCT0081 | Cash and balances |
+| 1 | BHCK0010 | Cash and balances |
 | 2 | BHCT8641 | Total securities |
-| 2.a | BHCTJJ34 | HTM securities |
+| 2.a | BHCKJJ34 | HTM securities |
 | 2.b | BHCT1773 | AFS securities |
-| 3 | BHCTB987 | Fed funds sold/reverse repos |
+| 3 | BHCKC225 | Fed funds sold/reverse repos |
 | 4.b | BHCTB528 | Loans net of unearned |
 | 4.c | BHCT3123 | Allowance |
 | 5 | BHCT3545 | Trading assets |
-| 10.a | BHCT3163 | Goodwill |
+| 10.a | BHCK3163 | Goodwill |
 | 11 | BHCT2160 | Other assets |
 | 12 | BHCT2170 | **TOTAL ASSETS** |
 | 13 | BHCT2200 | Total deposits |
 | 15 | BHCT3548 | Trading liabilities |
 | 16 | BHCT3190 | Other borrowed money |
-| 19 | BHCT3200 | Subordinated debt |
-| 20 | BHCT2930 | Other liabilities |
-| 21 | BHCT2948 | **TOTAL LIABILITIES** |
+| 19 | BHCK4062 | Subordinated debt |
+| 20 | BHCK2750 | Other liabilities |
+| 21 | BHCK2948 | **TOTAL LIABILITIES** |
 | 28 | BHCT3210 | **TOTAL EQUITY** |
 
 ---

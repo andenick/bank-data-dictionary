@@ -84,16 +84,19 @@ SCHEDULE HI (Income Statement)
 
 | HC Item | HC-B Item | Formula | MDRM |
 |---------|-----------|---------|------|
-| 2 | 8 | Total securities | BHCT8641 |
-| 2.a | 8 Col C | HTM amortized cost | BHCTJJ34 |
+| 2 | 8 | Total securities | *(no single Y-9C code — see note)* |
+| 2.a | 8 Col C | HTM amortized cost | BHCKJJ34 |
 | 2.b | 8 Col B | AFS fair value | BHCT1773 |
-| 2.c | M5 | Equity securities w/ FV | BHCTJJ32 |
+| 2.c | M5 | Equity securities w/ FV | BHCKJA22 |
 
 **Validation**:
 ```
 HC Item 2 = HC Item 2.a + HC Item 2.b + HC Item 2.c
-BHCT8641 = BHCTJJ34 + BHCT1773 + BHCTJJ32
+(total securities) = BHCKJJ34 + BHCT1773 + BHCKJA22
 ```
+> **Note:** the FR Y-9C has **no single consolidated total-securities MDRM**; total securities
+> is the sum of its three components above. `8641` ("TOTAL SECURITIES") is a **Call Report**
+> code (`RCFD8641` / `RCON8641`), not a Y-9C `BHCK`/`BHCT` code.
 
 ---
 
@@ -104,12 +107,12 @@ BHCT8641 = BHCTJJ34 + BHCT1773 + BHCTJJ32
 | 4.a | 10 | Loans held for sale | BHCT5369 |
 | 4.b | Items 1-9 - 10 | Loans net of unearned | BHCTB528 |
 | 4.c | 11 | Allowance for loan losses | BHCT3123 |
-| 4.d | 12 | Net loans and leases | BHCTB529 |
+| 4.d | 12 | Net loans and leases | BHCKB529 |
 
 **Validation**:
 ```
 HC-C Item 12 = Sum(Items 1-9) - Item 10 - Item 11
-BHCTB529 = [Real Estate + Ag + C&I + Consumer + Other + Leases] - Unearned - Allowance
+BHCKB529 = [Real Estate + Ag + C&I + Consumer + Other + Leases] - Unearned - Allowance
 
 HC Item 4.d = HC Item 4.a + HC Item 4.b - HC Item 4.c
 ```
@@ -158,12 +161,12 @@ HC-D Item 14 (BHCT3547) =
 
 | HC Item | HC-F Item | Description | MDRM |
 |---------|-----------|-------------|------|
-| 6 | 6 | Premises and fixed assets | BHCT2145 |
+| 6 | 6 | Premises and fixed assets | BHCK2145 |
 | 7 | 7 | Other real estate owned | BHCT2150 |
-| 8 | 8 | Investments in unconsolidated subs | BHCT2130 |
-| 9 | 9 | RE venture investments | BHCK5372 |
-| 10.a | 10.a | Goodwill | BHCT3163 |
-| 10.b | 10.b | Other intangible assets | BHCTC752 |
+| 8 | 8 | Investments in unconsolidated subs | BHCK2130 |
+| 9 | 9 | RE venture investments | BHCK3656 |
+| 10.a | 10.a | Goodwill | BHCK3163 |
+| 10.b | 10.b | Other intangible assets | BHCK0426 |
 | 11 | 12 | Total other assets | BHCT2160 |
 
 **Validation**:
@@ -178,7 +181,7 @@ HC Item 11 = HC-F Item 12
 
 | HC Item | HC-G Item | Description | MDRM |
 |---------|-----------|-------------|------|
-| 20 | 6 | Total other liabilities | BHCT2930 |
+| 20 | 6 | Total other liabilities | BHCK2750 |
 
 **Validation**:
 ```
@@ -194,7 +197,7 @@ HC-N breaks down the same loan categories as HC-C by delinquency status:
 
 | Loan Category | HC-C | HC-N 30-89 | HC-N 90+ | HC-N Nonaccrual |
 |---------------|------|------------|----------|-----------------|
-| Real estate | Item 1 | BHCK5526 | BHCK5527 | BHCK3492 |
+| Real estate | Item 1 | BHCK5526 | BHCK1422 | BHCK3492 |
 | C&I | Item 4 | BHCK1606 | BHCK1607 | BHCK1608 |
 | Consumer | Item 5 | BHCK5383 | BHCK5384 | BHCK5385 |
 | Total | Item 12 | BHCK5524 | BHCK5525 | BHCK1403 |
@@ -287,9 +290,9 @@ Allowance change ≈ Provision - Charge-offs + Recoveries
 
 | HC-Q Item | Related Schedule | MDRM |
 |-----------|------------------|------|
-| Item 1 (Trading Assets) | HC-D Item 12 | BHCLF688 |
-| Item 2 (AFS Securities) | HC-B Item 8 Col B | BHCL1773 |
-| Item 7 (Trading Liabs) | HC-D Item 15 | BHCLF728 |
+| Item 1 (Trading Assets) | HC-D Item 12 | *(BHCLF688 not in MDRM — unverified)* |
+| Item 2 (AFS Securities) | HC-B Item 8 Col B | BHCK1773 |
+| Item 7 (Trading Liabs) | HC-D Item 15 | *(BHCLF728 not in MDRM — unverified)* |
 
 **Validation**:
 ```
@@ -303,13 +306,13 @@ HC-Q Item 1 ≈ HC-D Item 12
 
 | HC Item | Detail Schedule | Detail Item | MDRM Match |
 |---------|-----------------|-------------|------------|
-| 2 | HC-B | 8 | BHCT8641 |
+| 2 | HC-B | 8 | *(sum: 1773+JJ34+JA22)* |
 | 4.c | HC-C | 11 | BHCT3123 |
-| 4.d | HC-C | 12 | BHCTB529 |
+| 4.d | HC-C | 12 | BHCKB529 |
 | 5 | HC-D | 12 | BHCT3545 |
 | 11 | HC-F | 12 | BHCT2160 |
 | 15 | HC-D | 15 | BHCT3548 |
-| 20 | HC-G | 6 | BHCT2930 |
+| 20 | HC-G | 6 | BHCK2750 |
 
 ---
 

@@ -4,7 +4,7 @@ line_number,item_description,mdrm_total_fv,mdrm_level_1,mdrm_level_2,mdrm_level_
 1.b,Equity securities,BHCLF696,BHCLF697,BHCLF698,BHCLF699,Assets - Trading Equity,HC-D Item 9,2013-03-31,
 1.c,Derivative assets (trading),BHCLF700,BHCLF701,BHCLF702,BHCLF703,Assets - Derivatives,HC-D Item 11,2013-03-31,
 1.d,Loans,BHCLF704,BHCLF705,BHCLF706,BHCLF707,Assets - Trading Loans,HC-D Item 6,2013-03-31,
-2,AFS debt securities,BHCL1773,BHCLF709,BHCLF710,BHCLF711,Assets - AFS,HC Item 2.b,2013-03-31,AFS securities by level
+2,AFS debt securities,BHCK1773,BHCLF709,BHCLF710,BHCLF711,Assets - AFS,HC Item 2.b,2013-03-31,AFS securities by level
 3,Loans held for sale,BHCLF712,BHCLF713,BHCLF714,BHCLF715,Assets - HFS,HC Item 4.a,2013-03-31,
 4,Loans held for investment at FV,BHCLF716,BHCLF717,BHCLF718,BHCLF719,Assets - HFI at FV,-,2013-03-31,FVO loans
 5,Derivative assets (non-trading),BHCLF720,BHCLF721,BHCLF722,BHCLF723,Assets - Hedges,HC-L,2013-03-31,Non-trading derivatives positive FV

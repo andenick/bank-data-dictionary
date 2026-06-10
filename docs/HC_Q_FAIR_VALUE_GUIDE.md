@@ -83,7 +83,7 @@ MEMORANDA
 
 | Metric | MDRM |
 |--------|------|
-| Total FV | BHCL1773 |
+| Total FV | BHCK1773 |
 | Level 1 | BHCLF709 |
 | Level 2 | BHCLF710 |
 | Level 3 | BHCLF711 |
@@ -189,7 +189,7 @@ Regulators focus on:
 |------|----------|---------|---------|---------|
 | Trading assets | BHCLF688 | BHCLF689 | BHCLF690 | BHCLF691 |
 | - Derivatives | BHCLF700 | BHCLF701 | BHCLF702 | BHCLF703 |
-| AFS securities | BHCL1773 | BHCLF709 | BHCLF710 | BHCLF711 |
+| AFS securities | BHCK1773 | BHCLF709 | BHCLF710 | BHCLF711 |
 | Trading liabilities | BHCLF728 | BHCLF729 | BHCLF730 | BHCLF731 |
 | - Derivatives | BHCLF736 | BHCLF737 | BHCLF738 | BHCLF739 |
 

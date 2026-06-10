@@ -1,9 +1,9 @@
 section,category,line_item,mdrm_code,call_mdrm,description,component_of,risk_type,schedule,start_date,notes
-Trading Revenue,Interest Rate,M.7.a,BHCKA221,RIADA221,Trading revenue from interest rate exposures,BHCKA220,Interest Rate,HI-M,2001-03-31,IR swaps; futures; options; bonds
-Trading Revenue,Foreign Exchange,M.7.b,BHCKA222,RIADA222,Trading revenue from foreign exchange exposures,BHCKA220,FX,HI-M,2001-03-31,Spot; forwards; swaps; options
-Trading Revenue,Equity,M.7.c,BHCKA223,RIADA223,Trading revenue from equity exposures,BHCKA220,Equity,HI-M,2001-03-31,Cash equities; equity derivatives
-Trading Revenue,Commodity,M.7.d,BHCKA224,RIADA224,Trading revenue from commodity and other exposures,BHCKA220,Commodity,HI-M,2001-03-31,Precious metals; energy; agriculture
-Trading Revenue,Credit,M.7.e,BHCKHT79,RIADHT79,Trading revenue from credit exposures,BHCKA220,Credit,HI-M,2018-06-30,CDS; TRS; credit-linked products
+Trading Revenue,Interest Rate,M.7.a,BHCKA221,RIAD8757,Trading revenue from interest rate exposures,BHCKA220,Interest Rate,HI-M,2001-03-31,IR swaps; futures; options; bonds
+Trading Revenue,Foreign Exchange,M.7.b,BHCKA222,RIAD8758,Trading revenue from foreign exchange exposures,BHCKA220,FX,HI-M,2001-03-31,Spot; forwards; swaps; options
+Trading Revenue,Equity,M.7.c,BHCKA223,RIAD8759,Trading revenue from equity exposures,BHCKA220,Equity,HI-M,2001-03-31,Cash equities; equity derivatives
+Trading Revenue,Commodity,M.7.d,BHCKA224,RIAD8760,Trading revenue from commodity and other exposures,BHCKA220,Commodity,HI-M,2001-03-31,Precious metals; energy; agriculture
+Trading Revenue,Credit,M.7.e,BHCKF186,RIADF186,Trading revenue from credit exposures,BHCKA220,Credit,HI-M,2018-06-30,CDS; TRS; credit-linked products
 Trading Revenue,Total,6.b,BHCKA220,RIADA220,Total trading revenue,NIR Total,All,HI,2001-03-31,Sum of M.7.a through M.7.e; HI Item 6.b
 Trading Assets,Treasury Securities,1,BHCM3531,RCFDM3531,U.S. Treasury securities,BHCT3545,Interest Rate,HC-D,2008-03-31,Domestic and foreign combined
 Trading Assets,Agency Securities,2,BHCM3532,RCFDM3532,U.S. Government agency obligations,BHCT3545,Interest Rate,HC-D,2008-03-31,Non-MBS agency debt
@@ -92,11 +92,11 @@ Market Risk RWA,Market Risk RWA,RWA10,BHCKA222,RCFDA222,Market risk-weighted ass
 Market Risk RWA,Total RWA,Total,BHCAA223,RCFDA223,Total risk-weighted assets,N/A,All,HC-R Part II,2014-03-31,Sum of all RWA components
 Capital Ratios,CET1 Capital,Cap1,BHCAP859,RCFAP859,Common equity Tier 1 capital,N/A,Capital,HC-R Part I,2014-03-31,Highest quality capital
 Capital Ratios,Tier 1 Capital,Cap2,BHCA8274,RCFAA223,Tier 1 capital,N/A,Capital,HC-R Part I,2014-03-31,CET1 + AT1
-Capital Ratios,Total Capital,Cap3,BHCA3792,RCFAA225,Total capital,N/A,Capital,HC-R Part I,2014-03-31,Tier 1 + Tier 2
+Capital Ratios,Total Capital,Cap3,BHCA3792,RCFA3792,Total capital,N/A,Capital,HC-R Part I,2014-03-31,Tier 1 + Tier 2
 Capital Ratios,CET1 Ratio,Ratio1,BHCAP793,RCFAP793,CET1 capital ratio,N/A,Ratio,HC-R Part I,2014-03-31,CET1 / RWA
-Capital Ratios,Tier 1 Ratio,Ratio2,BHCAP794,RCFAP794,Tier 1 capital ratio,N/A,Ratio,HC-R Part I,2014-03-31,Tier 1 / RWA
-Capital Ratios,Total Capital Ratio,Ratio3,BHCAP795,RCFAP795,Total capital ratio,N/A,Ratio,HC-R Part I,2014-03-31,Total capital / RWA
-Capital Ratios,Leverage Ratio,Ratio4,BHCAP796,RCFAP796,Tier 1 leverage ratio,N/A,Ratio,HC-R Part I,2014-03-31,Tier 1 / Avg assets
+Capital Ratios,Tier 1 Ratio,Ratio2,BHCA7206,RCFA7206,Tier 1 capital ratio,N/A,Ratio,HC-R Part I,2014-03-31,Tier 1 / RWA
+Capital Ratios,Total Capital Ratio,Ratio3,BHCA7205,RCFA7205,Total capital ratio,N/A,Ratio,HC-R Part I,2014-03-31,Total capital / RWA
+Capital Ratios,Leverage Ratio,Ratio4,BHCA7204,RCFA7204,Tier 1 leverage ratio,N/A,Ratio,HC-R Part I,2014-03-31,Tier 1 / Avg assets
 Capital Ratios,SLR,Ratio5,BHCKA224,RCFDA224,Supplementary leverage ratio,N/A,Ratio,HC-R Part I,2018-03-31,Advanced approaches only
-Interest Income,Trading Asset Interest,Int1,BHCK4069,RIAD4069,Interest income on trading assets,BHCT4107,Interest,HI,1995-03-31,Component of total interest income
-Interest Expense,Trading Liability Interest,Int2,BHCK4185,RIAD4185,Interest expense on trading liabilities,BHCT4073,Interest,HI,1995-03-31,Component of total interest expense
+Interest Income,Trading Asset Interest,Int1,BHCK4069,RIAD4069,Interest income on trading assets,BHCK4107,Interest,HI,1995-03-31,Component of total interest income
+Interest Expense,Trading Liability Interest,Int2,BHCK4185,RIAD4185,Interest expense on trading liabilities,BHCK4073,Interest,HI,1995-03-31,Component of total interest expense

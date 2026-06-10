@@ -38,10 +38,10 @@
 |----------|----------|---------------------|-------------|----------|
 | **HC** - Balance Sheet | [HC_BALANCE_SHEET.csv](../csv/HC_BALANCE_SHEET.csv) | [HC_BALANCE_SHEET_GUIDE.md](HC_BALANCE_SHEET_GUIDE.md) | [schedule_schemas.json#HC](../json/schedule_schemas.json) | BHCT2170 |
 | **HC-B** - Securities | [HC_B_SECURITIES.csv](../csv/HC_B_SECURITIES.csv) | [HC_B_SECURITIES_GUIDE.md](HC_B_SECURITIES_GUIDE.md) | [schedule_schemas.json#HC-B](../json/schedule_schemas.json) | BHCT1773 |
-| **HC-C** - Loans | [HC_C_LOANS.csv](../csv/HC_C_LOANS.csv) | [HC_C_LOANS_GUIDE.md](HC_C_LOANS_GUIDE.md) | [schedule_schemas.json#HC-C](../json/schedule_schemas.json) | BHCTB529 |
+| **HC-C** - Loans | [HC_C_LOANS.csv](../csv/HC_C_LOANS.csv) | [HC_C_LOANS_GUIDE.md](HC_C_LOANS_GUIDE.md) | [schedule_schemas.json#HC-C](../json/schedule_schemas.json) | BHCKB529 |
 | **HC-D** - Trading | [HC_D_TRADING_ASSETS.csv](../csv/HC_D_TRADING_ASSETS.csv) | [HC_D_TRADING_GUIDE.md](HC_D_TRADING_GUIDE.md) | [schedule_schemas.json#HC-D](../json/schedule_schemas.json) | BHCT3545 |
 | **HC-F** - Other Assets | [HC_F_OTHER_ASSETS.csv](../csv/HC_F_OTHER_ASSETS.csv) | [HC_F_OTHER_ASSETS_GUIDE.md](HC_F_OTHER_ASSETS_GUIDE.md) | - | BHCT2160 |
-| **HC-G** - Other Liabilities | [HC_G_OTHER_LIABILITIES.csv](../csv/HC_G_OTHER_LIABILITIES.csv) | [HC_G_OTHER_LIABILITIES_GUIDE.md](HC_G_OTHER_LIABILITIES_GUIDE.md) | - | BHCT2930 |
+| **HC-G** - Other Liabilities | [HC_G_OTHER_LIABILITIES.csv](../csv/HC_G_OTHER_LIABILITIES.csv) | [HC_G_OTHER_LIABILITIES_GUIDE.md](HC_G_OTHER_LIABILITIES_GUIDE.md) | - | BHCK2750 |
 | **HC-H** - Interest Sensitivity | [HC_H_INTEREST_SENSITIVITY.csv](../csv/HC_H_INTEREST_SENSITIVITY.csv) | [HC_H_INTEREST_SENSITIVITY_GUIDE.md](HC_H_INTEREST_SENSITIVITY_GUIDE.md) | - | Various |
 | **HC-K** - Quarterly Averages | [HC_K_QUARTERLY_AVERAGES.csv](../csv/HC_K_QUARTERLY_AVERAGES.csv) | [HC_K_QUARTERLY_AVERAGES_GUIDE.md](HC_K_QUARTERLY_AVERAGES_GUIDE.md) | - | Various |
 | **HC-L** - Derivatives | [HC_L_DERIVATIVES.csv](../csv/HC_L_DERIVATIVES.csv) | [HC_L_DERIVATIVES_GUIDE.md](HC_L_DERIVATIVES_GUIDE.md) | [schedule_schemas.json#HC-L](../json/schedule_schemas.json) | BHCK3450 |
@@ -82,23 +82,28 @@
 | Concept | CAMELS | Y-9C MDRM | Call MDRM | Y-14 | Pillar 3 |
 |---------|--------|-----------|-----------|------|----------|
 | **Total Assets** | M | BHCT2170 | RCFD2170 | A.2 | KM1 |
-| **Total Liabilities** | M | BHCT2948 | RCFD2948 | A.2 | - |
+| **Total Liabilities** | M | BHCK2948 | RCFD2948 | A.2 | - |
 | **Total Equity** | C | BHCT3210 | RCFD3210 | A.3 | KM1 |
 | **CET1 Capital** | C | BHCAP859 | RCFAP859 | A.3 | KM1 |
-| **Tier 1 Capital** | C | BHCA8274 | RCFAA223 | A.3 | KM1 |
-| **Total Capital** | C | BHCA3792 | RCFAA225 | A.3 | KM1 |
+| **Tier 1 Capital** | C | BHCA8274 | RCFA8274 | A.3 | KM1 |
+| **Total Capital** | C | BHCA3792 | RCFA3792 | A.3 | KM1 |
 | **Total RWA** | C | BHCAA223 | RCFDA223 | A.4 | KM1 |
 | **CET1 Ratio** | C | BHCAP793 | RCFAP793 | - | KM1 |
-| **Total Loans Net** | A | BHCTB529 | RCFDB529 | - | CR1 |
+| **Total Loans Net** | A | BHCKB529 | RCFDB529 | - | CR1 |
 | **Allowance (ALLL)** | A | BHCT3123 | RCFD3123 | - | CR2 |
 | **NPLs** | A | BHCK1403 | RCFD1403 | - | CR1 |
-| **Total Securities** | L | BHCT8641 | RCFD8641 | F | - |
+| **Total Securities** | L | 1773+JJ34+JA22 † | RCFD8641 | F | - |
 | **Trading Assets** | S | BHCT3545 | RCFD3545 | G | MR1 |
 | **Derivatives PF FV** | S | BHCT3543 | RCFD3543 | E | CCR1 |
 | **IR Swaps Notional** | S | BHCK3450 | RCFD3450 | - | CCR5 |
 | **Net Income** | E | BHCT4340 | RIAD4340 | A.1 | - |
-| **Net Interest Income** | E | BHCT4074 | RIAD4074 | H | - |
-| **Deposits** | L | BHCT2200 | RCFD2200 | - | LIQ1 |
+| **Net Interest Income** | E | BHCK4074 | RIAD4074 | H | - |
+| **Deposits** | L | BHDM6631+6636 ‡ | RCFD2200 | - | LIQ1 |
+
+> † The FR Y-9C has no single consolidated total-securities MDRM; total securities = AFS
+> (`BHCK1773`) + HTM (`BHCKJJ34`) + equity securities (`BHCKJA22`). `8641` is a Call Report code.
+> ‡ The FR Y-9C has no single consolidated total-deposits MDRM; total deposits = `BHDM6631`
+> (noninterest) + `BHDM6636` (interest). `2200` is a Call Report / parent-only code.
 
 ---
 
@@ -200,4 +205,4 @@ print(f"CET1 minimum: {capital['cet1']['minimum']}")
 
 ---
 
-*Last updated: 2026-06-09 | Version 6.2*
+*Last updated: 2026-06-09 | Version 6.3*

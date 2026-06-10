@@ -15,10 +15,10 @@
       {
         "item": "1",
         "name": "Cash and balances due from depository institutions",
-        "mdrm": "BHCT0081",
+        "mdrm": "BHCK0010",
         "call_mdrm": "RCFD0081",
         "detail_schedule": null,
-        "components": ["BHCT0395", "BHCT0397"],
+        "components": ["BHCK0081", "BHCK0395"],
         "reconciliation": "HC.1 = HC.1.a + HC.1.b"
       },
       {
@@ -27,13 +27,13 @@
         "mdrm": "BHCT8641",
         "call_mdrm": "RCFD8641",
         "detail_schedule": "HC-B",
-        "components": ["BHCTJJ34", "BHCT1773", "BHCTJJ32"],
+        "components": ["BHCKJJ34", "BHCT1773", "BHCKJA22"],
         "reconciliation": "HC.2 = HC.2.a + HC.2.b + HC.2.c"
       },
       {
         "item": "2.a",
         "name": "Held-to-maturity securities",
-        "mdrm": "BHCTJJ34",
+        "mdrm": "BHCKJJ34",
         "call_mdrm": "RCFDJJ34",
         "detail_schedule": "HC-B",
         "components": [],
@@ -51,10 +51,10 @@
       {
         "item": "3",
         "name": "Fed funds sold and securities purchased under resale agreements",
-        "mdrm": "BHCTB987",
+        "mdrm": "BHCKC225",
         "call_mdrm": "RCFDB987",
         "detail_schedule": null,
-        "components": ["BHCTB989", "BHCTB995"],
+        "components": ["BHCKB987", "BHCKB989"],
         "reconciliation": "HC.3 = HC.3.a + HC.3.b"
       },
       {
@@ -87,7 +87,7 @@
       {
         "item": "6",
         "name": "Premises and fixed assets",
-        "mdrm": "BHCT2145",
+        "mdrm": "BHCK2145",
         "call_mdrm": "RCFD2145",
         "detail_schedule": "HC-F",
         "components": [],
@@ -108,7 +108,7 @@
         "mdrm": "BHCT2143",
         "call_mdrm": "RCFD2143",
         "detail_schedule": "HC-F",
-        "components": ["BHCT3163", "BHCTC752"],
+        "components": ["BHCK3163", "BHCK0426"],
         "reconciliation": "HC.10 = HC.10.a + HC.10.b"
       },
       {
@@ -150,7 +150,7 @@
       {
         "item": "20",
         "name": "Other liabilities",
-        "mdrm": "BHCT2930",
+        "mdrm": "BHCK2750",
         "call_mdrm": "RCFD2930",
         "detail_schedule": "HC-G",
         "components": [],
@@ -159,7 +159,7 @@
       {
         "item": "21",
         "name": "Total liabilities",
-        "mdrm": "BHCT2948",
+        "mdrm": "BHCK2948",
         "call_mdrm": "RCFD2948",
         "detail_schedule": null,
         "components": [],
@@ -171,25 +171,25 @@
         "mdrm": "BHCT3210",
         "call_mdrm": "RCFD3210",
         "detail_schedule": "HC-R",
-        "components": ["BHCT3838", "BHCT3230", "BHCT3839", "BHCT3632", "BHCTB530"],
+        "components": ["BHCK3283", "BHCK3230", "BHCK3240", "BHCK3247", "BHCKB530"],
         "reconciliation": "HC.28 = Sum(Items 23-27)"
       },
       {
         "item": "29",
         "name": "Total liabilities, minority interest, and equity capital",
-        "mdrm": "BHCT3300",
+        "mdrm": "BHCK3300",
         "call_mdrm": "RCFD3300",
         "detail_schedule": null,
-        "components": ["BHCT2948", "BHCK3000", "BHCT3210"],
+        "components": ["BHCK2948", "BHCK3000", "BHCT3210"],
         "reconciliation": "HC.29 = HC.21 + HC.22 + HC.28"
       }
     ],
     "totals": {
       "total_assets": {"item": "12", "mdrm": "BHCT2170"},
-      "total_liabilities": {"item": "21", "mdrm": "BHCT2948"},
+      "total_liabilities": {"item": "21", "mdrm": "BHCK2948"},
       "total_equity": {"item": "28", "mdrm": "BHCT3210"}
     },
-    "balance_check": "BHCT2170 = BHCT2948 + BHCK3000 + BHCT3210"
+    "balance_check": "BHCT2170 = BHCK2948 + BHCK3000 + BHCT3210"
   },
 
   "HC-B": {
@@ -270,10 +270,10 @@
       {
         "item": "8",
         "name": "Total",
-        "mdrm_afs_ac": "BHCT1772",
+        "mdrm_afs_ac": "BHCK1772",
         "mdrm_afs_fv": "BHCT1773",
         "mdrm_htm_ac": "BHCT1754",
-        "mdrm_htm_fv": "BHCTJJ34",
+        "mdrm_htm_fv": "BHCKJJ34",
         "category": "Total"
       }
     ],
@@ -293,7 +293,7 @@
       {
         "item": "1",
         "name": "Loans secured by real estate",
-        "mdrm_total": "BHCT1410",
+        "mdrm_total": "BHCK1410",
         "mdrm_domestic": "BHCK1410",
         "mdrm_foreign": "BHCK1411",
         "category": "Real Estate",
@@ -302,7 +302,7 @@
       {
         "item": "1.a",
         "name": "Construction and land development",
-        "mdrm_total": "BHCT1415",
+        "mdrm_total": "BHCK1415",
         "category": "RE - Construction",
         "components": ["1.a.(1)", "1.a.(2)"]
       },
@@ -316,8 +316,8 @@
       {
         "item": "4",
         "name": "Commercial and industrial loans",
-        "mdrm_total": "BHCT1766",
-        "mdrm_domestic": "BHCKB531",
+        "mdrm_total": "BHCK1766",
+        "mdrm_domestic": "BHCK1763",
         "mdrm_foreign": "BHCK1763",
         "category": "C&I Loans",
         "components": ["4.a", "4.b"]
@@ -332,14 +332,14 @@
       {
         "item": "9",
         "name": "Lease financing receivables",
-        "mdrm_total": "BHCTB541",
+        "mdrm_total": "BHCK2165",
         "category": "Leases",
         "components": ["9.a", "9.b"]
       },
       {
         "item": "10",
         "name": "LESS: Unearned income",
-        "mdrm": "BHCT2123",
+        "mdrm": "BHCK2123",
         "category": "Contra",
         "is_deduction": true
       },
@@ -353,12 +353,12 @@
       {
         "item": "12",
         "name": "Total loans and leases, net",
-        "mdrm": "BHCTB529",
+        "mdrm": "BHCKB529",
         "category": "Net Total"
       }
     ],
     "totals": {
-      "net_loans": {"item": "12", "mdrm": "BHCTB529"},
+      "net_loans": {"item": "12", "mdrm": "BHCKB529"},
       "gross_loans": {"item": "Sum(1-9)", "mdrm": "Calculated"},
       "allowance": {"item": "11", "mdrm": "BHCT3123"}
     },
@@ -528,7 +528,7 @@
       {
         "item": "2",
         "name": "Retained earnings",
-        "mdrm": "BHCAP743",
+        "mdrm": "BHCAKW00",
         "category": "CET1 Components"
       },
       {
@@ -555,7 +555,7 @@
       {
         "item": "23",
         "name": "Additional Tier 1 capital",
-        "mdrm": "BHCAP856",
+        "mdrm": "BHCAP865",
         "category": "AT1 Total",
         "reconciliation": "Items 20-22"
       },
@@ -596,21 +596,21 @@
       {
         "item": "33",
         "name": "Tier 1 capital ratio",
-        "mdrm": "BHCAP794",
+        "mdrm": "BHCA7206",
         "category": "Ratios",
         "reconciliation": "Item 24 / Item 31"
       },
       {
         "item": "34",
         "name": "Total capital ratio",
-        "mdrm": "BHCAP795",
+        "mdrm": "BHCA7205",
         "category": "Ratios",
         "reconciliation": "Item 30 / Item 31"
       },
       {
         "item": "35",
         "name": "Leverage ratio",
-        "mdrm": "BHCAP796",
+        "mdrm": "BHCA7204",
         "category": "Ratios",
         "reconciliation": "Item 24 / Average assets"
       }
@@ -619,7 +619,7 @@
       "cet1": {"mdrm": "BHCAP859", "minimum": "4.5%"},
       "tier1": {"mdrm": "BHCA8274", "minimum": "6.0%"},
       "total": {"mdrm": "BHCA3792", "minimum": "8.0%"},
-      "leverage": {"mdrm": "BHCAP796", "minimum": "4.0%"}
+      "leverage": {"mdrm": "BHCA7204", "minimum": "4.0%"}
     }
   },
 
@@ -632,21 +632,21 @@
       {
         "item": "1",
         "name": "Interest income",
-        "mdrm": "BHCT4107",
+        "mdrm": "BHCK4107",
         "category": "Interest Income",
         "components": ["1.a", "1.b", "1.c", "1.d", "1.e", "1.f"]
       },
       {
         "item": "2",
         "name": "Interest expense",
-        "mdrm": "BHCT4073",
+        "mdrm": "BHCK4073",
         "category": "Interest Expense",
         "components": ["2.a", "2.b", "2.c", "2.d"]
       },
       {
         "item": "4",
         "name": "Net interest income",
-        "mdrm": "BHCT4074",
+        "mdrm": "BHCK4074",
         "category": "NII",
         "reconciliation": "Item 1 - Item 2"
       },
@@ -659,14 +659,14 @@
       {
         "item": "6",
         "name": "Noninterest income",
-        "mdrm": "BHCT4079",
+        "mdrm": "BHCK4079",
         "category": "Noninterest Income",
         "components": ["6.a", "6.b", "6.c", "6.d", "6.e", "6.f"]
       },
       {
         "item": "7",
         "name": "Noninterest expense",
-        "mdrm": "BHCT4093",
+        "mdrm": "BHCK4093",
         "category": "Noninterest Expense",
         "components": ["7.a", "7.b", "7.c", "7.d"]
       },
@@ -678,7 +678,7 @@
       }
     ],
     "key_metrics": {
-      "nii": {"item": "4", "mdrm": "BHCT4074"},
+      "nii": {"item": "4", "mdrm": "BHCK4074"},
       "provision": {"item": "5", "mdrm": "BHCT4230"},
       "net_income": {"item": "12", "mdrm": "BHCT4340"}
     }

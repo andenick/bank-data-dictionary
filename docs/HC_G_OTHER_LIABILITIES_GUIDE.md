@@ -42,7 +42,7 @@ OTHER LIABILITIES
 | Sub-Item | MDRM | Call MDRM | Description |
 |----------|------|-----------|-------------|
 | 1 (Total) | - | - | Sum of 1.a and 1.b |
-| 1.a | BHCK4172 | RCON4172 | Domestic office deposits |
+| 1.a | BHCK4172 | RCON3645 | Domestic office deposits |
 | 1.b | BHCKB557 | RCFNB557 | Foreign office deposits |
 
 **Nature**: Interest expense incurred but not yet paid to depositors
@@ -63,7 +63,7 @@ OTHER LIABILITIES
 
 | MDRM | Call MDRM | Description |
 |------|-----------|-------------|
-| BHCT3049 | RCFD3049 | Net deferred tax liabilities |
+| BHCK3049 | RCFD3049 | Net deferred tax liabilities |
 
 **Nature**: Tax liabilities arising from taxable temporary differences (when book income exceeds taxable income temporarily)
 
@@ -101,7 +101,7 @@ OTHER LIABILITIES
 
 | MDRM | Call MDRM | Description | Ties To |
 |------|-----------|-------------|---------|
-| BHCT2930 | RCFD2930 | Total other liabilities | HC Item 20 |
+| BHCK2750 | RCFD2930 | Total other liabilities | HC Item 20 |
 
 **Reconciliation**:
 ```
@@ -154,7 +154,7 @@ SCHEDULE HC-G                           SCHEDULE HC
 ═══════════════════════════════════════════════════════════════════════
 
 Item 6 (Total)                 ────────► HC Item 20 (Other Liabilities)
-BHCT2930                                 BHCT2930
+BHCK2750                                 BHCK2750
 ```
 
 ---
@@ -188,10 +188,10 @@ Other Liab % = Item 6 / Total Assets
 | 1.a | BHCK4172 | Accrued interest - domestic deposits |
 | 1.b | BHCKB557 | Accrued interest - foreign deposits |
 | 2 | BHCTB558 | Other accrued expenses |
-| 3 | BHCT3049 | Net deferred tax liabilities |
+| 3 | BHCK3049 | Net deferred tax liabilities |
 | 4 | BHCKB559 | ACL for off-balance sheet |
 | 5 | BHCTB560 | All other liabilities |
-| **6** | **BHCT2930** | **TOTAL OTHER LIABILITIES** |
+| **6** | **BHCK2750** | **TOTAL OTHER LIABILITIES** |
 
 ---
 

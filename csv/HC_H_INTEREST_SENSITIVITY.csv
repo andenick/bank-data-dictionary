@@ -1,6 +1,6 @@
 line_number,item_description,mdrm_3mo,mdrm_3_12mo,mdrm_1_3yr,mdrm_3_5yr,mdrm_5_15yr,mdrm_over15yr,mdrm_total,category,ties_to_hc_line,notes
 1,Debt securities (AFS and HTM),BHCKA526,BHCKA527,BHCKA528,BHCKA529,BHCKA530,BHCKA531,BHCKA549,Assets - Securities,HC Item 2,By remaining maturity
-2,"Loans and lease financing receivables",BHCKB556,BHCKB557,BHCKB558,BHCKB559,BHCKB560,BHCKB561,BHCKB562,Assets - Loans,HC Item 4,By repricing frequency
+2,"Loans and lease financing receivables",BHCKB556,BHCKB557,BHCKB558,BHCKB559,BHCKB560,BHDMB561,BHCKB562,Assets - Loans,HC Item 4,By repricing frequency
 2.a,Fixed rate loans and leases,BHCKC400,BHCKC401,BHCKC402,BHCKC403,BHCKC404,BHCKC405,BHCKC406,Assets - Fixed Rate,HC Item 4,Mature in period
 2.b,Floating rate loans and leases,BHCKC408,BHCKC409,BHCKC410,BHCKC411,BHCKC412,BHCKC413,BHCKC414,Assets - Floating Rate,HC Item 4,Reprice in period
 3,Other interest-bearing assets,BHCKA544,BHCKA545,BHCKA546,BHCKA547,BHCKA548,-,-,Assets - Other IB,-,Fed funds; repos; etc

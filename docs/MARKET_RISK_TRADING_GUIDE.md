@@ -40,7 +40,7 @@ BHCKA220 (Total Trading Revenue) = HI Item 6.b
 ├── BHCKA224: Commodity Trading Revenue
 │   └── P&L from: Precious metals, energy, agriculture
 │
-└── BHCKHT79: Credit Trading Revenue (added 2018)
+└── BHCKF186: Credit Trading Revenue (added 2018)
     └── P&L from: CDS, TRS, credit-linked notes
 ```
 
@@ -49,22 +49,22 @@ BHCKA220 (Total Trading Revenue) = HI Item 6.b
 | Product | MDRM | Call Report | Description |
 |---------|------|-------------|-------------|
 | **Total** | BHCKA220 | RIADA220 | Sum of all trading revenue |
-| Interest Rate | BHCKA221 | RIADA221 | IR instruments P&L |
-| Foreign Exchange | BHCKA222 | RIADA222 | FX instruments P&L |
-| Equity | BHCKA223 | RIADA223 | Equity instruments P&L |
-| Commodity | BHCKA224 | RIADA224 | Commodity instruments P&L |
-| Credit | BHCKHT79 | RIADHT79 | Credit instruments P&L |
+| Interest Rate | BHCKA221 | RIAD8757 | IR instruments P&L |
+| Foreign Exchange | BHCKA222 | RIAD8758 | FX instruments P&L |
+| Equity | BHCKA223 | RIAD8759 | Equity instruments P&L |
+| Commodity | BHCKA224 | RIAD8760 | Commodity instruments P&L |
+| Credit | BHCKF186 | RIADF186 | Credit instruments P&L |
 
 ### Reconciliation Formula
 
 ```
-BHCKA220 = BHCKA221 + BHCKA222 + BHCKA223 + BHCKA224 + BHCKHT79
+BHCKA220 = BHCKA221 + BHCKA222 + BHCKA223 + BHCKA224 + BHCKF186
 ```
 
 ### Notes
 
 - Trading revenue is a component of noninterest income (HI Item 6)
-- Credit trading revenue (BHCKHT79) was added Q2 2018; prior to that, credit trading was embedded in other categories
+- Credit trading revenue (BHCKF186) was added Q2 2018; prior to that, credit trading was embedded in other categories
 - Revenue includes both realized and unrealized gains/losses
 - Does not include interest income on trading assets (that's in HI Item 1.e: BHCK4069)
 
@@ -436,9 +436,9 @@ BHCAA223 (Total RWA)
 | Ratio | MDRM | Formula |
 |-------|------|---------|
 | CET1 Ratio | BHCAP793 | BHCAP859 / BHCAA223 |
-| Tier 1 Ratio | BHCAP794 | BHCA8274 / BHCAA223 |
-| Total Capital Ratio | BHCAP795 | BHCA3792 / BHCAA223 |
-| Leverage Ratio | BHCAP796 | BHCA8274 / Avg Assets |
+| Tier 1 Ratio | BHCA7206 | BHCA8274 / BHCAA223 |
+| Total Capital Ratio | BHCA7205 | BHCA3792 / BHCAA223 |
+| Leverage Ratio | BHCA7204 | BHCA8274 / Avg Assets |
 
 ### Regulatory Minimums (Basel III)
 
@@ -495,7 +495,7 @@ SCHEDULE HI (Income Statement)
 │   ├── BHCKA222: Foreign Exchange P&L
 │   ├── BHCKA223: Equity P&L
 │   ├── BHCKA224: Commodity P&L
-│   └── BHCKHT79: Credit P&L
+│   └── BHCKF186: Credit P&L
 │   │
 │   └────────────────────────────────────────── Reflects: HC-D & HC-L changes
 │
@@ -599,7 +599,7 @@ pct_ir = df['BHCKA221'] / total_trading_rev * 100
 pct_fx = df['BHCKA222'] / total_trading_rev * 100
 pct_eq = df['BHCKA223'] / total_trading_rev * 100
 pct_co = df['BHCKA224'] / total_trading_rev * 100
-pct_cr = df['BHCKHT79'] / total_trading_rev * 100
+pct_cr = df['BHCKF186'] / total_trading_rev * 100
 ```
 
 ### Example 4: Market Risk Capital Intensity
@@ -636,7 +636,7 @@ net_cds = cds_bought - cds_sold
 - BHCKA222: FX
 - BHCKA223: Equity
 - BHCKA224: Commodity
-- BHCKHT79: Credit
+- BHCKF186: Credit
 
 ### Trading Assets (HC-D)
 - BHCT3545: Total

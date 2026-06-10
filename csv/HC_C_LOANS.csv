@@ -1,50 +1,50 @@
 line_number,item_description,mdrm_domestic,mdrm_foreign,mdrm_total,category,ties_to_hc_line,risk_weight,start_date,notes
-1,Loans secured by real estate,BHCK1410,BHCK1411,BHCT1410,Real Estate Loans,HC Item 4.b,Various,1976-03-31,Sum of Items 1.a through 1.f
-1.a,Construction and land development,BHCK1415,BHCK1416,BHCT1415,RE - Construction,HC Item 4.b,100-150%,1976-03-31,Sum of 1.a.(1) and 1.a.(2)
+1,Loans secured by real estate,BHCK1410,BHCK1411,BHCK1410,Real Estate Loans,HC Item 4.b,Various,1976-03-31,Sum of Items 1.a through 1.f
+1.a,Construction and land development,BHCK1415,BHCK1416,BHCK1415,RE - Construction,HC Item 4.b,100-150%,1976-03-31,Sum of 1.a.(1) and 1.a.(2)
 1.a.(1),1-4 family residential construction,BHCKF158,-,BHCKF158,RE - Construction 1-4,HC Item 4.b,50-100%,2007-03-31,ADC loans 1-4 family
 1.a.(2),Other construction and land development,BHCKF159,-,BHCKF159,RE - Construction Other,HC Item 4.b,100-150%,2007-03-31,Commercial ADC loans
-1.b,Secured by farmland,BHCK1420,BHCK1421,BHCT1420,RE - Farmland,HC Item 4.b,100%,1976-03-31,Agricultural real estate
+1.b,Secured by farmland,BHCK1420,BHCK1421,BHCK1420,RE - Farmland,HC Item 4.b,100%,1976-03-31,Agricultural real estate
 1.c,Secured by 1-4 family residential - revolving (HELOCs),BHCK1797,-,BHCK1797,RE - HELOC,HC Item 4.b,50-100%,1991-03-31,Open-end home equity
 1.d,Secured by 1-4 family residential - closed end,BHCK5367,BHCK5368,BHCT5367,RE - 1-4 Family,HC Item 4.b,35-100%,1991-03-31,Sum of 1.d.(1) and 1.d.(2)
-1.d.(1),First liens,BHCKC236,BHCKC237,BHCTC236,RE - 1-4 First Lien,HC Item 4.b,35-50%,2007-03-31,First mortgage 1-4 family
-1.d.(2),Junior liens,BHCKC238,BHCKC239,BHCTC238,RE - 1-4 Junior Lien,HC Item 4.b,100%,2007-03-31,Second mortgage 1-4 family
-1.e,Secured by multifamily (5+ units),BHCK1460,BHCK1461,BHCT1460,RE - Multifamily,HC Item 4.b,50-100%,1976-03-31,Apartment buildings
+1.d.(1),First liens,BHCKC236,BHCKC237,BHCK5367,RE - 1-4 First Lien,HC Item 4.b,35-50%,2007-03-31,First mortgage 1-4 family
+1.d.(2),Junior liens,BHCKC238,BHCKC239,BHCK5368,RE - 1-4 Junior Lien,HC Item 4.b,100%,2007-03-31,Second mortgage 1-4 family
+1.e,Secured by multifamily (5+ units),BHCK1460,BHCK1461,BHCK1460,RE - Multifamily,HC Item 4.b,50-100%,1976-03-31,Apartment buildings
 1.e.(1),Multifamily with gov't guarantees,-,-,BHCKKX57,RE - Multifamily Guaranteed,HC Item 4.b,20%,2022-03-31,FHA/HUD insured
 1.e.(2),Multifamily other,-,-,BHCKKX58,RE - Multifamily Other,HC Item 4.b,50-100%,2022-03-31,Non-guaranteed
-1.f,Secured by nonfarm nonresidential,BHCK1480,BHCK1481,BHCT1480,RE - CRE,HC Item 4.b,100%,1976-03-31,Sum of 1.f.(1) and 1.f.(2)
-1.f.(1),Owner-occupied,BHCKF160,BHCKF161,BHCTF160,RE - CRE Owner-Occ,HC Item 4.b,100%,2007-03-31,Business premises
-1.f.(2),Other (non-owner occupied),BHCKF162,BHCKF163,BHCTF162,RE - CRE Non-Owner,HC Item 4.b,100%,2007-03-31,Investment CRE
+1.f,Secured by nonfarm nonresidential,BHCK1480,BHCK1481,BHCK1480,RE - CRE,HC Item 4.b,100%,1976-03-31,Sum of 1.f.(1) and 1.f.(2)
+1.f.(1),Owner-occupied,BHCKF160,BHCKF161,BHCKF160,RE - CRE Owner-Occ,HC Item 4.b,100%,2007-03-31,Business premises
+1.f.(2),Other (non-owner occupied),BHCKF162,BHCKF163,BHCKF161,RE - CRE Non-Owner,HC Item 4.b,100%,2007-03-31,Investment CRE
 2,Loans to depository institutions and acceptances,BHCK1288,-,BHCK1288,Interbank,HC Item 4.b,20-100%,1976-03-31,Fed funds type exposure
-2.a,To US banks and thrifts,BHCKB532,-,BHCKB532,Interbank - Domestic,HC Item 4.b,20%,1984-03-31,
-2.b,To foreign banks,BHCKB533,-,BHCKB533,Interbank - Foreign,HC Item 4.b,20-150%,1984-03-31,Based on country rating
-2.c,Acceptances of other banks,BHCKB534,-,BHCKB534,Interbank - BA,HC Item 4.b,20%,1984-03-31,Bankers acceptances
+2.a,To US banks and thrifts,BHCK1292,-,BHCK1292,Interbank - Domestic,HC Item 4.b,20%,1984-03-31,
+2.b,To foreign banks,BHCK1296,-,BHCK1296,Interbank - Foreign,HC Item 4.b,20-150%,1984-03-31,Based on country rating
+2.c,Acceptances of other banks,BHCK1755,-,BHCK1755,Interbank - BA,HC Item 4.b,20%,1984-03-31,Bankers acceptances
 3,Loans to finance agricultural production,BHCK1590,-,BHCK1590,Agricultural,HC Item 4.b,100%,1976-03-31,Farm operating loans
-4,Commercial and industrial loans,BHCKB531,BHCK1763,BHCT1766,C&I Loans,HC Item 4.b,100%,1976-03-31,Business loans non-RE
-4.a,C&I loans to US addressees,BHCKB531,-,BHCKB531,C&I - Domestic,HC Item 4.b,100%,1984-03-31,
+4,Commercial and industrial loans,BHCK1763,BHCK1763,BHCK1766,C&I Loans,HC Item 4.b,100%,1976-03-31,Business loans non-RE
+4.a,C&I loans to US addressees,BHCK1763,-,BHCK1763,C&I - Domestic,HC Item 4.b,100%,1984-03-31,
 4.b,C&I loans to non-US addressees,-,BHCK1763,BHCK1763,C&I - Foreign,HC Item 4.b,100%,1984-03-31,
 5,Loans to individuals for household/family/personal,BHCK1975,-,BHCK1975,Consumer,HC Item 4.b,75-100%,1976-03-31,Sum of Items 5.a through 5.c
 5.a,Credit cards,BHCKB538,-,BHCKB538,Consumer - Credit Card,HC Item 4.b,100%,1984-03-31,Revolving credit card
-5.a.(1),Credit cards - Consumer,BHCKB561,-,BHCKB561,Consumer - CC Consumer,HC Item 4.b,100%,2010-03-31,
+5.a.(1),Credit cards - Consumer,BHDMB561,-,BHDMB561,Consumer - CC Consumer,HC Item 4.b,100%,2010-03-31,
 5.a.(2),Credit cards - Commercial/Corporate,BHCKK137,-,BHCKK137,Consumer - CC Corporate,HC Item 4.b,100%,2010-03-31,Business credit cards
 5.b,Other revolving credit plans,BHCKB539,-,BHCKB539,Consumer - Other Revolving,HC Item 4.b,100%,1984-03-31,Non-card revolving
 5.c,Automobile loans,BHCKK137,-,BHCKK137,Consumer - Auto,HC Item 4.b,75%,2010-03-31,
 5.c.(1),Auto - New vehicles,BHCKK138,-,BHCKK138,Consumer - Auto New,HC Item 4.b,75%,2015-03-31,
 5.c.(2),Auto - Used vehicles,BHCKK139,-,BHCKK139,Consumer - Auto Used,HC Item 4.b,75%,2015-03-31,
-5.d,Other consumer loans,BHCKB540,-,BHCKB540,Consumer - Other,HC Item 4.b,100%,1984-03-31,Personal loans; student
+5.d,Other consumer loans,BHCKK207,-,BHCKK207,Consumer - Other,HC Item 4.b,100%,1984-03-31,Personal loans; student
 6,Loans to foreign governments and official institutions,-,BHCK1296,BHCK1296,Sovereign,HC Item 4.b,0-150%,1976-03-31,Country risk weighted
 7,Obligations of states and political subdivisions,BHCK1709,BHCK1710,BHCT1709,Municipal,HC Item 4.b,20%,1976-03-31,Direct loans to munis
-8,Other loans,BHCK1563,BHCK1564,BHCT1563,Other Loans,HC Item 4.b,100%,1976-03-31,Sum of Items 8.a and 8.b
+8,Other loans,BHCK1563,BHCK1564,BHCK1563,Other Loans,HC Item 4.b,100%,1976-03-31,Sum of Items 8.a and 8.b
 8.a,Loans for purchasing or carrying securities,BHCK1545,-,BHCK1545,Margin Loans,HC Item 4.b,100%,1976-03-31,Margin and securities loans
 8.b,All other loans,BHCK1564,-,BHCK1564,Other - Misc,HC Item 4.b,100%,1976-03-31,Residual category
-9,Lease financing receivables,BHCKB541,BHCKB542,BHCTB541,Leases,HC Item 4.b,100%,1976-03-31,Direct financing and leveraged
+9,Lease financing receivables,BHCKB541,BHCKB542,BHCK2165,Leases,HC Item 4.b,100%,1976-03-31,Direct financing and leveraged
 9.a,Leases to individuals,BHCKF164,-,BHCKF164,Leases - Consumer,HC Item 4.b,100%,2007-03-31,Auto leases; equipment
-9.b,All other leases,BHCKF165,BHCKF166,BHCTF165,Leases - Other,HC Item 4.b,100%,2007-03-31,Commercial leases
-10,LESS: Unearned income on loans,BHCT2123,-,BHCT2123,Contra - Unearned,HC Item 4.b,-,1976-03-31,Reduces gross loans
+9.b,All other leases,BHCKF165,BHCKF166,BHCKF163,Leases - Other,HC Item 4.b,100%,2007-03-31,Commercial leases
+10,LESS: Unearned income on loans,BHCK2123,-,BHCK2123,Contra - Unearned,HC Item 4.b,-,1976-03-31,Reduces gross loans
 11,LESS: Allowance for loan and lease losses,BHCT3123,-,BHCT3123,Contra - ALLL,HC Item 4.c,-,1976-03-31,Equals HC Item 4.c
-12,"Total loans and leases, net",BHCTB529,-,BHCTB529,Net Loans,HC Item 4.d,-,1976-03-31,Items 1-9 minus 10 minus 11
+12,"Total loans and leases, net",BHCKB529,-,BHCKB529,Net Loans,HC Item 4.d,-,1976-03-31,Items 1-9 minus 10 minus 11
 M1,Restructured loans and leases in compliance,BHCK1616,-,BHCK1616,Memorandum - TDR,HC-N,-,1993-03-31,Troubled debt restructurings
 M2.a,Loans secured by real estate to non-US addressees,BHCKC884,-,BHCKC884,Memorandum - Foreign RE,HC-N,-,2001-03-31,
 M2.b,Loans to finance ag production to non-US,BHCKC885,-,BHCKC885,Memorandum - Foreign Ag,HC-N,-,2001-03-31,
 M3,Maturity/repricing - 3 months or less,BHCKB556,-,BHCKB556,Memorandum - Repricing,HC-H,-,1997-03-31,
-M4,Loans covered by FDIC loss-sharing,BHCKK190,-,BHCKK190,Memorandum - FDIC LSA,HC-N,-,2010-03-31,Failed bank acquisitions
+M4,Loans covered by FDIC loss-sharing,BHCKJ452,-,BHCKJ452,Memorandum - FDIC LSA,HC-N,-,2010-03-31,Failed bank acquisitions
 M5,Loans to Small Business (< $1MM original),BHCKJ464,-,BHCKJ464,Memorandum - Small Bus,CRA,-,2021-03-31,CRA reportable

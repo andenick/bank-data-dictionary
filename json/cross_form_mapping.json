@@ -14,9 +14,9 @@
         "FR_Y9C": {"schedule": "HC", "item": "12", "mdrm": "BHCT2170"},
         "Call_Report_031": {"schedule": "RC", "item": "12", "mdrm": "RCFD2170"},
         "Call_Report_041": {"schedule": "RC", "item": "12", "mdrm": "RCFD2170"},
-        "FFIEC_101": {"schedule": "A", "item": "1", "mdrm": "AAAD2170"},
+        "FFIEC_101": {"schedule": "A", "item": "1", "mdrm": "AAAA2170"},
         "FR_Y9LP": {"schedule": "PC", "item": "12", "mdrm": "BHCP2170"},
-        "FR_Y15": {"schedule": "A", "item": "1", "mdrm": "RISKN542"}
+        "FR_Y15": {"schedule": "A", "item": "1", "mdrm": "RISK2170"}
       },
       "validation": "All should match for same entity/period (with consolidation adjustments)"
     },
@@ -25,10 +25,10 @@
       "concept_id": "TOTAL_LIABILITIES",
       "description": "Total consolidated liabilities",
       "forms": {
-        "FR_Y9C": {"schedule": "HC", "item": "21", "mdrm": "BHCT2948"},
+        "FR_Y9C": {"schedule": "HC", "item": "21", "mdrm": "BHCK2948"},
         "Call_Report_031": {"schedule": "RC", "item": "21", "mdrm": "RCFD2948"},
         "Call_Report_041": {"schedule": "RC", "item": "21", "mdrm": "RCFD2948"},
-        "FR_Y9LP": {"schedule": "PC", "item": "21", "mdrm": "BHCP2948"}
+        "FR_Y9LP": {"schedule": "PC", "item": "21", "mdrm": "BHCP2948", "note": "UNVERIFIED: BHCP2948 not present in MDRM authority; FR Y-9LP references total liabilities (item 2948) only within BHCP3300 glossary, no standalone MDRM code"}
       },
       "validation": "All should match for same entity/period"
     },
@@ -53,7 +53,7 @@
         "FR_Y9C": {"schedule": "HC-R", "item": "19", "mdrm": "BHCAP859"},
         "Call_Report_031": {"schedule": "RC-R", "item": "19", "mdrm": "RCFAP859"},
         "Call_Report_041": {"schedule": "RC-R", "item": "19", "mdrm": "RCFAP859"},
-        "FFIEC_101": {"schedule": "A", "item": "CET1", "mdrm": "AAADP859"},
+        "FFIEC_101": {"schedule": "A", "item": "CET1", "mdrm": "AAABP859"},
         "FR_Y14A": {"schedule": "A.3", "item": "CET1", "mdrm": "N/A"},
         "Pillar3": {"template": "KM1", "row": "CET1", "mdrm": "N/A"}
       },
@@ -65,9 +65,9 @@
       "description": "Tier 1 capital (CET1 + AT1)",
       "forms": {
         "FR_Y9C": {"schedule": "HC-R", "item": "24", "mdrm": "BHCA8274"},
-        "Call_Report_031": {"schedule": "RC-R", "item": "24", "mdrm": "RCFAA223"},
-        "Call_Report_041": {"schedule": "RC-R", "item": "24", "mdrm": "RCFAA223"},
-        "FFIEC_101": {"schedule": "A", "item": "T1", "mdrm": "AADAA223"},
+        "Call_Report_031": {"schedule": "RC-R", "item": "24", "mdrm": "RCFA8274"},
+        "Call_Report_041": {"schedule": "RC-R", "item": "24", "mdrm": "RCFA8274"},
+        "FFIEC_101": {"schedule": "A", "item": "T1", "mdrm": "AAAB8274"},
         "FR_Y14A": {"schedule": "A.3", "item": "T1", "mdrm": "N/A"},
         "Pillar3": {"template": "KM1", "row": "T1", "mdrm": "N/A"}
       },
@@ -79,9 +79,9 @@
       "description": "Total regulatory capital (Tier 1 + Tier 2)",
       "forms": {
         "FR_Y9C": {"schedule": "HC-R", "item": "30", "mdrm": "BHCA3792"},
-        "Call_Report_031": {"schedule": "RC-R", "item": "30", "mdrm": "RCFAA225"},
-        "Call_Report_041": {"schedule": "RC-R", "item": "30", "mdrm": "RCFAA225"},
-        "FFIEC_101": {"schedule": "A", "item": "TC", "mdrm": "AADAA225"},
+        "Call_Report_031": {"schedule": "RC-R", "item": "30", "mdrm": "RCFA3792"},
+        "Call_Report_041": {"schedule": "RC-R", "item": "30", "mdrm": "RCFA3792"},
+        "FFIEC_101": {"schedule": "A", "item": "TC", "mdrm": "AAAB3792"},
         "Pillar3": {"template": "KM1", "row": "TC", "mdrm": "N/A"}
       },
       "validation": "Critical - must match across all forms"
@@ -92,9 +92,9 @@
       "description": "Total risk-weighted assets",
       "forms": {
         "FR_Y9C": {"schedule": "HC-R", "item": "31", "mdrm": "BHCAA223"},
-        "Call_Report_031": {"schedule": "RC-R", "item": "31", "mdrm": "RCFDA223"},
-        "Call_Report_041": {"schedule": "RC-R", "item": "31", "mdrm": "RCFDA223"},
-        "FFIEC_101": {"schedule": "A", "item": "RWA", "mdrm": "AADAA223"},
+        "Call_Report_031": {"schedule": "RC-R", "item": "31", "mdrm": "RCFAA223"},
+        "Call_Report_041": {"schedule": "RC-R", "item": "31", "mdrm": "RCFAA223"},
+        "FFIEC_101": {"schedule": "A", "item": "RWA", "mdrm": "AAABA223"},
         "FR_Y14A": {"schedule": "A.4", "item": "RWA", "mdrm": "N/A"},
         "Pillar3": {"template": "KM1", "row": "RWA", "mdrm": "N/A"}
       },
@@ -107,7 +107,7 @@
       "forms": {
         "FR_Y9C": {"schedule": "HC-R", "item": "32", "mdrm": "BHCAP793"},
         "Call_Report_031": {"schedule": "RC-R", "item": "32", "mdrm": "RCFAP793"},
-        "FFIEC_101": {"schedule": "A", "item": "CET1R", "mdrm": "AAADP793"},
+        "FFIEC_101": {"schedule": "A", "item": "CET1R", "mdrm": "AAABP793"},
         "Pillar3": {"template": "KM1", "row": "CET1R", "mdrm": "N/A"}
       },
       "validation": "Ratio should match when recalculated from components"
@@ -117,7 +117,7 @@
       "concept_id": "TOTAL_LOANS_NET",
       "description": "Total loans and leases, net of allowance",
       "forms": {
-        "FR_Y9C": {"schedule": "HC-C", "item": "12", "mdrm": "BHCTB529"},
+        "FR_Y9C": {"schedule": "HC-C", "item": "12", "mdrm": "BHCKB529"},
         "Call_Report_031": {"schedule": "RC-C", "item": "12", "mdrm": "RCFDB529"},
         "Call_Report_041": {"schedule": "RC-C", "item": "12", "mdrm": "RCFDB529"},
         "FR_Y14Q": {"schedule": "H", "item": "Loans", "mdrm": "N/A"}
@@ -228,7 +228,7 @@
       "concept_id": "NET_INTEREST_INCOME",
       "description": "Net interest income",
       "forms": {
-        "FR_Y9C": {"schedule": "HI", "item": "4", "mdrm": "BHCT4074"},
+        "FR_Y9C": {"schedule": "HI", "item": "4", "mdrm": "BHCK4074"},
         "Call_Report_031": {"schedule": "RI", "item": "3", "mdrm": "RIAD4074"},
         "Call_Report_041": {"schedule": "RI", "item": "3", "mdrm": "RIAD4074"},
         "FR_Y14A": {"schedule": "A.1", "item": "NII", "mdrm": "N/A"},
@@ -253,8 +253,8 @@
       "concept_id": "LEVERAGE_EXPOSURE",
       "description": "Total leverage exposure (SLR denominator)",
       "forms": {
-        "FR_Y9C": {"schedule": "HC-R", "item": "M2", "mdrm": "BHCKP793"},
-        "Call_Report_031": {"schedule": "RC-R", "item": "M2", "mdrm": "RCFDP793"},
+        "FR_Y9C": {"schedule": "HC-R", "item": "M2", "mdrm": "BHCALE88"},
+        "Call_Report_031": {"schedule": "RC-R", "item": "M2", "mdrm": "RCFAH015"},
         "FFIEC_101": {"schedule": "SLR", "item": "Exposure", "mdrm": "N/A"},
         "Pillar3": {"template": "KM2", "row": "Leverage Exposure", "mdrm": "N/A"}
       },
@@ -268,9 +268,9 @@
       "BHCM": "RCON",
       "BHCT": "RCFD",
       "BHCFA": "RCFAA",
-      "BHCA": "RCFDA",
+      "BHCA": "RCFA",
       "BHCAP": "RCFAP",
-      "BHCAA": "RCFDA"
+      "BHCAA": "RCFAA"
     },
     "notes": "Item numbers typically remain the same; only prefix changes. BHCM maps to RCON (domestic) while BHCK/BHCT map to RCFD (total/foreign)."
   },

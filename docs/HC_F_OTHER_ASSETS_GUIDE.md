@@ -53,7 +53,7 @@ OTHER ASSETS
 
 | MDRM | Call MDRM | Description |
 |------|-----------|-------------|
-| BHCTB556 | RCFDB556 | Interest earned but not collected |
+| BHCKB556 | RCFDB556 | Interest earned but not collected |
 
 **Components**:
 - Interest accrued on loans
@@ -64,7 +64,7 @@ OTHER ASSETS
 
 | MDRM | Call MDRM | Description |
 |------|-----------|-------------|
-| BHCT2148 | RCFD2148 | Net deferred tax assets |
+| BHCK2148 | RCFD2148 | Net deferred tax assets |
 
 **Nature**: Represents future tax benefits from:
 - Deductible temporary differences
@@ -77,7 +77,7 @@ OTHER ASSETS
 
 | MDRM | Call MDRM | Description |
 |------|-----------|-------------|
-| BHCKC976 | RCFDC976 | IO strips from non-mortgage securitizations |
+| BHCKA520 | RCFDA520 | IO strips from non-mortgage securitizations |
 
 **Note**: Mortgage-related IO strips reported elsewhere
 
@@ -100,7 +100,7 @@ OTHER ASSETS
 
 | MDRM | Call MDRM | Description |
 |------|-----------|-------------|
-| BHCK4659 | RCFD4659 | Cash surrender value of BOLI |
+| BHCK4659 | RCFDC009 | Cash surrender value of BOLI |
 
 **Nature**: Life insurance policies owned by the bank on lives of key employees
 
@@ -112,10 +112,10 @@ These items appear as separate line items on Schedule HC:
 
 | Item | MDRM | HC Item | Description |
 |------|------|---------|-------------|
-| 6 | BHCT2145 | HC Item 6 | Premises and fixed assets |
+| 6 | BHCK2145 | HC Item 6 | Premises and fixed assets |
 | 7 | BHCT2150 | HC Item 7 | Other real estate owned (OREO) |
-| 8 | BHCT2130 | HC Item 8 | Investments in unconsolidated subs |
-| 9 | BHCK5372 | HC Item 9 | Direct/indirect RE investments |
+| 8 | BHCK2130 | HC Item 8 | Investments in unconsolidated subs |
+| 9 | BHCK3656 | HC Item 9 | Direct/indirect RE investments |
 
 ### Item 10: Intangible Assets
 
@@ -123,7 +123,7 @@ These items appear as separate line items on Schedule HC:
 
 | MDRM | Call MDRM | Description |
 |------|-----------|-------------|
-| BHCT3163 | RCFD3163 | Goodwill |
+| BHCK3163 | RCFD3163 | Goodwill |
 
 **Nature**: Excess of purchase price over fair value of net assets in acquisitions
 
@@ -133,7 +133,7 @@ These items appear as separate line items on Schedule HC:
 
 | MDRM | Call MDRM | Description |
 |------|-----------|-------------|
-| BHCTC752 | RCFDC752 | Other intangible assets |
+| BHCK0426 | RCFD0426 | Other intangible assets |
 
 **Components**:
 - Mortgage servicing assets (MSAs)
@@ -148,7 +148,7 @@ These items appear as separate line items on Schedule HC:
 
 | MDRM | Call MDRM | Description |
 |------|-----------|-------------|
-| BHCTB557 | RCFDB557 | Residual other assets |
+| BHCK2168 | RCFDB557 | Residual other assets |
 
 **May Include**:
 - Prepaid expenses
@@ -221,22 +221,22 @@ SCHEDULE HC-F                           SCHEDULE HC
 ═══════════════════════════════════════════════════════════════════════
 
 Item 6 (Premises)              ────────► HC Item 6
-BHCT2145                                 BHCT2145
+BHCK2145                                 BHCK2145
 
 Item 7 (OREO)                  ────────► HC Item 7
 BHCT2150                                 BHCT2150
 
 Item 8 (Unconsolidated subs)   ────────► HC Item 8
-BHCT2130                                 BHCT2130
+BHCK2130                                 BHCK2130
 
 Item 9 (RE investments)        ────────► HC Item 9
-BHCK5372                                 BHCK5372
+BHCK3656                                 BHCK3656
 
 Item 10.a (Goodwill)           ────────► HC Item 10.a
-BHCT3163                                 BHCT3163
+BHCK3163                                 BHCK3163
 
 Item 10.b (Other intangibles)  ────────► HC Item 10.b
-BHCTC752                                 BHCTC752
+BHCK0426                                 BHCK0426
 
 Item 12 (Total)                ────────► HC Item 11
 BHCT2160                                 BHCT2160
@@ -272,18 +272,18 @@ OREO Ratio = Item 7 / Total Loans
 
 | Item | MDRM | Description |
 |------|------|-------------|
-| 1 | BHCTB556 | Accrued interest receivable |
-| 2 | BHCT2148 | Net deferred tax assets |
-| 3 | BHCKC976 | IO strips (non-mortgage) |
+| 1 | BHCKB556 | Accrued interest receivable |
+| 2 | BHCK2148 | Net deferred tax assets |
+| 3 | BHCKA520 | IO strips (non-mortgage) |
 | 4 | BHCK1752 | Equity without determinable FV |
 | 5 | BHCK4659 | BOLI |
-| 6 | BHCT2145 | Premises and fixed assets |
+| 6 | BHCK2145 | Premises and fixed assets |
 | 7 | BHCT2150 | OREO |
-| 8 | BHCT2130 | Unconsolidated sub investments |
-| 9 | BHCK5372 | RE venture investments |
-| 10.a | BHCT3163 | Goodwill |
-| 10.b | BHCTC752 | Other intangibles |
-| 11 | BHCTB557 | All other assets |
+| 8 | BHCK2130 | Unconsolidated sub investments |
+| 9 | BHCK3656 | RE venture investments |
+| 10.a | BHCK3163 | Goodwill |
+| 10.b | BHCK0426 | Other intangibles |
+| 11 | BHCK2168 | All other assets |
 | **12** | **BHCT2160** | **TOTAL OTHER ASSETS** |
 
 ---

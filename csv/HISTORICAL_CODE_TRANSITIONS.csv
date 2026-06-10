@@ -30,7 +30,7 @@ transition_date,schedule,item,old_mdrm,new_mdrm,description,reason,impact,notes
 2014-03-31,HC-R,Part_I_44,BHCK8274,BHCA8274,Tier 1 Capital,Basel III implementation,Code change,Redefined under Basel III
 2014-03-31,HC-R,Part_I_59,BHCK5311,BHCA5311,Tier 2 Capital,Basel III implementation,Code change,Redefined under Basel III
 2014-03-31,HC-R,Part_I_60,BHCK3792,BHCA3792,Total Capital,Basel III implementation,Code change,Redefined under Basel III
-2014-03-31,HC-B,HTM,NEW,BHCTJJ34,Held-to-Maturity Securities Total,ASU 2013-12,New code,New HTM amortized cost reporting
+2014-03-31,HC-B,HTM,NEW,BHCKJJ34,Held-to-Maturity Securities Total,ASU 2013-12,New code,New HTM amortized cost reporting
 2014-03-31,HC-Q,1.d,NEW,BHCKJF86,Derivative Assets Fair Value,SFAS 157 update,New line item,Separate derivative FV disclosure
 2014-03-31,HC-Q,2.d,NEW,BHCKJF87,Derivative Liabilities Fair Value,SFAS 157 update,New line item,
 2016-01-01,HC-R,Buffer,NEW,BHCAK379,Capital Conservation Buffer,Basel III phase-in,New concept,2.5% fully phased in 2019

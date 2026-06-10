@@ -4,19 +4,19 @@ line_number,item_description,mdrm_code,call_mdrm,category,ties_to_hc_line,start_
 2.a,Available-for-sale securities,BHCKB558,RCFDB558,Average Assets - AFS,HC Item 2.b,1994-03-31,
 2.b,Held-to-maturity securities,BHCKB559,RCFDB559,Average Assets - HTM,HC Item 2.a,1994-03-31,
 3,Federal funds sold and reverse repos,BHCK3365,RCFD3365,Average Assets - Fed Funds,HC Item 3,1976-03-31,Average fed funds sold
-4,Loans and leases,BHCK3360,RCFD3360,Average Assets - Loans,HC Item 4,1976-03-31,Average gross loans
-4.a,Total loans,BHCKB561,RCFDB561,Average Assets - Loans,HC Item 4.b,1984-03-31,
-4.b,Lease financing receivables,BHCKB562,RCFDB562,Average Assets - Leases,HC Item 4.b,1984-03-31,
+4,Loans and leases,BHCK3516,RCFD3360,Average Assets - Loans,HC Item 4,1976-03-31,Average gross loans
+4.a,Total loans,BHDMB561,RCFD3360,Average Assets - Loans,HC Item 4.b,1984-03-31,
+4.b,Lease financing receivables,BHCKB562,RCFD3484,Average Assets - Leases,HC Item 4.b,1984-03-31,
 5,Trading assets,BHCK3401,RCFD3401,Average Assets - Trading,HC Item 5,1995-03-31,Average trading assets
 6,Other earning assets,BHCKB574,RCFDB574,Average Assets - Other,HC Item 11,1997-03-31,Average other interest-bearing
-7,Total earning assets,BHCKA517,RCFDA517,Average Assets - Earning,Sum 1-6,2001-03-31,Sum of average earning assets
+7,Total earning assets,BHCKA517,RCFD3402,Average Assets - Earning,Sum 1-6,2001-03-31,Sum of average earning assets
 8,Allowance for loan losses,BHCK3368,RCFD3368,Average Contra-Asset,HC Item 4.c,1976-03-31,Average ALLL
 9,Total assets,BHCK3368,RCFD3368,Average Assets - Total,HC Item 12,1976-03-31,Average total assets
 10,Interest-bearing deposits,BHCK3387,RCFD3387,Average Liabilities - Deposits,HC Item 13,1976-03-31,Average interest-bearing deposits
-10.a,In domestic offices,BHCKB563,RCONB563,Average Liabilities - Deposits,HC Item 13.a,1997-03-31,
-10.b,In foreign offices,BHCKB564,RCFNB564,Average Liabilities - Deposits,HC Item 13.b,1997-03-31,
+10.a,In domestic offices,BHCK3517,RCONB563,Average Liabilities - Deposits,HC Item 13.a,1997-03-31,
+10.b,In foreign offices,BHCK3404,RCFN3404,Average Liabilities - Deposits,HC Item 13.b,1997-03-31,
 11,Federal funds purchased and repos,BHCK3353,RCFD3353,Average Liabilities - Fed Funds,HC Item 14,1976-03-31,Average fed funds purchased
-12,Other borrowed money,BHCKB565,RCFDB565,Average Liabilities - Borrowings,HC Item 16,1997-03-31,
+12,Other borrowed money,BHCK2635,RCFDB565,Average Liabilities - Borrowings,HC Item 16,1997-03-31,
 13,Total interest-bearing liabilities,BHCKA518,RCFDA518,Average Liabilities - IB,Sum 10-12,2001-03-31,
 14,Total liabilities,BHCK3548,RCFD3548,Average Liabilities - Total,HC Item 21,1976-03-31,Average total liabilities
 15,Total equity capital,BHCK3519,RCFD3519,Average Equity,HC Item 28,1976-03-31,Average total equity

@@ -47,15 +47,15 @@ RC-L,19.b.(1),IR trading derivatives - negative FV,RCFD8737,HC-L,BHCK8737,Deriva
 RC-L,19.b.(2),FX trading derivatives - negative FV,RCFD8738,HC-L,BHCK8738,Derivatives - Fair Value,Liability,1995-03-31,
 RC-L,19.b.(3),Equity trading derivatives - negative FV,RCFD8739,HC-L,BHCK8739,Derivatives - Fair Value,Liability,1995-03-31,
 RC-L,19.b.(4),Commodity trading derivatives - negative FV,RCFD8740,HC-L,BHCK8740,Derivatives - Fair Value,Liability,1995-03-31,
-RC-B,1,U.S. Treasury securities - HTM,RCFD0211,HC-B,BHCT0211,Securities - HTM,Asset,1994-03-31,Held-to-maturity
-RC-B,2,U.S. Government agency - HTM,RCFD0213,HC-B,BHCT0213,Securities - HTM,Asset,1994-03-31,Agency HTM
+RC-B,1,U.S. Treasury securities - HTM,RCFD0211,HC-B,BHCK0211,Securities - HTM,Asset,1994-03-31,Held-to-maturity
+RC-B,2,U.S. Government agency - HTM,RCFD0213,HC-B,BHCK0213,Securities - HTM,Asset,1994-03-31,Agency HTM
 RC-B,M1,Total AFS securities,RCFD1773,HC-B,BHCT1773,Securities - AFS,Asset,1994-03-31,Available-for-sale total
-RC-B,M2,Total HTM securities,RCFDJJ34,HC-B,BHCTJJ34,Securities - HTM,Asset,2014-03-31,Held-to-maturity total
+RC-B,M2,Total HTM securities,RCFDJJ34,HC-B,BHCKJJ34,Securities - HTM,Asset,2014-03-31,Held-to-maturity total
 RC-Q,1,Trading assets - Level 1,RCFDF527,HC-Q,BHCKF527,Fair Value - Level 1,Asset,2009-03-31,Observable quoted prices
 RC-Q,2,Trading assets - Level 2,RCFDF528,HC-Q,BHCKF528,Fair Value - Level 2,Asset,2009-03-31,Observable inputs
 RC-Q,3,Trading assets - Level 3,RCFDF529,HC-Q,BHCKF529,Fair Value - Level 3,Asset,2009-03-31,Unobservable inputs
 RC-R,Part I-31,Common Equity Tier 1 Capital,RCFAP859,HC-R,BHCAP859,Capital,Capital,2014-03-31,Basel III CET1
 RC-R,Part I-32,Tier 1 Capital,RCFAA223,HC-R,BHCA8274,Capital,Capital,2014-03-31,Basel III Tier 1
 RC-R,Part I-34,Tier 2 Capital,RCFAA224,HC-R,BHCA5311,Capital,Capital,2014-03-31,Basel III Tier 2
-RC-R,Part I-35,Total Capital,RCFAA225,HC-R,BHCA3792,Capital,Capital,2014-03-31,Basel III Total
+RC-R,Part I-35,Total Capital,RCFA3792,HC-R,BHCA3792,Capital,Capital,2014-03-31,Basel III Total
 RC-R,Part II-26,Risk-Weighted Assets,RCFDA223,HC-R,BHCAA223,Capital,Capital,2014-03-31,Total RWA

@@ -8,32 +8,32 @@ reconciliation_id,parent_schedule,parent_item,parent_mdrm,child_schedule,child_i
 # ----------------------------------------------------------------------------
 # SECTION 1: BALANCE SHEET CORE RECONCILIATIONS (15 formulas)
 # ----------------------------------------------------------------------------
-RECON_BS_001,HC,12,BHCT2170,HC,Sum(1-11),HC.12 = Sum(Items 1 through 11),balance,CRITICAL,Total Assets must equal sum of all asset line items
-RECON_BS_002,HC,21,BHCT2948,HC,Sum(13-20),HC.21 = Sum(Items 13 through 20),balance,CRITICAL,Total Liabilities must equal sum of all liability line items
-RECON_BS_003,HC,28,BHCT3210,HC,Sum(23-27),HC.28 = Sum(Items 23 through 27),balance,CRITICAL,Total Equity must equal sum of equity components
-RECON_BS_004,HC,29,BHCT3300,HC,21 + 22 + 28,HC.29 = HC.21 + HC.22 + HC.28,balance,CRITICAL,Total L+MI+E must equal sum of liabilities + minority + equity
-RECON_BS_005,HC,12,BHCT2170,HC,29,HC.12 = HC.29,balance,CRITICAL,Total Assets MUST equal Total Liabilities + Minority + Equity
-RECON_BS_006,HC,1,BHCT0081,HC,1.a + 1.b,HC.1 = HC.1.a + HC.1.b,sum,HIGH,Cash = Noninterest-bearing + Interest-bearing
-RECON_BS_007,HC,3,BHCTB987,HC,3.a + 3.b,HC.3 = HC.3.a + HC.3.b,sum,HIGH,Fed funds = Fed funds sold + Resale agreements
+RECON_BS_001,HC,12,BHCK2170,HC,Sum(1-11),HC.12 = Sum(Items 1 through 11),balance,CRITICAL,Total Assets must equal sum of all asset line items (standardized to consolidated BHCK2170)
+RECON_BS_002,HC,21,BHCK2948,HC,Sum(13-20),HC.21 = Sum(Items 13 through 20),balance,CRITICAL,Total Liabilities must equal sum of all liability line items
+RECON_BS_003,HC,28,BHCK3210,HC,Sum(23-27),HC.28 = Sum(Items 23 through 27),balance,CRITICAL,Total Equity must equal sum of equity components (standardized to consolidated BHCK3210; includes noncontrolling/minority interest under FAS 160)
+RECON_BS_004,HC,29,BHCK3300,HC,21 + 22 + 28,HC.29 = HC.21 + HC.22 + HC.28,balance,CRITICAL,"Grand total BHCK3300. Code-level identity: BHCK2170 = BHCK2948 (total liabilities incl minority interest) + BHCK3210 (total equity incl noncontrolling interest). Caution: BHCK3000 (minority interest) is already inside BHCK2948 and inside BHCK3210 (FAS 160) - do not add it a third time."
+RECON_BS_005,HC,12,BHCK2170,HC,29,HC.12 = HC.29,balance,CRITICAL,Total Assets (BHCK2170) MUST equal Total Liabilities and Equity (BHCK3300 = BHCK2948 + BHCK3210)
+RECON_BS_006,HC,1,BHCK0010,HC,1.a + 1.b,HC.1 = HC.1.a + HC.1.b,sum,HIGH,Cash = Noninterest-bearing + Interest-bearing
+RECON_BS_007,HC,3,BHCKC225,HC,3.a + 3.b,HC.3 = HC.3.a + HC.3.b,sum,HIGH,Fed funds = Fed funds sold + Resale agreements
 RECON_BS_008,HC,10,BHCT2143,HC,10.a + 10.b,HC.10 = HC.10.a + HC.10.b,sum,HIGH,Intangibles = Goodwill + Other intangibles
-RECON_BS_009,HC,13,BHCT2200,HC,13.a + 13.b,HC.13 = HC.13.a + HC.13.b,sum,HIGH,Deposits = Domestic + Foreign deposits
-RECON_BS_010,HC,13.a,BHCM2200,HC,13.a.(1) + 13.a.(2),HC.13.a = HC.13.a.(1) + HC.13.a.(2),sum,MEDIUM,Domestic deposits = Noninterest + Interest-bearing
-RECON_BS_011,HC,13.b,BHCKB536,HC,13.b.(1) + 13.b.(2),HC.13.b = HC.13.b.(1) + HC.13.b.(2),sum,MEDIUM,Foreign deposits = Noninterest + Interest-bearing
-RECON_BS_012,HC,14,BHCTB993,HC,14.a + 14.b,HC.14 = HC.14.a + HC.14.b,sum,HIGH,Fed funds purchased = FF purchased + Repos
-RECON_BS_013,HC,2,BHCT8641,HC,2.a + 2.b,HC.2 = HC.2.a + HC.2.b (+ 2.c if applicable),sum,HIGH,Securities = HTM + AFS (+ Equity securities)
-RECON_BS_014,HC,4.d,BHCTB529,HC-C,12,HC.4.d = HC-C.12,cross_schedule,CRITICAL,Net loans on HC must equal HC-C total
+RECON_BS_009,HC,13,BHCT2200,HC,13.a + 13.b,HC.13 = HC.13.a + HC.13.b,sum,HIGH,"Deposits = Domestic + Foreign deposits. UNVERIFIED: BHCT2200 has no current MDRM equivalent - FR Y-9C line 13 (total deposits) is a caption with no atomic consolidated code (reported as BHDM6631/6636 domestic + BHFN6631/6636 foreign)."
+RECON_BS_010,HC,13.a,BHCM2200,HC,13.a.(1) + 13.a.(2),HC.13.a = HC.13.a.(1) + HC.13.a.(2),sum,MEDIUM,"Domestic deposits = Noninterest + Interest-bearing. UNVERIFIED: BHCM2200 has no current MDRM equivalent (BHCM prefix is trading-assets-in-domestic-offices, no item 2200; no consolidated domestic-deposits-total code exists). Components are BHDM6631 + BHDM6636."
+RECON_BS_011,HC,13.b,BHCKB536,HC,13.b.(1) + 13.b.(2),HC.13.b = HC.13.b.(1) + HC.13.b.(2),sum,MEDIUM,"Foreign deposits = Noninterest + Interest-bearing. UNVERIFIED: BHCKB536 has no current MDRM equivalent (foreign-deposits-total is a caption); components are BHFN6631 + BHCKB538."
+RECON_BS_012,HC,14,BHCK2800,HC,14.a + 14.b,HC.14 = HC.14.a + HC.14.b,sum,HIGH,Fed funds purchased = FF purchased + Repos
+RECON_BS_013,HC,2,BHCT8641,HC,2.a + 2.b,HC.2 = HC.2.a + HC.2.b (+ 2.c if applicable),sum,HIGH,"Securities = HTM + AFS (+ Equity securities). UNVERIFIED: BHCT8641 has no current MDRM equivalent - FR Y-9C line 2 (total securities) is a caption; components are BHCKJJ34 (2.a HTM) + BHCT1773 (2.b AFS) + BHCKJA22 (2.c equity)."
+RECON_BS_014,HC,4.d,BHCKB529,HC-C,12,HC.4.d = HC-C.12,cross_schedule,CRITICAL,Net loans on HC must equal HC-C total
 RECON_BS_015,HC,4.b,BHCTB528,HC-C,Sum(1-9) - 10,HC.4.b = Sum(HC-C Items 1-9) - Item 10,cross_schedule,CRITICAL,Gross loans less unearned income
 
 # ----------------------------------------------------------------------------
 # SECTION 2: SECURITIES RECONCILIATIONS - HC to HC-B (8 formulas)
 # ----------------------------------------------------------------------------
-RECON_SEC_001,HC,2.a,BHCTJJ34,HC-B,8 Col C,HC.2.a = HC-B.8 Column C (HTM amortized cost),cross_schedule,CRITICAL,HTM securities must tie to HC-B total
+RECON_SEC_001,HC,2.a,BHCKJJ34,HC-B,8 Col C,HC.2.a = HC-B.8 Column C (HTM amortized cost),cross_schedule,CRITICAL,HTM securities must tie to HC-B total
 RECON_SEC_002,HC,2.b,BHCT1773,HC-B,8 Col B,HC.2.b = HC-B.8 Column B (AFS fair value),cross_schedule,CRITICAL,AFS securities must tie to HC-B total
 RECON_SEC_003,HC-B,8 Col B,BHCT1773,HC-B,Sum(1-7) Col B,HC-B.8 Col B = Sum(Items 1-7 AFS Fair Value),sum,HIGH,AFS total = sum of AFS components
 RECON_SEC_004,HC-B,8 Col C,BHCT1754,HC-B,Sum(1-7) Col C,HC-B.8 Col C = Sum(Items 1-7 HTM Amortized Cost),sum,HIGH,HTM total = sum of HTM components
 RECON_SEC_005,HC-B,5 AFS,BHCKC027,HC-B,5.a + 5.b + 5.c + 5.d + 5.e + 5.f,HC-B.5 AFS = Sum(5.a through 5.f AFS),sum,MEDIUM,ABS total = sum of ABS types
-RECON_SEC_006,HC-B,M5,BHCTJJ32,HC-B,M5.a + M5.b,HC-B.M5 = HC-B.M5.a + HC-B.M5.b,sum,MEDIUM,Equity securities = Mutual funds + Other
-RECON_SEC_007,HC,2.c,BHCTJJ32,HC-B,M5,HC.2.c = HC-B.M5 (Equity securities),cross_schedule,HIGH,Equity securities tie between HC and HC-B
+RECON_SEC_006,HC-B,M5,BHCKJA22,HC-B,M5.a + M5.b,HC-B.M5 = HC-B.M5.a + HC-B.M5.b,sum,MEDIUM,Equity securities = Mutual funds + Other
+RECON_SEC_007,HC,2.c,BHCKJA22,HC-B,M5,HC.2.c = HC-B.M5 (Equity securities),cross_schedule,HIGH,Equity securities tie between HC and HC-B
 RECON_SEC_008,HC-B,MBS Total,CALCULATED,HC-B,3.a + 3.b + 3.c + 4.a + 4.b,MBS Total = Sum(RMBS + CMBS all types),sum,HIGH,Total MBS = all residential + commercial MBS
 
 # ----------------------------------------------------------------------------
@@ -41,14 +41,14 @@ RECON_SEC_008,HC-B,MBS Total,CALCULATED,HC-B,3.a + 3.b + 3.c + 4.a + 4.b,MBS Tot
 # ----------------------------------------------------------------------------
 RECON_LOAN_001,HC,4.b,BHCTB528,HC-C,12,HC.4.b = HC-C.12,cross_schedule,CRITICAL,Loans net of unearned income tie to HC-C
 RECON_LOAN_002,HC,4.c,BHCT3123,HC-C,11,HC.4.c = HC-C.11 (Allowance),cross_schedule,CRITICAL,ALLL must tie between HC and HC-C
-RECON_LOAN_003,HC-C,12,BHCTB529,HC-C,Sum(1-9) - 10 - 11,HC-C.12 = Sum(1-9) - Item 10 - Item 11,sum,CRITICAL,Net loans = gross - unearned - allowance
-RECON_LOAN_004,HC-C,1,BHCT1410,HC-C,1.a + 1.b + 1.c + 1.d + 1.e + 1.f,HC-C.1 = Sum(Items 1.a through 1.f),sum,HIGH,RE loans = all RE subcategories
-RECON_LOAN_005,HC-C,1.a,BHCT1415,HC-C,1.a.(1) + 1.a.(2),HC-C.1.a = HC-C.1.a.(1) + HC-C.1.a.(2),sum,MEDIUM,Construction = 1-4 family + Other construction
-RECON_LOAN_006,HC-C,1.d,BHCT5367,HC-C,1.d.(1) + 1.d.(2),HC-C.1.d = HC-C.1.d.(1) + HC-C.1.d.(2),sum,MEDIUM,1-4 family = First liens + Junior liens
-RECON_LOAN_007,HC-C,1.f,BHCT1480,HC-C,1.f.(1) + 1.f.(2),HC-C.1.f = HC-C.1.f.(1) + HC-C.1.f.(2),sum,MEDIUM,Nonfarm nonres = Owner-occ + Non-owner
-RECON_LOAN_008,HC-C,4,BHCT1766,HC-C,4.a + 4.b,HC-C.4 = HC-C.4.a + HC-C.4.b,sum,HIGH,C&I loans = Domestic + Foreign addressees
+RECON_LOAN_003,HC-C,12,BHCKB529,HC-C,Sum(1-9) - 10 - 11,HC-C.12 = Sum(1-9) - Item 10 - Item 11,sum,CRITICAL,Net loans = gross - unearned - allowance
+RECON_LOAN_004,HC-C,1,BHCK1410,HC-C,1.a + 1.b + 1.c + 1.d + 1.e + 1.f,HC-C.1 = Sum(Items 1.a through 1.f),sum,HIGH,RE loans = all RE subcategories
+RECON_LOAN_005,HC-C,1.a,BHCK1415,HC-C,1.a.(1) + 1.a.(2),HC-C.1.a = HC-C.1.a.(1) + HC-C.1.a.(2),sum,MEDIUM,Construction = 1-4 family + Other construction
+RECON_LOAN_006,HC-C,1.d,BHCT5367,HC-C,1.d.(1) + 1.d.(2),HC-C.1.d = HC-C.1.d.(1) + HC-C.1.d.(2),sum,MEDIUM,"1-4 family = First liens + Junior liens. UNVERIFIED: BHCT5367 has no current MDRM equivalent (closed-end 1-4 family subtotal is not a single consolidated code); components are BHCK5367 (first liens) + BHCK5368 (junior liens)."
+RECON_LOAN_007,HC-C,1.f,BHCK1480,HC-C,1.f.(1) + 1.f.(2),HC-C.1.f = HC-C.1.f.(1) + HC-C.1.f.(2),sum,MEDIUM,Nonfarm nonres = Owner-occ + Non-owner
+RECON_LOAN_008,HC-C,4,BHCK1766,HC-C,4.a + 4.b,HC-C.4 = HC-C.4.a + HC-C.4.b,sum,HIGH,C&I loans = Domestic + Foreign addressees
 RECON_LOAN_009,HC-C,5,BHCK1975,HC-C,5.a + 5.b + 5.c + 5.d,HC-C.5 = Sum(Items 5.a through 5.d),sum,HIGH,Consumer loans = CC + Revolving + Auto + Other
-RECON_LOAN_010,HC-C,9,BHCTB541,HC-C,9.a + 9.b,HC-C.9 = HC-C.9.a + HC-C.9.b,sum,MEDIUM,Leases = Individual + Other leases
+RECON_LOAN_010,HC-C,9,BHCK2165,HC-C,9.a + 9.b,HC-C.9 = HC-C.9.a + HC-C.9.b,sum,MEDIUM,Leases = Individual + Other leases
 
 # ----------------------------------------------------------------------------
 # SECTION 4: TRADING RECONCILIATIONS - HC to HC-D to HC-L (8 formulas)
@@ -69,24 +69,24 @@ RECON_CAP_001,HC-R,19,BHCAP859,HC-R,6 - 18,CET1 = CET1 Before Adjustments - CET1
 RECON_CAP_002,HC-R,6,BHCAP840,HC-R,Sum(1-5),CET1 Before Adj = Sum(Items 1-5),sum,HIGH,CET1 before deductions = sum of components
 RECON_CAP_003,HC-R,18,BHCAP852,HC-R,Sum(7-17),CET1 Deductions = Sum(Items 7-17),sum,HIGH,CET1 deductions = sum of all deduction items
 RECON_CAP_004,HC-R,24,BHCA8274,HC-R,19 + 23,Tier 1 = CET1 + Additional Tier 1,sum,CRITICAL,Tier 1 capital = CET1 + AT1
-RECON_CAP_005,HC-R,23,BHCAP856,HC-R,20 + 21 - 22,Additional Tier 1 = AT1 instruments + MI - deductions,derived,HIGH,AT1 = instruments + minority - deductions
+RECON_CAP_005,HC-R,23,BHCAP865,HC-R,20 + 21 - 22,Additional Tier 1 = AT1 instruments + MI - deductions,derived,HIGH,"CORRECTED parent BHCAP856->BHCAP865: BHCAP856 is 'significant investments exceeding 15% CET1 threshold' (a CET1 deduction, discontinued 2019), NOT Additional Tier 1. AT1 = BHCAP865 = AT1 instruments+surplus (BHCAP860) + Tier 1 minority interest (BHCAP862) - AT1 deductions (BHCAP864)."
 RECON_CAP_006,HC-R,30,BHCA3792,HC-R,24 + 29,Total Capital = Tier 1 + Tier 2,sum,CRITICAL,Total capital = Tier 1 + Tier 2
 RECON_CAP_007,HC-R,29,BHCA5311,HC-R,25 + 26 + 27 - 28,Tier 2 = T2 instruments + MI + ACL - deductions,derived,HIGH,T2 = instruments + minority + allowance - deductions
 RECON_CAP_008,HC-R,31,BHCAA223,HC-R,Sum(RWA1-RWA10),Total RWA = Sum(all RWA buckets),sum,CRITICAL,Total RWA = sum of all risk-weighted categories
 RECON_CAP_009,HC-R,32,BHCAP793,HC-R,19 / 31,CET1 Ratio = CET1 Capital / Total RWA,ratio,CRITICAL,CET1 ratio calculation
-RECON_CAP_010,HC-R,33,BHCAP794,HC-R,24 / 31,Tier 1 Ratio = Tier 1 Capital / Total RWA,ratio,CRITICAL,Tier 1 ratio calculation
-RECON_CAP_011,HC-R,34,BHCAP795,HC-R,30 / 31,Total Capital Ratio = Total Capital / Total RWA,ratio,CRITICAL,Total capital ratio calculation
-RECON_CAP_012,HC-R,35,BHCAP796,HC-R,24 / Avg Assets,Leverage Ratio = Tier 1 / Average Total Assets,ratio,CRITICAL,Leverage ratio calculation
+RECON_CAP_010,HC-R,33,BHCA7206,HC-R,24 / 31,Tier 1 Ratio = Tier 1 Capital / Total RWA,ratio,CRITICAL,Tier 1 ratio calculation
+RECON_CAP_011,HC-R,34,BHCA7205,HC-R,30 / 31,Total Capital Ratio = Total Capital / Total RWA,ratio,CRITICAL,Total capital ratio calculation
+RECON_CAP_012,HC-R,35,BHCA7204,HC-R,24 / Avg Assets,Leverage Ratio = Tier 1 / Average Total Assets,ratio,CRITICAL,Leverage ratio calculation
 
 # ----------------------------------------------------------------------------
 # SECTION 6: INCOME STATEMENT RECONCILIATIONS - HI (10 formulas)
 # ----------------------------------------------------------------------------
-RECON_INC_001,HI,4,BHCT4074,HI,1 - 2,Net Interest Income = Interest Income - Interest Expense,derived,CRITICAL,NII calculation
-RECON_INC_002,HI,1,BHCT4107,HI,1.a + 1.b + 1.c + 1.d + 1.e + 1.f,Interest Income = Sum(all interest income components),sum,HIGH,Total interest income = sum of sources
-RECON_INC_003,HI,2,BHCT4073,HI,2.a + 2.b + 2.c + 2.d,Interest Expense = Sum(all interest expense components),sum,HIGH,Total interest expense = sum of sources
-RECON_INC_004,HI,6,BHCT4079,HI,6.a + 6.b + 6.c + 6.d + 6.e + 6.f,Noninterest Income = Sum(all noninterest income),sum,HIGH,Total noninterest income = sum of sources
-RECON_INC_005,HI,7,BHCT4093,HI,7.a + 7.b + 7.c + 7.d,Noninterest Expense = Sum(all noninterest expense),sum,HIGH,Total noninterest expense = sum of sources
-RECON_INC_006,HI,8,BHCT4301,HI,4 - 5 + 6 - 7,Income Before Securities/Tax = NII - Provision + NonII - NonIE,derived,HIGH,Pre-tax pre-securities income
+RECON_INC_001,HI,4,BHCK4074,HI,1 - 2,Net Interest Income = Interest Income - Interest Expense,derived,CRITICAL,NII calculation
+RECON_INC_002,HI,1,BHCK4107,HI,1.a + 1.b + 1.c + 1.d + 1.e + 1.f,Interest Income = Sum(all interest income components),sum,HIGH,Total interest income = sum of sources
+RECON_INC_003,HI,2,BHCK4073,HI,2.a + 2.b + 2.c + 2.d,Interest Expense = Sum(all interest expense components),sum,HIGH,Total interest expense = sum of sources
+RECON_INC_004,HI,6,BHCK4079,HI,6.a + 6.b + 6.c + 6.d + 6.e + 6.f,Noninterest Income = Sum(all noninterest income),sum,HIGH,Total noninterest income = sum of sources
+RECON_INC_005,HI,7,BHCK4093,HI,7.a + 7.b + 7.c + 7.d,Noninterest Expense = Sum(all noninterest expense),sum,HIGH,Total noninterest expense = sum of sources
+RECON_INC_006,HI,8,BHCK4301,HI,4 - 5 + 6 - 7,Income Before Securities/Tax = NII - Provision + NonII - NonIE,derived,HIGH,Pre-tax pre-securities income
 RECON_INC_007,HI,12,BHCT4340,HI,8 + gains - 10 - 11,Net Income = Pre-tax income + gains - tax - discontinued,derived,CRITICAL,Net income calculation
 RECON_INC_008,HI,ROA,CALCULATED,HI/HC,12 / HC.12,ROA = Net Income / Total Assets,ratio,HIGH,Return on assets
 RECON_INC_009,HI,ROE,CALCULATED,HI/HC,12 / HC.28,ROE = Net Income / Total Equity,ratio,HIGH,Return on equity
@@ -97,8 +97,8 @@ RECON_INC_010,HI,NIM,CALCULATED,HI/HC,4 / Avg Earning Assets,NIM = NII / Average
 # ----------------------------------------------------------------------------
 RECON_OTH_001,HC,11,BHCT2160,HC-F,12,HC.11 = HC-F.12 (Other Assets),cross_schedule,CRITICAL,Other assets must tie HC to HC-F
 RECON_OTH_002,HC-F,12,BHCT2160,HC-F,Sum(1-11),HC-F.12 = Sum(Items 1-11),sum,HIGH,Other assets = sum of HC-F components
-RECON_OTH_003,HC,20,BHCT2930,HC-G,5,HC.20 = HC-G.5 (Other Liabilities),cross_schedule,CRITICAL,Other liabilities must tie HC to HC-G
-RECON_OTH_004,HC-G,5,BHCT2930,HC-G,Sum(1-4),HC-G.5 = Sum(Items 1-4),sum,HIGH,Other liabilities = sum of HC-G components
+RECON_OTH_003,HC,20,BHCK2750,HC-G,5,HC.20 = HC-G.5 (Other Liabilities),cross_schedule,CRITICAL,Other liabilities must tie HC to HC-G
+RECON_OTH_004,HC-G,5,BHCK2750,HC-G,Sum(1-4),HC-G.5 = Sum(Items 1-4),sum,HIGH,Other liabilities = sum of HC-G components
 RECON_OTH_005,HC-F,10,BHCT2143,HC-F,10.a + 10.b,HC-F.10 = HC-F.10.a + HC-F.10.b,sum,MEDIUM,Intangibles = Goodwill + Other intangibles
 
 # ----------------------------------------------------------------------------
@@ -115,7 +115,7 @@ RECON_DRV_007,HC-L,CDS Bought Total,CALCULATED,HC-L,C969 + C971 + C975,CDS Bough
 # ----------------------------------------------------------------------------
 # SECTION 9: CROSS-FORM RECONCILIATIONS - Y-9C to Call Report (5 formulas)
 # ----------------------------------------------------------------------------
-RECON_XFM_001,FR Y-9C,HC.12,BHCT2170,Call Report,RC.12,Y-9C HC.12 reconciles to sum of subsidiary Call Report RC.12,cross_form,CRITICAL,Consolidated assets = sum of subsidiary banks (with eliminations)
+RECON_XFM_001,FR Y-9C,HC.12,BHCK2170,Call Report,RC.12,Y-9C HC.12 reconciles to sum of subsidiary Call Report RC.12,cross_form,CRITICAL,Consolidated assets = sum of subsidiary banks (with eliminations); Y-9C side standardized to BHCK2170
 RECON_XFM_002,FR Y-9C,HC.5,BHCT3545,Call Report,RC.5,Y-9C Trading Assets should approximate Call Report RC.5,cross_form,HIGH,Trading assets consolidation check
 RECON_XFM_003,FR Y-9C,HC-R.19,BHCAP859,Call Report,RC-R.19,Y-9C CET1 should be consistent with bank-level CET1,cross_form,HIGH,Capital consistency check
 RECON_XFM_004,FR Y-9C,HI.12,BHCT4340,Call Report,RI.14,Y-9C Net Income should consolidate from bank net income,cross_form,HIGH,Net income consolidation check

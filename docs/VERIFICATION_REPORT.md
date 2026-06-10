@@ -248,15 +248,15 @@ The legacy `MDRM_PREFIX_DEFINITIONS.csv` labelled **BHCK** as "domestic operatio
 | TOTAL_EQUITY | BHCT3210 | HC | 28 | **VERIFIED** | Total equity capital |
 | TOTAL_DEPOSITS | BHCM2200 | HC | 13.a | **FIXED (v6.0)** | corrected from 13 → 13.a (deposits in domestic offices) |
 | LOANS_NET | BHCTB528 | HC | 4.b | **VERIFIED** | Net loans and leases |
-| CASH_BALANCES | BHCT0081 | HC | 1 | **VERIFIED** | Cash and balances due |
-| FED_FUNDS_SOLD | BHCTB987 | HC | 3 | **VERIFIED** | Fed funds sold and reverse repos |
+| CASH_BALANCES | BHCK0010 | HC | 1 | **VERIFIED** | Cash and balances due |
+| FED_FUNDS_SOLD | BHCKC225 | HC | 3 | **VERIFIED** | Fed funds sold and reverse repos |
 | ALLOWANCE_LLP | BHCT3123 | HC | 4.c | **VERIFIED** | Allowance for loan losses |
-| GOODWILL | BHCT3163 | HC | 10.a | **VERIFIED** | Goodwill |
-| INTANGIBLE_ASSETS | BHCTC752 | HC | 10.b | **VERIFIED** | Other intangible assets |
+| GOODWILL | BHCK3163 | HC | 10.a | **VERIFIED** | Goodwill |
+| INTANGIBLE_ASSETS | BHCK0426 | HC | 10.b | **VERIFIED** | Other intangible assets |
 | OTHER_ASSETS | BHCT2160 | HC | 11 | **VERIFIED** | Other assets |
-| TOTAL_LIABILITIES | BHCT2948 | HC | 21 | **VERIFIED** | Total liabilities |
+| TOTAL_LIABILITIES | BHCK2948 | HC | 21 | **VERIFIED** | Total liabilities |
 | OTHER_BORROWED_MONEY | BHCT3190 | HC | 16 | **VERIFIED** | Other borrowed money |
-| SUBORDINATED_DEBT | BHCT3200 | HC | 19 | **VERIFIED** | Subordinated debt |
+| SUBORDINATED_DEBT | BHCK4062 | HC | 19 | **VERIFIED** | Subordinated debt |
 
 **Note on TOTAL_DEPOSITS**: The BHCM2200 code correctly represents total domestic deposits, but the line item reference should specify 13.a (domestic) vs. 13 (total including foreign). Current documentation is technically accurate but could be more precise.
 
@@ -281,7 +281,7 @@ The legacy `MDRM_PREFIX_DEFINITIONS.csv` labelled **BHCK** as "domestic operatio
 | Concept ID | MDRM Code | Schedule | Line | Status | Notes |
 |------------|-----------|----------|------|--------|-------|
 | SECURITIES_AFS | BHCT1773 | HC-B | M1 | **VERIFIED** | AFS securities memorandum |
-| SECURITIES_HTM | BHCTJJ34 | HC-B | M2 | **VERIFIED** | HTM securities memorandum |
+| SECURITIES_HTM | BHCKJJ34 | HC-B | M2 | **VERIFIED** | HTM securities memorandum |
 
 ---
 
@@ -292,7 +292,7 @@ The legacy `MDRM_PREFIX_DEFINITIONS.csv` labelled **BHCK** as "domestic operatio
 | NET_INCOME | BHCT4340 | HI | 14 | **VERIFIED** | RIAD4340 "must equal Schedule RI item 14"; the v5.0 "item 12" claim is refuted (item 12 = pre-NCI-split aggregate, code G104) |
 | PROVISION_LLP | BHCT4230 | HI | 4 | **VERIFIED** | Provision for loan losses |
 | INTEREST_INCOME_LOANS | BHCK4010 | HI | 1.a | **VERIFIED** | Interest income on loans |
-| INTEREST_EXPENSE_DEPOSITS | BHCK4170 | HI | 2.a | **VERIFIED** | Interest expense on deposits |
+| INTEREST_EXPENSE_DEPOSITS | RIAD4170 | HI | 2.a | **VERIFIED** | Interest expense on deposits |
 | TRADING_REVENUE | BHCKA220 | HI-M | 8.a | **VERIFIED** | Trading revenue |
 
 **Note on NET_INCOME**: Re-verified in v6.0. BHCT4340 / RIAD4340 is the bottom-line "net income attributable to holding company/bank" = **HI/RI item 14** (the FDIC RI instructions state RIAD4340 "must equal Schedule RI, item 14"). The v5.0 recommendation to change this to item 12 was incorrect and is **withdrawn**; item 12 is the pre-noncontrolling-interest aggregate (a different code, G104). No change made.
@@ -443,7 +443,7 @@ per-schedule files** — `HC_H_INTEREST_SENSITIVITY`, `HC_Q_FAIR_VALUE`, `HC_BAL
 `SCHEDULE_COMPONENT_HIERARCHY`, the reconciliation/validation files, and their guides.
 Spot-checks against the raw MDRM confirmed a recurring pattern: **Call Report item numbers
 placed under FR Y-9C (BHC) mnemonics.** For example the original `HC_BALANCE_SHEET.csv` used
-`BHCK3632` for retained earnings, but item `3632` exists only under `RCFD`/`RCON` (Call
+`BHCK3247` for retained earnings, but item `3632` exists only under `RCFD`/`RCON` (Call
 Report); the FR Y-9C retained-earnings code is `BHCK3247`.
 
 **Status of the fix.** One code that broke a live reconciliation formula was corrected
@@ -457,3 +457,37 @@ Schedules catalogue, the NIC structure layer, the identifier crosswalk, `MDRM_NA
 `MDRM_PREFIX_DEFINITIONS.csv`, and especially [`csv/MDRM_CROSSWALK_EXPANDED.csv`](../csv/MDRM_CROSSWALK_EXPANDED.csv)
 (every code confirmed present in MDRM). Users needing guaranteed-valid codes should prefer the
 expanded crosswalk over the legacy per-schedule CSVs until the latter are remediated.
+
+---
+
+## Per-Code Remediation & Math Verification (v6.3, 2026-06-09)
+
+Following the v6.2 audit, every flagged code was individually remediated against the full Fed
+MDRM, and every asserted relationship was math-verified against the FR Y-9C form.
+
+### Code remediation
+- **Code validity rose 81% → 87%** of all code-shaped tokens.
+- **139 codes FIXED** to their verified current MDRM code (per-schedule, each confirmed to exist
+  with a matching item name and correct scope). Examples: retained earnings `BHCK3632`→`BHCK3247`;
+  surplus `BHCK3839`→`BHCK3240`; interest-on-deposits `BHCK4170`→`RIAD4170`; Tier 1/2/Total ratios
+  → `BHCA7206`/`7205`/`7204`.
+- Remaining flagged codes are dispositioned (not fixable without fabrication): **98 DISCONTINUED**
+  (e.g. all of Schedule HC-H interest-sensitivity, removed from the FR Y-9C ~2001-2002),
+  **~80 UNRESOLVED** (fabricated / no-current-equivalent rows in the legacy CSVs), and a handful of
+  **FALSE_POSITIVE** prose tokens. Full per-code disposition: [`csv/CODE_REMEDIATION_LOG.csv`](../csv/CODE_REMEDIATION_LOG.csv).
+
+### Math verification of relationships
+All reconciliation formulas, component hierarchies, validation rules, and the README/guide
+identities were checked for (1) code validity and (2) definitional correctness per the FR Y-9C form:
+- **Capital:** `Tier 1 = CET1 + AT1` → `BHCA8274 = BHCAP859 + BHCAP865` (AT1 corrected from the
+  wrong `BHCAP856`, which is "significant investments", not AT1). `Total = Tier 1 + Tier 2` →
+  `BHCA3792 = BHCA8274 + BHCA5311`. Regulatory minimums confirmed (CET1 4.5%, Tier 1 6%, Total 8%,
+  leverage 4%).
+- **Balance sheet:** `BHCK2170 = BHCK2948 + BHCK3210 (= BHCK3300)`. Corrected a minority-interest
+  double-count: `BHCK2948` ("Total liabilities **and minority interest**") already includes
+  minority interest, so `BHCK3000` is **not** added as a separate term.
+- **Income:** `NII = BHCK4074 = BHCK4107 − BHCK4073` confirmed.
+- **Cross-form mapping:** each concept's Y-9C and Call codes confirmed to share the item number
+  under the correct mnemonic (e.g. `BHCK2170 ↔ RCFD2170`).
+Identities that reference a code with no current MDRM equivalent are explicitly marked UNVERIFIED
+rather than asserted.

@@ -1,5 +1,5 @@
 line_number,loan_category,mdrm_30_89,mdrm_90_plus,mdrm_nonaccrual,category,ties_to_hc_c,start_date,notes
-1,Loans secured by real estate,BHCK5526,BHCK5527,BHCK3492,RE Loans Total,HC-C Item 1,1976-03-31,Total RE loans past due
+1,Loans secured by real estate,BHCK5526,BHCK1422,BHCK3492,RE Loans Total,HC-C Item 1,1976-03-31,Total RE loans past due
 1.a,Construction and land development,BHCK2759,BHCK2769,BHCK3505,RE - Construction,HC-C Item 1.a,1991-03-31,ADC loans
 1.a.(1),1-4 family residential construction,BHCKF172,BHCKF174,BHCKF176,RE - Construction 1-4,HC-C Item 1.a.(1),2007-03-31,
 1.a.(2),Other construction,BHCKF173,BHCKF175,BHCKF177,RE - Construction Other,HC-C Item 1.a.(2),2007-03-31,
@@ -27,7 +27,7 @@ line_number,loan_category,mdrm_30_89,mdrm_90_plus,mdrm_nonaccrual,category,ties_
 8,Other loans,BHCK5459,BHCK5460,BHCK5461,Other Loans,HC-C Item 8,1991-03-31,
 9,Lease financing receivables,BHCK5395,BHCK5396,BHCK5397,Leases,HC-C Item 9,1991-03-31,
 10,Total loans and leases,BHCK5524,BHCK5525,BHCK1403,Total,HC-C Item 12,1976-03-31,Sum of all categories
-M1,Restructured troubled debt (TDR),BHCK5369,BHCK5370,BHCK5371,Memorandum - TDR,-,1991-03-31,TDRs in compliance
+M1,Restructured troubled debt (TDR),BHCK5369,BHCK1659,BHCK1661,Memorandum - TDR,-,1991-03-31,TDRs in compliance
 M2,Loans 90+ days past due and still accruing,BHCK1407,BHCK1407,-,Memorandum - 90+,-,1976-03-31,
 M3,Total nonaccrual loans,-,-,BHCK1403,Memorandum - Nonaccrual,-,1976-03-31,
 M4,Loans to finance agricultural production guaranteed by USDA,BHCKF190,BHCKF191,BHCKF192,Memorandum - USDA,-,2007-03-31,

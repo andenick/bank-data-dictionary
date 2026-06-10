@@ -16,11 +16,11 @@ line_number,item_description,mdrm_code,call_mdrm,category,part,start_date,notes
 5.d,AFS securities backed by auto,BHCKB767,RCFDB767,Investor - Auto,Part II,2001-03-31,
 5.e,AFS securities backed by other consumer,BHCKB768,RCFDB768,Investor - Other Consumer,Part II,2001-03-31,
 5.f,AFS securities backed by C&I,BHCKB769,RCFDB769,Investor - C&I,Part II,2001-03-31,
-5.g,AFS securities backed by other,BHCKB770,RCFDB770,Investor - Other,Part II,2001-03-31,
-6,Total ABS held as investor,BHCKB771,RCFDB771,Investor - Total ABS,Part II,2001-03-31,
-7.a,Mortgages serviced for others - 1-4 family residential,BHCKB772,RCFDB772,Servicer - 1-4 Family,Part III,2001-03-31,Unpaid principal balance
-7.b,Mortgages serviced for others - other residential,BHCKB773,RCFDB773,Servicer - Other Resi,Part III,2001-03-31,
-7.c,Mortgages serviced for others - commercial,BHCKB774,RCFDB774,Servicer - Commercial,Part III,2001-03-31,
-8,Total mortgage servicing,BHCKB775,RCFDB775,Servicer - Total Mortgage,Part III,2001-03-31,Sum of Items 7
+5.g,AFS securities backed by other,BHCKB770,RIADB770,Investor - Other,Part II,2001-03-31,
+6,Total ABS held as investor,BHCKB771,RIADB771,Investor - Total ABS,Part II,2001-03-31,
+7.a,Mortgages serviced for others - 1-4 family residential,BHCKB772,RIADB772,Servicer - 1-4 Family,Part III,2001-03-31,Unpaid principal balance
+7.b,Mortgages serviced for others - other residential,BHCKB773,RIADB773,Servicer - Other Resi,Part III,2001-03-31,
+7.c,Mortgages serviced for others - commercial,BHCKB774,RIADB774,Servicer - Commercial,Part III,2001-03-31,
+8,Total mortgage servicing,BHCKB775,RIADB775,Servicer - Total Mortgage,Part III,2001-03-31,Sum of Items 7
 M1,Credit enhancements to ABCP conduits,BHCKB806,RCFDB806,Memorandum - ABCP,Part I,2004-03-31,
 M2,Liquidity facilities to ABCP conduits,BHCKB807,RCFDB807,Memorandum - ABCP,Part I,2004-03-31,

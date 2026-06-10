@@ -178,7 +178,7 @@
       "description": "Securities",
       "key_items": {
         "afs_total": {"y9c": "BHCT1773", "call": "RCFD1773"},
-        "htm_total": {"y9c": "BHCTJJ34", "call": "RCFDJJ34"}
+        "htm_total": {"y9c": "BHCKJJ34", "call": "RCFDJJ34"}
       }
     },
     "trading": {
@@ -227,7 +227,7 @@
         "cet1_capital": {"y9c": "BHCAP859", "call": "RCFAP859"},
         "tier1_capital": {"y9c": "BHCA8274", "call": "RCFAA223"},
         "tier2_capital": {"y9c": "BHCA5311", "call": "RCFAA224"},
-        "total_capital": {"y9c": "BHCA3792", "call": "RCFAA225"},
+        "total_capital": {"y9c": "BHCA3792", "call": "RCFA3792"},
         "rwa": {"y9c": "BHCAA223", "call": "RCFDA223"}
       }
     },

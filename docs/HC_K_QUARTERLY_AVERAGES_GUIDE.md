@@ -66,7 +66,7 @@ MEMORANDA
 |------|------|-------------|---------|
 | 1 | BHCK3381 | Interest-bearing balances | HC Item 1.b |
 | 2 | BHCK3365 | Securities (excl. trading) | HC Item 2 |
-| 4 | BHCK3360 | Loans and leases | HC Item 4 |
+| 4 | BHCK3516 | Loans and leases | HC Item 4 |
 | 5 | BHCK3401 | Trading assets | HC Item 5 |
 | 7 | BHCKA517 | Total earning assets | Calculated |
 | 9 | BHCK3368 | Total assets | HC Item 12 |
@@ -77,7 +77,7 @@ MEMORANDA
 |------|------|-------------|---------|
 | 10 | BHCK3387 | Interest-bearing deposits | HC Item 13 |
 | 11 | BHCK3353 | Fed funds purchased/repos | HC Item 14 |
-| 12 | BHCKB565 | Other borrowed money | HC Item 16 |
+| 12 | BHCK2635 | Other borrowed money | HC Item 16 |
 | 13 | BHCKA518 | Total IB liabilities | Calculated |
 | 14 | BHCK3548 | Total liabilities | HC Item 21 |
 
@@ -186,7 +186,7 @@ Using averages enables meaningful peer comparison:
 |------|------|-------------|
 | 1 | BHCK3381 | Avg interest-bearing balances |
 | 2 | BHCK3365 | Avg securities |
-| 4 | BHCK3360 | Avg loans and leases |
+| 4 | BHCK3516 | Avg loans and leases |
 | 5 | BHCK3401 | Avg trading assets |
 | **7** | **BHCKA517** | **Avg earning assets** |
 | 8 | BHCK3368 | Avg ALLL |

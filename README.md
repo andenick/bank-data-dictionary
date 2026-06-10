@@ -2,7 +2,7 @@
 
 **The most detailed open catalogue of U.S. bank regulatory data — every major information collection and its subschedules, the MDRM code system, the FFIEC NIC institutional-structure data, the identifier crosswalk, cross-form mappings, and reconciliation formulas.**
 
-**Version 6.2** | Updated: 2026-06-09
+**Version 6.3** | Updated: 2026-06-09
 
 > This repository is a **catalogue / mapping reference** — it documents *what the datasets are, how they are structured, and how they relate to each other*. For a data-*access* package (download and query the actual filings), see the companion project **[FreeNIC](https://github.com/andenick/FreeNIC)**.
 
@@ -35,7 +35,7 @@ No installation required — all data is in CSV, JSON, and Markdown files ready 
     +----------+-----------+-----------+-----------+----------+
     |          |           |           |           |          |
   Cash      Securities    Loans     Trading    Other Assets
- (0081)     (8641)       (B528)     (3545)      (2160)
+ (0081)     (8641*)      (B528)     (3545)      (2160)
               |            |           |           |
            HC-B         HC-C        HC-D        HC-F
               |            |           |
@@ -45,13 +45,13 @@ No installation required — all data is in CSV, JSON, and Markdown files ready 
                                     HC-L
                                (FV by Asset Class)
 
-                    TOTAL LIABILITIES (BHCT2948)
+                    TOTAL LIABILITIES (BHCK2948)
                            |
     +----------+-----------+-----------+-----------+
     |          |           |           |           |
  Deposits   Fed Funds   Trading    Other      Borrowings
-  (2200)    Purchased    Liab      Liab       (3190)
-              (B993)    (3548)    (2930)
+  (2200*)   Purchased    Liab      Liab       (3190)
+              (B993)    (3548)    (2750)
                           |         |
                         HC-D      HC-G
                           |
@@ -63,19 +63,29 @@ No installation required — all data is in CSV, JSON, and Markdown files ready 
          +--------+--------+--------+--------+
          |        |        |        |        |
       Preferred Common  Surplus  Retained  AOCI
-       (3838)   (3230)  (3839)   (3632)   (B530)
+       (3283)   (3230)  (3240)   (3247)   (B530)
 
                 REGULATORY CAPITAL
                     (HC-R)
          +----------+----------+
          |                     |
-    TIER 1 (FA223)      TIER 2 (FA224)
+    TIER 1 (8274)       TIER 2 (5311)
          |
     +----+----+
     |         |
   CET1      AT1
- (P859)    (P856)
+ (P859)    (P865)
 ```
+
+> **Code conventions for the diagram above.** Leaf labels are MDRM *item* codes; on the
+> FR Y-9C they take the prefix `BHCK`/`BHCT` (consolidated) for balance-sheet/income items
+> and `BHCA` (e.g. `BHCA8274`, `BHCAP859`) for HC-R regulatory-capital items. All codes shown
+> are verified against the Federal Reserve MDRM **except** the two marked `*`:
+> `8641` (total securities) and `2200` (total deposits) are **Call Report** totals
+> (`RCFD8641` / `RCFD2200`) and have **no single consolidated FR Y-9C MDRM** — on the Y-9C,
+> total securities = AFS `BHCK1773` + HTM `BHCKJJ34` + equity `BHCKJA22`, and total deposits
+> = `BHDM6631` (noninterest) + `BHDM6636` (interest). Capital: Tier 1 = `BHCA8274`,
+> Tier 2 = `BHCA5311`, Total = `BHCA3792`, CET1 = `BHCAP859`, AT1 = `BHCAP865`.
 
 ---
 
@@ -110,16 +120,19 @@ No installation required — all data is in CSV, JSON, and Markdown files ready 
 
 | # | Check | Formula | Priority |
 |---|-------|---------|----------|
-| 1 | Balance Sheet | BHCT2170 = BHCT2948 + BHCK3000 + BHCT3210 | CRITICAL |
+| 1 | Balance Sheet | BHCK2170 = BHCK2948 + BHCK3210 (= BHCK3300) | CRITICAL |
 | 2 | Trading Assets | BHCT3545 (HC) = BHCT3545 (HC-D) | CRITICAL |
 | 3 | Trading Liabilities | BHCT3548 (HC) = BHCT3548 (HC-D) | CRITICAL |
-| 4 | Loans Net | BHCTB528 (HC) = BHCTB529 (HC-C) | CRITICAL |
-| 5 | Tier 1 Capital | BHCA8274 = BHCAP859 + BHCAP856 | CRITICAL |
+| 4 | Loans Net | BHCTB528 (HC) = BHCKB529 (HC-C) | CRITICAL |
+| 5 | Tier 1 Capital | BHCA8274 = BHCAP859 + BHCAP865 | CRITICAL |
 | 6 | Total Capital | BHCA3792 = BHCA8274 + BHCA5311 | CRITICAL |
 | 7 | Derivatives +FV | BHCT3543 = Sum(HC-L Positive FV) | CRITICAL |
 | 8 | Derivatives -FV | BHCT3547 = Sum(HC-L Negative FV) | CRITICAL |
-| 9 | Securities | BHCT8641 = BHCT1773 + BHCTJJ34 | HIGH |
-| 10 | NII | BHCT4074 = BHCT4107 - BHCT4073 | HIGH |
+| 9 | Securities | HC item 2 = BHCT1773 (AFS) + BHCKJJ34 (HTM) + BHCKJA22 (equity) † | HIGH |
+| 10 | NII | BHCK4074 = BHCK4107 - BHCK4073 | HIGH |
+
+† The FR Y-9C has **no single consolidated total-securities MDRM**; the total is the sum of
+its AFS + HTM + equity components. `8641` (total securities) is a **Call Report** code (`RCFD8641`).
 
 ---
 
@@ -318,17 +331,17 @@ for _, rule in critical_rules.iterrows():
 balance_sheet = {
     'total_assets': 'BHCT2170',
     'total_loans': 'BHCTB528',
-    'securities': 'BHCT8641',
+    'securities_afs': 'BHCT1773',   # + HTM 'BHCKJJ34' + equity 'BHCKJA22' (no single Y-9C total; Call: RCFD8641)
     'trading_assets': 'BHCT3545',
-    'deposits': 'BHCT2200',
+    'deposits_noninterest': 'BHDM6631',  # + interest 'BHDM6636' (no single Y-9C total; Call: RCFD2200)
     'total_equity': 'BHCT3210',
 }
 
 # Income statement items
 income = {
-    'interest_income': 'BHCT4107',
-    'interest_expense': 'BHCT4073',
-    'net_interest_income': 'BHCT4074',
+    'interest_income': 'BHCK4107',
+    'interest_expense': 'BHCK4073',
+    'net_interest_income': 'BHCK4074',
     'provision': 'BHCT4230',
     'net_income': 'BHCT4340',
 }
@@ -402,21 +415,34 @@ This repository is the **catalogue / mapping** product. Its sibling, **[FreeNIC]
 ## Data Quality & Verification
 
 Every MDRM-code-shaped token in this repo is validated against the full Federal Reserve MDRM
-dictionary; results are in [`csv/CODE_VALIDATION_AUDIT.csv`](csv/CODE_VALIDATION_AUDIT.csv)
-(**81% of 2,180 codes validate exactly**). The v6.0+ layer — the Collections/Schedules
-catalogue, NIC structure, identifier crosswalk, MDRM namespace catalogue, and the
-[984-code expanded crosswalk](csv/MDRM_CROSSWALK_EXPANDED.csv) — is **MDRM-verified by
-construction.** The remaining ~19% of flagged codes are concentrated in the **original
-(pre-v6.0) per-schedule CSVs** (a recurring pattern of Call-Report item numbers placed under
-BHC mnemonics) and are tracked for a per-schedule remediation pass — see the
-[verification report](docs/VERIFICATION_REPORT.md#code-validation-audit-v61-2026-06-09).
-**For guaranteed-valid codes, prefer `MDRM_CROSSWALK_EXPANDED.csv` over the legacy per-schedule
-files** until remediation is complete.
+dictionary; results are in [`csv/CODE_VALIDATION_AUDIT.csv`](csv/CODE_VALIDATION_AUDIT.csv).
+
+**v6.3 remediation (per-code, MDRM-verified).** A per-schedule remediation pass corrected the
+legacy code errors that the v6.2 audit surfaced: **code validity rose 81% → 87%**, with **139
+codes fixed** to their verified current MDRM code (e.g. retained earnings `BHCK3632`→`BHCK3247`;
+income flows `BHCK4170`→`RIAD4170`; capital ratios → the `72xx` series). Every flagged code's
+disposition — FIX / DISCONTINUED / UNRESOLVED / FALSE_POSITIVE, with reasoning — is published in
+[`csv/CODE_REMEDIATION_LOG.csv`](csv/CODE_REMEDIATION_LOG.csv). The codes that remain flagged are
+**not errors we can fix without fabricating**: they are genuinely *discontinued* schedule items
+(e.g. Schedule HC-H interest-sensitivity, removed ~2001) or fabricated/no-equivalent rows in the
+legacy CSVs — each is labelled as such in the log.
+
+**Math-verified relationships.** Every asserted reconciliation identity was checked for code
+validity **and** definitional correctness against the FR Y-9C form. Corrections include the
+capital identities (`BHCA8274 = BHCAP859 + BHCAP865`; AT1 is `BHCAP865`, not the previously-used
+`BHCAP856`), and the balance-sheet identity (`BHCK2170 = BHCK2948 + BHCK3210 = BHCK3300` —
+`BHCK2948` already includes minority interest, so adding `BHCK3000` separately double-counts it).
+
+The v6.0+ layer — Collections/Schedules catalogue, NIC structure, identifier crosswalk, MDRM
+namespace catalogue, and the [984-code expanded crosswalk](csv/MDRM_CROSSWALK_EXPANDED.csv) — is
+**MDRM-verified by construction.** For guaranteed-valid codes, prefer `MDRM_CROSSWALK_EXPANDED.csv`
+and the corrected schedule files; consult `CODE_REMEDIATION_LOG.csv` for any code still flagged.
 
 ## Version History
 
 | Version | Date | Changes |
 |---------|------|---------|
+| **6.3** | 2026-06-09 | **Per-code remediation + math-verified relationships.** Fixed 139 invalid legacy codes to their verified current MDRM code (validity 81%→87%); full disposition of every flagged code in `CODE_REMEDIATION_LOG.csv`. Math-verified all reconciliation/validation identities against the FR Y-9C form: corrected the AT1 code (`BHCAP856`→`BHCAP865`) and the balance-sheet identity (removed the `BHCK3000` minority-interest double-count → `BHCK2170 = BHCK2948 + BHCK3210`). Remaining flagged codes are documented discontinued/fabricated items, not fixable without fabrication. |
 | **6.2** | 2026-06-09 | **Code audit + crosswalk growth + browsable data tables.** Repo-wide MDRM-code validation (`CODE_VALIDATION_AUDIT.csv`; 81% valid) — flags ~412 codes in the legacy per-schedule CSVs (Call-Report items under BHC mnemonics) for remediation; fixed `BHCAA227`→`BHCAP865`. Expanded `MDRM_CROSSWALK_EXPANDED.csv` 677→**984** codes (added FFIEC 101/102, FR Y-15/Y-9LP/Y-11, FFIEC 009). Pages site: CSV catalogues rendered as searchable/sortable tables. |
 | **6.1** | 2026-06-09 | **Capital-code correction + crosswalk expansion + docs site.** Fixed the non-existent `BHCFA223/224/225` codes repo-wide → verified `BHCA8274` (Tier 1) / `BHCA5311` (Tier 2) / `BHCA3792` (Total). Resolved prefix scopes against the full Fed MDRM (BHCT/BHCM/BHCB verified; BHCAP/BHCFA shown to be non-mnemonics = `BHCA`+item). Added `MDRM_CROSSWALK_EXPANDED.csv` (677 MDRM-verified codes with cross-scope mapping). Resolved FFIEC 002/009 Schedule C Part II titles + CIK↔RSSD note. Added a MkDocs Material GitHub Pages site. |
 | **6.0** | 2026-06-09 | **Major expansion from FR Y-9C focus to the full U.S. bank-data universe.** Added: master Collections Catalogue (42 collections) + Schedules Catalogue (every subschedule); FFIEC NIC institutional-structure layer (entity/relationship/transformation schemas + 40 code lists, 274 codes); identifier crosswalk (RSSD/FDIC/OCC/NCUA/LEI/ABA/EIN/CIK); complete Call Report (031/041/051) guide; foreign/structure guide (FFIEC 002/009, FR Y-7/10/11/12/6/8); FDIC/NCUA/OCC/UBPR guide; MDRM meta-dictionary + namespace catalogue; coverage/provenance guide. **Fixed:** BHCK mislabel (it is consolidated, not domestic); FR Y-11 and FFIEC 009 schedule lists; cross-form line-item references. |

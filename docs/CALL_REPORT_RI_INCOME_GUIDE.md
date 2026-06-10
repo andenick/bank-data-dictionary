@@ -37,7 +37,7 @@ Schedule RI is the income statement for Call Reports filed by FDIC-insured banks
 | 1.g | Trading assets | RIADK129 | BHCKK130 | |
 | 1.h | Fed funds sold | RIAD4020 | BHCK4020 | + resale agreements |
 | 1.i | Other interest income | RIAD4518 | BHCK4518 | |
-| **1** | **Total interest income** | **RIAD4107** | **BHCT4107** | |
+| **1** | **Total interest income** | **RIAD4107** | **BHCK4107** | |
 
 ---
 
@@ -53,7 +53,7 @@ Schedule RI is the income statement for Call Reports filed by FDIC-insured banks
 | 2.c | Trading liabilities | RIAD4180 | BHCK4180 | |
 | 2.d | Other borrowed money | RIAD4185 | BHCK4185 | |
 | 2.e | Subordinated debt | RIAD4397 | BHCK4397 | |
-| **2** | **Total interest expense** | **RIAD4073** | **BHCT4073** | |
+| **2** | **Total interest expense** | **RIAD4073** | **BHCK4073** | |
 
 ---
 
@@ -61,7 +61,7 @@ Schedule RI is the income statement for Call Reports filed by FDIC-insured banks
 
 | Item | Description | MDRM | Y-9C Equiv | Formula |
 |------|-------------|------|------------|---------|
-| **3** | **Net interest income** | **RIAD4074** | **BHCT4074** | Item 1 - Item 2 |
+| **3** | **Net interest income** | **RIAD4074** | **BHCK4074** | Item 1 - Item 2 |
 | 4 | Provision for credit losses | RIAD4230 | BHCT4230 | CECL provision |
 | 5 | NII after provision | RIAD4079 | - | Item 3 - Item 4 |
 
@@ -71,7 +71,7 @@ Schedule RI is the income statement for Call Reports filed by FDIC-insured banks
 
 | Item | Description | MDRM | Y-9C Equiv | Notes |
 |------|-------------|------|------------|-------|
-| 5.a | Service charges on deposits | RIAD4080 | BHCK4080 | |
+| 5.a | Service charges on deposits | RIAD4080 | BHCK4483 | |
 | 5.b | Trading revenue | RIADA220 | BHCKA220 | |
 | 5.c | Investment banking fees | RIADC886 | BHCKC886 | Advisory, underwriting |
 | 5.d | Fiduciary income | RIAD4070 | BHCK4070 | Trust activities |
@@ -83,7 +83,7 @@ Schedule RI is the income statement for Call Reports filed by FDIC-insured banks
 | 5.j | Venture capital revenue | RIADB491 | BHCKB491 | |
 | 5.k | Bank-owned life insurance | RIAD4042 | BHCK4042 | BOLI income |
 | 5.l | Other noninterest income | RIADB497 | BHCKB497 | |
-| **5** | **Total noninterest income** | **RIAD4079** | **BHCT4079** | Sum of 5.a-5.l |
+| **5** | **Total noninterest income** | **RIAD4079** | **BHCK4079** | Sum of 5.a-5.l |
 
 ---
 
@@ -96,7 +96,7 @@ Schedule RI is the income statement for Call Reports filed by FDIC-insured banks
 | 7.c | Amortization of intangibles | RIADC232 | BHCKC232 | |
 | 7.d | Goodwill impairment | RIADH347 | BHCKH347 | |
 | 7.e | Other NIE | RIAD4092 | BHCK4092 | Catch-all |
-| **7** | **Total noninterest expense** | **RIAD4093** | **BHCT4093** | Sum of 7.a-7.g |
+| **7** | **Total noninterest expense** | **RIAD4093** | **BHCK4093** | Sum of 7.a-7.g |
 
 ---
 
@@ -104,8 +104,8 @@ Schedule RI is the income statement for Call Reports filed by FDIC-insured banks
 
 | Item | Description | MDRM | Y-9C Equiv | Formula |
 |------|-------------|------|------------|---------|
-| 8 | Income before taxes | RIAD4301 | BHCT4301 | Items 3-4+5-7 |
-| 9 | Applicable income taxes | RIAD4302 | BHCT4302 | |
+| 8 | Income before taxes | RIAD4301 | BHCK4301 | Items 3-4+5-7 |
+| 9 | Applicable income taxes | RIAD4302 | BHCK4302 | |
 | 10 | Income before extraordinary | RIAD4300 | BHCT4300 | Item 8 - Item 9 |
 | 11 | Extraordinary items | RIAD4320 | BHCT4320 | Discontinued ops |
 | 12 | Applicable taxes on ext items | RIAD4310 | BHCT4310 | |
@@ -164,11 +164,11 @@ Schedule RI is the income statement for Call Reports filed by FDIC-insured banks
 
 | Call Report | FR Y-9C | Notes |
 |-------------|---------|-------|
-| RIAD4107 | BHCT4107 | Total interest income |
-| RIAD4073 | BHCT4073 | Total interest expense |
-| RIAD4074 | BHCT4074 | Net interest income |
-| RIAD4079 | BHCT4079 | Total noninterest income |
-| RIAD4093 | BHCT4093 | Total noninterest expense |
+| RIAD4107 | BHCK4107 | Total interest income |
+| RIAD4073 | BHCK4073 | Total interest expense |
+| RIAD4074 | BHCK4074 | Net interest income |
+| RIAD4079 | BHCK4079 | Total noninterest income |
+| RIAD4093 | BHCK4093 | Total noninterest expense |
 | RIAD4340 | BHCT4340 | Net income |
 
 Generally: Replace RIAD with BHCT or BHCK for Y-9C equivalents.

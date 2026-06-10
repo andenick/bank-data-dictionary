@@ -1,8 +1,8 @@
 line_number,item_description,mdrm_code,call_mdrm,category,part,start_date,notes
 1,Common stock plus related surplus,BHCAP742,RCFAP742,CET1 Components,Part I,2014-03-31,Common equity starting point
-2,Retained earnings,BHCAP743,RCFAP743,CET1 Components,Part I,2014-03-31,
-3,AOCI (opt-out),BHCAP744,RCFAP744,CET1 Adjustments,Part I,2014-03-31,AOCI component if opted out
-4,AOCI included in CET1,BHCAP838,RCFAP838,CET1 Adjustments,Part I,2014-03-31,For advanced approaches banks
+2,Retained earnings,BHCAKW00,RCFAKW00,CET1 Components,Part I,2014-03-31,
+3,AOCI (opt-out),BHCAB530,RCFAB530,CET1 Adjustments,Part I,2014-03-31,AOCI component if opted out
+4,AOCI included in CET1,BHCAP838,RCOAP838,CET1 Adjustments,Part I,2014-03-31,For advanced approaches banks
 5,Common equity Tier 1 minority interest,BHCAP839,RCFAP839,CET1 Components,Part I,2014-03-31,Minority interest includable
 6,Total common equity Tier 1 capital before adjustments,BHCAP840,RCFAP840,CET1 Subtotal,Part I,2014-03-31,Sum of Items 1-5
 7,LESS: Goodwill,BHCAP841,RCFAP841,CET1 Deductions,Part I,2014-03-31,Net of associated DTL
@@ -28,12 +28,12 @@ line_number,item_description,mdrm_code,call_mdrm,category,part,start_date,notes
 27,Eligible allowance for credit losses,BHCA5311,RCFAA224,T2 Components,Part I,2014-03-31,Limited to 1.25% of RWA
 28,LESS: Tier 2 deductions,BHCKP856,RCFDP856,T2 Deductions,Part I,2014-03-31,
 29,Tier 2 capital,BHCA5311,RCFAA224,T2 Total,Part I,2014-03-31,Items 25-28
-30,Total capital,BHCA3792,RCFAA225,Total Capital,Part I,2014-03-31,Tier 1 + Tier 2
+30,Total capital,BHCA3792,RCFA3792,Total Capital,Part I,2014-03-31,Tier 1 + Tier 2
 31,Total risk-weighted assets,BHCAA223,RCFDA223,RWA Total,Part II,2014-03-31,Sum of Part II items
 32,CET1 capital ratio,BHCAP793,RCFAP793,Capital Ratios,Part I,2014-03-31,CET1 / RWA
-33,Tier 1 capital ratio,BHCAP794,RCFAP794,Capital Ratios,Part I,2014-03-31,Tier 1 / RWA
-34,Total capital ratio,BHCAP795,RCFAP795,Capital Ratios,Part I,2014-03-31,Total capital / RWA
-35,Leverage ratio,BHCAP796,RCFAP796,Capital Ratios,Part I,2014-03-31,Tier 1 / Average assets
+33,Tier 1 capital ratio,BHCA7206,RCFA7206,Capital Ratios,Part I,2014-03-31,Tier 1 / RWA
+34,Total capital ratio,BHCA7205,RCFA7205,Capital Ratios,Part I,2014-03-31,Total capital / RWA
+35,Leverage ratio,BHCA7204,RCFA7204,Capital Ratios,Part I,2014-03-31,Tier 1 / Average assets
 RWA1,Balance sheet assets (0% risk weight),BHCKA221,RCFDA221,RWA - 0%,Part II,2014-03-31,Cash; Treasuries
 RWA2,Balance sheet assets (20% risk weight),BHCKS396,RCFDS396,RWA - 20%,Part II,2014-03-31,GSE; munis; interbank
 RWA3,Balance sheet assets (50% risk weight),BHCKS397,RCFDS397,RWA - 50%,Part II,2014-03-31,Residential mortgages (prudent)
@@ -45,4 +45,4 @@ RWA8,Derivative exposures,BHCKS402,RCFDS402,RWA - Derivatives,Part II,2014-03-31
 RWA9,Off-balance sheet exposures,BHCKS403,RCFDS403,RWA - OBS,Part II,2014-03-31,CCF applied
 RWA10,Market risk RWA,BHCKA222,RCFDA222,RWA - Market Risk,Part II,2014-03-31,Trading book
 M1,Supplementary leverage ratio,BHCKA224,RCFDA224,Memorandum - SLR,Part I,2018-03-31,Advanced approaches only
-M2,Total leverage exposure,BHCKP793,RCFDP793,Memorandum - SLR Denom,Part I,2018-03-31,SLR denominator
+M2,Total leverage exposure,BHCALE88,RCFAH015,Memorandum - SLR Denom,Part I,2018-03-31,SLR denominator
