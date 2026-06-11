@@ -1,0 +1,12 @@
+line_number,item_description,mdrm_col_a_securitization,mdrm_col_b_other_vies,call_mdrm_col_a,category,ties_to_hc_line,start_date,notes
+1.a.,Consolidated VIE assets - Cash and balances due from depository institutions,BHCKJ981,BHCKJF84,RCFDJ981,VIE Assets,HC item 1,2011-03-31,Assets that can be used only to settle obligations of consolidated VIEs
+1.b.,Consolidated VIE assets - Securities not held for trading,BHCKHU20,BHCKHU21,RCFDHU20,VIE Assets,HC item 2,2018-06-30,-
+1.c.,"Consolidated VIE assets - Loans and leases held for investment, net of allowance, and held for sale",BHCKHU22,BHCKHU23,RCFDHU22,VIE Assets,HC item 4,2018-06-30,-
+1.d.,Consolidated VIE assets - Other real estate owned,BHCKK009,BHCKJF89,RCFDK009,VIE Assets,HC item 7,2011-03-31,-
+1.e.,Consolidated VIE assets - Other assets,BHCKJF91,BHCKJF90,RCFDJF91,VIE Assets,"HC items 6,8-11",2018-06-30,-
+2.a.,Consolidated VIE liabilities - Other borrowed money,BHCKJF92,BHCKJF85,RCFDJF92,VIE Liabilities,HC item 16,2018-06-30,Liabilities for which creditors do not have recourse to the general credit of the holding company
+2.b.,Consolidated VIE liabilities - Other liabilities,BHCKJF93,BHCKJF86,RCFDJF93,VIE Liabilities,HC item 20,2018-06-30,-
+3,All other assets of consolidated VIEs (not in items 1.a-1.e),BHCKK030,BHCKJF87,RCFDK030,VIE Assets,-,2011-03-31,Residual consolidated-VIE assets
+4,All other liabilities of consolidated VIEs (not in items 2.a-2.b),BHCKK033,BHCKJF88,RCFDK033,VIE Liabilities,-,2011-03-31,Residual consolidated-VIE liabilities
+5,Total assets of asset-backed commercial paper (ABCP) conduit VIEs,BHCKJF77,-,RCFDJF77,ABCP Conduit,-,2018-06-30,Single-column item; ABCP conduit total assets
+6,Total liabilities of ABCP conduit VIEs,BHCKJF78,-,RCFDJF78,ABCP Conduit,-,2018-06-30,Single-column item; ABCP conduit total liabilities

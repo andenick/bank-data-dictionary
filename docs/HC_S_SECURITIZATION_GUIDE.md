@@ -1,123 +1,147 @@
-# Schedule HC-S: Securitization and Asset Sale Activities Guide
+# Schedule HC-S: Servicing, Securitization, and Asset Sale Activities Guide
 
 **Form**: FR Y-9C (Consolidated Financial Statements for Holding Companies)
-**Schedule**: HC-S - Securitization and Asset Sale Activities
+**Schedule**: HC-S - Servicing, Securitization, and Asset Sale Activities
 **Frequency**: Quarterly
-**Purpose**: Disclose securitization activities as originator, investor, and servicer
+**Purpose**: Disclose securitization activities (own and others'), asset sales, and servicing
 
 ---
 
 ## Overview
 
-Schedule HC-S provides comprehensive disclosure of securitization activities across three roles:
-- **Part I**: Bank as Originator/Seller
-- **Part II**: Bank as Investor
-- **Part III**: Bank as Servicer
+The **current** FR Y-9C HC-S is organized as a **seven-column grid** (columns A-G by collateral
+type) for the main securitization items, followed by single/partial-column items for facilities
+sponsored by others, asset sales, and memoranda. Earlier versions of this guide described a
+pre-2009 "Originator / Investor / Servicer" layout (items 5-8 with codes B764-B775) that is **no
+longer on the form**; the current investor/servicer disclosures were dropped or moved, and the
+schedule is now collateral-type-segmented.
+
+### Column Definitions (A-G)
+
+| Column | Collateral type |
+|--------|-----------------|
+| A | 1-4 Family Residential Loans |
+| B | Home Equity Lines |
+| C | Credit Card Receivables |
+| D | Auto Loans |
+| E | Other Consumer Loans |
+| F | Commercial and Industrial Loans |
+| G | All Other Loans, All Leases, and All Other Assets |
 
 ---
 
-## Schedule Structure
+## Schedule Structure (current FR Y-9C)
 
 ```
-PART I: ORIGINATOR/SELLER ACTIVITIES
-├── Outstanding principal by asset type
-├── Credit exposure retained
-└── Asset quality of underlying
+SECURITIZATION ACTIVITIES (own structures) — columns A-G
+├── 1. Outstanding principal balance sold and securitized (servicing retained / recourse)
+├── 2. Maximum credit exposure from recourse/seller-provided enhancements (item 1)
+├── 3. Unused commitments to provide liquidity to item-1 structures   [$100B+ filers]
+├── 4. Past due amounts in item 1  (4.a 30-89 days, 4.b 90+ days)
+├── 5. Charge-offs (5.a) and recoveries (5.b) on item-1 assets (YTD)
+└── 6. Total ownership (seller's) interest carried as securities/loans (cols A-C)  [$10B+ filers]
 
-PART II: INVESTOR ACTIVITIES
-├── ABS holdings by underlying asset type
-└── Fair value of positions
+FACILITIES SPONSORED BY OTHERS — partial columns
+├── 9.  Max credit exposure from enhancements to OTHER institutions' structures (cols A-E)
+└── 10. Unused liquidity commitments to OTHER institutions' structures (cols A-E)  [$10B+ filers]
 
-PART III: SERVICER ACTIVITIES
-├── Mortgage servicing by property type
-└── Total servicing portfolio
+ASSET SALES (not securitized) — columns A-B
+├── 11. Assets sold with recourse/seller-provided enhancements, not securitized
+└── 12. Max credit exposure from enhancements to item-11 assets
+
+MEMORANDA (single column)
+├── M.2.a-d. Assets serviced for others (1-4 family w/ & w/o recourse, other, in-foreclosure)
+├── M.3.a-b. ABCP conduit credit exposure & liquidity commitments (sponsored by bank / by others)
+└── M.4.    Outstanding credit card fees and finance charges (in item 1, column G)
 ```
+
+> Items 7 and 8 are "Not applicable" on the current form.
 
 ---
 
-## Part I: Originator/Seller
+## Securitization Activities (items 1-6)
 
-### Outstanding Principal Balance Sold and Securitized
+### Item 1: Outstanding Principal Balance Sold and Securitized
 
-| Item | Asset Type | MDRM | Call MDRM |
-|------|------------|------|-----------|
-| 1.a | 1-4 family residential | BHCKB705 | RCFDB705 |
-| 1.b | HELOCs | BHCKB706 | RCFDB706 |
-| 1.c | Credit card receivables | BHCKB707 | RCFDB707 |
-| 1.d | Auto loans | BHCKB708 | RCFDB708 |
-| 1.e | Other consumer | BHCKB709 | RCFDB709 |
-| 1.f | C&I loans | BHCKB710 | RCFDB710 |
-| 1.g | All other | BHCKB711 | RCFDB711 |
+Servicing retained or with recourse / other seller-provided credit enhancements. Reported across
+columns A-G.
 
-**Nature**: Shows volume of loans originated and sold into securitizations where bank retained some ongoing involvement.
+| Column | A | B | C | D | E | F | G |
+|--------|---|---|---|---|---|---|---|
+| MDRM | B705 | B706 | B707 | B708 | B709 | B710 | B711 |
 
-### Maximum Credit Exposure
+### Item 2: Maximum Credit Exposure (item 1 structures)
+
+| Column | A | B | C | D | E | F | G |
+|--------|---|---|---|---|---|---|---|
+| MDRM | HU09 | HU10 | HU11 | HU12 | HU13 | HU14 | HU15 |
+
+> Current codes are **HU09-HU15** (effective 2018-06-30). The pre-2018 single code BHCKB712 is
+> superseded.
+
+### Item 3: Unused Liquidity Commitments (item 1 structures)
+
+Columns A-G = B726-B732. To be completed by holding companies with $100 billion or more in total assets.
+
+### Item 4: Past Due Amounts (included in item 1)
+
+| Sub-item | Columns A-G |
+|----------|-------------|
+| 4.a (30-89 days) | B733-B739 |
+| 4.b (90+ days) | B740-B746 |
+
+### Item 5: Charge-offs and Recoveries (YTD, item 1 assets)
+
+| Sub-item | Columns A-G |
+|----------|-------------|
+| 5.a (charge-offs) | B747-B753 |
+| 5.b (recoveries) | B754-B760 |
+
+### Item 6: Total Ownership (Seller's) Interest
+
+Carried as securities or loans; columns A-C only = HU16, HU17, HU18 (effective 2018-06-30,
+$10B+ filers).
+
+---
+
+## Facilities Sponsored by Others (items 9-10)
+
+### Item 9: Maximum Credit Exposure to Others' Structures
+
+Standby letters of credit, purchased subordinated securities, and other enhancements; columns
+A-E = B776, B779, B780, B781, B782.
+
+### Item 10: Unused Liquidity Commitments to Others' Structures
+
+Columns A-E = B783, B786, B787, B788, B789 ($10B+ filers).
+
+---
+
+## Asset Sales (items 11-12)
+
+| Item | Description | Col A | Col B |
+|------|-------------|-------|-------|
+| 11 | Assets sold with recourse/seller-provided enhancements, NOT securitized | B790 | B796 |
+| 12 | Maximum credit exposure for item-11 assets | B797 | B803 |
+
+---
+
+## Memoranda
 
 | Item | MDRM | Description |
 |------|------|-------------|
-| 2 | BHCKB712 | Maximum exposure from recourse or credit enhancement |
+| M.2.a | BHCKB804 | 1-4 family resi mortgages serviced WITH recourse/servicer enhancements |
+| M.2.b | BHCKB805 | 1-4 family resi mortgages serviced with NO recourse/servicer enhancements |
+| M.2.c | BHCKA591 | Other financial assets serviced for others |
+| M.2.d | BHCKF699 | 1-4 family resi mortgages serviced for others in foreclosure at quarter-end |
+| M.3.a.(1) | BHCKB806 | ABCP credit exposure - conduits sponsored by bank/affiliate/holding company |
+| M.3.a.(2) | BHCKB807 | ABCP credit exposure - conduits sponsored by other unrelated institutions |
+| M.3.b.(1) | BHCKB808 | ABCP unused liquidity - conduits sponsored by bank/affiliate/holding company |
+| M.3.b.(2) | BHCKB809 | ABCP unused liquidity - conduits sponsored by other unrelated institutions |
+| M.4 | BHCKC407 | Outstanding credit card fees and finance charges (in item 1, column G) |
 
-**Includes**:
-- Retained subordinate tranches
-- Credit enhancement provided
-- Representations and warranties exposure
-
-### Asset Quality of Underlying
-
-| Item | Category | MDRM |
-|------|----------|------|
-| 3.a | Past due 30-89 days (1-4 family) | BHCKB761 |
-| 3.b | Past due 90+ days (1-4 family) | BHCKB762 |
-| 4 | Charge-offs YTD | BHCKB763 |
-
----
-
-## Part II: Investor
-
-### ABS Holdings by Underlying Asset Type
-
-| Item | Asset Type | MDRM | Call MDRM |
-|------|------------|------|-----------|
-| 5.a | 1-4 family residential | BHCKB764 | RCFDB764 |
-| 5.b | HELOCs | BHCKB765 | RCFDB765 |
-| 5.c | Credit card | BHCKB766 | RCFDB766 |
-| 5.d | Auto | BHCKB767 | RCFDB767 |
-| 5.e | Other consumer | BHCKB768 | RCFDB768 |
-| 5.f | C&I | BHCKB769 | RCFDB769 |
-| 5.g | Other | BHCKB770 | RIADB770 |
-| 6 | **Total ABS held** | BHCKB771 | RIADB771 |
-
-**Reconciliation**: Item 6 should tie to HC-B ABS holdings (Item 5)
-
----
-
-## Part III: Servicer
-
-### Mortgages Serviced for Others
-
-| Item | Property Type | MDRM | Call MDRM |
-|------|---------------|------|-----------|
-| 7.a | 1-4 family residential | BHCKB772 | RIADB772 |
-| 7.b | Other residential | BHCKB773 | RIADB773 |
-| 7.c | Commercial | BHCKB774 | RIADB774 |
-| 8 | **Total mortgage servicing** | BHCKB775 | RIADB775 |
-
-**Nature**: Unpaid principal balance (UPB) of mortgages serviced for third parties.
-
-### Relationship to MSAs
-
-Mortgage Servicing Assets (MSAs) in HC-F Item 10.b are derived from servicing rights on these portfolios.
-
----
-
-## Memoranda Items
-
-### ABCP Conduit Support
-
-| Item | MDRM | Description |
-|------|------|-------------|
-| M1 | BHCKB806 | Credit enhancements to ABCP conduits |
-| M2 | BHCKB807 | Liquidity facilities to ABCP conduits |
+> Note: prior guide listed M1=B806 / M2=B807; on the current form these are **M.3.a.(1)** and
+> **M.3.a.(2)**, and B808/B809 (liquidity) and the M.2 servicing block are added.
 
 ---
 
@@ -126,104 +150,58 @@ Mortgage Servicing Assets (MSAs) in HC-F Item 10.b are derived from servicing ri
 ### Securitization Activity Level
 
 ```
-Total Origination Activity = Sum(Items 1.a - 1.g)
-
-High volume indicates:
-- Active mortgage banking
-- Consumer finance focus
-- Capital-efficient business model
+Total securitized (item 1) = Sum across columns A-G of BHCKB705..B711
 ```
 
 ### Retained Exposure Analysis
 
 ```
-Retained Risk Ratio = Item 2 / Total Securitized
-
-Higher ratio = more "skin in the game"
-Risk retention rules require minimum retention
+Retained Risk Ratio = Item 2 (max credit exposure) / Item 1 (outstanding securitized)
+Higher ratio = more "skin in the game"; Dodd-Frank requires >=5% retention.
 ```
 
-### Servicing Portfolio Analysis
+### Asset Quality of Securitized Pools
 
 ```
-Servicing Multiple = UPB Serviced / MSA Book Value
-
-Higher multiple = higher servicing fees per dollar of MSA
-Lower multiple = potential MSA impairment risk
+Delinquency = (Item 4.a + Item 4.b) / Item 1   (by collateral column)
+Net loss     = Item 5.a (charge-offs) - Item 5.b (recoveries)
 ```
-
-### Investor Position Quality
-
-```
-Watch for concentrations in:
-- Non-agency RMBS (1-4 family, HELOC)
-- CLO tranches (C&I)
-- Vintage exposure
-```
-
----
-
-## Regulatory Considerations
-
-### Risk Retention Rule (Dodd-Frank)
-
-- Originators must retain ≥5% credit risk
-- Qualified mortgages exempt
-- Various retention options (horizontal, vertical, L-shaped)
-
-### Capital Treatment
-
-Securitization exposures receive capital treatment per:
-- Standardized approach (SFA)
-- Supervisory formula approach (for advanced banks)
-- Simplified supervisory formula approach (SSFA)
-
-### Consolidation Rules
-
-FAS 167 / ASC 810 determine whether securitization vehicles are consolidated:
-- Variable Interest Entity (VIE) analysis
-- Primary beneficiary determination
 
 ---
 
 ## Cross-Schedule Reconciliation
 
-### HC-B Connection
+### Off-Balance Sheet (HC-L)
 
 ```
-HC-S Item 6 (Total ABS held) ≈ HC-B Item 5 (ABS securities)
+Liquidity and credit-enhancement commitments to unconsolidated securitization vehicles also
+surface in HC-L off-balance-sheet items.
 ```
 
-### HC-F Connection
+### Variable Interest Entities (HC-V)
 
 ```
-Servicing rights from HC-S Part III → MSA in HC-F Item 10.b
-```
-
-### Off-Balance Sheet
-
-```
-Unconsolidated securitization vehicles appear in HC-L:
-- Liquidity commitments
-- Credit enhancements
+Consolidated securitization vehicles (VIEs) are reported on Schedule HC-V.
 ```
 
 ---
 
 ## MDRM Quick Reference
 
-| Category | Item | MDRM |
-|----------|------|------|
-| Originated - 1-4 Family | 1.a | BHCKB705 |
-| Originated - Credit Card | 1.c | BHCKB707 |
-| Originated - C&I | 1.f | BHCKB710 |
-| Max Credit Exposure | 2 | BHCKB712 |
-| Held - Total ABS | 6 | BHCKB771 |
-| Serviced - 1-4 Family | 7.a | BHCKB772 |
-| Serviced - Total | 8 | BHCKB775 |
-| ABCP Credit Enhancement | M1 | BHCKB806 |
+| Category | Item | MDRM (col A) |
+|----------|------|--------------|
+| Securitized - outstanding | 1 | BHCKB705 |
+| Max credit exposure (own) | 2 | BHCKHU09 |
+| Liquidity commitments (own) | 3 | BHCKB726 |
+| Ownership interest | 6 | BHCKHU16 |
+| Max credit exposure (others) | 9 | BHCKB776 |
+| Liquidity commitments (others) | 10 | BHCKB783 |
+| Assets sold not securitized | 11 | BHCKB790 |
+| Servicing (with recourse) | M.2.a | BHCKB804 |
+| ABCP conduit credit exposure | M.3.a.(1) | BHCKB806 |
+| Credit card fees | M.4 | BHCKC407 |
 
 ---
 
-*Last Updated: 2026-01-28*
-*Reference: FR Y-9C Instructions (March 2024)*
+*Last Updated: 2026-06-11 (v8 conceptual-accuracy sweep)*
+*Reference: FR Y-9C field spec (202603), MDRM, and FreeNIC warehouse*

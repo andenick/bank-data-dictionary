@@ -1,49 +1,70 @@
 line_number,item_description,mdrm_domestic,mdrm_foreign,mdrm_total,category,ties_to_hc_line,risk_weight,start_date,notes
-1,Loans secured by real estate,BHCK1410,-,BHCK1410,Real Estate Loans,HC Item 4.b,Various,1976-03-31,Sum of Items 1.a through 1.f; no MDRM foreign code (no BHFN real-estate-loan split on FR Y-9C HC-C)
-1.a,Construction and land development,BHCK1415,-,BHCK1415,RE - Construction,HC Item 4.b,100-150%,1976-03-31,Sum of 1.a.(1) and 1.a.(2); no MDRM foreign code (no BHFN construction-loan split)
-1.a.(1),1-4 family residential construction,BHCKF158,-,BHCKF158,RE - Construction 1-4,HC Item 4.b,50-100%,2007-03-31,ADC loans 1-4 family
-1.a.(2),Other construction and land development,BHCKF159,-,BHCKF159,RE - Construction Other,HC Item 4.b,100-150%,2007-03-31,Commercial ADC loans
-1.b,Secured by farmland,BHCK1420,BHCK1421,BHCK1420,RE - Farmland,HC Item 4.b,100%,1976-03-31,Agricultural real estate
-1.c,Secured by 1-4 family residential - revolving (HELOCs),BHCK1797,-,BHCK1797,RE - HELOC,HC Item 4.b,50-100%,1991-03-31,Open-end home equity
-1.d,Secured by 1-4 family residential - closed end,BHCK5367,BHCK5368,-,RE - 1-4 Family,HC Item 4.b,35-100%,1991-03-31,Sum of 1.d.(1) and 1.d.(2); no consolidated MDRM code; closed-end 1-4 family subtotal = BHCK5367 first-liens + BHCK5368 junior-liens
-1.d.(1),First liens,BHCKC236,BHCKC237,BHCK5367,RE - 1-4 First Lien,HC Item 4.b,35-50%,2007-03-31,First mortgage 1-4 family
-1.d.(2),Junior liens,BHCKC238,BHCKC239,BHCK5368,RE - 1-4 Junior Lien,HC Item 4.b,100%,2007-03-31,Second mortgage 1-4 family
-1.e,Secured by multifamily (5+ units),BHCK1460,-,BHCK1460,RE - Multifamily,HC Item 4.b,50-100%,1976-03-31,Apartment buildings; no MDRM foreign code (no BHFN multifamily split)
-1.e.(1),Multifamily with gov't guarantees,-,-,BHCKKX57,RE - Multifamily Guaranteed,HC Item 4.b,20%,2022-03-31,FHA/HUD insured
-1.e.(2),Multifamily other,-,-,BHCKKX58,RE - Multifamily Other,HC Item 4.b,50-100%,2022-03-31,Non-guaranteed
-1.f,Secured by nonfarm nonresidential,BHCK1480,-,BHCK1480,RE - CRE,HC Item 4.b,100%,1976-03-31,Sum of 1.f.(1) and 1.f.(2); no MDRM foreign code (no BHFN nonfarm-nonresidential split)
-1.f.(1),Owner-occupied,BHCKF160,BHCKF161,BHCKF160,RE - CRE Owner-Occ,HC Item 4.b,100%,2007-03-31,Business premises
-1.f.(2),Other (non-owner occupied),BHCKF162,BHCKF163,BHCKF161,RE - CRE Non-Owner,HC Item 4.b,100%,2007-03-31,Investment CRE
-2,Loans to depository institutions and acceptances,BHCK1288,-,BHCK1288,Interbank,HC Item 4.b,20-100%,1976-03-31,Fed funds type exposure
-2.a,To US banks and thrifts,BHCK1292,-,BHCK1292,Interbank - Domestic,HC Item 4.b,20%,1984-03-31,
-2.b,To foreign banks,BHCK1296,-,BHCK1296,Interbank - Foreign,HC Item 4.b,20-150%,1984-03-31,Based on country rating
-2.c,Acceptances of other banks,BHCK1755,-,BHCK1755,Interbank - BA,HC Item 4.b,20%,1984-03-31,Bankers acceptances
-3,Loans to finance agricultural production,BHCK1590,-,BHCK1590,Agricultural,HC Item 4.b,100%,1976-03-31,Farm operating loans
-4,Commercial and industrial loans,BHCK1763,BHCK1763,BHCK1766,C&I Loans,HC Item 4.b,100%,1976-03-31,Business loans non-RE
-4.a,C&I loans to US addressees,BHCK1763,-,BHCK1763,C&I - Domestic,HC Item 4.b,100%,1984-03-31,
-4.b,C&I loans to non-US addressees,-,BHCK1763,BHCK1763,C&I - Foreign,HC Item 4.b,100%,1984-03-31,
-5,Loans to individuals for household/family/personal,BHCK1975,-,BHCK1975,Consumer,HC Item 4.b,75-100%,1976-03-31,Sum of Items 5.a through 5.c
-5.a,Credit cards,BHCKB538,-,BHCKB538,Consumer - Credit Card,HC Item 4.b,100%,1984-03-31,Revolving credit card
-5.a.(1),Credit cards - Consumer,BHDMB561,-,BHDMB561,Consumer - CC Consumer,HC Item 4.b,100%,2010-03-31,
-5.a.(2),Credit cards - Commercial/Corporate,BHCKK137,-,BHCKK137,Consumer - CC Corporate,HC Item 4.b,100%,2010-03-31,Business credit cards
-5.b,Other revolving credit plans,BHCKB539,-,BHCKB539,Consumer - Other Revolving,HC Item 4.b,100%,1984-03-31,Non-card revolving
-5.c,Automobile loans,BHCKK137,-,BHCKK137,Consumer - Auto,HC Item 4.b,75%,2010-03-31,
-5.c.(1),Auto - New vehicles,BHCKK138,-,BHCKK138,Consumer - Auto New,HC Item 4.b,75%,2015-03-31,
-5.c.(2),Auto - Used vehicles,BHCKK139,-,BHCKK139,Consumer - Auto Used,HC Item 4.b,75%,2015-03-31,
-5.d,Other consumer loans,BHCKK207,-,BHCKK207,Consumer - Other,HC Item 4.b,100%,1984-03-31,Personal loans; student
-6,Loans to foreign governments and official institutions,-,BHCK1296,BHCK1296,Sovereign,HC Item 4.b,0-150%,1976-03-31,Country risk weighted
-7,Obligations of states and political subdivisions,BHCK1709,BHCK1710,-,Municipal,HC Item 4.b,20%,1976-03-31,Direct loans to munis; no consolidated MDRM code; states/pol-subdiv loans reported only as Call RCON2107
-8,Other loans,BHCK1563,BHCK1564,BHCK1563,Other Loans,HC Item 4.b,100%,1976-03-31,Sum of Items 8.a and 8.b
-8.a,Loans for purchasing or carrying securities,BHCK1545,-,BHCK1545,Margin Loans,HC Item 4.b,100%,1976-03-31,Margin and securities loans
-8.b,All other loans,BHCK1564,-,BHCK1564,Other - Misc,HC Item 4.b,100%,1976-03-31,Residual category
-9,Lease financing receivables,BHCK2165,-,BHCK2165,Leases,HC Item 4.b,100%,1976-03-31,Direct financing and leveraged; consolidated lease code BHCK2165 (no FR Y-9C domestic/foreign HC-C split; prior BHCKB541 was a recourse/direct-credit-substitute code - wrong concept); domestic-addressee detail BHCK2182 discontinued 2006
-9.a,Leases to individuals,BHCKF164,-,BHCKF164,Leases - Consumer,HC Item 4.b,100%,2007-03-31,Auto leases; equipment
-9.b,All other leases,BHCKF165,BHCKF166,BHCKF163,Leases - Other,HC Item 4.b,100%,2007-03-31,Commercial leases
-10,LESS: Unearned income on loans,BHCK2123,-,BHCK2123,Contra - Unearned,HC Item 4.b,-,1976-03-31,Reduces gross loans
-11,LESS: Allowance for loan and lease losses,BHCT3123,-,BHCT3123,Contra - ALLL,HC Item 4.c,-,1976-03-31,Equals HC Item 4.c
-12,"Total loans and leases, net",BHCKB529,-,BHCKB529,Net Loans,HC Item 4.d,-,1976-03-31,Items 1-9 minus 10 minus 11
-M1,Restructured loans and leases in compliance,BHCK1616,-,BHCK1616,Memorandum - TDR,HC-N,-,1993-03-31,Troubled debt restructurings
-M2.a,Loans secured by real estate to non-US addressees,BHCKC884,-,BHCKC884,Memorandum - Foreign RE,HC-N,-,2001-03-31,
-M3,Maturity/repricing - 3 months or less,BHCKB556,-,BHCKB556,Memorandum - Repricing,HC-H,-,1997-03-31,
-M4,Loans covered by FDIC loss-sharing,BHCKJ452,-,BHCKJ452,Memorandum - FDIC LSA,HC-N,-,2010-03-31,Failed bank acquisitions
-M5,Loans to Small Business (< $1MM original),-,-,-,Memorandum - Small Bus,CRA,-,2021-03-31,CRA reportable; no consolidated MDRM code; CRA small-business item reported only as Call RCONJ464
+1,Loans secured by real estate,-,-,BHCK1410,Real Estate Loans,HC Item 4.b,Various,1981-06-30,Total RE loans (Col A consolidated). Sum of 1.a through 1.e. No domestic-only or foreign-office code at the item-1 total level.
+1.a.(1),1-4 family residential construction loans,-,-,BHCKF158,RE - Construction 1-4,HC Item 4.b,50-100%,2007-03-31,"ADC loans, 1-4 family (Col A consolidated)."
+1.a.(2),Other construction loans and all land development and other land loans,-,-,BHCKF159,RE - Construction Other,HC Item 4.b,100-150%,2007-03-31,Commercial ADC / land loans (Col A consolidated). May include HVCRE at 150%.
+1.b,Secured by farmland,BHDM1420,-,-,RE - Farmland,HC Item 4.b,100%,1990-09-30,In domestic offices (Col B). Agricultural real estate.
+1.c.(1),"Revolving, open-end loans secured by 1-4 family residential properties (HELOCs)",BHDM1797,-,-,RE - HELOC,HC Item 4.b,50-100%,1990-09-30,In domestic offices (Col B). Open-end home equity lines of credit.
+1.c.(2)(a),"1-4 family residential, closed-end, secured by first liens",BHDM5367,-,-,RE - 1-4 First Lien,HC Item 4.b,35-50%,1991-03-31,In domestic offices (Col B). First-lien closed-end 1-4 family.
+1.c.(2)(b),"1-4 family residential, closed-end, secured by junior liens",BHDM5368,-,-,RE - 1-4 Junior Lien,HC Item 4.b,100%,1991-03-31,In domestic offices (Col B). Junior-lien closed-end 1-4 family.
+1.d,Secured by multifamily (5 or more) residential properties,BHDM1460,-,-,RE - Multifamily,HC Item 4.b,50-100%,1990-09-30,In domestic offices (Col B). Apartment buildings (5+ units).
+1.e.(1),Loans secured by owner-occupied nonfarm nonresidential properties,-,-,BHCKF160,RE - CRE Owner-Occ,HC Item 4.b,100%,2007-03-31,Col A consolidated. Repayment from business operations.
+1.e.(2),Loans secured by other nonfarm nonresidential properties,-,-,BHCKF161,RE - CRE Non-Owner,HC Item 4.b,100%,2007-03-31,Col A consolidated. Investment/non-owner-occupied CRE.
+2,Loans to depository institutions and acceptances of other banks,BHDM1288,-,-,Interbank,HC Item 4.b,20-100%,1996-03-31,In domestic offices (Col B) at the item-2 total. Sub-items 2.a/2.b reported Col A consolidated.
+2.a,To U.S. banks and other U.S. depository institutions,-,-,BHCK1292,Interbank - Domestic,HC Item 4.b,20%,1996-03-31,Col A consolidated.
+2.b,To foreign banks,-,-,BHCK1296,Interbank - Foreign,HC Item 4.b,20-150%,1996-03-31,Col A consolidated. Risk weight by country.
+3,Loans to finance agricultural production and other loans to farmers,BHDM1590,-,BHCK1590,Agricultural,HC Item 4.b,100%,1986-06-30,Reported both Col A consolidated (BHCK1590) and Col B in-domestic-offices (BHDM1590). Farm operating loans.
+4,Commercial and industrial loans,BHDM1766,-,-,C&I Loans,HC Item 4.b,100%,1981-06-30,In domestic offices (Col B) at the item-4 total. Consolidated C&I split into 4.a/4.b/4.c below.
+4.a,To U.S. addressees (domicile),-,-,BHCK1763,C&I - Domestic,HC Item 4.b,100%,1981-06-30,Col A consolidated. C&I to U.S.-domiciled obligors.
+4.b,To non-U.S. addressees (domicile),-,-,BHCK1764,C&I - Foreign,HC Item 4.b,100%,1986-06-30,Col A consolidated. C&I to non-U.S.-domiciled obligors. (Repo previously mis-mapped this to BHCK1763.)
+4.c,To U.S. addressees and non-U.S. addressees (domicile),-,-,BHCKKX56,C&I - Combined,HC Item 4.b,100%,2019-12-31,Col A consolidated combined C&I (single-column reporters).
+6,"Loans to individuals for household, family, and other personal expenditures (consumer loans)",BHDM1975,-,-,Consumer,HC Item 4.b,75-100%,1981-06-30,In domestic offices (Col B) at the item-6 total. Consolidated detail in 6.a-6.d. (Was item 5 in the older repo structure.)
+6.a,Credit cards,-,-,BHCKB538,Consumer - Credit Card,HC Item 4.b,100%,2001-03-31,Col A consolidated. Revolving credit card receivables.
+6.b,Other revolving credit plans,-,-,BHCKB539,Consumer - Other Revolving,HC Item 4.b,100%,2001-03-31,Col A consolidated. Non-card revolving consumer credit.
+6.c,Automobile loans,-,-,BHCKK137,Consumer - Auto,HC Item 4.b,75%,2011-03-31,Col A consolidated. Preferential 75% risk weight.
+6.d,"Other consumer loans (single payment, installment, all student loans)",-,-,BHCKK207,Consumer - Other,HC Item 4.b,100%,2011-03-31,Col A consolidated. Personal/installment/student loans.
+7,Loans to foreign governments and official institutions (including foreign central banks),BHDM2081,-,BHCK2081,Sovereign,HC Item 4.b,0-150%,1981-06-30,Reported Col A consolidated (BHCK2081) and Col B in-domestic-offices (BHDM2081). (Repo previously had item 6 with wrong code BHCK1296.)
+9.a,Loans to nondepository financial institutions,BHDMJ454,-,BHCKJ454,Nondepository Fin,HC Item 4.b,100%,2010-03-31,Reported Col A consolidated (BHCKJ454) and Col B in-domestic-offices (BHDMJ454).
+9.b.(1),Loans for purchasing or carrying securities (including margin loans),BHDM1545,-,BHCK1545,Other - Margin/Securities,HC Item 4.b,100%,2006-03-31,Reported Col A consolidated (BHCK1545) and Col B in-domestic-offices (BHDM1545).
+9.b.(2),All other loans (exclude consumer loans),BHDMJ451,-,BHCKJ451,Other - Misc,HC Item 4.b,100%,2010-03-31,Reported Col A consolidated (BHCKJ451) and Col B in-domestic-offices (BHDMJ451). Residual loan category.
+9.b.(3),Loans for purchasing/carrying securities and all other loans (combined),BHDMKX57,-,BHCKKX57,Other - Combined,HC Item 4.b,100%,2019-12-31,Combined 9.b line for single-column reporters. Col A (BHCKKX57) and Col B (BHDMKX57).
+10,Lease financing receivables (net of unearned income),BHDM2165,-,-,Leases,HC Item 4.b,100%,1981-06-30,In domestic offices (Col B) at the item-10 total. Consolidated lease detail in 10.a-10.c.
+10.a,"Leases to individuals for household, family, and other personal expenditures (consumer leases)",-,-,BHCKF162,Leases - Consumer,HC Item 4.b,100%,2007-03-31,Col A consolidated. Auto/equipment consumer leases. (Repo previously used F164.)
+10.b,All other leases,-,-,BHCKF163,Leases - Other,HC Item 4.b,100%,2007-03-31,Col A consolidated. Commercial/equipment leases. (Repo previously used F165.)
+10.c,Lease finance receivables (combined),-,-,BHCKKX58,Leases - Combined,HC Item 4.b,100%,2019-12-31,Combined lease line for single-column reporters (Col A).
+11,LESS: Any unearned income on loans reflected in items 1-9 above,BHDM2123,-,BHCK2123,Contra - Unearned,HC Item 4.b,-,1981-06-30,"LESS line. Col A consolidated (BHCK2123) and Col B in-domestic-offices (BHDM2123). Current form item 11 is UNEARNED INCOME, not the allowance; the allowance lives on Schedule HC item 4.c."
+12,Total loans and leases held for investment and held for sale (items 1-10 minus item 11),BHDM2122,-,BHCK2122,Total Loans & Leases,HC Item 4.a/4.b,-,1981-06-30,"Total loans and leases, net of unearned income. Col A (BHCK2122) must equal HC items 4.a + 4.b. (Repo previously used BHCKB529 = HC 4.d net-of-allowance, a different concept.)"
+M.1.a.(1),Loan mods to borrowers in financial difficulty: 1-4 family residential construction loans,BHDMK158,-,-,Memo - Loan Mods,HC-N,-,2011-03-31,In domestic offices (Col B). Loan modifications (formerly TDR) detail.
+M.1.a.(2),Loan mods: all other construction loans and all land development and other land loans,BHDMK159,-,-,Memo - Loan Mods,HC-N,-,2011-03-31,In domestic offices (Col B).
+M.1.b,Loan mods: loans secured by 1-4 family residential properties in domestic offices,BHDMF576,-,-,Memo - Loan Mods,HC-N,-,2008-03-31,In domestic offices (Col B).
+M.1.c,Loan mods: secured by multifamily (5 or more) residential properties in domestic offices,BHDMK160,-,-,Memo - Loan Mods,HC-N,-,2011-03-31,In domestic offices (Col B).
+M.1.d.(1),Loan mods: loans secured by owner-occupied nonfarm nonresidential properties,BHDMK161,-,-,Memo - Loan Mods,HC-N,-,2011-03-31,In domestic offices (Col B).
+M.1.d.(2),Loan mods: loans secured by other nonfarm nonresidential properties,BHDMK162,-,-,Memo - Loan Mods,HC-N,-,2011-03-31,In domestic offices (Col B).
+M.1.e.(1),Loan mods (C&I): to U.S. addressees (domicile),-,-,BHCKK163,Memo - Loan Mods,HC-N,-,2011-03-31,Col A consolidated.
+M.1.e.(2),Loan mods (C&I): to non-U.S. addressees (domicile),-,-,BHCKK164,Memo - Loan Mods,HC-N,-,2011-03-31,Col A consolidated.
+M.1.e.(3),"Loan mods (C&I): to U.S. and non-U.S. addressees (domicile), combined",-,-,BHCKKX59,Memo - Loan Mods,HC-N,-,2019-12-31,Col A consolidated combined (single-column reporters).
+M.1.f,Loan mods: all other loans (include loans to individuals for household/family/personal),-,-,BHCKK165,Memo - Loan Mods,HC-N,-,2011-03-31,Col A consolidated.
+M.1.f.(1),Loan mods: loans secured by farmland in domestic offices,BHDMK166,-,-,Memo - Loan Mods,HC-N,-,2011-03-31,In domestic offices (Col B).
+M.1.f.(2),Loan mods: loans to finance agricultural production and other loans to farmers,-,-,BHCKK168,Memo - Loan Mods,HC-N,-,2011-03-31,Col A consolidated.
+M.1.f.(3)(a),Loan mods (consumer): credit cards,-,-,BHCKK098,Memo - Loan Mods,HC-N,-,2011-03-31,Col A consolidated.
+M.1.f.(3)(b),Loan mods (consumer): automobile loans,-,-,BHCKK203,Memo - Loan Mods,HC-N,-,2011-03-31,Col A consolidated.
+M.1.f.(3)(c),"Loan mods (consumer): other consumer loans (single payment, installment, student, other revolving)",-,-,BHCKK204,Memo - Loan Mods,HC-N,-,2011-03-31,Col A consolidated.
+M.1.g,Total loan modifications to borrowers in financial difficulty in compliance with modified terms,-,-,BHCKHK25,Memo - Loan Mods,HC-N,-,2018-03-31,Col A consolidated. Sum of M.1.a.(1) through M.1.f.
+M.2,"Loans to finance commercial real estate, construction, and land development activities not secured by real estate (incl. in items 4 and 9, Col A)",-,-,BHCK2746,Memo - CRE not RE-secured,HC-C,-,1990-09-30,Col A consolidated. Memo carve-out of items 4 and 9.
+M.3,"Loans secured by real estate to non-U.S. addressees (domicile) (incl. in item 1, Col A)",-,-,BHCKB837,Memo - Foreign RE,HC-C,-,2001-03-31,Col A consolidated. Carve-out of item 1.
+M.4,"Outstanding credit card fees and finance charges (incl. in item 6.a, Col A)",-,-,BHCKC391,Memo - CC Fees,HC-C,-,2003-03-31,Col A consolidated. Carve-out of item 6.a.
+M.6.a,Total carrying amount of closed-end loans with negative amortization features secured by 1-4 family residential (incl. in items 1.c.(2)(a) and (b)),-,-,BHCKF230,Memo - Neg Am,HC-C,-,2007-03-31,Col A consolidated.
+M.6.b,Total maximum remaining amount of negative amortization contractually permitted on closed-end loans secured by 1-4 family residential,-,-,BHCKF231,Memo - Neg Am,HC-C,-,2007-03-31,Col A consolidated.
+M.6.c,Total amount of negative amortization on closed-end loans secured by 1-4 family residential (incl. in carrying amount in M.6.a),-,-,BHCKF232,Memo - Neg Am,HC-C,-,2007-03-31,Col A consolidated.
+M.9,"Loans secured by 1-4 family residential properties in domestic offices in process of foreclosure (incl. in items 1.c.(1), 1.c.(2)(a), 1.c.(2)(b))",BHDMF577,-,-,Memo - Foreclosure,HC-C,-,2008-03-31,In domestic offices (Col B).
+M.10.a,Loans to nondepository financial institutions: loans to mortgage credit intermediaries,BHDMPV05,-,BHCKPV05,Memo - NDFI Detail,HC-C,-,2026-03-31,New in March 2026. Col A (BHCKPV05) and Col B in-domestic-offices (BHDMPV05). Detail of item 9.a.
+M.10.b,Loans to nondepository financial institutions: loans to business credit intermediaries,BHDMPV06,-,BHCKPV06,Memo - NDFI Detail,HC-C,-,2026-03-31,New in March 2026. Col A (BHCKPV06) and Col B (BHDMPV06).
+M.10.c,Loans to nondepository financial institutions: loans to private equity funds,BHDMPV07,-,BHCKPV07,Memo - NDFI Detail,HC-C,-,2026-03-31,New in March 2026. Col A (BHCKPV07) and Col B (BHDMPV07).
+M.10.d,Loans to nondepository financial institutions: loans to consumer credit intermediaries,BHDMPV08,-,BHCKPV08,Memo - NDFI Detail,HC-C,-,2026-03-31,New in March 2026. Col A (BHCKPV08) and Col B (BHDMPV08).
+M.10.e,Loans to nondepository financial institutions: other loans to nondepository financial institutions,BHDMPV09,-,BHCKPV09,Memo - NDFI Detail,HC-C,-,2026-03-31,New in March 2026. Col A (BHCKPV09) and Col B (BHDMPV09).
+M.12.a,Purchased credit-deteriorated loans/leases acquired in business combinations: loans secured by real estate,-,-,BHCKG091,Memo - PCD Acquired,HC-C,-,2009-03-31,"Col A consolidated. Reported across three measures: fair value at acquisition (BHCKG091), gross contractual amounts receivable (BHCKG092), best estimate of contractual cash flows not expected to collect (BHCKG093)."
+M.12.b,Purchased credit-deteriorated loans/leases: commercial and industrial loans,-,-,BHCKG094,Memo - PCD Acquired,HC-C,-,2009-03-31,"Col A consolidated. Three measures: fair value (BHCKG094), gross contractual receivable (BHCKG095), uncollectible estimate (BHCKG096)."
+M.12.c,"Purchased credit-deteriorated loans/leases: loans to individuals for household, family, and other personal expenditures",-,-,BHCKG097,Memo - PCD Acquired,HC-C,-,2009-03-31,"Col A consolidated. Three measures: fair value (BHCKG097), gross contractual receivable (BHCKG098), uncollectible estimate (BHCKG099)."
+M.12.d,Purchased credit-deteriorated loans/leases: all other loans and all leases,-,-,BHCKG100,Memo - PCD Acquired,HC-C,-,2009-03-31,"Col A consolidated. Three measures: fair value (BHCKG100), gross contractual receivable (BHCKG101), uncollectible estimate (BHCKG102)."
+M.12.e,Purchased credit-deteriorated loans and leases (combined),-,-,BHCKKX60,Memo - PCD Acquired,HC-C,-,2019-12-31,"Col A consolidated combined (single-column reporters). Three measures: fair value (BHCKKX60), gross contractual receivable (BHCKKX61), uncollectible estimate (BHCKKX62)."
+M.14,Pledged loans and leases,-,-,BHCKG378,Memo - Pledged,HC-C,-,2009-06-30,Col A consolidated.
+M.15,"Revolving, open-end loans secured by 1-4 family residential properties extended under lines of credit in domestic offices converted to non-revolving closed-end status (incl. in item 1.c.(1))",-,-,BHCKLE75,Memo - HELOC Converted,HC-C,-,2021-03-31,Col A consolidated. Carve-out of item 1.c.(1).

@@ -81,12 +81,12 @@ Line item 1 is "Not applicable" on the current FR Y-9C Schedule HC-G.
 
 | MDRM | Call MDRM | Description | Ties To |
 |------|-----------|-------------|---------|
-| BHCK2750 | RCFD2930 | Total other liabilities | HC Item 20 |
+| BHCT2750 | RCFD2930 | Total other liabilities (schedule total cell; must equal HC item 20 = BHCK2750) | HC Item 20 |
 
 **Reconciliation**:
 ```
-Item 5 = Items 2 + 3 + 4
-Schedule HC Item 20 = HC-G Item 5
+Item 5 (BHCT2750) = Items 2 + 3 + 4
+Schedule HC Item 20 (BHCK2750) = HC-G Item 5 (BHCT2750)
 ```
 
 ---
@@ -123,7 +123,7 @@ SCHEDULE HC-G                           SCHEDULE HC
 ═══════════════════════════════════════════════════════════════════════
 
 Item 5 (Total)                 ────────► HC Item 20 (Other Liabilities)
-BHCK2750                                 BHCK2750
+BHCT2750                                 BHCK2750
 ```
 
 ---
@@ -152,7 +152,7 @@ Other Liab % = Item 5 / Total Assets
 | 2 | BHCK3049 | Net deferred tax liabilities |
 | 3 | BHCKB557 | ACL for off-balance sheet credit exposures |
 | 4 | BHCKB984 | Other (all other liabilities) |
-| **5** | **BHCK2750** | **TOTAL OTHER LIABILITIES** |
+| **5** | **BHCT2750** | **TOTAL OTHER LIABILITIES** (= HC item 20, BHCK2750) |
 
 > **Revision note (v7.0).** Earlier editions of this guide described a six-item HC-G with accrued-interest sub-items and a "Memoranda (2022+)" block; that structure does not exist on the FR Y-9C (it loosely mirrored the Call Report RC-G), and several of its codes were misassigned (the ACL line cited an MBS code; the memoranda cited consolidated-VIE asset codes). Version 7.0 rebuilds the schedule to the official four-line layout with MDRM-verified codes.
 

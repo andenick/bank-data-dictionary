@@ -3,7 +3,7 @@
 **Form**: FR Y-9C (Consolidated Financial Statements for Holding Companies)
 **Schedule**: HC-C - Loans and Lease Financing Receivables
 **Frequency**: Quarterly
-**Purpose**: Detail the loan portfolio by collateral type, borrower type, and geography
+**Purpose**: Detail the loan and lease portfolio by collateral type, borrower type, and geography
 
 ---
 
@@ -11,53 +11,65 @@
 
 Schedule HC-C is the primary schedule for loan portfolio analysis. It provides:
 - **Granular loan breakdowns** by collateral and purpose
-- **Geographic split** between domestic and foreign
+- **Two-column reporting**: Column A vs. Column B (see below)
 - **Basis for asset quality analysis** (ties to HC-N)
 - **Risk-weighted asset inputs** for capital calculations (HC-R)
 
-### Key Metrics
+### The Two Columns (critical)
 
-| Metric | Formula | Purpose |
-|--------|---------|---------|
-| Gross Loans | Sum(Items 1-9) | Total loan originations |
-| Net Loans | Gross - Unearned - Allowance | Balance sheet carrying value |
-| Allowance Ratio | Item 11 / (Items 1-9 - Item 10) | Credit risk reserve adequacy |
+| Column | Meaning | MDRM prefix |
+|--------|---------|-------------|
+| **Column A** | Consolidated / total (the whole holding company) | **BHCK** |
+| **Column B** | "In domestic offices" only | **BHDM** |
+
+Not every line is reported in both columns. Some lines are Column A only (e.g., construction 1.a.(1)/1.a.(2)), some are Column B only (e.g., farmland 1.b, HELOC 1.c.(1)), and a few are reported in both (e.g., item 3 agricultural, item 7 foreign governments, item 11 unearned income, item 12 total). The CSV maps **Column A -> `mdrm_total`** and **Column B -> `mdrm_domestic`**. The `mdrm_foreign` column is "-" throughout because the current FR Y-9C HC-C has no separate foreign-office (BHFN) loan codes; the only geographic split on this schedule is the domestic-offices Column B.
 
 ---
 
-## Schedule Structure
+## Schedule Structure (current / March 2026 form)
 
 ```
-LOAN PORTFOLIO
-├── Item 1: Real Estate Loans (largest category)
-│   ├── 1.a: Construction and land development
-│   │   ├── 1.a.(1): 1-4 family residential construction
-│   │   └── 1.a.(2): Other construction (commercial)
-│   ├── 1.b: Farmland
-│   ├── 1.c: HELOCs (revolving home equity)
-│   ├── 1.d: 1-4 family residential (closed-end)
-│   │   ├── 1.d.(1): First liens
-│   │   └── 1.d.(2): Junior liens
-│   ├── 1.e: Multifamily (5+ units)
-│   └── 1.f: Nonfarm nonresidential (CRE)
-│       ├── 1.f.(1): Owner-occupied
-│       └── 1.f.(2): Non-owner occupied
-├── Item 2: Loans to depository institutions
-├── Item 3: Agricultural production loans
-├── Item 4: Commercial and industrial (C&I)
-├── Item 5: Consumer loans
-│   ├── 5.a: Credit cards
-│   ├── 5.b: Other revolving
-│   ├── 5.c: Automobile loans
-│   └── 5.d: Other consumer
-├── Item 6: Loans to foreign governments
-├── Item 7: Municipal loans
-├── Item 8: Other loans
-├── Item 9: Lease financing receivables
-├── Item 10: LESS: Unearned income
-├── Item 11: LESS: Allowance for loan losses
-└── Item 12: NET LOANS AND LEASES
+LOAN AND LEASE PORTFOLIO
+├── Item 1: Loans secured by real estate (BHCK1410, Col A total)
+│   ├── 1.a.(1): 1-4 family residential construction   (A: BHCKF158)
+│   ├── 1.a.(2): Other construction / land development   (A: BHCKF159)
+│   ├── 1.b:     Secured by farmland                     (B: BHDM1420)
+│   ├── 1.c.(1): Revolving open-end 1-4 family (HELOCs)  (B: BHDM1797)
+│   ├── 1.c.(2)(a): Closed-end 1-4 family, first liens   (B: BHDM5367)
+│   ├── 1.c.(2)(b): Closed-end 1-4 family, junior liens  (B: BHDM5368)
+│   ├── 1.d:     Multifamily (5+ units)                  (B: BHDM1460)
+│   ├── 1.e.(1): Owner-occupied nonfarm nonresidential   (A: BHCKF160)
+│   └── 1.e.(2): Other nonfarm nonresidential            (A: BHCKF161)
+├── Item 2: Loans to depository institutions & acceptances (B: BHDM1288)
+│   ├── 2.a: To U.S. banks / U.S. depository institutions (A: BHCK1292)
+│   └── 2.b: To foreign banks                             (A: BHCK1296)
+├── Item 3: Ag production & other loans to farmers (A: BHCK1590 / B: BHDM1590)
+├── Item 4: Commercial and industrial loans (B total: BHDM1766)
+│   ├── 4.a: To U.S. addressees (domicile)               (A: BHCK1763)
+│   ├── 4.b: To non-U.S. addressees (domicile)           (A: BHCK1764)
+│   └── 4.c: Combined U.S. + non-U.S. (single-column)    (A: BHCKKX56)
+│   [Item 5: not used in the current form — the spec jumps 4 -> 6]
+├── Item 6: Loans to individuals / consumer loans (B total: BHDM1975)
+│   ├── 6.a: Credit cards                                (A: BHCKB538)
+│   ├── 6.b: Other revolving credit plans                (A: BHCKB539)
+│   ├── 6.c: Automobile loans                            (A: BHCKK137)
+│   └── 6.d: Other consumer loans                        (A: BHCKK207)
+├── Item 7: Loans to foreign governments (A: BHCK2081 / B: BHDM2081)
+│   [Item 8: not used as a body line in the current form]
+├── Item 9: Nondepository financial institutions & other loans
+│   ├── 9.a:     Loans to nondepository financial inst.  (A: BHCKJ454 / B: BHDMJ454)
+│   ├── 9.b.(1): Purchasing/carrying securities (margin) (A: BHCK1545 / B: BHDM1545)
+│   ├── 9.b.(2): All other loans                         (A: BHCKJ451 / B: BHDMJ451)
+│   └── 9.b.(3): Combined 9.b (single-column)            (A: BHCKKX57 / B: BHDMKX57)
+├── Item 10: Lease financing receivables (B total: BHDM2165)
+│   ├── 10.a: Leases to individuals (consumer leases)    (A: BHCKF162)
+│   ├── 10.b: All other leases                           (A: BHCKF163)
+│   └── 10.c: Lease finance receivables (combined)       (A: BHCKKX58)
+├── Item 11: LESS: Any unearned income on loans (A: BHCK2123 / B: BHDM2123)
+└── Item 12: TOTAL loans and leases (A: BHCK2122 / B: BHDM2122)
 ```
+
+> **Numbering note.** The current form skips a numbered item 5 (the schedule goes 4 -> 6) and has no separate body item 8. Consumer loans are item 6, foreign governments are item 7, and nondepository-financial / other loans are item 9. Real-estate sub-lettering uses 1.c for 1-4 family residential and 1.e for nonfarm nonresidential.
 
 ---
 
@@ -65,316 +77,217 @@ LOAN PORTFOLIO
 
 ### Item 1: Loans Secured by Real Estate
 
-**Total Real Estate MDRM**:
-
-| Geography | MDRM | Description |
-|-----------|------|-------------|
-| Domestic | BHCK1410 | RE loans - domestic offices |
-| Foreign | - | Not reported (no BHFN foreign-office real-estate-loan split on FR Y-9C HC-C) |
-| Total | BHCK1410 | Total RE loans |
-
-**Reconciliation**:
-```
-Item 1 = Item 1.a + Item 1.b + Item 1.c + Item 1.d + Item 1.e + Item 1.f
-```
-
----
-
-#### Item 1.a: Construction and Land Development
-
-| Sub-Item | MDRM | Description | Risk Weight |
-|----------|------|-------------|-------------|
-| 1.a (Total) | BHCK1415 | Total construction | 100-150% |
-| 1.a.(1) | BHCKF158 | 1-4 family construction | 50-100% |
-| 1.a.(2) | BHCKF159 | Other construction | 100-150% |
+| Line | Column | MDRM | Description |
+|------|--------|------|-------------|
+| 1 (total) | A | BHCK1410 | Total real estate loans (consolidated) |
+| 1.a.(1) | A | BHCKF158 | 1-4 family residential construction |
+| 1.a.(2) | A | BHCKF159 | Other construction and all land development |
+| 1.b | B | BHDM1420 | Secured by farmland (in domestic offices) |
+| 1.c.(1) | B | BHDM1797 | Revolving open-end 1-4 family (HELOCs) |
+| 1.c.(2)(a) | B | BHDM5367 | Closed-end 1-4 family, first liens |
+| 1.c.(2)(b) | B | BHDM5368 | Closed-end 1-4 family, junior liens |
+| 1.d | B | BHDM1460 | Multifamily (5+ units) |
+| 1.e.(1) | A | BHCKF160 | Owner-occupied nonfarm nonresidential |
+| 1.e.(2) | A | BHCKF161 | Other nonfarm nonresidential |
 
 **Risk Characteristics**:
-- Highest risk real estate category
-- No cash flow until completion
-- Interest typically capitalized
-- Higher default rates in downturns
+- Construction (1.a.(2)) is the highest-risk RE category; may include HVCRE at 150%.
+- Closed-end 1-4 family first liens receive 35-50% risk weight under Basel III by LTV; junior liens 100%.
+- Owner-occupied CRE repayment depends on business operations; other (non-owner) CRE on rental income.
 
-**HVCRE (High Volatility CRE)**: Item 1.a.(2) may include HVCRE loans subject to 150% risk weight under Basel III standardized approach.
-
----
-
-#### Item 1.b: Secured by Farmland
-
-| MDRM | Description |
-|------|-------------|
-| BHCK1420 | Loans secured by farmland |
-
-**Characteristics**:
-- Long-term agricultural real estate
-- Commodity price sensitivity
-- Often tied to USDA programs
+> Lettering changed from earlier versions of this dictionary: the current form uses **1.c** for 1-4 family residential (revolving + closed-end first/junior liens) and **1.e** for nonfarm nonresidential. There is no separate 1.a construction subtotal or 1.f CRE subtotal line in the current form.
 
 ---
 
-#### Item 1.c: Home Equity Lines of Credit (HELOCs)
+### Item 2: Loans to Depository Institutions and Acceptances of Other Banks
 
-| MDRM | Description |
-|------|-------------|
-| BHCK1797 | Revolving home equity |
+| Line | Column | MDRM | Description | Risk Weight |
+|------|--------|------|-------------|-------------|
+| 2 (total) | B | BHDM1288 | In domestic offices | 20-100% |
+| 2.a | A | BHCK1292 | To U.S. banks / U.S. depository institutions | 20% |
+| 2.b | A | BHCK1296 | To foreign banks | 20-150% |
 
-**Characteristics**:
-- Open-end revolving credit
-- Secured by 1-4 family residence
-- Draw period followed by repayment period
-- Variable rate, prime-based pricing
-
-**Risk Weight**: 50-100% depending on LTV and documentation
-
----
-
-#### Item 1.d: 1-4 Family Residential (Closed-End)
-
-| Sub-Item | MDRM | Description | Risk Weight |
-|----------|------|-------------|-------------|
-| 1.d (Total) | - | Total closed-end 1-4 family (no consolidated code; = BHCK5367 first-liens + BHCK5368 junior-liens) | 35-100% |
-| 1.d.(1) | BHCK5367 | First liens | 35-50% |
-| 1.d.(2) | BHCK5368 | Junior liens | 100% |
-
-**First Lien Risk Weights** (Basel III):
-- LTV ≤ 60%: 35%
-- 60% < LTV ≤ 80%: 50%
-- LTV > 80% (non-prudent): 100%
-
----
-
-#### Item 1.e: Multifamily (5+ Units)
-
-| MDRM | Description |
-|------|-------------|
-| BHCK1460 | Multifamily residential |
-
-**Sub-Items (2022+)**:
-| MDRM | Description | Risk Weight |
-|------|-------------|-------------|
-| BHCKKX57 | Government-guaranteed multifamily | 20% |
-| BHCKKX58 | Other multifamily | 50-100% |
-
-**Characteristics**:
-- Apartment buildings (5+ units)
-- Cash flow from rental income
-- Generally lower risk than construction
-
----
-
-#### Item 1.f: Nonfarm Nonresidential (CRE)
-
-| Sub-Item | MDRM | Description | Risk Weight |
-|----------|------|-------------|-------------|
-| 1.f (Total) | BHCK1480 | Total CRE | 100% |
-| 1.f.(1) | BHCKF160 | Owner-occupied | 100% |
-| 1.f.(2) | BHCKF161 | Non-owner occupied | 100% |
-
-**Owner-Occupied CRE**: Repayment depends on business operations, not rental income
-**Non-Owner Occupied CRE**: Investment property; repayment from rental income
-
-**Property Types**:
-- Office
-- Retail
-- Industrial/Warehouse
-- Hotel/Hospitality
-- Healthcare facilities
-
----
-
-### Item 2: Loans to Depository Institutions
-
-| Sub-Item | MDRM | Description | Risk Weight |
-|----------|------|-------------|-------------|
-| 2 (Total) | BHCK1288 | Total interbank | 20-100% |
-| 2.a | BHCK1292 | US banks and thrifts | 20% |
-| 2.b | BHCK1296 | Foreign banks | 20-150% |
-| 2.c | BHCK1755 | Acceptances of other banks | 20% |
-
-**Nature**: Short-term lending between financial institutions
+Acceptances of other banks are folded into the item-2 caption in the current form; there is no separate body line for them.
 
 ---
 
 ### Item 3: Agricultural Production Loans
 
-| MDRM | Description |
-|------|-------------|
-| BHCK1590 | Loans to finance agricultural production |
+| Column | MDRM | Description |
+|--------|------|-------------|
+| A | BHCK1590 | Loans to finance agricultural production (consolidated) |
+| B | BHDM1590 | Same, in domestic offices |
 
-**Characteristics**:
-- Operating loans for farming/ranching
-- Seasonal working capital
-- Commodity-secured in some cases
+Operating loans for farming/ranching; seasonal working capital.
 
 ---
 
 ### Item 4: Commercial and Industrial (C&I) Loans
 
-| Sub-Item | MDRM | Description | Risk Weight |
-|----------|------|-------------|-------------|
-| 4 (Total) | BHCK1766 | Total C&I | 100% |
-| 4.a | BHCK1763 | US addressees | 100% |
-| 4.b | BHCK1763 | Non-US addressees | 100% |
+| Line | Column | MDRM | Description |
+|------|--------|------|-------------|
+| 4 (total) | B | BHDM1766 | C&I in domestic offices |
+| 4.a | A | BHCK1763 | To U.S. addressees (domicile) |
+| 4.b | A | BHCK1764 | To non-U.S. addressees (domicile) |
+| 4.c | A | BHCKKX56 | Combined U.S. + non-U.S. (single-column reporters) |
 
-**C&I Loan Types**:
-- Working capital lines
-- Term loans
-- Asset-based lending
-- Leveraged loans
-- Small business loans
-
-**Key Metric**: C&I loans are a leading indicator of economic activity
+> **Correction vs. older dictionaries**: 4.b (non-U.S. addressees) is **BHCK1764**, not a duplicate of 4.a's BHCK1763. The item-4 domestic total is **BHDM1766** (Column B). C&I loans are a leading indicator of economic activity.
 
 ---
 
-### Item 5: Consumer Loans
+### Item 6: Consumer Loans (Loans to Individuals)
 
-| Sub-Item | MDRM | Description | Risk Weight |
-|----------|------|-------------|-------------|
-| 5 (Total) | BHCK1975 | Total consumer | 75-100% |
-| 5.a | BHCKB538 | Credit cards | 100% |
-| 5.a.(1) | BHDMB561 | Consumer credit cards | 100% |
-| 5.a.(2) | BHCKK137 | Commercial credit cards | 100% |
-| 5.b | BHCKB539 | Other revolving | 100% |
-| 5.c | BHCKK137 | Automobile loans | 75% |
-| 5.c.(1) | BHCKK138 | New vehicles | 75% |
-| 5.c.(2) | BHCKK139 | Used vehicles | 75% |
-| 5.d | BHCKK207 | Other consumer | 100% |
+| Line | Column | MDRM | Description | Risk Weight |
+|------|--------|------|-------------|-------------|
+| 6 (total) | B | BHDM1975 | In domestic offices | 75-100% |
+| 6.a | A | BHCKB538 | Credit cards | 100% |
+| 6.b | A | BHCKB539 | Other revolving credit plans | 100% |
+| 6.c | A | BHCKK137 | Automobile loans | 75% |
+| 6.d | A | BHCKK207 | Other consumer (single payment, installment, all student loans) | 100% |
 
-**Credit Card Segmentation**:
-- Consumer cards (5.a.1): Personal use
-- Commercial cards (5.a.2): Business expense cards
-
-**Auto Loans**: Receive preferential 75% risk weight under Basel III
+> Consumer loans are **item 6** in the current form (not item 5). Auto loans receive a preferential 75% risk weight under Basel III.
 
 ---
 
-### Item 6: Loans to Foreign Governments
+### Item 7: Loans to Foreign Governments and Official Institutions
 
-| MDRM | Description |
-|------|-------------|
-| BHCK1296 | Sovereign exposures |
+| Column | MDRM | Description |
+|--------|------|-------------|
+| A | BHCK2081 | Loans to foreign governments and official institutions (incl. foreign central banks) |
+| B | BHDM2081 | Same, in domestic offices |
 
-**Risk Weight**: Based on OECD country risk classification (0% to 150%)
+> **Correction vs. older dictionaries**: foreign governments is **item 7** and uses **BHCK2081 / BHDM2081**, not BHCK1296 (which is interbank-foreign, item 2.b). Risk weight is country-risk based (0% to 150%).
 
----
-
-### Item 7: Municipal Loans
-
-| MDRM | Description |
-|------|-------------|
-| - | Direct loans to states/political subdivisions (no consolidated BHC code; Call RCON2107 only) |
-
-**Risk Weight**:
-- General obligations: 20%
-- Revenue bonds: 50%
+> **No states/political-subdivisions body line.** The current HC-C has **no** numbered body line for obligations of states and political subdivisions (the old "municipals" item). That concept survives only on the Call Report (RCON2107), not on FR Y-9C HC-C.
 
 ---
 
-### Item 8: Other Loans
+### Item 9: Nondepository Financial Institutions and Other Loans
 
-| Sub-Item | MDRM | Description |
-|----------|------|-------------|
-| 8 (Total) | BHCK1563 | Total other loans |
-| 8.a | BHCK1545 | Loans for purchasing/carrying securities |
-| 8.b | BHCK1564 | All other loans |
+| Line | Column | MDRM | Description |
+|------|--------|------|-------------|
+| 9.a | A / B | BHCKJ454 / BHDMJ454 | Loans to nondepository financial institutions |
+| 9.b.(1) | A / B | BHCK1545 / BHDM1545 | Purchasing or carrying securities (incl. margin loans) |
+| 9.b.(2) | A / B | BHCKJ451 / BHDMJ451 | All other loans (exclude consumer loans) |
+| 9.b.(3) | A / B | BHCKKX57 / BHDMKX57 | Combined 9.b (single-column reporters) |
 
-**Item 8.a**: Margin loans to broker-dealers and individuals
-
----
-
-### Item 9: Lease Financing Receivables
-
-| Sub-Item | MDRM | Description |
-|----------|------|-------------|
-| 9 (Total) | BHCK2165 | Total leases |
-| 9.a | BHCKF164 | Consumer leases |
-| 9.b | BHCKF163 | Commercial leases |
-
-**Lease Types**:
-- Direct financing leases
-- Leveraged leases
-- Operating leases (equipment)
+> This replaces the older "item 8 Other loans / 8.a margin / 8.b all other" structure. There is no standalone item 8 in the current form. New-style memo detail of 9.a appears in Memorandum 10 (below).
 
 ---
 
-### Item 10: LESS: Unearned Income
+### Item 10: Lease Financing Receivables
 
-| MDRM | Description |
-|------|-------------|
-| BHCK2123 | Unearned income on loans |
+| Line | Column | MDRM | Description |
+|------|--------|------|-------------|
+| 10 (total) | B | BHDM2165 | Lease financing receivables (net of unearned income), in domestic offices |
+| 10.a | A | BHCKF162 | Leases to individuals (consumer leases) |
+| 10.b | A | BHCKF163 | All other leases |
+| 10.c | A | BHCKKX58 | Lease finance receivables (combined / single-column) |
 
-**Nature**: Deferred loan fees and discounts that will be recognized over loan life
-
----
-
-### Item 11: LESS: Allowance for Loan and Lease Losses
-
-| MDRM | Description | Ties To |
-|------|-------------|---------|
-| BHCT3123 | Allowance for credit losses | HC Item 4.c |
-
-**CECL Note**: Under ASC 326 (CECL), this represents lifetime expected credit losses on loans held at amortized cost.
-
-**Adequacy Analysis**:
-```
-Allowance Ratio = BHCT3123 / (Sum Items 1-9 - Item 10)
-Coverage Ratio = BHCT3123 / Nonperforming Loans (HC-N)
-```
+> **Correction vs. older dictionaries**: leases are **item 10** with **F162 / F163 / KX58**, not the old item-9 F164/F165/B541 mix. Lease types include direct financing leases and leveraged leases.
 
 ---
 
-### Item 12: Net Loans and Leases
+### Item 11: LESS: Any Unearned Income on Loans
 
-| MDRM | Formula | Ties To |
-|------|---------|---------|
-| BHCKB529 | Items 1-9 - Item 10 - Item 11 | HC Item 4.d |
+| Column | MDRM | Description |
+|--------|------|-------------|
+| A | BHCK2123 | Unearned income on loans (consolidated) |
+| B | BHDM2123 | Same, in domestic offices |
+
+> **Correction vs. older dictionaries**: current HC-C item 11 is **unearned income** (BHCK2123 / BHDM2123). It is **not** the allowance for loan and lease losses. The allowance (BHCT3123) is **not** an HC-C body line — it lives on **Schedule HC, item 4.c**. Unearned income is deferred loan fees/discounts recognized over loan life.
+
+---
+
+### Item 12: Total Loans and Leases
+
+| Column | MDRM | Formula | Ties To |
+|--------|------|---------|---------|
+| A | BHCK2122 | Items 1 through 10 minus item 11 | HC items 4.a + 4.b |
+| B | BHDM2122 | Same, in domestic offices | — |
+
+> **Correction vs. older dictionaries**: item 12 is **BHCK2122 / BHDM2122** ("total loans and leases held for investment and held for sale, net of unearned income"). It is **not** BHCKB529, which is the HC item 4.d figure (loans/leases net of unearned income **and** allowance) — a different concept. Column A of item 12 must equal Schedule HC items 4.a + 4.b.
+
+---
+
+## Memoranda
+
+The current HC-C memoranda are dominated by the loan-modification family (M.1, formerly "troubled debt restructurings"/TDR), plus several carve-out and disclosure memos. Each memo's column (A consolidated or B domestic-offices) is recorded in the CSV.
+
+| Memo | Column | MDRM | Description |
+|------|--------|------|-------------|
+| M.1.a.(1) | B | BHDMK158 | Loan mods: 1-4 family residential construction |
+| M.1.a.(2) | B | BHDMK159 | Loan mods: all other construction / land |
+| M.1.b | B | BHDMF576 | Loan mods: 1-4 family residential (domestic offices) |
+| M.1.c | B | BHDMK160 | Loan mods: multifamily |
+| M.1.d.(1) | B | BHDMK161 | Loan mods: owner-occupied nonfarm nonresidential |
+| M.1.d.(2) | B | BHDMK162 | Loan mods: other nonfarm nonresidential |
+| M.1.e.(1) | A | BHCKK163 | Loan mods (C&I): U.S. addressees |
+| M.1.e.(2) | A | BHCKK164 | Loan mods (C&I): non-U.S. addressees |
+| M.1.e.(3) | A | BHCKKX59 | Loan mods (C&I): combined |
+| M.1.f | A | BHCKK165 | Loan mods: all other loans |
+| M.1.f.(1) | B | BHDMK166 | Loan mods: farmland (domestic offices) |
+| M.1.f.(2) | A | BHCKK168 | Loan mods: agricultural production |
+| M.1.f.(3)(a) | A | BHCKK098 | Loan mods (consumer): credit cards |
+| M.1.f.(3)(b) | A | BHCKK203 | Loan mods (consumer): automobile |
+| M.1.f.(3)(c) | A | BHCKK204 | Loan mods (consumer): other consumer |
+| M.1.g | A | BHCKHK25 | **Total** loan modifications in compliance with modified terms |
+| M.2 | A | BHCK2746 | CRE / construction / land-dev loans NOT secured by RE (in items 4 & 9) |
+| M.3 | A | BHCKB837 | RE loans to non-U.S. addressees (in item 1) |
+| M.4 | A | BHCKC391 | Outstanding credit-card fees and finance charges (in item 6.a) |
+| M.6.a | A | BHCKF230 | Carrying amount of closed-end 1-4 family neg-am loans |
+| M.6.b | A | BHCKF231 | Max remaining neg-am contractually permitted |
+| M.6.c | A | BHCKF232 | Amount of neg-am included in M.6.a |
+| M.9 | B | BHDMF577 | 1-4 family (domestic offices) in process of foreclosure |
+| M.10.a | A / B | BHCKPV05 / BHDMPV05 | NDFI: loans to mortgage credit intermediaries |
+| M.10.b | A / B | BHCKPV06 / BHDMPV06 | NDFI: loans to business credit intermediaries |
+| M.10.c | A / B | BHCKPV07 / BHDMPV07 | NDFI: loans to private equity funds |
+| M.10.d | A / B | BHCKPV08 / BHDMPV08 | NDFI: loans to consumer credit intermediaries |
+| M.10.e | A / B | BHCKPV09 / BHDMPV09 | NDFI: other loans to nondepository financial institutions |
+| M.12.a | A | BHCKG091 (+G092/G093) | PCD-acquired loans/leases secured by real estate |
+| M.12.b | A | BHCKG094 (+G095/G096) | PCD-acquired C&I loans |
+| M.12.c | A | BHCKG097 (+G098/G099) | PCD-acquired consumer loans |
+| M.12.d | A | BHCKG100 (+G101/G102) | PCD-acquired all other loans and all leases |
+| M.12.e | A | BHCKKX60 (+KX61/KX62) | PCD-acquired loans and leases (combined) |
+| M.14 | A | BHCKG378 | Pledged loans and leases |
+| M.15 | A | BHCKLE75 | Revolving 1-4 family HELOCs converted to closed-end status (in item 1.c.(1)) |
+
+> **Memorandum 10 (NDFI breakout) is NEW in the March 2026 form** (codes PV05-PV09, both BHCK and BHDM). It is not yet populated in historical warehouse data (which ends 2025-12-31).
+>
+> **Memorandum 12** reports purchased-credit-deteriorated (PCD) / acquired loans across **three measures per row** — fair value at acquisition, gross contractual amounts receivable, and the best estimate of contractual cash flows not expected to be collected. The CSV lists each memo line (M.12.a..e) once and names all three codes in the notes (e.g., M.12.a = G091/G092/G093).
 
 ---
 
 ## Reconciliation to Schedule HC
 
 ```
-SCHEDULE HC-C                           SCHEDULE HC
+SCHEDULE HC-C                                  SCHEDULE HC
 ═══════════════════════════════════════════════════════════════════════
 
-Item 12 (Net Loans)            ────────► HC Item 4.d (Net loans)
-BHCKB529                                 BHCKB529
+Item 12, Column A (Total loans & leases) ────► HC items 4.a + 4.b
+BHCK2122                                        (held for sale + held for investment)
 
-Items 1-9 minus Item 10        ────────► HC Item 4.b (Loans net of unearned)
-                                         BHCTB528
+Allowance for loan & lease losses        ────► HC item 4.c
+BHCT3123 (reported on HC, NOT on HC-C)          BHCT3123
 
-Item 11 (Allowance)            ────────► HC Item 4.c (Allowance)
-BHCT3123                                 BHCT3123
+Net loans and leases                     ────► HC item 4.d
+(HC-C item 12 minus the HC-4.c allowance)       BHCKB529
 ```
+
+> The allowance (BHCT3123) and the net-of-allowance figure (BHCKB529) belong to **Schedule HC item 4**, not to HC-C. HC-C stops at item 12 (total net of unearned income).
 
 ---
 
 ## Ties to Other Schedules
 
 ### HC-N (Past Due and Nonaccrual)
-
-Schedule HC-N breaks down the same loan categories by delinquency status:
-- 30-89 days past due
-- 90+ days past due and still accruing
-- Nonaccrual
-
-**Reconciliation**: HC-N totals by loan type should equal HC-C line items.
+HC-N breaks the same loan categories down by delinquency status (30-89 days past due, 90+ days and still accruing, nonaccrual). The HC-C loan-modification memoranda (M.1 family) tie to the loan-modification disclosures in HC-N.
 
 ### HC-H (Interest Sensitivity)
-
-Schedule HC-H reports loans by repricing/maturity bucket:
-- 3 months or less
-- 3-12 months
-- 1-3 years
-- 3-5 years
-- 5-15 years
-- Over 15 years
+HC-H reports loans by repricing/maturity bucket (3 months or less, 3-12 months, 1-3 years, 3-5 years, 5-15 years, over 15 years).
 
 ### HC-R (Regulatory Capital)
-
-HC-C loan categories map to HC-R Part II risk-weighted asset calculations:
-- Each loan category has an assigned risk weight
-- Total RWA = Sum of (Loan Balance × Risk Weight)
+HC-C loan categories map to HC-R Part II risk-weighted asset calculations; each category carries an assigned risk weight and Total RWA = Sum of (Loan Balance × Risk Weight).
 
 ---
 
@@ -382,17 +295,17 @@ HC-C loan categories map to HC-R Part II risk-weighted asset calculations:
 
 | Loan Category | Standard Risk Weight |
 |---------------|---------------------|
-| 1-4 Family First Lien (prudent) | 35-50% |
-| 1-4 Family Junior Lien | 100% |
-| Multifamily (gov't guaranteed) | 20% |
-| Multifamily (other) | 50-100% |
-| CRE (all) | 100% |
+| 1-4 family first lien (prudent) | 35-50% |
+| 1-4 family junior lien | 100% |
+| Multifamily | 50-100% |
+| CRE (owner-occupied / other) | 100% |
 | Construction (HVCRE) | 150% |
 | Construction (other) | 100% |
 | C&I | 100% |
-| Consumer (auto) | 75% |
-| Consumer (other) | 100% |
-| Credit cards | 100% |
+| Consumer - automobile | 75% |
+| Consumer - other / credit cards | 100% |
+| Interbank (U.S. banks) | 20% |
+| Foreign government | 0-150% (country risk) |
 
 ---
 
@@ -400,19 +313,18 @@ HC-C loan categories map to HC-R Part II risk-weighted asset calculations:
 
 ### Portfolio Composition
 ```
-RE Concentration = Item 1 / Sum(Items 1-9)
-CRE Concentration = (Item 1.a + 1.e + 1.f) / Total Capital
-C&I % = Item 4 / Sum(Items 1-9)
-Consumer % = Item 5 / Sum(Items 1-9)
+RE Concentration = Item 1 (BHCK1410) / Item 12 Column A (BHCK2122)
+C&I share        = (BHCK1763 + BHCK1764) / BHCK2122
+Consumer share   = Item 6 detail / BHCK2122
 ```
 
 ### Credit Quality
 ```
-Allowance Ratio = Item 11 / Gross Loans
-Net Charge-Off Rate = (Charge-offs - Recoveries) / Average Loans [from HI]
+Coverage Ratio       = Allowance (HC 4.c, BHCT3123) / Nonperforming loans (HC-N)
+Net Charge-Off Rate  = (Charge-offs - Recoveries) / Average Loans [from HI]
 ```
 
-### Growth Metrics
+### Growth
 ```
 Loan Growth = (Current Period - Prior Period) / Prior Period
 ```
@@ -423,37 +335,44 @@ Loan Growth = (Current Period - Prior Period) / Prior Period
 
 | Date | Change |
 |------|--------|
-| 1976-03-31 | Original FR Y-9C implementation |
-| 1991-03-31 | HELOC/closed-end split introduced |
-| 2007-03-31 | Construction sub-categories; first/junior lien split |
-| 2010-03-31 | Credit card consumer/commercial split |
-| 2015-03-31 | Auto loans new/used split |
+| 1981-06-30 | Core HC-C totals (BHCK1410, BHDM1766, BHCK2122, etc.) |
+| 1990-09-30 | Domestic-offices (Column B) farmland/HELOC/multifamily detail |
+| 1991-03-31 | Closed-end 1-4 family first/junior lien split (BHDM5367/5368) |
+| 2007-03-31 | Construction sub-categories (F158/F159); nonfarm-nonres owner/other (F160/F161); consumer & other leases (F162/F163) |
+| 2010-03-31 | Nondepository financial institutions & other loans (J451/J454) |
+| 2018-03-31 | Total loan-modification memo (HK25) |
+| 2019-12-31 | Single-column combined codes (KX56/KX57/KX58/KX59/KX60-62) |
 | 2020-03-31 | CECL implementation |
-| 2022-03-31 | Multifamily guaranteed/other split |
+| 2021-03-31 | HELOC-converted-to-closed-end memo (LE75) |
+| 2026-03-31 | **NDFI breakout Memorandum 10 (PV05-PV09)** |
 
 ---
 
 ## MDRM Quick Reference
 
-| Item | MDRM | Description |
-|------|------|-------------|
-| 1 | BHCK1410 | Real estate loans (total) |
-| 1.a | BHCK1415 | Construction |
-| 1.c | BHCK1797 | HELOCs |
-| 1.d | - | 1-4 family closed-end (no consolidated code; = BHCK5367 + BHCK5368) |
-| 1.e | BHCK1460 | Multifamily |
-| 1.f | BHCK1480 | Nonfarm nonresidential (CRE) |
-| 3 | BHCK1590 | Agricultural |
-| 4 | BHCK1766 | C&I loans |
-| 5 | BHCK1975 | Consumer loans |
-| 5.a | BHCKB538 | Credit cards |
-| 5.c | BHCKK137 | Auto loans |
-| 9 | BHCK2165 | Leases |
-| 10 | BHCK2123 | Unearned income |
-| 11 | BHCT3123 | **ALLOWANCE** |
-| 12 | BHCKB529 | **NET LOANS** |
+| Item | Col | MDRM | Description |
+|------|-----|------|-------------|
+| 1 | A | BHCK1410 | Real estate loans (total) |
+| 1.b | B | BHDM1420 | Farmland |
+| 1.c.(1) | B | BHDM1797 | HELOCs |
+| 1.c.(2)(a) | B | BHDM5367 | 1-4 family first liens |
+| 1.c.(2)(b) | B | BHDM5368 | 1-4 family junior liens |
+| 1.d | B | BHDM1460 | Multifamily |
+| 1.e.(1)/(2) | A | BHCKF160 / BHCKF161 | Owner-occ / other nonfarm nonresidential |
+| 2 | B | BHDM1288 | Depository institutions (total) |
+| 3 | A/B | BHCK1590 / BHDM1590 | Agricultural |
+| 4 | B | BHDM1766 | C&I (domestic total) |
+| 4.a / 4.b | A | BHCK1763 / BHCK1764 | C&I U.S. / non-U.S. addressees |
+| 6 | B | BHDM1975 | Consumer (domestic total) |
+| 6.a / 6.c | A | BHCKB538 / BHCKK137 | Credit cards / auto |
+| 7 | A/B | BHCK2081 / BHDM2081 | Foreign governments |
+| 9.a | A/B | BHCKJ454 / BHDMJ454 | Nondepository financial institutions |
+| 10 | B | BHDM2165 | Leases (domestic total) |
+| 10.a / 10.b | A | BHCKF162 / BHCKF163 | Consumer / other leases |
+| 11 | A/B | BHCK2123 / BHDM2123 | **LESS: unearned income** |
+| 12 | A/B | BHCK2122 / BHDM2122 | **TOTAL loans and leases (net of unearned income)** |
 
 ---
 
-*Last Updated: 2026-01-28*
-*Reference: FR Y-9C Instructions (March 2024)*
+*Last Updated: March 2026*
+*Reference: FR Y-9C Instructions and MDRM (current as of the March 2026 form)*

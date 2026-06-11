@@ -1,0 +1,44 @@
+line_number,item_description,mdrm_code,call_mdrm,category,ties_to_hc_line,start_date,notes
+1,Total number of holding company common shares outstanding,BHCK3459,-,Share Count,-,1986-06-30,"Reported as a number (unrounded), not dollars"
+2,Debt maturing in one year or less issued to unrelated third parties by bank subsidiaries,BHCK6555,-,Debt Maturity,"HC items 16, 19.a",1990-09-30,Included in Schedule HC items 16 and 19.a
+3,Debt maturing in more than one year issued to unrelated third parties by bank subsidiaries,BHCK6556,-,Debt Maturity,"HC items 16, 19.a",1990-09-30,Included in Schedule HC items 16 and 19.a
+4,Other assets acquired in satisfaction of debts previously contracted,BHCK6557,-,Memoranda - Other,-,1990-09-30,DPC assets other than OREO
+5,Securities purchased under agreements to resell offset against securities sold under agreements to repurchase on Schedule HC,BHCKA288,-,Repo Offsetting,"HC items 3, 14",1997-03-31,Balance-sheet offsetting of reverse repos against repos
+6,Portion of covered other real estate owned (HC item 7) protected by FDIC loss-sharing agreements,BHCKK192,RCFDK192,Covered Assets,HC item 7,2011-03-31,Completed by holding companies with $5B+ in assets
+7.a.,Captive insurance and reinsurance subsidiaries - Total assets of captive insurance subsidiaries,BHCKK193,RCFDK193,Captive Insurance,-,2011-03-31,Completed annually (December); total assets before intercompany elimination
+7.b.,Captive insurance and reinsurance subsidiaries - Total assets of captive reinsurance subsidiaries,BHCKK194,RCFDK194,Captive Insurance,-,2011-03-31,Completed annually (December)
+8,"Business combination accounted for by the purchase method during the calendar year? (1=Yes, 0=No)",BHCKC251,-,Indicator,-,2002-03-31,Yes/No indicator
+9,"Restated financial statements during the last quarter due to new/revised FAS? (1=Yes, 0=No)",BHCK6689,-,Indicator,-,1990-09-30,Yes/No indicator
+11,"All changes in investments/activities reported on FR Y-10? (1=Yes/no changes, 0=No)",BHCK6416,-,Indicator,-,1992-03-31,Yes/No indicator; must not be left blank or N/A
+11(text-a),Name of Holding Company Official Verifying FR Y-10 Reporting,TEXT6428,-,Text Item,-,2009-06-30,Text field; no dollar amount
+11(text-b),Area Code / Phone Number (FR Y-10 verifying official),TEXT9009,-,Text Item,-,1998-06-30,Text field; no dollar amount
+12.a.,Intangible assets - Mortgage servicing assets,BHCK3164,RCFD3164,Intangibles,HC item 10.b,1985-06-30,MSAs measured under ASC 860
+12.a.(1),Intangible assets - Estimated fair value of mortgage servicing assets,BHCK6438,-,Intangibles,HC-M item 12.a,1993-03-31,Memo fair value of MSAs
+12.b.,Intangible assets - Goodwill,BHCK3163,RCFD3163,Intangibles,HC item 10.a,1981-06-30,Goodwill from business combinations
+12.c.,Intangible assets - All other intangible assets,BHCKJF76,RCFDJF76,Intangibles,HC item 10.b,2018-06-30,"Core deposit intangibles, etc."
+12.d.,"Intangible assets - Total (sum of 12.a, 12.b, 12.c)",BHCT2143,RCFD2143,Intangibles - Total,HC item 10,2018-06-30,Must equal Schedule HC item 10 (sum of goodwill 10.a + other intangibles 10.b)
+13,Other real estate owned,BHCT2150,RCFD2150,OREO,HC item 7,2001-03-31,Total OREO; component of HC item 7
+14.a.,Other borrowed money - Commercial paper,BHCK2309,-,Borrowings,HC item 16,1981-06-30,Component of HC item 16
+14.b.,Other borrowed money with a remaining maturity of one year or less,BHCK2332,RCFD2332,Borrowings,HC item 16,1981-06-30,Component of HC item 16
+14.c.,Other borrowed money with a remaining maturity of more than one year,BHCK2333,RCFD2333,Borrowings,HC item 16,1981-06-30,Component of HC item 16
+14.d.,"Other borrowed money - Total (sum of 14.a, 14.b, 14.c)",BHCT3190,RCFD3190,Borrowings - Total,HC item 16,2001-03-31,Must equal Schedule HC item 16
+15,"Does the holding company sell private label or third-party mutual funds and annuities? (1=Yes, 0=No)",BHCKB569,RCFDB569,Indicator,-,2001-03-31,Yes/No indicator
+16,Assets under management in proprietary mutual funds and annuities,BHCKB570,RCFDB570,AUM,-,2001-03-31,Dollar amount
+17,"Holds nonfinancial equity investments within SBIC/4(c)(6)/4(c)(7)/merchant-banking/Reg K authority? (1=Yes, 0=No)",BHCKC161,-,Indicator,-,2001-09-30,Yes/No indicator; gating question for FR Y-12
+18,"Aggregate nonfinancial equity investments >= lesser of $100M or 10% of Tier 1 capital? (1=Yes, 0=No)",BHCKC159,-,Indicator,-,2001-09-30,Yes/No indicator; gating question for FR Y-12
+19.a.,"Sold or liquidated any nonfinancial equity investment since prior period? (1=Yes, 0=No)",BHCKC700,-,Indicator,-,2005-03-31,Yes/No indicator; not required if filing FR Y-12
+19.b.,"Manage any nonfinancial equity investments for the benefit of others? (1=Yes, 0=No)",BHCKC701,-,Indicator,-,2005-03-31,Yes/No indicator
+20.a.,Broker-dealer subsidiaries (4(k)(4)(E)) - Net assets,BHCKC252,-,Broker-Dealer,-,2002-03-31,Completed by financial holding companies only
+20.b.(1),"Broker-dealer subsidiaries - Due from the holding company (parent only), gross",BHCK4832,-,Broker-Dealer,-,2003-03-31,Intercompany receivable
+20.b.(2),"Broker-dealer subsidiaries - Due from subsidiary banks of the holding company, gross",BHCK4833,-,Broker-Dealer,-,2003-03-31,Intercompany receivable
+20.b.(3),"Broker-dealer subsidiaries - Due from nonbank subsidiaries of the holding company, gross",BHCK4834,-,Broker-Dealer,-,2003-03-31,Intercompany receivable
+20.c.(1),"Broker-dealer subsidiaries - Due to holding company (parent only), gross",BHCK5041,-,Broker-Dealer,-,2003-03-31,Intercompany payable
+20.c.(2),"Broker-dealer subsidiaries - Due to subsidiary banks of the holding company, gross",BHCK5043,-,Broker-Dealer,-,2003-03-31,Intercompany payable
+20.c.(3),"Broker-dealer subsidiaries - Due to nonbank subsidiaries of the holding company, gross",BHCK5045,-,Broker-Dealer,-,2003-03-31,Intercompany payable
+20.d.,Broker-dealer subsidiaries - Intercompany liabilities (20.c) qualifying as subordinated to general creditors,BHCK5047,-,Broker-Dealer,-,2003-03-31,Subordinated portion of 20.c balances
+21,"Net assets of subsidiaries in insurance/reinsurance underwriting (4(k)(4)(B), GLBA)",BHCKC253,-,Insurance Underwriting,-,2002-03-31,Financial holding companies only
+22,Address (URL) for the reporting holding company's web page displaying risk disclosures,TEXTC497,-,Text Item,-,2004-03-31,Text field; $30B+ asset filers
+23.a.,Secured liabilities - Federal funds purchased in domestic offices that are secured,BHCKF064,RCONF064,Secured Liabilities,HC item 14.a,2006-09-30,Portion of HC item 14.a that is secured
+23.b.,Secured liabilities - 'Other borrowings' that are secured,BHCKF065,RCFDF065,Secured Liabilities,HC-M item 14.d,2006-09-30,Portion of HC-M item 14.d that is secured
+24.a.,U.S. Treasury Capital Purchase Program - Senior perpetual preferred stock or similar items,BHCKG234,-,CPP,-,2009-03-31,TARP CPP issuances
+24.b.,U.S. Treasury Capital Purchase Program - Warrants to purchase common stock or similar items,BHCKG235,-,CPP,-,2009-03-31,TARP CPP warrants

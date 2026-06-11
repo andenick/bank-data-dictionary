@@ -2,7 +2,7 @@
 
 > **Master index for navigating the complete regulatory data dictionary**
 >
-> Version 6.0 | Updated: 2026-06-09
+> Version 8.0 | Updated: 2026-06-11
 
 ---
 
@@ -24,6 +24,7 @@
 | Build automated pipelines | [JSON Schemas](#json-schemas-for-ai-agents) |
 | Map Y-9C to Call Report | [json/cross_form_mapping.json](../json/cross_form_mapping.json) |
 | See what adds up to what | [RECONCILIATION_HIERARCHY.md](RECONCILIATION_HIERARCHY.md) |
+| See which identities are empirically confirmed (208M filings) | [EMPIRICAL_VALIDATION.md](EMPIRICAL_VALIDATION.md) · [registry csv](../csv/RELATIONSHIP_REGISTRY.csv) |
 | Check temporal coverage & vintages | [COVERAGE_PROVENANCE.md](COVERAGE_PROVENANCE.md) |
 
 > **New in v6.0:** the dictionary now spans the full U.S. bank-data universe (Federal Reserve, FFIEC-joint, FDIC, NCUA, OCC, SEC, CFPB), not just FR Y-9C. Start at [COLLECTIONS_CATALOG.md](COLLECTIONS_CATALOG.md). Companion data-access package: **[FreeNIC](https://github.com/andenick/FreeNIC)**.
@@ -36,20 +37,28 @@
 
 | Schedule | CSV Data | Documentation Guide | JSON Schema | Key MDRM |
 |----------|----------|---------------------|-------------|----------|
-| **HC** - Balance Sheet | [HC_BALANCE_SHEET.csv](../csv/HC_BALANCE_SHEET.csv) | [HC_BALANCE_SHEET_GUIDE.md](HC_BALANCE_SHEET_GUIDE.md) | [schedule_schemas.json#HC](../json/schedule_schemas.json) | BHCT2170 |
-| **HC-B** - Securities | [HC_B_SECURITIES.csv](../csv/HC_B_SECURITIES.csv) | [HC_B_SECURITIES_GUIDE.md](HC_B_SECURITIES_GUIDE.md) | [schedule_schemas.json#HC-B](../json/schedule_schemas.json) | BHCT1773 |
+| **HI** - Income Statement | [HI_INCOME_STATEMENT.csv](../csv/HI_INCOME_STATEMENT.csv) | [HI_INCOME_STATEMENT_GUIDE.md](HI_INCOME_STATEMENT_GUIDE.md) | [schedule_schemas.json#HI](../json/schedule_schemas.json) | BHCK4340 |
+| **HI-A** - Changes in Equity Capital | [HI_A_EQUITY_CHANGES.csv](../csv/HI_A_EQUITY_CHANGES.csv) | [HI_A_EQUITY_CHANGES_GUIDE.md](HI_A_EQUITY_CHANGES_GUIDE.md) | - | BHCK3210 |
+| **HI-B** - Charge-Offs & Allowance | [HI_B_CHARGEOFFS.csv](../csv/HI_B_CHARGEOFFS.csv) | [HI_B_CHARGEOFFS_GUIDE.md](HI_B_CHARGEOFFS_GUIDE.md) | - | BHCK4635 |
+| **HI-C** - ALLL Disaggregation | [HI_C_ALLOWANCE.csv](../csv/HI_C_ALLOWANCE.csv) | [HI_C_ALLOWANCE_GUIDE.md](HI_C_ALLOWANCE_GUIDE.md) | - | Various |
+| **HC** - Balance Sheet | [HC_BALANCE_SHEET.csv](../csv/HC_BALANCE_SHEET.csv) | [HC_BALANCE_SHEET_GUIDE.md](HC_BALANCE_SHEET_GUIDE.md) | [schedule_schemas.json#HC](../json/schedule_schemas.json) | BHCK2170 |
+| **HC-B** - Securities | [HC_B_SECURITIES.csv](../csv/HC_B_SECURITIES.csv) | [HC_B_SECURITIES_GUIDE.md](HC_B_SECURITIES_GUIDE.md) | [schedule_schemas.json#HC-B](../json/schedule_schemas.json) | BHCK1773 |
 | **HC-C** - Loans | [HC_C_LOANS.csv](../csv/HC_C_LOANS.csv) | [HC_C_LOANS_GUIDE.md](HC_C_LOANS_GUIDE.md) | [schedule_schemas.json#HC-C](../json/schedule_schemas.json) | BHCKB529 |
 | **HC-D** - Trading | [HC_D_TRADING_ASSETS.csv](../csv/HC_D_TRADING_ASSETS.csv) | [HC_D_TRADING_GUIDE.md](HC_D_TRADING_GUIDE.md) | [schedule_schemas.json#HC-D](../json/schedule_schemas.json) | BHCT3545 |
-| **HC-F** - Other Assets | [HC_F_OTHER_ASSETS.csv](../csv/HC_F_OTHER_ASSETS.csv) | [HC_F_OTHER_ASSETS_GUIDE.md](HC_F_OTHER_ASSETS_GUIDE.md) | - | BHCT2160 |
+| **HC-E** - Deposits | [HC_E_DEPOSITS.csv](../csv/HC_E_DEPOSITS.csv) | [HC_E_DEPOSITS_GUIDE.md](HC_E_DEPOSITS_GUIDE.md) | - | BHDM6631 |
+| **HC-F** - Other Assets | [HC_F_OTHER_ASSETS.csv](../csv/HC_F_OTHER_ASSETS.csv) | [HC_F_OTHER_ASSETS_GUIDE.md](HC_F_OTHER_ASSETS_GUIDE.md) | - | BHCK2160 |
 | **HC-G** - Other Liabilities | [HC_G_OTHER_LIABILITIES.csv](../csv/HC_G_OTHER_LIABILITIES.csv) | [HC_G_OTHER_LIABILITIES_GUIDE.md](HC_G_OTHER_LIABILITIES_GUIDE.md) | - | BHCK2750 |
-| **HC-H** - Interest Sensitivity | [HC_H_INTEREST_SENSITIVITY.csv](../csv/HC_H_INTEREST_SENSITIVITY.csv) | [HC_H_INTEREST_SENSITIVITY_GUIDE.md](HC_H_INTEREST_SENSITIVITY_GUIDE.md) | - | Various |
+| **HC-H** - Interest Sensitivity | [HC_H_INTEREST_SENSITIVITY.csv](../csv/HC_H_INTEREST_SENSITIVITY.csv) | [HC_H_INTEREST_SENSITIVITY_GUIDE.md](HC_H_INTEREST_SENSITIVITY_GUIDE.md) | - | BHCK3197 |
+| **HC-I** - Insurance | [HC_I_INSURANCE.csv](../csv/HC_I_INSURANCE.csv) | [HC_I_INSURANCE_GUIDE.md](HC_I_INSURANCE_GUIDE.md) | - | Various |
 | **HC-K** - Quarterly Averages | [HC_K_QUARTERLY_AVERAGES.csv](../csv/HC_K_QUARTERLY_AVERAGES.csv) | [HC_K_QUARTERLY_AVERAGES_GUIDE.md](HC_K_QUARTERLY_AVERAGES_GUIDE.md) | - | Various |
 | **HC-L** - Derivatives | [HC_L_DERIVATIVES.csv](../csv/HC_L_DERIVATIVES.csv) | [HC_L_DERIVATIVES_GUIDE.md](HC_L_DERIVATIVES_GUIDE.md) | [schedule_schemas.json#HC-L](../json/schedule_schemas.json) | BHCK3450 |
+| **HC-M** - Memoranda | [HC_M_MEMORANDA.csv](../csv/HC_M_MEMORANDA.csv) | [HC_M_MEMORANDA_GUIDE.md](HC_M_MEMORANDA_GUIDE.md) | - | Various |
 | **HC-N** - Past Due | [HC_N_PAST_DUE.csv](../csv/HC_N_PAST_DUE.csv) | [HC_N_PAST_DUE_GUIDE.md](HC_N_PAST_DUE_GUIDE.md) | - | BHCK1403 |
+| **HC-P** - Mortgage Banking | [HC_P_MORTGAGE_BANKING.csv](../csv/HC_P_MORTGAGE_BANKING.csv) | [HC_P_MORTGAGE_BANKING_GUIDE.md](HC_P_MORTGAGE_BANKING_GUIDE.md) | - | Various |
 | **HC-Q** - Fair Value | [HC_Q_FAIR_VALUE.csv](../csv/HC_Q_FAIR_VALUE.csv) | [HC_Q_FAIR_VALUE_GUIDE.md](HC_Q_FAIR_VALUE_GUIDE.md) | - | Various |
 | **HC-R** - Capital | [HC_R_CAPITAL.csv](../csv/HC_R_CAPITAL.csv) | [HC_R_CAPITAL_GUIDE.md](HC_R_CAPITAL_GUIDE.md) | [schedule_schemas.json#HC-R](../json/schedule_schemas.json) | BHCAP859 |
 | **HC-S** - Securitization | [HC_S_SECURITIZATION.csv](../csv/HC_S_SECURITIZATION.csv) | [HC_S_SECURITIZATION_GUIDE.md](HC_S_SECURITIZATION_GUIDE.md) | - | Various |
-| **HI** - Income Statement | [HI_INCOME_STATEMENT.csv](../csv/HI_INCOME_STATEMENT.csv) | [HI_INCOME_STATEMENT_GUIDE.md](HI_INCOME_STATEMENT_GUIDE.md) | [schedule_schemas.json#HI](../json/schedule_schemas.json) | BHCT4340 |
+| **HC-V** - Variable Interest Entities | [HC_V_VIES.csv](../csv/HC_V_VIES.csv) | [HC_V_VIES_GUIDE.md](HC_V_VIES_GUIDE.md) | - | Various |
 
 ### Call Report Schedules
 
@@ -205,4 +214,4 @@ print(f"CET1 minimum: {capital['cet1']['minimum']}")
 
 ---
 
-*Last updated: 2026-06-09 | Version 6.3*
+*Last updated: 2026-06-11 | Version 8.0*

@@ -216,7 +216,7 @@
       "concept_id": "NET_INCOME",
       "description": "Net income",
       "forms": {
-        "FR_Y9C": {"schedule": "HI", "item": "12", "mdrm": "BHCT4340"},
+        "FR_Y9C": {"schedule": "HI", "item": "14", "mdrm": "BHCT4340", "note": "v8 fix: item was '12'. Per FR Y-9C field spec, HI item 14 (BHCK4340/BHCT4340) = net income attributable to holding company after NCI; item 12 (BHCKG104) is the pre-NCI-split aggregate."},
         "Call_Report_031": {"schedule": "RI", "item": "14", "mdrm": "RIAD4340"},
         "Call_Report_041": {"schedule": "RI", "item": "14", "mdrm": "RIAD4340"},
         "FR_Y14A": {"schedule": "A.1", "item": "Net Income", "mdrm": "N/A"}
@@ -228,7 +228,7 @@
       "concept_id": "NET_INTEREST_INCOME",
       "description": "Net interest income",
       "forms": {
-        "FR_Y9C": {"schedule": "HI", "item": "4", "mdrm": "BHCK4074"},
+        "FR_Y9C": {"schedule": "HI", "item": "3", "mdrm": "BHCK4074", "note": "v8 fix: item was '4'. Current FR Y-9C HI item 3 = net interest income (matches RI item 3)."},
         "Call_Report_031": {"schedule": "RI", "item": "3", "mdrm": "RIAD4074"},
         "Call_Report_041": {"schedule": "RI", "item": "3", "mdrm": "RIAD4074"},
         "FR_Y14A": {"schedule": "A.1", "item": "NII", "mdrm": "N/A"},

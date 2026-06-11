@@ -6,13 +6,13 @@ DERIV_NEG_FV,Derivatives Negative Fair Value,Derivative contracts with gross neg
 TREAS_SECURITIES,U.S. Treasury Securities (Trading),U.S. Treasury securities in trading book,BHCM3531,HC-D,1,RCFD3531,RC-D,1,-,-,-,S,Asset,2008-03-31,9999-12-31,BHCK3531,TRADING_ASSETS_TOTAL,Current MDRM for domestic+foreign
 AGENCY_SECURITIES,Agency Securities (Trading),U.S. Government agency obligations,BHCM3532,HC-D,2,RCFD3532,RC-D,2,-,-,-,S,Asset,2008-03-31,9999-12-31,BHCK3532,TRADING_ASSETS_TOTAL,
 MUNI_SECURITIES,Municipal Securities (Trading),Securities of states and political subdivisions,BHCM3533,HC-D,3,RCFD3533,RC-D,3,-,-,-,S,Asset,2008-03-31,9999-12-31,BHCK3533,TRADING_ASSETS_TOTAL,
-MBS_GNMA,GNMA MBS Pass-Through (Trading),Residential MBS pass-through GNMA,BHCKK197,HC-D,4.a.(1),RCFDK197,RC-D,4.a.(1),-,-,-,S,Asset,2011-03-31,9999-12-31,-,MBS_TOTAL,Residential agency pass-through
-MBS_FNMA_FHLMC,FNMA/FHLMC MBS Pass-Through (Trading),Residential MBS pass-through FNMA/FHLMC,BHCKK198,HC-D,4.a.(2),RCFDK198,RC-D,4.a.(2),-,-,-,S,Asset,2011-03-31,9999-12-31,-,MBS_TOTAL,Residential agency pass-through
-MBS_OTHER_RESI,Other Residential MBS (Trading),All other residential MBS,BHCKK199,HC-D,4.b,RCFDK199,RC-D,4.b,-,-,-,S,Asset,2011-03-31,9999-12-31,-,MBS_TOTAL,Non-agency residential MBS
-MBS_CMBS_AGENCY,Commercial MBS Agency (Trading),Commercial MBS issued by agencies,BHCKK200,HC-D,4.c.(1),RCFDK200,RC-D,4.c.(1),-,-,-,S,Asset,2011-03-31,9999-12-31,-,MBS_TOTAL,FNMA/FHLMC/GNMA commercial MBS
-MBS_CMBS_OTHER,Commercial MBS Other (Trading),Commercial MBS non-agency,BHCKK201,HC-D,4.c.(2),RCFDK201,RC-D,4.c.(2),-,-,-,S,Asset,2011-03-31,9999-12-31,-,MBS_TOTAL,Non-agency commercial MBS
+MBS_RESI_PASSTHROUGH,Residential MBS Pass-Through (Trading),Residential MBS pass-through issued/guaranteed by FNMA/FHLMC/GNMA,BHCKG379,HC-D,4.a,RCFDG379,RC-D,4.a,-,-,-,S,Asset,2018-06-30,9999-12-31,-,TRADING_ASSETS_TOTAL,Agency residential pass-through (v8 fix: prior K197 layout superseded; current HC-D 4.a=G379)
+MBS_RESI_AGENCY_OTHER,Other Residential Agency MBS (Trading),Other residential MBS issued/guaranteed by agencies (CMO/REMIC/stripped),BHCKG380,HC-D,4.b,RCFDG380,RC-D,4.b,-,-,-,S,Asset,2018-06-30,9999-12-31,-,TRADING_ASSETS_TOTAL,Agency residential CMO/REMIC (v8 fix: was K198)
+MBS_OTHER_RESI,Other Residential MBS (Trading),All other residential MBS,BHCKG381,HC-D,4.c,RCFDG381,RC-D,4.c,-,-,-,S,Asset,2018-06-30,9999-12-31,-,TRADING_ASSETS_TOTAL,Non-agency residential MBS (v8 fix: was K199 nonexistent in current form)
+MBS_CMBS_AGENCY,Commercial MBS Agency (Trading),Commercial MBS issued/guaranteed by U.S. Govt agencies,BHCKK197,HC-D,4.d,RCFDK197,RC-D,4.d,-,-,-,S,Asset,2011-03-31,9999-12-31,-,TRADING_ASSETS_TOTAL,Agency commercial MBS (v8 fix: K197 is HC-D 4.d commercial; was mislabeled residential 4.a.(1))
+MBS_CMBS_OTHER,Commercial MBS Other (Trading),All other commercial MBS,BHCKK198,HC-D,4.e,RCFDK198,RC-D,4.e,-,-,-,S,Asset,2011-03-31,9999-12-31,-,TRADING_ASSETS_TOTAL,Non-agency commercial MBS (v8 fix: K198 is HC-D 4.e; was mislabeled residential 4.a.(2))
 STRUCTURED_PRODUCTS,Structured Financial Products (Trading),Structured financial products,BHCKHT62,HC-D,5.a,RCFDHT62,RC-D,5.a,-,-,-,S,Asset,2018-06-30,9999-12-31,-,TRADING_ASSETS_TOTAL,Post-2018 breakout
-OTHER_DEBT_SECURITIES,Other Debt Securities (Trading),Other debt securities including ABS,BHCKK202,HC-D,5.b,RCFDK202,RC-D,5.b,-,-,-,S,Asset,2011-03-31,9999-12-31,-,TRADING_ASSETS_TOTAL,
+OTHER_DEBT_SECURITIES,Other Debt Securities (Trading),All other debt securities,BHCKG386,HC-D,5.b,RCFDG386,RC-D,5.b,-,-,-,S,Asset,2018-06-30,9999-12-31,-,TRADING_ASSETS_TOTAL,All other trading debt securities (v8 fix: was K202 = separate-account life insurance assets)
 LOANS_1_4_FAMILY,1-4 Family Residential Loans (Trading),Loans secured by 1-4 family residential,BHCKHT63,HC-D,6.a,RCFDHT63,RC-D,6.a,-,-,-,S,Asset,2018-06-30,9999-12-31,-,LOANS_TRADING_TOTAL,Post-2018 loan breakout
 LOANS_OTHER_RE,Other Real Estate Loans (Trading),All other loans secured by real estate,BHCKHT64,HC-D,6.b,RCFDHT64,RC-D,6.b,-,-,-,S,Asset,2018-06-30,9999-12-31,-,LOANS_TRADING_TOTAL,Post-2018 loan breakout
 LOANS_CI,C&I Loans (Trading),Commercial and industrial loans,BHCKF614,HC-D,6.c,RCFDF614,RC-D,6.c,-,-,-,S,Asset,2008-03-31,9999-12-31,-,LOANS_TRADING_TOTAL,
@@ -84,11 +84,11 @@ CET1_CAPITAL,Common Equity Tier 1 Capital,CET1 capital,BHCAP859,HC-R,Part I-31,R
 SECURITIES_AFS,Available-for-Sale Securities,Securities held available for sale,BHCT1773,HC-B,M1,RCFD1773,RC-B,M1,-,-,-,M,Asset,1994-03-31,9999-12-31,-,-,
 SECURITIES_HTM,Held-to-Maturity Securities,Securities held to maturity,BHCKJJ34,HC-B,M2,RCFDJJ34,RC-B,M2,-,-,-,M,Asset,2014-03-31,9999-12-31,-,-,
 NET_INCOME,Net Income,Net income (year-to-date),BHCT4340,HI,14,RIAD4340,RI,14,-,-,-,E,Income,1976-03-31,9999-12-31,-,-,VERIFIED item 14: RIAD4340 'must equal Schedule RI item 14' (net income attributable to bank/holding company); item 12 is the pre-NCI-split aggregate (code G104) so the 'should be item 12' claim is refuted
-PROVISION_LLP,Provision for Loan Losses,Provision for loan and lease losses,BHCT4230,HI,4,RIAD4230,RI,4,-,-,-,A,Expense,1976-03-31,9999-12-31,-,-,
+PROVISION_LLP,Provision for Credit Losses,Provision for credit losses on financial assets (CECL),BHCKJJ33,HI,4,RIADJJ33,RI,4,-,-,-,A,Expense,2021-01-01,9999-12-31,BHCT4230,-,v8 fix: was BHCT4230/RIAD4230 (pre-CECL provision for loan & lease losses); current HI/RI item 4 = JJ33 provision for credit losses (ASU 2016-13)
 NPL_TOTAL,Total Nonperforming Loans,Total nonperforming loans,BHCK1403,HC-N,M7.a,RCFD1403,RC-N,M7.a,-,-,-,A,Asset,1976-03-31,9999-12-31,-,-,
 LOANS_NET,Loans and Leases Net,Loans and leases net of unearned income,BHCTB528,HC,4.b,RCFDB528,RC,4.b,-,-,-,A,Asset,1976-03-31,9999-12-31,-,-,
-CASH_BALANCES,Cash and Balances Due,Cash and balances due from depository institutions,BHCK0010,HC,1,RCFD0081,RC,1,-,-,-,L,Asset,1976-03-31,9999-12-31,-,-,
-FED_FUNDS_SOLD,Federal Funds Sold,Federal funds sold and securities purchased under resale agreements,BHCKC225,HC,3,RCFDB987,RC,3,-,-,-,L,Asset,1976-03-31,9999-12-31,-,-,
+CASH_BALANCES,Cash and Balances Due,Cash and balances due from depository institutions,BHCK0010,HC,1,RCFD0010,RC,1,-,-,-,L,Asset,1976-03-31,9999-12-31,-,-,v8 fix: Call was RCFD0081 (noninterest-bearing balances; RC item 1.a only); RCFD0010 is the full RC item-1 line matching Y-9C BHCK0010
+FED_FUNDS_SOLD,Federal Funds Sold,Federal funds sold and securities purchased under resale agreements,BHCKC225,HC,3,-,RC,3,-,-,-,L,Asset,1976-03-31,9999-12-31,-,-,v8 fix: Call had RCFDB987 (fed funds only; FFIEC 002). On FFIEC 031 RC item 3 is a caption split into 3.a fed funds (RCONB987) + 3.b resales (RCFDB989) with no atomic combined RCFD code; Y-9C BHCKC225 is the combined consolidated code
 ALLOWANCE_LLP,Allowance for Loan Losses,Allowance for loan and lease losses,BHCT3123,HC,4.c,RCFD3123,RC,4.c,-,-,-,A,Contra-Asset,1976-03-31,9999-12-31,-,-,
 GOODWILL,Goodwill,Goodwill,BHCK3163,HC,10.a,RCFD3163,RC,10.a,-,-,-,M,Asset,1976-03-31,9999-12-31,-,-,
 INTANGIBLE_ASSETS,Other Intangible Assets,Other intangible assets,BHCK0426,HC,10.b,RCFD0426,RC,10.b,-,-,-,M,Asset,2002-03-31,9999-12-31,-,-,
@@ -98,4 +98,4 @@ OTHER_BORROWED_MONEY,Other Borrowed Money,Other borrowed money,BHCT3190,HC,16,RC
 SUBORDINATED_DEBT,Subordinated Notes and Debentures,Subordinated notes and debentures,BHCK4062,HC,19,RCFD3200,RC,19,-,-,-,C,Liability,1976-03-31,9999-12-31,-,-,
 INTEREST_INCOME_LOANS,Interest Income on Loans,Interest and fee income on loans,BHCK4010,HI,1.a,RIAD4010,RI,1.a,-,-,-,E,Income,1976-03-31,9999-12-31,-,-,
 INTEREST_EXPENSE_DEPOSITS,Interest Expense on Deposits,Interest expense on deposits,RIAD4170,HI,2.a,RIAD4170,RI,2.a,-,-,-,E,Expense,1976-03-31,9999-12-31,-,-,
-TRADING_REVENUE,Trading Revenue,Trading revenue,BHCKA220,HI-M,8.a,RIADA220,RI-M,8.a,-,-,MR1,S,Income,2001-03-31,9999-12-31,-,-,Net gains/losses on trading
+TRADING_REVENUE,Trading Revenue,Trading revenue,BHCKA220,HI,5.c,RIADA220,RI,5.c,-,-,MR1,S,Income,2001-03-31,9999-12-31,-,-,Net gains/losses on trading; HI/RI item 5.c (under noninterest income) (v8 fix: was HI-M/8.a)

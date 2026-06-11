@@ -1,46 +1,115 @@
 line_number,item_description,mdrm_code,call_mdrm,category,reconciliation,start_date,notes
-1,Interest income,BHCK4107,RIAD4107,Interest Income,Sum of 1.a-1.f,1976-03-31,Total interest and fee income
-1.a,Interest and fees on loans,BHCK4010,RIAD4010,Interest Income - Loans,Component of Item 1,1976-03-31,
-1.b,Interest income on balances due,BHCK4115,RIAD4115,Interest Income - Balances,Component of Item 1,1976-03-31,
-1.c,Interest on securities,BHCK4107,RIAD4107,Interest Income - Securities,Component of Item 1,1976-03-31,
-1.c.(1),US Treasury/Agency,BHCKB488,RIADB488,Interest Income - Treasury,Component of Item 1.c,1997-03-31,
-1.c.(2),MBS,BHCKB489,RIADB489,Interest Income - MBS,Component of Item 1.c,1997-03-31,
-1.c.(3),Other securities,BHCK4060,RIAD4060,Interest Income - Other Sec,Component of Item 1.c,1976-03-31,
-1.d,Interest on federal funds sold,BHCK4020,RIAD4020,Interest Income - Fed Funds,Component of Item 1,1976-03-31,
-1.e,Interest on trading assets,BHCK4069,RIAD4069,Interest Income - Trading,Component of Item 1,1995-03-31,
-1.f,Other interest income,BHCKB570,RIAD4518,Interest Income - Other,Component of Item 1,1997-03-31,
-2,Interest expense,BHCK4073,RIAD4073,Interest Expense,Sum of 2.a-2.e,1976-03-31,Total interest expense
-2.a,Interest on deposits,RIAD4170,RIAD4170,Interest Expense - Deposits,Component of Item 2,1976-03-31,
-2.b,Interest on fed funds purchased,BHCK4180,RIAD4180,Interest Expense - Fed Funds,Component of Item 2,1976-03-31,
-2.c,Interest on trading liabilities,BHCK4185,RIAD4185,Interest Expense - Trading,Component of Item 2,1995-03-31,
-2.d,Interest on borrowed money,RIAD4190,RIAD4200,Interest Expense - Borrowings,Component of Item 2,1976-03-31,
-2.e,Interest on subordinated debt,RIAD4200,RIAD4190,Interest Expense - Sub Debt,Component of Item 2,1976-03-31,
-3,Net interest income,BHCK4074,RIAD4074,NII,Item 1 minus Item 2,1976-03-31,Key profitability metric
-4,Provision for loan and lease losses,BHCT4230,RIAD4230,Provision,N/A,1976-03-31,Credit cost
-5,Net interest income after provision,-,-,NII after Provision,Item 3 minus Item 4,1976-03-31,Computed line (item 3 minus item 4); no MDRM code on FR Y-9C or Call
-6,Noninterest income,BHCK4079,RIAD4079,Noninterest Income,Sum of 6.a-6.i,1976-03-31,Fee and other income
-6.a,Service charges on deposits,BHCK4483,RIAD4080,NIR - Service Charges,Component of Item 6,1976-03-31,
-6.b,Trading revenue,BHCKA220,RIADA220,NIR - Trading,Component of Item 6,2001-03-31,Mark-to-market gains/losses
-6.c,Fees from fiduciary activities,BHCK4070,RIAD4070,NIR - Fiduciary,Component of Item 6,1976-03-31,Trust and asset management
-6.d,Investment banking fees,BHCKC886,RIADC886,NIR - Investment Banking,Component of Item 6,2001-03-31,Underwriting; M&A advisory
-6.e,Venture capital revenue,BHCKB491,RIADB491,NIR - VC,Component of Item 6,1997-03-31,
-6.f,Net servicing fees,BHCKB492,RIADB492,NIR - Servicing,Component of Item 6,1997-03-31,Mortgage and other servicing
-6.g,Securitization income,BHCKB493,RIADB493,NIR - Securitization,Component of Item 6,1997-03-31,Gain on sale
-6.h,Insurance commissions and fees,BHCKB494,RIAD4840,NIR - Insurance,Component of Item 6,1997-03-31,
-6.i,Other noninterest income,BHCK4076,RIAD4076,NIR - Other,Component of Item 6,1976-03-31,
-7,Noninterest expense,BHCK4093,RIAD4093,Noninterest Expense,Sum of 7.a-7.g,1976-03-31,Operating costs
-7.a,Salaries and employee benefits,BHCK4135,RIAD4135,NIE - Compensation,Component of Item 7,1976-03-31,Largest expense category
-7.b,Occupancy expense,BHCK4217,RIAD4217,NIE - Occupancy,Component of Item 7,1976-03-31,
-7.c,Premises and equipment,BHCKF556,RIADF556,NIE - Equipment,Component of Item 7,2007-03-31,
-7.d,Amortization of intangibles,BHCKC232,RIADC232,NIE - Amortization,Component of Item 7,2002-03-31,
-7.e,OREO expense,BHCK4230,RIAD4230,NIE - OREO,Component of Item 7,1976-03-31,Foreclosed property costs
-7.f,FDIC assessment,BHCK4146,RIAD4146,NIE - FDIC,Component of Item 7,1976-03-31,Deposit insurance premium
-7.g,Other noninterest expense,BHCK4092,RIAD4092,NIE - Other,Component of Item 7,1976-03-31,
-8,Income before taxes,BHCK4301,RIAD4301,Pre-Tax Income,Item 5 + Item 6 - Item 7,1976-03-31,
-9,Income tax expense,BHCK4302,RIAD4302,Taxes,N/A,1976-03-31,
-10,Income before extraordinary items,BHCK4300,RIAD4300,Income Cont Ops,Item 8 minus Item 9,1976-03-31,
-11,Extraordinary items (net of tax),BHCK4320,RIAD4320,Extraordinary,N/A,1976-03-31,Discontinued since 2015
-12,Net income,BHCT4340,RIAD4340,Net Income,Item 10 + Item 11,1976-03-31,Bottom line
-M1,Cash dividends declared on common stock,BHCK4460,RIAD4460,Memorandum - Dividends,-,1976-03-31,
-M2,Cash dividends declared on preferred stock,BHCK4598,RIAD4461,Memorandum - Dividends,-,1976-03-31,
-M3,Trading revenue by product type,-,-,Memorandum - Trading,-,2001-03-31,See HI-M
+1.a.(1)(a),(a) Loans secured by 1- 4 family residential properties,BHCK4435,RIAD4435,Interest Income - Loans,Component of Item 1.a,2008-03-31,Loans secured by 1-4 family residential
+1.a.(1)(b),(b) All other loans secured by real estate,BHCK4436,RIAD4436,Interest Income - Loans,Component of Item 1.a,1976-03-31,All other loans secured by real estate
+1.a.(1)(c),(c) All other loans,BHCKF821,RIAD4058,Interest Income - Loans,Component of Item 1.a,2008-03-31,All other loans
+1.a.(2),"(2) In foreign offices, Edge and Agreement subsidiaries, and IBFs",BHCK4059,RIAD4059,Interest Income - Loans,Component of Item 1.a,1976-03-31,Loans in foreign offices/Edge/IBFs
+1.b.,b. Income from lease financing receivables,BHCK4065,RIAD4065,Interest Income - Leases,Component of Item 1,1976-03-31,
+1.c.,c. Interest income on balances due from depository institutions,BHCK4115,RIAD4115,Interest Income - Balances,Component of Item 1,1976-03-31,Balances due from depository institutions
+1.d.(1),(1) U.S. Treasury securities and U.S. government agency obligations (excluding mortgage-backed securities),BHCKB488,RIADB488,Interest Income - Securities,Component of Item 1.d,1997-03-31,U.S. Treasury/agency (excl MBS)
+1.d.(2),(2) Mortgage-backed securities,BHCKB489,RIADB489,Interest Income - Securities,Component of Item 1.d,1997-03-31,Mortgage-backed securities
+1.d.(3),(3) All other securities,BHCK4060,RIAD4060,Interest Income - Securities,Component of Item 1.d,1976-03-31,All other securities
+1.e.,e. Interest income from trading assets,BHCK4069,RIAD4069,Interest Income - Trading,Component of Item 1,1995-03-31,
+1.f.,f. Interest income on federal funds sold and securities purchased under agreements to resell,BHCK4020,RIAD4020,Interest Income - Fed Funds,Component of Item 1,1976-03-31,Fed funds sold and reverse repos
+1.g.,g. Other interest income,BHCK4518,RIAD4518,Interest Income - Other,Component of Item 1,1987-09-30,
+1.h.,h. Total interest income (sum of items 1.a through 1.g),BHCK4107,RIAD4107,Interest Income,Sum of items 1.a-1.g,1976-03-31,Total interest income
+2.a.(1)(a),"(a) Time deposits of $250,000 or less",BHCKHK03,RIADHK03,Interest Expense - Deposits,Component of Item 2.a,2017-03-31,"Time deposits of $250,000 or less"
+2.a.(1)(b),"(b) Time deposits of more than $250,000",BHCKHK04,RIADHK04,Interest Expense - Deposits,Component of Item 2.a,2017-03-31,"Time deposits of more than $250,000"
+2.a.(1)(c),(c) Other deposits,BHCK6761,-,Interest Expense - Deposits,Component of Item 2.a,1997-03-31,Other deposits
+2.a.(2),"(2) In foreign offices, Edge and Agreement subsidiaries, and IBFs",BHCK4172,RIAD4172,Interest Expense - Deposits,Component of Item 2.a,1976-03-31,Deposits in foreign offices/Edge/IBFs
+2.b.,b. Expense on federal funds purchased and securities sold under agreements to repurchase,BHCK4180,RIAD4180,Interest Expense - Fed Funds,Component of Item 2,1976-03-31,Fed funds purchased and repos
+2.c.,c. Interest on trading liabilities and other borrowed money (excluding subordinated notes and debentures),BHCK4185,RIAD4185,Interest Expense - Trading/Borrowings,Component of Item 2,1976-03-31,Trading liabilities and other borrowed money (excl sub debt)
+2.d.,d. Interest on subordinated notes and debentures and on mandatory convertible securities,BHCK4397,RIAD4200,Interest Expense - Sub Debt,Component of Item 2,1976-03-31,Subordinated notes/debentures and mandatory convertibles
+2.e.,e. Other interest expense,BHCK4398,-,Interest Expense - Other,Component of Item 2,1976-03-31,
+2.f.,f. Total interest expense (sum of items 2.a through 2.e),BHCK4073,RIAD4073,Interest Expense,Sum of items 2.a-2.e,1976-03-31,Total interest expense
+3.,3. Net interest income (item 1.h minus item 2.f),BHCK4074,RIAD4074,NII,Item 1.h minus item 2.f,1976-03-31,Net interest income
+4.,4. Provision for credit losses on financial assets,BHCKJJ33,RIADJJ33,Provision,N/A,2019-03-31,Provision for credit losses on financial assets (CECL)
+5.a.,a. Income from fiduciary activities,BHCK4070,RIAD4070,NIR - Fiduciary,Component of Item 5,1976-03-31,Income from fiduciary activities
+5.b.,b. Service charges on deposit accounts in domestic offices,BHCK4483,RIAD4483,NIR - Service Charges,Component of Item 5,1976-03-31,Service charges on deposit accounts (domestic offices)
+5.c.,c. Trading revenue,BHCKA220,RIADA220,NIR - Trading,Component of Item 5,2001-03-31,Trading revenue
+5.d.(1),d. (1) Fees and commissions from securities brokerage,BHCKC886,RIADC886,NIR - Securities Brokerage,Component of Item 5.d,2001-03-31,
+5.d.(2),"(2) Investment banking, advisory, and underwriting fees and commissions",BHCKC888,RIADC888,NIR - Investment Banking,Component of Item 5.d,2001-03-31,"Investment banking, advisory, underwriting"
+5.d.(3),(3) Fees and commissions from annuity sales,BHCKC887,RIADC887,NIR - Annuity Sales,Component of Item 5.d,2001-03-31,
+5.d.(4),(4) Underwriting income from insurance and reinsurance activities,BHCKC386,RIADC386,NIR - Insurance Underwriting,Component of Item 5.d,2001-03-31,Insurance and reinsurance underwriting
+5.d.(5),(5) Income from other insurance activities,BHCKC387,RIADC387,NIR - Other Insurance,Component of Item 5.d,2001-03-31,
+5.d.(6),"(6) Fees and commissions from securities brokerage, investment banking, advisory, and underwriting fees and commissions",BHCKKX46,RIADC886,NIR - Securities/IB Combined,Component of Item 5.d,2019-12-31,Combined brokerage/IB/advisory (smaller HCs)
+5.d.(7),(7) Income from insurance activities,BHCKKX47,-,NIR - Insurance Combined,Component of Item 5.d,2019-12-31,Combined insurance activities (smaller HCs)
+5.e.,e. Venture capital revenue,BHCKB491,RIADB491,NIR - VC,Component of Item 5,1997-03-31,Venture capital revenue
+5.f.,f. Net servicing fees,BHCKB492,RIADB492,NIR - Servicing,Component of Item 5,1997-03-31,Net servicing fees
+5.g.,g. Net securitization income,BHCKB493,RIADB493,NIR - Securitization,Component of Item 5,1997-03-31,Net securitization income
+5.i.,i. Net gains (losses) on sales of loans and leases,BHCK8560,RIAD5416,NIR - Loan Sales,Component of Item 5,2001-03-31,Net gains (losses) on sales of loans and leases
+5.j.,j. Net gains (losses) on sales of other real estate owned,BHCK8561,RIAD5415,NIR - OREO Sales,Component of Item 5,2001-03-31,Net gains (losses) on sales of OREO
+5.k.,k. Net gains (losses) on sales of other assets (excluding securities),BHCKB496,RIADB496,NIR - Other Asset Sales,Component of Item 5,2001-03-31,Net gains (losses) on sales of other assets (excl securities)
+5.l.,l. Other noninterest income,BHCKB497,RIADB497,NIR - Other,Component of Item 5,1997-03-31,Other noninterest income
+5.m.,m. Total noninterest income (sum of items 5.a through 5.l),BHCK4079,RIAD4079,Noninterest Income,Sum of items 5.a-5.l,1976-03-31,Total noninterest income
+6.a.,6. a. Realized gains (losses) on held-to-maturity securities,BHCK3521,RIAD3521,Realized Securities Gains,N/A,1994-03-31,Realized gains (losses) on HTM securities
+6.b.,b. Realized gains (losses) on available-for-sale debt securities,BHCK3196,RIAD3196,Realized Securities Gains,N/A,1994-03-31,Realized gains (losses) on AFS debt securities
+7.a.,a. Salaries and employee benefits,BHCK4135,RIAD4135,NIE - Compensation,Component of Item 7,1976-03-31,Salaries and employee benefits
+7.b.,b. Expenses of premises and fixed assets (net of rental income) (excluding salaries and employee benefits and mortgage interest),BHCK4217,RIAD4217,NIE - Occupancy,Component of Item 7,1976-03-31,Premises and fixed assets (net of rental income)
+7.c.(1),c. (1) Goodwill impairment losses,BHCKC216,RIADC216,NIE - Goodwill Impairment,Component of Item 7.c,2002-03-31,
+7.c.(2),(2) Amortization expense and impairment losses for other intangible assets,BHCKC232,RIADC232,NIE - Amortization,Component of Item 7.c,2002-03-31,Amortization/impairment of other intangibles
+7.d.,d. Other noninterest expense,BHCK4092,RIAD4092,NIE - Other,Component of Item 7,1976-03-31,Other noninterest expense
+7.e.,e. Total noninterest expense (sum of items 7.a through 7.d),BHCK4093,RIAD4093,Noninterest Expense,Sum of items 7.a-7.d,1976-03-31,Total noninterest expense
+8.a.,"a. Income (loss) before change in net unrealized holding gains (losses) on equity securities not held for trading, applicable income taxes, and discontinued operations (sum of items 3, 5.m, 6.a, 6.b, minus items 4 and 7.e)",BHCKHT69,RIADHT69,Pre-Tax Income,"Sum of items 3,5.m,6.a,6.b minus 4 and 7.e",2018-03-31,"Income before equity-securities holding gains, taxes, discontinued ops"
+8.b.,b. Unrealized holding gains (losses) on equity securities not held for trading,BHCKHT70,RIADHT70,Equity Securities Holding Gains,N/A,2018-03-31,Unrealized holding gains (losses) on equity securities not held for trading
+8.c.,c. Income (loss) before applicable income taxes and discontinued operations (sum of items 8.a and 8.b),BHCK4301,RIAD4301,Pre-Tax Income,Sum of items 8.a and 8.b,1976-03-31,Income before taxes and discontinued operations
+9.,9. Applicable income taxes (foreign and domestic),BHCK4302,RIAD4302,Taxes,N/A,1976-03-31,Applicable income taxes (foreign and domestic)
+10.,10. Income (loss) before discontinued operations (item 8 minus item 9),BHCK4300,RIAD4300,Income Before Discontinued Ops,Item 8 minus item 9,1976-03-31,
+11.,"11. Discontinued operations, net of applicable income taxes",BHCKFT28,RIADFT28,Discontinued Operations,N/A,2016-09-30,"Discontinued operations, net of taxes (replaced extraordinary items)"
+12.,12. Net income (loss) attributable to holding company and noncontrolling (minority) interests (sum of items 10 and 11),BHCKG104,RIADG104,Net Income (incl minority),Sum of items 10 and 11,2009-03-31,Net income attributable to HC and noncontrolling interests
+13.,"13. LESS: Net income (loss) attributable to noncontrolling (minority) interests (if net income, report as a positive value; if net loss, report as a negative value)",BHCKG103,RIADG103,LESS: Minority Interest,N/A,2009-03-31,Net income attributable to noncontrolling (minority) interests
+14.,14. Net income (loss) attributable to holding company (item 12 minus item 13),BHCK4340,RIAD4340,Net Income,Item 12 minus item 13,1976-03-31,Net income attributable to holding company (bottom line)
+M.1.,1. Net interest income (item 3 above) on a fully taxable equivalent basis,BHCK4519,-,Memo - FTE NII,-,1976-03-31,Net interest income on fully taxable equivalent basis
+M.2.,"2. Net income before applicable income taxes, and discontinued operations (item 8.c. above) on a fully taxable equivalent basis",BHCK4592,-,Memo - FTE Pre-Tax,-,1976-03-31,Pre-tax income on fully taxable equivalent basis
+M.3.,"3. Income on tax-exempt loans and leases to states and political subdivisions in the U.S. (included in Schedule HI, items 1.a and 1.b, above)",BHCK4313,RIAD4313,Memo - Tax-Exempt Loans,-,1976-03-31,Income on tax-exempt loans/leases to states/political subdivisions
+M.4.,"4. Income on tax-exempt securities issued by states and political subdivisions in the U.S. (included in Schedule HI, item 1.d.(3), above)",BHCK4507,RIAD4507,Memo - Tax-Exempt Securities,-,1976-03-31,Income on tax-exempt securities of states/political subdivisions
+M.5.,5. Number of full-time equivalent employees at end of current period (round to nearest whole number),BHCK4150,RIAD4150,Memo - FTE Employees,-,1976-03-31,Number of full-time equivalent employees
+M.6.a.,a. Income and fees from the printing and sale of checks,BHCKC013,RIADC013,Memo - NIR Detail,-,1997-03-31,Income/fees from printing and sale of checks
+M.6.b.,b. Earnings on/increase in value of cash surrender value of life insurance,BHCKC014,RIADC014,Memo - NIR Detail,-,1997-03-31,Earnings on cash surrender value of life insurance
+M.6.c.,c. Income and fees from automated teller machines (ATMs),BHCKC016,RIADC016,Memo - NIR Detail,-,1997-03-31,Income/fees from ATMs
+M.6.d.,d. Rent and other income from other real estate owned,BHCK4042,RIAD4042,Memo - NIR Detail,-,1976-03-31,Rent and other income from OREO
+M.6.e.,e. Safe deposit box rent,BHCKC015,RIADC015,Memo - NIR Detail,-,1997-03-31,Safe deposit box rent
+M.6.f.,f. Bank card and credit card interchange fees,BHCKF555,RIADF555,Memo - NIR Detail,-,2007-03-31,Bank/credit card interchange fees
+M.6.g.,g. Income and fees from wire transfers,BHCKT047,RIADT047,Memo - NIR Detail,-,2013-03-31,Income/fees from wire transfers
+M.6.h.,h. Amount,BHCK8562,-,Memo - NIR Detail,-,1997-03-31,Other (description + amount)
+M.6.i.,i. Amount,BHCK8563,-,Memo - NIR Detail,-,1997-03-31,Other (description + amount)
+M.6.j.,j. Amount,BHCK8564,-,Memo - NIR Detail,-,1997-03-31,Other (description + amount)
+M.7.a.,a. Data processing expenses,BHCKC017,RIADC017,Memo - NIE Detail,-,2000-03-31,Data processing expenses
+M.7.b.,b. Advertising and marketing expenses,BHCK0497,RIAD0497,Memo - NIE Detail,-,2000-03-31,Advertising and marketing expenses
+M.7.c.,c. Directors' fees,BHCK4136,RIAD4136,Memo - NIE Detail,-,1976-03-31,Directors fees
+M.7.d.,"d. Printing, stationery, and supplies",BHCKC018,RIADC018,Memo - NIE Detail,-,2000-03-31,"Printing, stationery, and supplies"
+M.7.e.,e. Postage,BHCK8403,RIAD8403,Memo - NIE Detail,-,2000-03-31,Postage
+M.7.f.,f. Legal fees and expenses,BHCK4141,RIAD4141,Memo - NIE Detail,-,1976-03-31,Legal fees and expenses
+M.7.g.,g. FDIC deposit insurance assessments,BHCK4146,RIAD4146,Memo - NIE Detail,-,1976-03-31,FDIC deposit insurance assessments
+M.7.h.,h. Accounting and auditing expenses,BHCKF556,RIADF556,Memo - NIE Detail,-,2007-03-31,Accounting and auditing expenses
+M.7.i.,i. Consulting and advisory expenses,BHCKF557,RIADF557,Memo - NIE Detail,-,2007-03-31,Consulting and advisory expenses
+M.7.j.,j. Automated teller machine (ATM) and interchange expenses,BHCKF558,RIADF558,Memo - NIE Detail,-,2007-03-31,ATM and interchange expenses
+M.7.k.,k. Telecommunications expenses,BHCKF559,RIADF559,Memo - NIE Detail,-,2007-03-31,Telecommunications expenses
+M.7.l.,l. Other real estate owned expenses,BHCKY923,RIADY923,Memo - NIE Detail,-,2007-03-31,Other real estate owned expenses
+M.7.m.,"m. Insurance expenses (not included in employee expenses, premises and fixed assets expenses, and other real estate owned expenses)",BHCKY924,RIADY924,Memo - NIE Detail,-,2007-03-31,Insurance expenses (not in other categories)
+M.7.n,n. Amount,BHCK8565,-,Memo - NIE Detail,-,2007-03-31,Other (description + amount)
+M.7.o.,o. Amount,BHCK8566,-,Memo - NIE Detail,-,2007-03-31,Other (description + amount)
+M.7.p.,p. Amount,BHCK8567,-,Memo - NIE Detail,-,2007-03-31,Other (description + amount)
+M.8.a.(1),a. (1) Amount,BHCKFT29,RIADFT29,Memo - Extraordinary Detail,-,2016-09-30,Discontinued operations detail (description + amount)
+M.8.a.(2),(2) Applicable income tax effect,BHCKFT30,RIADFT30,Memo - Extraordinary Detail,-,2016-09-30,Applicable income tax effect
+M.8.b.(1),b. (1) Amount,BHCKFT31,RIADFT31,Memo - Extraordinary Detail,-,2016-09-30,Discontinued operations detail (description + amount)
+M.8.b.(2),(2) Applicable income tax effect,BHCKFT32,RIADFT32,Memo - Extraordinary Detail,-,2016-09-30,Applicable income tax effect
+M.9.a.,a. Interest rate exposures,BHCK8757,RIAD8757,Memo - Trading Revenue,Ties to Item 5.c,1995-03-31,Interest rate exposures
+M.9.b.,b. Foreign exchange exposures,BHCK8758,RIAD8758,Memo - Trading Revenue,Ties to Item 5.c,1995-03-31,Foreign exchange exposures
+M.9.c.,c. Equity security and index exposures,BHCK8759,RIAD8759,Memo - Trading Revenue,Ties to Item 5.c,1995-03-31,Equity security and index exposures
+M.9.d.,d. Commodity and other exposures,BHCK8760,RIAD8760,Memo - Trading Revenue,Ties to Item 5.c,1995-03-31,Commodity and other exposures
+M.9.e.,e. Credit exposures,BHCKF186,RIADF186,Memo - Trading Revenue,Ties to Item 5.c,2007-03-31,Credit exposures
+M.9.f,f. Impact on trading revenue of changes in the creditworthiness of the holding company's derivatives counterparties on the holding company's derivative assets (included in Memorandum items 9.a through 9.e above),BHCKK090,RIADK090,Memo - Trading Revenue (CVA),-,2011-03-31,Counterparty creditworthiness impact on derivative assets
+M.9.g.,g. Impact on trading revenue of changes in the creditworthiness of the holding company on the holding company's derivative liabilities (included in Memorandum items 9.a through 9.e above),BHCKK094,RIADK094,Memo - Trading Revenue (DVA),-,2011-03-31,Own creditworthiness impact on derivative liabilities
+M.10.a.,a. Net gains (losses) on credit derivatives held for trading,BHCKC889,RIADC889,Memo - Credit Derivatives,-,2007-03-31,Net gains (losses) on credit derivatives held for trading
+M.10.b.,b. Net gains (losses) on credit derivatives held for purposes other than trading,BHCKC890,RIADC890,Memo - Credit Derivatives,-,2007-03-31,Net gains (losses) on credit derivatives held for other than trading
+M.11.,11. Credit losses on derivatives (see instructions),BHCKA251,RIADA251,Memo - Credit Losses on Derivatives,-,1997-03-31,
+M.12.a.,12. a. Income from the sale and servicing of mutual funds and annuities (in domestic offices),BHCK8431,RIAD8431,Memo - Mutual Funds/Annuities,-,1997-03-31,Income from sale/servicing of mutual funds and annuities (domestic)
+M.12.b.(1),b. (1) Premiums on insurance related to the extension of credit,BHCKC242,-,Memo - Insurance Premiums,-,2001-03-31,Premiums on credit-related insurance
+M.12.b.(2),(2) All other insurance premiums,BHCKC243,-,Memo - Insurance Premiums,-,2001-03-31,All other insurance premiums
+M.12.c.,"c. Benefits, losses, and expenses from insurance-related activities",BHCKB983,-,Memo - Insurance Activities,-,2001-03-31,"Benefits, losses, expenses from insurance activities"
+M.13.,13. Does the reporting holding company have a Subchapter S election in effect for federal income tax purposes for the current tax year?,BHCKA530,RIADA530,Memo - Subchapter S,-,1997-03-31,Subchapter S election indicator
+M.14.a.,a. Net gains (losses) on assets,BHCKF551,RIADF551,Memo - Fair Value Option,-,2007-03-31,Net gains (losses) on assets (fair value option)
+M.14.a.(1),(1) Estimated net gains (losses) on loans attributable to changes in instrument-specific credit risk,BHCKF552,RIADF552,Memo - Fair Value Option,-,2007-03-31,Estimated net gains (losses) on loans (instrument-specific credit risk)
+M.14.b.,b. Net gains (losses) on liabilities,BHCKF553,RIADF553,Memo - Fair Value Option,-,2007-03-31,Net gains (losses) on liabilities (fair value option)
+M.14.b.(1),(1) Estimated net gains (losses) on liabilities attributable to changes in instrument-specific credit risk,BHCKF554,RIADF554,Memo - Fair Value Option,-,2007-03-31,Estimated net gains (losses) on liabilities (instrument-specific credit risk)
+M.15.,15. Stock-based employee compensation expense (net of tax effects) calculated for all awards under the fair value method,BHCKC409,-,Memo - Stock Compensation,-,2006-03-31,Stock-based employee compensation expense (fair value method)

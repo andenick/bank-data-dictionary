@@ -97,8 +97,8 @@ RECON_INC_010,HI,NIM,CALCULATED,HI/HC,4 / Avg Earning Assets,NIM = NII / Average
 # ----------------------------------------------------------------------------
 RECON_OTH_001,HC,11,BHCT2160,HC-F,12,HC.11 = HC-F.12 (Other Assets),cross_schedule,CRITICAL,Other assets must tie HC to HC-F
 RECON_OTH_002,HC-F,12,BHCT2160,HC-F,Sum(1-11),HC-F.12 = Sum(Items 1-11),sum,HIGH,Other assets = sum of HC-F components
-RECON_OTH_003,HC,20,BHCK2750,HC-G,5,HC.20 = HC-G.5 (Other Liabilities),cross_schedule,CRITICAL,Other liabilities must tie HC to HC-G
-RECON_OTH_004,HC-G,5,BHCK2750,HC-G,Sum(2-4),HC-G.5 = Sum(Items 2-4),sum,HIGH,Other liabilities = sum of HC-G components (BHCK3049 + BHCKB557 + BHCKB984); item 1 not applicable
+RECON_OTH_003,HC,20,BHCK2750,HC-G,5,BHCK2750 = BHCT2750 (HC.20 = HC-G.5 Other Liabilities),cross_schedule,CRITICAL,Other liabilities must tie HC (BHCK2750) to HC-G total cell (BHCT2750)
+RECON_OTH_004,HC-G,5,BHCT2750,HC-G,Sum(2-4),BHCT2750 = BHCK3049 + BHCKB557 + BHCKB984,sum,HIGH,HC-G total cell = sum of components; item 1 not applicable
 RECON_OTH_005,HC-F,10,BHCT2143,HC-F,10.a + 10.b,HC-F.10 = HC-F.10.a + HC-F.10.b,sum,MEDIUM,Intangibles = Goodwill + Other intangibles
 
 # ----------------------------------------------------------------------------

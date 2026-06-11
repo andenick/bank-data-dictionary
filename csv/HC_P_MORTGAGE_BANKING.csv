@@ -1,0 +1,10 @@
+line_number,item_description,mdrm_code,call_mdrm,category,ties_to_hc_line,start_date,notes
+1,Retail originations during the quarter of 1-4 family residential mortgage loans for sale,BHCKHT81,RCONHT81,Mortgage Banking - Originations,-,2018-06-30,Excludes loans held for investment; $5B+ filers
+2,Wholesale originations and purchases during the quarter of 1-4 family residential mortgage loans for sale,BHCKHT82,RCONHT82,Mortgage Banking - Originations,-,2018-06-30,Excludes loans held for investment
+3,1-4 family residential mortgages sold during the quarter,BHCKFT04,RCONFT04,Mortgage Banking - Sales,-,2019-03-31,Loans sold during the quarter
+4,1-4 family residential mortgages held for sale or trading at quarter-end,BHCKFT05,RCONFT05,Mortgage Banking - HFS,"HC items 4.a, 5",2019-03-31,Included in Schedule HC items 4.a and 5
+5,"Noninterest income for the quarter from the sale, securitization, and servicing of 1-4 family residential mortgage loans",BHCKHT85,RIADHT85,Mortgage Banking - Income,HI items 5.c/5.f/5.g/5.i,2018-06-30,"Included in Schedule HI items 5.c, 5.f, 5.g, and 5.i"
+6,Repurchases and indemnifications of 1-4 family residential mortgage loans during the quarter,BHCKHT86,RCONHT86,Mortgage Banking - Repurchases,-,2018-06-30,Buybacks and indemnification payments
+7.a.,Representation and warranty reserves for reps/warranties made to U.S. government agencies and government-sponsored agencies,BHCKL191,RCONL191,Mortgage Banking - Rep & Warranty,-,2012-06-30,Reserve component; not separately carried in public BHCF bulk data
+7.b.,Representation and warranty reserves for reps/warranties made to other parties,BHCKL192,RCONL192,Mortgage Banking - Rep & Warranty,-,2012-06-30,Reserve component; not separately carried in public BHCF bulk data
+7.c.,Total representation and warranty reserves (sum of 7.a and 7.b),BHCKM288,RCONM288,Mortgage Banking - Rep & Warranty,-,2012-09-30,Total rep & warranty reserve

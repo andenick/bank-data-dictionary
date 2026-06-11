@@ -35,6 +35,11 @@ SOURCES = [
      "The entity-identifier crosswalk reconciling RSSD, FDIC Cert, LEI and other keys across sources."),
     ("CODE_VALIDATION_AUDIT.csv", "Code Validation Audit",
      "Per-code validation audit recording the status and source files for every MDRM code."),
+    ("RELATIONSHIP_REGISTRY.csv", "Relationship Registry (empirically tested)",
+     "Every reconciliation identity and bound in the dictionary — official FR Y-9C edit checks "
+     "plus curated identities — with its expression, source, and (where machine-testable) the "
+     "empirical verdict, observation count and pass rate against 208 million rows of real "
+     "FR Y-9C filings."),
 ]
 
 

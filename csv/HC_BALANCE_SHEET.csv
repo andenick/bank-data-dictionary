@@ -1,54 +1,56 @@
 line_number,item_description,mdrm_code,call_mdrm,category,asset_liability,ties_to_schedule,ties_to_line,reconciliation_formula,start_date,notes
-1,Cash and balances due from depository institutions,BHCK0010,RCFD0081,Assets - Cash,Asset,,-,Item 1.a + Item 1.b,1976-03-31,Sum of noninterest-bearing and interest-bearing
-1.a,Noninterest-bearing balances and currency and coin,BHCK0081,RCFD0081,Assets - Cash,Asset,,-,-,1976-03-31,Cash on hand plus noninterest-bearing due from
-1.b,Interest-bearing balances,BHCK0395,RCFD0071,Assets - Cash,Asset,,-,-,1976-03-31,Interest-bearing deposits in other institutions
-2,Securities,-,RCFD8641,Assets - Securities,Asset,HC-B,Total,Item 2.a + Item 2.b,1976-03-31,Sum of HTM and AFS; no consolidated BHC code; HC line 2 is a caption (=2.a + 2.b + 2.c); Call total is RCFD8641
-2.a,Held-to-maturity securities (fair value),BHCKJJ34,RCFDJJ34,Assets - Securities,Asset,HC-B,Item 8 Col C,HC-B Item 8 Column C (amortized cost),2014-03-31,HTM at amortized cost
-2.b,Available-for-sale debt securities (fair value),BHCT1773,RCFD1773,Assets - Securities,Asset,HC-B,Item 8 Col B,-,1994-03-31,AFS at fair value
-2.c,Equity securities with readily determinable FV,BHCKJA22,RCFDJJ32,Assets - Securities,Asset,HC-B,M5,-,2018-03-31,Equity securities at FV (CECL)
-3,Federal funds sold and securities purchased under resale agreements,BHCKC225,RCFDB987,Assets - Fed Funds,Asset,,-,Item 3.a + Item 3.b,1976-03-31,
-3.a,Federal funds sold,BHCKB987,RCFDB989,Assets - Fed Funds,Asset,,-,-,1976-03-31,
-3.b,Securities purchased under resale agreements,BHCKB989,RCFDB995,Assets - Fed Funds,Asset,,-,-,1976-03-31,
-4,Loans and lease financing receivables,BHCT2122,RCFD2122,Assets - Loans,Asset,HC-C,-,Item 4.a - Item 4.b - Item 4.c,1976-03-31,Net of unearned income and allowance
-4.a,Loans and leases held for sale,BHCT5369,RCFD5369,Assets - Loans,Asset,HC-C,Item 10,-,1984-03-31,
-4.b,"Loans and leases, net of unearned income",BHCTB528,RCFDB528,Assets - Loans,Asset,HC-C,Item 12,HC-C Sum(Items 1-9) - Item 10,1976-03-31,
-4.c,LESS: Allowance for loan and lease losses,BHCT3123,RCFD3123,Assets - Loans,Contra-Asset,HC-C,Item 11,-,1976-03-31,
-4.d,"Loans and leases, net of unearned income and allowance",BHCKB529,RCFDB529,Assets - Loans,Asset,HC-C,-,Item 4.b - Item 4.c,1976-03-31,Net loans carried on balance sheet
-5,Trading assets,BHCT3545,RCFD3545,Assets - Trading,Asset,HC-D,Item 12,HC-D Sum(Items 1-11),1989-09-30,Equals HC-D Item 12
-5.a,Trading assets in domestic offices,BHDM3545,RCON3545,Assets - Trading,Asset,HC-D,-,-,2008-03-31,Domestic portion only
-6,Premises and fixed assets,BHCK2145,RCFD2145,Assets - Fixed,Asset,HC-F,Item 6,-,1976-03-31,Also in HC-F Item 6
-7,Other real estate owned,BHCT2150,RCFD2150,Assets - OREO,Asset,HC-F,Item 7,-,1976-03-31,Also in HC-F Item 7
-8,Investments in unconsolidated subsidiaries,BHCK2130,RCFD2130,Assets - Investments,Asset,HC-F,Item 8,-,1976-03-31,Also in HC-F Item 8
-9,Direct and indirect investments in real estate ventures,BHCK3656,RCFD5372,Assets - RE Ventures,Asset,HC-F,Item 9,-,1976-03-31,Also in HC-F Item 9
-10,Intangible assets,BHCT2143,RCFD2143,Assets - Intangibles,Asset,,-,Item 10.a + Item 10.b,1976-03-31,
-10.a,Goodwill,BHCK3163,RCFD3163,Assets - Intangibles,Asset,HC-F,Item 10.a,-,1976-03-31,Also in HC-F Item 10.a
-10.b,Other intangible assets,BHCK0426,RCFD0426,Assets - Intangibles,Asset,HC-F,Item 10.b,-,2002-03-31,Also in HC-F Item 10.b
-11,Other assets,BHCT2160,RCFD2160,Assets - Other,Asset,HC-F,Item 12,HC-F Sum(Items 1-11),1976-03-31,Equals HC-F Item 12
-12,Total assets,BHCT2170,RCFD2170,Assets - Total,Asset,,-,Sum(Items 1-11),1976-03-31,Primary size metric
-13,Deposits,-,RCFD2200,Liabilities - Deposits,Liability,,-,Item 13.a + Item 13.b,1976-03-31,Total domestic and foreign; no consolidated BHC code; HC line 13 is a caption (=13.a + 13.b); Call total is RCFD2200
-13.a,In domestic offices,-,RCON2200,Liabilities - Deposits,Liability,,-,Item 13.a.(1) + Item 13.a.(2),1976-03-31,Domestic deposits only; no consolidated BHC code; domestic deposits total = BHDM6631 + BHDM6636; Call is RCON2200
-13.a.(1),Noninterest-bearing,BHDM6631,RCON6631,Liabilities - Deposits,Liability,,-,-,1997-03-31,
-13.a.(2),Interest-bearing,BHDM6636,RCON6636,Liabilities - Deposits,Liability,,-,-,1997-03-31,
-13.b,In foreign offices,-,RCFNB536,Liabilities - Deposits,Liability,,-,Item 13.b.(1) + Item 13.b.(2),1976-03-31,Foreign office deposits; no consolidated BHC code; foreign deposits total is a caption (=13.b.(1) + 13.b.(2)); Call is RCFNB536
-13.b.(1),Noninterest-bearing,BHFN6631,RCFNB537,Liabilities - Deposits,Liability,,-,-,1997-03-31,
-13.b.(2),Interest-bearing,BHCKB538,RCFNB538,Liabilities - Deposits,Liability,,-,-,1997-03-31,
-14,Federal funds purchased and securities sold under repurchase agreements,BHCK2800,RCFDB993,Liabilities - Fed Funds,Liability,,-,Item 14.a + Item 14.b,1976-03-31,
-14.a,Federal funds purchased,BHCKB993,RCONB993,Liabilities - Fed Funds,Liability,,-,-,1976-03-31,
-14.b,Securities sold under repurchase agreements,BHCKB995,RCFDB995,Liabilities - Fed Funds,Liability,,-,-,1976-03-31,
-15,Trading liabilities,BHCT3548,RCFD3548,Liabilities - Trading,Liability,HC-D,Item 15,HC-D Sum(Items 13-14),1989-09-30,Equals HC-D Item 15
-16,Other borrowed money,BHCT3190,RCFD3190,Liabilities - Borrowings,Liability,,-,-,1976-03-31,
-17,NOT APPLICABLE,-,-,Reserved,-,-,-,-,-,Reserved line item
-18,NOT APPLICABLE,-,-,Reserved,-,-,-,-,-,Reserved line item
-19,Subordinated notes and debentures,BHCK4062,RCFD3200,Liabilities - Sub Debt,Liability,,-,-,1976-03-31,Qualifies for Tier 2 capital
-20,Other liabilities,BHCK2750,RCFD2930,Liabilities - Other,Liability,HC-G,Item 5,HC-G Sum(Items 1-4),1976-03-31,Equals HC-G Item 5
-21,Total liabilities,BHCK2948,RCFD2948,Liabilities - Total,Liability,,-,Sum(Items 13-20),1976-03-31,
-22,Minority interest in consolidated subsidiaries,BHCK3000,RCFD3000,Equity - Minority,Equity,,-,-,1976-03-31,Noncontrolling interest
-23,Perpetual preferred stock,BHCK3283,RCFD3838,Equity - Preferred,Equity,,-,-,1976-03-31,
-24,Common stock,BHCK3230,RCFD3230,Equity - Common,Equity,,-,-,1976-03-31,
-25,Surplus,BHCK3240,RCFD3839,Equity - Surplus,Equity,,-,-,1976-03-31,Capital surplus / APIC
-26,Retained earnings,BHCK3247,RCFD3632,Equity - Retained,Equity,,-,-,1976-03-31,
-26.a,Undivided profits,BHCK3247,RCFD3632,Equity - Retained,Equity,,-,-,1976-03-31,
-27,Accumulated other comprehensive income,BHCKB530,RCFDB530,Equity - AOCI,Equity,,-,-,1998-03-31,AOCI includes unrealized gains/losses
-27.a,AOCI on AFS securities,BHCK8434,RCFD8434,Equity - AOCI,Equity,,-,-,1998-03-31,Net unrealized holding gains/losses
-28,Total equity capital,BHCT3210,RCFD3210,Equity - Total,Equity,,-,Sum(Items 23-27),1976-03-31,
-29,"Total liabilities, minority interest, and equity capital",BHCK3300,RCFD3300,Total,Total,,-,Item 21 + Item 22 + Item 28,1976-03-31,Must equal Item 12
+1,Cash and balances due from depository institutions,-,RCFD0081,Assets - Cash,Asset,,-,Item 1.a + Item 1.b,-,Caption on current form; no consolidated BHC total code (former BHCK0010 ended 2014-12-31); = 1.a + 1.b.(1) + 1.b.(2)
+1.a,Noninterest-bearing balances and currency and coin,BHCK0081,RCFD0081,Assets - Cash,Asset,,-,-,1981-06-30,Cash on hand plus noninterest-bearing due from
+1.b.(1),Interest-bearing balances in U.S. offices,BHCK0395,RCON0071,Assets - Cash,Asset,,-,-,1981-06-30,Interest-bearing balances in U.S. offices
+1.b.(2),"Interest-bearing balances in foreign offices, Edge and Agreement subsidiaries, and IBFs",BHCK0397,-,Assets - Cash,Asset,,-,-,1981-06-30,Interest-bearing balances in foreign offices/Edge/IBFs
+2,Securities,-,RCFD8641,Assets - Securities,Asset,HC-B,Total,Item 2.a + Item 2.b + Item 2.c,-,Caption; no consolidated BHC code; HC line 2 = 2.a + 2.b + 2.c; Call total = RCFD8641
+2.a,"Held-to-maturity securities (from Schedule HC-B, column A)",BHCKJJ34,RCFDJJ34,Assets - Securities,Asset,HC-B,Item 8 Col A,HC-B Item 8 Column A (amortized cost),2019-03-31,HTM at amortized cost
+2.b,"Available-for-sale debt securities (from Schedule HC-B, column D)",BHCK1773,RCFD1773,Assets - Securities,Asset,HC-B,Item 8 Col D,-,1994-03-31,AFS debt securities at fair value
+2.c,Equity securities with readily determinable fair values not held for trading,BHCKJA22,RCFDJA22,Assets - Securities,Asset,HC-B,M5,-,2018-03-31,Equity securities at FV (ASU 2016-01)
+3,Federal funds sold and securities purchased under agreements to resell,-,-,Assets - Fed Funds,Asset,,-,Item 3.a + Item 3.b,-,Caption; no consolidated BHC total code (former BHCKC225 ended 2014-12-31)
+3.a,Federal funds sold in domestic offices,BHDMB987,RCONB987,Assets - Fed Funds,Asset,,-,-,2002-03-31,Domestic offices only (BHDM domestic-office series)
+3.b,Securities purchased under agreements to resell,BHCKB989,RCFDB989,Assets - Fed Funds,Asset,,-,-,2002-03-31,
+4,Loans and lease financing receivables,-,-,Assets - Loans,Asset,HC-C,-,Item 4.d (= 4.b - 4.c) carried on balance sheet,-,Caption; net loans on balance sheet are reported at item 4.d
+4.a,Loans and leases held for sale,BHCK5369,RCFD5369,Assets - Loans,Asset,HC-C,Item 10,-,1991-03-31,
+4.b,Loans and leases held for investment,BHCKB528,RCFDB528,Assets - Loans,Asset,HC-C,Item 12,HC-C Sum(Items 1-9) - Item 10,2001-03-31,"Held for investment, net of unearned income"
+4.c,LESS: Allowance for credit losses on loans and leases,BHCK3123,RCFD3123,Assets - Loans,Contra-Asset,HC-C,Item 11,-,1981-06-30,ACL on loans and leases (CECL)
+4.d,"Loans and leases held for investment, net of allowance (item 4.b minus 4.c)",BHCKB529,RCFDB529,Assets - Loans,Asset,HC-C,-,Item 4.b - Item 4.c,2001-03-31,Net loans carried on balance sheet
+5,Trading assets (from Schedule HC-D),BHCK3545,RCFD3545,Assets - Trading,Asset,HC-D,Item 12,HC-D Sum(Items 1-11),1995-03-31,Equals HC-D Item 12
+6,Premises and fixed assets (including right-of-use assets),BHCK2145,RCFD2145,Assets - Fixed,Asset,HC-F,Item 6,-,1981-06-30,Includes capitalized leases / ROU assets
+7,Other real estate owned (from Schedule HC-M),BHCK2150,RCFD2150,Assets - OREO,Asset,HC-M,Item 7,-,2001-03-31,Foreclosed real estate
+8,Investments in unconsolidated subsidiaries and associated companies,BHCK2130,RCFD2130,Assets - Investments,Asset,HC-F,Item 8,-,1981-06-30,
+9,Direct and indirect investments in real estate ventures,BHCK3656,RCFD5372,Assets - RE Ventures,Asset,HC-F,Item 9,-,1990-09-30,
+10,Intangible assets (from Schedule HC-M),BHCK2143,RCFD2143,Assets - Intangibles,Asset,HC-M,-,Item 10.a + Item 10.b,2018-06-30,Goodwill plus other intangibles
+10.a,Goodwill,BHCK3163,RCFD3163,Assets - Intangibles,Asset,HC-M,Item 10.a,-,1981-06-30,Component of item 10
+10.b,All other intangible assets,BHCK0426,RCFD0426,Assets - Intangibles,Asset,HC-M,Item 10.b,-,2001-03-31,Component of item 10
+11,Other assets (from Schedule HC-F),BHCK2160,RCFD2160,Assets - Other,Asset,HC-F,Item 12,HC-F Sum(Items 1-11),1981-06-30,Equals HC-F Item 12
+12,Total assets (sum of items 1 through 11),BHCK2170,RCFD2170,Assets - Total,Asset,,-,Sum(Items 1-11),1981-06-30,Primary size metric
+13,Deposits,-,RCFD2200,Liabilities - Deposits,Liability,,-,Item 13.a + Item 13.b,-,Caption; no consolidated BHC code; = 13.a + 13.b; Call total = RCFD2200
+13.a,In domestic offices,-,RCON2200,Liabilities - Deposits,Liability,,-,Item 13.a.(1) + Item 13.a.(2),-,Caption; domestic deposits = BHDM6631 + BHDM6636; Call = RCON2200
+13.a.(1),Noninterest-bearing,BHDM6631,RCON6631,Liabilities - Deposits,Liability,,-,-,1981-06-30,Domestic noninterest-bearing deposits
+13.a.(2),Interest-bearing,BHDM6636,RCON6636,Liabilities - Deposits,Liability,,-,-,1981-06-30,Domestic interest-bearing deposits
+13.b,"In foreign offices, Edge and Agreement subsidiaries, and IBFs",-,RCFNB536,Liabilities - Deposits,Liability,,-,Item 13.b.(1) + Item 13.b.(2),-,Caption; no consolidated BHC code; = 13.b.(1) + 13.b.(2); Call = RCFNB536
+13.b.(1),Noninterest-bearing,BHFN6631,RCFNB537,Liabilities - Deposits,Liability,,-,-,1986-06-30,Foreign noninterest-bearing deposits
+13.b.(2),Interest-bearing,BHFN6636,RCFNB538,Liabilities - Deposits,Liability,,-,-,1981-06-30,"Foreign interest-bearing deposits (BHFN, not consumer-loan BHCKB538)"
+14,Federal funds purchased and securities sold under agreements to repurchase,-,-,Liabilities - Fed Funds,Liability,,-,Item 14.a + Item 14.b,-,Caption; no consolidated BHC total code (former BHCK2800 ended 2001-12-31)
+14.a,Federal funds purchased in domestic offices,BHDMB993,RCONB993,Liabilities - Fed Funds,Liability,,-,-,2002-03-31,Domestic offices only (BHDM domestic-office series)
+14.b,Securities sold under agreements to repurchase,BHCKB995,RCFDB995,Liabilities - Fed Funds,Liability,,-,-,2002-03-31,
+15,Trading liabilities (from Schedule HC-D),BHCK3548,RCFD3548,Liabilities - Trading,Liability,HC-D,Item 15,HC-D Item 15,1994-03-31,Equals HC-D Item 15
+16,Other borrowed money (from Schedule HC-M),BHCK3190,RCFD3190,Liabilities - Borrowings,Liability,HC-M,-,-,2001-03-31,Includes mortgage indebtedness and capitalized-lease obligations
+17,NOT APPLICABLE,-,-,Reserved,-,,-,-,-,Reserved line item
+18,NOT APPLICABLE,-,-,Reserved,-,,-,-,-,Reserved line item
+19.a,Subordinated notes and debentures,BHCK4062,RCON3200,Liabilities - Sub Debt,Liability,,-,-,1981-06-30,Qualifies for Tier 2 capital
+19.b,"Subordinated notes payable to unconsolidated trusts issuing trust preferred securities, and trust preferred securities issued by consolidated special purpose entities",BHCKC699,-,Liabilities - Sub Debt,Liability,,-,-,2005-03-31,Trust-preferred-related subordinated debt
+20,Other liabilities (from Schedule HC-G),BHCK2750,RCFD2930,Liabilities - Other,Liability,HC-G,Item 5,HC-G Sum(Items 1-4),1981-06-30,Equals HC-G Item 5
+21,Total liabilities (sum of items 13 through 20),BHCK2948,RCFD2948,Liabilities - Total,Liability,,-,Sum(Items 13-20),1981-06-30,
+22,NOT APPLICABLE,-,-,Reserved,-,,-,-,-,Reserved on current form; noncontrolling (minority) interest now reported at item 27.b
+23,Perpetual preferred stock and related surplus,BHCK3283,RCFD3283,Equity - Preferred,Equity,,-,-,1981-06-30,Includes related surplus
+24,Common stock (par value),BHCK3230,RCFD3230,Equity - Common,Equity,,-,-,1986-06-30,
+25,Surplus (exclude all surplus related to preferred stock),BHCK3240,RCFD3839,Equity - Surplus,Equity,,-,-,1986-06-30,Capital surplus / APIC on common stock
+26.a,Retained earnings,BHCK3247,RCFD3632,Equity - Retained,Equity,,-,-,1986-06-30,Undivided profits and capital reserves
+26.b,Accumulated other comprehensive income,BHCKB530,RCFDB530,Equity - AOCI,Equity,,-,-,2001-03-31,"AOCI: AFS unrealized gains/losses, FX translation, pension, cash-flow hedges"
+26.c,Other equity capital components,BHCKA130,RCFDA130,Equity - Other,Equity,,-,-,2001-03-31,"Treasury stock, unearned ESOP shares, etc."
+27.a,Total holding company equity capital (sum of items 23 through 26.c),BHCK3210,RCFD3210,Equity - HC Total,Equity,,-,Item 23 + 24 + 25 + 26.a + 26.b + 26.c,1986-06-30,Total parent-company equity capital
+27.b,Noncontrolling (minority) interests in consolidated subsidiaries,BHCK3000,RCFD3000,Equity - Minority,Equity,,-,-,1981-06-30,Noncontrolling interest (moved here from former item 22)
+28,Total equity capital (sum of items 27.a and 27.b),BHCKG105,RCFDG105,Equity - Total,Equity,,-,Item 27.a + Item 27.b,2009-03-31,Total equity including noncontrolling interest
+29,Total liabilities and equity capital (sum of items 21 and 28),BHCK3300,RCFD3300,Total,Total,,-,Item 21 + Item 28,1986-06-30,Must equal Item 12 (total assets)

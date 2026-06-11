@@ -1,28 +1,42 @@
 line_number,item_description,mdrm_afs_amortized_cost,mdrm_afs_fair_value,mdrm_htm_amortized_cost,mdrm_htm_fair_value,category,ties_to_hc_line,start_date,notes
-1,U.S. Treasury securities,BHCK1286,BHCK1287,BHCK0211,BHCK0213,Debt Securities - US Treasury,HC Item 2,1976-03-31,Safest asset class
-2,U.S. Government agency obligations (excluding MBS),BHCKJF77,BHCKJF78,BHCK1289,BHCK1290,Debt Securities - Agency,HC Item 2,1976-03-31,GNMA/FNMA/FHLMC non-MBS
-3.a,Residential MBS pass-through - GNMA,BHCKG300,BHCKG301,BHCKG303,BHCKG304,MBS - Residential Agency,HC Item 2,2011-03-31,Agency residential pass-through
-3.b,Residential MBS pass-through - FNMA/FHLMC,BHCKG308,BHCKG309,BHCKG311,BHCKG312,MBS - Residential Agency,HC Item 2,2011-03-31,Agency residential pass-through
-3.c,Other residential MBS (non-agency),BHCKG316,BHCKG317,BHCKG319,BHCKG320,MBS - Residential Non-Agency,HC Item 2,2011-03-31,Private label RMBS
-4.a,Commercial MBS - agency issued,BHCKK142,BHCKK143,BHCKK145,BHCKK146,MBS - Commercial Agency,HC Item 2,2011-03-31,Agency CMBS
-4.b,Commercial MBS - other (non-agency),BHCKK150,BHCKK151,BHCKK153,BHCKK154,MBS - Commercial Non-Agency,HC Item 2,2011-03-31,Private label CMBS
-5,Asset-backed securities,BHCKC026,BHCKC027,BHCK1737,BHCK1738,ABS,HC Item 2,1997-03-31,Auto ABS; credit card ABS; other
-5.a,ABS - Credit card receivables,BHCKB838,BHCKB839,BHCKB840,BHCKB841,ABS - Credit Card,HC Item 2,2011-03-31,
-5.b,ABS - Home equity lines,BHCKB842,BHCKB843,BHCKB844,BHCKB845,ABS - HELOC,HC Item 2,2011-03-31,
-5.c,ABS - Automobile loans,BHCKB846,BHCKB847,BHCKB848,BHCKB849,ABS - Auto,HC Item 2,2011-03-31,
-5.d,ABS - Other consumer loans,BHCKB850,BHCKB851,BHCKB852,BHCKB853,ABS - Other Consumer,HC Item 2,2011-03-31,
-5.e,ABS - Commercial and industrial loans,BHCKB854,BHCKB855,BHCKB856,BHCKB857,ABS - C&I,HC Item 2,2011-03-31,CLO tranches
-5.f,ABS - Other,BHCKB858,BHCKB859,BHCKB860,BHCKB861,ABS - Other,HC Item 2,2011-03-31,Student loans; equipment; etc
-6.a,Other debt securities - Domestic issuers,BHCK1739,BHCK1741,BHCK1742,BHCK1743,Debt Securities - Domestic Other,HC Item 2,1976-03-31,Corporate bonds; domestic
-6.b,Other debt securities - Foreign issuers,BHCK1744,BHCK1746,BHCK1747,BHCK1748,Debt Securities - Foreign Other,HC Item 2,1976-03-31,Corporate bonds; foreign
-7,Securities issued by states and political subdivisions,BHCK8496,BHCK8497,BHCK8498,BHCK8499,Municipal Securities,HC Item 2,1976-03-31,Tax-exempt munis
-8,Total,BHCK1772,BHCT1773,BHCT1754,BHCKJJ34,Total Securities,-,1976-03-31,Sum of Items 1-7
-M1,Pledged securities,BHCK0416,BHCK0416,BHCK0416,BHCK0416,Memorandum,HC Item 2,1976-03-31,Securities pledged as collateral
-M2.a,Structured financial products - Investment grade,BHCKC989,BHCKC989,-,-,Memorandum - SFP,HC Item 2,2009-03-31,CDOs; CLOs rated IG
-M3,AOCI on AFS securities (pre-tax),BHCK8434,BHCK8434,-,-,Memorandum - AOCI,-,1998-03-31,Unrealized gains/losses in equity
-M4,Fair value of HTM that are callable,BHCKA510,BHCKA510,BHCKA511,BHCKA511,Memorandum - Callable,-,2002-03-31,
-M5,Equity securities with readily determinable FV,-,BHCKJA22,-,-,Equity Securities,HC Item 2.c,2018-03-31,ASU 2016-01 FV through income
-M5.a,Equity securities - Mutual funds,BHCKJJ33,BHCKJJ33,-,-,Equity - Mutual Funds,HC Item 2.c,2018-03-31,
-M6,Equity securities without readily determinable FV,BHCK1752,BHCK1752,-,-,Equity - No FV,HC-F Item 4,1976-03-31,FHLB/FRB stock; other
-M7,Securities with credit deterioration at acquisition,-,-,-,-,Memorandum - PCD,-,2020-03-31,CECL PCD assets; no MDRM code reports PCD securities at fair value (only allowance amounts BHCKJJ31/JJ32 exist)
-M8,Total amortized cost of debt securities,-,-,BHCT1754,BHCT1754,Memorandum - Amortized Cost,-,2020-03-31,no single MDRM code for combined HTM+AFS amortized cost; reported as components
+1,U.S. Treasury securities,BHCK1286,BHCK1287,BHCK0211,BHCK0213,Debt - U.S. Treasury,-,1994-03-31,LCR Level 1 HQLA; zero credit risk
+2,U.S. government agency obligations (exclude mortgage-backed securities),BHCKHT52,BHCKHT53,BHCKHT50,BHCKHT51,Debt - U.S. Agency (non-MBS),-,2018-06-30,FHLB/SBA/TVA agency debt; HT50-53 replaced retired 1289/1290 and old repo JF77/JF78
+3,Securities issued by states and political subdivisions in the U.S.,BHCK8498,BHCK8499,BHCK8496,BHCK8497,Municipal Securities,-,2001-03-31,Tax-exempt munis; current item 3 (was item 7 in old repo layout)
+4.a.(1),Residential MBS pass-through: Guaranteed by GNMA,BHCKG302,BHCKG303,BHCKG300,BHCKG301,MBS - Residential pass-through (GNMA),-,2009-06-30,Full-faith-and-credit; Level 1 HQLA
+4.a.(2),Residential MBS pass-through: Issued by FNMA and FHLMC,BHCKG306,BHCKG307,BHCKG304,BHCKG305,MBS - Residential pass-through (FNMA/FHLMC),-,2009-06-30,GSE; Level 2A HQLA
+4.a.(3),Residential MBS pass-through: Other pass-through securities,BHCKG310,BHCKG311,BHCKG308,BHCKG309,MBS - Residential pass-through (Other),-,2009-06-30,Other agency/private pass-through
+4.a.(4),"Residential MBS pass-through: Guaranteed by GNMA, issued by FNMA and FHLMC and other pass-through securities",BHCKKX54,BHCKKX55,BHCKKX52,BHCKKX53,MBS - Residential pass-through (combined),-,2019-12-31,Combined pass-through reporting line (KX52-55)
+4.b.(1),Other residential MBS (CMOs/REMICs/stripped): Issued or guaranteed by U.S. Government agencies or sponsored agencies,BHCKG314,BHCKG315,BHCKG312,BHCKG313,MBS - Other residential (agency/GSE),-,2009-06-30,CMOs/REMICs issued/guaranteed by agency or GSE
+4.b.(2),Other residential MBS (CMOs/REMICs/stripped): Collateralized by MBS issued or guaranteed by U.S. Government agencies or sponsored agencies,BHCKG318,BHCKG319,BHCKG316,BHCKG317,MBS - Other residential (agency-collateralized),-,2009-06-30,Collateralized by agency/GSE MBS
+4.b.(3),Other residential MBS (CMOs/REMICs/stripped): All other residential mortgage-backed securities,BHCKG322,BHCKG323,BHCKG320,BHCKG321,MBS - Other residential (non-agency),-,2009-06-30,Private-label RMBS; not HQLA
+4.c.(1)(a),"Commercial MBS - pass-through: Issued or guaranteed by FNMA, FHLMC, or GNMA",BHCKK144,BHCKK145,BHCKK142,BHCKK143,CMBS - Pass-through (agency),-,2011-03-31,Agency multifamily CMBS pass-through
+4.c.(1)(b),Commercial MBS - pass-through: Other pass-through securities,BHCKK148,BHCKK149,BHCKK146,BHCKK147,CMBS - Pass-through (other),-,2011-03-31,Non-agency CMBS pass-through
+4.c.(2)(a),Commercial MBS - other: Issued or guaranteed by U.S. Government agencies or sponsored agencies,BHCKK152,BHCKK153,BHCKK150,BHCKK151,CMBS - Other (agency/GSE),-,2011-03-31,Agency/GSE-issued other CMBS
+4.c.(2)(b),Commercial MBS - other: All other commercial MBS,BHCKK156,BHCKK157,BHCKK154,BHCKK155,CMBS - Other (non-agency),-,2011-03-31,Private-label CMBS
+5.a,Asset-backed securities (ABS),BHCKC989,BHCKC027,BHCKC026,BHCKC988,Asset-Backed Securities,-,2006-03-31,"Aggregate ABS; A=C026 HTM cost, B=C988 HTM FV, C=C989 AFS cost, D=C027 AFS FV"
+5.b,Structured financial products,BHCKHT60,BHCKHT61,BHCKHT58,BHCKHT59,Structured Financial Products,-,2018-06-30,CDOs/CLOs etc.; HT58-61
+6.a,Other domestic debt securities,BHCK1739,BHCK1741,BHCK1737,BHCK1738,Debt - Other Domestic,-,2001-03-31,Domestic corporate/other debt
+6.b,Other foreign debt securities,BHCK1744,BHCK1746,BHCK1742,BHCK1743,Debt - Other Foreign,-,2001-03-31,Foreign sovereign/corporate debt
+7,Unallocated portfolio layer fair value hedge basis adjustments,-,-,BHCKMG95,-,Hedge basis adjustment,-,2022-09-30,"Single cell only (item 7 has one MDRM, BHCKMG95); portfolio-layer ASU 2022-01 hedge basis"
+8,Total (sum of items 1 through 7),BHCK1772,BHCT1773,BHCK1754,BHCK1771,Total Securities,HC 2.a (col A) / HC 2.b (col D),1994-03-31,Col A BHCK1754 HTM total ties HC 2.a; Col D BHCT1773 AFS FV total ties HC 2.b
+M.1,Pledged securities,-,-,BHCK0416,-,Memorandum - Pledged,-,1986-09-30,Single cell BHCK0416; securities pledged as collateral
+M.2.a,Maturity / repricing: Remaining maturity of one year or less,-,-,BHCK0383,-,Memorandum - Maturity,-,1986-09-30,Single cell BHCK0383; debt securities maturing/repricing in 1 year or less
+M.2.b,Maturity / repricing: Over one year through five years,-,-,BHCK0384,-,Memorandum - Maturity,-,1986-09-30,Single cell BHCK0384
+M.2.c,Maturity / repricing: Over five years,-,-,BHCK0387,-,Memorandum - Maturity,-,1986-09-30,Single cell BHCK0387
+M.3,Amortized cost of HTM securities sold or transferred to AFS or trading during the calendar year-to-date,-,-,BHCK1778,-,Memorandum - HTM Transfers,-,1994-03-31,Single cell BHCK1778; YTD amortized cost at date of sale/transfer
+M.4.a,Structured notes: Amortized cost,-,-,BHCK8782,-,Memorandum - Structured Notes,-,1995-03-31,Single cell BHCK8782
+M.4.b,Structured notes: Fair value,-,-,BHCK8783,-,Memorandum - Structured Notes,-,1995-03-31,Single cell BHCK8783
+M.5.a,ABS by underlying assets: Credit card receivables,BHCKB840,BHCKB841,BHCKB838,BHCKB839,Memorandum - ABS detail,-,2001-03-31,"A=B838 HTM cost, B=B839 HTM FV, C=B840 AFS cost, D=B841 AFS FV"
+M.5.b,ABS by underlying assets: Home equity lines,BHCKB844,BHCKB845,BHCKB842,BHCKB843,Memorandum - ABS detail,-,2001-03-31,
+M.5.c,ABS by underlying assets: Automobile loans,BHCKB848,BHCKB849,BHCKB846,BHCKB847,Memorandum - ABS detail,-,2001-03-31,
+M.5.d,ABS by underlying assets: Other consumer loans,BHCKB852,BHCKB853,BHCKB850,BHCKB851,Memorandum - ABS detail,-,2001-03-31,
+M.5.e,ABS by underlying assets: Commercial and industrial loans,BHCKB856,BHCKB857,BHCKB854,BHCKB855,Memorandum - ABS detail,-,2001-03-31,CLO tranches
+M.5.f,ABS by underlying assets: Other,BHCKB860,BHCKB861,BHCKB858,BHCKB859,Memorandum - ABS detail,-,2001-03-31,
+M.6.a,SFP by collateral: Trust preferred securities issued by financial institutions,BHCKG350,BHCKG351,BHCKG348,BHCKG349,Memorandum - SFP detail,-,2009-06-30,
+M.6.b,SFP by collateral: Trust preferred securities issued by real estate investment trusts,BHCKG354,BHCKG355,BHCKG352,BHCKG353,Memorandum - SFP detail,-,2009-06-30,
+M.6.c,SFP by collateral: Corporate and similar loans,BHCKG358,BHCKG359,BHCKG356,BHCKG357,Memorandum - SFP detail,-,2009-06-30,
+M.6.d,SFP by collateral: 1-4 family residential MBS issued or guaranteed by U.S. GSEs,BHCKG362,BHCKG363,BHCKG360,BHCKG361,Memorandum - SFP detail,-,2009-06-30,
+M.6.e,SFP by collateral: 1-4 family residential MBS not issued or guaranteed by GSEs,BHCKG366,BHCKG367,BHCKG364,BHCKG365,Memorandum - SFP detail,-,2009-06-30,
+M.6.f,SFP by collateral: Diversified (mixed) pools of structured financial products,BHCKG370,BHCKG371,BHCKG368,BHCKG369,Memorandum - SFP detail,-,2009-06-30,
+M.6.g,SFP by collateral: Other collateral or reference assets,BHCKG374,BHCKG375,BHCKG372,BHCKG373,Memorandum - SFP detail,-,2009-06-30,
+M.7,Structured financial products guaranteed by U.S. Government agencies or sponsored agencies included in Sch HC-B item 5.b,BHCKPV00,BHCKPV01,BHCKPU98,BHCKPU99,Memorandum - SFP guaranteed,-,2026-03-31,New current-form item effective 2026-03-31; not yet in warehouse through 2025Q4

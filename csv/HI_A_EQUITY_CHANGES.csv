@@ -1,0 +1,18 @@
+line_number,item_description,mdrm_code,call_mdrm,category,ties_to_hc_line,start_date,notes
+1,Total holding company equity capital most recently reported for end of previous calendar year,BHCK3217,RIAD3217,Equity Rollforward - Beginning,HC item 27.a,1981-06-30,After adjustments from amended Reports of Income
+2,Cumulative effect of changes in accounting principles and corrections of material accounting errors,BHCKB507,RIADB507,Equity Rollforward - Adjustment,-,2001-03-31,-
+3,Balance end of previous calendar year as restated (sum of items 1 and 2),BHCKB508,RIADB508,Equity Rollforward - Restated,-,2001-03-31,= item 1 + item 2
+4,Net income (loss) attributable to holding company,BHCT4340,RIAD4340,Equity Rollforward - Income,HI item 14,2002-12-31,Must equal Schedule HI item 14
+5.a.,"Sale of perpetual preferred stock, gross",BHCK3577,-,Equity Rollforward - Preferred,HC item 23,1990-09-30,-
+5.b.,Conversion or retirement of perpetual preferred stock,BHCK3578,-,Equity Rollforward - Preferred,HC item 23,1990-09-30,-
+6.a.,"Sale of common stock, gross",BHCK3579,-,Equity Rollforward - Common,HC items 24-25,1990-09-30,-
+6.b.,Conversion or retirement of common stock,BHCK3580,-,Equity Rollforward - Common,HC items 24-25,1990-09-30,-
+7,Sale of treasury stock,BHCK4782,-,Equity Rollforward - Treasury,HC item 26,1986-06-30,-
+8,LESS: Purchase of treasury stock,BHCK4783,-,Equity Rollforward - Treasury,HC item 26,1986-06-30,Subtracted in the item-15 total
+9,"Changes incident to business combinations, net",BHCK4356,RIAD4356,Equity Rollforward - Combinations,-,1986-06-30,-
+10,LESS: Cash dividends declared on preferred stock,BHCK4598,-,Equity Rollforward - Dividends,-,1986-06-30,Subtracted in the item-15 total
+11,LESS: Cash dividends declared on common stock,BHCK4460,RIAD4460,Equity Rollforward - Dividends,-,1986-06-30,Subtracted in the item-15 total
+12,Other comprehensive income,BHCKB511,RIADB511,Equity Rollforward - OCI,HC item 26.b,2001-03-31,"AFS gains/losses, cash-flow hedges, FX translation, pension adjustments"
+13,Change in offsetting debit to the liability for ESOP debt guaranteed by the holding company,BHCK4591,-,Equity Rollforward - ESOP,-,1987-09-30,-
+14,Other adjustments to equity capital (not included above),BHCK3581,-,Equity Rollforward - Other,-,1990-09-30,-
+15,Total holding company equity capital end of current period,BHCT3210,RIAD3210,Equity Rollforward - Ending,HC item 27.a,2002-12-31,"Sum of items 3,4,5,6,7,9,12,13,14 less items 8,10,11; must equal Schedule HC item 27.a"

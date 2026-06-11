@@ -1,33 +1,34 @@
 schedule,sub_schedule,item,description,data_type,frequency,cross_form_reference,confidentiality,notes
-B,Securities Risk,CUSIP,Security identifier,Text,Quarterly,HC-B,Confidential,Position-level detail
-B,Securities Risk,Par Value,Face value of security,Currency,Quarterly,HC-B,Confidential,
-B,Securities Risk,Fair Value,Current market value,Currency,Quarterly,HC-B,Confidential,
-B,Securities Risk,Security Type,UST/Agency/Corp/Muni/MBS/ABS,Category,Quarterly,HC-B,Confidential,
-B,Securities Risk,AFS/HTM,Accounting classification,Category,Quarterly,HC-B,Confidential,
-B,Securities Risk,Duration,Effective duration,Numeric,Quarterly,HC-B,Confidential,Interest rate sensitivity
-B,Securities Risk,Credit Rating,External rating,Category,Quarterly,HC-B,Confidential,
-D,Operational Risk,Loss Events,Quarterly operational loss events,Currency,Quarterly,FFIEC 101 Sched E,Confidential,By event type
-E.1,Top Counterparties,Counterparty Name,Largest 20 counterparties by EAD,Text,Quarterly,HC-L,Confidential,
-E.1,Top Counterparties,Exposure at Default,Total EAD by counterparty,Currency,Quarterly,HC-L,Confidential,
-E.1,Top Counterparties,Derivatives Exposure,Derivatives component of exposure,Currency,Quarterly,HC-L,Confidential,
-E.1,Top Counterparties,SFT Exposure,Securities financing exposure,Currency,Quarterly,HC-L,Confidential,
-E.1,Top Counterparties,Lending Exposure,Loan and commitment exposure,Currency,Quarterly,HC-C,Confidential,
-E.2,CVA,Credit Valuation Adjustment,CVA by counterparty,Currency,Quarterly,Pillar 3 CCR2,Confidential,
-E.2,CVA,Wrong-Way Risk,Correlation between exposure and credit,Currency,Quarterly,-,Confidential,
-F,FVOHFS,Fair Value Option Assets,Assets elected for FV option,Currency,Quarterly,HC-Q,Confidential,Position-level
-F,FVOHFS,HFS Securities,Securities held for sale,Currency,Quarterly,HC-Q,Confidential,
-G.1,Trading Revenue,Desk Revenue,P&L by trading desk/product,Currency,Quarterly,HI (BHCKA220),Confidential,Granular attribution
-G.1,Trading Revenue,Asset Class Revenue,Revenue by IR/FX/Equity/Commodity/Credit,Currency,Quarterly,HC-D,Confidential,
-G.1,Trading Revenue,Trading NII,Net interest on trading positions,Currency,Quarterly,HI,Confidential,
-G.1,Trading Revenue,Mark-to-Market P&L,Unrealized gains/losses,Currency,Quarterly,HC-D,Confidential,
-G.2,VaR/Stressed VaR,VaR (99/10-day),Value at Risk by risk factor,Currency,Quarterly,FFIEC 102,Confidential,IR/FX/Equity/Commodity
-G.2,VaR/Stressed VaR,Stressed VaR,Stress-calibrated VaR,Currency,Quarterly,FFIEC 102,Confidential,
-G.2,VaR/Stressed VaR,Backtesting Results,VaR exceedances,Count,Quarterly,Pillar 3 MR4,Confidential,
-H,PPNR,Net Interest Income Detail,NII components,Currency,Quarterly,HI,Confidential,
-H,PPNR,Fee Income Detail,Noninterest income components,Currency,Quarterly,HI,Confidential,
-H,PPNR,Expense Detail,Operating expense components,Currency,Quarterly,HI,Confidential,
-Balances,Summary,Key Balance Sheet Items,Aggregate position data,Currency,Quarterly,HC,Confidential,
-RegCap,Regulatory Capital,Capital Components,Current period capital data,Currency,Quarterly,HC-R,Confidential,
-RegCap,Regulatory Capital,Capital Ratios,CET1/T1/Total/Leverage,Ratio,Quarterly,HC-R,Confidential,
-RCI,Capital Instruments,Instrument Updates,Quarterly instrument changes,Mixed,Quarterly,HC-R,Confidential,
-Supplemental,Additional Data,Supplemental Metrics,Additional stress-related metrics,Mixed,Quarterly,Various,Confidential,
+B,Securities,CUSIP,Security identifier,Text,Quarterly,HC-B,Confidential,"Schedule B Securities (B.1 Main, B.2 Investment Securities w/ Designated Accounting Hedges); position-level detail"
+B,Securities,Par Value,Face value of security,Currency,Quarterly,HC-B,Confidential,
+B,Securities,Fair Value,Current market value,Currency,Quarterly,HC-B,Confidential,
+B,Securities,Security Type,UST/Agency/Corp/Muni/MBS/ABS,Category,Quarterly,HC-B,Confidential,
+B,Securities,AFS/HTM,Accounting classification,Category,Quarterly,HC-B,Confidential,
+B,Securities,Duration,Effective duration,Numeric,Quarterly,HC-B,Confidential,Interest rate sensitivity
+B,Securities,Credit Rating,External rating,Category,Quarterly,HC-B,Confidential,
+E,Operational Risk,Loss Events,Quarterly operational loss events,Currency,Quarterly,FFIEC 101 Sched E,Confidential,"Schedule E Operational Risk (E.1 Operational Loss History, E.2 Internal Business Line, E.3 UoM, E.4 Threshold, E.5 Legal Reserves); corrected from D in v7"
+L,Counterparty,Counterparty Name,Largest counterparties by EAD,Text,Quarterly,HC-L,Confidential,"Schedule L Counterparty (corrected from E.1 in v7); top counterparties by net current exposure"
+L,Counterparty,Exposure at Default,Total EAD by counterparty,Currency,Quarterly,HC-L,Confidential,
+L,Counterparty,Derivatives Exposure,Derivatives component of exposure,Currency,Quarterly,HC-L,Confidential,
+L,Counterparty,SFT Exposure,Securities financing exposure,Currency,Quarterly,HC-L,Confidential,
+L,Counterparty,Lending Exposure,Loan and commitment exposure,Currency,Quarterly,HC-C,Confidential,
+L,Counterparty,Credit Valuation Adjustment,CVA by counterparty,Currency,Quarterly,Pillar 3 CCR2,Confidential,"CVA is part of Schedule L Counterparty (corrected from E.2 in v7)"
+L,Counterparty,Wrong-Way Risk,Correlation between exposure and credit,Currency,Quarterly,-,Confidential,
+J,Retail FVO/HFS,Fair Value Option Assets,Assets elected for FV option,Currency,Quarterly,HC-Q,Confidential,"Schedule J Retail Fair Value Option/Held for Sale (corrected from F in v7); position-level"
+J,Retail FVO/HFS,HFS Securities,Securities held for sale,Currency,Quarterly,HC-Q,Confidential,
+F,Trading,Desk Revenue,P&L by trading desk/product,Currency,Quarterly,HI (BHCKA220),Confidential,"Schedule F Trading (F.1-F.25 market-risk factor worksheets: equity/FX/rates/commodity/credit/securitized); corrected from G.1 in v7. Granular attribution"
+F,Trading,Asset Class Revenue,Revenue by IR/FX/Equity/Commodity/Credit,Currency,Quarterly,HC-D,Confidential,
+F,Trading,Trading NII,Net interest on trading positions,Currency,Quarterly,HI,Confidential,
+F,Trading,Mark-to-Market P&L,Unrealized gains/losses,Currency,Quarterly,HC-D,Confidential,
+F,Trading,VaR (99/10-day),Value at Risk by risk factor,Currency,Quarterly,FFIEC 102,Confidential,"VaR/sVaR reported within Schedule F Trading market-risk worksheets (corrected from G.2 in v7); IR/FX/Equity/Commodity"
+F,Trading,Stressed VaR,Stress-calibrated VaR,Currency,Quarterly,FFIEC 102,Confidential,
+F,Trading,Backtesting Results,VaR exceedances,Count,Quarterly,Pillar 3 MR4,Confidential,
+G,PPNR,Net Interest Income Detail,NII components,Currency,Quarterly,HI,Confidential,"Schedule G PPNR (G.1 Submission Worksheet, G.2 NII Worksheet, G.3 Metrics); corrected from H in v7"
+G,PPNR,Fee Income Detail,Noninterest income components,Currency,Quarterly,HI,Confidential,
+G,PPNR,Expense Detail,Operating expense components,Currency,Quarterly,HI,Confidential,
+H,Wholesale Risk,Corporate/CRE Loan Data,"Loan-level corporate and commercial real estate exposures",Mixed,Quarterly,HC-C,Confidential,"Schedule H Wholesale Risk (H.1 Corporate Loan, H.2 CRE, H.3 Line of Business, H.4 Internal Risk Rating); added to reflect actual Schedule H per current instructions"
+M,Balances,Key Balance Sheet Items,Aggregate position data,Currency,Quarterly,HC,Confidential,"Schedule M Balances (corrected from Balances label in v7)"
+D,Regulatory Capital,Capital Components,Current period capital data,Currency,Quarterly,HC-R,Confidential,"Schedule D Regulatory Capital (corrected from RegCap label in v7)"
+D,Regulatory Capital,Capital Ratios,CET1/T1/Total/Leverage,Ratio,Quarterly,HC-R,Confidential,
+C,Regulatory Capital Instruments,Instrument Updates,Quarterly instrument changes,Mixed,Quarterly,HC-R,Confidential,"Schedule C Regulatory Capital Instruments (C.1 as-of quarter end, C.2 repurchases/redemptions, C.3 issuances); corrected from RCI label in v7"
+K,Supplemental,Supplemental Metrics,Additional stress-related metrics,Mixed,Quarterly,Various,Confidential,"Schedule K Supplemental (corrected from Supplemental label in v7)"

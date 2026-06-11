@@ -44,60 +44,71 @@ Loans where interest accrual has stopped due to:
 ## Schedule Structure
 
 ```
-LOAN CATEGORIES (rows mirror HC-C)
+LOAN CATEGORIES (rows mirror current HC-C)
 ├── Item 1: Loans secured by real estate
-│   ├── 1.a: Construction (1.a.1, 1.a.2)
-│   ├── 1.b: Farmland
-│   ├── 1.c: HELOCs
-│   ├── 1.d: 1-4 family (1.d.1 first lien, 1.d.2 junior)
-│   ├── 1.e: Multifamily
-│   └── 1.f: CRE (1.f.1 owner-occ, 1.f.2 non-owner)
-├── Item 2: Loans to depository institutions
-├── Item 3: Agricultural production
-├── Item 4: C&I loans (4.a US, 4.b non-US)
-├── Item 5: Consumer loans
+│   ├── 1.a: Construction — 1.a.(1) 1-4 family, 1.a.(2) other/land dev
+│   ├── 1.b: Farmland (domestic offices)
+│   ├── 1.c.(1): Revolving open-end 1-4 family (HELOCs)
+│   ├── 1.c.(2): Closed-end 1-4 family — (a) first liens, (b) junior liens
+│   ├── 1.d: Multifamily (5+) residential (domestic offices)
+│   ├── 1.e: Nonfarm nonresidential — 1.e.(1) owner-occ, 1.e.(2) other
+│   └── 1.f: RE loans in foreign offices
+├── Item 2: Loans to depository institutions — 2.a US banks, 2.b foreign banks
+├── Item 3: Agricultural production / loans to farmers
+├── Item 4: Commercial and industrial loans (single line; no US/non-US split)
+├── Item 5: Loans to individuals
 │   ├── 5.a: Credit cards
-│   ├── 5.b: Other revolving
-│   ├── 5.c: Automobile
-│   └── 5.d: Other consumer
+│   ├── 5.b: Automobile loans
+│   └── 5.c: Other consumer loans
 ├── Item 6: Loans to foreign governments
-├── Item 7: Municipal loans
-├── Item 8: Other loans
-├── Item 9: Lease financing receivables
-└── Item 10: Total loans and leases
+├── Item 7: All other loans
+├── Item 8: Leases — 8.a consumer, 8.b other, 8.c lease finance receivables (HCs < $5B)
+├── Item 9: Total loans and leases (sum of items 1-8.b)
+├── Item 10: Debt securities and other assets
+├── Item 11-12: U.S. Government-guaranteed / FDIC loss-share covered portions
+└── Memoranda M.1-M.9 (loan modifications, CRE finance, non-US, HFS/FV, etc.)
 ```
+Columns: A = 30-89 days past due; B = 90+ days past due and still accruing; C = nonaccrual.
 
 ---
 
 ## MDRM Matrix (Key Categories)
 
-### Real Estate Loans
+### Real Estate Loans (current codes)
 
-| Category | 30-89 Days | 90+ Days | Nonaccrual |
+| Category | 30-89 Days (A) | 90+ Days (B) | Nonaccrual (C) |
 |----------|------------|----------|------------|
-| 1.a Construction | BHCK2759 | BHCK2769 | BHCK3505 |
+| 1.a.(1) 1-4 family construction | BHCKF172 | BHCKF174 | BHCKF176 |
+| 1.a.(2) Other construction/land dev | BHCKF173 | BHCKF175 | BHCKF177 |
 | 1.b Farmland | BHCK3493 | BHCK3494 | BHCK3495 |
-| 1.c HELOCs | BHCK5398 | BHCK5399 | BHCK5400 |
-| 1.d 1-4 Family | BHCK5401 | BHCK5402 | BHCK3499 |
-| 1.e Multifamily | BHCK3500 | BHCK3501 | BHCK3502 |
-| 1.f CRE | BHCK3503 | BHCK3504 | BHCK5378 |
+| 1.c.(1) HELOCs | BHCK5398 | BHCK5399 | BHCK5400 |
+| 1.c.(2)(a) Closed-end 1-4 first lien | BHCKC236 | BHCKC237 | BHCKC229 |
+| 1.c.(2)(b) Closed-end 1-4 junior lien | BHCKC238 | BHCKC239 | BHCKC230 |
+| 1.d Multifamily | BHCK3499 | BHCK3500 | BHCK3501 |
+| 1.e.(1) Owner-occupied CRE | BHCKF178 | BHCKF180 | BHCKF182 |
+| 1.e.(2) Other nonfarm nonres CRE | BHCKF179 | BHCKF181 | BHCKF183 |
 
-### Commercial and Consumer Loans
+### Commercial and Consumer Loans (current codes)
 
-| Category | 30-89 Days | 90+ Days | Nonaccrual |
+| Category | 30-89 Days (A) | 90+ Days (B) | Nonaccrual (C) |
 |----------|------------|----------|------------|
+| 2.a US depository institutions | BHCK5377 | BHCK5378 | BHCK5379 |
+| 2.b Foreign banks | BHCK5380 | BHCK5381 | BHCK5382 |
 | 3 Ag production | BHCK1594 | BHCK1597 | BHCK1583 |
 | 4 C&I | BHCK1606 | BHCK1607 | BHCK1608 |
 | 5.a Credit cards | BHCKB575 | BHCKB576 | BHCKB577 |
-| 5.c Auto loans | BHCKK206 | BHCKK207 | BHCKK208 |
+| 5.b Auto loans | BHCKK213 | BHCKK214 | BHCKK215 |
+| 5.c Other consumer | BHCKK216 | BHCKK217 | BHCKK218 |
+| 8.a Consumer leases | BHCKF166 | BHCKF167 | BHCKF168 |
+| 8.b Other leases | BHCKF169 | BHCKF170 | BHCKF171 |
 
-### Total Loans
+### Total Loans and Leases (item 9 — current codes)
 
-| Metric | MDRM |
-|--------|------|
-| 30-89 days total | BHCK5524 |
-| 90+ days total | BHCK5525 |
-| Nonaccrual total | BHCK1403 |
+| Metric | MDRM | Note |
+|--------|------|------|
+| 30-89 days total | BHCK1406 | (legacy BHCK5524 discontinued 2017-12-31) |
+| 90+ days total | BHCK1407 | (legacy BHCK5525 discontinued 2017-12-31) |
+| Nonaccrual total | BHCK1403 | unchanged |
 
 ---
 
@@ -107,14 +118,14 @@ LOAN CATEGORIES (rows mirror HC-C)
 
 ```
 NPL = Nonaccrual + 90+ Days Still Accruing
-    = BHCK1403 + BHCK5525 (or detailed sum)
+    = BHCK1403 + BHCK1407 (item 9 totals; or detailed sum)
 ```
 
 ### NPL Ratio
 
 ```
-NPL Ratio = NPL / Total Loans (HC-C Item 12)
-          = (BHCK1403 + BHCK5525) / BHCTB528
+NPL Ratio = NPL / Total Loans (HC-C Item 7)
+          = (BHCK1403 + BHCK1407) / BHCKB528
 
 Typical ranges:
 - Strong: < 1%
@@ -127,14 +138,14 @@ Typical ranges:
 
 ```
 Delinquency Rate = (30-89 + 90+ + Nonaccrual) / Total Loans
-                 = (BHCK5524 + BHCK5525 + BHCK1403) / BHCTB528
+                 = (BHCK1406 + BHCK1407 + BHCK1403) / BHCKB528
 ```
 
 ### Coverage Ratio
 
 ```
-Coverage = Allowance (HC-C Item 11) / NPL
-         = BHCT3123 / (BHCK1403 + BHCK5525)
+Coverage = Allowance for credit losses / NPL
+         = BHCT3123 / (BHCK1403 + BHCK1407)
 
 Higher coverage = more reserved against expected losses
 ```
@@ -142,8 +153,8 @@ Higher coverage = more reserved against expected losses
 ### Texas Ratio
 
 ```
-Texas Ratio = NPL + OREO / (Tangible Equity + Allowance)
-            = (BHCK1403 + BHCK5525 + BHCT2150) / (BHCT3210 - BHCK3163 + BHCT3123)
+Texas Ratio = (NPL + OREO) / (Tangible Equity + Allowance)
+            = (BHCK1403 + BHCK1407 + BHCK2150) / (BHCT3210 - BHCK3163 + BHCT3123)
 
 >100% = Potentially troubled
 ```
@@ -155,8 +166,9 @@ Texas Ratio = NPL + OREO / (Tangible Equity + Allowance)
 The row totals in HC-N (Column A + B + C for each category) should NOT exceed the corresponding HC-C balances, as they represent only the impaired portion.
 
 ```
-HC-N Item 1 (all columns) ≤ HC-C Item 1 (Real estate loans)
+HC-N RE sub-items (all columns) ≤ HC-C Item 1 (Real estate loans)
 HC-N Item 4 (all columns) ≤ HC-C Item 4 (C&I loans)
+HC-N Item 9 total (all columns) ≤ HC-C Item 7 (Total loans and leases)
 etc.
 ```
 
@@ -213,18 +225,19 @@ Monitor for:
 
 ## MDRM Quick Reference
 
-| Category | 30-89 Days | 90+ Days | Nonaccrual |
+| Category | 30-89 Days (A) | 90+ Days (B) | Nonaccrual (C) |
 |----------|------------|----------|------------|
-| RE Total | BHCK5526 | BHCK1422 | BHCK3492 |
-| Construction | BHCK2759 | BHCK2769 | BHCK3505 |
-| 1-4 Family | BHCK5401 | BHCK5402 | BHCK3499 |
-| CRE | BHCK3503 | BHCK3504 | BHCK5378 |
-| C&I | BHCK1606 | BHCK1607 | BHCK1608 |
-| Credit Card | BHCKB575 | BHCKB576 | BHCKB577 |
-| Auto | BHCKK206 | BHCKK207 | BHCKK208 |
-| **TOTAL** | **BHCK5524** | **BHCK5525** | **BHCK1403** |
+| 1.a.(1) 1-4 Family Construction | BHCKF172 | BHCKF174 | BHCKF176 |
+| 1.c.(2)(a) Closed-end 1-4 First Lien | BHCKC236 | BHCKC237 | BHCKC229 |
+| 1.e.(2) Other Nonfarm Nonres (CRE) | BHCKF179 | BHCKF181 | BHCKF183 |
+| 4 C&I | BHCK1606 | BHCK1607 | BHCK1608 |
+| 5.a Credit Card | BHCKB575 | BHCKB576 | BHCKB577 |
+| 5.b Auto | BHCKK213 | BHCKK214 | BHCKK215 |
+| **9 TOTAL loans & leases** | **BHCK1406** | **BHCK1407** | **BHCK1403** |
+
+Legacy aggregate codes BHCK5526/1422/3492 (RE total) and BHCK5524/5525 (total 30-89 / 90+) were discontinued (2017 and earlier) and removed; the current form has no item-1 RE total and reports the total at item 9.
 
 ---
 
-*Last Updated: 2026-01-28*
-*Reference: FR Y-9C Instructions (March 2024)*
+*Last Updated: 2026-06-11 (v8 conceptual-accuracy sweep; rebuilt to current 148-cell HC-N spec, verified vs MDRM + warehouse)*
+*Reference: FR Y-9C Instructions (current form, March 2026 field spec)*

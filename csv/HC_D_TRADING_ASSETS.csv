@@ -1,31 +1,62 @@
 line_number,item_description,mdrm_current,mdrm_legacy,category,asset_liability,start_date,end_date,reconciliation_parent,notes
-1,U.S. Treasury securities,BHCM3531,BHCK3531,Trading Assets - Securities,Asset,2008-03-31,9999-12-31,Item 12,Current MDRM for domestic+foreign; Pre-2018 domestic only
-2,U.S. Government agency and corporation obligations,BHCM3532,BHCK3532,Trading Assets - Securities,Asset,2008-03-31,9999-12-31,Item 12,Includes GNMA/FNMA/FHLMC non-MBS
-3,Securities issued by states and political subdivisions,BHCM3533,BHCK3533,Trading Assets - Securities,Asset,2008-03-31,9999-12-31,Item 12,Municipal bonds held for trading
-4.a.(1),Residential MBS pass-through securities - GNMA,BHCKK197,-,Trading Assets - MBS,Asset,2011-03-31,9999-12-31,Item 12,Agency residential MBS; Added Q1 2011
-4.a.(2),Residential MBS pass-through securities - FNMA/FHLMC,BHCKK198,-,Trading Assets - MBS,Asset,2011-03-31,9999-12-31,Item 12,Agency residential MBS; Added Q1 2011
-4.b,All other residential MBS,BHCKK199,-,Trading Assets - MBS,Asset,2011-03-31,9999-12-31,Item 12,Non-agency residential MBS
-4.c.(1),Commercial MBS - agency issued,BHCKK200,-,Trading Assets - MBS,Asset,2011-03-31,9999-12-31,Item 12,FNMA/FHLMC/GNMA commercial MBS
-4.c.(2),Commercial MBS - all other,BHCKK201,-,Trading Assets - MBS,Asset,2011-03-31,9999-12-31,Item 12,Non-agency commercial MBS
-4 (legacy),MBS pass-through securities (combined),BHCK3534,-,Trading Assets - MBS,Asset,1995-03-31,2009-03-31,Item 12,Pre-2009 combined MBS pass-through
-4 (legacy),All other mortgage-backed securities,BHCK3536,-,Trading Assets - MBS,Asset,1995-03-31,2009-03-31,Item 12,Pre-2009 other MBS
-5.a,Structured financial products,BHCKHT62,-,Trading Assets - Debt Securities,Asset,2018-06-30,9999-12-31,Item 12,Post-2018 breakout for CDOs/CLOs/etc
-5.b,Other debt securities (including ABS),BHCKK202,-,Trading Assets - Debt Securities,Asset,2011-03-31,9999-12-31,Item 12,Includes asset-backed securities
-5 (legacy),Other debt securities,BHCK3537,-,Trading Assets - Debt Securities,Asset,1995-03-31,2009-03-31,Item 12,Pre-2009 other debt
-6.a,Loans secured by 1-4 family residential properties,BHCKHT63,-,Trading Assets - Loans,Asset,2018-06-30,9999-12-31,Item 12,Post-2018 loan breakout
-6.b,All other loans secured by real estate,BHCKHT64,-,Trading Assets - Loans,Asset,2018-06-30,9999-12-31,Item 12,Post-2018 loan breakout
-6.c,Commercial and industrial loans,BHCKF614,-,Trading Assets - Loans,Asset,2008-03-31,9999-12-31,Item 12,C&I loans held for trading
-6.d,Consumer loans,BHCKHT65,-,Trading Assets - Loans,Asset,2018-06-30,9999-12-31,Item 12,Post-2018 loan breakout
-6.e,Other loans,BHCKF618,-,Trading Assets - Loans,Asset,2008-03-31,9999-12-31,Item 12,Other loans held for trading
-7,NOT IN USE,-,-,Reserved,-,-,-,-,Line item not currently used
-8,NOT IN USE,-,-,Reserved,-,-,-,-,Line item not currently used
-9,Other trading assets,BHCM3541,BHCK3541,Trading Assets - Other,Asset,2008-03-31,9999-12-31,Item 12,Residual trading assets
-10,NOT IN USE,-,-,Reserved,-,-,-,-,Line item not currently used
-11,Derivative contracts with gross positive fair value,BHCT3543,BHCK3543,Trading Assets - Derivatives,Asset,2009-06-30,9999-12-31,Item 12,Links to HC-L fair value section; Sum of trading positive FV
-12,TOTAL TRADING ASSETS,BHCT3545,BHCK3545,Trading Assets - Total,Asset,1995-12-31,9999-12-31,Schedule HC Item 5,Equals Schedule HC Item 5; Sum of Items 1-11
-13.a.(1),Short positions - Equity securities,BHCKG209,-,Trading Liabilities - Short Positions,Liability,2009-03-31,9999-12-31,Item 15,Short sales of equity
-13.a.(2),Short positions - Debt securities,BHCKG210,-,Trading Liabilities - Short Positions,Liability,2009-03-31,9999-12-31,Item 15,Short sales of debt
-13.a.(3),Short positions - All other assets,BHCKG211,-,Trading Liabilities - Short Positions,Liability,2009-03-31,9999-12-31,Item 15,Other short positions
-13.b,Other trading liabilities,BHCKF624,-,Trading Liabilities - Other,Liability,2008-03-31,9999-12-31,Item 15,Residual trading liabilities
-14,Derivative contracts with gross negative fair value,BHCT3547,BHCK3547,Trading Liabilities - Derivatives,Liability,2009-06-30,9999-12-31,Item 15,Links to HC-L fair value section; Sum of trading negative FV
-15,TOTAL TRADING LIABILITIES,BHCT3548,BHCK3548,Trading Liabilities - Total,Liability,1989-09-30,9999-12-31,Schedule HC Item 15,Equals Schedule HC Item 15; Sum of Items 13-14
+1,U.S. Treasury securities,BHCM3531,BHCK3531,Trading Assets - Securities,Asset,2008-03-31,9999-12-31,Item 12,Domestic offices (BHCM); pre-2008 BHCK3531 domestic-only
+2,U.S. government agency obligations (exclude MBS),BHCM3532,BHCK3532,Trading Assets - Securities,Asset,2008-03-31,9999-12-31,Item 12,Excludes mortgage-backed securities
+3,Securities issued by states and political subdivisions in the U.S.,BHCM3533,BHCK3533,Trading Assets - Securities,Asset,2008-03-31,9999-12-31,Item 12,Municipal securities held for trading
+4.a,"Residential pass-through securities issued or guaranteed by FNMA, FHLMC, or GNMA",BHCKG379,-,Trading Assets - MBS,Asset,2009-06-30,9999-12-31,Item 12,Agency residential pass-through MBS
+4.b,"Other residential MBS issued or guaranteed by U.S. Govt agencies or sponsored agencies (incl. CMOs, REMICs, stripped MBS)",BHCKG380,-,Trading Assets - MBS,Asset,2009-06-30,9999-12-31,Item 12,Agency-issued/guaranteed other residential MBS
+4.c,All other residential MBS,BHCKG381,-,Trading Assets - MBS,Asset,2009-06-30,9999-12-31,Item 12,Non-agency residential MBS
+4.d,Commercial MBS issued or guaranteed by U.S. Govt agencies or sponsored agencies,BHCKK197,-,Trading Assets - MBS,Asset,2011-03-31,9999-12-31,Item 12,Agency commercial MBS (added Q1 2011)
+4.e,All other commercial MBS,BHCKK198,-,Trading Assets - MBS,Asset,2011-03-31,9999-12-31,Item 12,Non-agency commercial MBS (added Q1 2011)
+5.a,Structured financial products,BHCKHT62,-,Trading Assets - Debt Securities,Asset,2018-06-30,9999-12-31,Item 12,CDOs/CLOs/etc; breakout added 2018
+5.b,All other debt securities,BHCKG386,-,Trading Assets - Debt Securities,Asset,2009-06-30,9999-12-31,Item 12,Includes ABS
+6.a.(1),Loans secured by 1-4 family residential properties,BHCKHT63,-,Trading Assets - Loans,Asset,2018-06-30,9999-12-31,Item 12,Loan breakout added 2018
+6.a.(2),All other loans secured by real estate,BHCKHT64,-,Trading Assets - Loans,Asset,2018-06-30,9999-12-31,Item 12,Loan breakout added 2018
+6.b,Commercial and industrial loans,BHCKF614,-,Trading Assets - Loans,Asset,2008-03-31,9999-12-31,Item 12,C&I loans held for trading
+6.c,"Loans to individuals for household, family, and other personal expenditures (consumer loans)",BHCKHT65,-,Trading Assets - Loans,Asset,2018-06-30,9999-12-31,Item 12,Consumer loans (incl. purchased paper)
+6.d,Other loans,BHCKF618,-,Trading Assets - Loans,Asset,2008-03-31,9999-12-31,Item 12,Other loans held for trading
+7,Not applicable,-,-,Reserved,-,-,-,-,Not applicable on current form
+8,Not applicable,-,-,Reserved,-,-,-,-,Not applicable on current form
+9,Other trading assets,BHCM3541,BHCK3541,Trading Assets - Other,Asset,2008-03-31,9999-12-31,Item 12,Residual trading assets (domestic offices)
+10,Not applicable,-,-,Reserved,-,-,-,-,Not applicable on current form
+11,Derivatives with a positive fair value,BHCM3543,BHCK3543,Trading Assets - Derivatives,Asset,2008-03-31,9999-12-31,Item 12,Revaluation gains; ties to HC-L item 14.a.(1) net
+12,Total trading assets (sum of items 1-11),BHCT3545,BHCK3545,Trading Assets - Total,Asset,1994-03-31,9999-12-31,Schedule HC Item 5,Column A must equal Schedule HC item 5
+13.a.(1),Liability for short positions - Equity securities,BHCKG209,-,Trading Liabilities - Short Positions,Liability,2009-03-31,9999-12-31,Item 15,Short sales of equity
+13.a.(2),Liability for short positions - Debt securities,BHCKG210,-,Trading Liabilities - Short Positions,Liability,2009-03-31,9999-12-31,Item 15,Short sales of debt
+13.a.(3),Liability for short positions - All other assets,BHCKG211,-,Trading Liabilities - Short Positions,Liability,2009-03-31,9999-12-31,Item 15,Other short positions
+13.b,All other trading liabilities,BHCKF624,-,Trading Liabilities - Other,Liability,2008-03-31,9999-12-31,Item 15,Residual trading liabilities
+14,Derivatives with a negative fair value,BHCK3547,BHCT3547,Trading Liabilities - Derivatives,Liability,1994-03-31,9999-12-31,Item 15,Revaluation losses; ties to HC-L item 14.a.(2) net
+15,Total trading liabilities (sum of items 13.a-14),BHCT3548,BHCK3548,Trading Liabilities - Total,Liability,1994-03-31,9999-12-31,Schedule HC Item 15,Column A must equal Schedule HC item 15
+M.1.a.(1),Loans secured by 1-4 family residential properties,BHCKHT66,-,Memoranda - UPB FV Loans,Asset,2018-06-30,9999-12-31,Item 6.a.(1),M1 = UPB of loans at FV (items 6.a.(1)-6.d)
+M.1.a.(2),All other loans secured by real estate,BHCKHT67,-,Memoranda - UPB FV Loans,Asset,2018-06-30,9999-12-31,Item 6.a.(2),UPB of loans at FV
+M.1.b,Commercial and industrial loans,BHCKF632,-,Memoranda - UPB FV Loans,Asset,2008-03-31,9999-12-31,Item 6.b,UPB of loans at FV
+M.1.c,Loans to individuals (consumer loans),BHCKHT68,-,Memoranda - UPB FV Loans,Asset,2018-06-30,9999-12-31,Item 6.c,UPB of loans at FV
+M.1.d,Other loans,BHCKF636,-,Memoranda - UPB FV Loans,Asset,2008-03-31,9999-12-31,Item 6.d,UPB of loans at FV
+M.2.a,Loans measured at FV past due 90+ days - Fair value,BHCKF639,-,Memoranda - Past Due FV Loans,Asset,2008-03-31,9999-12-31,-,Fair value
+M.2.b,Loans measured at FV past due 90+ days - Unpaid principal balance,BHCKF640,-,Memoranda - Past Due FV Loans,Asset,2008-03-31,9999-12-31,-,Unpaid principal balance
+M.3.a,Structured fin. products - Trust preferred securities issued by financial institutions,BHCKG299,-,Memoranda - SFP by Collateral,Asset,2009-06-30,9999-12-31,Item 5.a,Sum M.3.a-g = item 5.a
+M.3.b,Structured fin. products - Trust preferred securities issued by REITs,BHCKG332,-,Memoranda - SFP by Collateral,Asset,2009-06-30,9999-12-31,Item 5.a,
+M.3.c,Structured fin. products - Corporate and similar loans,BHCKG333,-,Memoranda - SFP by Collateral,Asset,2009-06-30,9999-12-31,Item 5.a,
+M.3.d,Structured fin. products - 1-4 family residential MBS issued/guaranteed by GSEs,BHCKG334,-,Memoranda - SFP by Collateral,Asset,2009-06-30,9999-12-31,Item 5.a,
+M.3.e,Structured fin. products - 1-4 family residential MBS not issued/guaranteed by GSEs,BHCKG335,-,Memoranda - SFP by Collateral,Asset,2009-06-30,9999-12-31,Item 5.a,
+M.3.f,Structured fin. products - Diversified (mixed) pools of structured financial products,BHCKG651,-,Memoranda - SFP by Collateral,Asset,2009-06-30,9999-12-31,Item 5.a,
+M.3.g,Structured fin. products - Other collateral or reference assets,BHCKG652,-,Memoranda - SFP by Collateral,Asset,2009-06-30,9999-12-31,Item 5.a,
+M.4.a,Pledged trading assets - Pledged securities,BHCKG387,-,Memoranda - Pledged,Asset,2009-06-30,9999-12-31,-,
+M.4.b,Pledged trading assets - Pledged loans,BHCKG388,-,Memoranda - Pledged,Asset,2009-06-30,9999-12-31,-,
+M.5.a,Asset-backed securities - Credit card receivables,BHCKF643,-,Memoranda - ABS,Asset,2008-03-31,9999-12-31,-,
+M.5.b,Asset-backed securities - Home equity lines,BHCKF644,-,Memoranda - ABS,Asset,2008-03-31,9999-12-31,-,
+M.5.c,Asset-backed securities - Automobile loans,BHCKF645,-,Memoranda - ABS,Asset,2008-03-31,9999-12-31,-,
+M.5.d,Asset-backed securities - Other consumer loans,BHCKF646,-,Memoranda - ABS,Asset,2008-03-31,9999-12-31,-,
+M.5.e,Asset-backed securities - Commercial and industrial loans,BHCKF647,-,Memoranda - ABS,Asset,2008-03-31,9999-12-31,-,
+M.5.f,Asset-backed securities - Other,BHCKF648,-,Memoranda - ABS,Asset,2008-03-31,9999-12-31,-,
+M.6,Not applicable,-,-,Reserved,-,-,-,-,Not applicable on current form
+M.7.a,Equity securities - Readily determinable fair values,BHCKF652,-,Memoranda - Equity Securities,Asset,2008-03-31,9999-12-31,-,
+M.7.b,Equity securities - Other,BHCKF653,-,Memoranda - Equity Securities,Asset,2008-03-31,9999-12-31,-,
+M.8,Loans pending securitization,BHCKF654,-,Memoranda - Pending Securitization,Asset,2008-03-31,9999-12-31,-,
+M.9.a.(1),Gross fair value of commodity contracts,BHCKG212,-,Memoranda - Commodities,Asset,2009-06-30,9999-12-31,Item 9,
+M.9.a.(2),Gross fair value of physical commodities held in inventory,BHCKG213,-,Memoranda - Commodities,Asset,2009-06-30,9999-12-31,Item 9,Exclude equity securities
+M.9.b.(1),Other trading assets itemized (>$1M & >25% of item 9) - Amount,BHCKF655,-,Memoranda - Itemized Other,Asset,2008-03-31,9999-12-31,Item 9,Description in BHTXF655
+M.9.b.(2),Other trading assets itemized - Amount,BHCKF656,-,Memoranda - Itemized Other,Asset,2008-03-31,9999-12-31,Item 9,Description in BHTXF656
+M.9.b.(3),Other trading assets itemized - Amount,BHCKF657,-,Memoranda - Itemized Other,Asset,2008-03-31,9999-12-31,Item 9,Description in BHTXF657
+M.10.a,Other trading liabilities itemized (>$1M & >25% of item 13.b) - Amount,BHCKF658,-,Memoranda - Itemized Other Liab,Liability,2008-03-31,9999-12-31,Item 13.b,Description in BHTXF658
+M.10.b,Other trading liabilities itemized - Amount,BHCKF659,-,Memoranda - Itemized Other Liab,Liability,2008-03-31,9999-12-31,Item 13.b,Description in BHTXF659
+M.10.c,Other trading liabilities itemized - Amount,BHCKF660,-,Memoranda - Itemized Other Liab,Liability,2008-03-31,9999-12-31,Item 13.b,Description in BHTXF660

@@ -1,34 +1,34 @@
 section,category,line_item,mdrm_code,call_mdrm,description,component_of,risk_type,schedule,start_date,notes
-Trading Revenue,Interest Rate,M.7.a,BHCKA221,RIAD8757,Trading revenue from interest rate exposures,BHCKA220,Interest Rate,HI-M,2001-03-31,IR swaps; futures; options; bonds
-Trading Revenue,Foreign Exchange,M.7.b,BHCKA222,RIAD8758,Trading revenue from foreign exchange exposures,BHCKA220,FX,HI-M,2001-03-31,Spot; forwards; swaps; options
-Trading Revenue,Equity,M.7.c,BHCKA223,RIAD8759,Trading revenue from equity exposures,BHCKA220,Equity,HI-M,2001-03-31,Cash equities; equity derivatives
-Trading Revenue,Commodity,M.7.d,BHCKA224,RIAD8760,Trading revenue from commodity and other exposures,BHCKA220,Commodity,HI-M,2001-03-31,Precious metals; energy; agriculture
-Trading Revenue,Credit,M.7.e,BHCKF186,RIADF186,Trading revenue from credit exposures,BHCKA220,Credit,HI-M,2018-06-30,CDS; TRS; credit-linked products
-Trading Revenue,Total,6.b,BHCKA220,RIADA220,Total trading revenue,NIR Total,All,HI,2001-03-31,Sum of M.7.a through M.7.e; HI Item 6.b
-Trading Assets,Treasury Securities,1,BHCM3531,RCFDM3531,U.S. Treasury securities,BHCT3545,Interest Rate,HC-D,2008-03-31,Domestic and foreign combined
-Trading Assets,Agency Securities,2,BHCM3532,RCFDM3532,U.S. Government agency obligations,BHCT3545,Interest Rate,HC-D,2008-03-31,Non-MBS agency debt
-Trading Assets,Municipal Securities,3,BHCM3533,RCFDM3533,Securities issued by states and political subdivisions,BHCT3545,Interest Rate/Credit,HC-D,2008-03-31,State and local bonds
-Trading Assets,MBS - GNMA RMBS,4.a.(1),BHCKK197,RCFDK197,Residential MBS pass-through - GNMA,BHCT3545,Interest Rate/Prepay,HC-D,2011-03-31,Agency residential MBS
-Trading Assets,MBS - FNMA/FHLMC RMBS,4.a.(2),BHCKK198,RCFDK198,Residential MBS pass-through - FNMA/FHLMC,BHCT3545,Interest Rate/Prepay,HC-D,2011-03-31,Agency residential MBS
-Trading Assets,MBS - Other RMBS,4.b,BHCKK199,RCFDK199,All other residential MBS,BHCT3545,Credit/Prepay,HC-D,2011-03-31,Non-agency RMBS
-Trading Assets,MBS - Agency CMBS,4.c.(1),BHCKK200,RCFDK200,Commercial MBS - agency issued,BHCT3545,Interest Rate/Credit,HC-D,2011-03-31,Agency CMBS
-Trading Assets,MBS - Other CMBS,4.c.(2),BHCKK201,RCFDK201,Commercial MBS - all other,BHCT3545,Credit,HC-D,2011-03-31,Non-agency CMBS
+Trading Revenue,Interest Rate,M.9.a,BHCK8757,RIAD8757,Trading revenue from interest rate exposures,BHCKA220,Interest Rate,HI-M,2001-03-31,IR swaps; futures; options; bonds (v8 fix: code was BHCKA221 = net unrealized loss on AFS equity; line was M.7.a)
+Trading Revenue,Foreign Exchange,M.9.b,BHCK8758,RIAD8758,Trading revenue from foreign exchange exposures,BHCKA220,FX,HI-M,2001-03-31,Spot; forwards; swaps; options (v8 fix: code was BHCKA222 = excess ALLL; line was M.7.b)
+Trading Revenue,Equity,M.9.c,BHCK8759,RIAD8759,Trading revenue from equity exposures,BHCKA220,Equity,HI-M,2001-03-31,Cash equities; equity derivatives (v8 fix: code was BHCKA223 = RWA; line was M.7.c)
+Trading Revenue,Commodity,M.9.d,BHCK8760,RIAD8760,Trading revenue from commodity and other exposures,BHCKA220,Commodity,HI-M,2001-03-31,Precious metals; energy; agriculture (v8 fix: code was BHCKA224 = avg total assets; line was M.7.d)
+Trading Revenue,Credit,M.9.e,BHCKF186,RIADF186,Trading revenue from credit exposures,BHCKA220,Credit,HI-M,2018-06-30,CDS; TRS; credit-linked products (v8 fix: line was M.7.e)
+Trading Revenue,Total,5.c,BHCKA220,RIADA220,Total trading revenue,NIR Total,All,HI,2001-03-31,Sum of M.9.a through M.9.e; current FR Y-9C HI item 5.c (v8 fix: line was 6.b)
+Trading Assets,Treasury Securities,1,BHCM3531,RCFD3531,U.S. Treasury securities,BHCT3545,Interest Rate,HC-D,2008-03-31,Domestic and foreign combined (v8 fix: Call was RCFDM3531 nonexistent)
+Trading Assets,Agency Securities,2,BHCM3532,RCFD3532,U.S. Government agency obligations,BHCT3545,Interest Rate,HC-D,2008-03-31,Non-MBS agency debt (v8 fix: Call was RCFDM3532 nonexistent)
+Trading Assets,Municipal Securities,3,BHCM3533,RCFD3533,Securities issued by states and political subdivisions,BHCT3545,Interest Rate/Credit,HC-D,2008-03-31,State and local bonds (v8 fix: Call was RCFDM3533 nonexistent)
+Trading Assets,MBS - Residential Pass-Through,4.a,BHCKG379,RCFDG379,Residential MBS pass-through issued/guaranteed by FNMA/FHLMC/GNMA,BHCT3545,Interest Rate/Prepay,HC-D,2018-06-30,Agency residential pass-through (v8 fix: prior 4.a.(1)/K197 layout superseded by current FR Y-9C HC-D; K197 is now commercial MBS at 4.d)
+Trading Assets,MBS - Other Residential Agency,4.b,BHCKG380,RCFDG380,Other residential MBS issued/guaranteed by FNMA/FHLMC/GNMA (CMOs/REMICs/stripped),BHCT3545,Interest Rate/Prepay,HC-D,2018-06-30,Agency residential CMO/REMIC (v8 fix: was K198)
+Trading Assets,MBS - Other Residential,4.c,BHCKG381,RCFDG381,All other residential MBS,BHCT3545,Credit/Prepay,HC-D,2018-06-30,Non-agency RMBS (v8 fix: was K199 nonexistent in current form)
+Trading Assets,MBS - Agency CMBS,4.d,BHCKK197,RCFDK197,Commercial MBS issued/guaranteed by U.S. Govt agencies,BHCT3545,Interest Rate/Credit,HC-D,2011-03-31,Agency CMBS (v8 fix: K197 is HC-D 4.d commercial; was mislabeled 4.a.(1) residential)
+Trading Assets,MBS - Other CMBS,4.e,BHCKK198,RCFDK198,All other commercial MBS,BHCT3545,Credit,HC-D,2011-03-31,Non-agency CMBS (v8 fix: K198 is HC-D 4.e; was mislabeled 4.a.(2) residential)
 Trading Assets,Structured Products,5.a,BHCKHT62,RCFDHT62,Structured financial products,BHCT3545,Credit,HC-D,2018-06-30,CDOs; CLOs; other structured
-Trading Assets,Other Debt/ABS,5.b,BHCKK202,RCFDK202,Other debt securities including ABS,BHCT3545,Credit,HC-D,2011-03-31,Asset-backed securities; corporate bonds
+Trading Assets,Other Debt/ABS,5.b,BHCKG386,RCFDG386,All other debt securities,BHCT3545,Credit,HC-D,2018-06-30,ABS and corporate bonds (v8 fix: was K202 = separate-account life insurance assets)
 Trading Assets,Loans - 1-4 Family,6.a,BHCKHT63,RCFDHT63,Loans secured by 1-4 family residential properties,BHCT3545,Credit/Prepay,HC-D,2018-06-30,Trading loans - residential
 Trading Assets,Loans - Other RE,6.b,BHCKHT64,RCFDHT64,All other loans secured by real estate,BHCT3545,Credit,HC-D,2018-06-30,Trading loans - CRE; other RE
 Trading Assets,Loans - C&I,6.c,BHCKF614,RCFDF614,Commercial and industrial loans,BHCT3545,Credit,HC-D,2008-03-31,Trading loans - C&I
 Trading Assets,Loans - Consumer,6.d,BHCKHT65,RCFDHT65,Consumer loans,BHCT3545,Credit,HC-D,2018-06-30,Trading loans - consumer
 Trading Assets,Loans - Other,6.e,BHCKF618,RCFDF618,Other loans,BHCT3545,Credit,HC-D,2008-03-31,Trading loans - other
-Trading Assets,Other Trading Assets,9,BHCM3541,RCFDM3541,Other trading assets,BHCT3545,Various,HC-D,2008-03-31,Residual trading assets
-Trading Assets,Derivatives Positive FV,11,BHCT3543,RCFDT3543,Derivative contracts with gross positive fair value,BHCT3545,All,HC-D,2009-06-30,Sum of HC-L positive FV items
-Trading Assets,Total Trading Assets,12,BHCT3545,RCFDT3545,TOTAL TRADING ASSETS,HC Item 5,All,HC-D,1995-12-31,Equals Schedule HC Item 5
+Trading Assets,Other Trading Assets,9,BHCM3541,RCFD3541,Other trading assets,BHCT3545,Various,HC-D,2008-03-31,Residual trading assets (v8 fix: Call was RCFDM3541 nonexistent)
+Trading Assets,Derivatives Positive FV,11,BHCT3543,RCFD3543,Derivative contracts with gross positive fair value,BHCT3545,All,HC-D,2009-06-30,Sum of HC-L positive FV items (v8 fix: Call was RCFDT3543 nonexistent)
+Trading Assets,Total Trading Assets,12,BHCT3545,RCFD3545,TOTAL TRADING ASSETS,HC Item 5,All,HC-D,1995-12-31,Equals Schedule HC Item 5 (v8 fix: Call was RCFDT3545 nonexistent)
 Trading Liabilities,Short - Equity,13.a.(1),BHCKG209,RCFDG209,Short positions in equity securities,BHCT3548,Equity,HC-D,2009-03-31,Short sales of equity
 Trading Liabilities,Short - Debt,13.a.(2),BHCKG210,RCFDG210,Short positions in debt securities,BHCT3548,Interest Rate/Credit,HC-D,2009-03-31,Short sales of bonds
 Trading Liabilities,Short - Other,13.a.(3),BHCKG211,RCFDG211,Short positions in all other assets,BHCT3548,Commodity,HC-D,2009-03-31,Commodity and other short positions
 Trading Liabilities,Other Trading Liabs,13.b,BHCKF624,RCFDF624,Other trading liabilities,BHCT3548,Various,HC-D,2008-03-31,Residual trading liabilities
-Trading Liabilities,Derivatives Negative FV,14,BHCT3547,RCFDT3547,Derivative contracts with gross negative fair value,BHCT3548,All,HC-D,2009-06-30,Sum of HC-L negative FV items
-Trading Liabilities,Total Trading Liabs,15,BHCT3548,RCFDT3548,TOTAL TRADING LIABILITIES,HC Item 15,All,HC-D,1989-09-30,Equals Schedule HC Item 15
+Trading Liabilities,Derivatives Negative FV,14,BHCT3547,RCFD3547,Derivative contracts with gross negative fair value,BHCT3548,All,HC-D,2009-06-30,Sum of HC-L negative FV items (v8 fix: Call was RCFDT3547 nonexistent)
+Trading Liabilities,Total Trading Liabs,15,BHCT3548,RCFD3548,TOTAL TRADING LIABILITIES,HC Item 15,All,HC-D,1989-09-30,Equals Schedule HC Item 15 (v8 fix: Call was RCFDT3548 nonexistent)
 Derivatives Notional,Interest Rate Futures,12.a.(1),BHCK8693,RCFD8693,Interest rate contracts - Futures (exchange-traded),Notional Total,Interest Rate,HC-L,1995-03-31,Exchange-traded IR futures
 Derivatives Notional,Interest Rate Forwards,12.a.(2),BHCK8697,RCFD8697,Interest rate contracts - Forwards (OTC),Notional Total,Interest Rate,HC-L,1995-03-31,OTC IR forwards
 Derivatives Notional,Interest Rate Swaps,12.b,BHCK3450,RCFD3450,Interest rate contracts - Swaps (OTC),Notional Total,Interest Rate,HC-L,1995-03-31,IR swaps - largest by notional
@@ -79,24 +79,24 @@ Derivatives Fair Value,IR Non-Trading Negative,22.a,BHCK8745,RCFD8745,Interest r
 Derivatives Fair Value,FX Non-Trading Negative,22.b,BHCK8746,RCFD8746,Foreign exchange - Non-trading contracts gross negative FV,Other Liabs,FX,HC-L,1995-03-31,FX hedging negative fair value
 Derivatives Fair Value,Equity Non-Trading Negative,22.c,BHCK8747,RCFD8747,Equity - Non-trading contracts gross negative FV,Other Liabs,Equity,HC-L,1995-03-31,Equity hedging negative fair value
 Derivatives Fair Value,Commodity Non-Trading Negative,22.d,BHCK8748,RCFD8748,Commodity - Non-trading contracts gross negative FV,Other Liabs,Commodity,HC-L,1995-03-31,Commodity hedging negative fair value
-Market Risk RWA,RWA - 0% Weight,RWA1,BHCKA221,RCFDA221,Balance sheet assets at 0% risk weight,BHCAA223,Low Risk,HC-R Part II,2014-03-31,Cash; Treasuries; reserves
-Market Risk RWA,RWA - 20% Weight,RWA2,BHCKS396,RCFDS396,Balance sheet assets at 20% risk weight,BHCAA223,Low-Medium,HC-R Part II,2014-03-31,GSE; munis; interbank
-Market Risk RWA,RWA - 50% Weight,RWA3,BHCKS397,RCFDS397,Balance sheet assets at 50% risk weight,BHCAA223,Medium,HC-R Part II,2014-03-31,Residential mortgages
-Market Risk RWA,RWA - 100% Weight,RWA4,BHCKS398,RCFDS398,Balance sheet assets at 100% risk weight,BHCAA223,High,HC-R Part II,2014-03-31,C&I; CRE; most loans
-Market Risk RWA,RWA - 150% Weight,RWA5,BHCKS399,RCFDS399,Balance sheet assets at 150% risk weight,BHCAA223,Very High,HC-R Part II,2014-03-31,HVCRE; non-IG exposures
-Market Risk RWA,RWA - Securitization,RWA6,BHCKS400,RCFDS400,Securitization exposures RWA,BHCAA223,Securitization,HC-R Part II,2014-03-31,ABS; MBS; other securitization
+Market Risk RWA,RWA - 0% Weight,RWA1,-,-,Balance sheet assets at 0% risk weight,BHCAA223,Low Risk,HC-R Part II,2014-03-31,No atomic MDRM code - HC-R Part II is a 22-column matrix (cols A-U by weight); a per-weight-band total is computed across rows; (v8 fix: was BHCKA221/RCFDA221 = net unrealized loss on AFS equity)
+Market Risk RWA,RWA - 20% Weight,RWA2,-,-,Balance sheet assets at 20% risk weight,BHCAA223,Low-Medium,HC-R Part II,2014-03-31,No atomic MDRM code - per-weight-band total computed across HC-R Part II rows; (v8 fix: was BHCKS396/RCFDS396 = cash col-B cell only)
+Market Risk RWA,RWA - 50% Weight,RWA3,-,-,Balance sheet assets at 50% risk weight,BHCAA223,Medium,HC-R Part II,2014-03-31,No atomic MDRM code - per-weight-band total computed across HC-R Part II rows; (v8 fix: was BHCKS397/RCFDS397 = cash 50pct cell only)
+Market Risk RWA,RWA - 100% Weight,RWA4,-,-,Balance sheet assets at 100% risk weight,BHCAA223,High,HC-R Part II,2014-03-31,No atomic MDRM code - per-weight-band total computed across HC-R Part II rows; (v8 fix: was BHCKS398/RCFDS398 = cash 150pct cell only)
+Market Risk RWA,RWA - 150% Weight,RWA5,-,-,Balance sheet assets at 150% risk weight,BHCAA223,Very High,HC-R Part II,2014-03-31,No atomic MDRM code - per-weight-band total computed across HC-R Part II rows; (v8 fix: was BHCKS399/RCFDS399 = HTM adjustment cell only)
+Market Risk RWA,RWA - Securitization,RWA6,-,-,Securitization exposures RWA,BHCAA223,Securitization,HC-R Part II,2014-03-31,No single MDRM code - HC-R Part II securitization rows; (v8 fix: was BHCKS400/RCFDS400 = HTM 150pct cell only)
 Market Risk RWA,RWA - Equity,RWA7,-,-,Equity exposures RWA,BHCAA223,Equity,HC-R Part II,2014-03-31,Equity investment risk weight; computed across HC-R Part II risk-weight bands - no single MDRM code
-Market Risk RWA,RWA - Derivatives,RWA8,BHCKS402,RCFDS402,Derivative exposures RWA,BHCAA223,Derivatives,HC-R Part II,2014-03-31,CCR from derivatives
-Market Risk RWA,RWA - Off-Balance Sheet,RWA9,BHCKS403,RCFDS403,Off-balance sheet exposures RWA,BHCAA223,OBS,HC-R Part II,2014-03-31,Commitments; guarantees
-Market Risk RWA,Market Risk RWA,RWA10,BHCKA222,RCFDA222,Market risk-weighted assets,BHCAA223,Trading Book,HC-R Part II,2014-03-31,VaR; sVaR; IRC; CRM capital
+Market Risk RWA,RWA - Derivatives,RWA8,-,-,Derivative exposures RWA,BHCAA223,Derivatives,HC-R Part II,2014-03-31,No single MDRM code - CCR derivative exposure across HC-R Part II; (v8 fix: was BHCKS402/RCFDS402 = AFS adjustment cell only)
+Market Risk RWA,RWA - Off-Balance Sheet,RWA9,-,-,Off-balance sheet exposures RWA,BHCAA223,OBS,HC-R Part II,2014-03-31,No single MDRM code - OBS converted exposures across HC-R Part II; (v8 fix: was BHCKS403/RCFDS403 = AFS 150pct cell only)
+Market Risk RWA,Market Risk RWA,RWA10,BHCKS581,RCFDS581,Standardized market risk-weighted assets,BHCAA223,Trading Book,HC-R Part II,2014-03-31,HC-R Part II item 27; VaR; sVaR; IRC; CRM (covered HCs only); (v8 fix: was BHCKA222/RCFDA222 = excess ALLL)
 Market Risk RWA,Total RWA,Total,BHCAA223,RCFDA223,Total risk-weighted assets,N/A,All,HC-R Part II,2014-03-31,Sum of all RWA components
 Capital Ratios,CET1 Capital,Cap1,BHCAP859,RCFAP859,Common equity Tier 1 capital,N/A,Capital,HC-R Part I,2014-03-31,Highest quality capital
-Capital Ratios,Tier 1 Capital,Cap2,BHCA8274,RCFAA223,Tier 1 capital,N/A,Capital,HC-R Part I,2014-03-31,CET1 + AT1
+Capital Ratios,Tier 1 Capital,Cap2,BHCA8274,RCFA8274,Tier 1 capital,N/A,Capital,HC-R Part I,2014-03-31,CET1 + AT1 (v8 fix: Call was RCFAA223 = total RWA)
 Capital Ratios,Total Capital,Cap3,BHCA3792,RCFA3792,Total capital,N/A,Capital,HC-R Part I,2014-03-31,Tier 1 + Tier 2
 Capital Ratios,CET1 Ratio,Ratio1,BHCAP793,RCFAP793,CET1 capital ratio,N/A,Ratio,HC-R Part I,2014-03-31,CET1 / RWA
 Capital Ratios,Tier 1 Ratio,Ratio2,BHCA7206,RCFA7206,Tier 1 capital ratio,N/A,Ratio,HC-R Part I,2014-03-31,Tier 1 / RWA
 Capital Ratios,Total Capital Ratio,Ratio3,BHCA7205,RCFA7205,Total capital ratio,N/A,Ratio,HC-R Part I,2014-03-31,Total capital / RWA
 Capital Ratios,Leverage Ratio,Ratio4,BHCA7204,RCFA7204,Tier 1 leverage ratio,N/A,Ratio,HC-R Part I,2014-03-31,Tier 1 / Avg assets
-Capital Ratios,SLR,Ratio5,BHCKA224,RCFDA224,Supplementary leverage ratio,N/A,Ratio,HC-R Part I,2018-03-31,Advanced approaches only
+Capital Ratios,SLR,Ratio5,BHCAH036,RCOAH036,Supplementary leverage ratio,N/A,Ratio,HC-R Part I,2018-03-31,Advanced approaches only; HC-R-I item 53 (v8 fix: was BHCKA224/RCFDA224 = avg total assets)
 Interest Income,Trading Asset Interest,Int1,BHCK4069,RIAD4069,Interest income on trading assets,BHCK4107,Interest,HI,1995-03-31,Component of total interest income
 Interest Expense,Trading Liability Interest,Int2,BHCK4185,RIAD4185,Interest expense on trading liabilities,BHCK4073,Interest,HI,1995-03-31,Component of total interest expense

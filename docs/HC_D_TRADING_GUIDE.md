@@ -29,23 +29,23 @@ TRADING ASSETS (Items 1-12)
 │   ├── Item 2: U.S. Government agency obligations
 │   ├── Item 3: Municipal securities
 │   ├── Item 4: Mortgage-backed securities
-│   │   ├── 4.a.(1): GNMA residential pass-through
-│   │   ├── 4.a.(2): FNMA/FHLMC residential pass-through
-│   │   ├── 4.b: Other residential MBS
-│   │   ├── 4.c.(1): Agency commercial MBS
-│   │   └── 4.c.(2): Non-agency commercial MBS
+│   │   ├── 4.a: Agency residential pass-through (FNMA/FHLMC/GNMA)
+│   │   ├── 4.b: Other agency-guaranteed residential MBS
+│   │   ├── 4.c: All other residential MBS
+│   │   ├── 4.d: Agency commercial MBS
+│   │   └── 4.e: All other commercial MBS
 │   └── Item 5: Other debt securities
 │       ├── 5.a: Structured financial products
-│       └── 5.b: Other debt (including ABS)
+│       └── 5.b: All other debt securities
 ├── Loans (Item 6)
-│   ├── 6.a: 1-4 family residential
-│   ├── 6.b: Other real estate
-│   ├── 6.c: Commercial and industrial
-│   ├── 6.d: Consumer loans
-│   └── 6.e: Other loans
-├── Items 7-8: NOT IN USE
+│   ├── 6.a.(1): 1-4 family residential
+│   ├── 6.a.(2): All other loans secured by real estate
+│   ├── 6.b: Commercial and industrial
+│   ├── 6.c: Consumer loans
+│   └── 6.d: Other loans
+├── Items 7-8: Not applicable
 ├── Item 9: Other trading assets
-├── Item 10: NOT IN USE
+├── Item 10: Not applicable
 ├── Item 11: Derivatives positive fair value → Links to HC-L
 └── Item 12: TOTAL TRADING ASSETS → Equals HC Item 5
 
@@ -90,42 +90,42 @@ TRADING LIABILITIES (Items 13-15)
 
 ### Item 4: Mortgage-Backed Securities
 
-**Structure**:
+**Structure** (current FR Y-9C):
 ```
 Item 4: MBS Total
-├── 4.a: Residential Pass-Through
-│   ├── 4.a.(1) GNMA (BHCKK197)
-│   └── 4.a.(2) FNMA/FHLMC (BHCKK198)
-├── 4.b: Other Residential MBS (BHCKK199)
-└── 4.c: Commercial MBS
-    ├── 4.c.(1) Agency (BHCKK200)
-    └── 4.c.(2) Non-Agency (BHCKK201)
+├── 4.a: Residential pass-through, FNMA/FHLMC/GNMA (BHCKG379)
+├── 4.b: Other agency-guaranteed residential MBS, incl. CMOs/REMICs/stripped (BHCKG380)
+├── 4.c: All other residential MBS (BHCKG381)
+├── 4.d: Agency commercial MBS (BHCKK197)
+└── 4.e: All other commercial MBS (BHCKK198)
 ```
 
 | Line | MDRM | Description | Start Date |
 |------|------|-------------|------------|
-| 4.a.(1) | BHCKK197 | GNMA residential pass-through | 2011-03-31 |
-| 4.a.(2) | BHCKK198 | FNMA/FHLMC residential pass-through | 2011-03-31 |
-| 4.b | BHCKK199 | Non-agency residential MBS | 2011-03-31 |
-| 4.c.(1) | BHCKK200 | Agency commercial MBS | 2011-03-31 |
-| 4.c.(2) | BHCKK201 | Non-agency commercial MBS | 2011-03-31 |
+| 4.a | BHCKG379 | Residential pass-through (FNMA/FHLMC/GNMA) | 2009-06-30 |
+| 4.b | BHCKG380 | Other agency-guaranteed residential MBS (CMOs/REMICs/stripped) | 2009-06-30 |
+| 4.c | BHCKG381 | All other residential MBS | 2009-06-30 |
+| 4.d | BHCKK197 | Agency commercial MBS | 2011-03-31 |
+| 4.e | BHCKK198 | All other commercial MBS | 2011-03-31 |
+
+> Note: codes K199/K200/K201/K202 are NOT trading-MBS codes (K199/K200 are end-dated consumer-loan codes; K201/K202 are life-insurance asset codes in HC-F). Earlier releases mis-mapped these.
 
 ### Item 5: Other Debt Securities
 
 | Line | MDRM | Description | Start Date |
 |------|------|-------------|------------|
 | 5.a | BHCKHT62 | Structured financial products (CDOs, CLOs) | 2018-06-30 |
-| 5.b | BHCKK202 | Other debt securities (including ABS) | 2011-03-31 |
+| 5.b | BHCKG386 | All other debt securities (incl. ABS) | 2009-06-30 |
 
 ### Item 6: Loans Held for Trading
 
 | Line | MDRM | Description | Start Date |
 |------|------|-------------|------------|
-| 6.a | BHCKHT63 | 1-4 family residential loans | 2018-06-30 |
-| 6.b | BHCKHT64 | Other real estate loans | 2018-06-30 |
-| 6.c | BHCKF614 | Commercial and industrial loans | 2008-03-31 |
-| 6.d | BHCKHT65 | Consumer loans | 2018-06-30 |
-| 6.e | BHCKF618 | Other loans | 2008-03-31 |
+| 6.a.(1) | BHCKHT63 | Loans secured by 1-4 family residential properties | 2018-06-30 |
+| 6.a.(2) | BHCKHT64 | All other loans secured by real estate | 2018-06-30 |
+| 6.b | BHCKF614 | Commercial and industrial loans | 2008-03-31 |
+| 6.c | BHCKHT65 | Consumer loans | 2018-06-30 |
+| 6.d | BHCKF618 | Other loans | 2008-03-31 |
 
 ### Item 9: Other Trading Assets
 
@@ -140,11 +140,12 @@ Item 4: MBS Total
 
 | MDRM | Description | Links To |
 |------|-------------|----------|
-| BHCT3543 | Gross positive fair value of derivatives | HC-L Fair Value items |
+| BHCM3543 | Gross positive fair value of derivatives (domestic offices; current code) | HC-L Fair Value items |
+| BHCT3543 | Legacy variant | — |
 
 **Reconciliation to HC-L**:
 ```
-BHCT3543 = Trading Positive FV + Non-Trading Positive FV
+BHCM3543 = Trading Positive FV + Non-Trading Positive FV
          = (BHCK8733 + BHCK8734 + BHCK8735 + BHCK8736)
          + (BHCK8741 + BHCK8742 + BHCK8743 + BHCK8744)
 ```
@@ -180,11 +181,12 @@ Schedule HC Item 5 = HC-D Item 12
 
 | MDRM | Description | Links To |
 |------|-------------|----------|
-| BHCT3547 | Gross negative fair value of derivatives | HC-L Fair Value items |
+| BHCK3547 | Gross negative fair value of derivatives (current code) | HC-L Fair Value items |
+| BHCT3547 | Legacy variant | — |
 
 **Reconciliation to HC-L**:
 ```
-BHCT3547 = Trading Negative FV + Non-Trading Negative FV
+BHCK3547 = Trading Negative FV + Non-Trading Negative FV
          = (BHCK8737 + BHCK8738 + BHCK8739 + BHCK8740)
          + (BHCK8745 + BHCK8746 + BHCK8747 + BHCK8748)
 ```
@@ -262,7 +264,8 @@ Derivatives Share = (Item 11 + Item 14) / (Item 12 + Item 15)
 | 1995-12-31 | Enhanced trading assets reporting |
 | 2008-03-31 | Loan trading detail added (F614, F618) |
 | 2009-03-31 | Short position breakout (G209-G211) |
-| 2011-03-31 | MBS granular detail (K197-K202) |
+| 2009-06-30 | Residential MBS / other-debt detail (G379-G386) |
+| 2011-03-31 | Commercial MBS detail added (K197, K198) |
 | 2018-06-30 | Structured products and loan detail (HT62-HT65) |
 
 ---
@@ -274,22 +277,28 @@ Derivatives Share = (Item 11 + Item 14) / (Item 12 + Item 15)
 | 1 | BHCM3531 | Treasury securities |
 | 2 | BHCM3532 | Agency securities |
 | 3 | BHCM3533 | Municipal securities |
-| 4.a.(1) | BHCKK197 | GNMA MBS |
-| 4.a.(2) | BHCKK198 | FNMA/FHLMC MBS |
-| 4.b | BHCKK199 | Other residential MBS |
-| 4.c.(1) | BHCKK200 | Agency CMBS |
-| 4.c.(2) | BHCKK201 | Non-agency CMBS |
+| 4.a | BHCKG379 | Agency residential pass-through MBS |
+| 4.b | BHCKG380 | Other agency-guaranteed residential MBS |
+| 4.c | BHCKG381 | All other residential MBS |
+| 4.d | BHCKK197 | Agency commercial MBS |
+| 4.e | BHCKK198 | All other commercial MBS |
 | 5.a | BHCKHT62 | Structured products |
-| 5.b | BHCKK202 | Other debt securities |
-| 6.c | BHCKF614 | C&I loans (trading) |
+| 5.b | BHCKG386 | All other debt securities |
+| 6.a.(1) | BHCKHT63 | 1-4 family residential trading loans |
+| 6.a.(2) | BHCKHT64 | Other RE trading loans |
+| 6.b | BHCKF614 | C&I loans (trading) |
+| 6.c | BHCKHT65 | Consumer trading loans |
+| 6.d | BHCKF618 | Other trading loans |
 | 9 | BHCM3541 | Other trading assets |
-| 11 | BHCT3543 | Derivatives positive FV |
+| 11 | BHCM3543 | Derivatives positive FV |
 | **12** | **BHCT3545** | **TOTAL TRADING ASSETS** |
 | 13.a.(1) | BHCKG209 | Short equity |
 | 13.a.(2) | BHCKG210 | Short debt |
+| 13.a.(3) | BHCKG211 | Short other assets |
 | 13.b | BHCKF624 | Other trading liabilities |
-| 14 | BHCT3547 | Derivatives negative FV |
+| 14 | BHCK3547 | Derivatives negative FV |
 | **15** | **BHCT3548** | **TOTAL TRADING LIABS** |
+| M.1–M.10 | (see CSV) | Memoranda (UPB at FV, past-due, SFP by collateral, pledged, ABS, equity, pending securitization, commodities, itemized other) |
 
 ---
 

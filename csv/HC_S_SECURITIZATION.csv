@@ -1,26 +1,76 @@
-line_number,item_description,mdrm_code,call_mdrm,category,part,start_date,notes
-1.a,Outstanding principal balance of 1-4 family residential loans sold and securitized,BHCKB705,RCFDB705,Originator - 1-4 Family,Part I,2001-03-31,
-1.b,Outstanding principal balance of HELOCs sold and securitized,BHCKB706,RCFDB706,Originator - HELOC,Part I,2001-03-31,
-1.c,Outstanding principal balance of credit card receivables sold and securitized,BHCKB707,RCFDB707,Originator - Credit Card,Part I,2001-03-31,
-1.d,Outstanding principal balance of auto loans sold and securitized,BHCKB708,RCFDB708,Originator - Auto,Part I,2001-03-31,
-1.e,Outstanding principal balance of other consumer loans sold and securitized,BHCKB709,RCFDB709,Originator - Other Consumer,Part I,2001-03-31,
-1.f,Outstanding principal balance of C&I loans sold and securitized,BHCKB710,RCFDB710,Originator - C&I,Part I,2001-03-31,
-1.g,Outstanding principal balance of all other loans sold and securitized,BHCKB711,RCFDB711,Originator - Other,Part I,2001-03-31,
-2,Maximum amount of credit exposure from recourse or credit enhancement,BHCKB712,RCFDB712,Originator - Exposure,Part I,2001-03-31,Retained risk
-3.a,Past due 30-89 days - 1-4 family residential,BHCKB761,RCFDB761,Originator - Past Due,Part I,2001-03-31,
-3.b,Past due 90+ days - 1-4 family residential,BHCKB762,RCFDB762,Originator - Past Due,Part I,2001-03-31,
-4,Charge-offs on loans underlying securitizations (YTD),BHCKB763,RCFDB763,Originator - Chargeoffs,Part I,2001-03-31,
-5.a,AFS securities backed by 1-4 family residential,BHCKB764,RCFDB764,Investor - 1-4 Family,Part II,2001-03-31,
-5.b,AFS securities backed by HELOCs,BHCKB765,RCFDB765,Investor - HELOC,Part II,2001-03-31,
-5.c,AFS securities backed by credit card,BHCKB766,RCFDB766,Investor - Credit Card,Part II,2001-03-31,
-5.d,AFS securities backed by auto,BHCKB767,RCFDB767,Investor - Auto,Part II,2001-03-31,
-5.e,AFS securities backed by other consumer,BHCKB768,RCFDB768,Investor - Other Consumer,Part II,2001-03-31,
-5.f,AFS securities backed by C&I,BHCKB769,RCFDB769,Investor - C&I,Part II,2001-03-31,
-5.g,AFS securities backed by other,BHCKB770,RIADB770,Investor - Other,Part II,2001-03-31,
-6,Total ABS held as investor,BHCKB771,RIADB771,Investor - Total ABS,Part II,2001-03-31,
-7.a,Mortgages serviced for others - 1-4 family residential,BHCKB772,RIADB772,Servicer - 1-4 Family,Part III,2001-03-31,Unpaid principal balance
-7.b,Mortgages serviced for others - other residential,BHCKB773,RIADB773,Servicer - Other Resi,Part III,2001-03-31,
-7.c,Mortgages serviced for others - commercial,BHCKB774,RIADB774,Servicer - Commercial,Part III,2001-03-31,
-8,Total mortgage servicing,BHCKB775,RIADB775,Servicer - Total Mortgage,Part III,2001-03-31,Sum of Items 7
-M1,Credit enhancements to ABCP conduits,BHCKB806,RCFDB806,Memorandum - ABCP,Part I,2004-03-31,
-M2,Liquidity facilities to ABCP conduits,BHCKB807,RCFDB807,Memorandum - ABCP,Part I,2004-03-31,
+line_number,column,item_description,mdrm_code,call_mdrm,category,part,start_date,notes
+1,A,Outstanding principal balance of assets sold and securitized with servicing retained or with recourse/seller-provided credit enhancements,BHCKB705,RCFDB705,Securitization - Outstanding principal balance ,Part I,2001-06-30,Originator (1-4 Family Residential Loans)
+1,B,Outstanding principal balance of assets sold and securitized with servicing retained or with recourse/seller-provided credit enhancements,BHCKB706,RCFDB706,Securitization - Outstanding principal balance ,Part I,2001-06-30,Originator (Home Equity Lines)
+1,C,Outstanding principal balance of assets sold and securitized with servicing retained or with recourse/seller-provided credit enhancements,BHCKB707,RCFDB707,Securitization - Outstanding principal balance ,Part I,2001-06-30,Originator (Credit Card Receivables)
+1,D,Outstanding principal balance of assets sold and securitized with servicing retained or with recourse/seller-provided credit enhancements,BHCKB708,RCFDB708,Securitization - Outstanding principal balance ,Part I,2001-06-30,Originator (Auto Loans)
+1,E,Outstanding principal balance of assets sold and securitized with servicing retained or with recourse/seller-provided credit enhancements,BHCKB709,RCFDB709,Securitization - Outstanding principal balance ,Part I,2001-06-30,Originator (Other Consumer Loans)
+1,F,Outstanding principal balance of assets sold and securitized with servicing retained or with recourse/seller-provided credit enhancements,BHCKB710,RCFDB710,Securitization - Outstanding principal balance ,Part I,2001-06-30,Originator (Commercial and Industrial Loans)
+1,G,Outstanding principal balance of assets sold and securitized with servicing retained or with recourse/seller-provided credit enhancements,BHCKB711,RCFDB711,Securitization - Outstanding principal balance ,Part I,2001-06-30,"Originator (All Other Loans, All Leases, and All Other Assets)"
+2,A,Maximum credit exposure from recourse or seller-provided credit enhancements for structures in item 1,BHCKHU09,RCFDHU09,Securitization - Maximum credit exposure from r,Part I,2018-06-30,Retained risk (1-4 Family Residential Loans)
+2,B,Maximum credit exposure from recourse or seller-provided credit enhancements for structures in item 1,BHCKHU10,RCFDHU10,Securitization - Maximum credit exposure from r,Part I,2018-06-30,Retained risk (Home Equity Lines)
+2,C,Maximum credit exposure from recourse or seller-provided credit enhancements for structures in item 1,BHCKHU11,RCFDHU11,Securitization - Maximum credit exposure from r,Part I,2018-06-30,Retained risk (Credit Card Receivables)
+2,D,Maximum credit exposure from recourse or seller-provided credit enhancements for structures in item 1,BHCKHU12,RCFDHU12,Securitization - Maximum credit exposure from r,Part I,2018-06-30,Retained risk (Auto Loans)
+2,E,Maximum credit exposure from recourse or seller-provided credit enhancements for structures in item 1,BHCKHU13,RCFDHU13,Securitization - Maximum credit exposure from r,Part I,2018-06-30,Retained risk (Other Consumer Loans)
+2,F,Maximum credit exposure from recourse or seller-provided credit enhancements for structures in item 1,BHCKHU14,RCFDHU14,Securitization - Maximum credit exposure from r,Part I,2018-06-30,Retained risk (Commercial and Industrial Loans)
+2,G,Maximum credit exposure from recourse or seller-provided credit enhancements for structures in item 1,BHCKHU15,RCFDHU15,Securitization - Maximum credit exposure from r,Part I,2018-06-30,"Retained risk (All Other Loans, All Leases, and All Other Assets)"
+3,A,Unused commitments to provide liquidity to structures in item 1,BHCKB726,RCFDB726,Securitization - Unused commitments to provide ,Part I,2001-06-30,$100B+ filers (1-4 Family Residential Loans)
+3,B,Unused commitments to provide liquidity to structures in item 1,BHCKB727,RCFDB727,Securitization - Unused commitments to provide ,Part I,2001-06-30,$100B+ filers (Home Equity Lines)
+3,C,Unused commitments to provide liquidity to structures in item 1,BHCKB728,RCFDB728,Securitization - Unused commitments to provide ,Part I,2001-06-30,$100B+ filers (Credit Card Receivables)
+3,D,Unused commitments to provide liquidity to structures in item 1,BHCKB729,RCFDB729,Securitization - Unused commitments to provide ,Part I,2001-06-30,$100B+ filers (Auto Loans)
+3,E,Unused commitments to provide liquidity to structures in item 1,BHCKB730,RCFDB730,Securitization - Unused commitments to provide ,Part I,2001-06-30,$100B+ filers (Other Consumer Loans)
+3,F,Unused commitments to provide liquidity to structures in item 1,BHCKB731,RCFDB731,Securitization - Unused commitments to provide ,Part I,2001-06-30,$100B+ filers (Commercial and Industrial Loans)
+3,G,Unused commitments to provide liquidity to structures in item 1,BHCKB732,RCFDB732,Securitization - Unused commitments to provide ,Part I,2001-06-30,"$100B+ filers (All Other Loans, All Leases, and All Other Assets)"
+4.a,A,Past due 30-89 days (included in item 1),BHCKB733,RCFDB733,Securitization - Past due 30-89 days (included ,Part I,2001-03-31,(1-4 Family Residential Loans)
+4.a,B,Past due 30-89 days (included in item 1),BHCKB734,RCFDB734,Securitization - Past due 30-89 days (included ,Part I,2001-03-31,(Home Equity Lines)
+4.a,C,Past due 30-89 days (included in item 1),BHCKB735,RCFDB735,Securitization - Past due 30-89 days (included ,Part I,2001-03-31,(Credit Card Receivables)
+4.a,D,Past due 30-89 days (included in item 1),BHCKB736,RCFDB736,Securitization - Past due 30-89 days (included ,Part I,2001-03-31,(Auto Loans)
+4.a,E,Past due 30-89 days (included in item 1),BHCKB737,RCFDB737,Securitization - Past due 30-89 days (included ,Part I,2001-03-31,(Other Consumer Loans)
+4.a,F,Past due 30-89 days (included in item 1),BHCKB738,RCFDB738,Securitization - Past due 30-89 days (included ,Part I,2001-03-31,(Commercial and Industrial Loans)
+4.a,G,Past due 30-89 days (included in item 1),BHCKB739,RCFDB739,Securitization - Past due 30-89 days (included ,Part I,2001-03-31,"(All Other Loans, All Leases, and All Other Assets)"
+4.b,A,Past due 90 days or more (included in item 1),BHCKB740,RCFDB740,Securitization - Past due 90 days or more (incl,Part I,2001-03-31,(1-4 Family Residential Loans)
+4.b,B,Past due 90 days or more (included in item 1),BHCKB741,RCFDB741,Securitization - Past due 90 days or more (incl,Part I,2001-03-31,(Home Equity Lines)
+4.b,C,Past due 90 days or more (included in item 1),BHCKB742,RCFDB742,Securitization - Past due 90 days or more (incl,Part I,2001-03-31,(Credit Card Receivables)
+4.b,D,Past due 90 days or more (included in item 1),BHCKB743,RCFDB743,Securitization - Past due 90 days or more (incl,Part I,2001-03-31,(Auto Loans)
+4.b,E,Past due 90 days or more (included in item 1),BHCKB744,RCFDB744,Securitization - Past due 90 days or more (incl,Part I,2001-03-31,(Other Consumer Loans)
+4.b,F,Past due 90 days or more (included in item 1),BHCKB745,RCFDB745,Securitization - Past due 90 days or more (incl,Part I,2001-03-31,(Commercial and Industrial Loans)
+4.b,G,Past due 90 days or more (included in item 1),BHCKB746,RCFDB746,Securitization - Past due 90 days or more (incl,Part I,2001-03-31,"(All Other Loans, All Leases, and All Other Assets)"
+5.a,A,Charge-offs on assets sold and securitized (YTD),BHCKB747,RIADB747,Securitization - Charge-offs on assets sold and,Part I,2001-03-31,(1-4 Family Residential Loans)
+5.a,B,Charge-offs on assets sold and securitized (YTD),BHCKB748,RIADB748,Securitization - Charge-offs on assets sold and,Part I,2001-03-31,(Home Equity Lines)
+5.a,C,Charge-offs on assets sold and securitized (YTD),BHCKB749,RIADB749,Securitization - Charge-offs on assets sold and,Part I,2001-03-31,(Credit Card Receivables)
+5.a,D,Charge-offs on assets sold and securitized (YTD),BHCKB750,RIADB750,Securitization - Charge-offs on assets sold and,Part I,2001-03-31,(Auto Loans)
+5.a,E,Charge-offs on assets sold and securitized (YTD),BHCKB751,RIADB751,Securitization - Charge-offs on assets sold and,Part I,2001-03-31,(Other Consumer Loans)
+5.a,F,Charge-offs on assets sold and securitized (YTD),BHCKB752,RIADB752,Securitization - Charge-offs on assets sold and,Part I,2001-03-31,(Commercial and Industrial Loans)
+5.a,G,Charge-offs on assets sold and securitized (YTD),BHCKB753,RIADB753,Securitization - Charge-offs on assets sold and,Part I,2001-03-31,"(All Other Loans, All Leases, and All Other Assets)"
+5.b,A,Recoveries on assets sold and securitized (YTD),BHCKB754,RIADB754,Securitization - Recoveries on assets sold and ,Part I,2001-03-31,(1-4 Family Residential Loans)
+5.b,B,Recoveries on assets sold and securitized (YTD),BHCKB755,RIADB755,Securitization - Recoveries on assets sold and ,Part I,2001-03-31,(Home Equity Lines)
+5.b,C,Recoveries on assets sold and securitized (YTD),BHCKB756,RIADB756,Securitization - Recoveries on assets sold and ,Part I,2001-03-31,(Credit Card Receivables)
+5.b,D,Recoveries on assets sold and securitized (YTD),BHCKB757,RIADB757,Securitization - Recoveries on assets sold and ,Part I,2001-03-31,(Auto Loans)
+5.b,E,Recoveries on assets sold and securitized (YTD),BHCKB758,RIADB758,Securitization - Recoveries on assets sold and ,Part I,2001-03-31,(Other Consumer Loans)
+5.b,F,Recoveries on assets sold and securitized (YTD),BHCKB759,RIADB759,Securitization - Recoveries on assets sold and ,Part I,2001-03-31,(Commercial and Industrial Loans)
+5.b,G,Recoveries on assets sold and securitized (YTD),BHCKB760,RIADB760,Securitization - Recoveries on assets sold and ,Part I,2001-03-31,"(All Other Loans, All Leases, and All Other Assets)"
+6,A,Total amount of ownership (or seller’s) interest carried as securities or loans,BHCKHU16,RCFDHU16,Securitization - Total amount of ownership (or ,Part I,2018-06-30,$10B+ filers; cols A-C only (1-4 Family Residential Loans)
+6,B,Total amount of ownership (or seller’s) interest carried as securities or loans,BHCKHU17,RCFDHU17,Securitization - Total amount of ownership (or ,Part I,2018-06-30,$10B+ filers; cols A-C only (Home Equity Lines)
+6,C,Total amount of ownership (or seller’s) interest carried as securities or loans,BHCKHU18,RCFDHU18,Securitization - Total amount of ownership (or ,Part I,2018-06-30,$10B+ filers; cols A-C only (Credit Card Receivables)
+9,A,"Maximum credit exposure from credit enhancements provided to OTHER institutions’ securitization structures (SLOCs, purchased subordinated securities, other)",BHCKB776,RCFDB776,Securitization - Maximum credit exposure from c,Part II,2001-06-30,cols A-E only (1-4 Family Residential Loans)
+9,B,"Maximum credit exposure from credit enhancements provided to OTHER institutions’ securitization structures (SLOCs, purchased subordinated securities, other)",BHCKB779,RCFDB779,Securitization - Maximum credit exposure from c,Part II,2001-06-30,cols A-E only (Home Equity Lines)
+9,C,"Maximum credit exposure from credit enhancements provided to OTHER institutions’ securitization structures (SLOCs, purchased subordinated securities, other)",BHCKB780,RCFDB780,Securitization - Maximum credit exposure from c,Part II,2001-06-30,cols A-E only (Credit Card Receivables)
+9,D,"Maximum credit exposure from credit enhancements provided to OTHER institutions’ securitization structures (SLOCs, purchased subordinated securities, other)",BHCKB781,RCFDB781,Securitization - Maximum credit exposure from c,Part II,2001-06-30,cols A-E only (Auto Loans)
+9,E,"Maximum credit exposure from credit enhancements provided to OTHER institutions’ securitization structures (SLOCs, purchased subordinated securities, other)",BHCKB782,RCFDB782,Securitization - Maximum credit exposure from c,Part II,2001-06-30,cols A-E only (Other Consumer Loans)
+10,A,Unused commitments to provide liquidity to OTHER institutions’ securitization structures,BHCKB783,RCFDB783,Securitization - Unused commitments to provide ,Part II,2001-06-30,$10B+ filers; cols A-E only (1-4 Family Residential Loans)
+10,B,Unused commitments to provide liquidity to OTHER institutions’ securitization structures,BHCKB786,RCFDB786,Securitization - Unused commitments to provide ,Part II,2001-06-30,$10B+ filers; cols A-E only (Home Equity Lines)
+10,C,Unused commitments to provide liquidity to OTHER institutions’ securitization structures,BHCKB787,RCFDB787,Securitization - Unused commitments to provide ,Part II,2001-06-30,$10B+ filers; cols A-E only (Credit Card Receivables)
+10,D,Unused commitments to provide liquidity to OTHER institutions’ securitization structures,BHCKB788,RCFDB788,Securitization - Unused commitments to provide ,Part II,2001-06-30,$10B+ filers; cols A-E only (Auto Loans)
+10,E,Unused commitments to provide liquidity to OTHER institutions’ securitization structures,BHCKB789,RCFDB789,Securitization - Unused commitments to provide ,Part II,2001-06-30,$10B+ filers; cols A-E only (Other Consumer Loans)
+11,A,Assets sold with recourse or other seller-provided credit enhancements and not securitized,BHCKB790,RCFDB790,Securitization - Assets sold with recourse or o,Part III,2001-06-30,Asset sales (1-4 Family Residential Loans)
+11,B,Assets sold with recourse or other seller-provided credit enhancements and not securitized,BHCKB796,RCFDB796,Securitization - Assets sold with recourse or o,Part III,2001-06-30,Asset sales (Home Equity Lines)
+12,A,Maximum credit exposure from recourse/seller-provided credit enhancements for assets in item 11,BHCKB797,RCFDB797,Securitization - Maximum credit exposure from r,Part III,2001-06-30,Asset sales (1-4 Family Residential Loans)
+12,B,Maximum credit exposure from recourse/seller-provided credit enhancements for assets in item 11,BHCKB803,RCFDB803,Securitization - Maximum credit exposure from r,Part III,2001-06-30,Asset sales (Home Equity Lines)
+M.2.a,-,1-4 family residential mortgages serviced WITH recourse/servicer-provided credit enhancements,BHCKB804,RCFDB804,Memoranda,Part III,2001-06-30,
+M.2.b,-,1-4 family residential mortgages serviced with NO recourse/servicer-provided credit enhancements,BHCKB805,RCFDB805,Memoranda,Part III,2001-06-30,
+M.2.c,-,Other financial assets serviced for others,BHCKA591,RCFDA591,Memoranda,Part III,2001-03-31,
+M.2.d,-,1-4 family residential mortgages serviced for others in process of foreclosure at quarter-end,BHCKF699,RCFDF699,Memoranda,Part III,2008-03-31,
+M.3.a.(1),-,ABCP credit enhancement exposure - Conduits sponsored by bank/affiliate/holding company,BHCKB806,RCFDB806,Memoranda,Part I,2004-03-31,
+M.3.a.(2),-,ABCP credit enhancement exposure - Conduits sponsored by other unrelated institutions,BHCKB807,RCFDB807,Memoranda,Part I,2004-03-31,
+M.3.b.(1),-,ABCP unused liquidity commitments - Conduits sponsored by bank/affiliate/holding company,BHCKB808,RCFDB808,Memoranda,Part I,2004-03-31,
+M.3.b.(2),-,ABCP unused liquidity commitments - Conduits sponsored by other unrelated institutions,BHCKB809,RCFDB809,Memoranda,Part I,2004-03-31,
+M.4,-,"Outstanding credit card fees and finance charges (included in item 1, column G)",BHCKC407,RCFDC407,Memoranda,Part I,2003-03-31,

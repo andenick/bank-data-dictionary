@@ -1,0 +1,15 @@
+line_number,item_description,mdrm_code,call_mdrm,category,ties_to_hc_line,start_date,notes
+1.a.,Commercial bank subsidiaries - Noninterest-bearing balances,BHCB2210,RCFD2210,Deposits - Commercial Bank,HC item 13.a,1981-06-30,"Includes noninterest-bearing demand, time, and savings deposits held in domestic offices of commercial bank subsidiaries"
+1.b.,"Commercial bank subsidiaries - Interest-bearing demand deposits, NOW, ATS, and other transaction accounts",BHCB3187,-,Deposits - Commercial Bank,HC item 13.a,1986-06-30,Domestic-office interest-bearing transaction accounts of commercial bank subsidiaries
+1.c.,Commercial bank subsidiaries - Money market deposit accounts and other savings accounts,BHCB2389,RCON2389,Deposits - Commercial Bank,HC item 13.a,1981-06-30,MMDAs and other savings (nontransaction) accounts
+1.d.,"Commercial bank subsidiaries - Time deposits of $250,000 or less",BHCBHK29,-,Deposits - Commercial Bank,HC item 13.a,2017-03-31,Time deposits at or below the FDIC insurance limit
+1.e.,"Commercial bank subsidiaries - Time deposits of more than $250,000",BHCBJ474,RCONJ474,Deposits - Commercial Bank,HC item 13.a,2017-03-31,Time deposits above the FDIC insurance limit
+2.a.,Other depository institution subsidiaries - Noninterest-bearing balances,BHOD3189,-,Deposits - Other Depository,HC item 13.a,1986-06-30,Noninterest-bearing deposits in domestic offices of thrift/other depository subsidiaries
+2.b.,"Other depository institution subsidiaries - Interest-bearing demand deposits, NOW, ATS, and other transaction accounts",BHOD3187,-,Deposits - Other Depository,HC item 13.a,1986-06-30,Interest-bearing transaction accounts at other depository subsidiaries
+2.c.,Other depository institution subsidiaries - Money market deposit accounts and other savings accounts,BHOD2389,RCON2389,Deposits - Other Depository,HC item 13.a,1986-06-30,MMDAs and other savings accounts at other depository subsidiaries
+2.d.,"Other depository institution subsidiaries - Time deposits of $250,000 or less",BHODHK29,-,Deposits - Other Depository,HC item 13.a,2017-03-31,Time deposits at or below the insurance limit
+2.e.,"Other depository institution subsidiaries - Time deposits of more than $250,000",BHODJ474,RCONJ474,Deposits - Other Depository,HC item 13.a,2017-03-31,Time deposits above the insurance limit
+M.1.,"Memoranda: Brokered deposits of $250,000 or less with a remaining maturity of one year or less",BHDMHK06,RCONHK06,Memoranda - Brokered,HC-E items 1-2,2017-03-31,Brokered deposit detail; not additive to items 1-2
+M.2.,"Memoranda: Brokered deposits of $250,000 or less with a remaining maturity of more than one year",BHDMHK31,-,Memoranda - Brokered,HC-E items 1-2,2017-03-31,Brokered deposit detail; not additive to items 1-2
+M.3.,"Memoranda: Time deposits of more than $250,000 with a remaining maturity of one year or less",BHDMHK32,-,Memoranda - Brokered,HC-E items 1-2,2017-03-31,Maturity detail on large time deposits
+M.4.,Memoranda: Foreign office time deposits with a remaining maturity of one year or less,BHFNA245,RCFNA245,Memoranda - Brokered,HC item 13.b,2001-03-31,Foreign-office time-deposit maturity detail

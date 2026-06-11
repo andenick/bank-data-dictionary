@@ -45,38 +45,40 @@ PROVISION FOR LOAN LOSSES (Item 4)
 NII AFTER PROVISION (Item 5)
 = Item 3 - Item 4
 
-NONINTEREST INCOME (Item 6)
-├── 6.a: Service charges on deposits
-├── 6.b: Trading revenue
-├── 6.c: Fiduciary fees
-├── 6.d: Investment banking fees
-├── 6.e: Venture capital revenue
-├── 6.f: Servicing fees
-├── 6.g: Securitization income
-├── 6.h: Insurance commissions
-└── 6.i: Other noninterest income
+NONINTEREST INCOME (Item 5)
+├── 5.a: Fiduciary activities
+├── 5.b: Service charges on deposits
+├── 5.c: Trading revenue
+├── 5.d: Securities/IB/insurance fees (5.d.1-7)
+├── 5.e: Venture capital revenue
+├── 5.f: Net servicing fees
+├── 5.g: Net securitization income
+├── 5.i-5.k: Net gains on sales of loans/OREO/other assets
+└── 5.l: Other noninterest income
+(5.m = total)
+
+REALIZED SECURITIES GAINS (Item 6.a HTM, 6.b AFS)
 
 NONINTEREST EXPENSE (Item 7)
 ├── 7.a: Salaries and benefits
-├── 7.b: Occupancy expense
-├── 7.c: Premises and equipment
-├── 7.d: Amortization of intangibles
-├── 7.e: OREO expense
-├── 7.f: FDIC assessment
-└── 7.g: Other noninterest expense
+├── 7.b: Premises and fixed assets
+├── 7.c: Goodwill impairment (7.c.1) + intangible amortization (7.c.2)
+└── 7.d: Other noninterest expense
+(7.e = total)
 
-INCOME BEFORE TAXES (Item 8)
-= Item 5 + Item 6 - Item 7
+INCOME BEFORE TAXES (Item 8.c)
+= Items 3 + 5.m + 6.a + 6.b - 4 - 7.e (+ equity-securities gains 8.b)
 
 INCOME TAX EXPENSE (Item 9)
 
-INCOME CONT. OPS (Item 10)
+INCOME BEFORE DISCONTINUED OPS (Item 10)
 = Item 8 - Item 9
 
-EXTRAORDINARY ITEMS (Item 11)
+DISCONTINUED OPERATIONS (Item 11, net of tax)
 
-NET INCOME (Item 12)
-= Item 10 + Item 11
+NET INCOME incl. minority (Item 12) = Item 10 + Item 11
+LESS minority interest (Item 13)
+NET INCOME attributable to HC (Item 14) = Item 12 - Item 13
 ```
 
 ---
@@ -87,27 +89,33 @@ NET INCOME (Item 12)
 
 | Sub-Item | MDRM | Call MDRM | Description |
 |----------|------|-----------|-------------|
-| 1 (Total) | BHCK4107 | RIAD4107 | Total interest income |
-| 1.a | BHCK4010 | RIAD4010 | Interest/fees on loans |
-| 1.b | BHCK4115 | RIAD4115 | Interest on balances due |
-| 1.c | BHCK4107 | RIAD4107 | Interest on securities |
-| 1.c.(1) | BHCKB488 | RIADB488 | Treasury/Agency |
-| 1.c.(2) | BHCKB489 | RIADB489 | MBS |
-| 1.c.(3) | BHCK4060 | RIAD4060 | Other securities |
-| 1.d | BHCK4020 | RIAD4020 | Fed funds sold/reverse repos |
+| 1.a.(1)(a) | BHCK4435 | RIAD4435 | Interest/fees on loans secured by 1-4 family residential |
+| 1.a.(1)(b) | BHCK4436 | RIAD4436 | All other loans secured by real estate |
+| 1.a.(1)(c) | BHCKF821 | RIAD4058 | All other loans |
+| 1.a.(2) | BHCK4059 | RIAD4059 | Loans in foreign offices/Edge/IBFs |
+| 1.b | BHCK4065 | RIAD4065 | Income from lease financing receivables |
+| 1.c | BHCK4115 | RIAD4115 | Interest on balances due from depository institutions |
+| 1.d.(1) | BHCKB488 | RIADB488 | U.S. Treasury/agency (excl MBS) |
+| 1.d.(2) | BHCKB489 | RIADB489 | MBS |
+| 1.d.(3) | BHCK4060 | RIAD4060 | Other securities |
 | 1.e | BHCK4069 | RIAD4069 | Trading assets |
-| 1.f | BHCKB570 | RIAD4518 | Other interest income |
+| 1.f | BHCK4020 | RIAD4020 | Fed funds sold/reverse repos |
+| 1.g | BHCK4518 | RIAD4518 | Other interest income |
+| 1.h (Total) | BHCK4107 | RIAD4107 | Total interest income |
 
 ### Item 2: Interest Expense
 
 | Sub-Item | MDRM | Call MDRM | Description |
 |----------|------|-----------|-------------|
-| 2 (Total) | BHCK4073 | RIAD4073 | Total interest expense |
-| 2.a | RIAD4170 | RIAD4170 | Deposits |
+| 2.a.(1)(a) | BHCKHK03 | RIADHK03 | Time deposits of $250,000 or less |
+| 2.a.(1)(b) | BHCKHK04 | RIADHK04 | Time deposits of more than $250,000 |
+| 2.a.(1)(c) | BHCK6761 | - | Other deposits |
+| 2.a.(2) | BHCK4172 | RIAD4172 | Deposits in foreign offices/Edge/IBFs |
 | 2.b | BHCK4180 | RIAD4180 | Fed funds purchased/repos |
-| 2.c | BHCK4185 | RIAD4185 | Trading liabilities |
-| 2.d | RIAD4190 | RIAD4200 | Borrowed money |
-| 2.e | RIAD4200 | RIAD4190 | Subordinated debt |
+| 2.c | BHCK4185 | RIAD4185 | Trading liabilities and other borrowed money |
+| 2.d | BHCK4397 | RIAD4200 | Subordinated notes/debentures and mandatory convertibles |
+| 2.e | BHCK4398 | - | Other interest expense |
+| 2.f (Total) | BHCK4073 | RIAD4073 | Total interest expense |
 
 ### Item 3: Net Interest Income
 
@@ -117,47 +125,55 @@ NET INCOME (Item 12)
 
 **Key Metric**: Net Interest Margin (NIM) = Item 3 / Average Earning Assets (HC-K)
 
-### Item 4: Provision for Loan and Lease Losses
+### Item 4: Provision for Credit Losses
 
 | MDRM | Description |
 |------|-------------|
-| BHCT4230 | Provision expense for credit losses |
+| BHCKJJ33 | Provisions for credit losses on financial assets (CECL) |
 
-**CECL Note**: Under CECL, this represents the change in lifetime expected credit loss reserves.
+**CECL Note**: Under CECL (effective 2019-03-31, code BHCKJJ33), this represents the change in lifetime expected credit loss reserves. The pre-CECL code BHCT4230 (provision for loan and lease losses) was discontinued 2018-12-31.
 
-### Item 6: Noninterest Income
+### Item 5: Noninterest Income
 
 | Sub-Item | MDRM | Call MDRM | Description |
 |----------|------|-----------|-------------|
-| 6 (Total) | BHCK4079 | RIAD4079 | Total noninterest income |
-| 6.a | BHCK4483 | RIAD4080 | Service charges on deposits |
-| 6.b | BHCKA220 | RIADA220 | Trading revenue |
-| 6.c | BHCK4070 | RIAD4070 | Fiduciary activities |
-| 6.d | BHCKC886 | RIADC886 | Investment banking fees |
-| 6.e | BHCKB491 | RIADB491 | Venture capital revenue |
-| 6.f | BHCKB492 | RIADB492 | Net servicing fees |
-| 6.g | BHCKB493 | RIADB493 | Securitization income |
-| 6.h | BHCKB494 | RIAD4840 | Insurance commissions |
-| 6.i | BHCK4076 | RIAD4076 | Other noninterest income |
+| 5.a | BHCK4070 | RIAD4070 | Income from fiduciary activities |
+| 5.b | BHCK4483 | RIAD4483 | Service charges on deposit accounts (domestic) |
+| 5.c | BHCKA220 | RIADA220 | Trading revenue |
+| 5.d.(1) | BHCKC886 | RIADC886 | Fees/commissions from securities brokerage |
+| 5.d.(2) | BHCKC888 | RIADC888 | Investment banking, advisory, underwriting fees |
+| 5.d.(3) | BHCKC887 | RIADC887 | Fees/commissions from annuity sales |
+| 5.d.(4) | BHCKC386 | RIADC386 | Insurance/reinsurance underwriting income |
+| 5.d.(5) | BHCKC387 | RIADC387 | Income from other insurance activities |
+| 5.e | BHCKB491 | RIADB491 | Venture capital revenue |
+| 5.f | BHCKB492 | RIADB492 | Net servicing fees |
+| 5.g | BHCKB493 | RIADB493 | Net securitization income |
+| 5.i | BHCK8560 | RIAD5416 | Net gains (losses) on sales of loans and leases |
+| 5.j | BHCK8561 | RIAD5415 | Net gains (losses) on sales of OREO |
+| 5.k | BHCKB496 | RIADB496 | Net gains (losses) on sales of other assets |
+| 5.l | BHCKB497 | RIADB497 | Other noninterest income |
+| 5.m (Total) | BHCK4079 | RIAD4079 | Total noninterest income |
 
 ### Item 7: Noninterest Expense
 
 | Sub-Item | MDRM | Call MDRM | Description |
 |----------|------|-----------|-------------|
-| 7 (Total) | BHCK4093 | RIAD4093 | Total noninterest expense |
-| 7.a | BHCK4135 | RIAD4135 | Salaries and benefits |
-| 7.b | BHCK4217 | RIAD4217 | Occupancy |
-| 7.c | BHCKF556 | RIADF556 | Premises and equipment |
-| 7.d | BHCKC232 | RIADC232 | Amortization of intangibles |
-| 7.e | BHCK4230 | RIAD4230 | OREO expense |
-| 7.f | BHCK4146 | RIAD4146 | FDIC assessment |
-| 7.g | BHCK4092 | RIAD4092 | Other noninterest expense |
+| 7.a | BHCK4135 | RIAD4135 | Salaries and employee benefits |
+| 7.b | BHCK4217 | RIAD4217 | Premises and fixed assets (net of rental income) |
+| 7.c.(1) | BHCKC216 | RIADC216 | Goodwill impairment losses |
+| 7.c.(2) | BHCKC232 | RIADC232 | Amortization/impairment of other intangibles |
+| 7.d | BHCK4092 | RIAD4092 | Other noninterest expense |
+| 7.e (Total) | BHCK4093 | RIAD4093 | Total noninterest expense |
 
-### Item 12: Net Income
+OREO expense, FDIC assessment, data processing, etc. are reported in the memoranda (Schedule HI Memorandum item 7.a-7.p), not in items 7.a-7.d.
 
-| MDRM | Formula |
-|------|---------|
-| BHCT4340 | Item 10 + Item 11 |
+### Item 14: Net Income (attributable to holding company)
+
+| Item | MDRM | Formula |
+|------|------|---------|
+| 12 | BHCKG104 | Net income incl. minority interests (items 10 + 11) |
+| 13 | BHCKG103 | LESS: net income attributable to minority interests |
+| 14 | BHCK4340 | Net income attributable to HC (item 12 - item 13) |
 
 ---
 
@@ -215,17 +231,17 @@ Key stress test metric - measures earnings power before credit costs
 
 ## Trading Revenue Detail (HI-M)
 
-Schedule HI Memoranda provides trading revenue breakdown:
+Schedule HI Memoranda item 9 provides the trading revenue breakdown:
 
 | Product | MDRM | Description |
 |---------|------|-------------|
-| Interest rate | BHCKA221 | IR trading gains/losses |
-| Foreign exchange | BHCKA222 | FX trading gains/losses |
-| Equity | BHCKA223 | Equity trading gains/losses |
-| Commodity | BHCKA224 | Commodity trading gains/losses |
-| Credit | BHCKF186 | Credit trading gains/losses |
+| Interest rate | BHCK8757 | IR trading gains/losses |
+| Foreign exchange | BHCK8758 | FX trading gains/losses |
+| Equity | BHCK8759 | Equity security/index trading gains/losses |
+| Commodity/other | BHCK8760 | Commodity and other trading gains/losses |
+| Credit | BHCKF186 | Credit-exposure trading gains/losses |
 
-**Ties To**: Item 6.b total trading revenue
+**Ties To**: Item 5.c total trading revenue. (The earlier draft listing BHCKA221-A224 was incorrect — those are HC-R risk-weighted-asset codes.)
 
 ---
 
@@ -275,22 +291,22 @@ Yield calculations use:
 
 | Item | MDRM | Description |
 |------|------|-------------|
-| 1 | BHCK4107 | Interest income |
-| 1.a | BHCK4010 | Interest on loans |
-| 2 | BHCK4073 | Interest expense |
-| 2.a | RIAD4170 | Interest on deposits |
+| 1.h | BHCK4107 | Total interest income |
+| 2.f | BHCK4073 | Total interest expense |
 | **3** | **BHCK4074** | **Net interest income** |
-| 4 | BHCT4230 | Provision for loan losses |
-| 5 | - | NII after provision (computed: item 3 minus item 4; no MDRM code) |
-| 6 | BHCK4079 | Noninterest income |
-| 6.b | BHCKA220 | Trading revenue |
-| 7 | BHCK4093 | Noninterest expense |
+| 4 | BHCKJJ33 | Provision for credit losses (CECL) |
+| 5.m | BHCK4079 | Total noninterest income |
+| 5.c | BHCKA220 | Trading revenue |
+| 7.e | BHCK4093 | Total noninterest expense |
 | 7.a | BHCK4135 | Salaries and benefits |
-| 8 | BHCK4301 | Pre-tax income |
+| 8.c | BHCK4301 | Income before taxes |
 | 9 | BHCK4302 | Income tax expense |
-| **12** | **BHCT4340** | **Net income** |
+| 11 | BHCKFT28 | Discontinued operations, net of tax |
+| **14** | **BHCK4340** | **Net income attributable to holding company** |
+
+Note: The current FR Y-9C Schedule HI has no "NII after provision" subtotal line and no "extraordinary items" line (replaced by discontinued operations, item 11). Net income runs items 12 (incl. minority) → 13 (less minority) → 14 (attributable to HC).
 
 ---
 
-*Last Updated: 2026-01-28*
-*Reference: FR Y-9C Instructions (March 2024)*
+*Last Updated: 2026-06-11 (v8 conceptual-accuracy sweep; codes verified against FRY9C_FIELDSPEC_202603 + MDRM + warehouse)*
+*Reference: FR Y-9C Instructions (current form, March 2026 field spec)*

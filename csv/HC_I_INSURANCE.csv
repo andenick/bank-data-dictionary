@@ -1,0 +1,14 @@
+line_number,item_description,mdrm_code,call_mdrm,category,ties_to_hc_line,start_date,notes
+PCI.1,Property and Casualty Underwriting - Reinsurance recoverables,BHCKB988,-,P&C - Assets,-,2001-03-31,"Part I (Property & Casualty), Assets; completed by holding companies with $10M+ reinsurance recoverables"
+PCI.2,Property and Casualty Underwriting - Total assets,BHCKC244,-,P&C - Assets,-,2002-03-31,"Part I, Assets - total assets of P&C underwriting subsidiaries"
+PCI.3,Property and Casualty Underwriting - Claims and claims adjustment expense reserves,BHCKB990,-,P&C - Liabilities,-,2001-03-31,"Part I, Liabilities - loss and loss-adjustment-expense reserves"
+PCI.4,Property and Casualty Underwriting - Unearned premiums,BHCKB991,-,P&C - Liabilities,-,2001-03-31,"Part I, Liabilities - unearned premium reserve"
+PCI.5,Property and Casualty Underwriting - Total equity,BHCKC245,-,P&C - Equity,-,2002-03-31,Part I - total equity of P&C underwriting subsidiaries
+PCI.6,Property and Casualty Underwriting - Net income,BHCKC246,-,P&C - Income,HI item 14,2002-03-31,Part I - net income of P&C underwriting subsidiaries
+LH.1,Life and Health Underwriting - Reinsurance recoverables,BHCKC247,-,L&H - Assets,-,2002-03-31,"Part II (Life & Health), Assets"
+LH.2,Life and Health Underwriting - Separate account assets,BHCKB992,-,L&H - Assets,-,2001-03-31,"Part II, Assets - separate-account assets"
+LH.3,Life and Health Underwriting - Total assets,BHCKC248,-,L&H - Assets,-,2002-03-31,"Part II, Assets - total"
+LH.4,Life and Health Underwriting - Policyholder benefits and contractholder funds,BHCKB994,-,L&H - Liabilities,-,2001-03-31,"Part II, Liabilities - policy reserves and contractholder funds"
+LH.5,Life and Health Underwriting - Separate account liabilities,BHCKB996,-,L&H - Liabilities,-,2001-03-31,"Part II, Liabilities - separate-account liabilities"
+LH.6,Life and Health Underwriting - Total equity,BHCKC249,-,L&H - Equity,-,2002-03-31,Part II - total equity
+LH.7,Life and Health Underwriting - Net income,BHCKC250,-,L&H - Income,HI item 14,2002-03-31,Part II - net income

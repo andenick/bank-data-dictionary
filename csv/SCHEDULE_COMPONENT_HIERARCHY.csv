@@ -1,19 +1,17 @@
 parent_schedule,parent_item,parent_mdrm,child_schedule,child_item,child_mdrm,relationship,level,notes
-# ============================================================================
-# SCHEDULE COMPONENT HIERARCHY - Complete Parent-Child Relationships
-# Version: 1.0 | Created: 2026-01-29
-# Purpose: Explicit hierarchical relationships for all FR Y-9C schedules
-# ============================================================================
-
-# ----------------------------------------------------------------------------
-# HC BALANCE SHEET TO DETAIL SCHEDULE MAPPINGS (Level 1)
-# ----------------------------------------------------------------------------
+# ============================================================================,,,,,,,,
+# SCHEDULE COMPONENT HIERARCHY - Complete Parent-Child Relationships,,,,,,,,
+# Version: 1.0 | Created: 2026-01-29,,,,,,,,
+# Purpose: Explicit hierarchical relationships for all FR Y-9C schedules,,,,,,,,
+# ============================================================================,,,,,,,,
+# ----------------------------------------------------------------------------,,,,,,,,
+# HC BALANCE SHEET TO DETAIL SCHEDULE MAPPINGS (Level 1),,,,,,,,
+# ----------------------------------------------------------------------------,,,,,,,,
 HC,1,BHCK0010,HC,1.a,BHCK0081,sum_component,2,
 HC,1,BHCK0010,HC,1.b,BHCK0395,sum_component,2,
 HC,2,-,HC-B,8,-,equals,1,HC line 2 securities is a caption (=2.a BHCKJJ34 + 2.b BHCT1773 + 2.c BHCKJA22); no single consolidated total-securities code
 HC,2.a,BHCKJJ34,HC-B,8 Col C,BHCT1754,equals,1,
 HC,2.b,BHCT1773,HC-B,8 Col B,BHCT1773,equals,1,
-HC,2.c,BHCKJA22,HC-B,M5,BHCKJA22,equals,1,
 HC,3,BHCKC225,HC,3.a,BHCKB987,sum_component,2,
 HC,3,BHCKC225,HC,3.b,BHCKB989,sum_component,2,
 HC,4,BHCT2122,HC-C,Total,BHCTB528,derived,1,
@@ -41,10 +39,9 @@ HC,14,BHCK2800,HC,14.b,BHCKB995,sum_component,2,
 HC,15,BHCT3548,HC-D,15,BHCT3548,equals,1,
 HC,20,BHCK2750,HC-G,5,BHCK2750,equals,1,
 HC,28,BHCK3210,HC-R,19,BHCAP859,related,1,standardized to consolidated BHCK3210
-
-# ----------------------------------------------------------------------------
-# HC-B SECURITIES HIERARCHY (AFS and HTM Components)
-# ----------------------------------------------------------------------------
+# ----------------------------------------------------------------------------,,,,,,,,
+# HC-B SECURITIES HIERARCHY (AFS and HTM Components),,,,,,,,
+# ----------------------------------------------------------------------------,,,,,,,,
 HC-B,8 Col B,BHCT1773,HC-B,1 AFS FV,BHCK1287,sum_component,2,
 HC-B,8 Col B,BHCT1773,HC-B,2 AFS FV,BHCKJF78,sum_component,2,
 HC-B,8 Col B,BHCT1773,HC-B,3.a AFS FV,BHCKG301,sum_component,2,
@@ -73,12 +70,9 @@ HC-B,5 AFS,BHCKC027,HC-B,5.c AFS,BHCKB847,sum_component,3,
 HC-B,5 AFS,BHCKC027,HC-B,5.d AFS,BHCKB851,sum_component,3,
 HC-B,5 AFS,BHCKC027,HC-B,5.e AFS,BHCKB855,sum_component,3,
 HC-B,5 AFS,BHCKC027,HC-B,5.f AFS,BHCKB859,sum_component,3,
-HC-B,M5,BHCKJA22,HC-B,M5.a,BHCKJJ33,sum_component,2,
-HC-B,M5,BHCKJA22,HC-B,M5.b,-,sum_component,2,HC-B equity-securities-other has no separate MDRM split code
-
-# ----------------------------------------------------------------------------
-# HC-C LOANS HIERARCHY (Loan Portfolio Components)
-# ----------------------------------------------------------------------------
+# ----------------------------------------------------------------------------,,,,,,,,
+# HC-C LOANS HIERARCHY (Loan Portfolio Components),,,,,,,,
+# ----------------------------------------------------------------------------,,,,,,,,
 HC-C,12,BHCKB529,HC-C,1,BHCK1410,sum_component,2,
 HC-C,12,BHCKB529,HC-C,2,BHCK1288,sum_component,2,
 HC-C,12,BHCKB529,HC-C,3,BHCK1590,sum_component,2,
@@ -121,10 +115,9 @@ HC-C,8,BHCK1563,HC-C,8.a,BHCK1545,sum_component,3,
 HC-C,8,BHCK1563,HC-C,8.b,BHCK1564,sum_component,3,
 HC-C,9,BHCK2165,HC-C,9.a,BHCKF164,sum_component,3,
 HC-C,9,BHCK2165,HC-C,9.b,BHCKF163,sum_component,3,
-
-# ----------------------------------------------------------------------------
-# HC-D TRADING ASSETS TO HC-L DERIVATIVES HIERARCHY
-# ----------------------------------------------------------------------------
+# ----------------------------------------------------------------------------,,,,,,,,
+# HC-D TRADING ASSETS TO HC-L DERIVATIVES HIERARCHY,,,,,,,,
+# ----------------------------------------------------------------------------,,,,,,,,
 HC-D,12,BHCT3545,HC-D,1,BHCM3531,sum_component,2,
 HC-D,12,BHCT3545,HC-D,2,BHCM3532,sum_component,2,
 HC-D,12,BHCT3545,HC-D,3,BHCM3533,sum_component,2,
@@ -165,10 +158,9 @@ HC-D,14,BHCT3547,HC-L,FV NonTrading Neg,BHCK8745,sum_component,2,
 HC-D,14,BHCT3547,HC-L,FV NonTrading Neg,BHCK8746,sum_component,2,
 HC-D,14,BHCT3547,HC-L,FV NonTrading Neg,BHCK8747,sum_component,2,
 HC-D,14,BHCT3547,HC-L,FV NonTrading Neg,BHCK8748,sum_component,2,
-
-# ----------------------------------------------------------------------------
-# HC-F OTHER ASSETS HIERARCHY
-# ----------------------------------------------------------------------------
+# ----------------------------------------------------------------------------,,,,,,,,
+# HC-F OTHER ASSETS HIERARCHY,,,,,,,,
+# ----------------------------------------------------------------------------,,,,,,,,
 HC-F,12,BHCT2160,HC-F,1,BHCKB556,sum_component,2,FIX: HC-F item 1 -> BHCKB556 (Accrued interest receivable)
 HC-F,12,BHCT2160,HC-F,2,BHCK2148,sum_component,2,
 HC-F,12,BHCT2160,HC-F,3,BHCKK038,sum_component,2,
@@ -182,18 +174,16 @@ HC-F,12,BHCT2160,HC-F,10,BHCT2143,sum_component,2,
 HC-F,12,BHCT2160,HC-F,11,BHCK2155,sum_component,2,
 HC-F,10,BHCT2143,HC-F,10.a,BHCK3163,sum_component,3,
 HC-F,10,BHCT2143,HC-F,10.b,BHCK0426,sum_component,3,
-
-# ----------------------------------------------------------------------------
-# HC-G OTHER LIABILITIES HIERARCHY
-# ----------------------------------------------------------------------------
+# ----------------------------------------------------------------------------,,,,,,,,
+# HC-G OTHER LIABILITIES HIERARCHY,,,,,,,,
+# ----------------------------------------------------------------------------,,,,,,,,
 HC-G,5,BHCK2750,HC-G,1,-,sum_component,2,HC-G accrued-interest-on-deposits has no consolidated code (Call RCON3645 only)
 HC-G,5,BHCK2750,HC-G,2,BHCK3049,sum_component,2,
 HC-G,5,BHCK2750,HC-G,3,-,sum_component,2,HC-G item 3 has no separate consolidated MDRM component code
 HC-G,5,BHCK2750,HC-G,4,BHCK2750,sum_component,2,HC-G item 4 residual references the schedule total BHCK2750; no separate residual code
-
-# ----------------------------------------------------------------------------
-# HC-R CAPITAL HIERARCHY (Basel III Components)
-# ----------------------------------------------------------------------------
+# ----------------------------------------------------------------------------,,,,,,,,
+# HC-R CAPITAL HIERARCHY (Basel III Components),,,,,,,,
+# ----------------------------------------------------------------------------,,,,,,,,
 HC-R,19,BHCAP859,HC-R,6,BHCAP840,derived,1,
 HC-R,19,BHCAP859,HC-R,18,BHCAP852,deduction,1,
 HC-R,6,BHCAP840,HC-R,1,BHCAP742,sum_component,2,
@@ -233,10 +223,9 @@ HC-R,31,BHCAA223,HC-R,RWA7,-,sum_component,2,no single MDRM code for equity-expo
 HC-R,31,BHCAA223,HC-R,RWA8,BHCKS402,sum_component,2,
 HC-R,31,BHCAA223,HC-R,RWA9,BHCKS403,sum_component,2,
 HC-R,31,BHCAA223,HC-R,RWA10,BHCKA222,sum_component,2,
-
-# ----------------------------------------------------------------------------
-# HC-L DERIVATIVES STRUCTURE (Notional Amounts by Product Type)
-# ----------------------------------------------------------------------------
+# ----------------------------------------------------------------------------,,,,,,,,
+# HC-L DERIVATIVES STRUCTURE (Notional Amounts by Product Type),,,,,,,,
+# ----------------------------------------------------------------------------,,,,,,,,
 HC-L,Total IR,BHCK_IR_TOTAL,HC-L,Futures IR,BHCK8693,sum_component,2,
 HC-L,Total IR,BHCK_IR_TOTAL,HC-L,Forwards IR,BHCK8697,sum_component,2,
 HC-L,Total IR,BHCK_IR_TOTAL,HC-L,Swaps IR,BHCK3450,sum_component,2,
@@ -264,10 +253,9 @@ HC-L,TRS Total,BHCK_TRS_TOTAL,HC-L,TRS Sold,BHCKC970,sum_component,2,
 HC-L,TRS Total,BHCK_TRS_TOTAL,HC-L,TRS Bought,BHCKC971,sum_component,2,
 HC-L,Other Credit Total,BHCK_OCD_TOTAL,HC-L,Other Credit Sold,BHCKC974,sum_component,2,
 HC-L,Other Credit Total,BHCK_OCD_TOTAL,HC-L,Other Credit Bought,BHCKC975,sum_component,2,
-
-# ----------------------------------------------------------------------------
-# HI INCOME STATEMENT HIERARCHY
-# ----------------------------------------------------------------------------
+# ----------------------------------------------------------------------------,,,,,,,,
+# HI INCOME STATEMENT HIERARCHY,,,,,,,,
+# ----------------------------------------------------------------------------,,,,,,,,
 HI,4,BHCK4074,HI,1,BHCK4107,derived,1,
 HI,4,BHCK4074,HI,2,BHCK4073,derived,1,
 HI,12,BHCT4340,HI,4,BHCK4074,sum_component,2,

@@ -200,10 +200,11 @@
     "frequency": "Quarterly",
     "description": "Held-to-maturity and available-for-sale securities detail",
     "columns": {
-      "A": "AFS Amortized Cost",
-      "B": "AFS Fair Value",
-      "C": "HTM Amortized Cost",
-      "D": "HTM Fair Value"
+      "A": "HTM Amortized Cost",
+      "B": "HTM Fair Value",
+      "C": "AFS Amortized Cost",
+      "D": "AFS Fair Value",
+      "_note": "v8 fix: column legend corrected to match current FR Y-9C HC-B field spec (col A=HTM AC, B=HTM FV, C=AFS AC, D=AFS FV). The mdrm_*_ac/_fv keys below are labeled by MDRM concept name, which is authoritative."
     },
     "line_items": [
       {
@@ -218,38 +219,42 @@
       {
         "item": "2",
         "name": "U.S. Government agency obligations (excluding MBS)",
-        "mdrm_afs_ac": "BHCKJF77",
-        "mdrm_afs_fv": "BHCKJF78",
-        "mdrm_htm_ac": "BHCK1289",
-        "mdrm_htm_fv": "BHCK1290",
-        "category": "Agency Securities"
+        "mdrm_htm_ac": "BHCKHT50",
+        "mdrm_htm_fv": "BHCKHT51",
+        "mdrm_afs_ac": "BHCKHT52",
+        "mdrm_afs_fv": "BHCKHT53",
+        "category": "Agency Securities",
+        "mdrm_note": "v8 fix: was BHCKJF77/JF78 (= ABCP conduit VIE totals, wrong concept) and BHCK1289/1290. Current HC-B item 2 cells: A=HT50 HTM-AC, B=HT51 HTM-FV, C=HT52 AFS-AC, D=HT53 AFS-FV."
       },
       {
-        "item": "3.a",
-        "name": "Residential MBS pass-through - GNMA",
-        "mdrm_afs_ac": "BHCKG300",
-        "mdrm_afs_fv": "BHCKG301",
-        "mdrm_htm_ac": "BHCKG303",
-        "mdrm_htm_fv": "BHCKG304",
-        "category": "MBS - Residential"
+        "item": "4.a.(1)",
+        "name": "Residential MBS pass-through - guaranteed by GNMA",
+        "mdrm_htm_ac": "BHCKG300",
+        "mdrm_htm_fv": "BHCKG301",
+        "mdrm_afs_ac": "BHCKG302",
+        "mdrm_afs_fv": "BHCKG303",
+        "category": "MBS - Residential",
+        "mdrm_note": "v8 fix: item was '3.a' and column labels were swapped. Cols: A=G300 HTM-AC, B=G301 HTM-FV, C=G302 AFS-AC, D=G303 AFS-FV."
       },
       {
-        "item": "3.b",
-        "name": "Residential MBS pass-through - FNMA/FHLMC",
-        "mdrm_afs_ac": "BHCKG308",
-        "mdrm_afs_fv": "BHCKG309",
-        "mdrm_htm_ac": "BHCKG311",
-        "mdrm_htm_fv": "BHCKG312",
-        "category": "MBS - Residential"
+        "item": "4.a.(2)",
+        "name": "Residential MBS pass-through - issued by FNMA and FHLMC",
+        "mdrm_htm_ac": "BHCKG304",
+        "mdrm_htm_fv": "BHCKG305",
+        "mdrm_afs_ac": "BHCKG306",
+        "mdrm_afs_fv": "BHCKG307",
+        "category": "MBS - Residential",
+        "mdrm_note": "v8 fix: was '3.b' with codes G308/G309/G311/G312 (those are 4.a.(3)). Correct FNMA/FHLMC cells: A=G304, B=G305, C=G306, D=G307."
       },
       {
-        "item": "3.c",
-        "name": "Other residential MBS (non-agency)",
-        "mdrm_afs_ac": "BHCKG316",
-        "mdrm_afs_fv": "BHCKG317",
-        "mdrm_htm_ac": "BHCKG319",
-        "mdrm_htm_fv": "BHCKG320",
-        "category": "MBS - Non-Agency"
+        "item": "4.a.(3)",
+        "name": "Residential MBS - other pass-through securities",
+        "mdrm_htm_ac": "BHCKG308",
+        "mdrm_htm_fv": "BHCKG309",
+        "mdrm_afs_ac": "BHCKG310",
+        "mdrm_afs_fv": "BHCKG311",
+        "category": "MBS - Residential",
+        "mdrm_note": "v8 fix: prior '3.c' conflated other-pass-through with non-agency. Cols: A=G308, B=G309, C=G310, D=G311."
       },
       {
         "item": "5",
@@ -261,22 +266,24 @@
         "category": "ABS"
       },
       {
-        "item": "7",
+        "item": "3",
         "name": "Securities issued by states and political subdivisions",
-        "mdrm_afs_ac": "BHCK8496",
-        "mdrm_afs_fv": "BHCK8497",
-        "mdrm_htm_ac": "BHCK8498",
-        "mdrm_htm_fv": "BHCK8499",
-        "category": "Municipal"
+        "mdrm_htm_ac": "BHCK8496",
+        "mdrm_htm_fv": "BHCK8497",
+        "mdrm_afs_ac": "BHCK8498",
+        "mdrm_afs_fv": "BHCK8499",
+        "category": "Municipal",
+        "mdrm_note": "v8 fix: item was '7'; current HC-B places municipals at item 3. Cols: A=8496 HTM-AC, B=8497 HTM-FV, C=8498 AFS-AC, D=8499 AFS-FV."
       },
       {
         "item": "8",
         "name": "Total",
+        "mdrm_htm_ac": "BHCT1754",
+        "mdrm_htm_fv": "BHCK1771",
         "mdrm_afs_ac": "BHCK1772",
         "mdrm_afs_fv": "BHCT1773",
-        "mdrm_htm_ac": "BHCT1754",
-        "mdrm_htm_fv": "BHCKJJ34",
-        "category": "Total"
+        "category": "Total",
+        "mdrm_note": "v8 fix: mdrm_htm_fv was BHCKJJ34 (HTM carrying-value total, ASU 2016-13); correct HTM fair-value total is BHCK1771. Cols: A=1754 HTM-AC, B=1771 HTM-FV, C=1772 AFS-AC, D=1773 AFS-FV."
       }
     ],
     "totals": {
@@ -388,11 +395,20 @@
         "category": "Trading Securities"
       },
       {
-        "item": "5",
-        "name": "Mortgage-backed securities",
-        "mdrm": "BHCK_MBS_TOTAL",
+        "item": "4",
+        "name": "Mortgage-backed securities (trading)",
+        "mdrm": null,
+        "mdrm_note": "HC-D item 4 (trading MBS) is a caption with no single consolidated code; sum the components. v8 fix: prior layout used K197-K201 (superseded). Current FR Y-9C HC-D: 4.a=G379 residential pass-through (agency), 4.b=G380 other residential agency MBS, 4.c=G381 all other residential MBS, 4.d=K197 commercial MBS (agency), 4.e=K198 all other commercial MBS. (K199/K200 are not in the current form; K201 is HC-F life insurance assets.)",
         "category": "Trading MBS",
-        "components": ["BHCKK197", "BHCKK198", "BHCKK199", "BHCKK200", "BHCKK201"]
+        "components": ["BHCKG379", "BHCKG380", "BHCKG381", "BHCKK197", "BHCKK198"]
+      },
+      {
+        "item": "5",
+        "name": "Other debt securities (trading)",
+        "mdrm": null,
+        "mdrm_note": "HC-D item 5 components: 5.a=BHCKHT62 structured financial products, 5.b=BHCKG386 all other debt securities.",
+        "category": "Trading Debt Securities",
+        "components": ["BHCKHT62", "BHCKG386"]
       },
       {
         "item": "11",
@@ -648,43 +664,46 @@
         "components": ["2.a", "2.b", "2.c", "2.d"]
       },
       {
-        "item": "4",
+        "item": "3",
         "name": "Net interest income",
         "mdrm": "BHCK4074",
         "category": "NII",
-        "reconciliation": "Item 1 - Item 2"
+        "reconciliation": "Item 1.h - Item 2.f",
+        "mdrm_note": "v8 fix: item was '4'; current FR Y-9C HI item 3."
+      },
+      {
+        "item": "4",
+        "name": "Provision for credit losses on financial assets",
+        "mdrm": "BHCKJJ33",
+        "category": "Provision",
+        "mdrm_note": "v8 fix: was item '5' / BHCT4230 (pre-CECL provision for loan & lease losses). Current FR Y-9C HI item 4 = BHCKJJ33 (CECL provision for credit losses, post ASU 2016-13)."
       },
       {
         "item": "5",
-        "name": "Provision for loan and lease losses",
-        "mdrm": "BHCT4230",
-        "category": "Provision"
-      },
-      {
-        "item": "6",
         "name": "Noninterest income",
         "mdrm": "BHCK4079",
         "category": "Noninterest Income",
-        "components": ["6.a", "6.b", "6.c", "6.d", "6.e", "6.f"]
+        "mdrm_note": "v8 fix: item was '6'; current FR Y-9C HI item 5 (total at 5.m)."
       },
       {
         "item": "7",
         "name": "Noninterest expense",
         "mdrm": "BHCK4093",
         "category": "Noninterest Expense",
-        "components": ["7.a", "7.b", "7.c", "7.d"]
+        "mdrm_note": "Total noninterest expense at HI item 7 (7.e)."
       },
       {
-        "item": "12",
-        "name": "Net income",
+        "item": "14",
+        "name": "Net income (loss) attributable to holding company",
         "mdrm": "BHCT4340",
-        "category": "Net Income"
+        "category": "Net Income",
+        "mdrm_note": "v8 fix: item was '12'. HI item 14 (BHCK4340/BHCT4340) is final net income after NCI; HI item 12 (BHCKG104) is the pre-NCI-split aggregate."
       }
     ],
     "key_metrics": {
-      "nii": {"item": "4", "mdrm": "BHCK4074"},
-      "provision": {"item": "5", "mdrm": "BHCT4230"},
-      "net_income": {"item": "12", "mdrm": "BHCT4340"}
+      "nii": {"item": "3", "mdrm": "BHCK4074"},
+      "provision": {"item": "4", "mdrm": "BHCKJJ33"},
+      "net_income": {"item": "14", "mdrm": "BHCT4340"}
     }
   }
 }

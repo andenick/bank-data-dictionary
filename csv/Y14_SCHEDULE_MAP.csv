@@ -1,19 +1,22 @@
 form,schedule,schedule_name,description,frequency,reporter,links_to_y9c,links_to_call,key_fields,volcker_relevance,notes
-Y-14A,A.1,Income Statement,Projected income statement under stress scenarios,Annual,BHCs >$100B,HI,RI,Net interest income; Noninterest income; Trading revenue,MEDIUM,CCAR/DFAST projections
-Y-14A,A.2,Balance Sheet,Projected balance sheet under stress scenarios,Annual,BHCs >$100B,HC,RC,Total assets; Loans; Securities; Deposits,MEDIUM,Stress scenario impacts
-Y-14A,A.3,Capital,Projected capital ratios under stress scenarios,Annual,BHCs >$100B,HC-R,RC-R,CET1; Tier 1; Total Capital; RWA,HIGH,Capital adequacy assessment
-Y-14A,A.4,RWA,Risk-weighted assets by exposure type,Annual,BHCs >$100B,HC-R,RC-R,Credit RWA; Market RWA; Op Risk RWA,HIGH,RWA decomposition
-Y-14A,A.5,MSR,Mortgage servicing rights valuation,Annual,BHCs >$100B with MSR,HC,RC,MSR fair value; Prepayment assumptions,LOW,
-Y-14A,A.6,AOCI,Accumulated other comprehensive income,Annual,BHCs >$100B,HC,RC,AOCI components; AFS unrealized gains/losses,MEDIUM,
-Y-14Q,G.1,Trading Revenue,Trading revenue by product type,Quarterly,BHCs with significant trading,HC-D; HI,RC-D; RI,IR revenue; FX revenue; Equity revenue; Commodity revenue,CRITICAL,P&L attribution for trading
-Y-14Q,G.2,VaR,Value-at-Risk and Stressed VaR,Quarterly,BHCs with significant trading,HC-L,RC-L,Daily VaR; Stressed VaR; VaR breaches,CRITICAL,Market risk metrics
-Y-14Q,E.1,Counterparty,Top counterparty exposures,Quarterly,BHCs >$100B,HC-L,RC-L,Top 50 counterparties; Exposure; Collateral,HIGH,Derivatives counterparty risk
-Y-14Q,E.2,CVA,Credit valuation adjustment,Quarterly,BHCs >$100B,HC-L,RC-L,CVA by counterparty; CVA reserve,HIGH,Counterparty credit risk
-Y-14Q,H,PPNR,Pre-Provision Net Revenue,Quarterly,BHCs >$100B,HI,RI,NII; Noninterest income; Noninterest expense,MEDIUM,Revenue projections
-Y-14Q,D,Securities,Securities portfolio detail,Quarterly,BHCs >$100B,HC-B,RC-B,AFS; HTM; Fair value levels,MEDIUM,Investment portfolio
-Y-14Q,B,Loans,Loan portfolio characteristics,Quarterly,BHCs >$100B,HC-C,RC-C,Loan types; Vintage; FICO; LTV,LOW,Credit risk
-Y-14Q,F,Retail,Retail loan performance,Quarterly,BHCs >$100B,HC-C,RC-C,Delinquency; Charge-offs; Modifications,LOW,Consumer credit
-Y-14M,1,Residential Mortgage,Loan-level mortgage data,Monthly,BHCs >$100B,HC-C,RC-C,UPB; FICO; LTV; DTI; Performance,LOW,Granular mortgage data
-Y-14M,2,Home Equity,Loan-level HELOC data,Monthly,BHCs >$100B,HC-C,RC-C,Credit limit; Utilization; FICO; LTV,LOW,
-Y-14M,3,Credit Card,Account-level card data,Monthly,BHCs >$100B,HC-C,RC-C,Credit limit; Balance; FICO; Utilization,LOW,
-Y-14M,4,First Lien Originated,New mortgage originations,Monthly,BHCs >$100B,HC-C,RC-C,Loan amount; FICO; LTV; DTI; Rate,LOW,
+Y-14A,A,Summary,"Projected income statement, balance sheet, RWA, and capital under stress (sub-schedules A.1.a Income Statement, A.1.b Balance Sheet, A.1.c Standardized RWA, A.1.d Capital)",Annual,BHCs/IHCs/SLHCs >=$100B,HI; HC; HC-R,RI; RC; RC-R,Net interest income; Total assets; CET1/Tier 1/Total Capital; Credit/Market/OpRisk RWA,HIGH,"CCAR/DFAST projections; corrected in v8 - Income/BS/RWA/Capital are all sub-schedules of A.1, not separate A.1-A.4"
+Y-14A,A.2,Retail,Retail balance and loss projections,Annual,BHCs/IHCs/SLHCs >=$100B,HC-C,RC-C,Retail balances; Loss projections,LOW,"Summary sub-schedule A.2 Retail (corrected from A.2=Balance Sheet in v7)"
+Y-14A,A.3,AFS/HTM Securities,"Projected OCI/fair value for AFS and expected credit loss for HTM/AFS securities",Annual,BHCs/IHCs/SLHCs >=$100B,HC-B,RC-B,AFS fair value; OCI; HTM ECL,MEDIUM,"Summary sub-schedule A.3 (corrected from A.3=Capital in v7)"
+Y-14A,A.4,Trading,Trading book positions and market shock projections,Annual,BHCs/IHCs/SLHCs with trading assets+liab >=$50B or >=10% assets,HC-D,RC-D,Trading P&L; Market shock,CRITICAL,"Summary sub-schedule A.4 Trading (corrected from A.4=RWA in v7); subject to GMS threshold"
+Y-14A,A.5,Counterparty Credit Risk,Counterparty default loss under stress,Annual,BHCs/IHCs/SLHCs with trading assets+liab >=$50B or >=10% assets,HC-L,RC-L,Top counterparty EAD; CVA; Default loss,HIGH,"Summary sub-schedule A.5 CCR (corrected from A.5=MSR in v7)"
+Y-14A,A.6,Operational Risk,Operational risk scenario inputs and projections,Annual,BHCs/IHCs/SLHCs >=$100B,-,-,Op loss scenarios,MEDIUM,"Summary sub-schedule A.6 (corrected from A.6=AOCI in v7)"
+Y-14A,A.7,PPNR,Pre-provision net revenue projections and NII sub-schedule,Annual,BHCs/IHCs/SLHCs >=$100B,HI,RI,PPNR; NII,MEDIUM,"Summary sub-schedule A.7 PPNR (added in v8)"
+Y-14A,B,Scenario,Macroeconomic scenario variables,Annual,BHCs/IHCs/SLHCs >=$100B,-,-,GDP; Unemployment; Rates,LOW,Fed-provided supervisory + firm scenarios
+Y-14A,C,Regulatory Capital Instruments,Capital and subordinated debt instrument characteristics,Annual,BHCs/IHCs/SLHCs >=$100B (all categories incl. IV),HC-R,RC-R,Instrument detail; Issuances; Redemptions,MEDIUM,Required of Category IV firms (added in v8)
+Y-14A,E,Operational Risk (Schedule),"Legal reserves, material risk identification, op-risk scenarios",Annual,BHCs/IHCs/SLHCs >=$100B (all categories),-,-,Legal reserves; Material risks,MEDIUM,Distinct from Summary A.6; required of Category IV firms
+Y-14A,F,Business Plan Changes,Material business plan changes and pro forma merger balance sheet,Annual,BHCs/IHCs/SLHCs Category I-III,-,-,Business plan changes; Pro forma combining BS,LOW,F.1 Material Changes; F.2 Pro Forma Mergers (added in v8)
+Y-14Q,A,Retail,"Loan/portfolio-level retail (auto, card, home equity, mortgage, small business, student) by segment",Quarterly,BHCs/IHCs/SLHCs >=$100B,HC-C,RC-C,Segment-level balances; FICO; Delinquency,LOW,"A.1-A.10 retail worksheets (corrected from F=Retail in v7)"
+Y-14Q,B,Securities,Securities portfolio detail and accounting hedges,Quarterly,BHCs/IHCs/SLHCs >=$100B,HC-B,RC-B,AFS; HTM; Fair value; Duration,MEDIUM,"B.1 Main, B.2 Investment Securities w/ Hedges (corrected from D=Securities in v7)"
+Y-14Q,F,Trading,"Trading positions by market-risk factor (equity, FX, rates, commodity, credit, securitized)",Quarterly,BHCs/IHCs/SLHCs with trading assets+liab >=$50B or >=10% assets,HC-D; HI,RC-D; RI,Trading revenue; VaR; sVaR by factor,CRITICAL,"F.1-F.25 market-risk worksheets incl. VaR/backtesting (corrected from G.1/G.2 in v7)"
+Y-14Q,G,PPNR,Pre-Provision Net Revenue submission worksheet plus NII worksheet and metrics,Quarterly,BHCs/IHCs/SLHCs >=$100B,HI,RI,NII; Noninterest income; Noninterest expense,MEDIUM,"G.1-G.3 (corrected from H=PPNR in v7)"
+Y-14Q,H,Wholesale Risk,Corporate loan and commercial real estate exposure detail,Quarterly,BHCs/IHCs/SLHCs >=$100B,HC-C,RC-C,Corporate loans; CRE; Internal risk rating,LOW,"H.1 Corporate, H.2 CRE, H.3 Line of Business, H.4 Risk Rating (corrected from B=Loans in v7)"
+Y-14Q,L,Counterparty,"Top counterparty exposures and CVA",Quarterly,BHCs/IHCs/SLHCs with trading assets+liab >=$50B or >=10% assets,HC-L,RC-L,Top counterparties; EAD; CVA; Collateral,HIGH,"Counterparty + CVA (corrected from E.1/E.2 in v7)"
+Y-14M,A,Domestic First Lien Mortgage,Loan-level closed-end 1-4 family residential first-lien mortgage data,Monthly,BHCs/IHCs/SLHCs >=$100B (material portfolios),HC-C,RC-C,UPB; FICO; LTV; DTI; Performance,LOW,"Schedule A (corrected from schedule '1' / separate 'First Lien Originated' rows in v7)"
+Y-14M,B,Domestic Home Equity,Loan-level home equity loan and HELOC data,Monthly,BHCs/IHCs/SLHCs >=$100B (material portfolios),HC-C,RC-C,Credit limit; Utilization; FICO; LTV,LOW,"Schedule B (corrected from schedule '2' in v7)"
+Y-14M,C,Address Matching,Address-level loan data collection for geographic matching,Monthly,BHCs/IHCs/SLHCs >=$100B (material portfolios),HC-C,RC-C,Property address; Loan ID,LOW,"Schedule C Address Matching (added in v8 - omitted in v7)"
+Y-14M,D,Domestic Credit Card,Account-level credit card data,Monthly,BHCs/IHCs/SLHCs >=$100B (material portfolios),HC-C,RC-C,Credit limit; Balance; FICO; Utilization,LOW,"Schedule D (corrected from schedule '3'=Credit Card in v7)"

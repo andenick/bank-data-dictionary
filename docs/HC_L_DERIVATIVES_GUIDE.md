@@ -27,26 +27,30 @@ Typical relationship: Fair Value << 5% of Notional
 
 ## Schedule Structure
 
-```
-PART I: DERIVATIVES
-├── Notional Amounts
-│   ├── Interest Rate Contracts
-│   ├── Foreign Exchange Contracts
-│   ├── Equity Contracts
-│   ├── Commodity Contracts
-│   └── Credit Derivatives
-└── Fair Values
-    ├── Trading Derivatives (positive/negative)
-    └── Non-Trading Hedges (positive/negative)
+The current FR Y-9C HC-L is a single numbered schedule (items 1-15, plus memoranda). The CSV
+is keyed by `line_number` and `column` to reflect the official grid. Off-balance-sheet items come
+first (1-9); derivatives notional, totals, fair values, and credit exposure follow (7, 11-15).
 
-PART II: OFF-BALANCE SHEET ITEMS
-├── Unused Commitments
-├── Financial Standby Letters of Credit
-├── Performance Standby Letters of Credit
-├── Commercial Letters of Credit
-├── Securities Lent
-├── Securities Borrowed
-└── Other Off-Balance Sheet
+```
+OFF-BALANCE-SHEET (items 1-9)
+├── 1. Unused commitments (1.a HELOC, 1.b credit cards, 1.c CRE/construction,
+│        1.d underwriting, 1.e other incl. new 2026Q1 nondepository-FI breakout PV10-PV16)
+├── 2. Financial standby letters of credit (+ 2.a conveyed)
+├── 3. Performance standby letters of credit (+ 3.a conveyed)
+├── 4. Commercial and similar letters of credit
+├── 6. Securities lent (6.a) / borrowed (6.b)
+├── 7. Credit derivatives (notional sold/bought, gross FV, by maturity & rating)
+├── 8. Spot foreign exchange contracts
+└── 9. All other off-balance-sheet items (+ itemized 9.a-9.f)
+
+DERIVATIVES (items 11-15), columns A=Interest Rate, B=Foreign Exchange, C=Equity, D=Commodity/Other
+├── 11. Notional by instrument (futures, forwards, options, swaps)
+├── 12. Total gross notional held for trading
+├── 13. Total gross notional held for purposes other than trading
+├── 14. Gross positive/negative fair value (a = trading, b = non-trading) -> HC-D items 11/14
+└── 15. OTC derivatives net current credit exposure (15.a) and fair value of collateral (15.b),
+        columns A-E by counterparty type (banks/securities firms, monoline guarantors,
+        hedge funds, sovereign governments, corporations and all other)
 ```
 
 ---
@@ -169,40 +173,47 @@ Negative = Net seller of protection (risk-on)
 ### HC-D Derivative Assets (Item 11)
 
 ```
-BHCT3543 = Trading Positive FV + Non-Trading Positive FV
-         = (BHCK8733 + BHCK8734 + BHCK8735 + BHCK8736)
-         + (BHCK8741 + BHCK8742 + BHCK8743 + BHCK8744)
+BHCM3543 (HC-D item 11) = Trading Positive FV + Non-Trading Positive FV
+         = (BHCK8733 + BHCK8734 + BHCK8735 + BHCK8736)   [HC-L item 14.a.(1)]
+         + (BHCK8741 + BHCK8742 + BHCK8743 + BHCK8744)   [HC-L item 14.b.(1)]
 ```
 
 ### HC-D Derivative Liabilities (Item 14)
 
 ```
-BHCT3547 = Trading Negative FV + Non-Trading Negative FV
-         = (BHCK8737 + BHCK8738 + BHCK8739 + BHCK8740)
-         + (BHCK8745 + BHCK8746 + BHCK8747 + BHCK8748)
+BHCK3547 (HC-D item 14) = Trading Negative FV + Non-Trading Negative FV
+         = (BHCK8737 + BHCK8738 + BHCK8739 + BHCK8740)   [HC-L item 14.a.(2)]
+         + (BHCK8745 + BHCK8746 + BHCK8747 + BHCK8748)   [HC-L item 14.b.(2)]
 ```
 
 ---
 
 ## Part II: Off-Balance Sheet Items
 
-### Unused Commitments
+### Unused Commitments (item 1)
 
-| Type | MDRM | Description |
+| Line | MDRM | Description |
 |------|------|-------------|
-| Revolving credit lines | BHCKJ457 | Legally binding commitments |
-| Credit card lines | BHCKJ458 | Unused card limits |
-| Home equity lines | BHCK3814 | Unused HELOC amounts |
-| Commercial RE | BHCKF164 | Construction/perm commitments |
-| Securities underwriting | BHCK3817 | Firm commitment |
+| 1.a | BHCK3814 | Revolving open-end loans secured by 1-4 family residential (HELOCs) |
+| 1.b.(1) | BHCKJ455 | Unused consumer credit card lines |
+| 1.b.(2) | BHCKJ456 | Other unused credit card lines |
+| 1.c.(1) | BHCK3816 | Commitments to fund CRE/construction/land dev. secured by RE |
+| 1.c.(2) | BHCK6550 | Same, NOT secured by real estate |
+| 1.d | BHCK3817 | Securities underwriting |
+| 1.e.(1) | BHCKJ457 | Other unused commitments - C&I loans |
+| 1.e.(2) | BHCKPV10 | Loans to depository financial institutions (new 2026Q1) |
+| 1.e.(3) | BHCKPV11 | Loans to nondepository financial institutions (new 2026Q1; PV12-PV16 detail) |
+| 1.e.(4) | BHCKJ459 | All other unused commitments |
 
-### Letters of Credit
+### Letters of Credit (items 2-4)
 
-| Type | MDRM | Description |
+| Line | MDRM | Description |
 |------|------|-------------|
-| Financial standby | BHCK6566 | Guarantee of financial performance |
-| Performance standby | BHCKD997 | Guarantee of non-financial performance (incl. transaction-related contingencies) |
-| Commercial LC | BHCK3411 | Trade finance |
+| 2 | BHCK6566 | Financial standby letters of credit and foreign office guarantees |
+| 2.a | BHCK3820 | Amount conveyed to others |
+| 3 | BHCK6570 | Performance standby letters of credit and foreign office guarantees |
+| 3.a | BHCK3822 | Amount conveyed to others |
+| 4 | BHCK3411 | Commercial and similar letters of credit |
 
 ---
 
@@ -224,7 +235,7 @@ Higher ratio indicates:
 
 ```
 Net Derivatives FV = Positive FV - Negative FV
-                   = BHCT3543 - BHCT3547
+                   = BHCM3543 - BHCK3547   (HC-D items 11 and 14)
 
 Positive = Net derivative asset
 Negative = Net derivative liability
@@ -255,7 +266,33 @@ Negative = Net protection seller (risk-on)
 
 ---
 
+---
+
+## Item 15: OTC Derivatives Credit Exposure and Collateral
+
+Item 15 is a counterparty-segmented grid. Columns A-E are: A = Banks and securities firms,
+B = Monoline financial guarantors, C = Hedge funds, D = Sovereign governments, E = Corporations
+and all other counterparties.
+
+| Line | Description | Code base (cols A-E) |
+|------|-------------|----------------------|
+| 15.a | Net current credit exposure | BHCKG418-G422 |
+| 15.b.(1) | Collateral - Cash (U.S. dollar) | BHCKG423-G427 |
+| 15.b.(2) | Collateral - Cash (Other currencies) | BHCKG428-G432 |
+| 15.b.(3) | Collateral - U.S. Treasury securities | BHCKG433-G437 |
+| 15.b.(4) | Collateral - U.S. govt agency & GSE debt | BHCKG438-G442 |
+| 15.b.(5) | Collateral - Corporate bonds | BHCKG443-G447 |
+| 15.b.(6) | Collateral - Equity securities | BHCKG448-G452 |
+| 15.b.(7) | Collateral - All other | BHCKG453-G457 |
+| 15.b.(8) | Total fair value of collateral | BHCKG458-G462 |
+
+Codes are perfectly sequential (G418..G462); the monoline/sovereign columns (G419, G424, ...,
+G460) are absent from the field-spec PDF parse but were confirmed via MDRM captions and warehouse
+presence (2009-06-30 onward) per the FIELDSPEC_KNOWN_GAPS adjudication rule.
+
+---
+
 *See also*: [Trading Activities Deep Dive](TRADING_ACTIVITIES_GUIDE.md) for comprehensive HC-D and HC-L analysis
 
-*Last Updated: 2026-01-28*
-*Reference: FR Y-9C Instructions (March 2024)*
+*Last Updated: 2026-06-11 (v8 conceptual-accuracy sweep)*
+*Reference: FR Y-9C field spec (202603), MDRM, and FreeNIC warehouse*

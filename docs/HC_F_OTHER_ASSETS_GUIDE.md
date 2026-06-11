@@ -3,46 +3,43 @@
 **Form**: FR Y-9C (Consolidated Financial Statements for Holding Companies)
 **Schedule**: HC-F - Other Assets
 **Frequency**: Quarterly
-**Purpose**: Detail other assets not reported elsewhere on the balance sheet
+**Purpose**: Detail the components of "Other assets" reported on Schedule HC, item 11
 
 ---
 
 ## Overview
 
-Schedule HC-F provides the breakdown of assets that flow into Schedule HC Item 11 (Other Assets). Many items in this schedule also appear as separate line items on Schedule HC (Items 6-10).
+Schedule HC-F itemizes the assets that aggregate into Schedule HC item 11 ("Other assets").
+The **current** FR Y-9C HC-F is a compact 7-line schedule (no memoranda). Earlier versions of
+this guide described the **pre-2009** layout, which embedded Premises, OREO, unconsolidated
+subsidiaries, real-estate ventures, goodwill, and other intangibles as HC-F items 6-10. Those
+concepts are reported elsewhere (Schedule HC items 6-10) and are **not** part of the current HC-F.
 
 ### Relationship to Schedule HC
 
 | HC-F Item | HC Item | Description |
 |-----------|---------|-------------|
-| 6 | 6 | Premises and fixed assets |
-| 7 | 7 | Other real estate owned |
-| 8 | 8 | Investments in unconsolidated subs |
-| 9 | 9 | Direct/indirect RE investments |
-| 10.a | 10.a | Goodwill |
-| 10.b | 10.b | Other intangible assets |
-| 12 | 11 | Total other assets |
+| 7 (Total) | 11 | Total other assets (must equal Schedule HC item 11) |
+
+All HC-F detail lines (items 1-6) are sub-components of HC item 11; they do not individually
+cross-reference other HC lines on the current form.
 
 ---
 
-## Schedule Structure
+## Schedule Structure (current FR Y-9C)
 
 ```
 OTHER ASSETS
 ├── Item 1: Accrued interest receivable
 ├── Item 2: Net deferred tax assets
-├── Item 3: Interest-only strips (non-mortgage)
-├── Item 4: Equity investments without determinable FV
-├── Item 5: Bank-owned life insurance (BOLI)
-├── Item 6: Premises and fixed assets (= HC Item 6)
-├── Item 7: Other real estate owned (= HC Item 7)
-├── Item 8: Investments in unconsolidated subs (= HC Item 8)
-├── Item 9: RE venture investments (= HC Item 9)
-├── Item 10: Intangible assets
-│   ├── 10.a: Goodwill (= HC Item 10.a)
-│   └── 10.b: Other intangibles (= HC Item 10.b)
-├── Item 11: All other assets
-└── Item 12: TOTAL OTHER ASSETS (= HC Item 11)
+├── Item 3: Interest-only strips receivable (not in the form of a security)
+├── Item 4: Equity investments without readily determinable fair values
+├── Item 5: Life insurance assets
+│   ├── 5.a: General account
+│   ├── 5.b: Separate account
+│   └── 5.c: Hybrid account
+├── Item 6: Other
+└── Item 7: TOTAL (sum of items 1-6) = Schedule HC item 11
 ```
 
 ---
@@ -53,12 +50,9 @@ OTHER ASSETS
 
 | MDRM | Call MDRM | Description |
 |------|-----------|-------------|
-| BHCKB556 | RCFDB556 | Interest earned but not collected |
+| BHCKB556 | RCFDB556 | Interest earned but not yet collected |
 
-**Components**:
-- Interest accrued on loans
-- Interest accrued on securities
-- Interest accrued on other earning assets
+**Components**: interest accrued on loans, securities, and other earning assets.
 
 ### Item 2: Net Deferred Tax Assets
 
@@ -66,97 +60,50 @@ OTHER ASSETS
 |------|-----------|-------------|
 | BHCK2148 | RCFD2148 | Net deferred tax assets |
 
-**Nature**: Represents future tax benefits from:
-- Deductible temporary differences
-- Tax loss carryforwards
-- Tax credit carryforwards
+**Regulatory significance**: DTAs arising from temporary differences are subject to CET1
+threshold-deduction tests under Basel III.
 
-**Regulatory Significance**: Subject to deduction from CET1 capital if exceeds threshold
-
-### Item 3: Interest-Only Strips (Non-Mortgage)
+### Item 3: Interest-Only Strips Receivable (Not in the Form of a Security)
 
 | MDRM | Call MDRM | Description |
 |------|-----------|-------------|
-| BHCKA520 | RCFDA520 | IO strips from non-mortgage securitizations |
+| BHCKHT80 | RCFDHT80 | IO strips not carried as a security |
 
-**Note**: Mortgage-related IO strips reported elsewhere
+**Note**: current code is **BHCKHT80** (effective 2018-06-30). The earlier code BHCKA520
+("interest-only strips receivable") was end-dated 2018-03-31 and should not be used for the
+current form.
 
-### Item 4: Equity Investments Without Readily Determinable Fair Value
-
-| MDRM | Call MDRM | Description |
-|------|-----------|-------------|
-| BHCK1752 | RCFD1752 | Equity securities at cost |
-
-**Includes**:
-- FHLB stock (required holding)
-- Federal Reserve Bank stock
-- Bankers' bank stock
-- Community development investments
-- Other equity without quoted prices
-
-**Accounting**: Measured at cost less impairment, plus/minus observable price changes (ASU 2016-01)
-
-### Item 5: Bank-Owned Life Insurance (BOLI)
+### Item 4: Equity Investments Without Readily Determinable Fair Values
 
 | MDRM | Call MDRM | Description |
 |------|-----------|-------------|
-| BHCK4659 | RCFDC009 | Cash surrender value of BOLI |
+| BHCK1752 | RCFD1752 | Equity investments measured under the cost-method exception |
 
-**Nature**: Life insurance policies owned by the bank on lives of key employees
+**Includes**: FHLB stock, Federal Reserve Bank stock, bankers' bank stock, and other equity
+without quoted prices. **Accounting**: cost less impairment, plus/minus observable price changes
+(ASU 2016-01).
 
-**Accounting**: Carried at cash surrender value; income tax-advantaged
+### Item 5: Life Insurance Assets
 
-### Items 6-9: Cross-Referenced to HC
+| Line | MDRM | Call MDRM | Description |
+|------|------|-----------|-------------|
+| 5.a | BHCKK201 | RCFDK201 | General account life insurance assets |
+| 5.b | BHCKK202 | RCFDK202 | Separate account life insurance assets |
+| 5.c | BHCKK270 | RCFDK270 | Hybrid account life insurance assets |
 
-These items appear as separate line items on Schedule HC:
+**Note**: BOLI is now reported in this three-way split (effective 2011-03-31). The legacy single
+code BHCK4659 (cash surrender value) was end-dated 2006-12-31.
 
-| Item | MDRM | HC Item | Description |
-|------|------|---------|-------------|
-| 6 | BHCK2145 | HC Item 6 | Premises and fixed assets |
-| 7 | BHCT2150 | HC Item 7 | Other real estate owned (OREO) |
-| 8 | BHCK2130 | HC Item 8 | Investments in unconsolidated subs |
-| 9 | BHCK3656 | HC Item 9 | Direct/indirect RE investments |
-
-### Item 10: Intangible Assets
-
-#### Item 10.a: Goodwill
+### Item 6: Other
 
 | MDRM | Call MDRM | Description |
 |------|-----------|-------------|
-| BHCK3163 | RCFD3163 | Goodwill |
+| BHCK2168 | RCFD2168 | Residual other assets |
 
-**Nature**: Excess of purchase price over fair value of net assets in acquisitions
+**May include**: prepaid expenses, accounts receivable, and miscellaneous assets not captured in
+items 1-5.
 
-**Regulatory**: Deducted from CET1 capital
-
-#### Item 10.b: Other Intangible Assets
-
-| MDRM | Call MDRM | Description |
-|------|-----------|-------------|
-| BHCK0426 | RCFD0426 | Other intangible assets |
-
-**Components**:
-- Mortgage servicing assets (MSAs)
-- Core deposit intangibles
-- Credit card relationships
-- Customer lists
-- Non-compete agreements
-
-**Regulatory**: Generally deducted from CET1 capital (except MSAs up to threshold)
-
-### Item 11: All Other Assets
-
-| MDRM | Call MDRM | Description |
-|------|-----------|-------------|
-| BHCK2168 | RCFDB557 | Residual other assets |
-
-**May Include**:
-- Prepaid expenses
-- Accounts receivable
-- Derivatives not reported elsewhere
-- Miscellaneous assets
-
-### Item 12: Total Other Assets
+### Item 7: Total (= Schedule HC Item 11)
 
 | MDRM | Call MDRM | Description | Ties To |
 |------|-----------|-------------|---------|
@@ -164,106 +111,8 @@ These items appear as separate line items on Schedule HC:
 
 **Reconciliation**:
 ```
-Item 12 = Sum(Items 1-11)
-Schedule HC Item 11 = HC-F Item 12
-```
-
----
-
-## Memoranda Items
-
-### Mortgage Servicing Assets (MSAs)
-
-| Item | MDRM | Description |
-|------|------|-------------|
-| M1 | BHCK1651 | MSAs from mortgages purchased |
-| M2 | - | MSAs from mortgages sold with servicing retained (no MDRM code; only the aggregate is reported) |
-| M3 | BHCKB027 | Total MSAs |
-
-**Relationship**: Total MSAs (M3) is a component of Item 10.b
-
-### Other Memoranda (2022+)
-
-| Item | MDRM | Description |
-|------|------|-------------|
-| M4 | BHCKJF85 | Prepaid expenses |
-| M5 | BHCKJF86 | Accounts receivable |
-| M6 | BHCKJF87 | Servicing assets (non-mortgage) |
-
----
-
-## Regulatory Capital Treatment
-
-### Items Deducted from CET1
-
-| Item | Treatment |
-|------|-----------|
-| Goodwill (10.a) | Full deduction from CET1 |
-| Other intangibles (10.b) | Generally deducted |
-| MSAs (portion of 10.b) | Subject to 10%/15% threshold tests |
-| Net DTA (Item 2) | Subject to 10%/15% threshold tests |
-
-### Threshold Test Items
-
-Under Basel III, certain assets are subject to threshold deductions:
-- MSAs
-- Net DTAs arising from temporary differences
-- Significant investments in unconsolidated FIs
-
-If individually >10% of CET1 or collectively >15% of CET1, excess is deducted.
-
----
-
-## Reconciliation Hierarchy
-
-```
-SCHEDULE HC-F                           SCHEDULE HC
-═══════════════════════════════════════════════════════════════════════
-
-Item 6 (Premises)              ────────► HC Item 6
-BHCK2145                                 BHCK2145
-
-Item 7 (OREO)                  ────────► HC Item 7
-BHCT2150                                 BHCT2150
-
-Item 8 (Unconsolidated subs)   ────────► HC Item 8
-BHCK2130                                 BHCK2130
-
-Item 9 (RE investments)        ────────► HC Item 9
-BHCK3656                                 BHCK3656
-
-Item 10.a (Goodwill)           ────────► HC Item 10.a
-BHCK3163                                 BHCK3163
-
-Item 10.b (Other intangibles)  ────────► HC Item 10.b
-BHCK0426                                 BHCK0426
-
-Item 12 (Total)                ────────► HC Item 11
-BHCT2160                                 BHCT2160
-```
-
----
-
-## Key Analytical Metrics
-
-### Intangible Asset Ratio
-```
-Intangible Ratio = (Item 10.a + Item 10.b) / Total Equity
-- Higher ratio = more acquisition-driven growth
-- Regulatory concern if intangibles large relative to capital
-```
-
-### BOLI as % of Tier 1
-```
-BOLI Ratio = Item 5 / Tier 1 Capital
-- OCC guidance suggests cap at 25% of Tier 1
-```
-
-### OREO Ratio
-```
-OREO Ratio = Item 7 / Total Loans
-- Higher ratio indicates asset quality issues
-- Elevated during credit stress
+Item 7 = Sum(Items 1 through 6)
+Schedule HC Item 11 = HC-F Item 7
 ```
 
 ---
@@ -274,19 +123,15 @@ OREO Ratio = Item 7 / Total Loans
 |------|------|-------------|
 | 1 | BHCKB556 | Accrued interest receivable |
 | 2 | BHCK2148 | Net deferred tax assets |
-| 3 | BHCKA520 | IO strips (non-mortgage) |
+| 3 | BHCKHT80 | IO strips (not a security) |
 | 4 | BHCK1752 | Equity without determinable FV |
-| 5 | BHCK4659 | BOLI |
-| 6 | BHCK2145 | Premises and fixed assets |
-| 7 | BHCT2150 | OREO |
-| 8 | BHCK2130 | Unconsolidated sub investments |
-| 9 | BHCK3656 | RE venture investments |
-| 10.a | BHCK3163 | Goodwill |
-| 10.b | BHCK0426 | Other intangibles |
-| 11 | BHCK2168 | All other assets |
-| **12** | **BHCT2160** | **TOTAL OTHER ASSETS** |
+| 5.a | BHCKK201 | Life insurance - general account |
+| 5.b | BHCKK202 | Life insurance - separate account |
+| 5.c | BHCKK270 | Life insurance - hybrid account |
+| 6 | BHCK2168 | Other |
+| **7** | **BHCT2160** | **TOTAL OTHER ASSETS (= HC item 11)** |
 
 ---
 
-*Last Updated: 2026-01-28*
-*Reference: FR Y-9C Instructions (March 2024)*
+*Last Updated: 2026-06-11 (v8 conceptual-accuracy sweep)*
+*Reference: FR Y-9C field spec (202603), MDRM, and FreeNIC warehouse*

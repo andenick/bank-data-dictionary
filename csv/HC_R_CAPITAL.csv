@@ -1,48 +1,171 @@
-line_number,item_description,mdrm_code,call_mdrm,category,part,start_date,notes
-1,Common stock plus related surplus,BHCAP742,RCFAP742,CET1 Components,Part I,2014-03-31,Common equity starting point
-2,Retained earnings,BHCAKW00,RCFAKW00,CET1 Components,Part I,2014-03-31,
-3,AOCI (opt-out),BHCAB530,RCFAB530,CET1 Adjustments,Part I,2014-03-31,AOCI component if opted out
-4,AOCI included in CET1,BHCAP838,RCOAP838,CET1 Adjustments,Part I,2014-03-31,For advanced approaches banks
-5,Common equity Tier 1 minority interest,BHCAP839,RCFAP839,CET1 Components,Part I,2014-03-31,Minority interest includable
-6,Total common equity Tier 1 capital before adjustments,BHCAP840,RCFAP840,CET1 Subtotal,Part I,2014-03-31,Sum of Items 1-5
-7,LESS: Goodwill,BHCAP841,RCFAP841,CET1 Deductions,Part I,2014-03-31,Net of associated DTL
-8,LESS: Other intangible assets,BHCAP842,RCFAP842,CET1 Deductions,Part I,2014-03-31,Net of associated DTL
-9,LESS: DTA from operating losses,BHCAP843,RCFAP843,CET1 Deductions,Part I,2014-03-31,NOL and tax credit carryforwards
-10,LESS: Gain on sale securitization,BHCAP844,RCFAP844,CET1 Deductions,Part I,2014-03-31,
-11,LESS: Defined benefit pension fund net assets,BHCAP845,RCFAP845,CET1 Deductions,Part I,2014-03-31,
-12,LESS: Investments in own shares,BHCAP846,RCFAP846,CET1 Deductions,Part I,2014-03-31,Treasury stock
-13,LESS: Reciprocal cross-holdings,BHCAP847,RCFAP847,CET1 Deductions,Part I,2014-03-31,
-14,LESS: Investments in unconsolidated FIs (threshold deduction),BHCAP848,RCFAP848,CET1 Deductions,Part I,2014-03-31,Subject to threshold
-15,LESS: MSA (threshold deduction),BHCAP849,RCFAP849,CET1 Deductions,Part I,2014-03-31,Subject to threshold
-16,LESS: DTA from temporary differences (threshold deduction),BHCAP850,RCFAP850,CET1 Deductions,Part I,2014-03-31,Subject to threshold
-17,LESS: Other CET1 deductions,BHCAP851,RCFAP851,CET1 Deductions,Part I,2014-03-31,
-18,Total CET1 deductions,BHCAP852,RCFAP852,CET1 Deductions,Part I,2014-03-31,Sum of Items 7-17
-19,Common equity Tier 1 capital,BHCAP859,RCFAP859,CET1 Total,Part I,2014-03-31,Item 6 minus Item 18
-20,Additional Tier 1 capital instruments,BHCAP853,RCFAP853,AT1 Components,Part I,2014-03-31,Non-cumulative preferred
-21,Tier 1 minority interest,BHCAP854,RCFAP854,AT1 Components,Part I,2014-03-31,
-22,LESS: AT1 deductions,BHCAP855,RCFAP855,AT1 Deductions,Part I,2014-03-31,
-23,Additional Tier 1 capital,BHCAP856,RCFAP856,AT1 Total,Part I,2014-03-31,Items 20-22
-24,Tier 1 capital,BHCA8274,RCFAA223,Tier 1 Total,Part I,2014-03-31,CET1 + AT1
-25,Tier 2 capital instruments,BHCAP857,RCFAP857,T2 Components,Part I,2014-03-31,Sub debt; qualifying
-26,Tier 2 minority interest,BHCAP858,RCFAP858,T2 Components,Part I,2014-03-31,
-27,Eligible allowance for credit losses,BHCA5311,RCFAA224,T2 Components,Part I,2014-03-31,Limited to 1.25% of RWA
-28,LESS: Tier 2 deductions,-,-,T2 Deductions,Part I,2014-03-31,no current MDRM code for a standalone Tier 2 deductions line (Basel I BHCKB595/RCFDB595 discontinued)
-29,Tier 2 capital,BHCA5311,RCFAA224,T2 Total,Part I,2014-03-31,Items 25-28
-30,Total capital,BHCA3792,RCFA3792,Total Capital,Part I,2014-03-31,Tier 1 + Tier 2
-31,Total risk-weighted assets,BHCAA223,RCFDA223,RWA Total,Part II,2014-03-31,Sum of Part II items
-32,CET1 capital ratio,BHCAP793,RCFAP793,Capital Ratios,Part I,2014-03-31,CET1 / RWA
-33,Tier 1 capital ratio,BHCA7206,RCFA7206,Capital Ratios,Part I,2014-03-31,Tier 1 / RWA
-34,Total capital ratio,BHCA7205,RCFA7205,Capital Ratios,Part I,2014-03-31,Total capital / RWA
-35,Leverage ratio,BHCA7204,RCFA7204,Capital Ratios,Part I,2014-03-31,Tier 1 / Average assets
-RWA1,Balance sheet assets (0% risk weight),BHCKA221,RCFDA221,RWA - 0%,Part II,2014-03-31,Cash; Treasuries
-RWA2,Balance sheet assets (20% risk weight),BHCKS396,RCFDS396,RWA - 20%,Part II,2014-03-31,GSE; munis; interbank
-RWA3,Balance sheet assets (50% risk weight),BHCKS397,RCFDS397,RWA - 50%,Part II,2014-03-31,Residential mortgages (prudent)
-RWA4,Balance sheet assets (100% risk weight),BHCKS398,RCFDS398,RWA - 100%,Part II,2014-03-31,C&I; CRE; most loans
-RWA5,Balance sheet assets (150% risk weight),BHCKS399,RCFDS399,RWA - 150%,Part II,2014-03-31,HVCRE; non-IG
-RWA6,Exposures to securitization,BHCKS400,RCFDS400,RWA - Securitization,Part II,2014-03-31,
-RWA7,Equity exposures,-,-,RWA - Equity,Part II,2014-03-31,no single MDRM code for equity-exposure RWA (computed multi-risk-weight total on HC-R/RC-R Part II)
-RWA8,Derivative exposures,BHCKS402,RCFDS402,RWA - Derivatives,Part II,2014-03-31,
-RWA9,Off-balance sheet exposures,BHCKS403,RCFDS403,RWA - OBS,Part II,2014-03-31,CCF applied
-RWA10,Market risk RWA,BHCKA222,RCFDA222,RWA - Market Risk,Part II,2014-03-31,Trading book
-M1,Supplementary leverage ratio,BHCKA224,RCFDA224,Memorandum - SLR,Part I,2018-03-31,Advanced approaches only
-M2,Total leverage exposure,BHCALE88,RCFAH015,Memorandum - SLR Denom,Part I,2018-03-31,SLR denominator
+line_number,item_description,column,mdrm_code,call_mdrm,category,part,start_date,notes
+1.,Common stock plus related surplus (net of treasury stock and unearned ESOP),-,BHCAP742,RCFAP742,CET1 Components,Part I,2014-03-31,
+2.,Retained earnings,-,BHCAKW00,RCFAKW00,CET1 Components,Part I,2014-03-31,
+2.a.,CECL transition election indicator,-,BHCAJJ29,RCOAJJ29,CET1 - CECL Election,Part I,2014-03-31,0=No; 1=3-yr; 2=5-yr 2020 CECL transition
+3.,Accumulated other comprehensive income (AOCI),-,BHCAB530,RCFAB530,CET1 Components,Part I,2014-03-31,
+3.a.,AOCI opt-out election (advanced approaches must enter 0),-,BHCAP838,RCOAP838,CET1 - AOCI Election,Part I,2014-03-31,
+4.,CET1 minority interest includable in CET1,-,BHCAP839,RCFAP839,CET1 Components,Part I,2014-03-31,
+5.,CET1 capital before adjustments and deductions (sum of items 1-4),-,BHCAP840,RCFAP840,CET1 Subtotal,Part I,2014-03-31,
+6.,LESS: Goodwill net of associated DTLs,-,BHCAP841,RCFAP841,CET1 Deductions,Part I,2014-03-31,
+7.,"LESS: Intangible assets (other than goodwill and MSAs), net of DTLs",-,BHCAP842,RCFAP842,CET1 Deductions,Part I,2014-03-31,
+8.,"LESS: DTAs from net operating loss and tax credit carryforwards, net of DTLs",-,BHCAP843,RCFAP843,CET1 Deductions,Part I,2014-03-31,
+9.a.,LESS: Net unrealized gains (losses) on AFS debt securities,-,BHCAP844,RCFAP844,CET1 AOCI Adjustments,Part I,2014-03-31,
+9.c.,LESS: Accumulated net gains (losses) on cash flow hedges,-,BHCAP846,RCFAP846,CET1 AOCI Adjustments,Part I,2014-03-31,
+9.d.,LESS: AOCI from defined benefit postretirement plans,-,BHCAP847,RCFAP847,CET1 AOCI Adjustments,Part I,2014-03-31,
+9.e.,LESS: Net unrealized gains (losses) on HTM securities in AOCI,-,BHCAP848,RCFAP848,CET1 AOCI Adjustments,Part I,2014-03-31,
+9.f.,LESS: Cash flow hedge gain/loss on non-fair-value items (opt-out=0 only),-,BHCAP849,RCFAP849,CET1 AOCI Adjustments,Part I,2014-03-31,
+10.a.,LESS: Unrealized gain/loss on liabilities due to own credit risk,-,BHCAQ258,RCFAQ258,CET1 Deductions,Part I,2014-03-31,
+10.b.,LESS: All other deductions from (additions to) CET1 before threshold deductions,-,BHCAP850,RCFAP850,CET1 Deductions,Part I,2014-03-31,
+11.,LESS: Non-significant investments in unconsolidated FIs (common stock) > 10% threshold,B,BHCWP851,RCFWP851,CET1 Deductions,Part I,2014-03-31,
+12.,Subtotal (item 5 minus items 6-10.b col A; minus 6-11 col B),A,BHCAP852,RCFAP852,CET1 Subtotal,Part I,2014-03-31,
+12.,Subtotal (item 5 minus items 6-10.b col A; minus 6-11 col B),B,BHCWP852,RCFWP852,CET1 Subtotal,Part I,2014-03-31,
+13.a.,"LESS: Investments in unconsolidated FIs, net of DTLs, > 25% of line 12",-,BHCALB58,RCFALB58,CET1 Threshold Deductions,Part I,2014-03-31,
+13.b.,LESS: Significant investments (common stock) > 10% CET1 deduction threshold,B,BHCWP853,RCFWP853,CET1 Threshold Deductions,Part I,2014-03-31,
+14.a.,"LESS: MSAs, net of DTLs, > 25% of line 12",-,BHCALB59,RCFALB59,CET1 Threshold Deductions,Part I,2014-03-31,
+14.b.,"LESS: MSAs, net of DTLs, > 10% CET1 deduction threshold",B,BHCWP854,RCFWP854,CET1 Threshold Deductions,Part I,2014-03-31,
+15.a.,"LESS: DTAs from temporary differences, net of DTLs, > 25% of line 12",-,BHCALB60,RCFALB60,CET1 Threshold Deductions,Part I,2014-03-31,
+15.b.,LESS: DTAs from temporary differences > 10% CET1 deduction threshold,B,BHCWP855,RCFWP855,CET1 Threshold Deductions,Part I,2014-03-31,
+16.,LESS: Significant investments + MSAs + DTAs > 15% aggregate CET1 threshold,B,BHCWP856,RCFWP856,CET1 Threshold Deductions,Part I,2014-03-31,
+17.,LESS: Deductions to CET1 due to insufficient AT1/Tier2 to cover deductions,A,BHCAP857,RCFAP857,CET1 Deductions,Part I,2014-03-31,
+17.,LESS: Deductions to CET1 due to insufficient AT1/Tier2 to cover deductions,B,BHCWP857,RCFWP857,CET1 Deductions,Part I,2014-03-31,
+18.,Total adjustments and deductions for CET1 (sum of items 13-17),A,BHCAP858,RCFAP858,CET1 Deductions,Part I,2014-03-31,
+18.,Total adjustments and deductions for CET1 (sum of items 13-17),B,BHCWP858,RCFWP858,CET1 Deductions,Part I,2014-03-31,
+19.,Common equity tier 1 capital (item 12 minus item 18),A,BHCAP859,RCFAP859,CET1 Total,Part I,2014-03-31,
+19.,Common equity tier 1 capital (item 12 minus item 18),B,BHCWP859,RCFWP859,CET1 Total,Part I,2014-03-31,
+20.,Additional tier 1 capital instruments plus related surplus,-,BHCAP860,RCFAP860,AT1 Components,Part I,2014-03-31,
+21.,Non-qualifying capital instruments subject to phase-out from AT1,-,BHCAP861,RCFAP861,AT1 Components,Part I,2014-03-31,
+22.,Tier 1 minority interest not included in CET1,-,BHCAP862,RCFAP862,AT1 Components,Part I,2014-03-31,
+23.,"Additional tier 1 capital before deductions (sum of items 20,21,22)",-,BHCAP863,RCFAP863,AT1 Subtotal,Part I,2014-03-31,
+24.,LESS: Additional tier 1 capital deductions,-,BHCAP864,RCFAP864,AT1 Deductions,Part I,2014-03-31,
+25.,"Additional tier 1 capital (greater of item 23 minus 24, or zero)",-,BHCAP865,RCFAP865,AT1 Total,Part I,2014-03-31,
+26.,Tier 1 capital (item 19 col A + item 25; advanced: item 19 col B + item 25),-,BHCA8274,RCFA8274,Tier 1 Total,Part I,2014-03-31,
+27.,Average total consolidated assets,-,BHCAKW03,RCFAKW03,Leverage Inputs,Part I,2014-03-31,
+28.,LESS: Deductions from CET1 and AT1 for leverage ratio,-,BHCAP875,RCFAP875,Leverage Inputs,Part I,2014-03-31,
+29.,LESS: Other deductions from (additions to) assets for leverage ratio,-,BHCAB596,RCFAB596,Leverage Inputs,Part I,2014-03-31,
+30.,Total assets for the leverage ratio,-,BHCAA224,RCFAA224,Leverage Inputs,Part I,2014-03-31,
+31.,Leverage ratio (item 26 divided by item 30),-,BHCA7204,RCFA7204,Capital Ratios,Part I,2014-03-31,
+31.a.,CBLR framework election (1=Yes; 0=No),-,BHCALE74,RCOALE74,Capital Ratios - CBLR Election,Part I,2014-03-31,
+31.b.,SA-CCR opt-in election (1=Yes; blank=No),-,BHCANC99,RCOANC99,Capital - SA-CCR Election,Part I,2014-03-31,
+32.,Total assets,-,BHCA2170,RCFA2170,CBLR Qualifying Criteria,Part I,2014-03-31,
+33.,Trading assets and trading liabilities (HC items 5 + 15),A,BHCAKX77,RCFAKX77,CBLR Qualifying Criteria,Part I,2014-03-31,Col A dollar; col B percent (5% limit)
+33.,Trading assets and trading liabilities (HC items 5 + 15),B,BHCAKX78,RCFAKX78,CBLR Qualifying Criteria,Part I,2014-03-31,Col A dollar; col B percent (5% limit)
+34.a.,Unused portion of conditionally cancellable commitments,-,BHCAKX79,RCFAKX79,CBLR Qualifying Criteria,Part I,2014-03-31,
+34.b.,Securities lent and borrowed (HC-L items 6.a + 6.b),-,BHCAKX80,RCFAKX80,CBLR Qualifying Criteria,Part I,2014-03-31,
+34.c.,Other off-balance sheet exposures,-,BHCAKX81,RCFAKX81,CBLR Qualifying Criteria,Part I,2014-03-31,
+34.d.,Total off-balance sheet exposures (sum 34.a-34.c),A,BHCAKX82,RCFAKX82,CBLR Qualifying Criteria,Part I,2014-03-31,Col A dollar; col B percent (25% limit)
+34.d.,Total off-balance sheet exposures (sum 34.a-34.c),B,BHCAKX83,RCFAKX83,CBLR Qualifying Criteria,Part I,2014-03-31,Col A dollar; col B percent (25% limit)
+35.,Unconditionally cancellable commitments,-,BHCAS540,RCFAS540,CBLR Qualifying Criteria,Part I,2014-03-31,
+36.,Investments in the tier 2 capital of unconsolidated FIs,-,BHCALB61,RCFALB61,Tier 2 Components,Part I,2014-03-31,
+37.,Tier 2 capital instruments plus related surplus,-,BHCAP866,RCFAP866,Tier 2 Components,Part I,2014-03-31,
+38.,Non-qualifying capital instruments subject to phase-out from tier 2,-,BHCAP867,RCFAP867,Tier 2 Components,Part I,2014-03-31,
+39.,Total capital minority interest not included in tier 1,-,BHCAP868,RCFAP868,Tier 2 Components,Part I,2014-03-31,
+40.a.,Adjusted allowances for credit losses (AACL) includable in tier 2,-,BHCA5310,RCFA5310,Tier 2 Components,Part I,2014-03-31,Limited to 1.25% of RWA
+40.b.,"Eligible credit reserves includable in tier 2 (advanced, parallel-run exit)",-,BHCW5310,RCFW5310,Tier 2 Components,Part I,2014-03-31,
+42.a.,Tier 2 capital before deductions (sum of items 37-40),-,BHCAP870,RCFAP870,Tier 2 Subtotal,Part I,2014-03-31,
+42.b.,"Tier 2 capital before deductions (advanced, parallel-run exit)",-,BHCWP870,RCFWP870,Tier 2 Subtotal,Part I,2014-03-31,
+43.,LESS: Tier 2 capital deductions,-,BHCAP872,RCFAP872,Tier 2 Deductions,Part I,2014-03-31,
+44.a.,"Tier 2 capital (greater of item 42.a minus 43, or zero)",-,BHCA5311,RCFA5311,Tier 2 Total,Part I,2014-03-31,
+44.b.,"Tier 2 capital (advanced, parallel-run exit)",-,BHCW5311,RCFW5311,Tier 2 Total,Part I,2014-03-31,
+45.a.,Total capital (sum of items 26 and 44.a),-,BHCA3792,RCFA3792,Total Capital,Part I,2014-03-31,
+45.b.,"Total capital (advanced, parallel-run exit)",-,BHCW3792,RCFW3792,Total Capital,Part I,2014-03-31,
+46.a.,Total risk-weighted assets (from Part II item 31),-,BHCAA223,RCFAA223,RWA Total,Part I,2014-03-31,
+46.b.,Total RWA using advanced approaches (FFIEC 101 Sch A item 60),-,BHCWA223,RCFWA223,RWA Total,Part I,2014-03-31,
+47.,Common equity tier 1 capital ratio (item 19 / item 46),A,BHCAP793,RCFAP793,Capital Ratios,Part I,2014-03-31,
+47.,Common equity tier 1 capital ratio (item 19 / item 46),B,BHCWP793,RCFWP793,Capital Ratios,Part I,2014-03-31,
+48.,Tier 1 capital ratio (item 26 / item 46),A,BHCA7206,RCFA7206,Capital Ratios,Part I,2014-03-31,
+48.,Tier 1 capital ratio (item 26 / item 46),B,BHCW7206,RCFW7206,Capital Ratios,Part I,2014-03-31,
+49.,Total capital ratio (item 45 / item 46),A,BHCA7205,RCFA7205,Capital Ratios,Part I,2014-03-31,
+49.,Total capital ratio (item 45 / item 46),B,BHCW7205,RCFW7205,Capital Ratios,Part I,2014-03-31,
+50.,Capital conservation buffer,-,BHCAH311,RCFAH311,Capital Buffers,Part I,2014-03-31,
+51.,Eligible retained income,-,BHCAH313,RCFAH313,Capital Buffers,Part I,2014-03-31,
+52.,Distributions and discretionary bonus payments,-,BHCAH314,RCFAH314,Capital Buffers,Part I,2014-03-31,
+53.,Supplementary leverage ratio (advanced approaches),-,BHCAH036,RCFAH036,Capital Ratios - SLR,Part I,2014-03-31,
+54.,Outstanding eligible long-term debt,-,BHCALF21,-,TLAC/LTD,Part I,2014-03-31,
+55.,Total loss absorbing capacity,-,BHCALF22,-,TLAC/LTD,Part I,2014-03-31,
+56.,LTD and TLAC total risk-weighted assets ratios,A,BHCALF23,-,TLAC/LTD Ratios,Part I,2014-03-31,
+56.,LTD and TLAC total risk-weighted assets ratios,B,BHCWLF23,-,TLAC/LTD Ratios,Part I,2014-03-31,
+57.,GSIBs: LTD and TLAC RWA ratios using advanced approaches,A,BHCAMK66,-,TLAC/LTD Ratios,Part I,2014-03-31,
+57.,GSIBs: LTD and TLAC RWA ratios using advanced approaches,B,BHCWMK66,-,TLAC/LTD Ratios,Part I,2014-03-31,
+58.,IHCs of foreign GSIBs: LTD and TLAC leverage ratios,A,BHCALF24,-,TLAC/LTD Ratios,Part I,2014-03-31,
+58.,IHCs of foreign GSIBs: LTD and TLAC leverage ratios,B,BHCWLF24,-,TLAC/LTD Ratios,Part I,2014-03-31,
+59.,Category I/II/III: LTD and TLAC supplementary leverage ratios,A,BHCALF25,-,TLAC/LTD Ratios,Part I,2014-03-31,
+59.,Category I/II/III: LTD and TLAC supplementary leverage ratios,B,BHCWLF25,-,TLAC/LTD Ratios,Part I,2014-03-31,
+60.a,of which: Stress capital buffer or 2.500% (advanced approaches),A,BHCALE85,-,Capital Buffers,Part I,2014-03-31,
+60.a,of which: Stress capital buffer or 2.500% (advanced approaches),B,BHCWLE85,-,Capital Buffers,Part I,2014-03-31,
+60.b,of which: GSIB surcharge (if applicable),A,BHCALE86,-,Capital Buffers,Part I,2014-03-31,
+60.b,of which: GSIB surcharge (if applicable),B,BHCWLE86,-,Capital Buffers,Part I,2014-03-31,
+60.c,of which: Countercyclical capital buffer amount (if applicable),A,BHCALE87,-,Capital Buffers,Part I,2014-03-31,
+60.c,of which: Countercyclical capital buffer amount (if applicable),B,BHCWLE87,-,Capital Buffers,Part I,2014-03-31,
+61.,Capital conservation buffer,A,BHCAMK76,RCFAH311,Capital Buffers,Part I,2014-03-31,
+61.,Capital conservation buffer,B,BHCWH311,RCFWH312,Capital Buffers,Part I,2014-03-31,
+62.a,TLAC risk-weighted asset buffer,-,BHCALF27,-,TLAC/LTD Buffers,Part I,2014-03-31,
+62.b,TLAC leverage buffer,-,BHCALF28,-,TLAC/LTD Buffers,Part I,2014-03-31,
+63.,Total leverage exposure for the SLR (if applicable),-,BHCALE88,RCFAH015,Capital Ratios - SLR,Part I,2014-03-31,
+64.,Leverage buffer requirement (if applicable),-,BHCALE89,RCFALE89,Capital Buffers,Part I,2014-03-31,
+65.,Leverage ratio buffer (if applicable),-,BHCALE90,RCFALE90,Capital Buffers,Part I,2014-03-31,
+66.,Eligible retained income,-,BHCAMK77,RCFAH313,Capital Buffers,Part I,2014-03-31,
+67.,Maximum payout ratio,-,BHCALE91,-,Capital Buffers,Part I,2014-03-31,
+68.,Maximum payout amount,-,BHCALE92,-,Capital Buffers,Part I,2014-03-31,
+69.,Distributions and discretionary bonus payments during the quarter,-,BHCAMK78,RCFAH314,Capital Buffers,Part I,2014-03-31,
+1.,On-balance sheet: Cash and balances due from depository institutions,A,BHCKD957,RCFDD957,RWA - On-Balance,Part II,2014-03-31,Grid line; other columns present: BCGHIJ
+2.a.,On-balance sheet: Held-to-maturity securities,A,BHCKD961,RCFDD961,RWA - On-Balance,Part II,2014-03-31,Grid line; other columns present: BCDEFGHI
+2.b.,On-balance sheet: Available-for-sale debt & equity securities,A,BHCKJA21,RCFDJA21,RWA - On-Balance,Part II,2014-03-31,Grid line; other columns present: BCDEGHIJKLNRS
+3.a.,On-balance sheet: Federal funds sold (domestic offices),A,BHCKD971,RCOND971,RWA - On-Balance,Part II,2014-03-31,Grid line; other columns present: CGHIJ
+3.b.,On-balance sheet: Securities purchased under agreements to resell,A,BHCKH171,RCFDH171,RWA - On-Balance,Part II,2014-03-31,Grid line; other columns present: B
+4.a.,Past-due/SSFA RW: Residential mortgage exposures,A,BHCKS413,RCFDS413,RWA - On-Balance,Part II,2014-03-31,Grid line; other columns present: BCGHIRS
+4.b.,Past-due/SSFA RW: High volatility CRE (HVCRE) exposures,A,BHCKS419,RCFDS419,RWA - On-Balance,Part II,2014-03-31,Grid line; other columns present: BCGHIJRS
+4.c.,Past-due/SSFA RW: Exposures past due 90+ days or nonaccrual,A,BHCKS431,RCFDS431,RWA - On-Balance,Part II,2014-03-31,Grid line; other columns present: BCDEGHIJRS
+5.a.,Other RW: Residential mortgage exposures,A,BHCKS439,RCFDS439,RWA - On-Balance,Part II,2014-03-31,Grid line; other columns present: BCGHIRS
+5.b.,Other RW: High volatility CRE (HVCRE) exposures,A,BHCKS445,RCFDS445,RWA - On-Balance,Part II,2014-03-31,Grid line; other columns present: BCGHIJRS
+5.c.,Other RW: Exposures past due 90+ days or nonaccrual,A,BHCKS449,RCFDS449,RWA - On-Balance,Part II,2014-03-31,Grid line; other columns present: BCDEGHIJRS
+5.d.,Other RW: All other exposures,A,BHCKS457,RCFDS457,RWA - On-Balance,Part II,2014-03-31,Grid line; other columns present: BCDEGHIJRS
+6.,LESS: Allowance for loan and lease losses,A,BHCX3123,RCFD3123,RWA - Deductions,Part II,2014-03-31,Grid line; other columns present: B
+7.,On-balance sheet: Trading assets,A,BHCKD976,RCFDD976,RWA - On-Balance,Part II,2014-03-31,Grid line; other columns present: BCDEFGHIJKLMNO
+8.,On-balance sheet: All other assets,A,BHCKD981,RCFDD981,RWA - On-Balance,Part II,2014-03-31,Grid line; other columns present: BCDEFGHIJKLMNO
+8.a.,All other assets: Separate account bank-owned life insurance,R,BHCKH296,RCFDH296,RWA - On-Balance,Part II,2014-03-31,Grid line; other columns present: S
+8.b.,All other assets: Default fund contributions to central counterparties,R,BHCKH298,RCFDH298,RWA - On-Balance,Part II,2014-03-31,Grid line; other columns present: S
+9.a.,Securitization (SSFA): Held-to-maturity securities,A,BHCKS475,RCFDS475,RWA - Securitization,Part II,2014-03-31,Grid line; other columns present: BQTU
+9.b.,Securitization (SSFA): Available-for-sale securities,A,BHCKS480,RCFDS480,RWA - Securitization,Part II,2014-03-31,Grid line; other columns present: BQTU
+9.c.,Securitization (SSFA): Trading assets,A,BHCKS485,RCFDS485,RWA - Securitization,Part II,2014-03-31,Grid line; other columns present: BQTU
+9.d.,Securitization (SSFA): All other on-balance sheet exposures,A,BHCKS490,RCFDS490,RWA - Securitization,Part II,2014-03-31,Grid line; other columns present: BQTU
+10.,Securitization (SSFA): Off-balance sheet exposures,A,BHCKS495,RCFDS495,RWA - Securitization,Part II,2014-03-31,Grid line; other columns present: BQTU
+11.,Total balance sheet assets,A,BHCT2170,RCFD2170,RWA - On-Balance Total,Part II,2014-03-31,Grid line; other columns present: BCDEGHIJKLMNQR
+12.,Off-balance sheet: Financial standby letters of credit,A,BHCKD991,RCFDD991,RWA - Off-Balance,Part II,2014-03-31,Grid line; other columns present: BCDEGHIJ
+13.,Off-balance sheet: Performance SBLCs and transaction-related contingencies,A,BHCKD997,RCFDD997,RWA - Off-Balance,Part II,2014-03-31,Grid line; other columns present: BCGHIJ
+14.,Off-balance sheet: Commercial/similar LCs (original maturity <= 1 year),A,BHCKG606,RCFDG606,RWA - Off-Balance,Part II,2014-03-31,Grid line; other columns present: BCDEGHIJ
+15.,Off-balance sheet: Retained recourse on small business obligations sold,A,BHCKG612,RCFDG612,RWA - Off-Balance,Part II,2014-03-31,Grid line; other columns present: BCGHIJ
+16.,Off-balance sheet: Repo-style transactions,A,BHCKS515,RCFDS515,RWA - Off-Balance,Part II,2014-03-31,Grid line; other columns present: BCDEGHIJ
+17.,Off-balance sheet: All other off-balance sheet liabilities,A,BHCKG618,RCFDG618,RWA - Off-Balance,Part II,2014-03-31,Grid line; other columns present: BCGHIJ
+18.a,Commitments: Original maturity of one year or less,A,BHCKS525,RCFDS525,RWA - Off-Balance,Part II,2014-03-31,Grid line; other columns present: BCDEGHIJRS
+18.b.,Commitments: Original maturity exceeding one year,A,BHCKG624,RCFDG624,RWA - Off-Balance,Part II,2014-03-31,Grid line; other columns present: BCDEGHIJRS
+19.,Off-balance sheet: Unconditionally cancelable commitments,A,BHCKS540,RCFDS540,RWA - Off-Balance,Part II,2014-03-31,Grid line; other columns present: B
+20.,Derivatives: Over-the-counter derivatives,B,BHCKS542,RCFDS542,RWA - Derivatives,Part II,2014-03-31,Grid line; other columns present: CDEFGHIJRS
+21.,Derivatives: Centrally cleared derivatives,B,BHCKS549,RCFDS549,RWA - Derivatives,Part II,2014-03-31,Grid line; other columns present: CDEGHIJ
+22.,Unsettled transactions (failed trades),A,BHCKH191,RCFDH191,RWA - Other,Part II,2014-03-31,Grid line; other columns present: CGHIJOPQ
+23.,Total exposures subject to risk weighting by risk-weight category,C,BHCKG630,RCFDG630,RWA - Subtotal,Part II,2014-03-31,Grid line; other columns present: DEFGHIJKLMNOPQ
+25.,Risk-weighted assets by risk-weight category (item 23 x risk weight),C,BHCKG634,RCFDG634,RWA - By Category,Part II,2014-03-31,Grid line; other columns present: DEFGHIJKLMNOPQ
+26.,RWA for AACL 1.25% threshold,-,BHCKS580,RCFDS580,RWA - Other,Part II,2014-03-31,
+27.,Standardized market-risk weighted assets (market risk rule banks),-,BHCKS581,RCFDS581,RWA - Market Risk,Part II,2014-03-31,
+28.,RWA before deductions for excess AACL and allocated transfer risk reserve,-,BHCKB704,RCFDB704,RWA - Subtotal,Part II,2014-03-31,
+29.,LESS: Excess adjusted allowance for credit losses,-,BHCKA222,RCFDA222,RWA - Deductions,Part II,2014-03-31,
+30.,LESS: Allocated transfer risk reserve,-,BHCK3128,RCFD3128,RWA - Deductions,Part II,2014-03-31,
+31.,Total risk-weighted assets (item 28 minus items 29 and 30),-,BHCKG641,RCFDG641,RWA Total,Part II,2014-03-31,
+M.1.,Memo: Current credit exposure across all derivative contracts,-,BHCKG642,RCFDG642,Memo - Derivatives,Part II,2014-03-31,
+M.2.a.,Memo: Notional - interest rate (remaining maturity),A,BHCKS582,RCFDS582,Memo - Derivatives Notional,Part II,2014-03-31,Grid line; other columns present: BC
+M.2.b.,Memo: Notional - foreign exchange rate and gold,A,BHCKS585,RCFDS585,Memo - Derivatives Notional,Part II,2014-03-31,Grid line; other columns present: BC
+M.2.c.,Memo: Notional - credit (investment grade reference asset),A,BHCKS588,RCFDS588,Memo - Derivatives Notional,Part II,2014-03-31,Grid line; other columns present: BC
+M.2.d.,Memo: Notional - credit (non-investment grade reference asset),A,BHCKS591,RCFDS591,Memo - Derivatives Notional,Part II,2014-03-31,Grid line; other columns present: BC
+M.2.e.,Memo: Notional - equity,A,BHCKS594,RCFDS594,Memo - Derivatives Notional,Part II,2014-03-31,Grid line; other columns present: BC
+M.2.f.,Memo: Notional - precious metals (except gold),A,BHCKS597,RCFDS597,Memo - Derivatives Notional,Part II,2014-03-31,Grid line; other columns present: BC
+M.2.g.,Memo: Notional - other,A,BHCKS600,RCFDS600,Memo - Derivatives Notional,Part II,2014-03-31,Grid line; other columns present: BC
+M.3.a.,Memo: Notional by maturity band - interest rate,A,BHCKS603,RCFDS603,Memo - Derivatives Notional,Part II,2014-03-31,Grid line; other columns present: BC
+M.3.b.,Memo: Notional by maturity band - foreign exchange rate and gold,A,BHCKS606,RCFDS606,Memo - Derivatives Notional,Part II,2014-03-31,Grid line; other columns present: BC
+M.3.c.,Memo: Notional by maturity band - credit (investment grade),A,BHCKS609,RCFDS609,Memo - Derivatives Notional,Part II,2014-03-31,Grid line; other columns present: BC
+M.3.d.,Memo: Notional by maturity band - credit (non-investment grade),A,BHCKS612,RCFDS612,Memo - Derivatives Notional,Part II,2014-03-31,Grid line; other columns present: BC
+M.3.e.,Memo: Notional by maturity band - equity,A,BHCKS615,RCFDS615,Memo - Derivatives Notional,Part II,2014-03-31,Grid line; other columns present: BC
+M.3.f.,Memo: Notional by maturity band - precious metals (except gold),A,BHCKS618,RCFDS618,Memo - Derivatives Notional,Part II,2014-03-31,Grid line; other columns present: BC
+M.3.g.,Memo: Notional by maturity band - other,A,BHCKS621,RCFDS621,Memo - Derivatives Notional,Part II,2014-03-31,Grid line; other columns present: BC
+M.4.,Memo: Standardized market RWA attributable to specific risk,-,BHCKS624,-,Memo - Market Risk,Part II,2014-03-31,
+M.5.a.,Memo: AACL - loans and leases held for investment,-,BHCKJJ30,RCFDJJ30,Memo - AACL,Part II,2014-03-31,
+M.5.b.,Memo: AACL - held-to-maturity debt securities,-,BHCKJJ31,RCFDJJ31,Memo - AACL,Part II,2014-03-31,
+M.5.c.,Memo: AACL - other financial assets measured at amortized cost,-,BHCKJJ32,RCFDJJ32,Memo - AACL,Part II,2014-03-31,

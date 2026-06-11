@@ -1,0 +1,41 @@
+line_number,item_description,mdrm_col_a,mdrm_col_b,mdrm_col_c,call_mdrm_col_a,category,ties_to_hc_line,start_date,notes
+PI.1.a.(1),Part I: RE - 1-4 family residential construction loans (domestic offices),BHCKC891,BHCKC892,-,RIADC891,Charge-offs/Recoveries - RE Construction,HC-C item 1.a.(1),2007-03-31,"Col A=Charge-offs, Col B=Recoveries"
+PI.1.a.(2),Part I: RE - Other construction loans and all land development and other land loans,BHCKC893,BHCKC894,-,RIADC893,Charge-offs/Recoveries - RE Construction,HC-C item 1.a.(2),2007-03-31,-
+PI.1.b.,Part I: RE - Secured by farmland in domestic offices,BHCK3584,BHCK3585,-,RIAD3584,Charge-offs/Recoveries - RE Farmland,HC-C item 1.b,1990-09-30,-
+PI.1.c.(1),"Part I: RE - Revolving, open-end loans secured by 1-4 family residential properties (HELOCs)",BHCK5411,BHCK5412,-,RIAD5411,Charge-offs/Recoveries - RE 1-4 Family,HC-C item 1.c.(1),1991-03-31,-
+PI.1.c.(2)(a),"Part I: RE - Closed-end 1-4 family, secured by first liens",BHCKC234,BHCKC217,-,RIADC234,Charge-offs/Recoveries - RE 1-4 Family,HC-C item 1.c.(2)(a),2002-03-31,-
+PI.1.c.(2)(b),"Part I: RE - Closed-end 1-4 family, secured by junior liens",BHCKC235,BHCKC218,-,RIADC235,Charge-offs/Recoveries - RE 1-4 Family,HC-C item 1.c.(2)(b),2002-03-31,-
+PI.1.d.,Part I: RE - Secured by multifamily (5 or more) residential properties (domestic offices),BHCK3588,BHCK3589,-,RIAD3588,Charge-offs/Recoveries - RE Multifamily,HC-C item 1.d,1990-09-30,-
+PI.1.e.(1),Part I: RE - Loans secured by owner-occupied nonfarm nonresidential properties,BHCKC895,BHCKC896,-,RIADC895,Charge-offs/Recoveries - RE Nonfarm,HC-C item 1.e.(1),2007-03-31,-
+PI.1.e.(2),Part I: RE - Loans secured by other nonfarm nonresidential properties,BHCKC897,BHCKC898,-,RIADC897,Charge-offs/Recoveries - RE Nonfarm,HC-C item 1.e.(2),2007-03-31,-
+PI.1.f.,Part I: RE - Loans secured by real estate in foreign offices,BHCKB512,BHCKB513,-,RIADB512,Charge-offs/Recoveries - RE Foreign,HC-C item 1,2001-03-31,-
+PI.3,Part I: Loans to finance agricultural production and other loans to farmers,BHCK4655,BHCK4665,-,RIAD4655,Charge-offs/Recoveries - Agricultural,HC-C item 3,1986-06-30,Item 2 not applicable
+PI.4.a.,Part I: Commercial and industrial loans to U.S. addressees (domicile),BHCK4645,BHCK4617,-,RIAD4645,Charge-offs/Recoveries - C&I,HC-C item 4.a,1986-06-30,$5B+ filers split 4.a/4.b
+PI.4.b.,Part I: Commercial and industrial loans to non-U.S. addressees (domicile),BHCK4646,BHCK4618,-,RIAD4646,Charge-offs/Recoveries - C&I,HC-C item 4.b,1986-06-30,-
+PI.4.c.,Part I: Commercial and industrial loans to U.S. and non-U.S. addressees (domicile),BHCKKX48,BHCKKX49,-,-,Charge-offs/Recoveries - C&I,HC-C item 4,2019-12-31,Filers < $5B report 4.c only
+PI.5.a.,Part I: Loans to individuals - Credit cards,BHCKB514,BHCKB515,-,RIADB514,Charge-offs/Recoveries - Consumer,HC-C item 6.a,2001-03-31,-
+PI.5.b.,Part I: Loans to individuals - Automobile loans,BHCKK129,BHCKK133,-,RIADK129,Charge-offs/Recoveries - Consumer,HC-C item 6.c,2011-03-31,-
+PI.5.c.,Part I: Loans to individuals - Other consumer loans,BHCKK205,BHCKK206,-,RIADK205,Charge-offs/Recoveries - Consumer,HC-C item 6.d,2011-03-31,"Single payment, installment, student loans, revolving plans other than credit cards"
+PI.6,Part I: Loans to foreign governments and official institutions,BHCK4643,BHCK4627,-,RIAD4643,Charge-offs/Recoveries - Foreign Govt,HC-C item 7,1986-06-30,$5B+ filers
+PI.7,Part I: All other loans,BHCK4644,BHCK4628,-,RIAD4644,Charge-offs/Recoveries - Other,HC-C item 9,1991-03-31,-
+PI.8.a.,"Part I: Lease financing - Leases to individuals for household, family, and other personal expenditures",BHCKF185,BHCKF187,-,RIADF185,Charge-offs/Recoveries - Leases,HC-C item 10.a,2007-03-31,-
+PI.8.b.,Part I: Lease financing - All other leases,BHCKC880,BHCKF188,-,RIADC880,Charge-offs/Recoveries - Leases,HC-C item 10.b,2007-03-31,-
+PI.8.c.,Part I: Lease financing - Leases to individuals and all other leases (combined),BHCKKX50,BHCKKX51,-,-,Charge-offs/Recoveries - Leases,HC-C item 10,2019-12-31,Filers < $5B report 8.c only
+PI.9,Part I: Total (sum of items 1 through 8),BHCK4635,BHCK4605,-,RIAD4635,Charge-offs/Recoveries - Total,-,1981-06-30,"Col A=total charge-offs, Col B=total recoveries"
+PI.M.1,"Part I Memoranda: Loans to finance commercial real estate, construction, and land development activities (not secured by RE) included in items 4 and 7",BHCK5409,BHCK5410,-,RIAD5409,Memoranda - CRE,"HI-B Part I items 4,7",1991-03-31,$5B+ filers
+PI.M.2,Part I Memoranda: Loans secured by real estate to non-U.S. addressees (domicile) included in item 1,BHCK4652,BHCK4662,-,RIAD4652,Memoranda - RE Foreign,HI-B Part I item 1,1986-06-30,-
+PI.M.3,Part I Memoranda: Uncollectible retail credit card fees and finance charges reversed against income,BHCKC388,-,-,RIADC388,Memoranda - Credit Card Fees,-,2003-03-31,Year-to-date; not included in charge-offs against the allowance
+PII.1,Part II: Balance most recently reported at end of previous year,BHCKB522,BHCKJH88,BHCKJH94,RIADB522,Allowance Rollforward - Beginning,-,2001-03-31,After adjustments from amended Reports of Income
+PII.2,Part II: Recoveries,BHCT4605,BHCKJH89,BHCKJH95,RIAD4605,Allowance Rollforward - Recoveries,HI-B Part I item 9 col B,2001-03-31,Col A must equal Part I item 9 col B
+PII.3,Part II: LESS: Charge-offs,BHCKC079,BHCKJH92,BHCKJH98,RIADC079,Allowance Rollforward - Charge-offs,HI-B Part I item 9 col A,2001-06-30,Col A = Part I item 9 col A less Part II item 4 col A
+PII.4,Part II: LESS: Write-downs arising from transfers of financial assets,BHCK5523,BHCKJJ00,BHCKJJ01,RIAD5523,Allowance Rollforward - Write-downs,-,2001-06-30,-
+PII.5,Part II: Provisions for credit losses,BHCK4230,BHCKJH90,BHCKJH96,RIAD4230,Allowance Rollforward - Provision,HI item 4,1981-06-30,Sum of cols A-C plus memos 5 and 7 must equal Schedule HI item 4
+PII.6,Part II: Adjustments,BHCKC233,BHCKJH91,BHCKJH97,RIADC233,Allowance Rollforward - Adjustments,-,2002-03-31,See schedule instructions
+PII.7,Part II: Balance end of current period,BHCT3123,BHCKJH93,BHCKJH99,RIAD3123,Allowance Rollforward - Ending,HC item 4.c,2002-12-31,"Sum of items 1,2,5,6 less items 3,4; col A must equal Schedule HC item 4.c"
+PII.M.1,Part II Memoranda: Allocated transfer risk reserve included in item 7 col A,BHCKC435,-,-,RIADC435,Memoranda - ATRR,HI-B Part II item 7 col A,2003-03-31,$5B+ filers
+PII.M.2,Part II Memoranda: Separate valuation allowance for uncollectible retail credit card fees and finance charges,BHCKC389,-,-,RIADC389,Memoranda - Credit Card,-,2003-03-31,Credit-card specialty filers
+PII.M.3,Part II Memoranda: Amount of allowance for credit losses on loans/leases attributable to retail credit card fees and finance charges,BHCKC390,-,-,RIADC390,Memoranda - Credit Card,-,2003-03-31,-
+PII.M.5,Part II Memoranda: Provisions for credit losses on other financial assets measured at amortized cost (not in item 5),BHCKJJ02,-,-,RIADJJ02,Memoranda - Other ACL,HI item 4,2019-03-31,-
+PII.M.6,Part II Memoranda: Allowance for credit losses on other financial assets measured at amortized cost (not in item 7),BHCKJJ03,-,-,RIADJJ03,Memoranda - Other ACL,-,2019-03-31,-
+PII.M.7,Part II Memoranda: Provisions for credit losses on off-balance-sheet credit exposures,BHCKMG93,-,-,RIADMG93,Memoranda - OBS ACL,HI item 4,2021-03-31,-
+PII.M.8,Part II Memoranda: Estimated amount of expected recoveries of amounts previously written off included within ACL on loans/leases HFI,BHCKMG94,-,-,RIADMG94,Memoranda - Recoveries,HI-B Part II item 7 col A,2021-03-31,$5B+ filers

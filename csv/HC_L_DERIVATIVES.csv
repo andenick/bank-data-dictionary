@@ -1,51 +1,161 @@
-section,product_type,instrument,position,mdrm,call_mdrm,start_date,end_date,links_to_hc_d,notes
-Notional,Interest Rate,Futures,Exchange-traded,BHCK8693,RCFD8693,1995-03-31,9999-12-31,-,Exchange-traded IR futures
-Notional,Foreign Exchange,Futures,Exchange-traded,BHCK8694,RCFD8694,1995-03-31,9999-12-31,-,Exchange-traded FX futures
-Notional,Equity,Futures,Exchange-traded,BHCK8695,RCFD8695,1995-03-31,9999-12-31,-,Exchange-traded equity futures
-Notional,Commodity/Other,Futures,Exchange-traded,BHCK8696,RCFD8696,1995-03-31,9999-12-31,-,Exchange-traded commodity futures
-Notional,Interest Rate,Forwards,OTC,BHCK8697,RCFD8697,1995-03-31,9999-12-31,-,OTC IR forwards
-Notional,Foreign Exchange,Forwards,OTC,BHCK8698,RCFD8698,1995-03-31,9999-12-31,-,OTC FX forwards (includes spots > 2 days)
-Notional,Equity,Forwards,OTC,BHCK8699,RCFD8699,1995-03-31,9999-12-31,-,OTC equity forwards
-Notional,Commodity/Other,Forwards,OTC,BHCK8700,RCFD8700,1995-03-31,9999-12-31,-,OTC commodity forwards
-Notional,Interest Rate,Swaps,OTC,BHCK3450,RCFD3450,1995-03-31,9999-12-31,-,Interest rate swaps - largest category by notional
-Notional,Foreign Exchange,Swaps,OTC,BHCK3826,RCFD3826,1995-03-31,9999-12-31,-,Cross-currency swaps
-Notional,Equity,Swaps,OTC,BHCK8719,RCFD8719,1995-03-31,9999-12-31,-,Equity swaps
-Notional,Commodity/Other,Swaps,OTC,BHCK8720,RCFD8720,1995-03-31,9999-12-31,-,Commodity swaps
-Notional,Interest Rate,Options Written,Exchange-traded,BHCK8701,RCFD8701,1995-03-31,9999-12-31,-,Written IR options (exchange)
-Notional,Foreign Exchange,Options Written,Exchange-traded,BHCK8702,RCFD8702,1995-03-31,9999-12-31,-,Written FX options (exchange)
-Notional,Equity,Options Written,Exchange-traded,BHCK8703,RCFD8703,1995-03-31,9999-12-31,-,Written equity options (exchange)
-Notional,Commodity/Other,Options Written,Exchange-traded,BHCK8704,RCFD8704,1995-03-31,9999-12-31,-,Written commodity options (exchange)
-Notional,Interest Rate,Options Purchased,Exchange-traded,BHCK8705,RCFD8705,1995-03-31,9999-12-31,-,Purchased IR options (exchange)
-Notional,Foreign Exchange,Options Purchased,Exchange-traded,BHCK8706,RCFD8706,1995-03-31,9999-12-31,-,Purchased FX options (exchange)
-Notional,Equity,Options Purchased,Exchange-traded,BHCK8707,RCFD8707,1995-03-31,9999-12-31,-,Purchased equity options (exchange)
-Notional,Commodity/Other,Options Purchased,Exchange-traded,BHCK8708,RCFD8708,1995-03-31,9999-12-31,-,Purchased commodity options (exchange)
-Notional,Interest Rate,Options Written,OTC,BHCK8709,RCFD8709,1995-03-31,9999-12-31,-,Written IR options (OTC)
-Notional,Foreign Exchange,Options Written,OTC,BHCK8710,RCFD8710,1995-03-31,9999-12-31,-,Written FX options (OTC)
-Notional,Equity,Options Written,OTC,BHCK8711,RCFD8711,1995-03-31,9999-12-31,-,Written equity options (OTC)
-Notional,Commodity/Other,Options Written,OTC,BHCK8712,RCFD8712,1995-03-31,9999-12-31,-,Written commodity options (OTC)
-Notional,Interest Rate,Options Purchased,OTC,BHCK8713,RCFD8713,1995-03-31,9999-12-31,-,Purchased IR options (OTC)
-Notional,Foreign Exchange,Options Purchased,OTC,BHCK8714,RCFD8714,1995-03-31,9999-12-31,-,Purchased FX options (OTC)
-Notional,Equity,Options Purchased,OTC,BHCK8715,RCFD8715,1995-03-31,9999-12-31,-,Purchased equity options (OTC)
-Notional,Commodity/Other,Options Purchased,OTC,BHCK8716,RCFD8716,1995-03-31,9999-12-31,-,Purchased commodity options (OTC)
-Notional,Credit,CDS,Guarantor (Protection Sold),BHCKC968,RCFDC968,2006-03-31,9999-12-31,-,CDS protection sold - credit risk seller
-Notional,Credit,CDS,Beneficiary (Protection Bought),BHCKC969,RCFDC969,2006-03-31,9999-12-31,-,CDS protection purchased - credit risk buyer
-Notional,Credit,Total Return Swap,Guarantor (Protection Sold),BHCKC970,RCFDC970,2006-03-31,9999-12-31,-,TRS protection sold
-Notional,Credit,Total Return Swap,Beneficiary (Protection Bought),BHCKC971,RCFDC971,2006-03-31,9999-12-31,-,TRS protection purchased
-Notional,Credit,Other Credit Derivatives,Guarantor (Protection Sold),BHCKC974,RCFDC974,2006-03-31,9999-12-31,-,Other credit derivatives sold
-Notional,Credit,Other Credit Derivatives,Beneficiary (Protection Bought),BHCKC975,RCFDC975,2006-03-31,9999-12-31,-,Other credit derivatives purchased
-Fair Value,Interest Rate,All Trading,Positive,BHCK8733,RCFD8733,1995-03-31,9999-12-31,Item 11,Gross positive FV - IR trading derivatives
-Fair Value,Foreign Exchange,All Trading,Positive,BHCK8734,RCFD8734,1995-03-31,9999-12-31,Item 11,Gross positive FV - FX trading derivatives
-Fair Value,Equity,All Trading,Positive,BHCK8735,RCFD8735,1995-03-31,9999-12-31,Item 11,Gross positive FV - Equity trading derivatives
-Fair Value,Commodity/Other,All Trading,Positive,BHCK8736,RCFD8736,1995-03-31,9999-12-31,Item 11,Gross positive FV - Commodity trading derivatives
-Fair Value,Interest Rate,All Trading,Negative,BHCK8737,RCFD8737,1995-03-31,9999-12-31,Item 14,Gross negative FV - IR trading derivatives
-Fair Value,Foreign Exchange,All Trading,Negative,BHCK8738,RCFD8738,1995-03-31,9999-12-31,Item 14,Gross negative FV - FX trading derivatives
-Fair Value,Equity,All Trading,Negative,BHCK8739,RCFD8739,1995-03-31,9999-12-31,Item 14,Gross negative FV - Equity trading derivatives
-Fair Value,Commodity/Other,All Trading,Negative,BHCK8740,RCFD8740,1995-03-31,9999-12-31,Item 14,Gross negative FV - Commodity trading derivatives
-Fair Value,Interest Rate,Non-Trading Hedges,Positive,BHCK8741,RCFD8741,1995-03-31,9999-12-31,Item 11,Gross positive FV - IR non-trading
-Fair Value,Foreign Exchange,Non-Trading Hedges,Positive,BHCK8742,RCFD8742,1995-03-31,9999-12-31,Item 11,Gross positive FV - FX non-trading
-Fair Value,Equity,Non-Trading Hedges,Positive,BHCK8743,RCFD8743,1995-03-31,9999-12-31,Item 11,Gross positive FV - Equity non-trading
-Fair Value,Commodity/Other,Non-Trading Hedges,Positive,BHCK8744,RCFD8744,1995-03-31,9999-12-31,Item 11,Gross positive FV - Commodity non-trading
-Fair Value,Interest Rate,Non-Trading Hedges,Negative,BHCK8745,RCFD8745,1995-03-31,9999-12-31,Item 14,Gross negative FV - IR non-trading
-Fair Value,Foreign Exchange,Non-Trading Hedges,Negative,BHCK8746,RCFD8746,1995-03-31,9999-12-31,Item 14,Gross negative FV - FX non-trading
-Fair Value,Equity,Non-Trading Hedges,Negative,BHCK8747,RCFD8747,1995-03-31,9999-12-31,Item 14,Gross negative FV - Equity non-trading
-Fair Value,Commodity/Other,Non-Trading Hedges,Negative,BHCK8748,RCFD8748,1995-03-31,9999-12-31,Item 14,Gross negative FV - Commodity non-trading
+line_number,column,item_description,mdrm,start_date,end_date,notes
+1.a,-,"Revolving, open-end loans secured by 1-4 family residential properties (e.g., home equity lines)",BHCK3814,1990-09-30,9999-12-31,Unused commitments
+1.b.(1),-,Unused consumer credit card lines,BHCKJ455,2010-03-31,9999-12-31,
+1.b.(2),-,Other unused credit card lines,BHCKJ456,2010-03-31,9999-12-31,
+1.c.(1),-,"Commitments to fund CRE, construction, and land development loans secured by real estate",BHCK3816,1990-09-30,9999-12-31,=sum 1.c.(1)(a)+(b)
+1.c.(1)(a),-,1-4 family residential construction loan commitments,BHCKF164,2007-03-31,9999-12-31,
+1.c.(1)(b),-,"CRE, other construction, and land development loan commitments",BHCKF165,2007-03-31,9999-12-31,
+1.c.(2),-,"Commitments to fund CRE, construction, and land development loans NOT secured by real estate",BHCK6550,1995-03-31,9999-12-31,
+1.d,-,Securities underwriting,BHCK3817,1990-09-30,9999-12-31,
+1.e.(1),-,Other unused commitments - Commercial and industrial loans,BHCKJ457,2010-03-31,9999-12-31,
+1.e.(2),-,Other unused commitments - Loans to depository financial institutions,BHCKPV10,2026-03-31,9999-12-31,Added 2026Q1
+1.e.(3),-,Other unused commitments - Loans to nondepository financial institutions,BHCKPV11,2026-03-31,9999-12-31,Added 2026Q1; =sum (a)-(e)
+1.e.(3)(a),-,Loans to mortgage credit intermediaries,BHCKPV12,2026-03-31,9999-12-31,Added 2026Q1
+1.e.(3)(b),-,Loans to business credit intermediaries,BHCKPV13,2026-03-31,9999-12-31,Added 2026Q1
+1.e.(3)(c),-,Loans to private equity funds,BHCKPV14,2026-03-31,9999-12-31,Added 2026Q1
+1.e.(3)(d),-,Loans to consumer credit intermediaries,BHCKPV15,2026-03-31,9999-12-31,Added 2026Q1
+1.e.(3)(e),-,Other loans to nondepository financial institutions,BHCKPV16,2026-03-31,9999-12-31,Added 2026Q1
+1.e.(4),-,All other unused commitments,BHCKJ459,2010-03-31,9999-12-31,
+2,-,Financial standby letters of credit and foreign office guarantees,BHCK6566,1990-09-30,9999-12-31,
+2.a,-,Amount of financial standby letters of credit conveyed to others,BHCK3820,1990-09-30,9999-12-31,
+3,-,Performance standby letters of credit and foreign office guarantees,BHCK6570,1990-09-30,9999-12-31,
+3.a,-,Amount of performance standby letters of credit conveyed to others,BHCK3822,1990-09-30,9999-12-31,
+4,-,Commercial and similar letters of credit,BHCK3411,1990-09-30,9999-12-31,
+5,-,Not applicable,-,-,-,Not applicable on current form
+6.a,-,Securities lent,BHCK3433,1990-09-30,9999-12-31,
+6.b,-,Securities borrowed,BHCK3432,1990-09-30,9999-12-31,
+7.a.(1),A,Credit default swaps - Sold protection (notional),BHCKC968,2006-03-31,9999-12-31,Guarantor
+7.a.(1),B,Credit default swaps - Purchased protection (notional),BHCKC969,2006-03-31,9999-12-31,Beneficiary
+7.a.(2),A,Total return swaps - Sold protection (notional),BHCKC970,2006-03-31,9999-12-31,Guarantor
+7.a.(2),B,Total return swaps - Purchased protection (notional),BHCKC971,2006-03-31,9999-12-31,Beneficiary
+7.a.(3),A,Credit options - Sold protection (notional),BHCKC972,2006-03-31,9999-12-31,Guarantor
+7.a.(3),B,Credit options - Purchased protection (notional),BHCKC973,2006-03-31,9999-12-31,Beneficiary
+7.a.(4),A,Other credit derivatives - Sold protection (notional),BHCKC974,2006-03-31,9999-12-31,Guarantor
+7.a.(4),B,Other credit derivatives - Purchased protection (notional),BHCKC975,2006-03-31,9999-12-31,Beneficiary
+7.b.(1),A,Gross positive fair value - Sold protection,BHCKC219,2006-03-31,9999-12-31,
+7.b.(1),B,Gross positive fair value - Purchased protection,BHCKC221,2006-03-31,9999-12-31,
+7.b.(2),A,Gross negative fair value - Sold protection,BHCKC220,2006-03-31,9999-12-31,
+7.b.(2),B,Gross negative fair value - Purchased protection,BHCKC222,2006-03-31,9999-12-31,
+7.c.(1)(a),-,Notional - Sold protection,BHCKG401,2009-06-30,9999-12-31,
+7.c.(1)(b),-,Notional - Purchased protection,BHCKG402,2009-06-30,9999-12-31,
+7.c.(2)(a),-,Notional - Sold protection,BHCKG403,2009-06-30,9999-12-31,
+7.c.(2)(b),-,Notional - Purchased protection recognized as guarantee for regulatory capital,BHCKG404,2009-06-30,9999-12-31,
+7.c.(2)(c),-,Notional - Purchased protection NOT recognized as guarantee for regulatory capital,BHCKG405,2009-06-30,9999-12-31,
+7.d.(1)(a),A,Investment grade - Remaining maturity <= 1 year,BHCKG406,2009-06-30,9999-12-31,
+7.d.(1)(a),B,Investment grade - Remaining maturity >1 to 5 years,BHCKG407,2009-06-30,9999-12-31,
+7.d.(1)(a),C,Investment grade - Remaining maturity > 5 years,BHCKG408,2009-06-30,9999-12-31,
+7.d.(1)(b),A,Sub-investment grade - Remaining maturity <= 1 year,BHCKG409,2009-06-30,9999-12-31,
+7.d.(1)(b),B,Sub-investment grade - Remaining maturity >1 to 5 years,BHCKG410,2009-06-30,9999-12-31,
+7.d.(1)(b),C,Sub-investment grade - Remaining maturity > 5 years,BHCKG411,2009-06-30,9999-12-31,
+7.d.(2)(a),A,Investment grade - Remaining maturity <= 1 year,BHCKG412,2009-06-30,9999-12-31,
+7.d.(2)(a),B,Investment grade - Remaining maturity >1 to 5 years,BHCKG413,2009-06-30,9999-12-31,
+7.d.(2)(a),C,Investment grade - Remaining maturity > 5 years,BHCKG414,2009-06-30,9999-12-31,
+7.d.(2)(b),A,Sub-investment grade - Remaining maturity <= 1 year,BHCKG415,2009-06-30,9999-12-31,
+7.d.(2)(b),B,Sub-investment grade - Remaining maturity >1 to 5 years,BHCKG416,2009-06-30,9999-12-31,
+7.d.(2)(b),C,Sub-investment grade - Remaining maturity > 5 years,BHCKG417,2009-06-30,9999-12-31,
+8,-,Spot foreign exchange contracts,BHCK8765,1995-03-31,9999-12-31,
+9,-,All other off-balance-sheet items (exclude derivatives),BHCK3430,1990-09-30,9999-12-31,
+9.a,-,Commitments to purchase when-issued securities,BHCK3434,1990-09-30,9999-12-31,
+9.b,-,Commitments to sell when-issued securities,BHCK3435,1990-09-30,9999-12-31,
+9.c,-,Itemized other off-balance-sheet - Amount,BHCK6561,1990-09-30,9999-12-31,Description in TEXT6561
+9.d,-,Itemized other off-balance-sheet - Amount,BHCK6562,1990-09-30,9999-12-31,Description in TEXT6562
+9.e,-,Itemized other off-balance-sheet - Amount,BHCK6568,1990-09-30,9999-12-31,Description in TEXT6568
+9.f,-,Itemized other off-balance-sheet - Amount,BHCK6586,1990-09-30,9999-12-31,Description in TEXT6586
+10,-,Not applicable,-,-,-,Not applicable on current form
+11.a,A,Futures contracts (notional) - Interest Rate,BHCK8693,1995-03-31,9999-12-31,
+11.a,B,Futures contracts (notional) - Foreign Exchange,BHCK8694,1995-03-31,9999-12-31,
+11.a,C,Futures contracts (notional) - Equity Derivative,BHCK8695,1995-03-31,9999-12-31,
+11.a,D,Futures contracts (notional) - Commodity and Other,BHCK8696,1995-03-31,9999-12-31,
+11.b,A,Forward contracts (notional) - Interest Rate,BHCK8697,1995-03-31,9999-12-31,
+11.b,B,Forward contracts (notional) - Foreign Exchange,BHCK8698,1995-03-31,9999-12-31,
+11.b,C,Forward contracts (notional) - Equity Derivative,BHCK8699,1995-03-31,9999-12-31,
+11.b,D,Forward contracts (notional) - Commodity and Other,BHCK8700,1995-03-31,9999-12-31,
+11.c.(1),A,Written options - exchange-traded (notional) - Interest Rate,BHCK8701,1995-03-31,9999-12-31,
+11.c.(1),B,Written options - exchange-traded (notional) - Foreign Exchange,BHCK8702,1995-03-31,9999-12-31,
+11.c.(1),C,Written options - exchange-traded (notional) - Equity Derivative,BHCK8703,1995-03-31,9999-12-31,
+11.c.(1),D,Written options - exchange-traded (notional) - Commodity and Other,BHCK8704,1995-03-31,9999-12-31,
+11.c.(2),A,Purchased options - exchange-traded (notional) - Interest Rate,BHCK8705,1995-03-31,9999-12-31,
+11.c.(2),B,Purchased options - exchange-traded (notional) - Foreign Exchange,BHCK8706,1995-03-31,9999-12-31,
+11.c.(2),C,Purchased options - exchange-traded (notional) - Equity Derivative,BHCK8707,1995-03-31,9999-12-31,
+11.c.(2),D,Purchased options - exchange-traded (notional) - Commodity and Other,BHCK8708,1995-03-31,9999-12-31,
+11.d.(1),A,Written options - OTC (notional) - Interest Rate,BHCK8709,1995-03-31,9999-12-31,
+11.d.(1),B,Written options - OTC (notional) - Foreign Exchange,BHCK8710,1995-03-31,9999-12-31,
+11.d.(1),C,Written options - OTC (notional) - Equity Derivative,BHCK8711,1995-03-31,9999-12-31,
+11.d.(1),D,Written options - OTC (notional) - Commodity and Other,BHCK8712,1995-03-31,9999-12-31,
+11.d.(2),A,Purchased options - OTC (notional) - Interest Rate,BHCK8713,1995-03-31,9999-12-31,
+11.d.(2),B,Purchased options - OTC (notional) - Foreign Exchange,BHCK8714,1995-03-31,9999-12-31,
+11.d.(2),C,Purchased options - OTC (notional) - Equity Derivative,BHCK8715,1995-03-31,9999-12-31,
+11.d.(2),D,Purchased options - OTC (notional) - Commodity and Other,BHCK8716,1995-03-31,9999-12-31,
+11.e,A,Swaps (notional) - Interest Rate,BHCK3450,1995-03-31,9999-12-31,
+11.e,B,Swaps (notional) - Foreign Exchange,BHCK3826,1995-03-31,9999-12-31,
+11.e,C,Swaps (notional) - Equity Derivative,BHCK8719,1995-03-31,9999-12-31,
+11.e,D,Swaps (notional) - Commodity and Other,BHCK8720,1995-03-31,9999-12-31,
+12,A,Total gross notional amount of derivative contracts held for trading - Interest Rate,BHCKA126,1995-03-31,9999-12-31,
+12,B,Total gross notional amount of derivative contracts held for trading - Foreign Exchange,BHCKA127,1995-03-31,9999-12-31,
+12,C,Total gross notional amount of derivative contracts held for trading - Equity Derivative,BHCK8723,1995-03-31,9999-12-31,
+12,D,Total gross notional amount of derivative contracts held for trading - Commodity and Other,BHCK8724,1995-03-31,9999-12-31,
+13,A,Total gross notional amount of derivative contracts held for purposes other than trading - Interest Rate,BHCK8725,1995-03-31,9999-12-31,
+13,B,Total gross notional amount of derivative contracts held for purposes other than trading - Foreign Exchange,BHCK8726,1995-03-31,9999-12-31,
+13,C,Total gross notional amount of derivative contracts held for purposes other than trading - Equity Derivative,BHCK8727,1995-03-31,9999-12-31,
+13,D,Total gross notional amount of derivative contracts held for purposes other than trading - Commodity and Other,BHCK8728,1995-03-31,9999-12-31,
+14.a.(1),A,Trading derivatives - Gross positive fair value - Interest Rate,BHCK8733,1995-03-31,9999-12-31,
+14.a.(1),B,Trading derivatives - Gross positive fair value - Foreign Exchange,BHCK8734,1995-03-31,9999-12-31,
+14.a.(1),C,Trading derivatives - Gross positive fair value - Equity Derivative,BHCK8735,1995-03-31,9999-12-31,
+14.a.(1),D,Trading derivatives - Gross positive fair value - Commodity and Other,BHCK8736,1995-03-31,9999-12-31,
+14.a.(2),A,Trading derivatives - Gross negative fair value - Interest Rate,BHCK8737,1995-03-31,9999-12-31,
+14.a.(2),B,Trading derivatives - Gross negative fair value - Foreign Exchange,BHCK8738,1995-03-31,9999-12-31,
+14.a.(2),C,Trading derivatives - Gross negative fair value - Equity Derivative,BHCK8739,1995-03-31,9999-12-31,
+14.a.(2),D,Trading derivatives - Gross negative fair value - Commodity and Other,BHCK8740,1995-03-31,9999-12-31,
+14.b.(1),A,Non-trading derivatives - Gross positive fair value - Interest Rate,BHCK8741,1995-03-31,9999-12-31,
+14.b.(1),B,Non-trading derivatives - Gross positive fair value - Foreign Exchange,BHCK8742,1995-03-31,9999-12-31,
+14.b.(1),C,Non-trading derivatives - Gross positive fair value - Equity Derivative,BHCK8743,1995-03-31,9999-12-31,
+14.b.(1),D,Non-trading derivatives - Gross positive fair value - Commodity and Other,BHCK8744,1995-03-31,9999-12-31,
+14.b.(2),A,Non-trading derivatives - Gross negative fair value - Interest Rate,BHCK8745,1995-03-31,9999-12-31,
+14.b.(2),B,Non-trading derivatives - Gross negative fair value - Foreign Exchange,BHCK8746,1995-03-31,9999-12-31,
+14.b.(2),C,Non-trading derivatives - Gross negative fair value - Equity Derivative,BHCK8747,1995-03-31,9999-12-31,
+14.b.(2),D,Non-trading derivatives - Gross negative fair value - Commodity and Other,BHCK8748,1995-03-31,9999-12-31,
+15.a,A,Net current credit exposure - Banks and securities firms,BHCKG418,2009-06-30,9999-12-31,
+15.a,B,Net current credit exposure - Monoline financial guarantors,BHCKG419,2009-06-30,9999-12-31,
+15.a,C,Net current credit exposure - Hedge funds,BHCKG420,2009-06-30,9999-12-31,
+15.a,D,Net current credit exposure - Sovereign governments,BHCKG421,2009-06-30,9999-12-31,
+15.a,E,Net current credit exposure - Corporations and all other counterparties,BHCKG422,2009-06-30,9999-12-31,
+15.b.(1),A,Fair value of collateral - Cash (U.S. dollar) - Banks and securities firms,BHCKG423,2009-06-30,9999-12-31,
+15.b.(1),B,Fair value of collateral - Cash (U.S. dollar) - Monoline financial guarantors,BHCKG424,2009-06-30,9999-12-31,
+15.b.(1),C,Fair value of collateral - Cash (U.S. dollar) - Hedge funds,BHCKG425,2009-06-30,9999-12-31,
+15.b.(1),D,Fair value of collateral - Cash (U.S. dollar) - Sovereign governments,BHCKG426,2009-06-30,9999-12-31,
+15.b.(1),E,Fair value of collateral - Cash (U.S. dollar) - Corporations and all other counterparties,BHCKG427,2009-06-30,9999-12-31,
+15.b.(2),A,Fair value of collateral - Cash (Other currencies) - Banks and securities firms,BHCKG428,2009-06-30,9999-12-31,
+15.b.(2),B,Fair value of collateral - Cash (Other currencies) - Monoline financial guarantors,BHCKG429,2009-06-30,9999-12-31,
+15.b.(2),C,Fair value of collateral - Cash (Other currencies) - Hedge funds,BHCKG430,2009-06-30,9999-12-31,
+15.b.(2),D,Fair value of collateral - Cash (Other currencies) - Sovereign governments,BHCKG431,2009-06-30,9999-12-31,
+15.b.(2),E,Fair value of collateral - Cash (Other currencies) - Corporations and all other counterparties,BHCKG432,2009-06-30,9999-12-31,
+15.b.(3),A,Fair value of collateral - U.S. Treasury securities - Banks and securities firms,BHCKG433,2009-06-30,9999-12-31,
+15.b.(3),B,Fair value of collateral - U.S. Treasury securities - Monoline financial guarantors,BHCKG434,2009-06-30,9999-12-31,
+15.b.(3),C,Fair value of collateral - U.S. Treasury securities - Hedge funds,BHCKG435,2009-06-30,9999-12-31,
+15.b.(3),D,Fair value of collateral - U.S. Treasury securities - Sovereign governments,BHCKG436,2009-06-30,9999-12-31,
+15.b.(3),E,Fair value of collateral - U.S. Treasury securities - Corporations and all other counterparties,BHCKG437,2009-06-30,9999-12-31,
+15.b.(4),A,Fair value of collateral - U.S. govt agency & GSE debt securities - Banks and securities firms,BHCKG438,2009-06-30,9999-12-31,
+15.b.(4),B,Fair value of collateral - U.S. govt agency & GSE debt securities - Monoline financial guarantors,BHCKG439,2009-06-30,9999-12-31,
+15.b.(4),C,Fair value of collateral - U.S. govt agency & GSE debt securities - Hedge funds,BHCKG440,2009-06-30,9999-12-31,
+15.b.(4),D,Fair value of collateral - U.S. govt agency & GSE debt securities - Sovereign governments,BHCKG441,2009-06-30,9999-12-31,
+15.b.(4),E,Fair value of collateral - U.S. govt agency & GSE debt securities - Corporations and all other counterparties,BHCKG442,2009-06-30,9999-12-31,
+15.b.(5),A,Fair value of collateral - Corporate bonds - Banks and securities firms,BHCKG443,2009-06-30,9999-12-31,
+15.b.(5),B,Fair value of collateral - Corporate bonds - Monoline financial guarantors,BHCKG444,2009-06-30,9999-12-31,
+15.b.(5),C,Fair value of collateral - Corporate bonds - Hedge funds,BHCKG445,2009-06-30,9999-12-31,
+15.b.(5),D,Fair value of collateral - Corporate bonds - Sovereign governments,BHCKG446,2009-06-30,9999-12-31,
+15.b.(5),E,Fair value of collateral - Corporate bonds - Corporations and all other counterparties,BHCKG447,2009-06-30,9999-12-31,
+15.b.(6),A,Fair value of collateral - Equity securities - Banks and securities firms,BHCKG448,2009-06-30,9999-12-31,
+15.b.(6),B,Fair value of collateral - Equity securities - Monoline financial guarantors,BHCKG449,2009-06-30,9999-12-31,
+15.b.(6),C,Fair value of collateral - Equity securities - Hedge funds,BHCKG450,2009-06-30,9999-12-31,
+15.b.(6),D,Fair value of collateral - Equity securities - Sovereign governments,BHCKG451,2009-06-30,9999-12-31,
+15.b.(6),E,Fair value of collateral - Equity securities - Corporations and all other counterparties,BHCKG452,2009-06-30,9999-12-31,
+15.b.(7),A,Fair value of collateral - All other collateral - Banks and securities firms,BHCKG453,2009-06-30,9999-12-31,
+15.b.(7),B,Fair value of collateral - All other collateral - Monoline financial guarantors,BHCKG454,2009-06-30,9999-12-31,
+15.b.(7),C,Fair value of collateral - All other collateral - Hedge funds,BHCKG455,2009-06-30,9999-12-31,
+15.b.(7),D,Fair value of collateral - All other collateral - Sovereign governments,BHCKG456,2009-06-30,9999-12-31,
+15.b.(7),E,Fair value of collateral - All other collateral - Corporations and all other counterparties,BHCKG457,2009-06-30,9999-12-31,
+15.b.(8),A,Total fair value of collateral (sum of 15.b.(1)-(7)) - Banks and securities firms,BHCKG458,2009-06-30,9999-12-31,
+15.b.(8),B,Total fair value of collateral (sum of 15.b.(1)-(7)) - Monoline financial guarantors,BHCKG459,2009-06-30,9999-12-31,
+15.b.(8),C,Total fair value of collateral (sum of 15.b.(1)-(7)) - Hedge funds,BHCKG460,2009-06-30,9999-12-31,
+15.b.(8),D,Total fair value of collateral (sum of 15.b.(1)-(7)) - Sovereign governments,BHCKG461,2009-06-30,9999-12-31,
+15.b.(8),E,Total fair value of collateral (sum of 15.b.(1)-(7)) - Corporations and all other counterparties,BHCKG462,2009-06-30,9999-12-31,

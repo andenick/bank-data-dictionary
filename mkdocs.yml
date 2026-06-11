@@ -71,25 +71,34 @@ nav:
       - Collections Catalog: COLLECTIONS_CATALOG.md
       - Coverage & Provenance: COVERAGE_PROVENANCE.md
       - Master Regulatory Guide: MASTER_REGULATORY_GUIDE.md
+      - Empirical Validation: EMPIRICAL_VALIDATION.md
   - Core systems:
       - MDRM Meta-Dictionary: MDRM_GUIDE.md
       - Entity Identifiers: IDENTIFIERS.md
       - NIC Structure: NIC_STRUCTURE_GUIDE.md
   - FR Y-9C schedules:
+      - HI — Income Statement: HI_INCOME_STATEMENT_GUIDE.md
+      - HI-A — Changes in Equity Capital: HI_A_EQUITY_CHANGES_GUIDE.md
+      - HI-B — Charge-Offs & Allowance: HI_B_CHARGEOFFS_GUIDE.md
+      - HI-C — ALLL Disaggregation: HI_C_ALLOWANCE_GUIDE.md
       - HC — Balance Sheet: HC_BALANCE_SHEET_GUIDE.md
       - HC-B — Securities: HC_B_SECURITIES_GUIDE.md
       - HC-C — Loans: HC_C_LOANS_GUIDE.md
       - HC-D — Trading: HC_D_TRADING_GUIDE.md
+      - HC-E — Deposits: HC_E_DEPOSITS_GUIDE.md
       - HC-F — Other Assets: HC_F_OTHER_ASSETS_GUIDE.md
       - HC-G — Other Liabilities: HC_G_OTHER_LIABILITIES_GUIDE.md
       - HC-H — Interest Sensitivity: HC_H_INTEREST_SENSITIVITY_GUIDE.md
+      - HC-I — Insurance: HC_I_INSURANCE_GUIDE.md
       - HC-K — Quarterly Averages: HC_K_QUARTERLY_AVERAGES_GUIDE.md
       - HC-L — Derivatives: HC_L_DERIVATIVES_GUIDE.md
+      - HC-M — Memoranda: HC_M_MEMORANDA_GUIDE.md
       - HC-N — Past Due: HC_N_PAST_DUE_GUIDE.md
+      - HC-P — Mortgage Banking: HC_P_MORTGAGE_BANKING_GUIDE.md
       - HC-Q — Fair Value: HC_Q_FAIR_VALUE_GUIDE.md
       - HC-R — Capital: HC_R_CAPITAL_GUIDE.md
       - HC-S — Securitization: HC_S_SECURITIZATION_GUIDE.md
-      - HI — Income Statement: HI_INCOME_STATEMENT_GUIDE.md
+      - HC-V — Variable Interest Entities: HC_V_VIES_GUIDE.md
       - Reconciliation Hierarchy: RECONCILIATION_HIERARCHY.md
       - Reconciliation Matrix: RECONCILIATION_MATRIX.md
   - Call Report:
@@ -123,5 +132,6 @@ nav:
       - NIC Code Lists: data/nic_code_lists.md
       - Entity Identifiers: data/identifiers.md
       - Code Validation Audit: data/code_validation_audit.md
+      - Relationship Registry (empirically tested): data/relationship_registry.md
   - Reference:
       - Verification Report: VERIFICATION_REPORT.md

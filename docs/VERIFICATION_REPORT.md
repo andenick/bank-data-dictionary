@@ -1,8 +1,81 @@
 # Verification Report
 
-> **Version 7.0 | 2026-06-11** — verification gate for the v7.0 legacy-schedule rebuild.
+> **Version 8.0 | 2026-06-11** — verification gate for the v8.0 conceptual + empirical rebuild.
 > **Repository**: github.com/andenick/bank-data-dictionary
-> Earlier gates (v6.x, v5.0) are retained below as the historical record.
+> Earlier gates (v7.0, v6.x, v5.0) are retained below as the historical record.
+
+---
+
+## v8.0 — All 22 schedules, official-spec verification, and empirical validation (2026-06-11)
+
+v8.0 moved the dictionary from **token validity** (every code exists in MDRM) to **conceptual
+and empirical validity** (every code means the right thing, and every identity actually holds in
+real filings). Three things were verified this round: a conceptual sweep of every schedule
+against the official field spec, the addition of 8 schedules to complete the Y-9C set, and an
+empirical test of every machine-testable relationship against 208 million rows of real filings.
+
+### Headline results
+
+| Metric | v7.0 | v8.0 |
+|--------|------|------|
+| FR Y-9C schedules detailed | 14 | **22 (all)** — 8 added: HC-E, HC-I, HC-M, HC-P, HC-V, HI-A, HI-B, HI-C |
+| Schedule verification basis | official FR Y-9C form | **official FR Y-9C Reporting Central field specifications (March 2026)** |
+| Code-token validity | 100% (2,426 / 2,426) | **100% (4,564 / 4,564)** |
+| Reconciliation relationships | curated set | **2,330** in `RELATIONSHIP_REGISTRY.csv` (official edit checklist + curated) |
+| Machine-testable relationships tested vs real filings | — | **332** (vs **208M rows** of FR Y-9C bulk data, 13,668 BHCs, 1986 Q3–2025 Q4) |
+| Empirical verdicts | — | **264 CONFIRMED · 34 CONFIRMED_CURRENT · 13 QUALITY_TOLERANCE · 17 NOT_IN_BULK · 3 CONDITIONAL_DOC · 1 DATA_GAP** (0 unexplained) |
+
+### Conceptual sweep (8 new schedules + every-code re-verification)
+
+Every FR Y-9C schedule was rebuilt/re-verified against the **official March-2026 field
+specifications** (Reporting Central Appendix A), not merely against MDRM token presence. Eight
+schedules were newly authored to their official line-up — **HC-E** (deposit liabilities),
+**HC-I** (insurance underwriting), **HC-M** (memoranda), **HC-P** (1-4 family mortgage banking),
+**HC-V** (variable interest entities), **HI-A** (changes in equity capital), **HI-B**
+(charge-offs and changes in allowance), **HI-C** (ALLL disaggregation) — each with a matching
+CSV and guide. The sweep additionally corrected hundreds of wrong-concept / wrong-vintage codes
+across the pre-existing schedules; per-fix counts are recorded in the
+`CONCEPT_FIXES_*` attestations. Token validity held at **100% (4,564 / 4,564)**.
+
+### Empirical validation against real filings
+
+The official FR Y-9C edit checklist (**2,195 current edits**) was parsed and structured, then
+merged with curated identities and component hierarchies into a single relationship registry of
+**2,330 relationships**. Every relationship resolving to codes present in the bulk data —
+**332 after adjudication** — was evaluated as an SQL aggregate over **Federal Reserve bulk BHCF
+(FR Y-9C) data**, every quarter **1986 Q3 → 2025 Q4**, **13,668 holding companies**,
+**~208 million reported cell-values**, with a tolerance of **max($1,000, 0.1%)**. Verdict
+distribution: **264 CONFIRMED** (≥99% across the full history), **34 CONFIRMED_CURRENT**
+(≥99% in 2021+; older vintages differ by form revision), **13 QUALITY_TOLERANCE** (Fed
+"should"-edits with documented rates), **17 NOT_IN_BULK**, **3 CONDITIONAL_DOC**
+(advanced-approaches sub-population), **1 DATA_GAP**. Zero rows remain in an unexplained
+rejected/weak/untestable state. Full methodology and showcase identities are in
+[`EMPIRICAL_VALIDATION.md`](EMPIRICAL_VALIDATION.md); per-row verdicts (with `empirical_n` and
+`empirical_pass_rate`) are in [`csv/RELATIONSHIP_REGISTRY.csv`](../csv/RELATIONSHIP_REGISTRY.csv).
+
+### Adversarial rigor — two anecdotes from the adjudication
+
+Two findings during adjudication illustrate that the empirical pass was genuinely adversarial,
+not a rubber-stamp:
+
+- **The harness parse-bug catch.** Several official edits of the form `A − (B + C) = T` initially
+  came back as *rejected*. Investigation traced the failure to a bug in our own test harness, not
+  the data: the side-parser read a minus sign in front of a parenthesised group as a plus
+  (`A − (B + C)` evaluated as `A + B + C`), silently dropping the distributed negation. The fix
+  was to write each affected registry expression in the flattened `A − B − C` form the harness
+  parses correctly — preserving the true official math. Seven relationships
+  (e.g. the HI-8a validity edit, the HI-A roll-forward, the HI-B recovery edits, an HC-R(II)
+  identity) were re-tested after the fix and **all confirmed**. This is the difference between
+  "the identity is wrong" and "our tester was wrong" — and we checked.
+
+- **The JJ33 provision conflict.** A flagged conflict around `BHCKJJ33` was resolved against MDRM
+  and the field spec: `BHCKJJ33` = "provisions for credit losses on financial assets" = HI item 4
+  (the CECL provision), and both `HI_INCOME_STATEMENT.csv` (item 4 = JJ33) and `HC_B_SECURITIES.csv`
+  (which does **not** contain JJ33) were already correct. The actual defect was three fabricated
+  hierarchy edges in `SCHEDULE_COMPONENT_HIERARCHY.csv` that wrongly tied HC-B Memorandum 5 to the
+  HI provision code; those edges and the derived registry row were removed. The lesson: a failing
+  empirical test was tracked to its real source (a bad hierarchy edge) rather than "fixed" by
+  editing a correct schedule cell.
 
 ---
 

@@ -1,44 +1,40 @@
 category,sub_category,product,description,lcr_treatment,nsfr_treatment,cross_form_reference,maturity_buckets,notes
-Inflows,Secured Lending,Reverse Repo,Reverse repurchase agreements,Inflow (haircut-dependent),RSF varies by maturity,HC-L,O/N to >1Y,Collateral quality determines LCR haircut
-Inflows,Secured Lending,Securities Borrowing,Securities borrowed transactions,Inflow (haircut-dependent),RSF varies by maturity,HC-L,O/N to >1Y,
-Inflows,Secured Lending,Margin Lending,Customer margin loans,Inflow rate varies,RSF by maturity,HC-C,O/N to >1Y,Prime brokerage
-Inflows,Unsecured Lending,Fed Funds Sold,Federal funds sold,100% inflow if O/N,RSF 0% if <6M,HC-L,-,Overnight interbank
-Inflows,Unsecured Lending,Interbank Loans,Loans to other banks,Inflow by maturity,RSF varies,HC-C,O/N to >1Y,
-Inflows,Unsecured Lending,Customer Receivables,Trade date receivables,100% inflow,RSF 0%,-,Settlement,
-Inflows,Asset Maturities,Maturing Securities,Securities reaching maturity,100% inflow,N/A,HC-B,Various,Reduces HQLA need
-Inflows,Asset Maturities,Loan Repayments,Scheduled loan payments,50% inflow cap on retail,RSF varies,HC-C,Various,Subject to inflow cap
-Inflows,Derivatives,Net Derivative Inflows,Expected net cash from derivatives,Net inflow (30-day),N/A,HC-L,30-day,Net of outflows
-Inflows,Derivatives,Collateral Returns,Expected return of posted collateral,Inflow rate varies,N/A,HC-L,Various,
-Outflows,Secured Funding,Repo,Repurchase agreements,Outflow (haircut-dependent),ASF varies by maturity,HC-L,O/N to >1Y,Collateral determines run-off
-Outflows,Secured Funding,Securities Lending,Securities lent transactions,Outflow rate varies,ASF varies,HC-L,O/N to >1Y,
-Outflows,Secured Funding,Collateralized Borrowing,Other collateralized borrowing,Outflow by collateral type,ASF varies,-,Various,
-Outflows,Unsecured Wholesale,Operational Deposits,Deposits for operational purposes,25% run-off rate,ASF 50%,RC-E,Demand,Clearing/custody/cash mgmt
-Outflows,Unsecured Wholesale,Non-Op FI Deposits,Non-operational financial institution deposits,100% run-off rate,ASF 0-50%,RC-E,Various,Highest run-off assumption
-Outflows,Unsecured Wholesale,Non-Financial Corp Deposits,Non-financial corporate deposits,40% run-off rate,ASF 50%,RC-E,Various,
-Outflows,Unsecured Wholesale,Commercial Paper,Outstanding commercial paper,100% run-off at maturity,ASF 0% if <6M,-,<270 days,Short-term wholesale
-Outflows,Unsecured Wholesale,Medium-Term Notes,Maturing MTNs,100% at maturity,ASF varies by maturity,-,Various,
-Outflows,Unsecured Wholesale,FHLB Advances,Federal Home Loan Bank borrowing,100% at maturity,ASF varies,-,Various,
-Outflows,Retail Funding,Stable Deposits,Insured deposits w/ established relationship,3% run-off rate,ASF 95%,RC-E,Demand/Term,Lowest outflow rate
-Outflows,Retail Funding,Less Stable Deposits,Other retail deposits,10% run-off rate,ASF 90%,RC-E,Various,
-Outflows,Retail Funding,Brokered Deposits,Brokered/reciprocal deposits,Various (10-100%),ASF varies,RC-E,Various,Higher run-off assumed
-Outflows,Derivatives,Net Derivative Outflows,Expected net cash obligations,Net outflow (30-day),N/A,HC-L,30-day,
-Outflows,Derivatives,Margin Calls,Potential margin/collateral calls,Stress-based estimate,N/A,HC-L,30-day,2-notch downgrade scenario
-Outflows,Derivatives,Rating Triggers,Contractual outflows on downgrade,100% of trigger amount,N/A,HC-L,30-day,
-Outflows,Commitments,Credit Facilities,Undrawn credit commitments,5-10% draw rate (retail); 10-40% (wholesale),RSF by type,HC-L Sect 3/4,30-day,Draw-down rate by counterparty
-Outflows,Commitments,Liquidity Facilities,Undrawn liquidity commitments,100% draw rate,RSF 5%,HC-L Sect 3/4,30-day,Full draw assumed
-Outflows,Commitments,Trade Finance,Trade finance obligations,5% outflow,RSF 5%,HC-L,30-day,
-Outflows,Operational,Payroll,Employee compensation,100%,N/A,-,<30 days,Known obligation
-Outflows,Operational,Debt Service,Interest and principal on debt,100%,N/A,HI,-,
-Outflows,Operational,Dividends,Declared dividends,100%,N/A,-,-,Board-declared
-Supplemental,HQLA,Level 1 - Reserves,Central bank reserves,100% (no haircut),RSF 0%,-,O/N,Highest quality
-Supplemental,HQLA,Level 1 - Treasuries,U.S. Treasury securities,100% (no haircut),RSF 5%,HC-B,Various,
-Supplemental,HQLA,Level 1 - Sovereign,Other 0% RW sovereign debt,100% (no haircut),RSF 5%,HC-B,Various,
-Supplemental,HQLA,Level 2A - Agency MBS,GNMA/FNMA/FHLMC MBS,85% (15% haircut),RSF 15%,HC-B,Various,Cap: L2 <= 40% HQLA
-Supplemental,HQLA,Level 2A - Agency Debt,Agency debentures,85% (15% haircut),RSF 15%,HC-B,Various,
-Supplemental,HQLA,Level 2B - Corporate Debt,Investment grade corporate bonds,50% (50% haircut),RSF 50%,HC-B,Various,Cap: L2B <= 15% HQLA
-Supplemental,HQLA,Level 2B - Equity,Qualifying equity securities,50% (50% haircut),RSF 50%,HC-D/HC-B,Various,Index-eligible
-Supplemental,HQLA,Level 2B - RMBS,AA+ residential MBS,50% (50% haircut),RSF 50%,HC-B,Various,Non-agency
-Supplemental,Collateral,Pledged Collateral,Collateral posted to counterparties,Reduces HQLA,N/A,HC-L,Various,Encumbered assets
-Supplemental,Collateral,Received Collateral,Collateral received from counterparties,May add to HQLA if rehypothecable,N/A,HC-L,Various,Subject to rehypothecation terms
-Supplemental,Balance Sheet,Selected Assets,Assets for NSFR RSF calculation,N/A,RSF varies,-,-,
-Supplemental,Balance Sheet,Selected Liabilities,Liabilities for NSFR ASF calculation,N/A,ASF varies,-,-,
+Inflows,I.S Inflows-Secured,Reverse Repo,Reverse repurchase agreements,Inflow (haircut-dependent),RSF varies by maturity,HC-L,O/N to >1Y,"Official FR 2052a PID I.S.1 Reverse Repo (Complex Institution Liquidity Monitoring Report); collateral quality determines LCR haircut"
+Inflows,I.S Inflows-Secured,Securities Borrowing,Securities borrowed transactions,Inflow (haircut-dependent),RSF varies by maturity,HC-L,O/N to >1Y,Official PID I.S.2 Securities Borrowing
+Inflows,I.S Inflows-Secured,Margin Lending,Customer margin loans,Inflow rate varies,RSF by maturity,HC-C,O/N to >1Y,Official PID I.S.5 Margin Loans; prime brokerage
+Inflows,I.U Inflows-Unsecured,Fed Funds Sold,Federal funds sold,100% inflow if O/N,RSF 0% if <6M,HC-L,-,"Official PID I.U.6 Other Loans (fed funds sold); overnight interbank"
+Inflows,I.U Inflows-Unsecured,Interbank Loans,Loans to other banks,Inflow by maturity,RSF varies,HC-C,O/N to >1Y,"Official PID I.U.1 Onshore Placements / I.U.2 Offshore Placements"
+Inflows,I.U Inflows-Unsecured,Customer Receivables,Trade date receivables,100% inflow,RSF 0%,-,Settlement,Official PID I.U.7 Cash Items in Process of Collection
+Inflows,I.A Inflows-Assets,Maturing Securities,Securities reaching maturity,100% inflow,N/A,HC-B,Various,"Official PID I.A.1 Unencumbered Assets / I.O.8 Principal Payments Receivable; reduces HQLA need"
+Inflows,I.U Inflows-Unsecured,Loan Repayments,Scheduled loan payments,50% inflow cap on retail,RSF varies,HC-C,Various,"Official PID I.U.6 Other Loans; subject to LCR inflow cap"
+Inflows,I.O Inflows-Other,Net Derivative Inflows,Expected net cash from derivatives,Net inflow (30-day),N/A,HC-L,30-day,"Official PID I.O.7 Net 30-Day Derivative Receivables; net of outflows"
+Inflows,I.O Inflows-Other,Collateral Returns,Expected return of posted collateral,Inflow rate varies,N/A,HC-L,Various,Official PID I.O.2 Collateral Called for Receipt
+Outflows,O.S Outflows-Secured,Repo,Repurchase agreements,Outflow (haircut-dependent),ASF varies by maturity,HC-L,O/N to >1Y,"Official PID O.S.1 Repo; collateral determines run-off"
+Outflows,O.S Outflows-Secured,Securities Lending,Securities lent transactions,Outflow rate varies,ASF varies,HC-L,O/N to >1Y,Official PID O.S.2 Securities Lending
+Outflows,O.S Outflows-Secured,Collateralized Borrowing,Other collateralized borrowing,Outflow by collateral type,ASF varies,-,Various,Official PID O.S.11 Other Secured Financing Transactions
+Outflows,O.D Outflows-Deposits,Operational Deposits,Deposits for operational purposes,25% run-off rate,ASF 50%,RC-E,Demand,"Official PID O.D.4 Operational Account Balances; clearing/custody/cash mgmt"
+Outflows,O.D Outflows-Deposits,Non-Op FI Deposits,Non-operational financial institution deposits,100% run-off rate,ASF 0-50%,RC-E,Various,"Official PID O.D.6 Non-Operational Account Balances; highest run-off"
+Outflows,O.D Outflows-Deposits,Non-Financial Corp Deposits,Non-financial corporate deposits,40% run-off rate,ASF 50%,RC-E,Various,Official PID O.D.6 Non-Operational Account Balances (non-financial corporate)
+Outflows,O.W Outflows-Wholesale,Commercial Paper,Outstanding commercial paper,100% run-off at maturity,ASF 0% if <6M,-,<270 days,Official PID O.W.8 Commercial Paper; short-term wholesale
+Outflows,O.W Outflows-Wholesale,Medium-Term Notes,Maturing MTNs,100% at maturity,ASF varies by maturity,-,Various,"Official PID O.W.11/O.W.12 Unstructured/Structured Long Term Debt"
+Outflows,O.S Outflows-Secured,FHLB Advances,Federal Home Loan Bank borrowing,100% at maturity,ASF varies,-,Various,Official PID O.S.5 FHLB Advances
+Outflows,O.D Outflows-Deposits,Stable Deposits,Insured deposits w/ established relationship,3% run-off rate,ASF 95%,RC-E,Demand/Term,"Official PID O.D.1/O.D.2 Transactional / Non-Transactional Relationship Accounts; lowest outflow"
+Outflows,O.D Outflows-Deposits,Less Stable Deposits,Other retail deposits,10% run-off rate,ASF 90%,RC-E,Various,Official PID O.D.3 Non-Transactional Non-Relationship Accounts
+Outflows,O.D Outflows-Deposits,Brokered Deposits,Brokered/reciprocal deposits,Various (10-100%),ASF varies,RC-E,Various,"Official PID O.D.8 Non-Reciprocal Brokered / O.D.13 Reciprocal Accounts"
+Outflows,O.O Outflows-Other,Net Derivative Outflows,Expected net cash obligations,Net outflow (30-day),N/A,HC-L,30-day,Official PID O.O.20 Net 30-Day Derivative Payables
+Outflows,O.O Outflows-Other,Margin Calls,Potential margin/collateral calls,Stress-based estimate,N/A,HC-L,30-day,"Official PID O.O.13-O.O.16 Total Collateral Required on Downgrade; 2-notch downgrade scenario"
+Outflows,O.O Outflows-Other,Rating Triggers,Contractual outflows on downgrade,100% of trigger amount,N/A,HC-L,30-day,Official PID O.O.9-O.O.16 Downgrade Triggers
+Outflows,O.O Outflows-Other,Credit Facilities,Undrawn credit commitments,5-10% draw rate (retail); 10-40% (wholesale),RSF by type,HC-L Sect 3/4,30-day,Official PID O.O.4 Credit Facilities; draw-down rate by counterparty
+Outflows,O.O Outflows-Other,Liquidity Facilities,Undrawn liquidity commitments,100% draw rate,RSF 5%,HC-L Sect 3/4,30-day,Official PID O.O.5 Liquidity Facilities; full draw assumed
+Outflows,O.O Outflows-Other,Trade Finance,Trade finance obligations,5% outflow,RSF 5%,HC-L,30-day,Official PID O.O.7 Trade Finance Instruments
+Outflows,O.O Outflows-Other,Debt Service,Interest and principal on debt,100%,N/A,HI,-,"Official PID O.O.19 Interest & Dividends Payable; payroll/dividends are not distinct FR 2052a PIDs (removed in v8 - not in official product taxonomy)"
+Supplemental,S.L Supplemental-LRM,Liquidity Coverage Ratio,LCR result,N/A,N/A,-,-,"Official PID S.L.6 Liquidity Coverage Ratio (LCR computed from inflow/outflow PIDs, not a standalone HQLA product list)"
+Supplemental,S.L Supplemental-LRM,Net Stable Funding Ratio,NSFR result,N/A,N/A,-,-,Official PID S.L.10 Net Stable Funding Ratio
+Supplemental,S.DC Supplemental-Derivatives & Collateral,Pledged Collateral,Collateral posted to counterparties,Reduces HQLA,N/A,HC-L,Various,"Official PID S.DC.8-S.DC.10 Variation Margin Posted/Received; encumbered assets. NOTE: HQLA Level 1/2A/2B classification (prior v7 rows) is an LCR/Reg WW construct, not an FR 2052a product PID - see Appendix III Asset Category Table"
+Supplemental,S.DC Supplemental-Derivatives & Collateral,Received Collateral,Collateral received from counterparties,May add to HQLA if rehypothecable,N/A,HC-L,Various,"Official PID S.DC.7/S.DC.10 Initial/Variation Margin Received; subject to rehypothecation terms"
+Supplemental,S.B Supplemental-Balance Sheet,Selected Assets,Assets for NSFR RSF calculation,N/A,RSF varies,-,-,Official PID S.B.4 Other Assets (balance-sheet reconciliation)
+Supplemental,S.B Supplemental-Balance Sheet,Selected Liabilities,Liabilities for NSFR ASF calculation,N/A,ASF varies,-,-,Official PID S.B.2 Other Liabilities
+Supplemental,S.B Supplemental-Balance Sheet,Regulatory Capital Element,Regulatory capital for NSFR ASF,N/A,ASF 100%,HC-R,-,Official PID S.B.1 Regulatory Capital Element
+Supplemental,S.I Supplemental-Informational,Client Asset Market Values,Long/short market value of client assets,N/A,N/A,-,-,Official PID S.I.1/S.I.2 Long/Short Market Value Client Assets
+Supplemental,S.FX Supplemental-Foreign Exchange,FX Spot/Forward/Swap,Cross-currency liquidity positions,N/A,N/A,-,-,"Official PID S.FX.1 Spot / S.FX.2 Forwards & Futures / S.FX.3 Swaps"
+Supplemental,I.A Inflows-Assets,Unencumbered HQLA,Unencumbered high-quality liquid assets reported as inflow capacity,Counts toward HQLA per Reg WW,RSF varies,HC-B,Various,"HQLA Level 1/2A/2B (reserves, Treasuries, agency MBS, corp debt, equity, RMBS) are reported in FR 2052a as I.A.1 Unencumbered Assets / I.A.2 Capacity with Collateral Class + Asset Category (Appendix III); the Level/haircut buckets themselves are LCR (12 CFR 249) constructs, not 2052a product PIDs. Consolidated from prior v7 Supplemental/HQLA rows"
