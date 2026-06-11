@@ -1,8 +1,55 @@
 # Verification Report
 
-> **Version 6.0 | 2026-06-09** — verification gate for the v6.0 rebuild.
+> **Version 7.0 | 2026-06-11** — verification gate for the v7.0 legacy-schedule rebuild.
 > **Repository**: github.com/andenick/bank-data-dictionary
-> Supersedes the v5.0 MDRM-code report (2026-01-28), whose per-code tables are retained below.
+> Earlier gates (v6.x, v5.0) are retained below as the historical record.
+
+---
+
+## v7.0 — Legacy-schedule rebuild and 100% code validity (2026-06-11)
+
+### Headline results
+
+| Metric | v6.3 | v7.0 |
+|--------|------|------|
+| Code-token validity (repo-wide audit vs Fed MDRM) | 87% | **100%** (2,426 / 2,426 VALID; 0 NOT_IN_MDRM; 0 UNKNOWN_MNEMONIC) |
+| MDRM crosswalk (verified-by-construction) | 984 codes | **1,239 codes** |
+| Remediation log | 323 rows, 80 UNRESOLVED | **427 rows, 0 UNRESOLVED** (175 FIX / 188 REMOVED / 58 DISCONTINUED / 6 FALSE_POSITIVE) |
+| MDRM reference snapshot | ≥2020 vintage | **June 2026 download** (87,690 records; latest item effective 2026-06-30) |
+
+### What was rebuilt (from the official FR Y-9C form, not patched)
+
+- **Schedule HC-H (Interest Sensitivity).** The prior CSV printed a 14-row × 7-maturity-bucket
+  grid whose codes do not exist in MDRM. The real HC-H is a **current** schedule of five
+  single-column items — `BHCK3197`, `BHCK3296`, `BHCK3298`, `BHCK3408`, `BHCK3409` — collected
+  since 1986. **This corrects v6.3's erroneous claim (repeated below in the historical
+  sections) that HC-H was "removed ~2001":** the schedule was never discontinued; the
+  fabricated grid never existed.
+- **Schedule HC-K (Quarterly Averages).** Rebuilt to the verified current grid (items 1.a–11,
+  incl. the BHDM loan sub-items and conditional trading-assets item 4.a) plus four genuine
+  end-dated historical items (`BHCK3515/3516/3402/3518`). The old CSV's contradictory
+  double-assignments (`BHCK3368` as both ALLL and total assets; `BHCK3365` as both securities
+  and fed funds) are gone.
+- **Schedule HC-Q (Fair Value).** Rebuilt to the real **five-column** layout (total fair value /
+  netting / Level 1 / Level 2 / Level 3, G-series codes effective 2009-06-30, `BHCYJA36` from
+  2018, F-series deposit/commitment rows from 2007–2008), replacing a fabricated four-column
+  `BHCL` grid with a wrong 2013 start date.
+- **Schedule HC-G (Other Liabilities).** Rebuilt to the official four-line structure
+  (`BHCK3049` net DTL / `BHCKB557` ACL-OBS / `BHCKB984` other / `BHCK2750` total); the prior
+  CSV mirrored the Call Report RC-G accrued-interest layout and misassigned codes.
+
+### Evidence standard
+
+Every code in the rebuilt schedules carries **two independent attestations**, recorded in
+per-code provenance files: (1) exact presence in the Fed MDRM with matching item name and
+validity dates; (2) observation as an actual reported column in Federal Reserve bulk BHCF
+(FR Y-9C) data, 1986–2021 (e.g. the five HC-H codes appear continuously from 1986-Q3 through
+2021-Q1). A repo-wide "apply" campaign then cleared every remaining invalid token: codes with
+verified 1:1 successors were fixed; caption totals (e.g. Y-9C total deposits), computed lines
+(e.g. NII after provision), and retired-without-successor concepts are stated honestly as
+code-less instead of carrying invented codes. Tokenizer false positives (form names and NIC
+attribute names inside verbatim Fed description text) are whitelisted with documented proof in
+the audit script rather than edited, to preserve official text verbatim.
 
 ---
 
@@ -34,7 +81,7 @@ All 77 ids map to genuine Basel disclosure templates/tables. Two ids that looked
 | Concept | Field | Was | Now | Basis |
 |---------|-------|-----|-----|-------|
 | RWA (BHCAA223) | y9c & call line | Part II-26 | **Part II-31** | RC-R/HC-R Part II item 31 = Total RWA (FDIC RC-R Part II, FR Y-9C HC-R) |
-| TOTAL_DEPOSITS (BHCM2200) | y9c & call line | 13 | **13.a** | item 13.a = deposits in domestic offices (13.b = foreign) |
+| TOTAL_DEPOSITS (no atomic code) | y9c & call line | 13 | **13.a + 13.b** | item 13 is a caption: 13.a domestic (BHDM6631 + BHDM6636) + 13.b foreign (BHFN6631 + BHFN6636) |
 | NET_INCOME (BHCT4340) | HI / RI line | 14 | **14 (unchanged)** | RIAD4340 "must equal Schedule RI item 14" — the v5.0 "should be item 12" recommendation is **REFUTED** |
 
 ### BHCK correction (applied in v6.0 content)
@@ -48,7 +95,7 @@ The legacy `MDRM_PREFIX_DEFINITIONS.csv` labelled **BHCK** as "domestic operatio
 | 1 | FR Y-11 OMB = 7100-0244 | CONFIRMED (form PDF header; note: 2025 migration toward 7100-0073) | federalreserve.gov FR_Y-11 form |
 | 2 | FFIEC 002 OMB = 7100-0032 | CONFIRMED (002 & 002S) | reginfo.gov / ffiec.gov |
 | 3 | FR Y-10 OMB = 7100-0297 | CONFIRMED | federalreserve.gov FR_Y-10 form |
-| 4 | FFIEC 101 has Schedules A–S | CONFIRMED | ffiec.gov FFIEC101 instructions |
+| 4 | FFIEC 101 has Schedules A–S | CONFIRMED | ffiec.gov FFIEC 101 instructions |
 | 5 | FR Y-15 has Schedules A–G | CONFIRMED | federalreserve.gov FR Y-15 instructions |
 | 6 | Pillar 3 CDC is a real template | CONFIRMED | bis.org d455 (Capital distribution constraints) |
 | 7 | Pillar 3 CRB-A is a real table | CONFIRMED | bis.org d455 (problem-assets disclosure) |
@@ -246,7 +293,7 @@ The legacy `MDRM_PREFIX_DEFINITIONS.csv` labelled **BHCK** as "domestic operatio
 |------------|-----------|----------|------|--------|-------|
 | TOTAL_ASSETS | BHCT2170 | HC | 12 | **VERIFIED** | Total consolidated assets |
 | TOTAL_EQUITY | BHCT3210 | HC | 28 | **VERIFIED** | Total equity capital |
-| TOTAL_DEPOSITS | BHCM2200 | HC | 13.a | **FIXED (v6.0)** | corrected from 13 → 13.a (deposits in domestic offices) |
+| TOTAL_DEPOSITS | _no atomic code_ | HC | 13 | **CORRECTED (v6.3)** | HC item 13 (total deposits) is a caption with no consolidated MDRM code; domestic 13.a = BHDM6631 + BHDM6636, foreign 13.b = BHFN6631 + BHFN6636 |
 | LOANS_NET | BHCTB528 | HC | 4.b | **VERIFIED** | Net loans and leases |
 | CASH_BALANCES | BHCK0010 | HC | 1 | **VERIFIED** | Cash and balances due |
 | FED_FUNDS_SOLD | BHCKC225 | HC | 3 | **VERIFIED** | Fed funds sold and reverse repos |
@@ -258,7 +305,7 @@ The legacy `MDRM_PREFIX_DEFINITIONS.csv` labelled **BHCK** as "domestic operatio
 | OTHER_BORROWED_MONEY | BHCT3190 | HC | 16 | **VERIFIED** | Other borrowed money |
 | SUBORDINATED_DEBT | BHCK4062 | HC | 19 | **VERIFIED** | Subordinated debt |
 
-**Note on TOTAL_DEPOSITS**: The BHCM2200 code correctly represents total domestic deposits, but the line item reference should specify 13.a (domestic) vs. 13 (total including foreign). Current documentation is technically accurate but could be more precise.
+**Note on TOTAL_DEPOSITS**: There is no atomic consolidated MDRM code for total deposits (item 2200 under BHC mnemonics is absent from MDRM; "2200" exists only at Call/parent-only level). FR Y-9C HC item 13 is a caption; reconstruct it from real components — domestic offices 13.a = BHDM6631 (noninterest) + BHDM6636 (interest-bearing), foreign offices 13.b = BHFN6631 (noninterest) + BHFN6636 (interest-bearing).
 
 ---
 
@@ -303,7 +350,7 @@ The legacy `MDRM_PREFIX_DEFINITIONS.csv` labelled **BHCK** as "domestic operatio
 
 | Concept ID | MDRM Code | Schedule | Line | Status | Notes |
 |------------|-----------|----------|------|--------|-------|
-| NPL_TOTAL | BHCT1403 | HC-N | M7.a | **VERIFIED** | Total nonperforming loans |
+| NPL_TOTAL | BHCK1403 | HC-N | M7.a | **CORRECTED (v6.3)** | Total loans and lease finance receivables: nonaccrual (item 1403 under the BHCT mnemonic is absent from MDRM; the consolidated nonaccrual total is BHCK1403) |
 
 ---
 
@@ -311,7 +358,7 @@ The legacy `MDRM_PREFIX_DEFINITIONS.csv` labelled **BHCK** as "domestic operatio
 
 ### Minor Discrepancies (3 codes)
 
-1. **TOTAL_DEPOSITS (BHCM2200)**: Line item could be more precisely specified as 13.a
+1. **TOTAL_DEPOSITS (no atomic code)**: HC item 13 has no consolidated deposit code; build from BHDM6631/6636 (domestic) + BHFN6631/6636 (foreign)
 2. **TIER1_CAPITAL (BHCA8274)**: Line number format "Part I-32" should match current instructions
 3. **TIER2_CAPITAL (BHCA5311)**: Line number format should match current instructions
 
@@ -321,7 +368,7 @@ The legacy `MDRM_PREFIX_DEFINITIONS.csv` labelled **BHCK** as "domestic operatio
 
 2. **NET_INCOME (BHCT4340)** — **NO CHANGE (claim refuted)**: the correct line is **HI/RI item 14** (RIAD4340 "must equal Schedule RI, item 14"). The earlier "should be item 12" was wrong (item 12 = pre-NCI aggregate, code G104).
 
-3. **TOTAL_DEPOSITS (BHCM2200)** — **FIXED**: line 13 → **13.a** (deposits in domestic offices).
+3. **TOTAL_DEPOSITS (no atomic code)** — **CORRECTED (v6.3)**: item 13 (total deposits) is a caption with no consolidated MDRM code; reconstruct from domestic BHDM6631 + BHDM6636 and foreign BHFN6631 + BHFN6636.
 
 ---
 
@@ -447,7 +494,7 @@ placed under FR Y-9C (BHC) mnemonics.** For example the original `HC_BALANCE_SHE
 Report); the FR Y-9C retained-earnings code is `BHCK3247`.
 
 **Status of the fix.** One code that broke a live reconciliation formula was corrected
-(`BHCAA227` → `BHCAP865`, Additional Tier 1 capital). The remaining flagged codes are **not**
+to the verified Additional Tier 1 capital code `BHCAP865` (the prior token, mnemonic `BHCA` + item `A227`, is absent from MDRM). The remaining flagged codes are **not**
 auto-replaced, because each requires its own concept-specific correct code and a blind
 substitution risks replacing a real-but-discontinued code with a wrong one. They are tracked
 in `CODE_VALIDATION_AUDIT.csv` for a per-schedule remediation pass.
@@ -468,13 +515,16 @@ MDRM, and every asserted relationship was math-verified against the FR Y-9C form
 ### Code remediation
 - **Code validity rose 81% → 87%** of all code-shaped tokens.
 - **139 codes FIXED** to their verified current MDRM code (per-schedule, each confirmed to exist
-  with a matching item name and correct scope). Examples: retained earnings `BHCK3632`→`BHCK3247`;
-  surplus `BHCK3839`→`BHCK3240`; interest-on-deposits `BHCK4170`→`RIAD4170`; Tier 1/2/Total ratios
-  → `BHCA7206`/`7205`/`7204`.
+  with a matching item name and correct scope). Examples: retained earnings corrected to `BHCK3247`;
+  surplus corrected to `BHCK3240`; interest-on-deposits remapped to the income-flow code `RIAD4170`;
+  Tier 1/2/Total ratios → `BHCA7206`/`7205`/`7204`.
 - Remaining flagged codes are dispositioned (not fixable without fabrication): **98 DISCONTINUED**
   (e.g. all of Schedule HC-H interest-sensitivity, removed from the FR Y-9C ~2001-2002),
   **~80 UNRESOLVED** (fabricated / no-current-equivalent rows in the legacy CSVs), and a handful of
   **FALSE_POSITIVE** prose tokens. Full per-code disposition: [`csv/CODE_REMEDIATION_LOG.csv`](../csv/CODE_REMEDIATION_LOG.csv).
+  > **Correction (v7.0):** the parenthetical above was wrong — Schedule HC-H was never removed
+  > from the FR Y-9C. The flagged HC-H codes were fabricated grid entries, but the schedule
+  > itself is current (five items, collected since 1986). See the v7.0 section at the top.
 
 ### Math verification of relationships
 All reconciliation formulas, component hierarchies, validation rules, and the README/guide

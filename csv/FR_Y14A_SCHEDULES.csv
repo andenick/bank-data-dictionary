@@ -9,7 +9,7 @@ A.2,Balance Sheet Projections,Total Assets,9-quarter forward total assets,Curren
 A.2,Balance Sheet Projections,Total Loans,Projected loan portfolio,Currency,Annual,HC (BHCT2122),Confidential,By loan type
 A.2,Balance Sheet Projections,Securities,Projected securities portfolio,Currency,Annual,HC-B,Confidential,AFS + HTM
 A.2,Balance Sheet Projections,Trading Assets,Projected trading book,Currency,Annual,HC-D (BHCT3545),Confidential,
-A.2,Balance Sheet Projections,Total Deposits,Projected deposits,Currency,Annual,HC (BHCM2200),Confidential,By type
+A.2,Balance Sheet Projections,Total Deposits,Projected deposits,Currency,Annual,HC item 13 (caption; no atomic MDRM code - sum of deposit components),Confidential,By type
 A.2,Balance Sheet Projections,Total Equity,Projected equity capital,Currency,Annual,HC (BHCT3210),Confidential,
 A.3,Capital Projections,CET1 Capital,Projected CET1 components,Currency,Annual,HC-R (BHCAP859),Confidential,Under stress scenarios
 A.3,Capital Projections,CET1 Ratio,CET1 / Projected RWA,Ratio,Annual,HC-R,Confidential,Minimum ratio under stress

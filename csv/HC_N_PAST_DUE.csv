@@ -15,8 +15,7 @@ line_number,loan_category,mdrm_30_89,mdrm_90_plus,mdrm_nonaccrual,category,ties_
 2,Loans to depository institutions,BHCK5380,BHCK5381,BHCK5382,Interbank,HC-C Item 2,1991-03-31,
 3,Agricultural production loans,BHCK1594,BHCK1597,BHCK1583,Agricultural,HC-C Item 3,1976-03-31,
 4,Commercial and industrial loans,BHCK1606,BHCK1607,BHCK1608,C&I Loans,HC-C Item 4,1976-03-31,
-4.a,US addressees,BHCKF184,BHCKF186,BHCKF188,C&I - Domestic,HC-C Item 4.a,2007-03-31,
-4.b,Non-US addressees,BHCKF185,BHCKF187,BHCKF189,C&I - Foreign,HC-C Item 4.b,2007-03-31,
+4.a,US addressees,-,-,-,C&I - Domestic,HC-C Item 4.a,2007-03-31,No FR Y-9C HC-N US-addressee past-due split; reported only at aggregate item 4 (BHCK1606/1607/1608). Prior BHCKF184/F186/F188 were HI-B income/lease codes (noninterest income; trading revenue; lease recoveries); wrong concept; blanked
 5,Loans to individuals,BHCK5383,BHCK5384,BHCK5385,Consumer Total,HC-C Item 5,1991-03-31,
 5.a,Credit cards,BHCKB575,BHCKB576,BHCKB577,Consumer - CC,HC-C Item 5.a,2001-03-31,
 5.b,Other revolving,BHCK5386,BHCK5387,BHCK5388,Consumer - Revolving,HC-C Item 5.b,1991-03-31,
@@ -30,4 +29,3 @@ line_number,loan_category,mdrm_30_89,mdrm_90_plus,mdrm_nonaccrual,category,ties_
 M1,Restructured troubled debt (TDR),BHCK5369,BHCK1659,BHCK1661,Memorandum - TDR,-,1991-03-31,TDRs in compliance
 M2,Loans 90+ days past due and still accruing,BHCK1407,BHCK1407,-,Memorandum - 90+,-,1976-03-31,
 M3,Total nonaccrual loans,-,-,BHCK1403,Memorandum - Nonaccrual,-,1976-03-31,
-M4,Loans to finance agricultural production guaranteed by USDA,BHCKF190,BHCKF191,BHCKF192,Memorandum - USDA,-,2007-03-31,

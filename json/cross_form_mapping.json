@@ -28,7 +28,7 @@
         "FR_Y9C": {"schedule": "HC", "item": "21", "mdrm": "BHCK2948"},
         "Call_Report_031": {"schedule": "RC", "item": "21", "mdrm": "RCFD2948"},
         "Call_Report_041": {"schedule": "RC", "item": "21", "mdrm": "RCFD2948"},
-        "FR_Y9LP": {"schedule": "PC", "item": "21", "mdrm": "BHCP2948", "note": "UNVERIFIED: BHCP2948 not present in MDRM authority; FR Y-9LP references total liabilities (item 2948) only within BHCP3300 glossary, no standalone MDRM code"}
+        "FR_Y9LP": {"schedule": "PC", "item": "21", "mdrm": null, "note": "No standalone FR Y-9LP total-liabilities code exists (item 2948 under the BHCP mnemonic is absent from MDRM). FR Y-9LP reports the grand total BHCP3300 'TOTAL LIABILITIES, LIMITED-LIFE PREFERRED STOCK, AND EQUITY CAPITAL'; isolate liabilities via BHCP3300 - BHCP3210 (total equity)."}
       },
       "validation": "All should match for same entity/period"
     },
@@ -129,7 +129,7 @@
       "concept_id": "TOTAL_SECURITIES",
       "description": "Total securities (AFS + HTM)",
       "forms": {
-        "FR_Y9C": {"schedule": "HC", "item": "2", "mdrm": "BHCT8641"},
+        "FR_Y9C": {"schedule": "HC", "item": "2", "mdrm": null, "note": "FR Y-9C line 2 (total securities) is a caption with no atomic consolidated code; sum BHCKJJ34 (HTM) + BHCT1773 (AFS) + BHCKJA22 (equity)."},
         "Call_Report_031": {"schedule": "RC", "item": "2", "mdrm": "RCFD8641"},
         "Call_Report_041": {"schedule": "RC", "item": "2", "mdrm": "RCFD8641"},
         "FR_Y14Q": {"schedule": "F", "item": "Securities", "mdrm": "N/A"}
@@ -204,7 +204,7 @@
       "concept_id": "TOTAL_DEPOSITS",
       "description": "Total deposits",
       "forms": {
-        "FR_Y9C": {"schedule": "HC", "item": "13", "mdrm": "BHCT2200"},
+        "FR_Y9C": {"schedule": "HC", "item": "13", "mdrm": null, "note": "FR Y-9C line 13 (total deposits) is a caption with no atomic consolidated code; sum domestic BHDM6631+BHDM6636 and foreign BHFN6631+BHFN6636."},
         "Call_Report_031": {"schedule": "RC", "item": "13", "mdrm": "RCFD2200"},
         "Call_Report_041": {"schedule": "RC", "item": "13", "mdrm": "RCFD2200"},
         "FR_2052a": {"schedule": "Outflows", "item": "Deposits", "mdrm": "N/A"}

@@ -17,7 +17,7 @@ line_number,item_description,mdrm_code,call_mdrm,category,reconciliation,start_d
 2.e,Interest on subordinated debt,RIAD4200,RIAD4190,Interest Expense - Sub Debt,Component of Item 2,1976-03-31,
 3,Net interest income,BHCK4074,RIAD4074,NII,Item 1 minus Item 2,1976-03-31,Key profitability metric
 4,Provision for loan and lease losses,BHCT4230,RIAD4230,Provision,N/A,1976-03-31,Credit cost
-5,Net interest income after provision,BHCT4433,RIAD4433,NII after Provision,Item 3 minus Item 4,1976-03-31,
+5,Net interest income after provision,-,-,NII after Provision,Item 3 minus Item 4,1976-03-31,Computed line (item 3 minus item 4); no MDRM code on FR Y-9C or Call
 6,Noninterest income,BHCK4079,RIAD4079,Noninterest Income,Sum of 6.a-6.i,1976-03-31,Fee and other income
 6.a,Service charges on deposits,BHCK4483,RIAD4080,NIR - Service Charges,Component of Item 6,1976-03-31,
 6.b,Trading revenue,BHCKA220,RIADA220,NIR - Trading,Component of Item 6,2001-03-31,Mark-to-market gains/losses

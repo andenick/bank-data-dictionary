@@ -177,7 +177,7 @@ Schedule HC Item 11 = HC-F Item 12
 | Item | MDRM | Description |
 |------|------|-------------|
 | M1 | BHCK1651 | MSAs from mortgages purchased |
-| M2 | BHCK1652 | MSAs from mortgages sold with servicing retained |
+| M2 | - | MSAs from mortgages sold with servicing retained (no MDRM code; only the aggregate is reported) |
 | M3 | BHCKB027 | Total MSAs |
 
 **Relationship**: Total MSAs (M3) is a component of Item 10.b

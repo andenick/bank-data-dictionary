@@ -51,9 +51,12 @@ RC-B,1,U.S. Treasury securities - HTM,RCFD0211,HC-B,BHCK0211,Securities - HTM,As
 RC-B,2,U.S. Government agency - HTM,RCFD0213,HC-B,BHCK0213,Securities - HTM,Asset,1994-03-31,Agency HTM
 RC-B,M1,Total AFS securities,RCFD1773,HC-B,BHCT1773,Securities - AFS,Asset,1994-03-31,Available-for-sale total
 RC-B,M2,Total HTM securities,RCFDJJ34,HC-B,BHCKJJ34,Securities - HTM,Asset,2014-03-31,Held-to-maturity total
-RC-Q,1,Trading assets - Level 1,RCFDF527,HC-Q,BHCKF527,Fair Value - Level 1,Asset,2009-03-31,Observable quoted prices
-RC-Q,2,Trading assets - Level 2,RCFDF528,HC-Q,BHCKF528,Fair Value - Level 2,Asset,2009-03-31,Observable inputs
-RC-Q,3,Trading assets - Level 3,RCFDF529,HC-Q,BHCKF529,Fair Value - Level 3,Asset,2009-03-31,Unobservable inputs
+RC-Q,1.a,Trading derivative assets - Level 1 fair value,RCFDG494,HC-Q,BHCKG494,Fair Value - Level 1,Asset,2009-06-30,Replaces discontinued combined Level-1 trading-assets code; derivative component
+RC-Q,1.b,Other trading assets - Level 1 fair value,RCFDG499,HC-Q,BHCKG499,Fair Value - Level 1,Asset,2009-06-30,Other (non-derivative) trading-assets Level-1 component
+RC-Q,2.a,Trading derivative assets - Level 2 fair value,RCFDG495,HC-Q,BHCKG495,Fair Value - Level 2,Asset,2009-06-30,Replaces discontinued combined Level-2 trading-assets code; derivative component
+RC-Q,2.b,Other trading assets - Level 2 fair value,RCFDG500,HC-Q,BHCKG500,Fair Value - Level 2,Asset,2009-06-30,Other (non-derivative) trading-assets Level-2 component
+RC-Q,3.a,Trading derivative assets - Level 3 fair value,RCFDG496,HC-Q,BHCKG496,Fair Value - Level 3,Asset,2010-03-31,Replaces discontinued combined Level-3 trading-assets code; derivative component
+RC-Q,3.b,Other trading assets - Level 3 fair value,RCFDG501,HC-Q,BHCKG501,Fair Value - Level 3,Asset,2010-03-31,Other (non-derivative) trading-assets Level-3 component
 RC-R,Part I-31,Common Equity Tier 1 Capital,RCFAP859,HC-R,BHCAP859,Capital,Capital,2014-03-31,Basel III CET1
 RC-R,Part I-32,Tier 1 Capital,RCFAA223,HC-R,BHCA8274,Capital,Capital,2014-03-31,Basel III Tier 1
 RC-R,Part I-34,Tier 2 Capital,RCFAA224,HC-R,BHCA5311,Capital,Capital,2014-03-31,Basel III Tier 2

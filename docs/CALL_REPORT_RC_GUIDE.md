@@ -39,10 +39,10 @@ Schedule RC is the master balance sheet for Call Reports filed by FDIC-insured b
 
 | Item | Description | MDRM | Y-9C Equivalent | Notes |
 |------|-------------|------|-----------------|-------|
-| 1 | Cash and balances due | RCFD0081 | BHCK0010 | Same item number |
-| 1.a | Noninterest-bearing | RCON0395 | BHCK0081 | Domestic only in RCON |
-| 1.b | Interest-bearing | RCON0397 | BHCK0395 | Domestic only in RCON |
-| 2 | Securities | RCFD8641 | BHCT8641 | Total securities |
+| 1 | Cash and balances due | RCFD0010 | BHCK0010 | Total cash and due |
+| 1.a | Noninterest-bearing balances & currency/coin | RCON0081 | BHCK0081 | RCFD0081 for total |
+| 1.b | Interest-bearing balances | RCON0071 | BHCK0395 + BHCK0397 | RCFD0071 for total; Y-9C splits U.S./foreign offices |
+| 2 | Securities | RCFD8641 | (caption) | Total securities; Y-9C line 2 = 2.a + 2.b (no atomic BHC code) |
 | 2.a | HTM securities | RCFDJJ34 | BHCKJJ34 | At amortized cost |
 | 2.b | AFS securities | RCFD1773 | BHCT1773 | At fair value |
 | 3 | Fed funds sold | RCFDB987 | BHCKC225 | + resale agreements |
@@ -61,9 +61,9 @@ Schedule RC is the master balance sheet for Call Reports filed by FDIC-insured b
 
 | Item | Description | MDRM | Y-9C Equivalent | Notes |
 |------|-------------|------|-----------------|-------|
-| 13 | Deposits | RCFD2200 | BHCT2200 | Total deposits |
-| 13.a | Domestic deposits | RCON2200 | BHCM2200 | |
-| 13.b | Foreign deposits | RCFNB536 | BHCKB536 | If applicable |
+| 13 | Deposits | RCFD2200 | (caption) | Total deposits; Y-9C line 13 = 13.a + 13.b (no atomic BHC code) |
+| 13.a | Domestic deposits | RCON2200 | BHDM6631 + BHDM6636 | Y-9C: noninterest + interest-bearing |
+| 13.b | Foreign deposits | RCFN2200 | BHFN6631 + BHFN6636 | Y-9C: noninterest + interest-bearing |
 | 14 | Fed funds purchased | RCFDB993 | BHCK2800 | + repos |
 | 15 | Trading liabilities | RCFD3548 | BHCT3548 | Ties to RC-D |
 | 16 | Other borrowed money | RCFD3190 | BHCT3190 | |

@@ -155,9 +155,8 @@ HC-B Total Securities
 +-- HTM Amortized Cost (BHCT1754) - Column C
 |   +-- [Same structure as AFS, different MDRM codes]
 |
-+-- Equity Securities (BHCKJA22) - M5
-    +-- M5.a Mutual funds (BHCKJJ33)
-    +-- M5.b Other equity (BHCKJJ35)
++-- Equity Securities with readily determinable fair values not held for trading (BHCKJA22) - M5
+    +-- (reported as a single line on HC-B Memorandum 5; not split into mutual-funds/other components on the FR Y-9C)
 ```
 
 ### Loans (HC-C)
@@ -171,7 +170,7 @@ HC-C Net Loans (BHCKB529) = Sum(Items 1-9) - Item 10 - Item 11
 |   |   +-- 1.a.(2) Other ADC (BHCKF159)
 |   +-- 1.b Farmland (BHCK1420)
 |   +-- 1.c HELOCs (BHCK1797)
-|   +-- 1.d 1-4 Family Closed End (BHCT5367)
+|   +-- 1.d 1-4 Family Closed End (= 1.d.(1) + 1.d.(2); no atomic code)
 |   |   +-- 1.d.(1) First liens (BHCK5367)
 |   |   +-- 1.d.(2) Junior liens (BHCK5368)
 |   +-- 1.e Multifamily (BHCK1460)
@@ -204,7 +203,7 @@ HC-C Net Loans (BHCKB529) = Sum(Items 1-9) - Item 10 - Item 11
 |
 +-- 6. Foreign Governments (BHCK1296)
 |
-+-- 7. Municipal Loans (BHCT1709)
++-- 7. Obligations of states & political subdivisions (no consolidated BHCK code; Call basis RCFD/RCON2107)
 |
 +-- 8. Other Loans (BHCK1563)
 |   +-- 8.a Securities loans (BHCK1545)
@@ -369,7 +368,7 @@ Total RWA (BHCAA223) - Schedule HC-R Part II
 |
 +-- Securitization RWA (BHCKS400)
 |
-+-- Equity Exposures RWA (BHCKS401)
++-- Equity Exposures RWA (computed across HC-R Part II equity risk-weight bands; no single atomic BHCK code)
 |
 +-- Derivatives RWA (BHCKS402)
 |
@@ -392,12 +391,12 @@ HI Net Income (BHCT4340) - Schedule HI Item 12
 |   |   +-- 1.b Securities (BHCK4065)
 |   |   +-- 1.c Fed funds/resale (BHCK4115)
 |   |   +-- 1.d Deposits in banks (BHCK4060)
-|   |   +-- 1.e Trading assets (BHCKK130)
-|   |   +-- 1.f Other (BHCK4069)
+|   |   +-- 1.e Trading assets (BHCK4069)
+|   |   +-- 1.f Other interest income (BHCK4518)
 |   |
 |   +-- LESS: Interest Expense (BHCK4073)
-|       +-- 2.a Deposits (BHCK4508)
-|       +-- 2.b Fed funds/repos (BHCK4148)
+|       +-- 2.a Deposits [caption; = domestic + foreign office interest, no single BHCK code]
+|       +-- 2.b Fed funds/repos (BHCK4180)
 |       +-- 2.c Trading liabilities (BHCK4180)
 |       +-- 2.d Other borrowed (BHCK4185)
 |
@@ -408,8 +407,8 @@ HI Net Income (BHCT4340) - Schedule HI Item 12
 |   +-- 6.b Trading revenue (BHCKB492)
 |   +-- 6.c Fiduciary income (BHCKA220)
 |   +-- 6.d Investment banking (BHCKB497)
-|   +-- 6.e Insurance income (BHCK5416)
-|   +-- 6.f Other (BHCK5415)
+|   +-- 6.e Insurance underwriting income (BHCKC386)
+|   +-- 6.f Other noninterest income (BHCKB497)
 |
 +-- LESS: Noninterest Expense (BHCK4093)
 |   +-- 7.a Salaries & benefits (BHCK4135)

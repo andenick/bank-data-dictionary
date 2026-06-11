@@ -1,25 +1,26 @@
-line_number,item_description,mdrm_code,call_mdrm,category,ties_to_hc_line,start_date,notes
-1,Interest-bearing balances,BHCK3381,RCFD3381,Average Assets - Cash,HC Item 1.b,1976-03-31,Average interest-bearing balances due from
-2,"Securities (excluding trading assets)",BHCK3365,RCFD3365,Average Assets - Securities,HC Item 2,1976-03-31,Average AFS + HTM securities
-2.a,Available-for-sale securities,BHCKB558,RCFDB558,Average Assets - AFS,HC Item 2.b,1994-03-31,
-2.b,Held-to-maturity securities,BHCKB559,RCFDB559,Average Assets - HTM,HC Item 2.a,1994-03-31,
-3,Federal funds sold and reverse repos,BHCK3365,RCFD3365,Average Assets - Fed Funds,HC Item 3,1976-03-31,Average fed funds sold
-4,Loans and leases,BHCK3516,RCFD3360,Average Assets - Loans,HC Item 4,1976-03-31,Average gross loans
-4.a,Total loans,BHDMB561,RCFD3360,Average Assets - Loans,HC Item 4.b,1984-03-31,
-4.b,Lease financing receivables,BHCKB562,RCFD3484,Average Assets - Leases,HC Item 4.b,1984-03-31,
-5,Trading assets,BHCK3401,RCFD3401,Average Assets - Trading,HC Item 5,1995-03-31,Average trading assets
-6,Other earning assets,BHCKB574,RCFDB574,Average Assets - Other,HC Item 11,1997-03-31,Average other interest-bearing
-7,Total earning assets,BHCKA517,RCFD3402,Average Assets - Earning,Sum 1-6,2001-03-31,Sum of average earning assets
-8,Allowance for loan losses,BHCK3368,RCFD3368,Average Contra-Asset,HC Item 4.c,1976-03-31,Average ALLL
-9,Total assets,BHCK3368,RCFD3368,Average Assets - Total,HC Item 12,1976-03-31,Average total assets
-10,Interest-bearing deposits,BHCK3387,RCFD3387,Average Liabilities - Deposits,HC Item 13,1976-03-31,Average interest-bearing deposits
-10.a,In domestic offices,BHCK3517,RCONB563,Average Liabilities - Deposits,HC Item 13.a,1997-03-31,
-10.b,In foreign offices,BHCK3404,RCFN3404,Average Liabilities - Deposits,HC Item 13.b,1997-03-31,
-11,Federal funds purchased and repos,BHCK3353,RCFD3353,Average Liabilities - Fed Funds,HC Item 14,1976-03-31,Average fed funds purchased
-12,Other borrowed money,BHCK2635,RCFDB565,Average Liabilities - Borrowings,HC Item 16,1997-03-31,
-13,Total interest-bearing liabilities,BHCKA518,RCFDA518,Average Liabilities - IB,Sum 10-12,2001-03-31,
-14,Total liabilities,BHCK3548,RCFD3548,Average Liabilities - Total,HC Item 21,1976-03-31,Average total liabilities
-15,Total equity capital,BHCK3519,RCFD3519,Average Equity,HC Item 28,1976-03-31,Average total equity
-M1,"Net interest-bearing funds (spread base)",BHCKA519,RCFDA519,Memorandum - Spread,Item 7 minus Item 13,2001-03-31,Earning assets - IB liabilities
-M2,Noninterest-bearing deposits,BHCKB567,RCONB567,Memorandum - NIB Dep,HC Item 13,1997-03-31,
-M3,Total deposits,BHCK3388,RCFD3388,Memorandum - Total Dep,HC Item 13,1976-03-31,
+line_number,item_description,mdrm_code,category,ties_to_hc_line,start_date,end_date,status,notes
+1.a,Securities: U.S. Treasury and U.S. government agency obligations (excluding MBS),BHCKB558,Average Assets - Securities,HC-B Items 1-2,2011-03-31,-,current,Amortized cost basis
+1.b,Securities: Mortgage-backed securities,BHCKB559,Average Assets - Securities,HC-B Item 4,2011-03-31,-,current,Amortized cost basis
+1.c,Securities: All other debt securities and equity securities with readily determinable fair values not held for trading,BHCKB560,Average Assets - Securities,"HC-B Items 3, 5-7",2011-03-31,-,current,
+2,Federal funds sold and securities purchased under agreements to resell,BHCK3365,Average Assets - Fed Funds,HC Item 3,1990-09-30,-,current,
+3.a,Total loans and leases in domestic offices,BHDM3516,Average Assets - Loans,HC-C Items 1-11 col B,2010-03-31,-,current,Held for investment
+3.a.1,Loans secured by 1-4 family residential properties,BHDM3465,Average Assets - Loans,HC-C Item 1.c col B,2008-03-31,-,current,Excludes 1-4 family residential construction loans
+3.a.2,All other loans secured by real estate,BHDM3466,Average Assets - Loans,"HC-C Items 1.a, 1.b, 1.d, 1.e col B",2008-03-31,-,current,
+3.a.3,Loans to finance agricultural production and other loans to farmers,BHDM3386,Average Assets - Loans,HC-C Item 3 col B,2011-03-31,-,current,
+3.a.4,Commercial and industrial loans,BHDM3387,Average Assets - Loans,HC-C Item 4 col B,2011-03-31,-,current,
+3.a.5.a,Loans to individuals: Credit cards,BHDMB561,Average Assets - Loans,HC-C Item 6.a,2011-03-31,-,current,
+3.a.5.b,Loans to individuals: Other,BHDMB562,Average Assets - Loans,HC-C Items 6.b-6.d,2011-03-31,-,current,
+3.b,"Total loans and leases in foreign offices, Edge and Agreement subsidiaries, and IBFs",BHFN3360,Average Assets - Loans,HC-C Items 1-10 less 11,2010-03-31,-,current,
+4.a,Trading assets,BHCK3401,Average Assets - Trading,HC Item 5,2001-03-31,-,current,Completed if trading assets >= $10M in any of 4 preceding quarters
+4.b,Other earning assets,BHCKB985,Average Assets - Other,-,2001-03-31,-,current,
+5,Total consolidated assets,BHCK3368,Average Assets - Total,HC Item 12,1981-06-30,-,current,NOT the sum of items 1 through 4.b (per instructions); Fed edit 2770 requires > 0
+6,Interest-bearing deposits (domestic),BHCK3517,Average Liabilities - Deposits,"HC-E Items 1.b-1.e, 2.b-2.e",1981-06-30,-,current,Includes interest-bearing demand deposits
+7,Interest-bearing deposits (foreign),BHCK3404,Average Liabilities - Deposits,HC Item 13.b(2),1981-06-30,-,current,
+8,Federal funds purchased and securities sold under agreements to repurchase,BHCK3353,Average Liabilities - Fed Funds,HC Item 14,1990-09-30,-,current,
+9,All other borrowed money,BHCK2635,Average Liabilities - Borrowings,HC Item 16,1981-06-30,-,current,Includes commercial paper regardless of maturity
+10,Not applicable,-,-,-,-,-,current,"Line item 10 is 'Not applicable' on the current FR Y-9C (instructions, HC-K)"
+11,Total equity capital,BHCK3519,Average Equity,HC Item 27.a,1981-06-30,-,current,Excludes limited-life preferred stock
+H.1,Securities (combined quarterly average; superseded by items 1.a-1.c),BHCK3515,Average Assets - Securities,-,1981-06-30,2010-12-31,historical,
+H.2,"Loans and leases, consolidated (quarterly average; superseded by items 3.a/3.b)",BHCK3516,Average Assets - Loans,-,1981-06-30,-,historical,Reported on the form 1981-2009; from 2010-03-31 continues as an MDRM-derived consolidated series (domestic + foreign)
+H.3,Total earning assets (quarterly average; dropped from the form),BHCK3402,Average Assets - Earning,-,1981-06-30,2000-12-31,historical,
+H.4,Limited-life preferred stock (quarterly average; dropped from the form),BHCK3518,Average Equity,-,1981-06-30,1996-12-31,historical,

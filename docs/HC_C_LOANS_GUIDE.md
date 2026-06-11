@@ -70,7 +70,7 @@ LOAN PORTFOLIO
 | Geography | MDRM | Description |
 |-----------|------|-------------|
 | Domestic | BHCK1410 | RE loans - domestic offices |
-| Foreign | BHCK1411 | RE loans - foreign offices |
+| Foreign | - | Not reported (no BHFN foreign-office real-estate-loan split on FR Y-9C HC-C) |
 | Total | BHCK1410 | Total RE loans |
 
 **Reconciliation**:
@@ -131,7 +131,7 @@ Item 1 = Item 1.a + Item 1.b + Item 1.c + Item 1.d + Item 1.e + Item 1.f
 
 | Sub-Item | MDRM | Description | Risk Weight |
 |----------|------|-------------|-------------|
-| 1.d (Total) | BHCT5367 | Total closed-end 1-4 family | 35-100% |
+| 1.d (Total) | - | Total closed-end 1-4 family (no consolidated code; = BHCK5367 first-liens + BHCK5368 junior-liens) | 35-100% |
 | 1.d.(1) | BHCK5367 | First liens | 35-50% |
 | 1.d.(2) | BHCK5368 | Junior liens | 100% |
 
@@ -262,7 +262,7 @@ Item 1 = Item 1.a + Item 1.b + Item 1.c + Item 1.d + Item 1.e + Item 1.f
 
 | MDRM | Description |
 |------|-------------|
-| BHCT1709 | Direct loans to states/political subdivisions |
+| - | Direct loans to states/political subdivisions (no consolidated BHC code; Call RCON2107 only) |
 
 **Risk Weight**:
 - General obligations: 20%
@@ -440,7 +440,7 @@ Loan Growth = (Current Period - Prior Period) / Prior Period
 | 1 | BHCK1410 | Real estate loans (total) |
 | 1.a | BHCK1415 | Construction |
 | 1.c | BHCK1797 | HELOCs |
-| 1.d | BHCT5367 | 1-4 family closed-end |
+| 1.d | - | 1-4 family closed-end (no consolidated code; = BHCK5367 + BHCK5368) |
 | 1.e | BHCK1460 | Multifamily |
 | 1.f | BHCK1480 | Nonfarm nonresidential (CRE) |
 | 3 | BHCK1590 | Agricultural |

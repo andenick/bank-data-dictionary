@@ -24,7 +24,8 @@
       {
         "item": "2",
         "name": "Securities",
-        "mdrm": "BHCT8641",
+        "mdrm": null,
+        "mdrm_note": "FR Y-9C line 2 (total securities) is a caption with no atomic consolidated MDRM code; sum the components. (Call Report RC.2 does carry RCFD8641.)",
         "call_mdrm": "RCFD8641",
         "detail_schedule": "HC-B",
         "components": ["BHCKJJ34", "BHCT1773", "BHCKJA22"],
@@ -132,10 +133,11 @@
       {
         "item": "13",
         "name": "Deposits",
-        "mdrm": "BHCT2200",
+        "mdrm": null,
+        "mdrm_note": "FR Y-9C line 13 (total deposits) is a caption with no atomic consolidated MDRM code; sum domestic (BHDM6631 + BHDM6636) and foreign (BHFN6631 + BHFN6636) components. (Call Report RC.13 does carry RCFD2200.)",
         "call_mdrm": "RCFD2200",
         "detail_schedule": null,
-        "components": ["BHCM2200", "BHCKB536"],
+        "components": ["BHDM6631", "BHDM6636", "BHFN6631", "BHFN6636"],
         "reconciliation": "HC.13 = HC.13.a + HC.13.b"
       },
       {
@@ -295,7 +297,8 @@
         "name": "Loans secured by real estate",
         "mdrm_total": "BHCK1410",
         "mdrm_domestic": "BHCK1410",
-        "mdrm_foreign": "BHCK1411",
+        "mdrm_foreign": null,
+        "mdrm_foreign_note": "FR Y-9C HC-C has no foreign-office (BHFN) breakdown for real-estate loans; no foreign code exists for this category.",
         "category": "Real Estate",
         "components": ["1.a", "1.b", "1.c", "1.d", "1.e", "1.f"]
       },
@@ -309,7 +312,8 @@
       {
         "item": "1.d",
         "name": "Secured by 1-4 family residential",
-        "mdrm_total": "BHCT5367",
+        "mdrm_total": null,
+        "mdrm_note": "Closed-end 1-4 family subtotal (item 1.d) has no single consolidated MDRM code; sum first-lien BHCK5367 + junior-lien BHCK5368.",
         "category": "RE - Residential",
         "components": ["1.d.(1)", "1.d.(2)"]
       },

@@ -9,12 +9,12 @@
 
 ## Overview
 
-Schedule HC-G provides the breakdown of liabilities that flow into Schedule HC Item 20 (Other Liabilities). This includes accrued interest, accrued expenses, deferred taxes, and reserves for off-balance sheet exposures.
+Schedule HC-G provides the breakdown of liabilities that flow into Schedule HC Item 20 (Other Liabilities): net deferred tax liabilities, the allowance for credit losses on off-balance sheet credit exposures, and a residual "other" line. It is a short, four-line schedule (item 1 is not applicable on the current form).
 
 ### Relationship to Schedule HC
 
 ```
-Schedule HC-G Item 6 (Total) = Schedule HC Item 20 (Other Liabilities)
+Schedule HC-G Item 5 (Total) = Schedule HC Item 20 (Other Liabilities)
 ```
 
 ---
@@ -23,57 +23,36 @@ Schedule HC-G Item 6 (Total) = Schedule HC Item 20 (Other Liabilities)
 
 ```
 OTHER LIABILITIES
-├── Item 1: Interest accrued and unpaid on deposits
-│   ├── 1.a: Domestic offices
-│   └── 1.b: Foreign offices
-├── Item 2: Other expenses accrued and unpaid
-├── Item 3: Net deferred tax liabilities
-├── Item 4: Allowance for credit losses on off-balance sheet exposures
-├── Item 5: All other liabilities
-└── Item 6: TOTAL OTHER LIABILITIES (= HC Item 20)
+├── Item 1: Not applicable
+├── Item 2: Net deferred tax liabilities
+├── Item 3: Allowance for credit losses on off-balance sheet credit exposures
+├── Item 4: Other (all other liabilities)
+└── Item 5: TOTAL OTHER LIABILITIES (= HC Item 20)
 ```
 
 ---
 
 ## Detailed Line Items
 
-### Item 1: Interest Accrued and Unpaid on Deposits
+### Item 1: Not Applicable
 
-| Sub-Item | MDRM | Call MDRM | Description |
-|----------|------|-----------|-------------|
-| 1 (Total) | - | - | Sum of 1.a and 1.b |
-| 1.a | BHCK4172 | RCON3645 | Domestic office deposits |
-| 1.b | BHCKB557 | RCFNB557 | Foreign office deposits |
+Line item 1 is "Not applicable" on the current FR Y-9C Schedule HC-G.
 
-**Nature**: Interest expense incurred but not yet paid to depositors
-
-### Item 2: Other Expenses Accrued and Unpaid
-
-| MDRM | Call MDRM | Description |
-|------|-----------|-------------|
-| BHCTB558 | RCFDB558 | Accrued expenses payable |
-
-**Components**:
-- Accrued salaries and benefits
-- Accrued taxes (other than income)
-- Accrued professional fees
-- Other accrued operating expenses
-
-### Item 3: Net Deferred Tax Liabilities
+### Item 2: Net Deferred Tax Liabilities
 
 | MDRM | Call MDRM | Description |
 |------|-----------|-------------|
 | BHCK3049 | RCFD3049 | Net deferred tax liabilities |
 
-**Nature**: Tax liabilities arising from taxable temporary differences (when book income exceeds taxable income temporarily)
+**Nature**: Tax liabilities arising from taxable temporary differences (when book income exceeds taxable income temporarily).
 
-**Note**: Only reported if net DTL position; net DTA reported in HC-F
+**Note**: Reported per tax jurisdiction when the net result is a credit balance; a net debit (asset) balance is reported in Schedule HC-F, item 2, "Net deferred tax assets." A company can report a net DTA for one jurisdiction and a net DTL for another at the same time.
 
-### Item 4: Allowance for Credit Losses on Off-Balance Sheet Exposures
+### Item 3: Allowance for Credit Losses on Off-Balance Sheet Credit Exposures
 
 | MDRM | Call MDRM | Description |
 |------|-----------|-------------|
-| BHCKB559 | RCFDB559 | ACL for unfunded commitments |
+| BHCKB557 | RCFDB557 | ACL for unfunded commitments and other off-balance sheet credit exposures |
 
 **Applicable To**:
 - Unfunded loan commitments
@@ -81,23 +60,24 @@ OTHER LIABILITIES
 - Financial guarantees
 - Other off-balance sheet credit exposures
 
-**CECL Impact**: Under ASC 326, this reserve reflects lifetime expected credit losses on these commitments
+**CECL Impact**: Under ASC 326 this reserve reflects lifetime expected credit losses; holding companies that have adopted ASU 2016-13 exclude exposures that are unconditionally cancellable.
 
-### Item 5: All Other Liabilities
+### Item 4: Other (All Other Liabilities)
 
 | MDRM | Call MDRM | Description |
 |------|-----------|-------------|
-| BHCTB560 | RCFDB560 | Residual other liabilities |
+| BHCKB984 | RCFD2938 | All other liabilities not reported in items 2-3 and not reportable in HC items 13-19 |
 
-**May Include**:
+**Includes** (no separate MDRM codes — these are components of item 4):
+- Accrued interest on deposits and nondeposit liabilities
+- Accrued income taxes and other accrued expenses
 - Accounts payable
+- Deferred compensation liabilities
+- Dividends declared but not yet payable
 - Operating lease liabilities (ASC 842)
-- Deferred compensation
-- Dividends declared but not paid
-- Derivatives not reported elsewhere
 - Miscellaneous liabilities
 
-### Item 6: Total Other Liabilities
+### Item 5: Total Other Liabilities
 
 | MDRM | Call MDRM | Description | Ties To |
 |------|-----------|-------------|---------|
@@ -105,26 +85,15 @@ OTHER LIABILITIES
 
 **Reconciliation**:
 ```
-Item 6 = Items 1 + 2 + 3 + 4 + 5
-Schedule HC Item 20 = HC-G Item 6
+Item 5 = Items 2 + 3 + 4
+Schedule HC Item 20 = HC-G Item 5
 ```
-
----
-
-## Memoranda Items (2022+)
-
-| Item | MDRM | Description |
-|------|------|-------------|
-| M1 | BHCKJF88 | Accounts payable |
-| M2 | BHCKHW60 | Operating lease liabilities |
-| M3 | BHCKJF89 | Deferred compensation liabilities |
-| M4 | BHCKJF90 | Dividends declared but not yet payable |
 
 ---
 
 ## Key Considerations
 
-### CECL Impact on Item 4
+### CECL Impact on Item 3
 
 Under Current Expected Credit Loss (CECL) accounting:
 - Reserve reflects lifetime expected losses
@@ -136,13 +105,13 @@ Under Current Expected Credit Loss (CECL) accounting:
 
 Under ASC 842 (effective 2019):
 - Operating leases now on balance sheet
-- Lease liability in Item 5 (or M2)
+- Lease liability is a component of Item 4 (no separate HC-G code)
 - Corresponding right-of-use asset in HC-F
 
 ### Relationship to Capital
 
 Items in HC-G generally do not receive special capital treatment, but:
-- ACL for OBS (Item 4) supports credit quality of commitments
+- ACL for OBS (Item 3) supports credit quality of commitments
 - May be considered in stress testing
 
 ---
@@ -153,7 +122,7 @@ Items in HC-G generally do not receive special capital treatment, but:
 SCHEDULE HC-G                           SCHEDULE HC
 ═══════════════════════════════════════════════════════════════════════
 
-Item 6 (Total)                 ────────► HC Item 20 (Other Liabilities)
+Item 5 (Total)                 ────────► HC Item 20 (Other Liabilities)
 BHCK2750                                 BHCK2750
 ```
 
@@ -161,21 +130,15 @@ BHCK2750                                 BHCK2750
 
 ## Key Analytical Metrics
 
-### Accrued Interest Ratio
-```
-Accrued Interest % = Item 1 / Total Deposits
-- Higher ratio may indicate higher-rate deposit mix
-```
-
 ### OBS Reserve Adequacy
 ```
-OBS ACL Ratio = Item 4 / Total Unfunded Commitments (from HC-L)
+OBS ACL Ratio = Item 3 / Total Unfunded Commitments (from HC-L)
 - Should be compared to historical loss experience on commitments
 ```
 
 ### Other Liabilities to Assets
 ```
-Other Liab % = Item 6 / Total Assets
+Other Liab % = Item 5 / Total Assets
 - Typically 1-3% of assets
 ```
 
@@ -185,15 +148,15 @@ Other Liab % = Item 6 / Total Assets
 
 | Item | MDRM | Description |
 |------|------|-------------|
-| 1.a | BHCK4172 | Accrued interest - domestic deposits |
-| 1.b | BHCKB557 | Accrued interest - foreign deposits |
-| 2 | BHCTB558 | Other accrued expenses |
-| 3 | BHCK3049 | Net deferred tax liabilities |
-| 4 | BHCKB559 | ACL for off-balance sheet |
-| 5 | BHCTB560 | All other liabilities |
-| **6** | **BHCK2750** | **TOTAL OTHER LIABILITIES** |
+| 1 | - | Not applicable |
+| 2 | BHCK3049 | Net deferred tax liabilities |
+| 3 | BHCKB557 | ACL for off-balance sheet credit exposures |
+| 4 | BHCKB984 | Other (all other liabilities) |
+| **5** | **BHCK2750** | **TOTAL OTHER LIABILITIES** |
+
+> **Revision note (v7.0).** Earlier editions of this guide described a six-item HC-G with accrued-interest sub-items and a "Memoranda (2022+)" block; that structure does not exist on the FR Y-9C (it loosely mirrored the Call Report RC-G), and several of its codes were misassigned (the ACL line cited an MBS code; the memoranda cited consolidated-VIE asset codes). Version 7.0 rebuilds the schedule to the official four-line layout with MDRM-verified codes.
 
 ---
 
-*Last Updated: 2026-01-28*
-*Reference: FR Y-9C Instructions (March 2024)*
+*Last Updated: 2026-06-11*
+*Reference: FR Y-9C Instructions (September 2018 HC-G vintage); Federal Reserve MDRM*

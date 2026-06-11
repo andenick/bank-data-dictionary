@@ -16,11 +16,11 @@ RECON_BS_005,HC,12,BHCK2170,HC,29,HC.12 = HC.29,balance,CRITICAL,Total Assets (B
 RECON_BS_006,HC,1,BHCK0010,HC,1.a + 1.b,HC.1 = HC.1.a + HC.1.b,sum,HIGH,Cash = Noninterest-bearing + Interest-bearing
 RECON_BS_007,HC,3,BHCKC225,HC,3.a + 3.b,HC.3 = HC.3.a + HC.3.b,sum,HIGH,Fed funds = Fed funds sold + Resale agreements
 RECON_BS_008,HC,10,BHCT2143,HC,10.a + 10.b,HC.10 = HC.10.a + HC.10.b,sum,HIGH,Intangibles = Goodwill + Other intangibles
-RECON_BS_009,HC,13,BHCT2200,HC,13.a + 13.b,HC.13 = HC.13.a + HC.13.b,sum,HIGH,"Deposits = Domestic + Foreign deposits. UNVERIFIED: BHCT2200 has no current MDRM equivalent - FR Y-9C line 13 (total deposits) is a caption with no atomic consolidated code (reported as BHDM6631/6636 domestic + BHFN6631/6636 foreign)."
-RECON_BS_010,HC,13.a,BHCM2200,HC,13.a.(1) + 13.a.(2),HC.13.a = HC.13.a.(1) + HC.13.a.(2),sum,MEDIUM,"Domestic deposits = Noninterest + Interest-bearing. UNVERIFIED: BHCM2200 has no current MDRM equivalent (BHCM prefix is trading-assets-in-domestic-offices, no item 2200; no consolidated domestic-deposits-total code exists). Components are BHDM6631 + BHDM6636."
-RECON_BS_011,HC,13.b,BHCKB536,HC,13.b.(1) + 13.b.(2),HC.13.b = HC.13.b.(1) + HC.13.b.(2),sum,MEDIUM,"Foreign deposits = Noninterest + Interest-bearing. UNVERIFIED: BHCKB536 has no current MDRM equivalent (foreign-deposits-total is a caption); components are BHFN6631 + BHCKB538."
+RECON_BS_009,HC,13,CAPTION,HC,13.a + 13.b,HC.13 = (BHDM6631 + BHDM6636) + (BHFN6631 + BHFN6636),sum,HIGH,"Deposits = Domestic + Foreign deposits. FR Y-9C line 13 (total deposits) is a caption with NO atomic consolidated MDRM code; reconcile via real components: domestic BHDM6631 (noninterest) + BHDM6636 (interest-bearing) and foreign BHFN6631 (noninterest) + BHFN6636 (interest-bearing)."
+RECON_BS_010,HC,13.a,CAPTION,HC,13.a.(1) + 13.a.(2),HC.13.a = BHDM6631 + BHDM6636,sum,MEDIUM,"Domestic deposits = Noninterest + Interest-bearing. No consolidated domestic-deposits-total MDRM code exists (item 2200 'TOTAL DEPOSITS' is Call/parent-only, not BHC). Reconcile via real components BHDM6631 (noninterest) + BHDM6636 (interest-bearing)."
+RECON_BS_011,HC,13.b,CAPTION,HC,13.b.(1) + 13.b.(2),HC.13.b = BHFN6631 + BHFN6636,sum,MEDIUM,"Foreign deposits = Noninterest + Interest-bearing. No foreign-deposits-total MDRM code exists (item 13.b is a caption; B536 at item level is a Call-only concept). Reconcile via real components BHFN6631 (noninterest) + BHFN6636 (interest-bearing)."
 RECON_BS_012,HC,14,BHCK2800,HC,14.a + 14.b,HC.14 = HC.14.a + HC.14.b,sum,HIGH,Fed funds purchased = FF purchased + Repos
-RECON_BS_013,HC,2,BHCT8641,HC,2.a + 2.b,HC.2 = HC.2.a + HC.2.b (+ 2.c if applicable),sum,HIGH,"Securities = HTM + AFS (+ Equity securities). UNVERIFIED: BHCT8641 has no current MDRM equivalent - FR Y-9C line 2 (total securities) is a caption; components are BHCKJJ34 (2.a HTM) + BHCT1773 (2.b AFS) + BHCKJA22 (2.c equity)."
+RECON_BS_013,HC,2,CAPTION,HC,2.a + 2.b + 2.c,HC.2 = BHCKJJ34 + BHCT1773 + BHCKJA22,sum,HIGH,"Securities = HTM + AFS + Equity securities. FR Y-9C line 2 (total securities) is a caption with NO atomic consolidated MDRM code; reconcile via real components BHCKJJ34 (2.a HTM) + BHCT1773 (2.b AFS) + BHCKJA22 (2.c equity)."
 RECON_BS_014,HC,4.d,BHCKB529,HC-C,12,HC.4.d = HC-C.12,cross_schedule,CRITICAL,Net loans on HC must equal HC-C total
 RECON_BS_015,HC,4.b,BHCTB528,HC-C,Sum(1-9) - 10,HC.4.b = Sum(HC-C Items 1-9) - Item 10,cross_schedule,CRITICAL,Gross loans less unearned income
 
@@ -44,7 +44,7 @@ RECON_LOAN_002,HC,4.c,BHCT3123,HC-C,11,HC.4.c = HC-C.11 (Allowance),cross_schedu
 RECON_LOAN_003,HC-C,12,BHCKB529,HC-C,Sum(1-9) - 10 - 11,HC-C.12 = Sum(1-9) - Item 10 - Item 11,sum,CRITICAL,Net loans = gross - unearned - allowance
 RECON_LOAN_004,HC-C,1,BHCK1410,HC-C,1.a + 1.b + 1.c + 1.d + 1.e + 1.f,HC-C.1 = Sum(Items 1.a through 1.f),sum,HIGH,RE loans = all RE subcategories
 RECON_LOAN_005,HC-C,1.a,BHCK1415,HC-C,1.a.(1) + 1.a.(2),HC-C.1.a = HC-C.1.a.(1) + HC-C.1.a.(2),sum,MEDIUM,Construction = 1-4 family + Other construction
-RECON_LOAN_006,HC-C,1.d,BHCT5367,HC-C,1.d.(1) + 1.d.(2),HC-C.1.d = HC-C.1.d.(1) + HC-C.1.d.(2),sum,MEDIUM,"1-4 family = First liens + Junior liens. UNVERIFIED: BHCT5367 has no current MDRM equivalent (closed-end 1-4 family subtotal is not a single consolidated code); components are BHCK5367 (first liens) + BHCK5368 (junior liens)."
+RECON_LOAN_006,HC-C,1.d,CAPTION,HC-C,1.d.(1) + 1.d.(2),HC-C.1.d = BHCK5367 + BHCK5368,sum,MEDIUM,"1-4 family = First liens + Junior liens. The closed-end 1-4 family subtotal (item 1.d) has NO single consolidated MDRM code; reconcile via real components BHCK5367 (first liens) + BHCK5368 (junior liens)."
 RECON_LOAN_007,HC-C,1.f,BHCK1480,HC-C,1.f.(1) + 1.f.(2),HC-C.1.f = HC-C.1.f.(1) + HC-C.1.f.(2),sum,MEDIUM,Nonfarm nonres = Owner-occ + Non-owner
 RECON_LOAN_008,HC-C,4,BHCK1766,HC-C,4.a + 4.b,HC-C.4 = HC-C.4.a + HC-C.4.b,sum,HIGH,C&I loans = Domestic + Foreign addressees
 RECON_LOAN_009,HC-C,5,BHCK1975,HC-C,5.a + 5.b + 5.c + 5.d,HC-C.5 = Sum(Items 5.a through 5.d),sum,HIGH,Consumer loans = CC + Revolving + Auto + Other
@@ -98,7 +98,7 @@ RECON_INC_010,HI,NIM,CALCULATED,HI/HC,4 / Avg Earning Assets,NIM = NII / Average
 RECON_OTH_001,HC,11,BHCT2160,HC-F,12,HC.11 = HC-F.12 (Other Assets),cross_schedule,CRITICAL,Other assets must tie HC to HC-F
 RECON_OTH_002,HC-F,12,BHCT2160,HC-F,Sum(1-11),HC-F.12 = Sum(Items 1-11),sum,HIGH,Other assets = sum of HC-F components
 RECON_OTH_003,HC,20,BHCK2750,HC-G,5,HC.20 = HC-G.5 (Other Liabilities),cross_schedule,CRITICAL,Other liabilities must tie HC to HC-G
-RECON_OTH_004,HC-G,5,BHCK2750,HC-G,Sum(1-4),HC-G.5 = Sum(Items 1-4),sum,HIGH,Other liabilities = sum of HC-G components
+RECON_OTH_004,HC-G,5,BHCK2750,HC-G,Sum(2-4),HC-G.5 = Sum(Items 2-4),sum,HIGH,Other liabilities = sum of HC-G components (BHCK3049 + BHCKB557 + BHCKB984); item 1 not applicable
 RECON_OTH_005,HC-F,10,BHCT2143,HC-F,10.a + 10.b,HC-F.10 = HC-F.10.a + HC-F.10.b,sum,MEDIUM,Intangibles = Goodwill + Other intangibles
 
 # ----------------------------------------------------------------------------
@@ -120,3 +120,25 @@ RECON_XFM_002,FR Y-9C,HC.5,BHCT3545,Call Report,RC.5,Y-9C Trading Assets should 
 RECON_XFM_003,FR Y-9C,HC-R.19,BHCAP859,Call Report,RC-R.19,Y-9C CET1 should be consistent with bank-level CET1,cross_form,HIGH,Capital consistency check
 RECON_XFM_004,FR Y-9C,HI.12,BHCT4340,Call Report,RI.14,Y-9C Net Income should consolidate from bank net income,cross_form,HIGH,Net income consolidation check
 RECON_XFM_005,FR Y-9C,HC-L Notional,CALCULATED,Call Report,RC-L Notional,Derivatives notional should reconcile between forms,cross_form,MEDIUM,Derivatives notional consistency
+
+# ----------------------------------------------------------------------------
+# SECTION 10: FAIR VALUE RECONCILIATIONS - HC-Q (12 formulas)
+# Verified against rebuilt csv/HC_Q_FAIR_VALUE.csv and PROVENANCE_HC_Q.csv.
+# Grid columns: A=Total FV, B=Netting (LESS), C=Level 1, D=Level 2, E=Level 3.
+# NOTE: HC-H (Interest Sensitivity) has 5 single-column items and NO totals row -
+#   there are NO intra-schedule sum identities for HC-H.
+# NOTE: HC-K item 5 (BHCK3368 avg total assets) is NOT the sum of items 1-4.b
+#   per FR Y-9C instructions - no such reconciliation row exists by design.
+# ----------------------------------------------------------------------------
+RECON_FV_001,HC-Q,7 Col A,BHCKG502,HC-Q,Sum(1-6) Col A,HC-Q.7 Col A = BHCYJA36 + BHCKG478 + BHCKG483 + BHCKG488 + BHCT3543 + BHCKG497 + BHCKG391,sum,HIGH,Total assets at fair value (Col A) = per-column sum of items 1-6; item 5.b.1 is a sub-item of 5.b and is NOT added
+RECON_FV_002,HC-Q,7 Col B,BHCKG503,HC-Q,Sum(1-6) Col B,HC-Q.7 Col B = Sum(items 1-6 Column B netting),sum,HIGH,Total assets netting adjustment (Col B) = per-column sum of items 1-6
+RECON_FV_003,HC-Q,7 Col C,BHCKG504,HC-Q,Sum(1-6) Col C,HC-Q.7 Col C = Sum(items 1-6 Column C Level 1),sum,HIGH,Total assets Level 1 (Col C) = per-column sum of items 1-6
+RECON_FV_004,HC-Q,7 Col D,BHCKG505,HC-Q,Sum(1-6) Col D,HC-Q.7 Col D = Sum(items 1-6 Column D Level 2),sum,HIGH,Total assets Level 2 (Col D) = per-column sum of items 1-6
+RECON_FV_005,HC-Q,7 Col E,BHCKG506,HC-Q,Sum(1-6) Col E,HC-Q.7 Col E = Sum(items 1-6 Column E Level 3),sum,HIGH,Total assets Level 3 (Col E) = per-column sum of items 1-6
+RECON_FV_006,HC-Q,14 Col A,BHCKG531,HC-Q,Sum(8-13) Col A,HC-Q.14 Col A = BHCKF252 + BHCKG507 + BHCT3547 + BHCKG516 + BHCKG521 + BHCKG526 + BHCKG805,sum,HIGH,Total liabilities at fair value (Col A) = per-column sum of items 8-13
+RECON_FV_007,HC-Q,14 Col B,BHCKG532,HC-Q,Sum(8-13) Col B,HC-Q.14 Col B = Sum(items 8-13 Column B netting),sum,HIGH,Total liabilities netting adjustment (Col B) = per-column sum of items 8-13
+RECON_FV_008,HC-Q,14 Col C,BHCKG533,HC-Q,Sum(8-13) Col C,HC-Q.14 Col C = Sum(items 8-13 Column C Level 1),sum,HIGH,Total liabilities Level 1 (Col C) = per-column sum of items 8-13
+RECON_FV_009,HC-Q,14 Col D,BHCKG534,HC-Q,Sum(8-13) Col D,HC-Q.14 Col D = Sum(items 8-13 Column D Level 2),sum,HIGH,Total liabilities Level 2 (Col D) = per-column sum of items 8-13
+RECON_FV_010,HC-Q,14 Col E,BHCKG535,HC-Q,Sum(8-13) Col E,HC-Q.14 Col E = Sum(items 8-13 Column E Level 3),sum,HIGH,Total liabilities Level 3 (Col E) = per-column sum of items 8-13
+RECON_FV_011,HC-Q,7,BHCKG502,HC-Q,Col A = C + D + E - B,BHCKG502 = BHCKG504 + BHCKG505 + BHCKG506 - BHCKG503,derived,HIGH,"Conceptual grid identity for total assets row: Total FV (A) = Level1 (C) + Level2 (D) + Level3 (E) minus netting adjustments (B). Applies per grid row across items 1-6 and 8-13."
+RECON_FV_012,HC-Q,14,BHCKG531,HC-Q,Col A = C + D + E - B,BHCKG531 = BHCKG533 + BHCKG534 + BHCKG535 - BHCKG532,derived,HIGH,"Conceptual grid identity for total liabilities row: Total FV (A) = Level1 (C) + Level2 (D) + Level3 (E) minus netting adjustments (B). Applies per grid row across items 1-6 and 8-13."

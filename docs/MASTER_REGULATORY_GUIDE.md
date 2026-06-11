@@ -272,8 +272,8 @@ MDRM item numbers follow general patterns:
 MDRM codes evolve over time. Major transition periods:
 
 #### 2018 Domestic/Foreign Split
-- Many BHCK codes split into BHCM (domestic) + BHCT (total)
-- Example: BHCK3531 → BHCM3531 (domestic) + BHCT3531 (total)
+- Some items are reported on multiple bases: BHCK (consolidated), BHCM (domestic offices), BHDM/BHFN (domestic/foreign deposit components)
+- Example: trading U.S. Treasury securities are reported consolidated as BHCK3531 and on a domestic-office basis as BHCM3531
 
 #### 2014 Basel III Implementation
 - New capital codes introduced (BHCAP, BHCFA prefixes)
@@ -316,7 +316,7 @@ The main balance sheet schedule provides high-level asset and liability totals.
 
 | Line | Description | Y-9C MDRM | Call MDRM |
 |------|-------------|-----------|-----------|
-| 13 | Total deposits | BHCM2200 | RCON2200 |
+| 13 | Total deposits | (caption: BHDM6631+6636 + BHFN6631+6636) | RCFD2200 |
 | 14 | Fed funds purchased/repos | BHCK2800 | RCFDB993 |
 | **15** | **Trading liabilities** | **BHCT3548** | **RCFD3548** |
 | 16 | Other borrowed money | BHCT3190 | RCFD3190 |
@@ -343,10 +343,10 @@ Reports securities held in the investment portfolio (not trading).
 
 #### Key Items
 
-| Description | HTM MDRM | AFS MDRM |
+| Description | HTM MDRM (amortized cost) | AFS MDRM (fair value) |
 |-------------|----------|----------|
-| U.S. Treasury | BHCK0211 | BHCT1286 |
-| U.S. Government agency | BHCK0213 | BHCT1287 |
+| U.S. Treasury | BHCK0211 | BHCK1287 |
+| U.S. Government agency | BHCK8492 | BHCK8495 |
 | MBS - residential | Various | Various |
 | MBS - commercial | Various | Various |
 | **Total HTM** | **BHCKJJ34** | - |
@@ -487,13 +487,15 @@ Reports assets and liabilities measured at fair value by valuation hierarchy.
 | **Level 2** | Observable inputs other than Level 1 | Indirectly observable |
 | **Level 3** | Unobservable inputs | Model-based |
 
-#### Trading Assets by Level
+#### Trading Assets by Fair-Value Level
 
-| Level | MDRM |
-|-------|------|
-| Level 1 | BHCKF527 |
-| Level 2 | BHCKF528 |
-| Level 3 | BHCKF529 |
+The single combined "trading assets by level" codes were discontinued (2009-2010). Trading-asset fair-value-level measurements are now reported split into derivative and other-trading-asset components:
+
+| Level | Trading derivative assets | Other trading assets |
+|-------|---------------------------|----------------------|
+| Level 1 | BHCKG494 | BHCKG499 |
+| Level 2 | BHCKG495 | BHCKG500 |
+| Level 3 | BHCKG496 | BHCKG501 |
 
 ### 4.6 Schedule HC-R / RC-R: Regulatory Capital
 

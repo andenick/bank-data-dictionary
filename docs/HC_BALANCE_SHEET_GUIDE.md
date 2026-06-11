@@ -80,7 +80,7 @@ Item 1 = Item 1.a + Item 1.b
 
 | Sub-Item | MDRM | Description | Ties To |
 |----------|------|-------------|---------|
-| 2 (Total) | BHCT8641 | Total securities | HC-B |
+| 2 (Total) | - | Total securities (caption; no consolidated code; = 2.a + 2.b + 2.c; Call total = RCFD8641) | HC-B |
 | 2.a | BHCKJJ34 | HTM securities (amortized cost) | HC-B Item 8 Col C |
 | 2.b | BHCT1773 | AFS debt securities (fair value) | HC-B Item 8 Col B |
 | 2.c | BHCKJA22 | Equity securities with determinable FV | HC-B M5 |
@@ -213,11 +213,11 @@ Total Assets = Cash + Securities + Fed Funds + Net Loans + Trading Assets
 
 | Sub-Item | MDRM | Description |
 |----------|------|-------------|
-| 13 (Total) | BHCT2200 | Total deposits |
-| 13.a | BHCM2200 | Domestic office deposits |
+| 13 (Total) | - | Total deposits (caption; no consolidated code; = 13.a + 13.b; Call total = RCFD2200) |
+| 13.a | - | Domestic office deposits (no consolidated code; = BHDM6631 + BHDM6636; Call = RCON2200) |
 | 13.a.(1) | BHDM6631 | Domestic noninterest-bearing |
 | 13.a.(2) | BHDM6636 | Domestic interest-bearing |
-| 13.b | BHCKB536 | Foreign office deposits |
+| 13.b | - | Foreign office deposits (caption; no consolidated code; = 13.b.(1) + 13.b.(2); Call = RCFNB536) |
 | 13.b.(1) | BHFN6631 | Foreign noninterest-bearing |
 | 13.b.(2) | BHCKB538 | Foreign interest-bearing |
 
@@ -433,7 +433,7 @@ HC Item 20 = HC-G Item 5
 | Item | MDRM | Description |
 |------|------|-------------|
 | 1 | BHCK0010 | Cash and balances |
-| 2 | BHCT8641 | Total securities |
+| 2 | - | Total securities (caption; Call = RCFD8641) |
 | 2.a | BHCKJJ34 | HTM securities |
 | 2.b | BHCT1773 | AFS securities |
 | 3 | BHCKC225 | Fed funds sold/reverse repos |
@@ -443,7 +443,7 @@ HC Item 20 = HC-G Item 5
 | 10.a | BHCK3163 | Goodwill |
 | 11 | BHCT2160 | Other assets |
 | 12 | BHCT2170 | **TOTAL ASSETS** |
-| 13 | BHCT2200 | Total deposits |
+| 13 | - | Total deposits (caption; Call = RCFD2200) |
 | 15 | BHCT3548 | Trading liabilities |
 | 16 | BHCT3190 | Other borrowed money |
 | 19 | BHCK4062 | Subordinated debt |

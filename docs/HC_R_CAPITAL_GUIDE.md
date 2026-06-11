@@ -89,7 +89,7 @@ Schedule HC-R is the cornerstone of regulatory capital reporting under Basel III
 | 25 | BHCAP857 | Tier 2 instruments (sub debt) |
 | 26 | BHCAP858 | Tier 2 minority interest |
 | 27 | BHCA5311 | Eligible ALLL (max 1.25% of RWA) |
-| 28 | BHCKP856 | Tier 2 deductions |
+| 28 | - | Tier 2 deductions (no current MDRM code; line restructured under Basel III) |
 | 29 | BHCA5311 | **Tier 2 capital** |
 
 ### Total Capital (Item 30)
@@ -117,7 +117,7 @@ Schedule HC-R is the cornerstone of regulatory capital reporting under Basel III
 | Category | MDRM | Description |
 |----------|------|-------------|
 | Securitization | BHCKS400 | Securitization exposures |
-| Equity | BHCKS401 | Equity investments |
+| Equity | - | Equity investments (computed across HC-R Part II risk-weight bands; no single MDRM code) |
 | Derivatives | BHCKS402 | Derivative exposures |
 | Off-Balance Sheet | BHCKS403 | Commitments, LCs, guarantees |
 | Market Risk | BHCKA222 | Trading book capital |

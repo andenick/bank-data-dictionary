@@ -1,14 +1,6 @@
-line_number,item_description,mdrm_3mo,mdrm_3_12mo,mdrm_1_3yr,mdrm_3_5yr,mdrm_5_15yr,mdrm_over15yr,mdrm_total,category,ties_to_hc_line,notes
-1,Debt securities (AFS and HTM),BHCKA526,BHCKA527,BHCKA528,BHCKA529,BHCKA530,BHCKA531,BHCKA549,Assets - Securities,HC Item 2,By remaining maturity
-2,"Loans and lease financing receivables",BHCKB556,BHCKB557,BHCKB558,BHCKB559,BHCKB560,BHDMB561,BHCKB562,Assets - Loans,HC Item 4,By repricing frequency
-2.a,Fixed rate loans and leases,BHCKC400,BHCKC401,BHCKC402,BHCKC403,BHCKC404,BHCKC405,BHCKC406,Assets - Fixed Rate,HC Item 4,Mature in period
-2.b,Floating rate loans and leases,BHCKC408,BHCKC409,BHCKC410,BHCKC411,BHCKC412,BHCKC413,BHCKC414,Assets - Floating Rate,HC Item 4,Reprice in period
-3,Other interest-bearing assets,BHCKA544,BHCKA545,BHCKA546,BHCKA547,BHCKA548,-,-,Assets - Other IB,-,Fed funds; repos; etc
-4,Total interest-bearing assets,BHCKA550,BHCKA551,BHCKA552,BHCKA553,BHCKA554,BHCKA555,BHCKA556,Assets - Total IB,-,Sum of Items 1-3
-5,"Deposits (domestic and foreign)",BHCKA557,BHCKA558,BHCKA559,BHCKA560,BHCKA561,BHCKA562,BHCKA563,Liabilities - Deposits,HC Item 13,By repricing/maturity
-5.a,Time deposits,BHCKC416,BHCKC417,BHCKC418,BHCKC419,BHCKC420,BHCKC421,BHCKC422,Liabilities - Time CD,HC Item 13,Fixed maturity
-5.b,Other deposits,BHCKC424,BHCKC425,BHCKC426,BHCKC427,BHCKC428,BHCKC429,BHCKC430,Liabilities - Other Dep,HC Item 13,Transaction/savings
-6,"Other interest-bearing liabilities",BHCKA564,BHCKA565,BHCKA566,BHCKA567,BHCKA568,BHCKA569,BHCKA570,Liabilities - Other,HC Items 14-19,Borrowings; sub debt
-7,Total interest-bearing liabilities,BHCKA571,BHCKA572,BHCKA573,BHCKA574,BHCKA575,BHCKA576,BHCKA577,Liabilities - Total IB,-,Sum of Items 5-6
-8,Net interest-bearing position (repricing gap),BHCKA578,BHCKA579,BHCKA580,BHCKA581,BHCKA582,BHCKA583,BHCKA584,Gap Analysis,-,Item 4 minus Item 7
-M1,"Cumulative gap",BHCKM501,BHCKM502,BHCKM503,BHCKM504,BHCKM505,BHCKM506,-,Memorandum,-,Running sum of gaps
+line_number,item_description,mdrm_code,category,ties_to_hc_line,start_date,end_date,status,notes
+1,Earning assets that are repriceable within one year or mature within one year,BHCK3197,Rate Sensitivity - Assets,-,1986-06-30,-,current,All repriceable/maturing-within-1yr earning assets
+2,Interest-bearing deposit liabilities that reprice or mature within one year,BHCK3296,Rate Sensitivity - Deposits,"HC Items 13.a(2), 13.b(2)",1986-06-30,-,current,Included in HC items 13.a.(2) and 13.b.(2)
+3,Long-term debt that reprices within one year,BHCK3298,Rate Sensitivity - Debt,"HC Items 16, 19.a",1986-06-30,-,current,Included in HC items 16 and 19.a
+4,Variable-rate preferred stock,BHCK3408,Rate Sensitivity - Preferred,-,1986-06-30,-,current,Includes both limited-life and perpetual preferred stock
+5,Long-term debt scheduled to mature within one year,BHCK3409,Rate Sensitivity - Debt,HC Item 19.a,1981-06-30,-,current,Reported in HC item 19.a

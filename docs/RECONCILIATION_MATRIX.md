@@ -290,14 +290,15 @@ Allowance change ≈ Provision - Charge-offs + Recoveries
 
 | HC-Q Item | Related Schedule | MDRM |
 |-----------|------------------|------|
-| Item 1 (Trading Assets) | HC-D Item 12 | *(BHCLF688 not in MDRM — unverified)* |
+| Item 7 (Total assets at FV) | HC (recurring FV assets) | BHCKG502 (Col A, row "Total assets measured at fair value") |
 | Item 2 (AFS Securities) | HC-B Item 8 Col B | BHCK1773 |
-| Item 7 (Trading Liabs) | HC-D Item 15 | *(BHCLF728 not in MDRM — unverified)* |
+| Item 14 (Total liabs at FV) | HC (recurring FV liabilities) | BHCKG531 (Col A, row "Total liabilities measured at fair value") |
 
 **Validation**:
 ```
-HC-Q Item 1 Total = Level 1 + Level 2 + Level 3
-HC-Q Item 1 ≈ HC-D Item 12
+HC-Q per row: Column A (Total FV on HC) = Level 1 + Level 2 + Level 3 − netting
+HC-Q Item 7 (BHCKG502) = Σ items 1-6 (each column)
+HC-Q Item 14 (BHCKG531) = Σ items 8-13 (each column)
 ```
 
 ---

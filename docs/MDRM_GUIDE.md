@@ -101,8 +101,9 @@ The scope split on the FR Y-9C is therefore:
   strings decompose as mnemonic (4) + item (4): `BHCAP859` = `BHCA`+`P859` (CET1 capital),
   `BHCAA223` = `BHCA`+`A223` (RWA).
 
-> **CAPITAL-CODE CORRECTION (v6.0).** Earlier releases used the non-existent codes
-> `BHCFA223` / `BHCFA224` / `BHCFA225` for Tier 1 / Tier 2 / Total capital. The correct,
+> **CAPITAL-CODE CORRECTION (v6.0).** Earlier releases used non-existent codes built on the
+> bogus mnemonic `BHCF` (e.g. `BHCF`+`A223` / `BHCF`+`A224` / `BHCF`+`A225`) for Tier 1 / Tier 2 /
+> Total capital. `BHCF` is the bulk-data **filename** prefix, not an MDRM mnemonic. The correct,
 > MDRM-verified codes are **`BHCA8274`** (Tier 1 capital), **`BHCA5311`** (Tier 2 capital),
 > and **`BHCA3792`** (Total risk-based capital). At the 2014 Basel III transition the mnemonic
 > changed `BHCK` → `BHCA` (so the pre-2014 codes were `BHCK8274` / `BHCK5311` / `BHCK3792`).

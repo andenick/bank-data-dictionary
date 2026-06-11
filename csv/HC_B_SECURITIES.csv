@@ -19,12 +19,10 @@ line_number,item_description,mdrm_afs_amortized_cost,mdrm_afs_fair_value,mdrm_ht
 8,Total,BHCK1772,BHCT1773,BHCT1754,BHCKJJ34,Total Securities,-,1976-03-31,Sum of Items 1-7
 M1,Pledged securities,BHCK0416,BHCK0416,BHCK0416,BHCK0416,Memorandum,HC Item 2,1976-03-31,Securities pledged as collateral
 M2.a,Structured financial products - Investment grade,BHCKC989,BHCKC989,-,-,Memorandum - SFP,HC Item 2,2009-03-31,CDOs; CLOs rated IG
-M2.b,Structured financial products - Below investment grade,BHCKC990,BHCKC990,-,-,Memorandum - SFP,HC Item 2,2009-03-31,CDOs; CLOs rated below IG
 M3,AOCI on AFS securities (pre-tax),BHCK8434,BHCK8434,-,-,Memorandum - AOCI,-,1998-03-31,Unrealized gains/losses in equity
 M4,Fair value of HTM that are callable,BHCKA510,BHCKA510,BHCKA511,BHCKA511,Memorandum - Callable,-,2002-03-31,
 M5,Equity securities with readily determinable FV,-,BHCKJA22,-,-,Equity Securities,HC Item 2.c,2018-03-31,ASU 2016-01 FV through income
 M5.a,Equity securities - Mutual funds,BHCKJJ33,BHCKJJ33,-,-,Equity - Mutual Funds,HC Item 2.c,2018-03-31,
-M5.b,Equity securities - Other,BHCKJJ35,BHCKJJ35,-,-,Equity - Other,HC Item 2.c,2018-03-31,
 M6,Equity securities without readily determinable FV,BHCK1752,BHCK1752,-,-,Equity - No FV,HC-F Item 4,1976-03-31,FHLB/FRB stock; other
-M7,Securities with credit deterioration at acquisition,-,BHCKJF80,-,BHCKJF81,Memorandum - PCD,-,2020-03-31,CECL PCD assets
-M8,Total amortized cost of debt securities,BHCT1771,BHCT1771,BHCT1754,BHCT1754,Memorandum - Amortized Cost,-,2020-03-31,
+M7,Securities with credit deterioration at acquisition,-,-,-,-,Memorandum - PCD,-,2020-03-31,CECL PCD assets; no MDRM code reports PCD securities at fair value (only allowance amounts BHCKJJ31/JJ32 exist)
+M8,Total amortized cost of debt securities,-,-,BHCT1754,BHCT1754,Memorandum - Amortized Cost,-,2020-03-31,no single MDRM code for combined HTM+AFS amortized cost; reported as components

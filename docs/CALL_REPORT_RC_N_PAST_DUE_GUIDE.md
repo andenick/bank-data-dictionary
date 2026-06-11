@@ -24,36 +24,35 @@ Schedule RC-N reports loans and leases that are past due or on nonaccrual status
 
 ## Part I: Loans and Leases
 
-### Real Estate Loans
+### Real Estate Loans (reported domestic-office, RCON, on FFIEC 031/041)
 
 | Item | Description | 30-89 DPD | 90+ DPD | Nonaccrual |
 |------|-------------|-----------|---------|------------|
-| 1.a | Construction/land | RCFD5377 | RCFD5378 | RCFDC229 |
-| 1.b | Farmland | RCFD5379 | RCFD5380 | RCFDC230 |
-| 1.c | 1-4 family (all) | RCFD5381 | RCFD5382 | RCFDC231 |
-| 1.c.(1) | First liens residential | RCON5383 | RCON5384 | RCONC234 |
-| 1.c.(2) | Junior liens residential | RCON5385 | RCON5386 | RCONC235 |
-| 1.c.(3) | HELOCs | RCONC233 | RCONC234 | RCONC235 |
-| 1.d | Multifamily | RCFD5389 | RCFD5390 | RCFDC239 |
-| 1.e | CRE nonfarm nonres | RCFD5391 | RCFD5392 | RCFDC240 |
+| 1.a.(1) | 1-4 family residential construction | RCONF172 | RCONF174 | RCONF176 |
+| 1.a.(2) | Other construction & land development | RCONF173 | RCONF175 | RCONF177 |
+| 1.b | Farmland | RCON3493 | RCON3494 | RCON3495 |
+| 1.c.(1) | 1-4 family revolving (HELOCs) | RCON5398 | RCON5399 | RCON5400 |
+| 1.c.(2)(a) | Closed-end 1-4 family, first liens | RCONC236 | RCONC237 | RCONC229 |
+| 1.c.(2)(b) | Closed-end 1-4 family, junior liens | RCONC238 | RCONC239 | RCONC230 |
+| 1.d | Multifamily (5+) residential | RCON3499 | RCON3500 | RCON3501 |
+| 1.e.(1) | Owner-occupied nonfarm nonresidential | RCONF178 | RCONF180 | RCONF182 |
+| 1.e.(2) | Other nonfarm nonresidential | RCONF179 | RCONF181 | RCONF183 |
+
+> Note: Real-estate-secured RC-N items are reported on the RCON (domestic-office) basis. Use the matching RCFD code only where a consolidated counterpart is published in MDRM.
 
 ### Commercial and Consumer Loans
 
 | Item | Description | 30-89 DPD | 90+ DPD | Nonaccrual |
 |------|-------------|-----------|---------|------------|
-| 2 | Depository institutions | RCFD5396 | RCFD5397 | RCFDC241 |
-| 3 | Agricultural production | RCON5398 | RCON5399 | RCONC242 |
-| 4 | C&I loans | RCFD5400 | RCFD5401 | RCFDC244 |
-| 5 | Consumer loans (total) | RCON5407 | RCON5408 | RCONC246 |
-| 5.a | Credit cards | RCONB575 | RCONB576 | RCONK213 |
-| 5.b | Other revolving | RCONK215 | RCONK216 | RCONK217 |
-| 5.c | Auto loans | RCONK218 | RCONK219 | RCONK220 |
-| 5.d | Other consumer | RCONK221 | RCONK222 | RCONK223 |
-| 6 | Foreign governments | RCFN5411 | RCFN5412 | RCFNC248 |
-| 7 | Loans to states/munis | RCFD5414 | RCFD5415 | RCFDC249 |
-| 8 | Other loans | RCFD1226 | RCFD1227 | RCFD1228 |
-| 9 | Lease financing | RCFD5420 | RCFD5421 | RCFDC251 |
-| **10** | **Total loans and leases** | **RCFD5524** | **RCFD5525** | **RCFD1403** |
+| 2 | Depository institutions | RCFDB834 | RCFDB835 | RCFDB836 |
+| 3 | Agricultural production | RCFD1594 | RCFD1597 | RCFD1583 |
+| 4 | C&I loans | RCFD1606 | RCFD1607 | RCFD1608 |
+| 5 | Consumer loans (total to individuals) | RCFD1978 | RCFD1979 | RCFD1981 |
+| 5.a | Credit cards | RCFDB575 | RCFDB576 | RCFDB577 |
+| 6 | Foreign governments | RCFD5389 | RCFD5390 | RCFD5391 |
+| 8 | All other loans (incl. leases) | RCFD3183 | RCFD3184 | RCFD3185 |
+| 9 | Lease financing receivables | RCFD1226 | RCFD1227 | RCFD1228 |
+| **Total** | **Total loans and lease financing receivables** | **RCFD1406** | **RCFD1407** | **RCFD1403** |
 
 ---
 
@@ -83,11 +82,10 @@ Schedule RC-N reports loans and leases that are past due or on nonaccrual status
 
 | Item | Description | MDRM | Purpose |
 |------|-------------|------|---------|
-| M.1 | Restructured loans (TDRs) | Various | Problem debt restructurings |
-| M.1.a | TDRs 30-89 DPD | RCFDK103 | Performing TDRs |
-| M.1.b | TDRs 90+ DPD | RCFDK104 | Seriously delinquent TDRs |
-| M.1.c | TDRs nonaccrual | RCFDK108 | Nonaccrual TDRs |
-| M.2 | Loans covered by FDIC loss sharing | RCFDK190 | Failed bank acquisitions |
+| M.1 | Loan modifications to borrowers experiencing financial difficulty (total) | RCFDHK28 | Modified/restructured loans (post-ASU 2022-02; formerly TDRs) |
+| M.7 | Loans/leases covered by FDIC loss-sharing agreements (total nonaccrual) | RCFDK089 | Failed-bank acquisitions, all-other-loans component |
+
+> Note: The pre-2023 "TDR" memoranda were reported by aging bucket per loan category (e.g., RCFD/RCON K-series). After ASU 2022-02 eliminated TDR accounting, RC-N Memorandum 1 reports total loan modifications to borrowers experiencing financial difficulty (RCFDHK28 / RCONHK28). The modification memoranda are itemized per loan category rather than carried as a single legacy code.
 
 ---
 

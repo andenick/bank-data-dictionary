@@ -2,7 +2,7 @@ line_number,item_description,mdrm_code,call_mdrm,category,asset_liability,ties_t
 1,Cash and balances due from depository institutions,BHCK0010,RCFD0081,Assets - Cash,Asset,,-,Item 1.a + Item 1.b,1976-03-31,Sum of noninterest-bearing and interest-bearing
 1.a,Noninterest-bearing balances and currency and coin,BHCK0081,RCFD0081,Assets - Cash,Asset,,-,-,1976-03-31,Cash on hand plus noninterest-bearing due from
 1.b,Interest-bearing balances,BHCK0395,RCFD0071,Assets - Cash,Asset,,-,-,1976-03-31,Interest-bearing deposits in other institutions
-2,Securities,BHCT8641,RCFD8641,Assets - Securities,Asset,HC-B,Total,Item 2.a + Item 2.b,1976-03-31,Sum of HTM and AFS
+2,Securities,-,RCFD8641,Assets - Securities,Asset,HC-B,Total,Item 2.a + Item 2.b,1976-03-31,Sum of HTM and AFS; no consolidated BHC code; HC line 2 is a caption (=2.a + 2.b + 2.c); Call total is RCFD8641
 2.a,Held-to-maturity securities (fair value),BHCKJJ34,RCFDJJ34,Assets - Securities,Asset,HC-B,Item 8 Col C,HC-B Item 8 Column C (amortized cost),2014-03-31,HTM at amortized cost
 2.b,Available-for-sale debt securities (fair value),BHCT1773,RCFD1773,Assets - Securities,Asset,HC-B,Item 8 Col B,-,1994-03-31,AFS at fair value
 2.c,Equity securities with readily determinable FV,BHCKJA22,RCFDJJ32,Assets - Securities,Asset,HC-B,M5,-,2018-03-31,Equity securities at FV (CECL)
@@ -25,11 +25,11 @@ line_number,item_description,mdrm_code,call_mdrm,category,asset_liability,ties_t
 10.b,Other intangible assets,BHCK0426,RCFD0426,Assets - Intangibles,Asset,HC-F,Item 10.b,-,2002-03-31,Also in HC-F Item 10.b
 11,Other assets,BHCT2160,RCFD2160,Assets - Other,Asset,HC-F,Item 12,HC-F Sum(Items 1-11),1976-03-31,Equals HC-F Item 12
 12,Total assets,BHCT2170,RCFD2170,Assets - Total,Asset,,-,Sum(Items 1-11),1976-03-31,Primary size metric
-13,Deposits,BHCT2200,RCFD2200,Liabilities - Deposits,Liability,,-,Item 13.a + Item 13.b,1976-03-31,Total domestic and foreign
-13.a,In domestic offices,BHCM2200,RCON2200,Liabilities - Deposits,Liability,,-,Item 13.a.(1) + Item 13.a.(2),1976-03-31,Domestic deposits only
+13,Deposits,-,RCFD2200,Liabilities - Deposits,Liability,,-,Item 13.a + Item 13.b,1976-03-31,Total domestic and foreign; no consolidated BHC code; HC line 13 is a caption (=13.a + 13.b); Call total is RCFD2200
+13.a,In domestic offices,-,RCON2200,Liabilities - Deposits,Liability,,-,Item 13.a.(1) + Item 13.a.(2),1976-03-31,Domestic deposits only; no consolidated BHC code; domestic deposits total = BHDM6631 + BHDM6636; Call is RCON2200
 13.a.(1),Noninterest-bearing,BHDM6631,RCON6631,Liabilities - Deposits,Liability,,-,-,1997-03-31,
 13.a.(2),Interest-bearing,BHDM6636,RCON6636,Liabilities - Deposits,Liability,,-,-,1997-03-31,
-13.b,In foreign offices,BHCKB536,RCFNB536,Liabilities - Deposits,Liability,,-,Item 13.b.(1) + Item 13.b.(2),1976-03-31,Foreign office deposits
+13.b,In foreign offices,-,RCFNB536,Liabilities - Deposits,Liability,,-,Item 13.b.(1) + Item 13.b.(2),1976-03-31,Foreign office deposits; no consolidated BHC code; foreign deposits total is a caption (=13.b.(1) + 13.b.(2)); Call is RCFNB536
 13.b.(1),Noninterest-bearing,BHFN6631,RCFNB537,Liabilities - Deposits,Liability,,-,-,1997-03-31,
 13.b.(2),Interest-bearing,BHCKB538,RCFNB538,Liabilities - Deposits,Liability,,-,-,1997-03-31,
 14,Federal funds purchased and securities sold under repurchase agreements,BHCK2800,RCFDB993,Liabilities - Fed Funds,Liability,,-,Item 14.a + Item 14.b,1976-03-31,

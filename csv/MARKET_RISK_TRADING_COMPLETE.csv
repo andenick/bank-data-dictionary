@@ -85,7 +85,7 @@ Market Risk RWA,RWA - 50% Weight,RWA3,BHCKS397,RCFDS397,Balance sheet assets at 
 Market Risk RWA,RWA - 100% Weight,RWA4,BHCKS398,RCFDS398,Balance sheet assets at 100% risk weight,BHCAA223,High,HC-R Part II,2014-03-31,C&I; CRE; most loans
 Market Risk RWA,RWA - 150% Weight,RWA5,BHCKS399,RCFDS399,Balance sheet assets at 150% risk weight,BHCAA223,Very High,HC-R Part II,2014-03-31,HVCRE; non-IG exposures
 Market Risk RWA,RWA - Securitization,RWA6,BHCKS400,RCFDS400,Securitization exposures RWA,BHCAA223,Securitization,HC-R Part II,2014-03-31,ABS; MBS; other securitization
-Market Risk RWA,RWA - Equity,RWA7,BHCKS401,RCFDS401,Equity exposures RWA,BHCAA223,Equity,HC-R Part II,2014-03-31,Equity investment risk weight
+Market Risk RWA,RWA - Equity,RWA7,-,-,Equity exposures RWA,BHCAA223,Equity,HC-R Part II,2014-03-31,Equity investment risk weight; computed across HC-R Part II risk-weight bands - no single MDRM code
 Market Risk RWA,RWA - Derivatives,RWA8,BHCKS402,RCFDS402,Derivative exposures RWA,BHCAA223,Derivatives,HC-R Part II,2014-03-31,CCR from derivatives
 Market Risk RWA,RWA - Off-Balance Sheet,RWA9,BHCKS403,RCFDS403,Off-balance sheet exposures RWA,BHCAA223,OBS,HC-R Part II,2014-03-31,Commitments; guarantees
 Market Risk RWA,Market Risk RWA,RWA10,BHCKA222,RCFDA222,Market risk-weighted assets,BHCAA223,Trading Book,HC-R Part II,2014-03-31,VaR; sVaR; IRC; CRM capital

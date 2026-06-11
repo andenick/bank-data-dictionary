@@ -1,21 +1,40 @@
-line_number,item_description,mdrm_total_fv,mdrm_level_1,mdrm_level_2,mdrm_level_3,category,ties_to_hc,start_date,notes
-1,Trading assets total,BHCLF688,BHCLF689,BHCLF690,BHCLF691,Assets - Trading,HC Item 5,2013-03-31,Total trading assets by level
-1.a,Debt securities,BHCLF692,BHCLF693,BHCLF694,BHCLF695,Assets - Trading Securities,HC-D Items 1-5,2013-03-31,
-1.b,Equity securities,BHCLF696,BHCLF697,BHCLF698,BHCLF699,Assets - Trading Equity,HC-D Item 9,2013-03-31,
-1.c,Derivative assets (trading),BHCLF700,BHCLF701,BHCLF702,BHCLF703,Assets - Derivatives,HC-D Item 11,2013-03-31,
-1.d,Loans,BHCLF704,BHCLF705,BHCLF706,BHCLF707,Assets - Trading Loans,HC-D Item 6,2013-03-31,
-2,AFS debt securities,BHCK1773,BHCLF709,BHCLF710,BHCLF711,Assets - AFS,HC Item 2.b,2013-03-31,AFS securities by level
-3,Loans held for sale,BHCLF712,BHCLF713,BHCLF714,BHCLF715,Assets - HFS,HC Item 4.a,2013-03-31,
-4,Loans held for investment at FV,BHCLF716,BHCLF717,BHCLF718,BHCLF719,Assets - HFI at FV,-,2013-03-31,FVO loans
-5,Derivative assets (non-trading),BHCLF720,BHCLF721,BHCLF722,BHCLF723,Assets - Hedges,HC-L,2013-03-31,Non-trading derivatives positive FV
-6,Other financial assets at FV,BHCLF724,BHCLF725,BHCLF726,BHCLF727,Assets - Other,-,2013-03-31,
-7,Trading liabilities total,BHCLF728,BHCLF729,BHCLF730,BHCLF731,Liabilities - Trading,HC Item 15,2013-03-31,Total trading liabilities by level
-7.a,Short positions,BHCLF732,BHCLF733,BHCLF734,BHCLF735,Liabilities - Shorts,HC-D Item 13,2013-03-31,
-7.b,Derivative liabilities (trading),BHCLF736,BHCLF737,BHCLF738,BHCLF739,Liabilities - Derivatives,HC-D Item 14,2013-03-31,
-8,Derivative liabilities (non-trading),BHCLF740,BHCLF741,BHCLF742,BHCLF743,Liabilities - Hedges,HC-L,2013-03-31,Non-trading derivatives negative FV
-9,Other financial liabilities at FV,BHCLF744,BHCLF745,BHCLF746,BHCLF747,Liabilities - Other,-,2013-03-31,
-M1,Intangible assets at FV,BHCLF748,BHCLF749,BHCLF750,BHCLF751,Memorandum - Intangibles,HC Item 10,2013-03-31,
-M2,MSAs,BHCLF752,-,-,BHCLF755,Memorandum - MSA,HC Item 10.b,2013-03-31,MSAs typically Level 3
-M3,Transfers into Level 3,BHCLF756,-,-,BHCLF756,Memorandum - Transfers,-,2013-03-31,During period
-M4,Transfers out of Level 3,BHCLF757,-,-,BHCLF757,Memorandum - Transfers,-,2013-03-31,During period
-M5,Unpaid principal balance of loans at FV,BHCKF760,-,-,-,Memorandum - UPB,-,2013-03-31,For FVO loans
+line_number,item_description,mdrm_total_fv,mdrm_netting,mdrm_level_1,mdrm_level_2,mdrm_level_3,category,ties_to_hc,start_date,notes
+1,Available-for-sale debt and equity securities with readily determinable fair values not held for trading,BHCYJA36,BHCKG474,BHCKG475,BHCKG476,BHCKG477,Assets - AFS Securities,"HC Items 2.b, 2.c",2009-06-30,Column A code BHCYJA36 effective 2018-03-31 (ASU 2016-01 revision); columns B-E G-series effective 2009-06-30
+2,Federal funds sold and securities purchased under agreements to resell,BHCKG478,BHCKG479,BHCKG480,BHCKG481,BHCKG482,Assets - Fed Funds,HC Item 3,2009-06-30,
+3,Loans and leases held for sale,BHCKG483,BHCKG484,BHCKG485,BHCKG486,BHCKG487,Assets - HFS Loans,HC Item 4.a,2009-06-30,
+4,Loans and leases held for investment,BHCKG488,BHCKG489,BHCKG490,BHCKG491,BHCKG492,Assets - HFI Loans,HC Item 4.b,2009-06-30,Fair value option loans
+5.a,Trading assets: Derivative assets,BHCT3543,BHCKG493,BHCKG494,BHCKG495,BHCKG496,Assets - Trading Derivatives,HC Item 5,2009-06-30,Column A reuses BHCT3543 (MDRM name reflects its HC-D usage); HC-Q uses it as the derivative-assets total
+5.b,Trading assets: Other trading assets,BHCKG497,BHCKG498,BHCKG499,BHCKG500,BHCKG501,Assets - Trading Other,HC Item 5,2009-06-30,
+5.b.1,Nontrading securities at fair value with changes in fair value reported in current earnings,BHCKF240,BHCKF684,BHCKF692,BHCKF241,BHCKF242,Assets - FVO Securities,HC-Q Item 5.b,2007-03-31,Memorandum-style sub-item of 5.b; F-series codes effective 2008
+6,All other assets,BHCKG391,BHCKG392,BHCKG395,BHCKG396,BHCKG804,Assets - Other,-,2009-06-30,
+7,Total assets measured at fair value on a recurring basis,BHCKG502,BHCKG503,BHCKG504,BHCKG505,BHCKG506,Assets - Total,Sum of items 1-6,2009-06-30,Per-column sum of items 1 through 6
+8,Deposits,BHCKF252,BHCKF686,BHCKF694,BHCKF253,BHCKF254,Liabilities - Deposits,HC Item 13,2007-03-31,F-series codes effective 2007
+9,Federal funds purchased and securities sold under agreements to repurchase,BHCKG507,BHCKG508,BHCKG509,BHCKG510,BHCKG511,Liabilities - Fed Funds,HC Item 14,2009-06-30,
+10.a,Trading liabilities: Derivative liabilities,BHCT3547,BHCKG512,BHCKG513,BHCKG514,BHCKG515,Liabilities - Trading Derivatives,HC Item 15,2009-06-30,Column A reuses BHCT3547 (MDRM name reflects its HC-D usage); HC-Q uses it as the derivative-liabilities total
+10.b,Trading liabilities: Other trading liabilities,BHCKG516,BHCKG517,BHCKG518,BHCKG519,BHCKG520,Liabilities - Trading Other,HC Item 15,2009-06-30,
+11,Other borrowed money,BHCKG521,BHCKG522,BHCKG523,BHCKG524,BHCKG525,Liabilities - Borrowings,HC Item 16,2009-06-30,
+12,Subordinated notes and debentures,BHCKG526,BHCKG527,BHCKG528,BHCKG529,BHCKG530,Liabilities - Sub Debt,HC Item 19.a,2009-06-30,
+13,All other liabilities,BHCKG805,BHCKG806,BHCKG807,BHCKG808,BHCKG809,Liabilities - Other,-,2009-06-30,
+14,Total liabilities measured at fair value on a recurring basis,BHCKG531,BHCKG532,BHCKG533,BHCKG534,BHCKG535,Liabilities - Total,Sum of items 8-13,2009-06-30,Per-column sum of items 8 through 13
+M.1.a,All other assets: Mortgage servicing assets,BHCKG536,BHCKG537,BHCKG538,BHCKG539,BHCKG540,Memorandum - MSA,HC-Q Item 6,2009-06-30,
+M.1.b,All other assets: Nontrading derivative assets,BHCKG541,BHCKG542,BHCKG543,BHCKG544,BHCKG545,Memorandum - Hedges,HC-Q Item 6,2009-06-30,
+M.1.c,All other assets: Itemized component c,BHCKG546,BHCKG547,BHCKG548,BHCKG549,BHCKG550,Memorandum - Other Assets,HC-Q Item 6,2009-06-30,Itemize with text code BHTXG546
+M.1.d,All other assets: Itemized component d,BHCKG551,BHCKG552,BHCKG553,BHCKG554,BHCKG555,Memorandum - Other Assets,HC-Q Item 6,2009-06-30,Itemize with text code BHTXG551
+M.1.e,All other assets: Itemized component e,BHCKG556,BHCKG557,BHCKG558,BHCKG559,BHCKG560,Memorandum - Other Assets,HC-Q Item 6,2009-06-30,Itemize with text code BHTXG556
+M.1.f,All other assets: Itemized component f,BHCKG561,BHCKG562,BHCKG563,BHCKG564,BHCKG565,Memorandum - Other Assets,HC-Q Item 6,2009-06-30,Itemize with text code BHTXG561
+M.2.a,All other liabilities: Loan commitments (not accounted for as derivatives),BHCKF261,BHCKF689,BHCKF697,BHCKF262,BHCKF263,Memorandum - Commitments,HC-Q Item 13,2007-03-31,F-series codes effective 2007/2008
+M.2.b,All other liabilities: Nontrading derivative liabilities,BHCKG566,BHCKG567,BHCKG568,BHCKG569,BHCKG570,Memorandum - Hedges,HC-Q Item 13,2009-06-30,
+M.2.c,All other liabilities: Itemized component c,BHCKG571,BHCKG572,BHCKG573,BHCKG574,BHCKG575,Memorandum - Other Liabilities,HC-Q Item 13,2009-06-30,Itemize with text code BHTXG571
+M.2.d,All other liabilities: Itemized component d,BHCKG576,BHCKG577,BHCKG578,BHCKG579,BHCKG580,Memorandum - Other Liabilities,HC-Q Item 13,2009-06-30,Itemize with text code BHTXG576
+M.2.e,All other liabilities: Itemized component e,BHCKG581,BHCKG582,BHCKG583,BHCKG584,BHCKG585,Memorandum - Other Liabilities,HC-Q Item 13,2009-06-30,Itemize with text code BHTXG581
+M.2.f,All other liabilities: Itemized component f,BHCKG586,BHCKG587,BHCKG588,BHCKG589,BHCKG590,Memorandum - Other Liabilities,HC-Q Item 13,2009-06-30,Itemize with text code BHTXG586
+M.3.a.1,Loans at fair value: Secured by 1-4 family residential properties,BHCKHT87,-,-,-,-,Memorandum - FVO Loans,HC-Q Items 3-4,2018-06-30,Effective 2018-03-31
+M.3.a.2,Loans at fair value: All other loans secured by real estate,BHCKHT88,-,-,-,-,Memorandum - FVO Loans,HC-Q Items 3-4,2018-06-30,Effective 2018-03-31
+M.3.b,Loans at fair value: Commercial and industrial loans,BHCKF585,-,-,-,-,Memorandum - FVO Loans,HC-Q Items 3-4,2008-03-31,
+M.3.c,Loans at fair value: Consumer loans,BHCKHT89,-,-,-,-,Memorandum - FVO Loans,HC-Q Items 3-4,2018-06-30,Includes purchased paper; effective 2018-03-31
+M.3.d,Loans at fair value: Other loans,BHCKF589,-,-,-,-,Memorandum - FVO Loans,HC-Q Items 3-4,2008-03-31,
+M.4.a.1,Unpaid principal balance of loans at fair value: Secured by 1-4 family residential properties,BHCKHT91,-,-,-,-,Memorandum - UPB,HC-Q Item M.3.a.1,2018-06-30,Effective 2018-03-31
+M.4.a.2,Unpaid principal balance of loans at fair value: All other loans secured by real estate,BHCKHT92,-,-,-,-,Memorandum - UPB,HC-Q Item M.3.a.2,2018-06-30,Effective 2018-03-31
+M.4.b,Unpaid principal balance of loans at fair value: Commercial and industrial loans,BHCKF597,-,-,-,-,Memorandum - UPB,HC-Q Item M.3.b,2008-03-31,
+M.4.c,Unpaid principal balance of loans at fair value: Consumer loans,BHCKHT93,-,-,-,-,Memorandum - UPB,HC-Q Item M.3.c,2018-06-30,Effective 2018-03-31
+M.4.d,Unpaid principal balance of loans at fair value: Other loans,BHCKF601,-,-,-,-,Memorandum - UPB,HC-Q Item M.3.d,2008-03-31,

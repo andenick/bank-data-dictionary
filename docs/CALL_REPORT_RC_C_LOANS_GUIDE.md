@@ -34,13 +34,15 @@ Schedule RC-C provides detailed breakdowns of a bank's loan portfolio by loan ty
 | 1.a.(2) | Other construction/land | RCFDF159 | - | BHCKF159 |
 | 1.b | Secured by farmland | RCFD1420 | RCON1420 | BHCK1420 |
 | 1.c | HELOCs | RCON1797 | RCON1797 | BHCK1797 |
-| 1.d | 1-4 family closed-end | RCFD5367 | RCON5367 | BHCT5367 |
-| 1.d.(1) | First liens | RCFDC236 | RCONC236 | BHCK5367 |
-| 1.d.(2) | Junior liens | RCFDC238 | RCONC238 | BHCK5368 |
+| 1.d | 1-4 family closed-end | (subtotal) | (subtotal) | (subtotal) |
+| 1.d.(1) | First liens | RCFD5367 | RCON5367 | BHCK5367 |
+| 1.d.(2) | Junior liens | RCFD5368 | RCON5368 | BHCK5368 |
 | 1.e | Multifamily (5+ units) | RCFD1460 | RCON1460 | BHCK1460 |
 | 1.f | Nonfarm nonresidential | RCFD1480 | RCON1480 | BHCK1480 |
 | 1.f.(1) | Owner-occupied | RCFDF160 | RCONF160 | BHCKF160 |
 | 1.f.(2) | Non-owner-occupied | RCFDF162 | RCONF162 | BHCKF161 |
+
+> Note: Item 1.d (closed-end 1-4 family) is a subtotal equal to 1.d.(1) first liens + 1.d.(2) junior liens; it has no separate atomic MDRM code. Item 7 (obligations of states and political subdivisions) is reported on the Call Report only (RCFD/RCON 2107); there is no consolidated FR Y-9C BHCK counterpart.
 
 ### Commercial and Other Loans
 
@@ -55,9 +57,9 @@ Schedule RC-C provides detailed breakdowns of a bank's loan portfolio by loan ty
 | 5.a | Credit cards | RCONB538 | BHCKB538 | |
 | 5.b | Other revolving | RCONB539 | BHCKB539 | |
 | 5.c | Automobile loans | RCONK137 | BHCKK137 | |
-| 5.d | Other consumer | RCONB540 | BHCKK207 | |
-| 6 | Loans to foreign governments | RCFN1296 | BHCK1296 | Sovereign |
-| 7 | Loans to states/munis | RCFD1709 | BHCT1709 | |
+| 5.d | Other consumer | RCONK207 | BHCKK207 | |
+| 6 | Loans to foreign governments | RCFD2081 | BHCK2081 | Sovereign |
+| 7 | Obligations of states/political subdivisions | RCFD2107 | - | No consolidated BHCK code; domestic basis RCON2107 |
 | 8 | Other loans | RCFD1563 | BHCK1563 | |
 | 9 | Lease financing receivables | RCFDB541 | BHCK2165 | |
 
@@ -108,7 +110,7 @@ RCFD1410 = RCFD1415 + RCFD1420 + RCON1797 + RCFD5367 + RCFD1460 + RCFD1480
 | M.1 | Restructured loans | RCFD1616 | TDRs in compliance |
 | M.2 | Loans to non-US addressees | Various | Foreign concentration |
 | M.3 | Maturity/repricing | Various | Interest rate risk |
-| M.5 | Small business loans | RCFDJ464 | CRA reportable |
+| M.5/M.6 | Small business loans (number and amount by original size) | Various | Reported as count + amount across "$100K or less / $100K-$250K / $250K-$1MM" size bands; no single atomic code |
 
 ---
 

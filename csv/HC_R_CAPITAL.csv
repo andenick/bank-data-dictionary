@@ -26,7 +26,7 @@ line_number,item_description,mdrm_code,call_mdrm,category,part,start_date,notes
 25,Tier 2 capital instruments,BHCAP857,RCFAP857,T2 Components,Part I,2014-03-31,Sub debt; qualifying
 26,Tier 2 minority interest,BHCAP858,RCFAP858,T2 Components,Part I,2014-03-31,
 27,Eligible allowance for credit losses,BHCA5311,RCFAA224,T2 Components,Part I,2014-03-31,Limited to 1.25% of RWA
-28,LESS: Tier 2 deductions,BHCKP856,RCFDP856,T2 Deductions,Part I,2014-03-31,
+28,LESS: Tier 2 deductions,-,-,T2 Deductions,Part I,2014-03-31,no current MDRM code for a standalone Tier 2 deductions line (Basel I BHCKB595/RCFDB595 discontinued)
 29,Tier 2 capital,BHCA5311,RCFAA224,T2 Total,Part I,2014-03-31,Items 25-28
 30,Total capital,BHCA3792,RCFA3792,Total Capital,Part I,2014-03-31,Tier 1 + Tier 2
 31,Total risk-weighted assets,BHCAA223,RCFDA223,RWA Total,Part II,2014-03-31,Sum of Part II items
@@ -40,7 +40,7 @@ RWA3,Balance sheet assets (50% risk weight),BHCKS397,RCFDS397,RWA - 50%,Part II,
 RWA4,Balance sheet assets (100% risk weight),BHCKS398,RCFDS398,RWA - 100%,Part II,2014-03-31,C&I; CRE; most loans
 RWA5,Balance sheet assets (150% risk weight),BHCKS399,RCFDS399,RWA - 150%,Part II,2014-03-31,HVCRE; non-IG
 RWA6,Exposures to securitization,BHCKS400,RCFDS400,RWA - Securitization,Part II,2014-03-31,
-RWA7,Equity exposures,BHCKS401,RCFDS401,RWA - Equity,Part II,2014-03-31,
+RWA7,Equity exposures,-,-,RWA - Equity,Part II,2014-03-31,no single MDRM code for equity-exposure RWA (computed multi-risk-weight total on HC-R/RC-R Part II)
 RWA8,Derivative exposures,BHCKS402,RCFDS402,RWA - Derivatives,Part II,2014-03-31,
 RWA9,Off-balance sheet exposures,BHCKS403,RCFDS403,RWA - OBS,Part II,2014-03-31,CCF applied
 RWA10,Market risk RWA,BHCKA222,RCFDA222,RWA - Market Risk,Part II,2014-03-31,Trading book

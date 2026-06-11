@@ -11,14 +11,14 @@ rule_id,rule_type,schedule,condition,expected_result,severity,description,mdrm_c
 # ----------------------------------------------------------------------------
 VAL_001,balance,HC,BHCK2170,BHCK2948 + BHCK3210,CRITICAL,Assets must equal Total liabilities-and-minority-interest plus Total equity capital (= BHCK3300). Minority interest is already inside BHCK2948 - do not add BHCK3000 separately,BHCK2170;BHCK2948;BHCK3210;BHCK3300,Balance sheet does not balance: BHCK2170 != BHCK2948 + BHCK3210
 VAL_002,balance,HC,BHCT2170,BHCK3300,CRITICAL,Total Assets must equal Total Liabilities and Equity (Item 29),BHCT2170;BHCK3300,Total assets does not match total L+E
-VAL_003,sum,HC,BHCT2170,Sum(Items 1-11),CRITICAL,Total Assets must equal sum of all asset line items,BHCK0010;BHCT8641;BHCKC225;BHCT2122;BHCT3545;...,Total assets does not equal sum of components
-VAL_004,sum,HC,BHCK2948,Sum(Items 13-20),CRITICAL,Total Liabilities must equal sum of all liability line items,BHCT2200;BHCK2800;BHCT3548;BHCT3190;BHCK4062;BHCK2750,Total liabilities does not equal sum of components
+VAL_003,sum,HC,BHCT2170,Sum(Items 1-11),CRITICAL,"Total Assets must equal sum of all asset line items. Item 2 (securities) is a caption with no atomic code; use its components BHCKJJ34 (HTM) + BHCT1773 (AFS) + BHCKJA22 (equity).",BHCK0010;BHCKJJ34;BHCT1773;BHCKJA22;BHCKC225;BHCT2122;BHCT3545;...,Total assets does not equal sum of components
+VAL_004,sum,HC,BHCK2948,Sum(Items 13-20),CRITICAL,"Total Liabilities must equal sum of all liability line items. Item 13 (deposits) is a caption with no atomic code; use deposit components BHDM6631 + BHDM6636 + BHFN6631 + BHFN6636.",BHDM6631;BHDM6636;BHFN6631;BHFN6636;BHCK2800;BHCT3548;BHCT3190;BHCK4062;BHCK2750,Total liabilities does not equal sum of components
 VAL_005,sum,HC,BHCT3210,Sum(Items 23-27),HIGH,Total Equity must equal sum of equity components,BHCK3283;BHCK3230;BHCK3240;BHCK3247;BHCKB530,Total equity does not equal sum of components
 VAL_006,sign,HC,BHCT2170,>= 0,CRITICAL,Total Assets must be non-negative,BHCT2170,Total assets is negative
 VAL_007,sign,HC,BHCK2948,>= 0,CRITICAL,Total Liabilities must be non-negative,BHCK2948,Total liabilities is negative
 VAL_008,sign,HC,BHCT3210,>= 0,HIGH,Total Equity should typically be positive,BHCT3210,Total equity is negative - investigate
 VAL_009,sum,HC,BHCK0010,BHCK0081 + BHCK0395,HIGH,Cash must equal noninterest-bearing + interest-bearing,BHCK0010;BHCK0081;BHCK0395,Cash subtotals do not add up
-VAL_010,sum,HC,BHCT2200,BHCM2200 + BHCKB536,HIGH,Total Deposits must equal domestic + foreign deposits,BHCT2200;BHCM2200;BHCKB536,Deposit subtotals do not add up
+VAL_010,sum,HC,Total Deposits (item 13),BHDM6631 + BHDM6636 + BHFN6631 + BHFN6636,HIGH,"Total Deposits (HC item 13) must equal domestic (noninterest BHDM6631 + interest-bearing BHDM6636) plus foreign (noninterest BHFN6631 + interest-bearing BHFN6636). Item 13 is an FR Y-9C caption with NO atomic consolidated MDRM code; expressed via real components.",BHDM6631;BHDM6636;BHFN6631;BHFN6636,Deposit subtotals do not add up
 
 # ----------------------------------------------------------------------------
 # SECTION 2: SECURITIES VALIDATION - HC-B (6 rules)
@@ -36,7 +36,7 @@ VAL_016,sign,HC-B,BHCT1754,>= 0,HIGH,HTM amortized cost must be non-negative,BHC
 VAL_017,cross_schedule,HC/HC-C,BHCTB528,HC-C Item 12,CRITICAL,Gross loans on HC must equal HC-C total,BHCTB528;BHCKB529,Loans do not tie between HC and HC-C
 VAL_018,cross_schedule,HC/HC-C,BHCT3123,HC-C Item 11,CRITICAL,ALLL on HC must equal HC-C ALLL,BHCT3123,Allowance does not tie between HC and HC-C
 VAL_019,sum,HC-C,BHCKB529,Sum(Items 1-9) - Item 10 - Item 11,HIGH,Net loans must equal gross loans - unearned - allowance,BHCK1410;BHCK1288;...;BHCK2123;BHCT3123,Loan calculation does not reconcile
-VAL_020,sum,HC-C,BHCK1410,Sum(Items 1.a through 1.f),HIGH,RE loans must equal sum of RE subcategories,BHCK1415;BHCK1420;BHCK1797;BHCT5367;BHCK1460;BHCK1480,RE loan components do not sum
+VAL_020,sum,HC-C,BHCK1410,Sum(Items 1.a through 1.f),HIGH,"RE loans must equal sum of RE subcategories. Item 1.d (closed-end 1-4 family) is a subtotal with no atomic code; use first-lien BHCK5367 + junior-lien BHCK5368.",BHCK1415;BHCK1420;BHCK1797;BHCK5367;BHCK5368;BHCK1460;BHCK1480,RE loan components do not sum
 VAL_021,sign,HC-C,BHCT3123,>= 0,HIGH,Loan loss allowance must be non-negative,BHCT3123,ALLL is negative
 VAL_022,ratio,HC-C,BHCT3123/BHCTB528,>= 0 AND <= 0.10,MEDIUM,ALLL ratio should be between 0% and 10%,BHCT3123;BHCTB528,ALLL ratio outside normal range
 
@@ -66,8 +66,8 @@ VAL_036,sign,HC-R,BHCAA223,> 0,CRITICAL,Risk-weighted assets must be positive,BH
 # SECTION 6: INCOME STATEMENT VALIDATION - HI (5 rules)
 # ----------------------------------------------------------------------------
 VAL_037,derived,HI,BHCK4074,BHCK4107 - BHCK4073,CRITICAL,NII must equal Interest Income - Interest Expense,BHCK4074;BHCK4107;BHCK4073,NII calculation does not reconcile
-VAL_038,sum,HI,BHCK4107,Sum(Interest Income Items 1.a-1.f),HIGH,Interest income must equal sum of sources,BHCK4010;BHCK4065;BHCK4115;BHCK4060;BHCKK130;BHCK4069,Interest income components do not sum
-VAL_039,sum,HI,BHCK4073,Sum(Interest Expense Items 2.a-2.d),HIGH,Interest expense must equal sum of sources,BHCK4508;BHCK4148;BHCK4180;BHCK4185,Interest expense components do not sum
+VAL_038,sum,HI,BHCK4107,Sum(Interest Income Items 1.a-1.f),HIGH,Interest income must equal sum of sources (loans 4010 + lease income 4065 + balances due 4115 + securities 4060 + trading assets 4069 + other interest income 4518),BHCK4010;BHCK4065;BHCK4115;BHCK4060;BHCK4069;BHCK4518,Interest income components do not sum
+VAL_039,sum,HI,BHCK4073,Sum(Interest Expense Items 2.a-2.d),HIGH,"Interest expense must equal sum of sources. Item 2.a (interest on deposits) is a caption with no atomic consolidated code; use components: domestic time deposits BHCKHK03 + BHCKHK04 + foreign-office deposits BHCK4172, plus fed funds expense BHCK4180, trading liabilities and other borrowed money BHCK4185, and subordinated notes BHCK4397.",BHCKHK03;BHCKHK04;BHCK4172;BHCK4180;BHCK4185;BHCK4397,Interest expense components do not sum
 VAL_040,range,HI,BHCK4074/BHCT2170,>= -0.05 AND <= 0.10,MEDIUM,NII/Assets ratio should be reasonable,BHCK4074;BHCT2170,NII ratio outside normal range
 VAL_041,sign,HI,BHCK4107,>= 0,HIGH,Interest income should be non-negative,BHCK4107,Interest income is negative
 
@@ -76,8 +76,8 @@ VAL_041,sign,HI,BHCK4107,>= 0,HIGH,Interest income should be non-negative,BHCK41
 # ----------------------------------------------------------------------------
 VAL_042,cross_schedule,HC/HC-F,BHCT2160,HC-F Item 12,CRITICAL,Other assets on HC must equal HC-F total,BHCT2160,Other assets do not tie between HC and HC-F
 VAL_043,cross_schedule,HC/HC-G,BHCK2750,HC-G Item 5,CRITICAL,Other liabilities on HC must equal HC-G total,BHCK2750,Other liabilities do not tie between HC and HC-G
-VAL_044,sum,HC-F,BHCT2160,Sum(Items 1-11),HIGH,Other assets must equal sum of HC-F components,BHCKC749;BHCK2148;...;BHCK2155,Other assets components do not sum
-VAL_045,sum,HC-G,BHCK2750,Sum(Items 1-4),HIGH,Other liabilities must equal sum of HC-G components,BHCK3645;BHCK3049;BHCKC439;BHCK2750,Other liabilities components do not sum
+VAL_044,sum,HC-F,BHCT2160,Sum(Items 1-11),HIGH,Other assets must equal sum of HC-F components (accrued interest receivable BHCKB556 + net DTA BHCK2148 + ... + customers' acceptance liability BHCK2155),BHCKB556;BHCK2148;...;BHCK2155,Other assets components do not sum
+VAL_045,sum,HC-G,BHCK2750,Sum(Items 2-4),HIGH,Other liabilities must equal sum of HC-G components (net DTL BHCK3049 + ACL on off-balance sheet exposures BHCKB557 + all other BHCKB984); item 1 is not applicable,BHCK3049;BHCKB557;BHCKB984,Other liabilities components do not sum
 
 # ----------------------------------------------------------------------------
 # SECTION 8: TIME SERIES VALIDATION (5 rules)
@@ -87,3 +87,18 @@ VAL_047,time_series,HC,BHCT3210,Change <= 30% QoQ,MEDIUM,Total equity should not
 VAL_048,time_series,HI,BHCT4340,Existence in prior period,LOW,Net income should exist in prior periods (continuity check),BHCT4340,Missing historical net income data
 VAL_049,time_series,HC-R,BHCAP793,Change <= 0.05 QoQ,LOW,CET1 ratio should not change more than 500bps QoQ,BHCAP793,Unusually large change in CET1 ratio
 VAL_050,time_series,HC,BHCT3545,Change <= 100% QoQ if > $1B,LOW,Large trading asset changes should be investigated,BHCT3545,Unusually large change in trading assets
+
+# ----------------------------------------------------------------------------
+# SECTION 9: QUARTERLY AVERAGES & FAIR VALUE VALIDATION - HC-K and HC-Q (8 rules)
+# Verified against rebuilt csv/HC_K_QUARTERLY_AVERAGES.csv and csv/HC_Q_FAIR_VALUE.csv.
+# NOTE: HC-K item 5 (BHCK3368) is NOT the sum of items 1-4.b per FR Y-9C
+#   instructions - no sum rule for it. HC-H has no totals row - no sum rules.
+# ----------------------------------------------------------------------------
+VAL_051,sign,HC-K,BHCK3368,> 0,CRITICAL,Average total consolidated assets (Fed validity edit 2770) must be greater than zero,BHCK3368,Quarterly average total assets is zero or negative (Fed edit 2770)
+VAL_052,sum,HC-Q,BHCKG502,BHCYJA36 + BHCKG478 + BHCKG483 + BHCKG488 + BHCT3543 + BHCKG497 + BHCKG391,HIGH,Total assets at fair value (item 7 Col A) must equal per-column sum of items 1-6,BHCKG502;BHCYJA36;BHCKG478;BHCKG483;BHCKG488;BHCT3543;BHCKG497;BHCKG391,HC-Q item 7 Column A does not equal sum of items 1-6
+VAL_053,sum,HC-Q,BHCKG531,BHCKF252 + BHCKG507 + BHCT3547 + BHCKG516 + BHCKG521 + BHCKG526 + BHCKG805,HIGH,Total liabilities at fair value (item 14 Col A) must equal per-column sum of items 8-13,BHCKG531;BHCKF252;BHCKG507;BHCT3547;BHCKG516;BHCKG521;BHCKG526;BHCKG805,HC-Q item 14 Column A does not equal sum of items 8-13
+VAL_054,derived,HC-Q,BHCKG502,BHCKG504 + BHCKG505 + BHCKG506 - BHCKG503,HIGH,Total assets row: Total FV (Col A) must equal Level1 + Level2 + Level3 minus netting (Col C+D+E-B),BHCKG502;BHCKG503;BHCKG504;BHCKG505;BHCKG506,HC-Q item 7 grid identity A=C+D+E-B does not hold
+VAL_055,derived,HC-Q,BHCKG531,BHCKG533 + BHCKG534 + BHCKG535 - BHCKG532,HIGH,Total liabilities row: Total FV (Col A) must equal Level1 + Level2 + Level3 minus netting (Col C+D+E-B),BHCKG531;BHCKG532;BHCKG533;BHCKG534;BHCKG535,HC-Q item 14 grid identity A=C+D+E-B does not hold
+VAL_056,sign,HC-Q,BHCKG502,>= 0,MEDIUM,Total assets measured at fair value must be non-negative,BHCKG502,HC-Q total fair-value assets is negative
+VAL_057,sign,HC-Q,BHCKG531,>= 0,MEDIUM,Total liabilities measured at fair value must be non-negative,BHCKG531,HC-Q total fair-value liabilities is negative
+VAL_058,sign,HC-H,BHCK3197,>= 0,LOW,Earning assets repricing/maturing within one year must be non-negative,BHCK3197,HC-H repriceable earning assets is negative

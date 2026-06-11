@@ -50,8 +50,8 @@ Schedule RC-E provides detailed breakdowns of a bank's deposit liabilities by ac
 | 2.a.(1) | MMDAs | RCONHK17 | Money market deposits |
 | 2.a.(2) | Other savings | RCONHK18 | Passbook, etc. |
 | 2.b | Time deposits | Various | By size and maturity |
-| 2.b.(1) | Time < $250K | RCONHK19 | Retail CDs |
-| 2.b.(2) | Time >= $250K | RCONHK20 | Jumbo CDs |
+| 2.b.(1) | Time <= $250K | RCONHK16 | Retail CDs |
+| 2.b.(2) | Time > $250K | RCONHK17 | Jumbo CDs |
 
 ---
 
@@ -59,12 +59,11 @@ Schedule RC-E provides detailed breakdowns of a bank's deposit liabilities by ac
 
 | Item | Description | MDRM | Notes |
 |------|-------------|------|-------|
-| 1 | Individuals, partnerships, corps | RCFNB552 | Foreign IPC |
-| 2 | US Government | RCFN2203 | |
-| 3 | States and political subdivisions | RCFN2206 | |
-| 4 | Commercial banks | RCFN2207 | |
-| 5 | Other | RCFN2213 | |
-| **Total** | Total foreign deposits | RCFNB536 | Ties to RC Item 13.b |
+| 1 | IPC transaction accounts (foreign offices) | RCFN2241 | Individuals, partnerships, corporations |
+| 2 | IPC nontransaction accounts (foreign offices) | RCFN2242 | Individuals, partnerships, corporations |
+| — | Noninterest-bearing (foreign offices) | RCFN6631 | By interest status |
+| — | Interest-bearing (foreign offices) | RCFN6636 | By interest status |
+| **Total** | Total deposits in foreign offices | RCFN2200 | Ties to RC Item 13.b |
 
 ---
 
@@ -124,9 +123,9 @@ RCON2200 = RCON6631 (Noninterest) + RCON6636 (Interest-bearing)
 | Item | Description | MDRM | Purpose |
 |------|-------------|------|---------|
 | M.1 | Selected components | Various | Detail breakouts |
-| M.2 | Brokered deposits | RCONHK04 | Volatile funding |
+| M.2 | Brokered deposits (total) | RCON2365 | Volatile funding |
 | M.3 | Maturity/repricing | Various | IRR analysis |
-| M.4 | Reciprocal deposits | RCONLB73 | Network deposits |
+| M.4 | Reciprocal deposits (total) | RCONJH83 | Network deposits |
 | M.5 | Estimated insured | RCONF049 | FDIC coverage |
 | M.6 | Estimated uninsured | RCONF051 | Concentration risk |
 
@@ -169,10 +168,10 @@ RCON2200 = RCON6631 (Noninterest) + RCON6636 (Interest-bearing)
 
 ## Mapping to FR Y-9C
 
-The FR Y-9C consolidates bank deposits at the holding company level:
-- Schedule HC Item 13 = BHCT2200 (total deposits)
-- Schedule HC Item 13.a = BHCM2200 (domestic)
-- Schedule HC Item 13.b = BHCKB536 (foreign)
+The FR Y-9C consolidates bank deposits at the holding company level. Note that on Schedule HC, total deposits (line 13) is a caption with no single atomic MDRM code; it is the sum of its domestic and foreign components, each split by interest status:
+- Schedule HC Item 13 (total deposits) = Item 13.a (domestic) + Item 13.b (foreign)
+- Schedule HC Item 13.a (deposits in domestic offices) = BHDM6631 (noninterest-bearing) + BHDM6636 (interest-bearing)
+- Schedule HC Item 13.b (deposits in foreign offices) = BHFN6631 (noninterest-bearing) + BHFN6636 (interest-bearing)
 
 ---
 

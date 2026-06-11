@@ -281,7 +281,8 @@ HC Item 2.b (AFS securities) = HC-B Item 8, Column B (BHCT1773)
 | Sub-Item | MDRM | Description |
 |----------|------|-------------|
 | M2.a | BHCKC989 | SFPs - Investment grade |
-| M2.b | BHCKC990 | SFPs - Below investment grade |
+
+Schedule HC-B does not carry an investment-grade/below-investment-grade split for structured financial products; only the aggregate memorandum is reported.
 
 **Includes**: CDOs, CLOs, CDO-squared, and similar structures
 
@@ -311,7 +312,6 @@ AOCI = AFS Fair Value (Col B) - AFS Amortized Cost (Col A)
 |------|-------------|---------|
 | BHCKJA22 | Total equity securities with determinable FV | HC Item 2.c |
 | BHCKJJ33 | Mutual funds and ETFs | - |
-| BHCKJJ35 | Other equity securities | - |
 
 **Note**: Per ASU 2016-01 (effective 2018), equity securities are carried at fair value with changes recognized in income (not AOCI).
 

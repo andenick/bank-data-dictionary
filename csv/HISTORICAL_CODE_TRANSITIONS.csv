@@ -24,7 +24,6 @@ transition_date,schedule,item,old_mdrm,new_mdrm,description,reason,impact,notes
 2011-03-31,HC-D,4.c.1,BHCK3536,BHCKK200,Commercial MBS - Agency,MBS granular breakout,New line item,
 2011-03-31,HC-D,4.c.2,BHCK3536,BHCKK201,Commercial MBS - Other,MBS granular breakout,New line item,
 2011-03-31,HC-D,5.b,BHCK3537,BHCKK202,Other Debt Securities,Debt securities breakout,Code change,
-2011-03-31,HC-N,Memo_7,NEW,BHCKK158,Troubled Debt Restructurings Total,TDR disclosure,New line item,Post-crisis TDR reporting requirement
 2014-03-31,HC-R,Part_I_26,NEW,BHCAP859,Common Equity Tier 1 Capital,Basel III implementation,New concept,Basel III capital reform
 2014-03-31,HC-R,Part_II,BHCK7205,BHCAA223,Risk-Weighted Assets,Basel III implementation,Code change,New RWA calculation methodology
 2014-03-31,HC-R,Part_I_44,BHCK8274,BHCA8274,Tier 1 Capital,Basel III implementation,Code change,Redefined under Basel III
@@ -33,7 +32,7 @@ transition_date,schedule,item,old_mdrm,new_mdrm,description,reason,impact,notes
 2014-03-31,HC-B,HTM,NEW,BHCKJJ34,Held-to-Maturity Securities Total,ASU 2013-12,New code,New HTM amortized cost reporting
 2014-03-31,HC-Q,1.d,NEW,BHCKJF86,Derivative Assets Fair Value,SFAS 157 update,New line item,Separate derivative FV disclosure
 2014-03-31,HC-Q,2.d,NEW,BHCKJF87,Derivative Liabilities Fair Value,SFAS 157 update,New line item,
-2016-01-01,HC-R,Buffer,NEW,BHCAK379,Capital Conservation Buffer,Basel III phase-in,New concept,2.5% fully phased in 2019
+2016-01-01,HC-R,Buffer,NEW,BHCAH311,Capital Conservation Buffer,Basel III phase-in,New concept,2.5% fully phased in 2019; code corrected to BHCAH311 (institution-specific capital buffer); prior placeholder was an unrelated NCUA item
 2016-01-01,HC-R,Surcharge,NEW,BHCAP862,G-SIB Capital Surcharge,G-SIB requirements,New concept,Method 1 or Method 2 based
 2018-03-31,HC-D,1,BHCK3531,BHCM3531,U.S. Treasury Securities (Trading),Domestic/foreign split,Prefix change,BHCM for domestic only; BHCT for total
 2018-03-31,HC-D,2,BHCK3532,BHCM3532,U.S. Government Agency Obligations,Domestic/foreign split,Prefix change,
@@ -45,18 +44,16 @@ transition_date,schedule,item,old_mdrm,new_mdrm,description,reason,impact,notes
 2018-03-31,HC-D,15,BHCK3548,BHCT3548,Total Trading Liabilities,Domestic/foreign split,Prefix change,
 2018-03-31,HC,12,BHCK2170,BHCT2170,Total Assets,Domestic/foreign split,Prefix change,BHCT for consolidated totals
 2018-03-31,HC,27,BHCK3210,BHCT3210,Total Equity Capital,Domestic/foreign split,Prefix change,
-2018-03-31,HC,13.a,BHCK2200,BHCM2200,Total Deposits Domestic,Domestic/foreign split,Prefix change,BHCM for domestic
 2018-03-31,HC-B,AFS,BHCK1773,BHCT1773,Available-for-Sale Securities Total,Domestic/foreign split,Prefix change,BHCT for consolidated
 2018-03-31,HC-B,1.a,NEW,BHCKHT59,AFS U.S. Treasury Securities,Securities detail breakout,New line item,
 2018-03-31,HC-B,1.a,NEW,BHCKHT60,HTM U.S. Treasury Securities,Securities detail breakout,New line item,
-2018-03-31,HC-B,7,NEW,BHCTJJ33,Equity Securities with FV,Securities detail breakout,New line item,ASU 2016-01 equity reclassification
+2018-03-31,HC-B,7,NEW,BHCKJA22,Equity Securities with FV,Securities detail breakout,New line item,ASU 2016-01 equity reclassification; code corrected to BHCKJA22 (equity securities w/ readily determinable FV not held for trading)
 2018-06-30,HC-D,5.a,NEW,BHCKHT62,Structured Financial Products,Granular breakout,New line item,CDOs/CLOs/structured products breakout
 2018-06-30,HC-D,6.a,NEW,BHCKHT63,Loans - 1-4 Family Residential (Trading),Granular breakout,New line item,Post-2018 loan detail
 2018-06-30,HC-D,6.b,NEW,BHCKHT64,Loans - Other Real Estate (Trading),Granular breakout,New line item,
 2018-06-30,HC-D,6.d,NEW,BHCKHT65,Consumer Loans (Trading),Granular breakout,New line item,
-2018-01-01,HC-R,Part_I_46,NEW,BHCAG490,Total Leverage Exposure (SLR),SLR finalization,New line item,Supplementary Leverage Ratio denominator
+2018-01-01,HC-R,Part_I_46,NEW,BHCALE88,Total Leverage Exposure (SLR),SLR finalization,New line item,Supplementary Leverage Ratio denominator; code corrected to BHCALE88 (total leverage exposure for SLR)
 2020-01-01,HI,4,BHCK4230,BHCT4230,Provision for Credit Losses,CECL adoption,Prefix change,ASU 2016-13 CECL implementation
 2020-01-01,HC-C,12.c,BHCK3123,BHCT3123,Allowance (ALLL to ACL),CECL adoption,Scope change,ALLL renamed to ACL under CECL
 2020-01-01,HC,4.b,BHCK2125,BHCTB528,Loans Net of Unearned Income,CECL adoption,Code change,Reflects net of ACL
-2022-03-31,HC-R,Part_I,SA_ONLY,BHCAS396+,Standardized RWA by Category,SA-only transition,New items,Banks moving off advanced approaches for credit risk
-2023-03-31,HC-H,ALL,REVISED,BHCKA564+,Interest Sensitivity Repricing,Rate environment update,Revised thresholds,Updated repricing buckets post-rate cycle
+2022-03-31,HC-R,Part_I,SA_ONLY,BHCAA223,Standardized Total Risk-Weighted Assets,SA-only transition,New items,Banks moving off advanced approaches for credit risk; code corrected to BHCAA223 (standardized total RWA)

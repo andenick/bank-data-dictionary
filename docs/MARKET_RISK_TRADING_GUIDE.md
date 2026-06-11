@@ -402,7 +402,7 @@ Market risk capital requirements apply to trading book positions.
 | 100% RW | BHCKS398 | C&I, CRE, most loans | Standard |
 | 150% RW | BHCKS399 | HVCRE, non-IG | High |
 | Securitization | BHCKS400 | ABS, MBS positions | Variable |
-| Equity | BHCKS401 | Equity exposures | High |
+| Equity | - | Equity exposures (computed across risk-weight bands; no single MDRM code) | High |
 | Derivatives | BHCKS402 | CCR from derivatives | Variable |
 | OBS | BHCKS403 | Commitments, guarantees | CCF applied |
 | **Market Risk** | **BHCKA222** | **Trading book RWA** | **VaR-based** |
@@ -420,7 +420,7 @@ BHCAA223 (Total RWA)
 │   ├── BHCKS398: 100% risk weight
 │   ├── BHCKS399: 150% risk weight
 │   ├── BHCKS400: Securitization RWA
-│   ├── BHCKS401: Equity RWA
+│   ├── Equity RWA (computed; no single code)
 │   ├── BHCKS402: Derivatives CCR RWA
 │   └── BHCKS403: Off-balance sheet RWA
 │

@@ -281,7 +281,7 @@ Yield calculations use:
 | 2.a | RIAD4170 | Interest on deposits |
 | **3** | **BHCK4074** | **Net interest income** |
 | 4 | BHCT4230 | Provision for loan losses |
-| 5 | BHCT4433 | NII after provision |
+| 5 | - | NII after provision (computed: item 3 minus item 4; no MDRM code) |
 | 6 | BHCK4079 | Noninterest income |
 | 6.b | BHCKA220 | Trading revenue |
 | 7 | BHCK4093 | Noninterest expense |

@@ -200,8 +200,8 @@ BHCT3547 = Trading Negative FV + Non-Trading Negative FV
 
 | Type | MDRM | Description |
 |------|------|-------------|
-| Financial standby | BHCK3819 | Guarantee of financial performance |
-| Performance standby | BHCK3821 | Guarantee of non-financial performance |
+| Financial standby | BHCK6566 | Guarantee of financial performance |
+| Performance standby | BHCKD997 | Guarantee of non-financial performance (incl. transaction-related contingencies) |
 | Commercial LC | BHCK3411 | Trade finance |
 
 ---

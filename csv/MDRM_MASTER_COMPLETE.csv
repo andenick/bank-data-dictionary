@@ -75,7 +75,7 @@ EQUITY_NONTRADING_NEG_FV,Equity Non-Trading Negative FV,Gross negative fair valu
 COMMODITY_NONTRADING_NEG_FV,Commodity Non-Trading Negative FV,Gross negative fair value - commodity non-trading hedges,BHCK8748,HC-L,20.b.(4),RCFD8748,RC-L,20.b.(4),-,-,-,S,Liability,1995-03-31,9999-12-31,-,DERIV_NEG_FV,
 TOTAL_ASSETS,Total Assets,Total consolidated assets,BHCT2170,HC,12,RCFD2170,RC,12,-,-,OV1,M,Asset,1976-03-31,9999-12-31,-,-,Primary size metric
 TOTAL_EQUITY,Total Equity Capital,Total equity capital,BHCT3210,HC,28,RCFD3210,RC,28,-,-,CR1,C,Equity,1976-03-31,9999-12-31,-,-,
-TOTAL_DEPOSITS,Total Deposits,Total deposits (domestic),BHCM2200,HC,13.a,RCON2200,RC,13.a,-,-,-,L,Liability,1976-03-31,9999-12-31,-,-,BHCM2200/RCON2200 = deposits in domestic offices = HC/RC item 13.a (item 13.b = foreign offices); verified FR Y-9C HC & FFIEC RC
+TOTAL_DEPOSITS,Total Deposits,Total deposits (domestic),-,HC,13.a,RCON2200,RC,13.a,-,-,-,L,Liability,1976-03-31,9999-12-31,-,-,No atomic FR Y-9C code for domestic deposits (caption; sum BHDM6631+BHDM6636); Call-side RCON2200 = RC item 13.a verified (item 13.b = foreign offices)
 TIER1_CAPITAL,Tier 1 Capital,Tier 1 regulatory capital,BHCA8274,HC-R,Part I-32,RCFA8274,RC-R,Part I-32,-,-,CR1,C,Capital,2014-03-31,9999-12-31,BHCK8274,-,Basel III; mnemonic BHCK->BHCA at 2014 Basel III
 TIER2_CAPITAL,Tier 2 Capital,Tier 2 regulatory capital,BHCA5311,HC-R,Part I-34,RCFA5311,RC-R,Part I-34,-,-,CR1,C,Capital,2014-03-31,9999-12-31,BHCK5311,-,Basel III; mnemonic BHCK->BHCA at 2014 Basel III
 TOTAL_CAPITAL,Total Risk-Based Capital,Total risk-based capital,BHCA3792,HC-R,Part I-35,RCFA3792,RC-R,Part I-35,-,-,CR1,C,Capital,2014-03-31,9999-12-31,BHCK3792,-,Basel III; mnemonic BHCK->BHCA at 2014 Basel III
@@ -85,7 +85,7 @@ SECURITIES_AFS,Available-for-Sale Securities,Securities held available for sale,
 SECURITIES_HTM,Held-to-Maturity Securities,Securities held to maturity,BHCKJJ34,HC-B,M2,RCFDJJ34,RC-B,M2,-,-,-,M,Asset,2014-03-31,9999-12-31,-,-,
 NET_INCOME,Net Income,Net income (year-to-date),BHCT4340,HI,14,RIAD4340,RI,14,-,-,-,E,Income,1976-03-31,9999-12-31,-,-,VERIFIED item 14: RIAD4340 'must equal Schedule RI item 14' (net income attributable to bank/holding company); item 12 is the pre-NCI-split aggregate (code G104) so the 'should be item 12' claim is refuted
 PROVISION_LLP,Provision for Loan Losses,Provision for loan and lease losses,BHCT4230,HI,4,RIAD4230,RI,4,-,-,-,A,Expense,1976-03-31,9999-12-31,-,-,
-NPL_TOTAL,Total Nonperforming Loans,Total nonperforming loans,BHCT1403,HC-N,M7.a,RCFD1403,RC-N,M7.a,-,-,-,A,Asset,1976-03-31,9999-12-31,-,-,
+NPL_TOTAL,Total Nonperforming Loans,Total nonperforming loans,BHCK1403,HC-N,M7.a,RCFD1403,RC-N,M7.a,-,-,-,A,Asset,1976-03-31,9999-12-31,-,-,
 LOANS_NET,Loans and Leases Net,Loans and leases net of unearned income,BHCTB528,HC,4.b,RCFDB528,RC,4.b,-,-,-,A,Asset,1976-03-31,9999-12-31,-,-,
 CASH_BALANCES,Cash and Balances Due,Cash and balances due from depository institutions,BHCK0010,HC,1,RCFD0081,RC,1,-,-,-,L,Asset,1976-03-31,9999-12-31,-,-,
 FED_FUNDS_SOLD,Federal Funds Sold,Federal funds sold and securities purchased under resale agreements,BHCKC225,HC,3,RCFDB987,RC,3,-,-,-,L,Asset,1976-03-31,9999-12-31,-,-,
