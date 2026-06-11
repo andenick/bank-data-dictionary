@@ -30,6 +30,7 @@ Usage
     python validate_reconciliation.py --data bank.csv
     python validate_reconciliation.py --data bank.json --severity CRITICAL
     python validate_reconciliation.py --data bank.csv --all
+    python validate_reconciliation.py --data bank.csv --scope call
 
 Exit code is non-zero if any CRITICAL rule FAILs.
 
@@ -401,19 +402,24 @@ SAMPLE_DATA: Dict[str, float] = {
 # Reporting
 # ---------------------------------------------------------------------------
 def filter_rules(rules: List[Rule], severity: Optional[str],
-                 only_confirmed: bool) -> List[Rule]:
-    """Apply severity and confirmation filters to the rule set.
+                 only_confirmed: bool, scope: str = "all") -> List[Rule]:
+    """Apply scope, severity, and confirmation filters to the rule set.
 
     Args:
         rules: All loaded rules.
         severity: If set, keep only rules of this severity.
         only_confirmed: If True, keep only rules whose status starts with
             ``CONFIRMED`` (i.e. CONFIRMED or CONFIRMED_CURRENT).
+        scope: ``"y9c"``, ``"call"``, or ``"all"`` (default). Selects the
+            filing universe a rule belongs to (``Rule.scope``); ``"all"``
+            applies no scope filter.
 
     Returns:
         The filtered rule list.
     """
     out = rules
+    if scope and scope != "all":
+        out = [r for r in out if r.scope == scope]
     if only_confirmed:
         out = [r for r in out if r.status.startswith("CONFIRMED")]
     if severity:
@@ -483,6 +489,10 @@ def main() -> None:
                         help="Path to data file (CSV with mdrm_code,value or JSON {code: value})")
     parser.add_argument("--sample", action="store_true",
                         help="Run against the built-in real-bank sample (JPMorgan 2025Q4)")
+    parser.add_argument("--scope", type=str, default="all",
+                        choices=["y9c", "call", "all"],
+                        help="Only evaluate rules from this filing universe "
+                             "(y9c = FR Y-9C, call = Call Report; default all)")
     parser.add_argument("--severity", type=str, default=None,
                         choices=["CRITICAL", "HIGH", "MEDIUM", "LOW", "INFO"],
                         help="Only evaluate rules of this severity")
@@ -504,7 +514,7 @@ def main() -> None:
         data = load_data_from_csv(args.data)
 
     rules = load_registry(args.registry)
-    rules = filter_rules(rules, args.severity, args.only_confirmed)
+    rules = filter_rules(rules, args.severity, args.only_confirmed, args.scope)
     results = [evaluate_rule(r, data) for r in rules]
 
     # Sort: failures first, then by severity, then rel_id -- so problems surface.

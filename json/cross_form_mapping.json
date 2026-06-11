@@ -41,7 +41,8 @@
         "Call_Report_031": {"schedule": "RC", "item": "28", "mdrm": "RCFD3210"},
         "Call_Report_041": {"schedule": "RC", "item": "28", "mdrm": "RCFD3210"},
         "FR_Y9LP": {"schedule": "PC", "item": "28", "mdrm": "BHCP3210"},
-        "Pillar3": {"template": "KM1", "row": "1", "mdrm": "N/A"}
+        "Pillar3": {"template": "KM1", "row": "1", "mdrm": "N/A"},
+        "FDIC_SDI": {"variable": "EQ", "mdrm": "RCFD3210", "note": "Empirically confirmed mapping: FDIC SDI total equity EQ <-> Call item 3210 (total bank equity, excluding minority interest). The minority-interest-inclusive Call total G105 scored only 98.6%, so EQ maps to 3210, not G105.", "empirical_agreement": "0.9972 over 666,679 bank-quarters (2001Q1-2026Q1 cross-source concordance)"}
       },
       "validation": "All should match for same entity/period"
     },
@@ -120,7 +121,8 @@
         "FR_Y9C": {"schedule": "HC-C", "item": "12", "mdrm": "BHCKB529"},
         "Call_Report_031": {"schedule": "RC-C", "item": "12", "mdrm": "RCFDB529"},
         "Call_Report_041": {"schedule": "RC-C", "item": "12", "mdrm": "RCFDB529"},
-        "FR_Y14Q": {"schedule": "H", "item": "Loans", "mdrm": "N/A"}
+        "FR_Y14Q": {"schedule": "H", "item": "Loans", "mdrm": "N/A"},
+        "FDIC_SDI": {"variable": "LNLSNET", "expr": "RCFD2122 - RCFD3123 (or RCON2122 - RCON3123)", "note": "Empirically confirmed mapping: FDIC SDI net loans and leases LNLSNET <-> loans net of unearned income (2122) minus the allowance (3123), NOT the Schedule RC-C item-12 net total B529 (B529 basis scored only 77.8%). The 2122-3123 expression scored 99.89%.", "empirical_agreement": "0.9989 over 656,563 bank-quarters (2001Q1-2026Q1 cross-source concordance)"}
       },
       "validation": "Should match between balance sheet and loan schedule"
     },

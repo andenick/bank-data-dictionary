@@ -2,7 +2,7 @@
 
 > **Master index for navigating the complete regulatory data dictionary**
 >
-> Version 8.0 | Updated: 2026-06-11
+> Version 9.0 | Updated: 2026-06-11
 
 ---
 
@@ -24,7 +24,7 @@
 | Build automated pipelines | [JSON Schemas](#json-schemas-for-ai-agents) |
 | Map Y-9C to Call Report | [json/cross_form_mapping.json](../json/cross_form_mapping.json) |
 | See what adds up to what | [RECONCILIATION_HIERARCHY.md](RECONCILIATION_HIERARCHY.md) |
-| See which identities are empirically confirmed (208M filings) | [EMPIRICAL_VALIDATION.md](EMPIRICAL_VALIDATION.md) · [registry csv](../csv/RELATIONSHIP_REGISTRY.csv) |
+| See which identities are empirically confirmed (Y-9C 208M + Call 1.9B filings) | [EMPIRICAL_VALIDATION.md](EMPIRICAL_VALIDATION.md) · [registry csv](../csv/RELATIONSHIP_REGISTRY.csv) |
 | Check temporal coverage & vintages | [COVERAGE_PROVENANCE.md](COVERAGE_PROVENANCE.md) |
 
 > **New in v6.0:** the dictionary now spans the full U.S. bank-data universe (Federal Reserve, FFIEC-joint, FDIC, NCUA, OCC, SEC, CFPB), not just FR Y-9C. Start at [COLLECTIONS_CATALOG.md](COLLECTIONS_CATALOG.md). Companion data-access package: **[FreeNIC](https://github.com/andenick/FreeNIC)**.
@@ -214,4 +214,4 @@ print(f"CET1 minimum: {capital['cet1']['minimum']}")
 
 ---
 
-*Last updated: 2026-06-11 | Version 8.0*
+*Last updated: 2026-06-11 | Version 9.0*

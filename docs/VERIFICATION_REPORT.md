@@ -1,8 +1,103 @@
 # Verification Report
 
-> **Version 8.0 | 2026-06-11** — verification gate for the v8.0 conceptual + empirical rebuild.
+> **Version 9.0 | 2026-06-11** — verification gate for the v9.0 Call-Report empirical layer.
 > **Repository**: github.com/andenick/bank-data-dictionary
-> Earlier gates (v7.0, v6.x, v5.0) are retained below as the historical record.
+> Earlier gates (v8.0, v7.0, v6.x, v5.0) are retained below as the historical record.
+
+---
+
+## v9.0 — Official Call Report edits, validated against 1.9 billion filing rows (2026-06-11)
+
+v8.0 brought the FR Y-9C from token-validity to empirical validity. **v9.0 does the same for the
+Call Report** and adds an independent cross-source check. We acquired the official FFIEC Call
+Report edit checks and calculation linkbases, structured them into the relationship registry, and
+tested every machine-testable one against the full bulk Call Report history — then cross-validated
+16 core concepts against the FDIC's independently-collected SDI. The registry grew additively from
+2,330 to **7,508 relationships** with **no schema breaks** this release.
+
+### Headline results
+
+| Metric | v8.0 | v9.0 |
+|--------|------|------|
+| Filing universes empirically tested | FR Y-9C | **FR Y-9C + Call Report (031/041/051)** |
+| Registry relationships | 2,330 | **7,508** (y9c 2,330 · call 5,162 · cross_source 16) |
+| Official-edit source | FR Y-9C edit checklist | **+ official FFIEC Call Report edit checks & calculation linkbases (CDR XBRL taxonomy, cdr.ffiec.gov)** — 3,615 edits/form + 243 calc identities, forms 031/041/051, cycle 2026-03-31 (v294); 30 historical cycles archived |
+| Rows tested vs real filings | 332 (208M Y-9C rows) | **+ 2,464 Call relationships vs 1.917 BILLION Call rows (2001Q1–2026Q1)**; 63 Y-9C intraseries via LAG() |
+| Cross-source concordance | — | **16/16 concepts CONFIRMED at 99.5–99.97%** vs FDIC SDI (up to 667,551 bank-quarters each) |
+| Registry status distribution | (v8 Y-9C only) | **CONFIRMED 2,564 · CONFIRMED_CURRENT 83 · QUALITY_TOLERANCE 36 · DATA_GAP 48 · NOT_IN_BULK 134 · CONDITIONAL_DOC 224 · OFFICIAL_EDIT_UNMET 7 · not_testable 4,412** — 0 pending/unexplained |
+| Token validity | 4,564 / 4,564 (100%) | **6,475 / 6,475 (100%)** (after whitelisting the three form-name string literals from the official form-number edit) |
+| Schema changes | many CSVs rebuilt (breaking) | **none — additive registry growth + new statuses only** |
+
+### Acquisition
+
+The official Call Report edits are not exposed as a bulk download on the bot-walled human-facing
+forms site (`www.ffiec.gov`); v9.0 obtained them instead from the **CDR public taxonomy download**
+(`cdr.ffiec.gov`), whose XBRL formula linkbases are the same machine-readable edits the regulators
+use to validate filings. Parsing the linkbases directly — rather than re-deriving edits from the
+human-readable instructions — means every tested Call relationship traces to an official edit id or
+calculation-linkbase parent.
+
+### Empirical validation against real filings
+
+All **2,464 machine-testable Call relationships** were evaluated against **1.917 billion rows of
+bulk Call Report filings (2001 Q1 – 2026 Q1)** — **1,392 sign/bound tests** via one bulk scan plus
+**1,072 identity/bound tests** over a per-code extract — with the same `max($1,000, 0.1%)`
+tolerance used for the Y-9C. Verdicts (call scope): **2,225 CONFIRMED/CONFIRMED_CURRENT, 45 LOW-N
+pass, 47 DATA_GAP, 23 QUALITY_TOLERANCE, 117 NOT_IN_BULK, 7 OFFICIAL_EDIT_UNMET** — zero
+unresolved. Separately, **63** FR Y-9C YTD-monotonicity (intraseries) edits were confirmed via a
+`LAG()` window (62 CONFIRMED + 1 CONFIRMED_CURRENT); 221 conditional intraseries edits are
+documented as CONDITIONAL_DOC. Full adjudication: `_rebuild/empirical/ADJUDICATION_V9.md`.
+
+### Cross-source concordance (Call Report vs FDIC SDI)
+
+Sixteen core concepts were checked between the Call Reports and the FDIC's independently-collected
+SDI, bank-quarter by bank-quarter, over up to **667,551 bank-quarters** each. **All 16 concord at
+99.5–99.97%.** The concordance corrected two definitional mappings (see below). The table is in
+`_rebuild/empirical/RESULTS_cross_source.csv`:
+
+| Concept | FDIC var | Call expression | Bank-quarters | Agreement |
+|---|---|---|---:|---:|
+| Total assets | `ASSET` | `RCFD2170` / `RCON2170` | 667,551 | 99.84% |
+| Total liabilities | `LIAB` | `RCFD2948` / `RCON2948` | 666,523 | 99.55% |
+| Total equity | `EQ` | `RCFD3210` / `RCON3210` | 666,679 | 99.72% |
+| Total deposits | `DEP` | `RCON2200 + RCFN2200` | 659,789 | 99.97% |
+| Net loans & leases | `LNLSNET` | `RCFD2122 − RCFD3123` | 656,563 | 99.89% |
+| Net income | `NETINC` | `RIAD4340` | 666,230 | 99.75% |
+
+**Two corrected definitional mappings (findings).** (1) **Total equity → Call `3210`, not `G105`**:
+FDIC `EQ` excludes minority interest, so it maps to `3210` (99.72%); the minority-interest-inclusive
+`G105` scored only 98.6%. (2) **Net loans → `2122 − 3123`, not `B529`**: FDIC `LNLSNET` is loans net
+of unearned income minus the allowance (99.89%), not the Schedule RC-C item-12 net total `B529`
+(which scored only 77.8%). Both are recorded in `json/cross_form_mapping.json`.
+
+### Adversarial rigor — parser-hazard catch #2
+
+The v8.0 adjudication caught a harness bug that read `A − (B + C)` as `A + B + C`. v9.0 caught a
+**second silent parser hazard of the same family**: the side-parser tokenized only `+`/`-`, so a
+**multiplication was dropped** — the official 0%-conversion edit `RCFDS541 = RCFDS540 * 0` was read
+as `S541 = S540` (≈0.35–0.67 pass) instead of the correct `S541 = 0`. The fix rewrote the affected
+registry expressions to the faithful form, and they re-tested at **1.0000** (`REL_5717`,
+`REL_5718`). The parser was hardened to guard against dropped multiplication. This continues the
+v8.0 discipline of tracking a failing empirical result to its true source before recording a
+verdict.
+
+### OFFICIAL_EDIT_UNMET — seven edits kept as findings
+
+Seven official edits do not hold even on the correct window/population and are kept deliberately as
+research findings (full detail in `_rebuild/empirical/ADJUDICATION_V9.md`). Headlines: (1) a
+**phantom decomposition** — the official calc linkbase decomposes `RCONM288` into
+`RCONL191 + RCONL192`, codes with **zero observations** in all public bulk data, while `M288` is
+reported directly (51,992 filings); not empirically derivable, not enforced. (2) An **RC-R Part II
+securitization bound** (`R7020.6507`) whose headline 0.983 is zero-filer-dominated; among **active
+securitizers (n=3,493) it holds at only 0.452** — a real, substantial violation population. The
+other five are soft RC-O / RI-C-RC-C CECL quality bounds (0.66–0.94) whose violation rates are the
+finding.
+
+### Token audit
+
+Repo-wide token validity holds at **6,475 / 6,475 (100%)** after whitelisting the three form-name
+string literals (the verbatim "031"/"041"/"051" form names) flagged by the official form-number
+edit — a documented false-positive, not an edit.
 
 ---
 

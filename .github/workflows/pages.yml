@@ -11,6 +11,11 @@ permissions:
   pages: write
   id-token: write
 
+# Node 20 runners are removed 2026-09-16; opt all JS actions into Node 24 now
+# (per the GitHub deprecation notice surfaced on the v8.0 deploy run).
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 # Allow one concurrent deployment; cancel in-progress runs for the same group.
 concurrency:
   group: pages
