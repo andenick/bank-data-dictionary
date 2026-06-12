@@ -70,6 +70,7 @@ nav:
   - Overview:
       - Collections Catalog: COLLECTIONS_CATALOG.md
       - Coverage & Provenance: COVERAGE_PROVENANCE.md
+      - Data Sources: DATA_SOURCES.md
       - Master Regulatory Guide: MASTER_REGULATORY_GUIDE.md
       - Empirical Validation: EMPIRICAL_VALIDATION.md
       - Research Note — Empirical Findings: RESEARCH_NOTE_EMPIRICAL_FINDINGS.md

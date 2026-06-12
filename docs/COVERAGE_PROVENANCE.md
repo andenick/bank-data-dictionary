@@ -185,6 +185,9 @@ A simple way to weight sources by directness:
 
 ## 7. Sources
 
+For an annotated directory of these suppliers — what each provides, what it covers, what
+it is best used for, and any citation requirements — see [Data Sources](DATA_SOURCES.md).
+
 - Federal Reserve MDRM (variable dictionary): https://www.federalreserve.gov/apps/mdrm/
 - FFIEC Central Data Repository (Call Report / UBPR bulk): https://cdr.ffiec.gov/public/pws/downloadbulkdata.aspx
 - FFIEC NIC / NPW (entity attributes, FR Y-15): https://www.ffiec.gov/NPW/

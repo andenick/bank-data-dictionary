@@ -445,6 +445,8 @@ asset_quality = {
 | NCUA | https://ncua.gov/analysis/credit-union-corporate-call-report-data | 5300 credit-union Call Reports (FS220) |
 | FRASER (OCC) | https://fraser.stlouisfed.org/ | Historical OCC national-bank reports (1863–1941) |
 
+For an annotated directory of every source — what each provides, its coverage, what it is best used for, and citation requirements — see [`docs/DATA_SOURCES.md`](docs/DATA_SOURCES.md).
+
 ---
 
 ## Companion Project: FreeNIC
