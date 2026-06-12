@@ -192,8 +192,8 @@ A simple way to weight sources by directness:
 - Federal Reserve Bank of New York — Balance Sheets & Income Statements dataset: https://www.newyorkfed.org/research/banking_research/balance-sheets-income-statements
 - OCC Annual Reports: https://www.occ.treas.gov/publications-and-resources/publications/annual-report/index-annual-report.html
 - FDIC BankFind / SDI: https://banks.data.fdic.gov/ · https://banks.data.fdic.gov/api/
-- FDIC Summary of Deposits: https://www7.fdic.gov/sod/
-- Federal Reserve DFAST / stress tests: https://www.federalreserve.gov/supervisionreg/dfast.htm
+- FDIC Summary of Deposits: https://www.fdic.gov/bank-financial-reports/summary-deposits
+- Federal Reserve DFAST / stress tests: https://www.federalreserve.gov/supervisionreg/dfa-stress-tests.htm
 - FRED (St. Louis Fed): https://fred.stlouisfed.org/
 - SEC EDGAR: https://data.sec.gov/
 - CFPB HMDA: https://ffiec.cfpb.gov/

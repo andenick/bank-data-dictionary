@@ -1,6 +1,6 @@
 site_name: "Bank Regulatory Data Dictionary"
 site_description: "A catalogue and field-level mapping of the U.S. bank regulatory data universe — Federal Reserve, FFIEC, FDIC, NCUA, OCC and more."
-site_url: https://github.com/andenick/bank-data-dictionary
+site_url: https://andenick.github.io/bank-data-dictionary/
 repo_url: https://github.com/andenick/bank-data-dictionary
 repo_name: andenick/bank-data-dictionary
 

@@ -24,7 +24,7 @@ All facts are sourced to official `.gov` sites. Unconfirmed numbers are flagged 
 | **Who files** | All FDIC-insured commercial banks and savings institutions (data sourced from their Call Reports). |
 | **Frequency** | Quarterly (financial reports), downloadable back to 1984. |
 | **Relationship to Call Report** | Derived from the Reports of Condition and Income (FFIEC 031/041/051) + thrift data; repackages them as standardized, queryable financial variables plus computed performance metrics. SDI is the FDIC analog/companion to the FFIEC UBPR. |
-| **Official URL** | https://www.fdic.gov/node/118336 (SDI home); legacy tool https://www7.fdic.gov/sdi/ ; downloads https://www.fdic.gov/resources/tools/bank-data-guide/data-download.html |
+| **Official URL** | https://www.fdic.gov/node/118336 (SDI home); downloads https://www.fdic.gov/resources/tools/bank-data-guide/data-download.html |
 | **API base** | `https://api.fdic.gov/banks/` (was `https://banks.data.fdic.gov/api/`) |
 | **API docs** | https://api.fdic.gov/banks/docs |
 
@@ -74,7 +74,7 @@ API key optional (recommended, not required).
 | **Frequency** | Annual snapshot as of **June 30**; history back to 1994. Covers 70,000+ domestic offices of 4,000+ institutions. |
 | **Official URL** | https://www.fdic.gov/bank-financial-reports/summary-deposits ; explorer https://banks.data.fdic.gov/bankfind-suite/SOD |
 | **Reporting instructions** | https://www.fdic.gov/bank-financial-reports/2025-sod-instructions.pdf |
-| **API** | `https://api.fdic.gov/banks/sod` (legacy tool https://www7.fdic.gov/sod/) |
+| **API** | `https://api.fdic.gov/banks/sod` (Summary of Deposits home https://www.fdic.gov/bank-financial-reports/summary-deposits) |
 
 ### SOD field groups (live schema — 80 fields)
 
