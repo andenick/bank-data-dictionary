@@ -423,3 +423,13 @@ Everything needed to reproduce the verdicts is public:
 
 Take any `CONFIRMED` row, evaluate its expression against the bulk filings with a
 `max($1,000, 0.1%)` tolerance, and you will recover its published pass rate.
+
+---
+
+## A researcher-facing summary
+
+For a narrative walk-through of the empirical findings — the eight official edits that don't hold in
+filed data, the two corrected FDIC↔Call definitional mappings, the rulebook's 25-year quintupling,
+and the UBPR construction conventions — see the
+**[Research Note — Empirical Findings](RESEARCH_NOTE_EMPIRICAL_FINDINGS.md)**. It distils the results
+on this page into a citable summary, with a one-line reproduction recipe for each finding.

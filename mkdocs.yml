@@ -72,6 +72,7 @@ nav:
       - Coverage & Provenance: COVERAGE_PROVENANCE.md
       - Master Regulatory Guide: MASTER_REGULATORY_GUIDE.md
       - Empirical Validation: EMPIRICAL_VALIDATION.md
+      - Research Note — Empirical Findings: RESEARCH_NOTE_EMPIRICAL_FINDINGS.md
       - Official Edit History: EDIT_HISTORY.md
   - Core systems:
       - MDRM Meta-Dictionary: MDRM_GUIDE.md
