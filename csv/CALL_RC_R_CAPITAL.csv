@@ -1,0 +1,362 @@
+line_number,item_description,part,column,mdrm_code,forms,start_date,notes
+1,"Common stock plus related surplus, net of treasury stock and unearned ESOP shares",Part I,RCFA,RCFAP742,031,2014-03-31,
+1,"Common stock plus related surplus, net of treasury stock and unearned ESOP shares",Part I,RCOA,RCOAP742,041/051,2017-03-31,
+2,Retained earnings,Part I,RCFA,RCFAKW00,031,2019-03-31,
+2,Retained earnings,Part I,RCOA,RCOAKW00,041/051,2019-03-31,
+2.a,"CECL transition election in effect (0=No, 1=3-year, 2=5-year)",Part I,RCOA,RCOAJJ29,031/041,2019-03-31,election item
+3,Accumulated other comprehensive income (AOCI),Part I,RCFA,RCFAB530,031,2014-03-31,
+3,Accumulated other comprehensive income (AOCI),Part I,RCOA,RCOAB530,041,2017-03-31,
+3,Accumulated other comprehensive income (AOCI),Part I,RCOA,RCOAJJ29,051,2019-03-31,
+3.a,"AOCI opt-out election (1=Yes, 0=No; advanced approaches must enter 0)",Part I,RCOA,RCOAP838,031/041,2017-03-31,election item
+4,Common equity tier 1 minority interest includable in CET1 capital,Part I,RCFA,RCFAP839,031,2014-03-31,
+4,Common equity tier 1 minority interest includable in CET1 capital,Part I,RCOA,RCOAP839,041,2017-03-31,
+4,Common equity tier 1 minority interest includable in CET1 capital,Part I,RCOA,RCOAB530,051,2017-03-31,
+5,Common equity tier 1 capital before adjustments and deductions (sum of items 1 through 4),Part I,RCFA,RCFAP840,031,2014-03-31,
+5,Common equity tier 1 capital before adjustments and deductions (sum of items 1 through 4),Part I,RCOA,RCOAP840,041,2017-03-31,
+5,Common equity tier 1 capital before adjustments and deductions (sum of items 1 through 4),Part I,RCOA,RCOAP838,051,2017-03-31,election item
+6,LESS: Goodwill net of associated deferred tax liabilities (DTLs),Part I,RCFA,RCFAP841,031,2014-03-31,
+6,LESS: Goodwill net of associated deferred tax liabilities (DTLs),Part I,RCOA,RCOAP841,041,2017-03-31,
+6,LESS: Goodwill net of associated deferred tax liabilities (DTLs),Part I,RCOA,RCOAP839,051,2017-03-31,
+7,"LESS: Intangible assets (other than goodwill and MSAs), net of associated DTLs",Part I,RCFA,RCFAP842,031,2014-03-31,
+7,"LESS: Intangible assets (other than goodwill and MSAs), net of associated DTLs",Part I,RCOA,RCOAP842,041,2017-03-31,
+7,"LESS: Intangible assets (other than goodwill and MSAs), net of associated DTLs",Part I,RCOA,RCOAP840,051,2017-03-31,
+8,"LESS: DTAs that arise from net operating loss and tax credit carryforwards, net of related valuation allowances and net of DTLs",Part I,RCFA,RCFAP843,031,2014-03-31,
+8,"LESS: DTAs that arise from net operating loss and tax credit carryforwards, net of related valuation allowances and net of DTLs",Part I,RCOA,RCOAP843,041,2017-03-31,
+8,"LESS: DTAs that arise from net operating loss and tax credit carryforwards, net of related valuation allowances and net of DTLs",Part I,RCOA,RCOAP841,051,2017-03-31,
+9.a,AOCI-related adjustments: LESS: Net unrealized gains (losses) on available-for-sale debt securities,Part I,RCFA,RCFAP844,031,2015-03-31,
+9.a,AOCI-related adjustments: LESS: Net unrealized gains (losses) on available-for-sale debt securities,Part I,RCOA,RCOAP844,041,2017-03-31,
+9.c,AOCI-related adjustments: LESS: Accumulated net gains (losses) on cash flow hedges,Part I,RCFA,RCFAP846,031,2015-03-31,
+9.c,AOCI-related adjustments: LESS: Accumulated net gains (losses) on cash flow hedges,Part I,RCOA,RCOAP846,041,2017-03-31,
+9.d,AOCI-related adjustments: LESS: Amounts in AOCI attributed to defined benefit postretirement plans,Part I,RCFA,RCFAP847,031,2015-03-31,
+9.d,AOCI-related adjustments: LESS: Amounts in AOCI attributed to defined benefit postretirement plans,Part I,RCOA,RCOAP847,041,2017-03-31,
+9.e,AOCI-related adjustments: LESS: Net unrealized gains (losses) on held-to-maturity securities included in AOCI,Part I,RCFA,RCFAP848,031,2015-03-31,
+9.e,AOCI-related adjustments: LESS: Net unrealized gains (losses) on held-to-maturity securities included in AOCI,Part I,RCOA,RCOAP848,041,2017-03-31,
+9.f,AOCI-related adjustments: LESS: Accumulated net gain (loss) on cash flow hedges (opt-out No only),Part I,RCFA,RCFAP849,031,2014-03-31,
+9.f,AOCI-related adjustments: LESS: Accumulated net gain (loss) on cash flow hedges (opt-out No only),Part I,RCOA,RCOAP849,041,2017-03-31,
+10.a,LESS: Unrealized net gain (loss) related to changes in fair value of liabilities due to changes in own credit risk,Part I,RCFA,RCFAP850,031,2014-03-31,
+10.a,LESS: Unrealized net gain (loss) related to changes in fair value of liabilities due to changes in own credit risk,Part I,RCOA,RCOAP850,041,2017-03-31,
+10.b,LESS: All other deductions from (additions to) CET1 capital before threshold-based deductions,Part I,RCFA,RCFAQ258,031,2014-03-31,
+10.b,LESS: All other deductions from (additions to) CET1 capital before threshold-based deductions,Part I,RCOA,RCOAQ258,041,2017-03-31,
+11,LESS: Non-significant investments in the capital of unconsolidated financial institutions in the form of common stock that exceed the 10 percent threshold,Part I,RCFA,RCFAP851,031,2014-03-31,OCR_ALIGN_UNCERTAIN: item 11/12 codes P851/P852 adjacent in OCR block; col B advanced uses RCFW
+12,Subtotal (col A: item 5 minus items 6-10.b; col B: item 5 minus items 6-11),Part I,RCFA,RCFAP852,031,2014-03-31,OCR_ALIGN_UNCERTAIN: P851/P852 pair; col B advanced uses RCFW
+12,Subtotal (col A: item 5 minus items 6-10.b; col B: item 5 minus items 6-11),Part I,RCOA,RCOAP852,041,2017-03-31,
+13.a,"LESS: Investments in the capital of unconsolidated financial institutions, net of DTLs, that exceed 25 percent of item 12 (col A non-advanced)",Part I,RCFA,RCFAP857,031,2014-03-31,OCR_ALIGN_UNCERTAIN: 031 col-A 25%-threshold block reused P857/P858/P859 against tokens 14.a/13.a/15.a; low confidence
+13.b,"LESS: MSAs, net of DTLs, that exceed the 10 percent CET1 deduction threshold (col B advanced)",Part I,RCFW,RCFWP853,031,2020-03-31,OCR_ALIGN_UNCERTAIN
+14.a,"LESS: MSAs, net of DTLs, that exceed 25 percent of item 12 (col A non-advanced)",Part I,RCFA,RCFAP858,031,2014-03-31,OCR_ALIGN_UNCERTAIN: see item 13.a note
+14.b,"LESS: Significant investments in common stock of unconsolidated financial institutions, net of DTLs, that exceed the 10 percent threshold (col B advanced)",Part I,RCFW,RCFWP854,031,2020-03-31,OCR_ALIGN_UNCERTAIN
+15.a,"LESS: DTAs from temporary differences not realizable through NOL carrybacks, net of allowances and DTLs, that exceed 25 percent of item 12 (col A non-advanced)",Part I,RCFA,RCFAP859,031,2014-03-31,OCR_ALIGN_UNCERTAIN: see item 13.a note; P859 also item 19 anchor
+15.b,LESS: DTAs from temporary differences ... that exceed the 10 percent threshold (col B advanced),Part I,RCFW,RCFWP855,031,2020-03-31,OCR_ALIGN_UNCERTAIN
+16,"LESS: Amount of significant investments, MSAs, and DTAs exceeding the 15 percent CET1 deduction threshold (col B advanced only)",Part I,RCFW,RCFWP856,031,2020-03-31,
+16,"LESS: Amount of significant investments, MSAs, and DTAs exceeding the 15 percent CET1 deduction threshold (col B advanced only)",Part I,RCOA,RCOAQ258,051,2017-03-31,
+17,LESS: Deductions applied to CET1 capital due to insufficient additional tier 1 and tier 2 capital,Part I,RCFA,RCFAP857,031,2014-03-31,OCR_ALIGN_UNCERTAIN: P857 shared with col-A 25% block; col B advanced uses RCFW
+17,LESS: Deductions applied to CET1 capital due to insufficient additional tier 1 and tier 2 capital,Part I,RCOA,RCOAP857,041,2017-03-31,
+17,LESS: Deductions applied to CET1 capital due to insufficient additional tier 1 and tier 2 capital,Part I,RCOA,RCOAP850,051,2017-03-31,OCR_ALIGN_UNCERTAIN: 051 digest item-number mapping approximate
+18,Total adjustments and deductions for CET1 capital,Part I,RCFA,RCFAP858,031,2014-03-31,OCR_ALIGN_UNCERTAIN: P858 shared with col-A 25% block; col B advanced uses RCFW
+18,Total adjustments and deductions for CET1 capital,Part I,RCOA,RCOAP858,041,2017-03-31,
+18,Total adjustments and deductions for CET1 capital,Part I,RCOA,RCOAP852,051,2017-03-31,
+19,Common equity tier 1 capital (item 12 minus item 18),Part I,RCFA,RCFAP859,031,2014-03-31,col B advanced uses RCFW P859
+19,Common equity tier 1 capital (item 12 minus item 18),Part I,RCOA,RCOAP859,041,2017-03-31,
+19,Common equity tier 1 capital (item 12 minus item 18),Part I,RCOA,RCOALB58,051,2020-03-31,
+13.a.colA,LESS: Investments in unconsolidated financial institutions exceeding 25% of item 12 (col A LB code),Part I,RCFA,RCFALB58,031,2020-03-31,OCR_ALIGN_UNCERTAIN: distinct col-A threshold code from 031 page-2 block
+14.a.colA,LESS: MSAs exceeding 25% of item 12 (col A LB code),Part I,RCFA,RCFALB59,031,2020-03-31,OCR_ALIGN_UNCERTAIN: distinct col-A threshold code
+15.a.colA,LESS: DTAs (temporary differences) exceeding 25% of item 12 (col A LB code),Part I,RCFA,RCFALB60,031,2020-03-31,OCR_ALIGN_UNCERTAIN: distinct col-A threshold code
+20,Additional tier 1 capital instruments plus related surplus,Part I,RCFA,RCFAP860,031,2014-03-31,
+20,Additional tier 1 capital instruments plus related surplus,Part I,RCOA,RCOAP860,041,2017-03-31,
+20,Additional tier 1 capital instruments plus related surplus,Part I,RCOA,RCOALB59,051,2020-03-31,
+21,Non-qualifying capital instruments subject to phase-out from additional tier 1 capital,Part I,RCFA,RCFAP861,031,2014-03-31,
+21,Non-qualifying capital instruments subject to phase-out from additional tier 1 capital,Part I,RCOA,RCOAP861,041,2017-03-31,
+21,Non-qualifying capital instruments subject to phase-out from additional tier 1 capital,Part I,RCOA,RCOALB60,051,2020-03-31,
+22,Tier 1 minority interest not included in common equity tier 1 capital,Part I,RCFA,RCFAP862,031,2014-03-31,
+22,Tier 1 minority interest not included in common equity tier 1 capital,Part I,RCOA,RCOAP862,041,2017-03-31,
+22,Tier 1 minority interest not included in common equity tier 1 capital,Part I,RCOA,RCOAP857,051,2017-03-31,
+23,"Additional tier 1 capital before deductions (sum of items 20, 21, and 22)",Part I,RCFA,RCFAP863,031,2014-03-31,
+23,"Additional tier 1 capital before deductions (sum of items 20, 21, and 22)",Part I,RCOA,RCOAP863,041,2017-03-31,
+23,"Additional tier 1 capital before deductions (sum of items 20, 21, and 22)",Part I,RCOA,RCOAP858,051,2017-03-31,
+24,LESS: Additional tier 1 capital deductions,Part I,RCFA,RCFAP864,031,2014-03-31,
+24,LESS: Additional tier 1 capital deductions,Part I,RCOA,RCOAP864,041,2017-03-31,
+24,LESS: Additional tier 1 capital deductions,Part I,RCOA,RCOAP859,051,2017-03-31,
+25,"Additional tier 1 capital (greater of item 23 minus item 24, or zero)",Part I,RCFA,RCFAP865,031,2014-03-31,
+25,"Additional tier 1 capital (greater of item 23 minus item 24, or zero)",Part I,RCOA,RCOAP865,041,2017-03-31,
+25,"Additional tier 1 capital (greater of item 23 minus item 24, or zero)",Part I,RCOA,RCOAP860,051,2017-03-31,
+26,Tier 1 capital (sum of item 19 and item 25),Part I,RCFA,RCFA8274,031,2014-03-31,
+26,Tier 1 capital (sum of item 19 and item 25),Part I,RCOA,RCOA8274,041,2017-03-31,
+26,Tier 1 capital (sum of item 19 and item 25),Part I,RCOA,RCOAP861,051,2017-03-31,
+27,Average total consolidated assets,Part I,RCFA,RCFAKW03,031,2019-03-31,
+27,Average total consolidated assets,Part I,RCOA,RCOAKW03,041,2019-03-31,
+27,Average total consolidated assets,Part I,RCOA,RCOAP862,051,2017-03-31,
+28,LESS: Deductions from CET1 capital and additional tier 1 capital,Part I,RCFA,RCFAP875,031,2014-03-31,
+28,LESS: Deductions from CET1 capital and additional tier 1 capital,Part I,RCOA,RCOAP875,041,2017-03-31,
+28,LESS: Deductions from CET1 capital and additional tier 1 capital,Part I,RCOA,RCOAP863,051,2017-03-31,
+29,LESS: Other deductions from (additions to) assets for leverage ratio purposes,Part I,RCFA,RCFAB596,031,2014-03-31,
+29,LESS: Other deductions from (additions to) assets for leverage ratio purposes,Part I,RCOA,RCOAB596,041,2017-03-31,
+29,LESS: Other deductions from (additions to) assets for leverage ratio purposes,Part I,RCOA,RCOAP864,051,2017-03-31,
+30,Total assets for the leverage ratio (item 27 minus items 28 and 29),Part I,RCFA,RCFAA224,031,2014-03-31,
+30,Total assets for the leverage ratio (item 27 minus items 28 and 29),Part I,RCOA,RCOAA224,041,2017-03-31,
+30,Total assets for the leverage ratio (item 27 minus items 28 and 29),Part I,RCOA,RCOAP865,051,2017-03-31,
+31,Leverage ratio (item 26 divided by item 30) [percentage],Part I,RCFA,RCFA7204,031,2014-03-31,"ratio item, percentage"
+31,Leverage ratio (item 26 divided by item 30) [percentage],Part I,RCOA,RCOA7204,041,2017-03-31,"ratio, percentage"
+31,Leverage ratio (item 26 divided by item 30) [percentage],Part I,RCOA,RCOA8274,051,2017-03-31,
+31.a,"Community bank leverage ratio (CBLR) framework election in effect? (1=Yes, 0=No)",Part I,RCOA,RCOALE74,031/041,2020-03-31,election item
+31.b,Standardized Approach for Counterparty Credit Risk (SA-CCR) opt-in election (1=Yes),Part I,RCOA,RCOANC99,031/041,2021-12-31,election item
+32,"Total assets (Schedule RC, item 12); must be less than $10 billion",Part I,RCFA,RCFA2170,031,2020-03-31,CBLR qualifying criterion
+32,"Total assets (Schedule RC, item 12); must be less than $10 billion",Part I,RCOA,RCOA2170,041,2020-03-31,CBLR qualifying criterion
+32,"Total assets (Schedule RC, item 12); must be less than $10 billion",Part I,RCOA,RCOAKW03,051,2019-03-31,
+33,"Trading assets and trading liabilities (col A dollar amount; col B as % of total assets, 5% limit)",Part I,RCFA,RCFAKX77,031,2020-03-31,CBLR; col B RCFW KX78 (percentage)
+33,"Trading assets and trading liabilities (col A dollar amount; col B as % of total assets, 5% limit)",Part I,RCOA,RCOAKX77,041,2020-03-31,CBLR
+33,"Trading assets and trading liabilities (col A dollar amount; col B as % of total assets, 5% limit)",Part I,RCOA,RCOAP875,051,2017-03-31,
+34.a,Off-balance sheet exposures: Unused portion of conditionally cancellable commitments,Part I,RCFA,RCFAKX79,031,2020-03-31,CBLR
+34.a,Off-balance sheet exposures: Unused portion of conditionally cancellable commitments,Part I,RCOA,RCOAKX78,041,2020-03-31,CBLR
+34.b,"Securities lent and borrowed (Schedule RC-L, sum of items 6.a and 6.b)",Part I,RCFA,RCFAKX80,031,2020-03-31,CBLR
+34.b,"Securities lent and borrowed (Schedule RC-L, sum of items 6.a and 6.b)",Part I,RCOA,RCOAKX79,041,2020-03-31,CBLR
+34.c,Other off-balance sheet exposures,Part I,RCFA,RCFAKX81,031,2020-03-31,CBLR
+34.c,Other off-balance sheet exposures,Part I,RCOA,RCOAKX81,041,2020-03-31,CBLR
+34.d,"Total off-balance sheet exposures (col A dollar; col B as % of total assets, 25% limit)",Part I,RCFA,RCFAKX82,031,2020-03-31,CBLR; col B RCFW KX83 (percentage)
+34.d,"Total off-balance sheet exposures (col A dollar; col B as % of total assets, 25% limit)",Part I,RCOA,RCOAKX82,041,2020-03-31,CBLR; col B KX83 percentage
+35,Unconditionally cancellable commitments,Part I,RCFA,RCFAS540,031,2020-03-31,CBLR
+35,Unconditionally cancellable commitments,Part I,RCOA,RCOAS540,041,2020-03-31,CBLR
+35,Unconditionally cancellable commitments,Part I,RCOA,RCOAA224,051,2017-03-31,
+36,Investments in the tier 2 capital of unconsolidated financial institutions,Part I,RCFA,RCFALB61,031,2020-03-31,CBLR
+36,Investments in the tier 2 capital of unconsolidated financial institutions,Part I,RCOA,RCOALB61,041,2020-03-31,CBLR
+36,Investments in the tier 2 capital of unconsolidated financial institutions,Part I,RCOA,RCOA7204,051,2017-03-31,ratio
+37,Allocated transfer risk reserve,Part I,RCFA,RCFA3128,031,2020-03-31,CBLR
+37,Allocated transfer risk reserve,Part I,RCOA,RCOA3128,041,2020-03-31,CBLR
+37,Allocated transfer risk reserve,Part I,RCOA,RCOALE74,051,2020-03-31,ratio; CBLR framework banks only
+38.a,Amount of allowances for credit losses on PCD assets: Loans and leases held for investment,Part I,RCFA,RCFAJJ30,031,2020-03-31,CBLR
+38.a,Amount of allowances for credit losses on PCD assets: Loans and leases held for investment,Part I,RCOA,RCOAJJ30,041,2020-03-31,CBLR
+38.b,PCD allowances: Held-to-maturity debt securities,Part I,RCFA,RCFAJJ31,031,2020-03-31,CBLR
+38.b,PCD allowances: Held-to-maturity debt securities,Part I,RCOA,RCOAJJ31,041,2020-03-31,CBLR
+38.c,PCD allowances: Other financial assets measured at amortized cost,Part I,RCFA,RCFAJJ32,031,2020-03-31,CBLR
+38.c,PCD allowances: Other financial assets measured at amortized cost,Part I,RCOA,RCOAJJ32,041,2020-03-31,CBLR
+39,Tier 2 capital instruments plus related surplus,Part I,RCFA,RCFAP866,031,2014-03-31,
+39,Tier 2 capital instruments plus related surplus,Part I,RCOA,RCOAP866,041,2017-03-31,
+39,Tier 2 capital instruments plus related surplus,Part I,RCOA,RCOAKX77,051,2020-03-31,CBLR
+40,Non-qualifying capital instruments subject to phase-out from tier 2 capital,Part I,RCFA,RCFAP867,031,2014-03-31,
+40,Non-qualifying capital instruments subject to phase-out from tier 2 capital,Part I,RCOA,RCOAP867,041,2017-03-31,
+40,Non-qualifying capital instruments subject to phase-out from tier 2 capital,Part I,RCOA,RCOAKX78,051,2020-03-31,CBLR
+41,Total capital minority interest that is not included in tier 1 capital,Part I,RCFA,RCFAP868,031,2014-03-31,
+41,Total capital minority interest that is not included in tier 1 capital,Part I,RCOA,RCOAP868,041,2017-03-31,
+41,Total capital minority interest that is not included in tier 1 capital,Part I,RCOA,RCOAKX79,051,2020-03-31,CBLR
+42.a,Adjusted allowances for credit losses (AACL) includable in tier 2 capital,Part I,RCFA,RCFA5310,031,2014-03-31,
+42.a,Adjusted allowances for credit losses (AACL) includable in tier 2 capital,Part I,RCOA,RCOA5310,041,2017-03-31,
+42.b,Eligible credit reserves includable in tier 2 capital (advanced approaches exiting parallel run),Part I,RCFW,RCFW5310,031,2014-03-31,col B advanced
+44.a,Tier 2 capital before deductions (sum of items 39 through 42.a),Part I,RCFA,RCFAP870,031,2014-03-31,
+44.a,Tier 2 capital before deductions (sum of items 39 through 42.a),Part I,RCOA,RCOAP870,041,2017-03-31,
+44.b,Tier 2 capital before deductions (advanced approaches exiting parallel run),Part I,RCFW,RCFWP870,031,2014-03-31,col B advanced
+45,LESS: Tier 2 capital deductions,Part I,RCFA,RCFAP872,031,2014-03-31,
+45,LESS: Tier 2 capital deductions,Part I,RCOA,RCOAP872,041,2017-03-31,
+45,LESS: Tier 2 capital deductions,Part I,RCOA,RCOAS540,051,2020-03-31,CBLR; OCR_ALIGN_UNCERTAIN: 051 digest S540 mapping
+46.a,"Tier 2 capital (greater of item 44.a minus item 45, or zero)",Part I,RCFA,RCFA5311,031,2014-03-31,
+46.a,"Tier 2 capital (greater of item 44.a minus item 45, or zero)",Part I,RCOA,RCOA5311,041,2017-03-31,OCR_ALIGN_UNCERTAIN: 041 OCR placed 3792 near item 46/47
+46.b,Tier 2 capital (advanced approaches exiting parallel run),Part I,RCFW,RCFW5311,031,2014-03-31,col B advanced
+47.a,Total capital (sum of items 26 and 46.a),Part I,RCFA,RCFA3792,031,2014-03-31,
+47.a,Total capital (sum of items 26 and 46.a),Part I,RCOA,RCOA3792,041,2017-03-31,
+47.b,Total capital (advanced approaches exiting parallel run),Part I,RCFW,RCFW3792,031,2014-03-31,col B advanced
+48.a,"Total risk-weighted assets (from Schedule RC-R, Part II, item 31)",Part I,RCFA,RCFAA223,031,2014-03-31,
+48.b,"Total risk-weighted assets using advanced approaches rule (from FFIEC 101 Schedule A, item 60)",Part I,RCFW,RCFWA223,031,2014-03-31,col B advanced
+49,Common equity tier 1 capital ratio (item 19 / item 48) [percentage],Part I,RCFA,RCFAP793,031,2014-03-31,ratio; col B RCFW P793
+49,Common equity tier 1 capital ratio (item 19 / item 48) [percentage],Part I,RCOA,RCOAP793,041,2017-03-31,ratio
+49,Common equity tier 1 capital ratio (item 19 / item 48) [percentage],Part I,RCOA,RCOAP867,051,2017-03-31,
+50,Tier 1 capital ratio (item 26 / item 48) [percentage],Part I,RCFA,RCFA7206,031,2014-03-31,ratio; col B RCFW 7206
+50,Tier 1 capital ratio (item 26 / item 48) [percentage],Part I,RCOA,RCOA7206,041,2017-03-31,ratio
+50,Tier 1 capital ratio (item 26 / item 48) [percentage],Part I,RCOA,RCOAP868,051,2017-03-31,
+51,Total capital ratio (item 47 / item 48) [percentage],Part I,RCFA,RCFA7205,031,2014-03-31,ratio; col B RCFW 7205
+51,Total capital ratio (item 47 / item 48) [percentage],Part I,RCOA,RCOA7205,041,2017-03-31,ratio
+51,Total capital ratio (item 47 / item 48) [percentage],Part I,RCOA,RCOA5310,051,2017-03-31,
+52.a,Capital conservation buffer [percentage],Part I,RCFA,RCFAH311,031,2016-03-31,"buffer, percentage"
+52.a,Capital conservation buffer [percentage],Part I,RCOA,RCOAH311,041,2017-03-31,"buffer, percentage; corrected prefix RCOW->RCOA (RCOAH311 verifies)"
+52.b,Total applicable capital buffer (advanced approaches / Category III only) [percentage],Part I,RCFW,RCFWH312,031,2016-03-31,"buffer, percentage"
+52.b,Total applicable capital buffer (advanced approaches / Category III only) [percentage],Part I,RCOW,RCOWH312,041,2016-03-31,"buffer, percentage; col B advanced-approaches variant uses RCOW (RCOWH312 verifies)"
+53,Eligible retained income,Part I,RCFA,RCFAH313,031,2016-03-31,
+53,Eligible retained income,Part I,RCOA,RCOAH313,041,2017-03-31,
+53,Eligible retained income,Part I,RCOA,RCOAP872,051,2017-03-31,
+54,Distributions and discretionary bonus payments during the quarter,Part I,RCFA,RCFAH314,031,2016-03-31,
+54,Distributions and discretionary bonus payments during the quarter,Part I,RCOA,RCOAH314,041,2017-03-31,
+55.a,Supplementary leverage ratio information: Total leverage exposure,Part I,RCFA,RCFAH015,031,2016-09-30,advanced approaches / Category III only
+55.a,Supplementary leverage ratio information: Total leverage exposure,Part I,RCOA,RCOAH015,041,2016-09-30,Category III only
+55.b,Supplementary leverage ratio [percentage],Part I,RCFA,RCFAH036,031,2016-09-30,"ratio, percentage"
+55.b,Supplementary leverage ratio [percentage],Part I,RCOA,RCOAH036,041,2016-09-30,"ratio, percentage"
+1,Cash and balances due from depository institutions,Part II,RCFD,RCFDD957,031,2015-03-31,col A Totals From Schedule RC
+1,Cash and balances due from depository institutions,Part II,RCON,RCOND957,041/051,2017-03-31,col A; OCR_ALIGN_UNCERTAIN balance-sheet matrix
+2.a,Securities: Held-to-maturity securities,Part II,RCFD,RCFDHJ74,031,2017-03-31,col A; OCR_ALIGN_UNCERTAIN balance-sheet matrix
+2.a,Securities: Held-to-maturity securities,Part II,RCON,-,041,,col A not isolable in OCR matrix block | code_not_found_in_source
+2.b,Securities: Available-for-sale debt securities and equity securities with readily determinable fair values not held for trading,Part II,RCFD,RCFDHJ76,031,2017-03-31,col A; OCR_ALIGN_UNCERTAIN
+2.b,Securities: Available-for-sale debt securities and equity securities with readily determinable fair values not held for trading,Part II,RCON,-,041,,col A not isolable in OCR matrix block | code_not_found_in_source
+3.a,Federal funds sold in domestic offices,Part II,RCON,RCOND971,031,2017-03-31,"col A; domestic-offices line (RCON), OCR_ALIGN_UNCERTAIN"
+3.a,Federal funds sold in domestic offices,Part II,RCON,-,041,,col A not isolable in OCR matrix block | code_not_found_in_source
+3.b,Securities purchased under agreements to resell,Part II,RCFD,RCFDH171,031,2015-03-31,col A; OCR_ALIGN_UNCERTAIN
+3.b,Securities purchased under agreements to resell,Part II,RCON,-,041,,col A not isolable in OCR matrix block | code_not_found_in_source
+4.a,Loans and leases held for sale: Residential mortgage exposures,Part II,RCFD,RCFDS416,031,2015-03-31,col A; OCR_ALIGN_UNCERTAIN
+4.a,Loans and leases held for sale: Residential mortgage exposures,Part II,RCON,-,041,,col A not isolable in OCR matrix block | code_not_found_in_source
+4.b,Loans and leases held for sale: High volatility commercial real estate exposures,Part II,RCFD,RCFDS423,031,2015-03-31,col A; OCR_ALIGN_UNCERTAIN
+4.b,Loans and leases held for sale: High volatility commercial real estate exposures,Part II,RCON,-,041,,col A not isolable in OCR matrix block | code_not_found_in_source
+4.c,Loans and leases held for sale: Exposures past due 90 days or more or on nonaccrual,Part II,RCFD,RCFDS431,031,2015-03-31,col A; OCR_ALIGN_UNCERTAIN
+4.c,Loans and leases held for sale: Exposures past due 90 days or more or on nonaccrual,Part II,RCON,-,041,,col A not isolable in OCR matrix block | code_not_found_in_source
+4.d,Loans and leases held for sale: All other exposures,Part II,RCFD,RCFDS439,031,2015-03-31,col A; OCR_ALIGN_UNCERTAIN
+4.d,Loans and leases held for sale: All other exposures,Part II,RCON,-,041,,col A not isolable in OCR matrix block | code_not_found_in_source
+5.a,Loans and leases held for investment: Residential mortgage exposures,Part II,RCFD,RCFDS445,031,2015-03-31,col A; OCR_ALIGN_UNCERTAIN
+5.a,Loans and leases held for investment: Residential mortgage exposures,Part II,RCON,-,041,,col A not isolable in OCR matrix block | code_not_found_in_source
+5.b,Loans and leases held for investment: High volatility commercial real estate exposures,Part II,RCFD,RCFDS449,031,2015-03-31,col A; OCR_ALIGN_UNCERTAIN
+5.b,Loans and leases held for investment: High volatility commercial real estate exposures,Part II,RCON,-,041,,col A not isolable in OCR matrix block | code_not_found_in_source
+5.c,Loans and leases held for investment: Exposures past due 90 days or more or on nonaccrual,Part II,RCFD,RCFDS455,031,2015-03-31,col A; OCR_ALIGN_UNCERTAIN
+5.c,Loans and leases held for investment: Exposures past due 90 days or more or on nonaccrual,Part II,RCON,-,041,,col A not isolable in OCR matrix block | code_not_found_in_source
+5.d,Loans and leases held for investment: All other exposures,Part II,RCFD,-,031,,col A code not isolable in OCR balance-sheet block | code_not_found_in_source
+5.d,Loans and leases held for investment: All other exposures,Part II,RCON,-,041,,col A not isolable in OCR matrix block | code_not_found_in_source
+6,LESS: Allowance for credit losses on loans and leases,Part II,RCFD,RCFD3123,031,1984-03-31,col A; OCR duplicated 3123
+6,LESS: Allowance for credit losses on loans and leases,Part II,RCON,RCON3123,041,2017-03-31,col A; OCR duplicated 3123
+6,LESS: Allowance for credit losses on loans and leases,Part II,RCON,RCOND987,051,2017-03-31,"col A; 051 digest range D987-D990, start captured"
+7,Trading assets,Part II,RCFD,RCFDD976,031,2015-03-31,col A; OCR_ALIGN_UNCERTAIN
+7,Trading assets,Part II,RCON,RCOND976,041,2017-03-31,col A
+7,Trading assets,Part II,RCON,RCOND991,051,2017-03-31,"col A; 051 digest range D991-D999, start captured"
+8,All other assets,Part II,RCFD,RCFDD981,031,2015-03-31,col A; OCR_ALIGN_UNCERTAIN
+8,All other assets,Part II,RCON,-,041,,col A not isolable in OCR matrix block | code_not_found_in_source
+8,All other assets,Part II,RCON,RCONS396,051,2017-03-31,"col A; 051 digest range S396-S419, start captured"
+9.a,On-balance sheet securitization exposures: Held-to-maturity securities,Part II,RCFD,RCFDS475,031,2015-03-31,col A; OCR_ALIGN_UNCERTAIN securitization block S475-S499
+9.a,On-balance sheet securitization exposures: Held-to-maturity securities,Part II,RCON,RCONS475,041,2017-03-31,col A; OCR_ALIGN_UNCERTAIN securitization block
+9.b,On-balance sheet securitization exposures: Available-for-sale securities,Part II,RCFD,-,031,,col A not isolable in securitization OCR block | code_not_found_in_source
+9.b,On-balance sheet securitization exposures: Available-for-sale securities,Part II,RCON,-,041,,col A not isolable | code_not_found_in_source
+9.c,On-balance sheet securitization exposures: Trading assets,Part II,RCFD,-,031,,col A not isolable in securitization OCR block | code_not_found_in_source
+9.c,On-balance sheet securitization exposures: Trading assets,Part II,RCON,-,041,,col A not isolable | code_not_found_in_source
+9.d,All other on-balance sheet securitization exposures,Part II,RCFD,-,031,,col A not isolable in securitization OCR block | code_not_found_in_source
+9.d,All other on-balance sheet securitization exposures,Part II,RCON,-,041,,col A not isolable | code_not_found_in_source
+10,Off-balance sheet securitization exposures,Part II,RCFD,-,031,,col A not isolable in securitization OCR block | code_not_found_in_source
+10,Off-balance sheet securitization exposures,Part II,RCON,-,041/051,,col A not isolable | code_not_found_in_source
+11,Total balance sheet assets (col A must equal Schedule RC item 12),Part II,RCFD,RCFD2170,031,1985-12-31,col A high confidence
+11,Total balance sheet assets (col A must equal Schedule RC item 12),Part II,RCON,RCON2170,041/051,2017-03-31,col A high confidence
+12,Financial standby letters of credit,Part II,RCFD,RCFDD991,031,2015-03-31,col A face/notional; CCF 1.0
+12,Financial standby letters of credit,Part II,RCON,RCOND991,041,2017-03-31,col A; CCF 1.0
+12,Financial standby letters of credit,Part II,RCON,RCONG603,051,2017-03-31,051 digest single code
+13,Performance standby letters of credit and transaction-related contingent items,Part II,RCFD,RCFDD997,031,2015-03-31,col A; CCF 0.5
+13,Performance standby letters of credit and transaction-related contingent items,Part II,RCON,RCOND997,041,2017-03-31,col A; CCF 0.5
+13,Performance standby letters of credit and transaction-related contingent items,Part II,RCON,RCONG604,051,2017-03-31,051 digest single code
+14,Commercial and similar letters of credit with an original maturity of one year or less,Part II,RCFD,RCFDG606,031,2015-03-31,col A; CCF 0.2
+14,Commercial and similar letters of credit with an original maturity of one year or less,Part II,RCON,RCONG606,041,2017-03-31,col A; CCF 0.2
+14,Commercial and similar letters of credit with an original maturity of one year or less,Part II,RCON,RCONG605,051,2017-03-31,051 digest single code
+15,Retained recourse on small business obligations sold with recourse,Part II,RCFD,RCFDG612,031,2015-03-31,col A; CCF 1.0
+15,Retained recourse on small business obligations sold with recourse,Part II,RCON,RCONG612,041,2017-03-31,col A; CCF 1.0
+15,Retained recourse on small business obligations sold with recourse,Part II,RCON,RCONG606,051,2017-03-31,051 digest single code
+16,Repo-style transactions,Part II,RCFD,RCFDS515,031,2015-03-31,col A; CCF 1.0
+16,Repo-style transactions,Part II,RCON,RCONS515,041,2017-03-31,col A; CCF 1.0
+16,Repo-style transactions,Part II,RCON,RCONG607,051,2017-03-31,051 digest single code
+17,All other off-balance sheet liabilities,Part II,RCFD,RCFDG618,031,2015-03-31,col A; CCF 1.0
+17,All other off-balance sheet liabilities,Part II,RCON,RCONG618,041,2017-03-31,col A; CCF 1.0
+17,All other off-balance sheet liabilities,Part II,RCON,RCONG608,051,2017-03-31,051 digest single code
+18.a,Unused commitments: Original maturity of one year or less,Part II,RCFD,RCFDS525,031,2015-03-31,col A; CCF 0.2
+18.a,Unused commitments: Original maturity of one year or less,Part II,RCON,RCONS525,041,2017-03-31,col A; CCF 0.2
+18.b,Unused commitments: Original maturity exceeding one year,Part II,RCFD,RCFDG624,031,2015-03-31,col A; CCF 0.5
+18.b,Unused commitments: Original maturity exceeding one year,Part II,RCON,RCONG624,041,2017-03-31,col A; CCF 0.5
+19,Unconditionally cancelable commitments,Part II,RCFD,RCFDS540,031,2015-03-31,col A; CCF 0.0
+19,Unconditionally cancelable commitments,Part II,RCON,RCONS540,041,2017-03-31,col A; CCF 0.0
+19,Unconditionally cancelable commitments,Part II,RCON,RCONG610,051,2017-03-31,051 digest single code
+20,Over-the-counter derivatives,Part II,RCFD,RCFDS542,031,2015-03-31,col A
+20,Over-the-counter derivatives,Part II,RCON,RCONS542,041,2017-03-31,col A
+20,Over-the-counter derivatives,Part II,RCON,RCONG611,051,2017-03-31,051 digest single code
+21,Centrally cleared derivatives,Part II,RCFD,RCFDS549,031,2015-03-31,col A; OCR_ALIGN_UNCERTAIN
+21,Centrally cleared derivatives,Part II,RCON,RCONS548,041,2017-03-31,col A; OCR_ALIGN_UNCERTAIN
+21,Centrally cleared derivatives,Part II,RCON,RCONG612,051,2017-03-31,051 digest; risk-weighted allocations S515-S579
+22,Unsettled transactions (failed trades),Part II,RCFD,RCFDH191,031,2015-03-31,col A; OCR_ALIGN_UNCERTAIN
+22,Unsettled transactions (failed trades),Part II,RCON,RCONH191,041,2017-03-31,col A; OCR_ALIGN_UNCERTAIN
+22,Unsettled transactions (failed trades),Part II,RCON,RCONG613,051,2017-03-31,051 digest single code
+23,"Total assets, derivatives, off-balance sheet items subject to risk weighting by risk-weight category",Part II,RCFD,-,031,,"per-category sum row, no column A; first bucket code G630 (0%) | code_not_found_in_source"
+23,"Total assets, derivatives, off-balance sheet items subject to risk weighting by risk-weight category",Part II,RCON,-,041,,"per-category sum row, no column A; first bucket G630 (0%) | code_not_found_in_source"
+23,"Total assets, derivatives, off-balance sheet items subject to risk weighting by risk-weight category",Part II,RCON,RCONS579,051,2017-03-31,051 digest single code
+25,Risk-weighted assets by risk-weight category (item 23 multiplied by item 24),Part II,RCFD,-,031,,"per-category product row, no column A; first bucket code G634 (0%) | code_not_found_in_source"
+25,Risk-weighted assets by risk-weight category (item 23 multiplied by item 24),Part II,RCON,-,041,,"per-category product row, no column A; first bucket G634 (0%) | code_not_found_in_source"
+25,Risk-weighted assets by risk-weight category (item 23 multiplied by item 24),Part II,RCON,RCONS580,051,2017-03-31,051 digest single code
+26,Risk-weighted assets base for the AACL 1.25 percent threshold,Part II,RCFD,RCFDS580,031,2015-03-31,
+26,Risk-weighted assets base for the AACL 1.25 percent threshold,Part II,RCON,RCONS580,041,2017-03-31,
+26,Risk-weighted assets base for the AACL 1.25 percent threshold,Part II,RCON,RCONS581,051,2017-03-31,051 digest single code
+27,Standardized market-risk weighted assets (banks covered by market risk capital rules),Part II,RCFD,RCFDS581,031,2015-03-31,
+27,Standardized market-risk weighted assets (banks covered by market risk capital rules),Part II,RCON,RCONS581,041,2017-03-31,
+27,Standardized market-risk weighted assets (banks covered by market risk capital rules),Part II,RCON,RCONB704,051,2017-03-31,051 digest single code
+28,Risk-weighted assets before deductions for excess AACL and allocated transfer risk reserve,Part II,RCFD,RCFDB704,031,2001-03-31,
+28,Risk-weighted assets before deductions for excess AACL and allocated transfer risk reserve,Part II,RCON,RCONB704,041,2017-03-31,
+28,Risk-weighted assets before deductions for excess AACL and allocated transfer risk reserve,Part II,RCON,RCONA222,051,2017-03-31,051 digest single code
+29,LESS: Excess AACL,Part II,RCFD,RCFDA222,031,1996-03-31,
+29,LESS: Excess AACL,Part II,RCON,RCONA222,041,2017-03-31,
+29,LESS: Excess AACL,Part II,RCON,RCON3128,051,2017-03-31,051 digest single code
+30,LESS: Allocated transfer risk reserve,Part II,RCFD,RCFD3128,031,1984-03-31,
+30,LESS: Allocated transfer risk reserve,Part II,RCON,RCON3128,041,2017-03-31,
+30,LESS: Allocated transfer risk reserve,Part II,RCON,RCONG641,051,2017-03-31,OCR_ALIGN_UNCERTAIN: 051 digest reused G641 for items 24 and 30
+31,Total risk-weighted assets (item 28 minus items 29 and 30),Part II,RCFD,RCFDG641,031,2015-03-31,feeds Part I item 48.a
+31,Total risk-weighted assets (item 28 minus items 29 and 30),Part II,RCON,RCONG641,041,2017-03-31,feeds Part I item 48
+M.1,Current credit exposure across all derivative contracts covered by the regulatory capital rules,Part II,RCFD,RCFDG642,031,2015-03-31,
+M.1,Current credit exposure across all derivative contracts covered by the regulatory capital rules,Part II,RCON,RCONG642,041,2017-03-31,
+M.1,Current credit exposure across all derivative contracts covered by the regulatory capital rules,Part II,RCON,RCONS582,051,2017-03-31,051 digest single code
+M.2.a,Notional principal amounts of OTC derivative contracts: Interest rate (col A maturity <=1yr),Part II,RCFD,RCFDS582,031,2015-03-31,cols A/B/C maturity bands S582/S583/S584
+M.2.a,Notional principal amounts of OTC derivative contracts: Interest rate (col A maturity <=1yr),Part II,RCON,RCONS582,041,2017-03-31,cols A/B/C maturity bands
+M.2.b,Notional principal amounts of OTC derivative contracts: Foreign exchange rate and gold,Part II,RCFD,RCFDS585,031,2015-03-31,cols A/B/C S585/S586/S587
+M.2.b,Notional principal amounts of OTC derivative contracts: Foreign exchange rate and gold,Part II,RCON,RCONS585,041,2017-03-31,
+M.2.c,Notional principal amounts of OTC derivative contracts: Credit (investment grade reference asset),Part II,RCFD,RCFDS588,031,2015-03-31,OCR_ALIGN_UNCERTAIN cols A/B/C
+M.2.c,Notional principal amounts of OTC derivative contracts: Credit (investment grade reference asset),Part II,RCON,RCONS588,041,2017-03-31,
+M.2.d,Notional principal amounts of OTC derivative contracts: Credit (non-investment grade reference asset),Part II,RCFD,RCFDS591,031,2015-03-31,OCR_ALIGN_UNCERTAIN
+M.2.d,Notional principal amounts of OTC derivative contracts: Credit (non-investment grade reference asset),Part II,RCON,RCONS591,041,2017-03-31,
+M.2.e,Notional principal amounts of OTC derivative contracts: Equity,Part II,RCFD,RCFDS594,031,2015-03-31,OCR_ALIGN_UNCERTAIN
+M.2.e,Notional principal amounts of OTC derivative contracts: Equity,Part II,RCON,RCONS594,041,2017-03-31,
+M.2.f,Notional principal amounts of OTC derivative contracts: Precious metals (except gold),Part II,RCFD,RCFDS597,031,2015-03-31,OCR_ALIGN_UNCERTAIN
+M.2.f,Notional principal amounts of OTC derivative contracts: Precious metals (except gold),Part II,RCON,RCONS597,041,2017-03-31,
+M.2.g,Notional principal amounts of OTC derivative contracts: Other,Part II,RCFD,RCFDS600,031,2015-03-31,OCR_ALIGN_UNCERTAIN
+M.2.g,Notional principal amounts of OTC derivative contracts: Other,Part II,RCON,RCONS600,041,2017-03-31,
+M.3.a,Notional principal amounts of centrally cleared derivative contracts: Interest rate,Part II,RCFD,RCFDS603,031,2015-03-31,OCR_ALIGN_UNCERTAIN cols A/B/C
+M.3.a,Notional principal amounts of centrally cleared derivative contracts: Interest rate,Part II,RCON,RCONS603,041,2017-03-31,OCR_ALIGN_UNCERTAIN
+M.3.b,Notional principal amounts of centrally cleared derivative contracts: Foreign exchange rate and gold,Part II,RCFD,RCFDS606,031,2015-03-31,OCR_ALIGN_UNCERTAIN
+M.3.b,Notional principal amounts of centrally cleared derivative contracts: Foreign exchange rate and gold,Part II,RCON,RCONS606,041,2017-03-31,OCR_ALIGN_UNCERTAIN
+M.3.c,Notional principal amounts of centrally cleared derivative contracts: Credit (investment grade),Part II,RCFD,RCFDS609,031,2015-03-31,OCR_ALIGN_UNCERTAIN
+M.3.c,Notional principal amounts of centrally cleared derivative contracts: Credit (investment grade),Part II,RCON,RCONS609,041,2017-03-31,OCR_ALIGN_UNCERTAIN
+M.3.d,Notional principal amounts of centrally cleared derivative contracts: Credit (non-investment grade),Part II,RCFD,RCFDS612,031,2015-03-31,OCR_ALIGN_UNCERTAIN
+M.3.d,Notional principal amounts of centrally cleared derivative contracts: Credit (non-investment grade),Part II,RCON,RCONS612,041,2017-03-31,OCR_ALIGN_UNCERTAIN
+M.3.e,Notional principal amounts of centrally cleared derivative contracts: Equity,Part II,RCFD,RCFDS615,031,2015-03-31,OCR_ALIGN_UNCERTAIN
+M.3.e,Notional principal amounts of centrally cleared derivative contracts: Equity,Part II,RCON,RCONS615,041,2017-03-31,OCR_ALIGN_UNCERTAIN
+M.3.f,Notional principal amounts of centrally cleared derivative contracts: Precious metals (except gold),Part II,RCFD,RCFDS618,031,2015-03-31,OCR_ALIGN_UNCERTAIN
+M.3.f,Notional principal amounts of centrally cleared derivative contracts: Precious metals (except gold),Part II,RCON,RCONS618,041,2017-03-31,OCR_ALIGN_UNCERTAIN
+M.3.g,Notional principal amounts of centrally cleared derivative contracts: Other,Part II,RCFD,RCFDS621,031,2015-03-31,OCR_ALIGN_UNCERTAIN
+M.3.g,Notional principal amounts of centrally cleared derivative contracts: Other,Part II,RCON,RCONS621,041,2017-03-31,OCR_ALIGN_UNCERTAIN
+M.4.a,Allowances for credit losses on PCD assets: Loans and leases held for investment,Part II,RCFD,RCFDJJ30,031,2019-03-31,
+M.4.a,Allowances for credit losses on PCD assets: Loans and leases held for investment,Part II,RCON,RCONJJ30,041,2019-03-31,
+M.4.b,Allowances for credit losses on PCD assets: Held-to-maturity debt securities,Part II,RCFD,RCFDJJ31,031,2019-03-31,
+M.4.b,Allowances for credit losses on PCD assets: Held-to-maturity debt securities,Part II,RCON,RCONJJ31,041,2019-03-31,
+M.4.c,Allowances for credit losses on PCD assets: Other financial assets measured at amortized cost,Part II,RCFD,RCFDJJ32,031,2019-03-31,
+M.4.c,Allowances for credit losses on PCD assets: Other financial assets measured at amortized cost,Part II,RCON,RCONJJ32,041,2019-03-31,
+13,"LESS: Investments in the capital of unconsolidated financial institutions, net of DTLs, that exceed 25 percent of item 12",Part I,RCOA,RCOALB58,041,2020-03-31,
+14,"LESS: MSAs, net of DTLs, that exceed 25 percent of item 12",Part I,RCOA,RCOALB59,041,2020-03-31,
+15,"LESS: DTAs from temporary differences not realizable through NOL carrybacks, net of allowances and DTLs, that exceed 25 percent of item 12",Part I,RCOA,RCOALB60,041,2020-03-31,
+48,"Total risk-weighted assets (from Schedule RC-R, Part II, item 31)",Part I,RCOA,RCOAA223,041,2017-03-31,
+48,"Total risk-weighted assets (from Schedule RC-R, Part II, item 31)",Part I,RCOA,RCOAP866,051,2017-03-31,
+9,"LESS: Other intangible assets, net of associated deferred tax liabilities",Part I,RCOA,RCOAP842,051,2017-03-31,
+10,LESS: DTAs arising from temporary differences that exceed the 10% threshold,Part I,RCOA,RCOAP843,051,2017-03-31,
+34,Average on-balance-sheet assets subject to deduction,Part I,RCOA,RCOAB596,051,2017-03-31,
+38,CBLR qualifying criteria: Total consolidated assets (must be <= $10 billion),Part I,RCOA,RCOA2170,051,2020-03-31,CBLR
+42,CBLR qualifying criteria: DTAs arising from temporary differences,Part I,RCOA,RCOAKX80,051,2020-03-31,CBLR
+43,CBLR qualifying criteria: MSAs,Part I,RCOA,RCOAKX81,051,2020-03-31,CBLR
+44,CBLR qualifying criteria: Significant investments in unconsolidated financial institutions,Part I,RCOA,RCOAKX82,051,2020-03-31,CBLR
+46,CBLR qualifying criteria: Goodwill,Part I,RCOA,RCOALB61,051,2020-03-31,CBLR
+47,CBLR qualifying criteria: Other intangible assets,Part I,RCOA,RCOA3128,051,2020-03-31,CBLR
+52,Unrealized gains on AFS equity securities,Part I,RCOA,RCOAP870,051,2017-03-31,OCR_ALIGN_UNCERTAIN: 051 digest item 52 mapping
+55,Tier 2 capital (net of adjustments and deductions),Part I,RCOA,RCOA5311,051,2017-03-31,
+56,Total regulatory capital (Tier 1 plus Tier 2),Part I,RCOA,RCOA3792,051,2017-03-31,
+57,"Risk-weighted assets (from Schedule RC-R, Part II, item 25)",Part I,RCOA,RCOAA223,051,2017-03-31,
+58,Common Equity Tier 1 ratio [percentage],Part I,RCOA,RCOAP793,051,2017-03-31,ratio
+59,Tier 1 risk-based capital ratio [percentage],Part I,RCOA,RCOA7206,051,2017-03-31,ratio
+60,Total risk-based capital ratio [percentage],Part I,RCOA,RCOA7205,051,2017-03-31,ratio
+61,Capital conservation buffer [percentage],Part I,RCOA,RCOAH311,051,2017-03-31,buffer
+62,Countercyclical capital buffer amount [percentage],Part I,RCOA,RCOAH313,051,2017-03-31,OCR_ALIGN_UNCERTAIN: 051 digest mapped H313 to item 62
+63,Capital buffer available,Part I,RCOA,RCOAH314,051,2017-03-31,OCR_ALIGN_UNCERTAIN: 051 digest mapped H314 to item 63
+M.CECL.a,CECL 3-year transition election amount,Part I,RCOA,RCOAJJ30,051,2020-03-31,
+M.CECL.b,Accumulated deferred tax asset associated with CECL transition amount,Part I,RCOA,RCOAJJ31,051,2020-03-31,
+M.CECL.c,CECL 5-year standardized transition amount,Part I,RCOA,RCOAJJ32,051,2020-03-31,
+2,Securities,Part II,RCON,RCOND964,051,2017-03-31,"col A; 051 digest range D964-D974, start captured"
+3,Federal funds sold and securities purchased under agreements to resell,Part II,RCON,RCOND971,051,2017-03-31,"col A; corrected from 051 digest range-start D975 (not in MDRM) to D971 (fed funds sold, domestic offices)"
+4,Loans and leases held for sale,Part II,RCON,RCOND979,051,2017-03-31,"col A; 051 digest range D979-D982, start captured"
+5,"Loans and leases held for investment, net",Part II,RCON,RCOND983,051,2017-03-31,"col A; 051 digest range D983-D986, start captured"
+9,Securitization exposures: off-balance-sheet,Part II,RCON,RCONS420,051,2017-03-31,"col A; 051 digest range S420-S443, start captured"
+18,Derivative contracts,Part II,RCON,RCONG609,051,2017-03-31,051 digest single code
+24,Deductions from risk-weighted assets,Part II,RCON,RCONG641,051,2017-03-31,051 digest single code
+M.2,Foreign exchange contracts,Part II,RCON,RCONS583,051,2017-03-31,051 digest single code
+M.3,Gold contracts,Part II,RCON,RCONS584,051,2017-03-31,051 digest single code
+M.4,Other precious metals contracts,Part II,RCON,RCONS585,051,2017-03-31,051 digest single code
+M.5,Agricultural contracts,Part II,RCON,RCONS586,051,2017-03-31,051 digest single code
+M.6,Energy contracts,Part II,RCON,RCONS587,051,2017-03-31,051 digest single code
+M.7,Other commodity contracts,Part II,RCON,RCONS588,051,2017-03-31,051 digest single code
+M.8,Credit derivatives,Part II,RCON,RCONS589,051,2017-03-31,051 digest single code
+M.9,Equity contracts,Part II,RCON,RCONS590,051,2017-03-31,051 digest single code
+M.10,All other (derivative notional amounts),Part II,RCON,RCONS591,051,2017-03-31,051 digest single code
+M.11,Total notional amount of derivatives,Part II,RCON,RCONG642,051,2017-03-31,051 digest single code

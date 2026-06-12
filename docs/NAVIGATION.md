@@ -2,7 +2,7 @@
 
 > **Master index for navigating the complete regulatory data dictionary**
 >
-> Version 9.0 | Updated: 2026-06-11
+> Version 10.0 | Updated: 2026-06-11
 
 ---
 
@@ -19,12 +19,14 @@
 | Understand the Call Report (031/041/051) | [CALL_REPORT_GUIDE.md](CALL_REPORT_GUIDE.md) |
 | Work with foreign/structure forms | [FOREIGN_AND_STRUCTURE_GUIDE.md](FOREIGN_AND_STRUCTURE_GUIDE.md) |
 | Work with FDIC/NCUA/OCC/UBPR data | [FDIC_NCUA_OCC_UBPR_GUIDE.md](FDIC_NCUA_OCC_UBPR_GUIDE.md) |
+| Understand UBPR derivation formulas (how the ratios are built & validated) | [UBPR_GUIDE.md](UBPR_GUIDE.md) · [csv](../csv/UBPR_CONCEPTS.csv) |
+| See how the official Call Report rules changed (2001–2026) | [EDIT_HISTORY.md](EDIT_HISTORY.md) · [csv](../csv/EDIT_HISTORY.csv) |
 | Understand a specific FR Y-9C schedule | [Schedule Guides](#by-form) below |
 | Validate data reconciliation | [Reconciliation Section](#reconciliation-quick-reference) |
 | Build automated pipelines | [JSON Schemas](#json-schemas-for-ai-agents) |
 | Map Y-9C to Call Report | [json/cross_form_mapping.json](../json/cross_form_mapping.json) |
 | See what adds up to what | [RECONCILIATION_HIERARCHY.md](RECONCILIATION_HIERARCHY.md) |
-| See which identities are empirically confirmed (Y-9C 208M + Call 1.9B filings) | [EMPIRICAL_VALIDATION.md](EMPIRICAL_VALIDATION.md) · [registry csv](../csv/RELATIONSHIP_REGISTRY.csv) |
+| See which identities are empirically confirmed (Y-9C 208M + Call 1.9B filings + UBPR) | [EMPIRICAL_VALIDATION.md](EMPIRICAL_VALIDATION.md) · [registry csv](../csv/RELATIONSHIP_REGISTRY.csv) (7,539 rows) |
 | Check temporal coverage & vintages | [COVERAGE_PROVENANCE.md](COVERAGE_PROVENANCE.md) |
 
 > **New in v6.0:** the dictionary now spans the full U.S. bank-data universe (Federal Reserve, FFIEC-joint, FDIC, NCUA, OCC, SEC, CFPB), not just FR Y-9C. Start at [COLLECTIONS_CATALOG.md](COLLECTIONS_CATALOG.md). Companion data-access package: **[FreeNIC](https://github.com/andenick/FreeNIC)**.
@@ -62,13 +64,20 @@
 
 ### Call Report Schedules
 
-| Schedule | CSV Data | Documentation Guide | Key MDRM |
+> **New in v10.0:** seven per-schedule **line-item CSVs** now ship for the Call Report — each row
+> triple-attested (official 2025-12 grid + CDR XBRL taxonomy presentation linkbase + 1.9B-row
+> warehouse), at Y-9C parity. (`CALL_RC_B_SECURITIES.csv` and `CALL_RC_R_CAPITAL.csv` round out the
+> set alongside the five below.)
+
+| Schedule | CSV Data (v10.0 line items) | Documentation Guide | Key MDRM |
 |----------|----------|---------------------|----------|
-| **RC** - Balance Sheet | [CALL_REPORT_RC_SCHEDULES.csv](../csv/CALL_REPORT_RC_SCHEDULES.csv) | [CALL_REPORT_RC_GUIDE.md](CALL_REPORT_RC_GUIDE.md) | RCFD2170 |
-| **RC-C** - Loans | [CALL_REPORT_RC_SCHEDULES.csv](../csv/CALL_REPORT_RC_SCHEDULES.csv) | [CALL_REPORT_RC_C_LOANS_GUIDE.md](CALL_REPORT_RC_C_LOANS_GUIDE.md) | RCFDB529 |
-| **RC-E** - Deposits | [CALL_REPORT_RC_SCHEDULES.csv](../csv/CALL_REPORT_RC_SCHEDULES.csv) | [CALL_REPORT_RC_E_DEPOSITS_GUIDE.md](CALL_REPORT_RC_E_DEPOSITS_GUIDE.md) | RCFD2200 |
-| **RC-N** - Past Due | [CALL_REPORT_RC_SCHEDULES.csv](../csv/CALL_REPORT_RC_SCHEDULES.csv) | [CALL_REPORT_RC_N_PAST_DUE_GUIDE.md](CALL_REPORT_RC_N_PAST_DUE_GUIDE.md) | RCFD1403 |
-| **RI** - Income Statement | [CALL_REPORT_RC_SCHEDULES.csv](../csv/CALL_REPORT_RC_SCHEDULES.csv) | [CALL_REPORT_RI_INCOME_GUIDE.md](CALL_REPORT_RI_INCOME_GUIDE.md) | RIAD4340 |
+| **RC** - Balance Sheet | [CALL_RC_BALANCE_SHEET.csv](../csv/CALL_RC_BALANCE_SHEET.csv) | [CALL_REPORT_RC_GUIDE.md](CALL_REPORT_RC_GUIDE.md) | RCFD2170 |
+| **RC-B** - Securities | [CALL_RC_B_SECURITIES.csv](../csv/CALL_RC_B_SECURITIES.csv) | [CALL_REPORT_RC_GUIDE.md](CALL_REPORT_RC_GUIDE.md) | RCFD1773 |
+| **RC-C** - Loans | [CALL_RC_C_LOANS.csv](../csv/CALL_RC_C_LOANS.csv) | [CALL_REPORT_RC_C_LOANS_GUIDE.md](CALL_REPORT_RC_C_LOANS_GUIDE.md) | RCFDB529 |
+| **RC-E** - Deposits | [CALL_RC_E_DEPOSITS.csv](../csv/CALL_RC_E_DEPOSITS.csv) | [CALL_REPORT_RC_E_DEPOSITS_GUIDE.md](CALL_REPORT_RC_E_DEPOSITS_GUIDE.md) | RCFD2200 |
+| **RC-N** - Past Due | [CALL_RC_N_PAST_DUE.csv](../csv/CALL_RC_N_PAST_DUE.csv) | [CALL_REPORT_RC_N_PAST_DUE_GUIDE.md](CALL_REPORT_RC_N_PAST_DUE_GUIDE.md) | RCFD1403 |
+| **RC-R** - Capital | [CALL_RC_R_CAPITAL.csv](../csv/CALL_RC_R_CAPITAL.csv) | [CALL_REPORT_RC_GUIDE.md](CALL_REPORT_RC_GUIDE.md) | RCFAP859 |
+| **RI** - Income Statement | [CALL_RI_INCOME.csv](../csv/CALL_RI_INCOME.csv) | [CALL_REPORT_RI_INCOME_GUIDE.md](CALL_REPORT_RI_INCOME_GUIDE.md) | RIAD4340 |
 
 ### Advanced Capital & Regulatory Forms
 
@@ -214,4 +223,4 @@ print(f"CET1 minimum: {capital['cet1']['minimum']}")
 
 ---
 
-*Last updated: 2026-06-11 | Version 9.0*
+*Last updated: 2026-06-11 | Version 10.0*

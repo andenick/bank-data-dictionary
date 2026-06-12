@@ -16,54 +16,63 @@ Schedule RC-E provides detailed breakdowns of a bank's deposit liabilities by ac
 
 ---
 
+## Machine-readable line items
+
+The full, triple-attested per-line-item code set for this schedule ships as
+[`csv/CALL_RC_E_DEPOSITS.csv`](../csv/CALL_RC_E_DEPOSITS.csv) (55 rows; provenance in
+`_rebuild/schedules/PROVENANCE_CALL_RC_E.csv`). Each row carries `line_number`,
+`item_description`, `column` (A/B/C), `column_description`, `mdrm_code`, `forms`
+(031/041/051 applicability), `category`, `start_date`, and `notes`. The tables below are
+a human-readable digest of that CSV, reconciled to the FFIEC December 2025 form grids.
+
+### CSV schema
+
+| Column | Meaning |
+|--------|---------|
+| line_number | Form item number (e.g. `1`, `7`, `M.1.b`) |
+| item_description | Official caption from the FFIEC form grid |
+| column | Grid column: `A` total transaction, `B` memo total demand, `C` total nontransaction, `-` single-column memorandum |
+| column_description | Plain-language column label |
+| mdrm_code | Federal Reserve MDRM code (RCON, domestic offices) |
+| forms | Which forms report the item (031/041/051) |
+| category | `Deposit Categories` or `Memoranda` |
+| start_date | MDRM start date for the code |
+| notes | Grid-level column/derivation note |
+
+---
+
 ## MDRM Prefix Guide for Deposits
 
 | Prefix | Scope | Typical Use |
 |--------|-------|-------------|
-| RCON | Domestic offices | Most deposit items |
-| RCFN | Foreign offices | Foreign branch deposits |
-| RCFD | Total | Combined total |
+| RCON | Domestic offices | All RC-E deposit-category and memoranda items |
+| RCFN | Foreign offices | Foreign-branch deposit detail (reported elsewhere) |
+| RCFD | Total (consolidated) | Combined total where published |
+
+> On the current FFIEC 031/041/051 forms, every Schedule RC-E line item is reported on the
+> **RCON (domestic-office)** basis. The codes below are identical across all three forms; the
+> `forms` column in the CSV records applicability (four sweep-deposit memoranda are 031-only).
 
 ---
 
-## Part I: Deposits in Domestic Offices
+## Part I: Deposit categories (columns A / B / C)
 
-### Transaction Accounts
+Schedule RC-E reports each ownership category in **column A** (total transaction accounts,
+including total demand deposits) and **column C** (total nontransaction accounts, including
+MMDAs). Item 7 (the total line) adds **column B**, a memorandum for total demand deposits
+included in column A.
 
-| Item | Description | MDRM | Notes |
-|------|-------------|------|-------|
-| 1 | Transaction accounts | RCONB549 | Total transaction |
-| 1.a | Individuals, partnerships, corps | RCONB550 | IPC accounts |
-| 1.b | US Government | RCON2203 | Federal deposits |
-| 1.c | States and political subdivisions | RCON2206 | Municipal deposits |
-| 1.d | Commercial banks in US | RCON2207 | Correspondent banks |
-| 1.e | Other depository institutions | RCON2209 | Credit unions, etc. |
-| 1.f | Banks in foreign countries | RCON2213 | Foreign correspondents |
-| 1.g | Certified and official checks | RCON2330 | Bank-issued checks |
+| Item | Description | Col A (transaction) | Col C (nontransaction) | Forms |
+|------|-------------|---------------------|------------------------|-------|
+| 1 | Deposits of individuals, partnerships, and corporations | RCONB549 | RCONB550 | 031/041/051 |
+| 2 | Deposits of U.S. Government | RCON2202 | RCON2520 | 031/041/051 |
+| 3 | Deposits of states and political subdivisions in the U.S. | RCON2203 | RCON2530 | 031/041/051 |
+| 4 | Deposits of commercial banks and other depository institutions in the U.S. | RCONB551 | RCONB552 | 031/041/051 |
+| 5 | Deposits of banks in foreign countries | RCON2213 | RCON2236 | 031/041/051 |
+| 6 | Deposits of foreign governments and official institutions | RCON2216 | RCON2377 | 031/041/051 |
+| 7 | Total (sum of items 1 through 6) | RCON2215 | RCON2385 | 031/041/051 |
 
-### Nontransaction Accounts
-
-| Item | Description | MDRM | Notes |
-|------|-------------|------|-------|
-| 2 | Nontransaction accounts | RCONB551 | Total nontransaction |
-| 2.a | Savings deposits | Various | Multiple categories |
-| 2.a.(1) | MMDAs | RCONHK17 | Money market deposits |
-| 2.a.(2) | Other savings | RCONHK18 | Passbook, etc. |
-| 2.b | Time deposits | Various | By size and maturity |
-| 2.b.(1) | Time <= $250K | RCONHK16 | Retail CDs |
-| 2.b.(2) | Time > $250K | RCONHK17 | Jumbo CDs |
-
----
-
-## Part II: Deposits in Foreign Offices (FFIEC 031 only)
-
-| Item | Description | MDRM | Notes |
-|------|-------------|------|-------|
-| 1 | IPC transaction accounts (foreign offices) | RCFN2241 | Individuals, partnerships, corporations |
-| 2 | IPC nontransaction accounts (foreign offices) | RCFN2242 | Individuals, partnerships, corporations |
-| — | Noninterest-bearing (foreign offices) | RCFN6631 | By interest status |
-| — | Interest-bearing (foreign offices) | RCFN6636 | By interest status |
-| **Total** | Total deposits in foreign offices | RCFN2200 | Ties to RC Item 13.b |
+> Item 7 column B (memo: total demand deposits included in column A) = **RCON2210**.
 
 ---
 
@@ -120,14 +129,25 @@ RCON2200 = RCON6631 (Noninterest) + RCON6636 (Interest-bearing)
 
 ## Memoranda Items
 
+The full memoranda set (M.1 through M.7, including the sweep-deposit and IPC-component
+breakouts) is in [`csv/CALL_RC_E_DEPOSITS.csv`](../csv/CALL_RC_E_DEPOSITS.csv) with
+`category = Memoranda`. Selected high-use items:
+
 | Item | Description | MDRM | Purpose |
 |------|-------------|------|---------|
-| M.1 | Selected components | Various | Detail breakouts |
-| M.2 | Brokered deposits (total) | RCON2365 | Volatile funding |
-| M.3 | Maturity/repricing | Various | IRR analysis |
-| M.4 | Reciprocal deposits (total) | RCONJH83 | Network deposits |
-| M.5 | Estimated insured | RCONF049 | FDIC coverage |
-| M.6 | Estimated uninsured | RCONF051 | Concentration risk |
+| M.1.a | Total IRAs and Keogh Plan accounts | RCON6835 | Retirement deposit detail |
+| M.1.b | Total brokered deposits | RCON2365 | Volatile funding |
+| M.1.c | Brokered deposits of $250,000 or less (fully insured) | RCONHK05 | Insured brokered |
+| M.1.e | Preferred deposits (uninsured public funds) | RCON5590 | Collateralized public |
+| M.1.g | Total reciprocal deposits | RCONJH83 | Network deposits |
+| M.2.b | Total time deposits of less than $100,000 | RCON6648 | Small CDs |
+| M.2.c | Total time deposits of $100,000 through $250,000 | RCONJ473 | Mid CDs |
+| M.2.d | Total time deposits of more than $250,000 | RCONJ474 | Jumbo CDs |
+| M.5 | Offers consumer deposit account products? (Yes/No) | RCONP752 | Reporting-scope flag |
+
+> Note: the four `M.1.h.…(a)` retail sweep-deposit sub-items are reported on FFIEC 031 only;
+> all other RC-E codes are common to 031/041/051. Estimated insured/uninsured deposit amounts
+> are reported on Schedule RC-O, not RC-E.
 
 ---
 
@@ -175,4 +195,15 @@ The FR Y-9C consolidates bank deposits at the holding company level. Note that o
 
 ---
 
-*Last updated: 2026-01-29*
+---
+
+## Sources and attestation
+
+Line items reconciled to the **FFIEC Call Report forms and instructions (December 2025)**,
+cross-checked against the **CDR XBRL taxonomy** (v294 presentation linkbase, per-form concept
+inventory) and the **Federal Reserve MDRM** code dictionary, with empirical presence verified
+in **FFIEC bulk Call Report data (2001-2026)**. Per-code provenance is in
+`_rebuild/schedules/PROVENANCE_CALL_RC_E.csv`; the attestation ledger is in
+`_rebuild/empirical/attestations/CALL_ATTESTATION_RCE_RCN_RCR.csv`.
+
+*Last updated: 2026-06-11*

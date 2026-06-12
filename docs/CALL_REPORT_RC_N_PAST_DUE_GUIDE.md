@@ -22,37 +22,90 @@ Schedule RC-N reports loans and leases that are past due or on nonaccrual status
 
 ---
 
-## Part I: Loans and Leases
+## Machine-readable line items
 
-### Real Estate Loans (reported domestic-office, RCON, on FFIEC 031/041)
+The full, triple-attested per-line-item code set ships as
+[`csv/CALL_RC_N_PAST_DUE.csv`](../csv/CALL_RC_N_PAST_DUE.csv) (93 rows; provenance in
+`_rebuild/schedules/PROVENANCE_CALL_RC_N.csv`). Each row gives the three past-due-grid codes
+(`mdrm_30_89`, `mdrm_90_plus`, `mdrm_nonaccrual`), a `prefix`, the `forms` that use that code
+triple, `start_date`, `notes`, and `mdrm_single` (for the single-column nonaccrual-flow
+memoranda). The tables below digest that CSV.
+
+### CSV schema
+
+| Column | Meaning |
+|--------|---------|
+| line_number | Form item number (031 and 041/051 use different numbering; the CSV keeps both) |
+| loan_category | Official caption |
+| mdrm_30_89 | Column A code (past due 30-89 days, still accruing), or `-` |
+| mdrm_90_plus | Column B code (past due 90+ days, still accruing), or `-` |
+| mdrm_nonaccrual | Column C code (nonaccrual), or `-` |
+| prefix | MDRM prefix for the triple (RCFD/RCFN consolidated, RCON domestic) |
+| forms | Which forms report that code triple (031/041/051) |
+| start_date | MDRM start date for the primary code |
+| mdrm_single | Single-column code for nonaccrual-flow memoranda (M.4/M.7/M.8), else `-` |
+
+> **Form structure matters.** FFIEC **031** filers report many categories on the consolidated
+> **RCFD/RCFN** basis and split a few items (e.g. C&I into 4.a U.S. / 4.b non-U.S. addressees;
+> depository institutions into 2.a U.S. / 2.b foreign). FFIEC **041/051** filers report the
+> domestic-office **RCON** basis with those items aggregated, and **051** uses its own condensed
+> item numbering (1.a-1.h). The CSV carries every form's codes; the tables below show the 031
+> consolidated layout, then the 041/051 aggregated items.
+
+---
+
+## Part I: Loans and Leases (FFIEC 031 consolidated, RCFD/RCFN)
+
+### Real Estate Loans (item 1)
 
 | Item | Description | 30-89 DPD | 90+ DPD | Nonaccrual |
 |------|-------------|-----------|---------|------------|
 | 1.a.(1) | 1-4 family residential construction | RCONF172 | RCONF174 | RCONF176 |
 | 1.a.(2) | Other construction & land development | RCONF173 | RCONF175 | RCONF177 |
-| 1.b | Farmland | RCON3493 | RCON3494 | RCON3495 |
+| 1.b | Farmland (domestic offices) | RCON3493 | RCON3494 | RCON3495 |
 | 1.c.(1) | 1-4 family revolving (HELOCs) | RCON5398 | RCON5399 | RCON5400 |
 | 1.c.(2)(a) | Closed-end 1-4 family, first liens | RCONC236 | RCONC237 | RCONC229 |
 | 1.c.(2)(b) | Closed-end 1-4 family, junior liens | RCONC238 | RCONC239 | RCONC230 |
-| 1.d | Multifamily (5+) residential | RCON3499 | RCON3500 | RCON3501 |
+| 1.d | Multifamily (5+) residential (domestic offices) | RCON3499 | RCON3500 | RCON3501 |
 | 1.e.(1) | Owner-occupied nonfarm nonresidential | RCONF178 | RCONF180 | RCONF182 |
 | 1.e.(2) | Other nonfarm nonresidential | RCONF179 | RCONF181 | RCONF183 |
+| 1.f | Real estate in foreign offices (031 only) | RCFNB572 | RCFNB573 | RCFNB574 |
 
-> Note: Real-estate-secured RC-N items are reported on the RCON (domestic-office) basis. Use the matching RCFD code only where a consolidated counterpart is published in MDRM.
+> Item 1 real-estate sub-items in domestic offices are reported on the RCON basis on all forms.
 
-### Commercial and Consumer Loans
+### Commercial, Consumer, and Other Loans (031 consolidated)
 
 | Item | Description | 30-89 DPD | 90+ DPD | Nonaccrual |
 |------|-------------|-----------|---------|------------|
-| 2 | Depository institutions | RCFDB834 | RCFDB835 | RCFDB836 |
+| 2.a | To U.S. depository institutions | RCFD5377 | RCFD5378 | RCFD5379 |
+| 2.b | To foreign banks | RCFD5380 | RCFD5381 | RCFD5382 |
 | 3 | Agricultural production | RCFD1594 | RCFD1597 | RCFD1583 |
-| 4 | C&I loans | RCFD1606 | RCFD1607 | RCFD1608 |
-| 5 | Consumer loans (total to individuals) | RCFD1978 | RCFD1979 | RCFD1981 |
+| 4.a | C&I loans to U.S. addressees | RCFD1251 | RCFD1252 | RCFD1253 |
+| 4.b | C&I loans to non-U.S. addressees | RCFD1254 | RCFD1255 | RCFD1256 |
 | 5.a | Credit cards | RCFDB575 | RCFDB576 | RCFDB577 |
-| 6 | Foreign governments | RCFD5389 | RCFD5390 | RCFD5391 |
-| 8 | All other loans (incl. leases) | RCFD3183 | RCFD3184 | RCFD3185 |
-| 9 | Lease financing receivables | RCFD1226 | RCFD1227 | RCFD1228 |
-| **Total** | **Total loans and lease financing receivables** | **RCFD1406** | **RCFD1407** | **RCFD1403** |
+| 5.b | Automobile loans | RCFDK213 | RCFDK214 | RCFDK215 |
+| 5.c | Other consumer (revolving + other) | RCFDK216 | RCFDK217 | RCFDK218 |
+| 6 | Loans to foreign governments | RCFD5389 | RCFD5390 | RCFD5391 |
+| 7 | All other loans | RCFD5459 | RCFD5460 | RCFD5461 |
+| 8.a | Lease financing: to individuals (household) | RCFDF166 | RCFDF167 | RCFDF168 |
+| 8.b | Lease financing: all other leases | RCFDF169 | RCFDF170 | RCFDF171 |
+| **9** | **Total loans and leases (sum of items 1-8)** | **RCFD1406** | **RCFD1407** | **RCFD1403** |
+| 10 | Debt securities and other assets | RCFD3505 | RCFD3506 | RCFD3507 |
+
+### FFIEC 041 / 051 aggregated items (RCON, domestic basis)
+
+On 041/051 the interbank and C&I categories are reported in aggregate rather than split:
+
+| Item | Description | 30-89 DPD | 90+ DPD | Nonaccrual | Forms |
+|------|-------------|-----------|---------|------------|-------|
+| 2 | Loans to depository institutions and acceptances | RCONB834 | RCONB835 | RCONB836 | 041/051 |
+| 4 | Commercial and industrial loans | RCON1606 | RCON1607 | RCON1608 | 041/051 |
+| 8 | Lease financing receivables (041) | RCON1226 | RCON1227 | RCON1228 | 041 |
+| 9 | Total loans and leases (041) | RCON1406 | RCON1407 | RCON1403 | 041 |
+
+> 051 condenses real estate into items 1.a-1.h (construction; farmland; HELOCs; closed-end
+> first/junior liens; multifamily; nonfarm owner-occupied/other) on the RCON basis. See the CSV
+> for the complete 051 mapping.
 
 ---
 
@@ -145,4 +198,16 @@ Replace RCFD with BHCK to get Y-9C equivalents.
 
 *See also: [HC_N_PAST_DUE_GUIDE.md](HC_N_PAST_DUE_GUIDE.md) for FR Y-9C equivalent*
 
-*Last updated: 2026-01-29*
+---
+
+## Sources and attestation
+
+Line items reconciled to the **FFIEC Call Report forms and instructions (December 2025)**,
+cross-checked against the **CDR XBRL taxonomy** (v294 presentation linkbase, per-form concept
+inventory) and the **Federal Reserve MDRM**, with empirical presence verified in **FFIEC bulk
+Call Report data (2001-2026)**. Per-code provenance is in
+`_rebuild/schedules/PROVENANCE_CALL_RC_N.csv`; the attestation ledger is in
+`_rebuild/empirical/attestations/CALL_ATTESTATION_RCE_RCN_RCR.csv` (all 263 RC-N code rows
+verdict OK: present in taxonomy and in the warehouse).
+
+*Last updated: 2026-06-11*

@@ -178,6 +178,10 @@ See **[`csv/MDRM_NAMESPACES.csv`](../csv/MDRM_NAMESPACES.csv)** for the `FS220` 
 
 ## 6. UBPR — Uniform Bank Performance Report (FFIEC)
 
+> **Deep dive:** for the parsed official derivation formulas, the full concept
+> catalog (`csv/UBPR_CONCEPTS.csv`), and the empirical validation of headline
+> ratios against real published UBPR values, see **[`UBPR_GUIDE.md`](./UBPR_GUIDE.md)**.
+
 | Attribute | Detail |
 |---|---|
 | **Purpose** | Analytical report converting Call Report raw data into standardized **derived ratios, percentages, and dollar figures**, each compared against a **peer-group average** and a **percentile rank**, for examiner/analyst use. |

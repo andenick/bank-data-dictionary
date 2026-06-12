@@ -72,6 +72,7 @@ nav:
       - Coverage & Provenance: COVERAGE_PROVENANCE.md
       - Master Regulatory Guide: MASTER_REGULATORY_GUIDE.md
       - Empirical Validation: EMPIRICAL_VALIDATION.md
+      - Official Edit History: EDIT_HISTORY.md
   - Core systems:
       - MDRM Meta-Dictionary: MDRM_GUIDE.md
       - Entity Identifiers: IDENTIFIERS.md
@@ -111,6 +112,7 @@ nav:
   - Other collections:
       - Foreign & Structure: FOREIGN_AND_STRUCTURE_GUIDE.md
       - FDIC / NCUA / OCC / UBPR: FDIC_NCUA_OCC_UBPR_GUIDE.md
+      - UBPR — Derivation Formulas & Validation: UBPR_GUIDE.md
       - FFIEC 009 — Country Exposure: FFIEC_009_COUNTRY_EXPOSURE_GUIDE.md
       - FFIEC 101 — Advanced Capital: FFIEC_101_ADVANCED_CAPITAL_GUIDE.md
       - FFIEC 102 — Market Risk: FFIEC_102_MARKET_RISK_GUIDE.md
@@ -124,6 +126,7 @@ nav:
       - Trading Activities: TRADING_ACTIVITIES_GUIDE.md
   - Data tables:
       - Overview: data/index.md
+      - Official Edit History: data/edit_history.md
       - Collections Catalog: data/collections_catalog.md
       - Schedules Catalog: data/schedules_catalog.md
       - MDRM Crosswalk (Expanded): data/mdrm_crosswalk_expanded.md

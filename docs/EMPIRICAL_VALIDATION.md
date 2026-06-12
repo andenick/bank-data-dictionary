@@ -1,8 +1,9 @@
 # Empirical Validation
 
-> **Version 9.0 | 2026-06-11** — every machine-testable official edit on **both** the
-> FR Y-9C **and** the Call Report, validated against **208 million + 1.9 billion rows** of real
-> filings.
+> **Version 10.0 | 2026-06-11** — every machine-testable official edit on the FR Y-9C **and** the
+> Call Report, validated against **208 million + 1.9 billion rows** of real filings; plus the
+> **UBPR** derivation formulas validated against real published UBPR values, and a
+> **conditional/compound testing engine** that drives every registry row to an explained verdict.
 
 Most data dictionaries assert that "assets equal liabilities plus equity" and stop there. This
 one tests it. Every reconciliation identity, bound, and official edit check we publish is checked,
@@ -17,9 +18,19 @@ evaluated every machine-testable one against **1.917 billion rows** of Call Repo
 between the Call Reports and the FDIC's independently-collected Summary of Deposits / Statistics on
 Depository Institutions (SDI), and corrected two definitional mappings in the process.
 
-The combined [Relationship Registry](data/relationship_registry.md) now holds **7,508
+The combined [Relationship Registry](data/relationship_registry.md) now holds **7,539
 relationships**, every one carrying a status and — where machine-testable — its empirical
 observation count and pass rate. **Zero rows are left pending or unexplained.**
+
+**v10.0 adds two things on top of v9.** First, a **conditional/compound testing engine** (IF/THEN
+rewritten to SQL `CASE`, AND-conjunction splitting, and constant coefficients) made **448** of the
+2,606 previously documented-but-untested conditional/compound rows machine-testable, and every one
+of them was adjudicated to an explained verdict; the rest stay honestly documented (2,158
+`GRAMMAR_DOC`: null-logic and ratio-division families). Second, the **UBPR** — the FFIEC's analytical
+report of derived ratios — was acquired from the official taxonomy v181 and User's Guide, its 4,207
+derivation formulas parsed with zero silent drops, and its 31 headline ratios recomputed and
+**empirically validated at 99.77–100%** against real published UBPR values. The full v10 status
+distribution is in the Results section below.
 
 ---
 
@@ -49,7 +60,8 @@ filings → adjudicate every non-passing result, never silently dropping one.**
    from the CDR XBRL taxonomy and parsed into linear MDRM expressions (sums, differences, bounds).
    For the FR Y-9C, the official edit checklist was parsed the same way in v8.0. Together with the
    dictionary's curated identities and component hierarchies, this produced the single
-   **7,508-relationship** [Relationship Registry](data/relationship_registry.md).
+   **7,539-relationship** [Relationship Registry](data/relationship_registry.md) (v10.0 added the
+   31 UBPR derivation rows and the conditional/compound rows promoted to testable).
 
 2. **Test every testable relationship against real filings.**
    - **FR Y-9C:** every Y-9C relationship that resolves to codes present in the bulk data was
@@ -99,6 +111,10 @@ data is involved.
 | **NOT_IN_BULK** | One side uses a code that is text/confidential/narrative or was discontinued/renumbered, so the two sides never co-occur in the bulk data. Documented, not testable. |
 | **CONDITIONAL_DOC** | Applies only to a sub-population or is a conditional/non-arithmetic edit (completeness test, string value-domain, function), so it is not a cross-sectional identity. Verified by documentation. |
 | **OFFICIAL_EDIT_UNMET** | An official edit that does **not** hold even on the correct window/population. Kept deliberately as a research finding about edit enforcement, not deleted. |
+| **CONDITION_NEVER_MET** | A conditional edit whose triggering condition is never satisfied in any public bulk filing — the codes are confidential supervisory items absent from all bulk data (the RC-O PD-bucket family). Verified absent, not silently dropped. |
+| **VINTAGE_CONFIRMED** | A relationship confirmed on the vintage window where its codes are actually collected, distinguished from `CONFIRMED_CURRENT` by an explicit vintage anchor. |
+| **LOW_N_PASS** | Passes within tolerance but on a small observation count; flagged so the thin sample is not read as a full-history confirmation. |
+| **GRAMMAR_DOC** | A conditional/compound row outside the testable grammar subset (null-logic, ratio-division, multi-branch families). Documented with its parsed form rather than forced into a linear test. |
 
 ---
 
@@ -106,21 +122,26 @@ data is involved.
 
 | Status | Count |
 |--------|------:|
-| **CONFIRMED** | **2,564** |
-| **CONFIRMED_CURRENT** | **83** |
-| **QUALITY_TOLERANCE** | **36** |
-| **DATA_GAP** | **48** |
+| **CONFIRMED** | **2,841** |
+| **CONFIRMED_CURRENT** | **144** |
+| **LOW_N_PASS** | **4** |
+| **VINTAGE_CONFIRMED** | **7** |
+| **QUALITY_TOLERANCE** | **43** |
+| **DATA_GAP** | **122** |
+| **OFFICIAL_EDIT_UNMET** | **8** |
+| **CONDITION_NEVER_MET** | **48** |
 | **NOT_IN_BULK** | **134** |
 | **CONDITIONAL_DOC** | **224** |
-| **OFFICIAL_EDIT_UNMET** | **7** |
-| **not_testable** (documented non-arithmetic classes) | **4,412** |
-| **Total** | **7,508** |
+| **GRAMMAR_DOC** (documented null-logic / ratio-division families) | **2,158** |
+| **not_testable** (documented non-arithmetic classes) | **1,806** |
+| **Total** | **7,539** |
 
-By scope: **2,330 FR Y-9C**, **5,162 Call Report** (deduplicated across the three forms), and
-**16 cross-source**. **Zero rows are pending or unexplained.** The `not_testable` class is not a
-gap — it is the documented set of non-arithmetic edits (completeness / null tests, string
-value-domain checks, conditional edits, and function edits) that cannot be expressed as a linear
-identity over reported values; each is labelled with its class.
+By scope: **2,330 FR Y-9C**, **5,162 Call Report** (deduplicated across the three forms),
+**16 cross-source**, and **31 UBPR**. **Zero rows are pending or unexplained.** The `not_testable`
+and `GRAMMAR_DOC` classes are not gaps — they are the documented set of non-arithmetic edits
+(completeness / null tests, string value-domain checks, ratio-division and null-logic conditionals,
+and function edits) that cannot be expressed as a linear identity over reported values; each is
+labelled with its class.
 
 ---
 
@@ -203,6 +224,102 @@ honestly rather than presenting the textbook form as exact.
 
 ---
 
+## Conditional & compound edits (v10.0)
+
+Many official edits are not bare arithmetic identities — they are **conditional** (`IF <cond> THEN
+<test>`) or **compound** (`T1 AND T2 AND …`). Through v9 these were carried as documented-but-untested
+rows. v10.0 added a **conditional/compound testing engine** that extends the linear evaluator with
+three constructs while keeping the linear-only token rule (multiplication/division by a *variable*
+still hard-fails rather than being guessed at):
+
+- **IF/THEN → CASE.** `IF <cond> THEN <test>` is evaluated as a SQL `CASE WHEN cond THEN (test)`,
+  with the pass rate computed over the sub-population where the condition holds and the population
+  size (`n_cond`) reported alongside.
+- **AND-conjunction splitting.** A compound `T1 AND T2 AND …` of simple comparisons is evaluated as a
+  single all-clauses-hold row predicate; OR-compounds are evaluated as written.
+- **Constant coefficients.** Multiplication by a literal constant (e.g. the `× 0` zero-conversion
+  edit) is evaluated faithfully — the fix that grew out of the v9 dropped-multiplication catch.
+
+**Coverage.** Of the 2,606 conditional/compound rows, **448 became machine-testable** and were run;
+the remaining **2,158 stay `GRAMMAR_DOC`** (null-logic and ratio-division families, documented with
+their parsed form — ratio derivations are handled properly in the UBPR work instead rather than
+forced through a linear test). Every newly-testable row was adjudicated to an explained verdict:
+**246 CONFIRMED + 61 CONFIRMED_CURRENT + 4 LOW_N_PASS**, then to zero unexplained — **81 DATA_GAP**,
+**48 CONDITION_NEVER_MET**, **7 QUALITY_TOLERANCE**, **7 VINTAGE_CONFIRMED**, and **1 new
+OFFICIAL_EDIT_UNMET** (the 8th overall).
+
+Two stories make the adjudication concrete:
+
+- **CECL transitions are a DATA_GAP, not a broken identity.** The largest block of conditional
+  "failures" are ASU 2016-13 (CECL) allowance and provision edits. They hold cleanly once the test is
+  restricted to the **post-adoption sub-population** — a bank that has adopted CECL reports the new
+  allowance build-up, while pre-adoption filings leave the new line-items blank and the coalesce-to-
+  zero sum breaks. The identity is correct; the public data spans the regime change. These are
+  classified **DATA_GAP** with the transition fully explained on the post-adoption subset.
+
+- **The RC-O PD-bucket family is CONDITION_NEVER_MET.** A family of conditional edits over Schedule
+  RC-O probability-of-default buckets references **280 codes that are verified absent from all public
+  bulk data** — they are confidential supervisory items (large-bank PD/LGD inputs) collected but never
+  published in bulk. The triggering condition is therefore never satisfied in any public filing. Rather
+  than report a meaningless pass rate, these **48** rows are classified **CONDITION_NEVER_MET** with
+  the 280-code absence documented.
+
+---
+
+## UBPR derivation validation (v10.0)
+
+The **Uniform Bank Performance Report (UBPR)** is the FFIEC's analytical report: it turns each bank's
+raw Call Report into a standardized set of **derived ratios** (`UBPR####` concepts), each defined by
+an official formula over Call items and/or other UBPR intermediates. v10.0 acquired the **official CDR
+XBRL UBPR taxonomy v181** and the **FFIEC UBPR User's Guide (v181)**, parsed **4,207 derivation
+formulas with zero silent drops**, and **empirically validated the 31 headline ratios** by recomputing
+each from Call/UBPR inputs and comparing to the **real published UBPR value**, bank-quarter by
+bank-quarter, over **2015 Q1 – 2026 Q1** (up to ~44,000 bank-quarters per ratio). **All 31 validated
+at 99.77–100%.** The deep companion is [docs/UBPR_GUIDE.md](UBPR_GUIDE.md); the concept catalogue is
+[`csv/UBPR_CONCEPTS.csv`](../csv/UBPR_CONCEPTS.csv) (4,099 concepts; 2,186 with derivations).
+
+| UBPR code | ratio | derivation (normalized) | agreement |
+|---|---|---|---:|
+| `UBPRE013` | Return on assets (ROA) | `100 · RIAD4340 / UBPRD659`, annualized | 99.79% |
+| `UBPRE630` | Return on equity (ROE) | `100 · RIAD4340 / UBPRD342`, annualized | 99.77% |
+| `UBPRE018` | Net interest margin (TE) | `100 · UBPR4074 / UBPRD362`, annualized | 99.77% |
+| `UBPRE088` | Efficiency ratio | `100 · UBPRE037 / UBPRE036` | 100.0% |
+| `UBPRE006` | Provision / avg assets | `100 · UBPRD483 / UBPRD659`, annualized | 99.87% |
+| `UBPRE019` | Net loss / avg total loans | `100 · UBPR1795 / UBPRE386`, annualized | 99.93% |
+| `UBPRE541` | 90+ days past due / gross loans | `100 · UBPRD667 / UBPRE131` | 100.0% |
+| `UBPRE542` | Nonaccrual / gross loans | `100 · UBPRD669 / UBPRE131` | 100.0% |
+| `UBPR7414` | Noncurrent loans / gross loans | `100 · UBPR1400 / UBPRE131` | 100.0% |
+| `UBPRE523` | Loss allowance / total loans | `100 · UBPRD095 / UBPRD146` | 100.0% |
+| `UBPRE024` | Net loans & leases / total assets | `100 · UBPRE119 / UBPR2170` | 100.0% |
+| `UBPRD486` | Tier 1 leverage ratio | regulator passthrough (±0.5 pp) | 100.0%* |
+| `UBPRD487` | Tier 1 risk-based capital ratio | regulator passthrough (±0.5 pp) | 100.0%* |
+| `UBPRD488` | Total risk-based capital ratio | regulator passthrough (±0.5 pp) | 100.0%* |
+
+`*` capital ratios are regulator passthroughs stored 2-decimal-rounded as a fraction; they validate
+as the documented `×100` relationship within the ±0.5 pp rounding band.
+
+### Three findings from the UBPR work
+
+The validation was not a rubber stamp; calibrating it surfaced conventions and caption errors that a
+naïve reading gets wrong (full method in [docs/UBPR_GUIDE.md](UBPR_GUIDE.md)):
+
+1. **Units and annualization.** Call dollar items (`RIAD/RCON/…`) are in **thousands**, while UBPR
+   average/level concepts (`UBPRD659`) are in **dollars** — a ratio mixing the two must divide the
+   UBPR value by 1,000. Year-to-date flows annualize by **×(4/q)** (Q1 ×4, Q2 ×2, Q3 ×4⁄3, Q4 ×1).
+   Both were calibrated empirically on ROA and then held unchanged across every family.
+
+2. **The taxonomy's presentation captions mislabel some concepts — the User's Guide is
+   authoritative.** `UBPR7408` is captioned in a way that reads like a capital ratio but the User's
+   Guide makes clear it is a **12-month growth rate** ("Tier One Capital 12-month growth rate"), as is
+   `UBPRE635`. They validate as parsed but must not be read as adequacy measures.
+
+3. **Capital ratios are regulator passthroughs, stored 2-dp rounded.** `UBPRD486/487/488` are not
+   recomputed from RC-R primitives (RWA is a complex regulatory computation outside this scope); they
+   are the regulator-reported ratios, and `UBPRD48x = UBPR720x × 100` holds within the ±0.5 pp
+   fraction-rounding band.
+
+---
+
 ## Intraseries (period-over-period) edits
 
 A class of official edits is not cross-sectional but **temporal**: a year-to-date flow should be
@@ -230,12 +347,14 @@ before any verdict is recorded.
 
 ---
 
-## OFFICIAL_EDIT_UNMET — seven edits kept as findings
+## OFFICIAL_EDIT_UNMET — eight edits kept as findings
 
-Seven official edits do **not** hold even on the correct window, population, and all-components-
+Eight official edits do **not** hold even on the correct window, population, and all-components-
 reported subset. We keep them deliberately, as research findings about how the official edit set
-behaves against real public data rather than deleting them. Full adjudication is in
-`_rebuild/empirical/ADJUDICATION_V9.md`. The two headline cases:
+behaves against real public data rather than deleting them. The eighth was surfaced by the v10.0
+conditional engine: a second **RCON-side phantom decomposition** of the same family as the headline
+case below — an official decomposition whose child codes have no public observations, so it is
+documented and not enforced. The two headline cases:
 
 1. **A phantom decomposition.** The official calculation linkbase decomposes `RCONM288` into
    `RCONL191 + RCONL192` — but `L191` and `L192` have **zero observations warehouse-wide** in the
@@ -299,7 +418,8 @@ Everything needed to reproduce the verdicts is public:
 - The official edits are the **FFIEC Call Report edit checks and calculation linkbases, distributed
   in the CDR XBRL taxonomy (cdr.ffiec.gov)** and the FR Y-9C edit checklist.
 - `scripts/validate_reconciliation.py` evaluates the registry against any supplied filing; use
-  `--scope {y9c,call,all}` to select the filing universe.
+  `--scope {y9c,call,all,ubpr}` to select the filing universe. Token validity is additionally
+  CI-enforced by `scripts/ci_audit.py`, which fails the build on any invalid token.
 
 Take any `CONFIRMED` row, evaluate its expression against the bulk filings with a
 `max($1,000, 0.1%)` tolerance, and you will recover its published pass rate.

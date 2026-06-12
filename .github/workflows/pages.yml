@@ -36,6 +36,9 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements-docs.txt
 
+      - name: MDRM code freshness guard
+        run: python scripts/ci_audit.py
+
       - name: Generate data-table pages from CSVs
         run: python scripts/gen_data_pages.py
 

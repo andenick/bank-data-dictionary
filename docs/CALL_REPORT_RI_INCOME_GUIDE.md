@@ -22,6 +22,13 @@ Schedule RI is the income statement for Call Reports filed by FDIC-insured banks
 
 ---
 
+> **Authoritative line-item file:** [`csv/CALL_RI_INCOME.csv`](../csv/CALL_RI_INCOME.csv) — every Schedule RI line item from the official FFIEC Call Report forms (December 2025), one row per item, triple-attested against the CDR XBRL taxonomy and bulk Call Report data (2001-2026). Per-code provenance: [`_rebuild/schedules/PROVENANCE_CALL_RI.csv`](../_rebuild/schedules/PROVENANCE_CALL_RI.csv).
+>
+> **CSV schema** (`CALL_RI_INCOME.csv`):
+> `line_number, item_description, mdrm_031 (RIAD, Form 031), mdrm_041 (RIAD, Form 041), mdrm_051 (RIAD, Form 051), forms, start_date (MDRM first reporting date), notes`.
+>
+> RI is a single-prefix (RIAD) schedule, but the **same line item carries a different RIAD code on each form**, so the CSV gives the per-form code in dedicated columns. The official per-form line numbering lives in the CSV; rows prefixed `051-` are reported only on the small-bank Form 051. The curated tables below use a condensed pedagogical numbering for readability — when the two disagree, **the CSV is authoritative**.
+
 ## Interest Income (Items 1.a - 1.h)
 
 | Item | Description | MDRM | Y-9C Equiv | Notes |

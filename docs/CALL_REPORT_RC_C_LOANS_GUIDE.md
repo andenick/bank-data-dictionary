@@ -24,6 +24,13 @@ Schedule RC-C provides detailed breakdowns of a bank's loan portfolio by loan ty
 
 ## Part I: Loans and Leases
 
+> **Authoritative line-item file:** [`csv/CALL_RC_C_LOANS.csv`](../csv/CALL_RC_C_LOANS.csv) — every Schedule RC-C Part I line item from the official FFIEC Call Report forms (December 2025), one row per item, triple-attested against the CDR XBRL taxonomy and bulk Call Report data (2001-2026). Per-code provenance: [`_rebuild/schedules/PROVENANCE_CALL_RC_C.csv`](../_rebuild/schedules/PROVENANCE_CALL_RC_C.csv).
+>
+> **CSV schema** (`CALL_RC_C_LOANS.csv`):
+> `line_number, item_description, mdrm_consolidated (RCFD, col A — Form 031), mdrm_domestic (RCON, col B — Forms 041/051), forms, start_date (MDRM first reporting date), notes`.
+>
+> The CSV reflects the **current (December 2025) RC-C Part I line layout**: line 2 (loans to depository institutions) and line 4 (C&I loans) carry only a domestic-offices total (`RCON1288`/`RCON1766`) on Forms 041/051, while Form 031 reports the consolidated breakdown at sub-items 2.a-2.c and 4.a-4.b. The legacy consolidated totals `RCFD1288`/`RCFD1766` remain valid MDRM codes but are not discrete lines on the current form. When the curated tables below disagree with the CSV, **the CSV is authoritative**.
+
 ### Real Estate Loans (Item 1)
 
 | Item | Description | MDRM Total | MDRM Domestic | Y-9C Equiv |
@@ -48,11 +55,11 @@ Schedule RC-C provides detailed breakdowns of a bank's loan portfolio by loan ty
 
 | Item | Description | MDRM Total | Y-9C Equiv | Notes |
 |------|-------------|------------|------------|-------|
-| 2 | Loans to depository institutions | RCFD1288 | BHCK1288 | Interbank |
+| 2 | Loans to depository institutions | RCON1288 | BHCK1288 | Interbank; domestic-offices total on 041/051 (legacy consolidated RCFD1288). Form 031 breaks out 2.a-2.c |
 | 3 | Loans to finance agricultural | RCON1590 | BHCK1590 | Farm operating |
-| 4 | Commercial and industrial | RCFD1766 | BHCK1766 | C&I loans |
-| 4.a | To US addressees | RCONB531 | BHCK1763 | Domestic |
-| 4.b | To non-US addressees | RCFN1763 | BHCK1763 | Foreign |
+| 4 | Commercial and industrial | RCON1766 | BHCK1766 | C&I loans; domestic-offices total on 041/051 (legacy consolidated RCFD1766). Form 031 breaks out 4.a/4.b |
+| 4.a | To US addressees | RCFD1763 | BHCK1763 | RCON1763 domestic (Forms 041/051) |
+| 4.b | To non-US addressees | RCFD1764 | BHCK1764 | RCON1764 domestic (Forms 041/051) |
 | 5 | Loans to individuals | RCON1975 | BHCK1975 | Consumer |
 | 5.a | Credit cards | RCONB538 | BHCKB538 | |
 | 5.b | Other revolving | RCONB539 | BHCKB539 | |

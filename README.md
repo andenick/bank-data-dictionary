@@ -2,19 +2,25 @@
 
 **The most detailed open catalogue of U.S. bank regulatory data — every major information collection and its subschedules, the MDRM code system, the FFIEC NIC institutional-structure data, the identifier crosswalk, cross-form mappings, and reconciliation formulas.**
 
-**Version 9.0** | Updated: 2026-06-11 | **All 22 FR Y-9C schedules** detailed against the official March-2026 field specifications · **100% MDRM code validity** (6,475/6,475 code tokens verified) · **empirically validated against 208 million + 1.9 billion rows of real FR Y-9C and Call Report filings**
+**Version 10.0** | Updated: 2026-06-11 | **FR Y-9C + Call Report line items** detailed against official field specifications · **UBPR derivation formulas** parsed and empirically validated · **official edit history** across 30 taxonomy cycles · **100% MDRM/UBPR token validity** (11,126/11,126), now **CI-enforced** · **empirically validated against 208 million + 1.9 billion rows of real FR Y-9C and Call Report filings**
 
 > This repository is a **catalogue / mapping reference** — it documents *what the datasets are, how they are structured, and how they relate to each other*. For a data-*access* package (download and query the actual filings), see the companion project **[FreeNIC](https://github.com/andenick/FreeNIC)**.
 
-> **New in v9.0 — the Call Report, empirically validated.** v9.0 acquired the **official FFIEC
-> Call Report edit checks and calculation linkbases** (distributed in the CDR XBRL taxonomy,
-> cdr.ffiec.gov; forms 031/041/051) and tested every machine-testable one against **1.917 billion
-> rows of real Call Report filings (2001 Q1–2026 Q1)**. The [Relationship Registry](csv/RELATIONSHIP_REGISTRY.csv)
-> grew additively from 2,330 to **7,508 relationships** (no schema breaks). A **cross-source
-> concordance** confirmed 16 core concepts between the Call Reports and the FDIC SDI at 99.5–99.97%
-> — and corrected two definitional mappings in the process (FDIC equity ↔ Call `3210`, FDIC net
-> loans ↔ `2122 − 3123`). This is on top of the v8.0 FR Y-9C validation against **208 million
-> rows**. See **[docs/EMPIRICAL_VALIDATION.md](docs/EMPIRICAL_VALIDATION.md)**.
+> **New in v10.0 — Call Report line items, UBPR derivations, edit history, and CI-enforced validity.**
+> v10.0 ships **seven Call Report per-schedule line-item CSVs** (RC balance sheet, RI income, RC-B
+> securities, RC-C loans, RC-E deposits, RC-N past due, RC-R capital) so the dictionary now details
+> line items for **both** report families — each row triple-attested against official 2025-12 grids,
+> the CDR XBRL taxonomy presentation linkbase, and the bulk warehouse. It adds the **UBPR**: the
+> official taxonomy v181 + User's Guide were acquired, **4,207 derivation formulas parsed** (zero
+> silent drops), and **31 headline ratios empirically validated at 99.77–100%** against real
+> published UBPR values (ROA, ROE, NIM, efficiency, charge-off, past-due, capital, liquidity). It
+> ships the **official edit history** — **15,622 distinct edit labels across 30 taxonomy cycles
+> (2001–2026)**, showing the rulebook roughly quintupled. A new **conditional/compound testing
+> engine** made 448 previously-documented registry rows testable and drove every row to an explained
+> verdict. Token validity is now **CI-enforced** (`scripts/ci_audit.py` fails the build on any invalid
+> token). The [Relationship Registry](csv/RELATIONSHIP_REGISTRY.csv) grew to **7,539 relationships**.
+> See **[docs/EMPIRICAL_VALIDATION.md](docs/EMPIRICAL_VALIDATION.md)**, **[docs/UBPR_GUIDE.md](docs/UBPR_GUIDE.md)**,
+> and **[docs/EDIT_HISTORY.md](docs/EDIT_HISTORY.md)**.
 
 ---
 
@@ -193,8 +199,21 @@ bank-regulatory-data-dictionary/
 │   │   ├── HC_S_SECURITIZATION.csv         # Schedule HC-S securitization
 │   │   └── HC_V_VIES.csv                   # Schedule HC-V variable interest entities (NEW v8.0)
 │   │
-│   ├── Empirical Validation (v8.0; Call layer v9.0):
-│   │   └── RELATIONSHIP_REGISTRY.csv       # 7,508 relationships (y9c+call+cross-source); tested vs 208M Y-9C + 1.9B Call rows
+│   ├── Call Report per-schedule line items (NEW v10.0 — triple-attested):
+│   │   ├── CALL_RC_BALANCE_SHEET.csv       # Schedule RC balance sheet (48 rows)
+│   │   ├── CALL_RI_INCOME.csv              # Schedule RI income statement (108 rows)
+│   │   ├── CALL_RC_B_SECURITIES.csv        # Schedule RC-B securities (52 rows)
+│   │   ├── CALL_RC_C_LOANS.csv             # Schedule RC-C loans (79 rows)
+│   │   ├── CALL_RC_E_DEPOSITS.csv          # Schedule RC-E deposits (55 rows)
+│   │   ├── CALL_RC_N_PAST_DUE.csv          # Schedule RC-N past due (93 rows)
+│   │   └── CALL_RC_R_CAPITAL.csv           # Schedule RC-R capital (361 rows)
+│   │
+│   ├── UBPR & edit history (NEW v10.0):
+│   │   ├── UBPR_CONCEPTS.csv               # 4,099 UBPR concepts (2,186 w/ derivations; 31 validated)
+│   │   └── EDIT_HISTORY.csv                # 15,622 official edit labels × 30 taxonomy cycles (2001–2026)
+│   │
+│   ├── Empirical Validation (v8.0; Call layer v9.0; UBPR + conditional engine v10.0):
+│   │   └── RELATIONSHIP_REGISTRY.csv       # 7,539 relationships (y9c+call+cross-source+ubpr); tested vs 208M Y-9C + 1.9B Call rows
 │   │
 │   ├── Advanced Forms (~5,000 items):
 │   │   ├── FFIEC_101_ADVANCED_CAPITAL.csv  # Advanced approaches capital
@@ -267,7 +286,8 @@ bank-regulatory-data-dictionary/
 │   └── schedule_correspondence.json        # Cross-schedule linkages
 │
 ├── scripts/                                # Validation scripts (NEW v5.0)
-│   └── validate_reconciliation.py          # Registry-driven validator; --scope {y9c,call,all} (v9.0)
+│   ├── validate_reconciliation.py          # Registry-driven validator; --scope {y9c,call,all,ubpr} (v9.0/v10.0)
+│   └── ci_audit.py                         # CI token-validity guard — fails the build on any invalid token (NEW v10.0)
 │
 ├── README.md                               # This file
 └── LICENSE                                 # MIT License
@@ -452,31 +472,43 @@ This repository is verified on two independent axes: **token validity** (does ev
 in the Fed MDRM?) and **empirical relationship validity** (do the identities actually hold in
 real filings?).
 
-**Token validity: 100%.** Every one of the **6,475** distinct MDRM-code-shaped tokens in the
-shipped files exists in the full Federal Reserve MDRM dictionary (fresh snapshot, June 2026);
-results are in [`csv/CODE_VALIDATION_AUDIT.csv`](csv/CODE_VALIDATION_AUDIT.csv). (The three
-form-name string literals "031"/"041"/"051" flagged by the official form-number edit are
-whitelisted as documented false positives.)
+**Token validity: 100% — and CI-enforced (v10.0).** Every one of the **11,126** distinct
+MDRM/UBPR-code-shaped tokens in the shipped files validates against the full Federal Reserve MDRM
+dictionary and the official UBPR taxonomy concept set; results are in
+[`csv/CODE_VALIDATION_AUDIT.csv`](csv/CODE_VALIDATION_AUDIT.csv). UBPR-namespace tokens validate
+against the official UBPR taxonomy concept set rather than the MDRM (the MDRM's UBPR section is
+incomplete, e.g. `UBPR2210`). Validity is no longer just habitual: `scripts/ci_audit.py` runs in CI
+on every push and **fails the build on any invalid token**. (The three form-name string literals
+"031"/"041"/"051" flagged by the official form-number edit are whitelisted as documented false
+positives.)
 
-**Empirical relationship validity (FR Y-9C v8.0; Call Report v9.0).** The official FR Y-9C edit
-checklist plus the **official FFIEC Call Report edit checks and calculation linkbases** (distributed
-in the CDR XBRL taxonomy, cdr.ffiec.gov; forms 031/041/051) and the dictionary's curated identities
-were structured into a [Relationship Registry](csv/RELATIONSHIP_REGISTRY.csv) of **7,508
-relationships** (y9c 2,330 · call 5,162 · cross-source 16). Every machine-testable one was tested
-against real filings — **208 million rows** of FR Y-9C bulk data (1986–2025) and **1.917 billion
-rows** of Call Report bulk data (2001 Q1–2026 Q1) — with a `max($1k, 0.1%)` tolerance:
+**Empirical relationship validity (FR Y-9C v8.0; Call Report v9.0; UBPR + conditional engine v10.0).**
+The official FR Y-9C edit checklist, the **official FFIEC Call Report edit checks and calculation
+linkbases** (distributed in the CDR XBRL taxonomy, cdr.ffiec.gov; forms 031/041/051), the **official
+FFIEC UBPR taxonomy v181 + User's Guide** derivations, and the dictionary's curated identities were
+structured into a [Relationship Registry](csv/RELATIONSHIP_REGISTRY.csv) of **7,539 relationships**
+(y9c 2,330 · call 5,162 · cross-source 16 · ubpr 31). Every machine-testable one was tested against
+real filings — **208 million rows** of FR Y-9C bulk data (1986–2025), **1.917 billion rows** of Call
+Report bulk data (2001 Q1–2026 Q1), and real published UBPR values — with a `max($1k, 0.1%)`
+tolerance. v10.0 added a **conditional/compound testing engine** (IF/THEN→CASE, AND-splitting,
+constant coefficients) that made 448 previously-documented rows testable and drove every row to an
+explained verdict:
 
 | Status | Count |
 |--------|------:|
-| CONFIRMED | 2,564 |
-| CONFIRMED_CURRENT | 83 |
-| QUALITY_TOLERANCE (documented rate) | 36 |
-| DATA_GAP (component splits too sparse) | 48 |
+| CONFIRMED | 2,841 |
+| CONFIRMED_CURRENT | 144 |
+| LOW_N_PASS | 4 |
+| VINTAGE_CONFIRMED | 7 |
+| QUALITY_TOLERANCE (documented rate) | 43 |
+| DATA_GAP (component splits too sparse) | 122 |
+| OFFICIAL_EDIT_UNMET (kept as research finding) | 8 |
+| CONDITION_NEVER_MET (confidential supervisory items absent from bulk) | 48 |
 | NOT_IN_BULK (text/confidential/discontinued code) | 134 |
 | CONDITIONAL_DOC (sub-population / non-arithmetic) | 224 |
-| OFFICIAL_EDIT_UNMET (kept as research finding) | 7 |
-| not_testable (documented non-arithmetic classes) | 4,412 |
-| **Total** | **7,508** |
+| GRAMMAR_DOC (null-logic / ratio-division families, documented) | 2,158 |
+| not_testable (documented non-arithmetic classes) | 1,806 |
+| **Total** | **7,539** |
 
 **Zero rows are pending or unexplained.** A v9.0 **cross-source concordance** additionally confirmed
 16 core concepts between the Call Reports and the FDIC SDI at 99.5–99.97% (up to 667,551
@@ -527,6 +559,7 @@ and the schedule files; consult `CODE_REMEDIATION_LOG.csv` for the full disposit
 
 | Version | Date | Changes |
 |---------|------|---------|
+| **10.0** | 2026-06-11 | **Call Report line items, UBPR derivations, official edit history, and CI-enforced validity.** Shipped **seven Call Report per-schedule line-item CSVs** (`CALL_RC_BALANCE_SHEET` 48 · `CALL_RI_INCOME` 108 · `CALL_RC_B_SECURITIES` 52 · `CALL_RC_C_LOANS` 79 · `CALL_RC_E_DEPOSITS` 55 · `CALL_RC_N_PAST_DUE` 93 · `CALL_RC_R_CAPITAL` 361), each row **triple-attested** against official 2025-12 grids, the CDR XBRL taxonomy presentation linkbase, and the 1.9B-row warehouse — so the dictionary now details line items for **both** report families. Added the **UBPR**: official taxonomy v181 + FFIEC UBPR User's Guide acquired; **4,207 derivation formulas parsed (zero silent drops)**; [`csv/UBPR_CONCEPTS.csv`](csv/UBPR_CONCEPTS.csv) ships **4,099 concepts** (2,186 with human-readable derivations); **31 headline ratios empirically validated at 99.77–100%** against real published UBPR values (~44k bank-quarters each, 2015–2026) — ROA, ROE, NIM, efficiency, charge-off, past-due, capital, liquidity. New [`docs/UBPR_GUIDE.md`](docs/UBPR_GUIDE.md) (documents the unit/annualization/averaging conventions and the User's-Guide-vs-caption corrections, e.g. `UBPR7408` is a growth rate, not a capital ratio). Shipped the **official edit history** — [`csv/EDIT_HISTORY.csv`](csv/EDIT_HISTORY.csv): **15,622 distinct edit labels across 30 taxonomy cycles 2001–2026** (4,759 retired, 1,212 introduced 2020+; the rulebook ~quintupled, ≈2,450→≈11,000); new [`docs/EDIT_HISTORY.md`](docs/EDIT_HISTORY.md); registry call rows carry `first_official_cycle`. New **conditional/compound engine** (IF/THEN→CASE + AND-splitting + constant coefficients) made **448** documented rows testable (rest stay GRAMMAR_DOC); a registry truncation defect was caught and repaired against official text (two rows flipped to confirmed). Registry grew to **7,539 rows** (y9c 2,330 · call 5,162 · cross_source 16 · ubpr 31), **0 unexplained**. Token audit **11,126/11,126 (100%)**, now **CI-enforced** (`scripts/ci_audit.py` fails the build on any invalid token); `_rebuild/quarterly_refresh.py` one-command refresh. **No schema breaks** — additive CSVs + registry growth only. |
 | **9.0** | 2026-06-11 | **The Call Report, empirically validated against 1.9 billion filing rows.** Acquired the **official FFIEC Call Report edit checks and calculation linkbases** (distributed in the CDR XBRL taxonomy, cdr.ffiec.gov; forms 031/041/051; 3,615 edits/form + 243 calc identities; current cycle 2026-03-31, 30 historical cycles archived), structured them into [`RELATIONSHIP_REGISTRY.csv`](csv/RELATIONSHIP_REGISTRY.csv) — which grew **2,330 → 7,508 relationships** (y9c 2,330 · call 5,162 · cross-source 16) — and tested every machine-testable Call relationship (**2,464**) against **1.917 billion rows of bulk Call Report filings** (2001 Q1–2026 Q1). Added a **cross-source concordance** confirming 16 core concepts vs FDIC SDI at **99.5–99.97%**, which corrected two definitional mappings (**FDIC equity ↔ Call `3210`** not MI-inclusive `G105`; **FDIC net loans ↔ `2122 − 3123`** not RC-C item-12 `B529`). Registry status distribution: **2,564 CONFIRMED · 83 CONFIRMED_CURRENT · 36 QUALITY_TOLERANCE · 48 DATA_GAP · 134 NOT_IN_BULK · 224 CONDITIONAL_DOC · 7 OFFICIAL_EDIT_UNMET · 4,412 not_testable** (0 pending). Seven OFFICIAL_EDIT_UNMET findings kept deliberately (e.g. a phantom `RCONM288 = RCONL191 + RCONL192` decomposition with zero public observations; an RC-R II securitization bound that holds at only 0.452 among active securitizers). Caught a second parser hazard (dropped multiplication: `X = Y * 0` read as `X = Y`; fixed + guarded). Token validity **6,475/6,475 (100%)**. `validate_reconciliation.py` gains `--scope {y9c,call,all}`. **No schema breaks** — additive registry growth + new statuses only. |
 | **8.0** | 2026-06-11 | **All 22 FR Y-9C schedules + empirical validation against 208M filing rows.** Rebuilt and verified every FR Y-9C schedule against the **official March-2026 field specifications** (Reporting Central Appendix A); **added 8 new schedules** — HC-E (deposits), HC-I (insurance), HC-M (memoranda), HC-P (mortgage banking), HC-V (VIEs), HI-A (equity changes), HI-B (charge-offs/allowance), HI-C (ALLL disaggregation) — so the dictionary now details **all 22** Y-9C schedules. Structured the official FR Y-9C edit checklist (2,195 edits) and merged it with curated identities into the new [`RELATIONSHIP_REGISTRY.csv`](csv/RELATIONSHIP_REGISTRY.csv) (**2,330 relationships**); **tested all 332 machine-testable relationships against 208M rows of real FR Y-9C filings** (13,668 holding companies, 1986–2025): **264 CONFIRMED, 34 CONFIRMED_CURRENT, 13 QUALITY_TOLERANCE, 17 NOT_IN_BULK, 3 CONDITIONAL_DOC, 1 DATA_GAP** (298/332 ≥99%). A conceptual sweep fixed hundreds of wrong-concept/wrong-vintage codes; token validity 100% (**4,564/4,564**). New [`docs/EMPIRICAL_VALIDATION.md`](docs/EMPIRICAL_VALIDATION.md). **Breaking:** many schedule CSVs rebuilt to the current form; HC-L / HC-S schema changes; new relationship registry. |
 | **7.0** | 2026-06-11 | **Legacy-schedule rebuild + 100% code validity.** Rebuilt the three structurally fabricated schedule CSVs from the official FR Y-9C form: **HC-H** (real 5-item single-column schedule `BHCK3197/3296/3408/3409/3298`, current since 1986 — correcting v6.3's erroneous "discontinued ~2001" claim; the old 14-row × 7-bucket grid never existed), **HC-K** (verified quarterly-average grid incl. historical end-dated items; removed contradictory double-assignments), **HC-Q** (real 5-column G-series layout: total FV / netting / Level 1 / 2 / 3, effective 2009-06-30 — replacing a fabricated 4-column `BHCL` grid). Every code in the rebuilt schedules verified against MDRM **and** observed in actual FR Y-9C (BHCF) bulk data 1986–2021, with per-code provenance. Repo-wide apply campaign cleared every remaining invalid token (87% → **100%** of 2,426 code tokens); remediation log grown to 427 adjudications, 0 unresolved. Crosswalk 984 → **1,239** codes against a fresh June-2026 MDRM snapshot. Rebuilt HC-G to the official 4-line structure. **Breaking:** HC_H/HC_K/HC_Q/HC_G CSV schemas changed. |

@@ -1,8 +1,78 @@
 # Verification Report
 
-> **Version 9.0 | 2026-06-11** — verification gate for the v9.0 Call-Report empirical layer.
+> **Version 10.0 | 2026-06-11** — verification gate for the v10.0 Call-line-item, UBPR,
+> edit-history, conditional-engine, and CI-enforcement layer.
 > **Repository**: github.com/andenick/bank-data-dictionary
-> Earlier gates (v8.0, v7.0, v6.x, v5.0) are retained below as the historical record.
+> Earlier gates (v9.0, v8.0, v7.0, v6.x, v5.0) are retained below as the historical record.
+
+---
+
+## v10.0 — Call line items, UBPR derivations, edit history, CI-enforced validity (2026-06-11)
+
+v9.0 brought **both** report families from token-validity to empirical validity. v10.0 closes the
+remaining breadth-and-operationalization gaps: it ships per-schedule **Call Report line-item CSVs**
+(parity with the Y-9C side), validates the **UBPR** derivation formulas against real published UBPR
+values, ships the **official edit history** across 30 taxonomy cycles, adds a **conditional/compound
+testing engine** that drives every registry row to an explained verdict, and makes 100% token
+validity **structurally enforced in CI** rather than habitual. The registry grew additively from
+7,508 to **7,539 relationships** with **no schema breaks**.
+
+### Headline results
+
+| Metric | v9.0 | v10.0 |
+|--------|------|-------|
+| Report families with shipped per-schedule line-item CSVs | FR Y-9C only | **FR Y-9C + Call Report** — 7 new CSVs (RC 48 · RI 108 · RC-B 52 · RC-C 79 · RC-E 55 · RC-N 93 · RC-R 361), each row **triple-attested** (official 2025-12 grid + CDR taxonomy presentation linkbase + 1.9B-row warehouse) |
+| Report families empirically validated | FR Y-9C + Call Report | **+ UBPR** — taxonomy v181 + User's Guide; 4,207 derivation formulas parsed (zero silent drops); **31 headline ratios validated at 99.77–100%** vs real published UBPR values (~44k bank-quarters each, 2015–2026) |
+| Registry relationships | 7,508 | **7,539** (y9c 2,330 · call 5,162 · cross_source 16 · **ubpr 31**) |
+| Conditional/compound rows | documented, untested | **conditional/compound engine** (IF/THEN→CASE + AND-splitting + constant coefficients): **448** rows became testable → 246 CONFIRMED + 61 CONFIRMED_CURRENT + 4 LOW_N_PASS; adjudicated to zero unexplained (81 DATA_GAP · 48 CONDITION_NEVER_MET · 7 QUALITY_TOLERANCE · 7 VINTAGE_CONFIRMED · 1 new OFFICIAL_EDIT_UNMET). 2,158 stay GRAMMAR_DOC |
+| Official edit history | 30 cycles archived, unparsed | **`csv/EDIT_HISTORY.csv`** — 15,622 distinct edit labels across 30 cycles (2001–2026); 4,759 retired, 1,212 introduced 2020+; rulebook ~quintupled. Registry call rows carry `first_official_cycle` |
+| OFFICIAL_EDIT_UNMET findings | 7 | **8** (the new one: an RCON-side phantom decomposition surfaced by the conditional engine) |
+| Token validity | 6,475 / 6,475 (100%) | **11,126 / 11,126 (100%)** — UBPR-namespace tokens validate vs the official UBPR taxonomy concept set; **now CI-enforced** (`scripts/ci_audit.py` fails the build on any invalid token) |
+| Schema changes | none (additive) | **none — additive CSVs + registry growth only** |
+
+### Call Report line-item CSVs — triple attestation
+
+The seven new `CALL_*` CSVs mirror the Y-9C schedule convention. Every line-item row carries three
+independent attestations: (1) the official **2025-12 per-form/column/code grids**; (2) the **CDR XBRL
+taxonomy presentation linkbase** line structure (a free second attestation of position and code); and
+(3) **first/last-seen in the 1.917-billion-row bulk Call warehouse**. Zero rows are unresolved.
+
+### UBPR — what was verified, and an honest scope statement
+
+The 31 headline ratios (ROA, ROE, NIM, efficiency, provision, charge-off, past-due, nonaccrual,
+allowance, net-loans/assets, net-loans/deposits, and the capital ratios) were recomputed from Call/UBPR
+inputs and compared to the **real published UBPR values** per bank-quarter, all validating at
+**99.77–100%**. The whole 4,099-concept universe is **cataloged** with its parsed derivation, but only
+the 31 headline ratios are independently re-derived; capital adequacy ratios are **regulator
+passthroughs** (RWA is not recomputed from RC-R primitives), validated as the documented `×100`
+relationship within the ±0.5 pp rounding band. 361 of 4,207 formulas are deeply nested conditionals
+preserved raw rather than guessed at. Full method and limitations: [docs/UBPR_GUIDE.md](UBPR_GUIDE.md).
+
+### Adversarial rigor — defect catch #3 (registry truncation)
+
+The v8.0 adjudication caught a harness bug that read `A − (B + C)` as `A + B + C`; v9.0 caught a
+dropped-multiplication hazard (`X = Y * 0` read as `X = Y`). v10.0's catch is a **registry truncation
+defect**: one official-edit expression had been **cut at ~588 characters** when ingested, silently
+dropping the tail of a long decomposition so the registered identity was incomplete. It surfaced as an
+unexpected empirical "failure"; tracing it to the source rather than the data showed the truncation,
+and the expression was **repaired against the official edit text**. After repair, two rows flipped to
+**confirmed**. This continues the discipline of tracking a failing empirical result to its true source
+before recording a verdict — the defect was in our own ingestion, not the official math.
+
+### UBPR caption-mislabel finding
+
+Calibrating the UBPR derivations surfaced that the **taxonomy's presentation captions mislabel some
+concepts** — and the **User's Guide is authoritative**. The clearest case: `UBPR7408` reads like a
+capital-adequacy ratio from its taxonomy caption, but the User's Guide defines it as a **12-month
+growth rate** ("Tier One Capital 12-month growth rate"), as is `UBPRE635`. They validate as parsed but
+must not be read as adequacy measures. The repo follows the User's Guide where the two disagree.
+
+### CI guard — validity is now structurally enforced
+
+100% token validity is no longer a per-release habit. `scripts/ci_audit.py` runs in CI on every push
+and **fails the build on any invalid token** (a slim code-set extract is committed under `ci/` so the
+check needs no external download). A one-command `_rebuild/quarterly_refresh.py` (dry-run verified)
+refreshes MDRM, taxonomy, registry deltas, and the audit; the runbook is in `_rebuild/MAINTENANCE.md`.
 
 ---
 

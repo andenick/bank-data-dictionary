@@ -1,0 +1,94 @@
+line_number,loan_category,mdrm_30_89,mdrm_90_plus,mdrm_nonaccrual,prefix,forms,start_date,notes,mdrm_single
+1.a.(1),1-4 family residential construction loans,RCONF172,RCONF174,RCONF176,RCON,031/041,2017-03-31,,-
+1.a.(2),Other construction loans and all land development and other land loans,RCONF173,RCONF175,RCONF177,RCON,031/041,2017-03-31,,-
+1.b,Secured by farmland in domestic offices,RCON3493,RCON3494,RCON3495,RCON,031/041/051,2017-03-31,,-
+1.c.(1),"Revolving, open-end loans secured by 1-4 family residential properties and extended under lines of credit",RCON5398,RCON5399,RCON5400,RCON,031/041,2017-03-31,,-
+1.c.(2)(a),Closed-end loans secured by 1-4 family residential properties: Secured by first liens,RCONC236,RCONC237,RCONC229,RCON,031/041,2017-03-31,,-
+1.c.(2)(b),Closed-end loans secured by 1-4 family residential properties: Secured by junior liens,RCONC238,RCONC239,RCONC230,RCON,031/041,2017-03-31,,-
+1.d,Secured by multifamily (5 or more) residential properties in domestic offices,RCON3499,RCON3500,RCON3501,RCON,031/041,2017-03-31,,-
+1.d,Secured by multifamily (5 or more) residential properties in domestic offices,RCONC236,RCONC237,RCONC229,RCON,051,2017-03-31,,-
+1.e.(1),Loans secured by owner-occupied nonfarm nonresidential properties,RCONF178,RCONF180,RCONF182,RCON,031/041,2017-03-31,,-
+1.e.(2),Loans secured by other nonfarm nonresidential properties,RCONF179,RCONF181,RCONF183,RCON,031/041,2017-03-31,,-
+1.f,Loans secured by real estate in foreign offices,RCFNB572,RCFNB573,RCFNB574,RCFN,031,2001-03-31,,-
+1.f,Loans secured by real estate in foreign offices,RCON3499,RCON3500,RCON3501,RCON,051,2017-03-31,,-
+2.a,To U.S. banks and other U.S. depository institutions,RCFD5377,RCFD5378,RCFD5379,RCFD,031,2001-03-31,,-
+2.b,To foreign banks,RCFD5380,RCFD5381,RCFD5382,RCFD,031,2001-03-31,,-
+3,Loans to finance agricultural production and other loans to farmers,RCFD1594,RCFD1597,RCFD1583,RCFD,031,2001-03-31,,-
+3,Loans to finance agricultural production and other loans to farmers,RCON1594,RCON1597,RCON1583,RCON,051,2017-03-31,,-
+4.a,Commercial and industrial loans: To U.S. addressees (domicile),RCFD1251,RCFD1252,RCFD1253,RCFD,031,2001-03-31,,-
+4.b,Commercial and industrial loans: To non-U.S. addressees (domicile),RCFD1254,RCFD1255,RCFD1256,RCFD,031,2001-03-31,,-
+5.a,Loans to individuals: Credit cards,RCFDB575,RCFDB576,RCFDB577,RCFD,031,2001-03-31,,-
+5.a,Loans to individuals: Credit cards,RCONB575,RCONB576,RCONB577,RCON,041/051,2017-03-31,,-
+5.b,Loans to individuals: Automobile loans,RCFDK213,RCFDK214,RCFDK215,RCFD,031,2011-03-31,,-
+5.b,Loans to individuals: Automobile loans,RCONK213,RCONK214,RCONK215,RCON,041,2017-03-31,,-
+5.b,Loans to individuals: Automobile loans,-,-,-,,051,,,-
+5.c,"Loans to individuals: Other (revolving credit plans other than credit cards, and other consumer loans)",RCFDK216,RCFDK217,RCFDK218,RCFD,031,2011-03-31,,-
+5.c,"Loans to individuals: Other (revolving credit plans other than credit cards, and other consumer loans)",RCONK216,RCONK217,RCONK218,RCON,041,2017-03-31,,-
+5.c,"Loans to individuals: Other (revolving credit plans other than credit cards, and other consumer loans)",RCONK213,RCONK214,RCONK215,RCON,051,2017-03-31,,-
+6,Loans to foreign governments and official institutions,RCFD5389,RCFD5390,RCFD5391,RCFD,031,2001-03-31,,-
+6,Loans to foreign governments and official institutions,RCON3505,RCON3506,RCON3507,RCON,051,2017-03-31,,-
+7,All other loans,RCFD5459,RCFD5460,RCFD5461,RCFD,031,2001-03-31,,-
+7,All other loans,RCON5459,RCON5460,RCON5461,RCON,041,2017-03-31,,-
+8.a,"Lease financing receivables: Leases to individuals for household, family, and other personal expenditures",RCFDF166,RCFDF167,RCFDF168,RCFD,031,2007-03-31,,-
+8.b,Lease financing receivables: All other leases,RCFDF169,RCFDF170,RCFDF171,RCFD,031,2007-03-31,,-
+9,Total loans and leases (sum of items 1 through 8.b),RCFD1406,RCFD1407,RCFD1403,RCFD,031,2017-03-31,,-
+9,Total loans and leases (sum of items 1 through 8.b),RCON1406,RCON1407,RCON1403,RCON,041,2017-03-31,,-
+10,Debt securities and other assets (exclude other real estate owned and other repossessed assets),RCFD3505,RCFD3506,RCFD3507,RCFD,031,2001-03-31,,-
+10,Debt securities and other assets (exclude other real estate owned and other repossessed assets),RCON3505,RCON3506,RCON3507,RCON,041,2017-03-31,,-
+11,"Loans and leases reported in items 1 through 8 above that are wholly or partially guaranteed by the U.S. Government, excluding loans and leases covered by loss-sharing agreements with the FDIC",RCFDK036,RCFDK037,RCFDK038,RCFD,031,2011-03-31,,-
+11,"Loans and leases reported in items 1 through 8 above that are wholly or partially guaranteed by the U.S. Government, excluding loans and leases covered by loss-sharing agreements with the FDIC",RCONK036,RCONK037,RCONK038,RCON,041/051,2017-03-31,,-
+11.a,"Guaranteed portion of loans and leases included in item 11 above, excluding rebooked ""GNMA loans""",RCFDK039,RCFDK040,RCFDK041,RCFD,031,2011-03-31,,-
+11.a,"Guaranteed portion of loans and leases included in item 11 above, excluding rebooked ""GNMA loans""",RCONK039,RCONK040,RCONK041,RCON,041,2017-03-31,,-
+11.b,"Rebooked ""GNMA loans"" that have been repurchased or are eligible for repurchase included in item 11 above",RCFDK042,RCFDK043,RCFDK044,RCFD,031,2011-03-31,,-
+11.b,"Rebooked ""GNMA loans"" that have been repurchased or are eligible for repurchase included in item 11 above",RCONK042,RCONK043,RCONK044,RCON,041,2017-03-31,,-
+12,Portion of covered loans and leases reported in item 9 above that is protected by FDIC loss-sharing agreements,RCFDK102,RCFDK103,RCFDK104,RCFD,031,2011-03-31,,-
+12,Portion of covered loans and leases reported in item 9 above that is protected by FDIC loss-sharing agreements,RCONK102,RCONK103,RCONK104,RCON,041,2017-03-31,,-
+M.1.a.(1),Loan modifications to borrowers experiencing financial difficulty: 1-4 family residential construction loans in domestic offices,RCONK105,RCONK106,RCONK107,RCON,031/041,2017-03-31,,-
+M.1.a.(2),Loan modifications: Other construction loans and all land development and other land loans in domestic offices,RCONK108,RCONK109,RCONK110,RCON,031/041,2017-03-31,,-
+M.1.b,Loan modifications: Loans secured by 1-4 family residential properties in domestic offices,RCONF661,RCONF662,RCONF663,RCON,031/041,2017-03-31,,-
+M.1.c,Loan modifications: Secured by multifamily (5 or more) residential properties in domestic offices,RCONK111,RCONK112,RCONK113,RCON,031/041,2017-03-31,,-
+M.1.d.(1),Loan modifications: Loans secured by owner-occupied nonfarm nonresidential properties in domestic offices,RCONK114,RCONK115,RCONK116,RCON,031/041,2017-03-31,,-
+M.1.d.(2),Loan modifications: Loans secured by other nonfarm nonresidential properties in domestic offices,RCONK117,RCONK118,RCONK119,RCON,031/041,2017-03-31,,-
+M.1.e.(1),Loan modifications: Commercial and industrial loans to U.S. addressees (domicile),RCFDK120,RCFDK121,RCFDK122,RCFD,031,2011-03-31,,-
+M.1.e.(1),Loan modifications: Commercial and industrial loans to U.S. addressees (domicile),RCONK120,RCONK121,RCONK122,RCON,041,2011-03-31,,-
+M.1.e.(2),Loan modifications: Commercial and industrial loans to non-U.S. addressees (domicile),RCFDK123,RCFDK124,RCFDK125,RCFD,031,2011-03-31,,-
+M.1.e.(2),Loan modifications: Commercial and industrial loans to non-U.S. addressees (domicile),RCONK123,RCONK124,RCONK125,RCON,041,2011-03-31,,-
+M.1.f,"Loan modifications: All other loans (include loans to individuals for household, family, and other personal expenditures)",RCONK126,RCONK127,RCONK128,RCON,031/041,2017-03-31,,-
+M.1.f.(1),Itemized: Loans secured by farmland in domestic offices,RCONK130,RCONK131,RCONK132,RCON,031/041,2017-03-31,,-
+M.1.f.(3),Itemized: Loans to finance agricultural production and other loans to farmers,RCONK138,RCONK139,RCONK140,RCON,031,2017-03-31,,-
+M.1.f.(4)(a),Itemized: Loans to individuals: Credit cards,RCONK274,RCONK275,RCONK276,RCON,031/041,2017-03-31,,-
+M.1.f.(4)(b),Itemized: Loans to individuals: Automobile loans,RCONK277,RCONK278,RCONK279,RCON,031/041,2017-03-31,,-
+M.1.f.(4)(c),"Itemized: Loans to individuals: Other (revolving credit plans other than credit cards, and other consumer loans)",RCONK280,RCONK281,RCONK282,RCON,031/041,2017-03-31,,-
+M.1.g,Total loan modifications to borrowers experiencing financial difficulty included in Schedule RC-N items 1-7 above (sum of M.1.a.(1) through M.1.f),RCONHK26,RCONHK27,RCONHK28,RCON,031/041,2017-03-31,,-
+M.2,"Loans to finance commercial real estate, construction, and land development activities (not secured by real estate) included in Schedule RC-N items 4 and 7 above",RCFD6558,RCFD6559,RCFD6560,RCFD,031,2001-03-31,,-
+M.2,"Loans to finance commercial real estate, construction, and land development activities (not secured by real estate) included in Schedule RC-N items 4 and 7 above",RCON6558,RCON6559,RCON6560,RCON,041,2017-03-31,,-
+M.2,"Loans to finance commercial real estate, construction, and land development activities (not secured by real estate) included in Schedule RC-N items 4 and 7 above",RCON1594,RCON1597,RCON1583,RCON,051,2017-03-31,,-
+M.3,Loans secured by real estate to non-U.S. addressees (domicile) included in Schedule RC-N item 1 above,RCFD1248,RCFD1249,RCFD1250,RCFD,031,2001-03-31,,-
+M.3,Loans secured by real estate to non-U.S. addressees (domicile) included in Schedule RC-N item 1 above,RCONC240,RCONC241,RCONC226,RCON,051,2017-03-31,,-
+M.5,Loans and leases held for sale included in Schedule RC-N items 1 through 8 above,RCFDC240,RCFDC241,RCFDC226,RCFD,031,2002-03-31,,-
+M.5,Loans and leases held for sale included in Schedule RC-N items 1 through 8 above,RCONC240,RCONC241,RCONC226,RCON,041,2017-03-31,,-
+M.5,Loans and leases held for sale included in Schedule RC-N items 1 through 8 above,RCONPV23,RCONPV24,RCONPV25,RCON,051,2024-12-31,,-
+M.6,Derivative contracts: Fair value of amounts carried as assets,RCFD3529,RCFD3530,-,RCFD,031,2001-06-30,,-
+M.7,Additions to nonaccrual assets during the previous six months,-,-,-,RCFD,031,2006-09-30,single-column memorandum (nonaccrual flow); code in mdrm_single,RCFDC410
+M.7,Additions to nonaccrual assets during the previous six months,-,-,-,RCON,041,2017-03-31,single-column memorandum (nonaccrual flow); code in mdrm_single,RCONC410
+M.8,Nonaccrual assets sold during the previous six months,-,-,-,RCFD,031,2006-09-30,single-column memorandum (nonaccrual flow); code in mdrm_single,RCFDC411
+M.8,Nonaccrual assets sold during the previous six months,-,-,-,RCON,041,2017-03-31,single-column memorandum (nonaccrual flow); code in mdrm_single,RCONC411
+M.9,Loans to nondepository financial institutions included in Schedule RC-N item 7,RCFDPV23,RCFDPV24,RCFDPV25,RCFD,031,2024-12-31,,-
+M.9,Loans to nondepository financial institutions included in Schedule RC-N item 7,RCONPV23,RCONPV24,RCONPV25,RCON,041,2024-12-31,,-
+2,Loans to depository institutions and acceptances of other banks,RCONB834,RCONB835,RCONB836,RCON,041/051,2017-03-31,,-
+4,Commercial and industrial loans,RCON1606,RCON1607,RCON1608,RCON,041/051,2017-03-31,,-
+8,Lease financing receivables,RCON1226,RCON1227,RCON1228,RCON,041,2017-03-31,,-
+M.1.f.(5),Itemized: Loans to finance agricultural production and other loans to farmers included in Schedule RC-N Memorandum item 1.f above,RCONK138,RCONK139,RCONK140,RCON,041,2017-03-31,,-
+M.3.a,Loans secured by real estate to non-U.S. addressees (domicile) included in Schedule RC-N item 1 above,RCON1248,RCON1249,RCON1250,RCON,041,2001-03-31,,-
+M.3.b,Loans to and acceptances of foreign banks included in Schedule RC-N item 2 above,RCON5380,RCON5381,RCON5382,RCON,041,2001-03-31,,-
+M.3.c,Commercial and industrial loans to non-U.S. addressees (domicile) included in Schedule RC-N item 4 above,RCON1254,RCON1255,RCON1256,RCON,041,2001-03-31,,-
+M.3.d,"Leases to individuals for household, family, and other personal expenditures included in Schedule RC-N item 8 above",RCONF166,RCONF167,RCONF168,RCON,041,2007-03-31,,-
+M.4,Loans to finance agricultural production and other loans to farmers included in Schedule RC-N item 7 above,RCON1594,RCON1597,RCON1583,RCON,041,2017-03-31,,-
+1.a,"Construction, land development, and other land loans",RCONF172,RCONF174,RCONF176,RCON,051,2017-03-31,,-
+1.c,"1-4 family residential: HELOCs (revolving, open-end)",RCON5398,RCON5399,RCON5400,RCON,051,2017-03-31,,-
+1.e,1-4 family residential: Closed-end junior lien,RCONC238,RCONC239,RCONC230,RCON,051,2017-03-31,,-
+1.g,Nonfarm nonresidential: Owner-occupied,RCONF178,RCONF180,RCONF182,RCON,051,2017-03-31,,-
+1.h,Nonfarm nonresidential: Other,RCONF179,RCONF181,RCONF183,RCON,051,2017-03-31,,-
+5.d,Loans to individuals: Other consumer,RCONK216,RCONK217,RCONK218,RCON,051,2017-03-31,,-
+M.4.a,Nonaccrual loans: Additions to nonaccrual during the year,-,-,-,RCON,051,2017-03-31,single-column memorandum (nonaccrual flow); code in mdrm_single,RCONC410
+M.4.b,Nonaccrual loans: Sales of nonaccrual loans during the year,-,-,-,RCON,051,2017-03-31,single-column memorandum (nonaccrual flow); code in mdrm_single,RCONC411

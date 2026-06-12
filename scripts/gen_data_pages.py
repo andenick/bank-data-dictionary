@@ -36,10 +36,13 @@ SOURCES = [
     ("CODE_VALIDATION_AUDIT.csv", "Code Validation Audit",
      "Per-code validation audit recording the status and source files for every MDRM code."),
     ("RELATIONSHIP_REGISTRY.csv", "Relationship Registry (empirically tested)",
-     "Every reconciliation identity and bound in the dictionary — official FR Y-9C edit checks "
-     "plus curated identities — with its expression, source, and (where machine-testable) the "
-     "empirical verdict, observation count and pass rate against 208 million rows of real "
-     "FR Y-9C filings."),
+     "Every reconciliation identity and bound in the dictionary — official FR Y-9C and Call "
+     "Report edit checks plus curated identities — with its expression, source, and (where "
+     "machine-testable) the empirical verdict, observation count and pass rate against 208 "
+     "million FR Y-9C rows and 1.9 billion Call Report rows of real filings."),
+    ("EDIT_HISTORY.csv", "Official Edit History (2001-2026)",
+     "Lifetime of every official Call Report edit label across 30 CDR taxonomy cycles: rule "
+     "type, forms, first/last cycle observed, and the number of expression revisions."),
 ]
 
 

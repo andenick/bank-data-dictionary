@@ -1,0 +1,49 @@
+line_number,item_description,mdrm_consolidated,mdrm_domestic,mdrm_foreign,mdrm_domestic_051,forms,start_date,notes
+1.a,Noninterest-bearing balances and currency and coin (from Schedule RC-A),RCFD0081,RCON0081,-,-,031/041,1984-03-31,Cash/balance-sheet item.
+1.b,Interest-bearing balances (from Schedule RC-A),RCFD0071,RCON0071,-,-,031/041,1984-03-31,Cash/balance-sheet item.
+2.a,"Held-to-maturity securities (from Schedule RC-B, column A)",RCFDJJ34,RCONJJ34,-,-,031/041,2019-03-31,Cash/balance-sheet item.
+2.b,"Available-for-sale debt securities (from Schedule RC-B, column D)",RCFD1773,RCON1773,-,-,031/041,1997-09-30,Cash/balance-sheet item.
+2.c,Equity securities with readily determinable fair values not held for trading,RCFDJA22,RCONJA22,-,-,031/041,2018-03-31,Cash/balance-sheet item.
+3.a,Federal funds sold in domestic offices,-,RCONB987,-,RCONB987,031/041/051,2017-03-31,Cash/balance-sheet item.
+3.b,Securities purchased under agreements to resell,RCFDB989,RCONB989,-,RCONB989,031/041/051,2003-03-31,Cash/balance-sheet item.
+4.a,Loans and leases held for sale (from Schedule RC-C),RCFD5369,RCON5369,-,RCON5369,031/041/051,1991-03-31,Cash/balance-sheet item.
+4.b,Loans and leases held for investment,RCFDB528,RCONB528,-,-,031/041,2001-03-31,Cash/balance-sheet item.
+4.c,LESS: Allowance for credit losses on loans and leases,RCFD3123,RCON3123,-,-,031/041,1984-03-31,Cash/balance-sheet item.
+4.d,"Loans and leases held for investment, net of allowance (item 4.b minus 4.c)",RCFDB529,RCONB529,-,-,031/041,2001-03-31,Cash/balance-sheet item.
+5,Trading assets (from Schedule RC-D),RCFD3545,RCON3545,-,RCON3545,031/041/051,2009-03-31,Cash/balance-sheet item.
+6,Premises and fixed assets (including right-of-use assets),RCFD2145,RCON2145,-,RCON2145,031/041/051,1984-03-31,Cash/balance-sheet item.
+7,Other real estate owned (from Schedule RC-M),RCFD2150,RCON2150,-,RCON2150,031/041/051,1994-03-31,Cash/balance-sheet item.
+8,Investments in unconsolidated subsidiaries and associated companies,RCFD2130,RCON2130,-,RCON2130,031/041/051,1984-03-31,Cash/balance-sheet item.
+9,Direct and indirect investments in real estate ventures,RCFD3656,RCON3656,-,RCON3656,031/041/051,2009-06-30,Cash/balance-sheet item.
+10,Intangible assets (from Schedule RC-M),RCFD2143,RCON2143,-,-,031/041,2018-06-30,Cash/balance-sheet item.
+11,Other assets (from Schedule RC-F),RCFD2160,RCON2160,-,RCON2160,031/041/051,1984-03-31,Cash/balance-sheet item.
+12,Total assets (sum of items 1 through 11),RCFD2170,RCON2170,-,RCON2170,031/041/051,1985-12-31,Cash/balance-sheet item.
+13.a,"Deposits: In domestic offices (sum of totals of columns A and C from Schedule RC-E, Part I)",-,RCON2200,-,-,031/041,2017-03-31,Cash/balance-sheet item.
+13.a.(1),Deposits in domestic offices: Noninterest-bearing,-,RCON6631,-,RCON6631,031/041/051,2017-03-31,Cash/balance-sheet item.
+13.a.(2),Deposits in domestic offices: Interest-bearing,-,RCON6636,-,RCON6636,031/041/051,2017-03-31,Cash/balance-sheet item.
+13.b,"Deposits: In foreign offices, Edge and Agreement subsidiaries, and IBFs (from Schedule RC-E, Part II)",-,-,RCFN2200,-,031/041,-,Cash/balance-sheet item.
+13.b.(1),Deposits in foreign offices: Noninterest-bearing,-,-,RCFN6631,-,031,-,Cash/balance-sheet item.
+13.b.(2),Deposits in foreign offices: Interest-bearing,-,-,RCFN6636,-,031,-,Cash/balance-sheet item.
+14.a,Federal funds purchased in domestic offices,-,RCONB993,-,RCONB993,031/041/051,2017-03-31,Cash/balance-sheet item.
+14.b,Securities sold under agreements to repurchase,RCFDB995,RCONB995,-,RCONB995,031/041/051,2003-03-31,Cash/balance-sheet item.
+15,Trading liabilities (from Schedule RC-D),RCFD3548,RCON3548,-,RCON3548,031/041/051,1997-09-30,Cash/balance-sheet item.
+16,Other borrowed money (includes mortgage indebtedness) (from Schedule RC-M),RCFD3190,RCON3190,-,RCON3190,031/041/051,2001-03-31,Cash/balance-sheet item.
+17,Not applicable,-,-,-,-,031/041,-,Cash/balance-sheet item.
+18,Not applicable,-,-,-,-,031/041,-,Cash/balance-sheet item.
+19,Subordinated notes and debentures,-,RCON3200,-,RCON3200,031/041/051,2017-03-31,Cash/balance-sheet item.
+20,Other liabilities (from Schedule RC-G),-,RCON2930,-,RCON2930,031/041/051,2017-03-31,Cash/balance-sheet item.
+21,Total liabilities (sum of items 13 through 20),-,RCON2948,-,RCON2948,031/041/051,2017-03-31,Cash/balance-sheet item.
+22,Not applicable,-,-,-,-,031/041,-,Cash/balance-sheet item.
+23,Perpetual preferred stock and related surplus,-,RCON3838,-,RCON3838,031/041/051,2017-03-31,Cash/balance-sheet item.
+24,Common stock,-,RCON3230,-,RCON3230,031/041/051,2017-03-31,Cash/balance-sheet item.
+25,Surplus (exclude all surplus related to preferred stock),-,RCON3839,-,RCON3839,031/041/051,2017-03-31,Cash/balance-sheet item.
+26.a,Retained earnings,-,RCON3632,-,RCON3632,031/041/051,2017-03-31,Cash/balance-sheet item.
+26.b,Accumulated other comprehensive income,-,RCONB530,-,RCONB530,031/041/051,2017-03-31,Cash/balance-sheet item.
+26.c,Other equity capital components,-,RCONA130,-,RCONA130,031/041/051,2017-03-31,Cash/balance-sheet item.
+27.a,Total bank equity capital (sum of items 23 through 26.c),-,RCON3210,-,RCON3210,031/041/051,2017-03-31,Cash/balance-sheet item.
+27.b,Noncontrolling (minority) interests in consolidated subsidiaries,-,RCON3000,-,RCON3000,031/041/051,2017-03-31,Cash/balance-sheet item.
+28,Total equity capital (sum of items 27.a and 27.b),-,RCONG105,-,RCONG105,031/041/051,2017-03-31,Cash/balance-sheet item.
+29,Total liabilities and equity capital (sum of items 21 and 28),-,RCON3300,-,RCON3300,031/041/051,2017-03-31,Cash/balance-sheet item.
+M.1,Indicate the number that best describes the most comprehensive level of auditing work performed for the bank by independent external auditors as of any date during 2024,RCFD6724,RCON6724,-,-,031/041,1993-03-31,Cash/balance-sheet item.
+M.2,Bank's fiscal year-end date (report the date in MMDD format),-,RCON8678,-,RCON8678,031/041/051,2017-03-31,Cash/balance-sheet item.
+051-11.b,Intangible assets: Other intangible assets,-,-,-,RCON0426,051,2017-03-31,Form 051 only (small-bank schedule); reported in domestic offices (RCON).

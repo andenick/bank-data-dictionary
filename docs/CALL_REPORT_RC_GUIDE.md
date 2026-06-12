@@ -35,6 +35,13 @@ Schedule RC is the master balance sheet for Call Reports filed by FDIC-insured b
 
 ## Schedule RC Line Items
 
+> **Authoritative line-item file:** [`csv/CALL_RC_BALANCE_SHEET.csv`](../csv/CALL_RC_BALANCE_SHEET.csv) — every Schedule RC line item from the official FFIEC Call Report forms (December 2025), one row per item, triple-attested against the CDR XBRL taxonomy and 25 years of bulk Call Report data (2001-2026). Per-code provenance: [`_rebuild/schedules/PROVENANCE_CALL_RC.csv`](../_rebuild/schedules/PROVENANCE_CALL_RC.csv).
+>
+> **CSV schema** (`CALL_RC_BALANCE_SHEET.csv`):
+> `line_number, item_description, mdrm_consolidated (RCFD, Form 031), mdrm_domestic (RCON, Forms 041/051), mdrm_foreign (RCFN), mdrm_domestic_051 (RCON, Form-051 variant where it differs), forms (which of 031/041/051 carry the line), start_date (MDRM first reporting date), notes`.
+>
+> Rows prefixed `051-` are items reported **only** on the small-bank Form 051. The summary/aggregate codes in the curated tables below (e.g. `RCFD0010`, `RCFD8641`) are parent-line totals the official grid breaks into the sub-items enumerated in the CSV.
+
 ### Assets
 
 | Item | Description | MDRM | Y-9C Equivalent | Notes |
