@@ -3596,6 +3596,7 @@ UBPRQE83,Wholesale funding 2 years prior from current period,Liquidity & Funding
 UBPRQE84,Wholesale funding 3 years prior from current period,Liquidity & Funding,uc:UBPRQE83[-P4Q],UBPRQE83,no,,in published UBPR data; taxonomy formula kind=passthrough
 UBPRQE85,STR FIN PROD govt gty % tier 1 capital,Liquidity & Funding,"100 * ((RCFDPU98 + RCFDPV01)) / (UBPR8274), IF(UBPRC752 = 41, PCTOF((RCONPU98 + RCONPV01),UBPR8274), NULL)); conditional",RCFDPU98|RCFDPV01|RCONPU98|RCONPV01|UBPR8274|UBPR9999|UBPRC752,no,,in published UBPR data; taxonomy formula kind=ratio_conditional
 UBPRQE86,Liq assets net of wholesale funds <= 1YR % total assets,Liquidity & Funding,-,COALESCE|UBPR0071|UBPR0081|UBPR1771|UBPR1773|UBPR2170|UBPR2651|UBPR9999|UBPRB571|UBPRD078|UBPRD098|UBPRD493|UBPRF858|UBPRK223,no,,in published UBPR data; taxonomy formula kind=ratio_conditional
+UBPRQN03,Wholesale funds + public dep % of total assets,Liquidity & Funding,-,,no,,in published UBPR data; no taxonomy formula (data-only or source passthrough)
 UBPRR029,Common Equity Tier 1 Capital Ratio using Advanced Approach (Column A),Capital,-,RCFAP793|RCOAP793|UBPRC752,no,,in published UBPR data; taxonomy formula kind=conditional
 UBPRR030,Common Equity Tier 1 Capital Ratio for Advanced Approach Institutions that exit Parallel Run Only (Column B),Capital,-,RCFWP793|RCOWP793|UBPRC752,no,,in published UBPR data; taxonomy formula kind=conditional
 UBPRR031,,,-,RCFA7206|RCOA7206|UBPRC752,no,,in published UBPR data; taxonomy formula kind=conditional
