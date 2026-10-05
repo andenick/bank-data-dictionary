@@ -2,9 +2,11 @@
 
 **The most detailed open catalogue of U.S. bank regulatory data — every major information collection and its subschedules, the MDRM code system, the FFIEC NIC institutional-structure data, the identifier crosswalk, cross-form mappings, and reconciliation formulas.**
 
-**Version 10.0** | Updated: 2026-06-11 | **FR Y-9C + Call Report line items** detailed against official field specifications · **UBPR derivation formulas** parsed and empirically validated · **official edit history** across 30 taxonomy cycles · **100% MDRM/UBPR token validity** (11,126/11,126), now **CI-enforced** · **empirically validated against 208 million + 1.9 billion rows of real FR Y-9C and Call Report filings**
+**Version 10.1** | Updated: 2026-10-04 | **FR Y-9C + Call Report line items** detailed against official field specifications · **UBPR derivation formulas** parsed and empirically validated · **official edit history** across 30 taxonomy cycles · **100% MDRM/UBPR token validity** (11,126/11,126), now **CI-enforced** · **empirically validated against 208 million + 1.9 billion rows of real FR Y-9C and Call Report filings**
 
 > This repository is a **catalogue / mapping reference** — it documents *what the datasets are, how they are structured, and how they relate to each other*. For a data-*access* package (download and query the actual filings), see the companion project **[FreeNIC](https://github.com/andenick/FreeNIC)**.
+
+> **New in v10.1 — the 2026Q2 quarterly refresh.** MDRM snapshot at **75,268 codes**; FFIEC **09302026** taxonomy cycle parsed (+25 registry relationships); **UBPRQN03** (wholesale funds + public deposits % of total assets, first published 2026Q2) added with official CDR caption provenance; 4 new rows adjudicated (7562/7563 CONFIRMED, 7579/7580 DATA_GAP).
 
 > **New in v10.0 — Call Report line items, UBPR derivations, edit history, and CI-enforced validity.**
 > v10.0 ships **seven Call Report per-schedule line-item CSVs** (RC balance sheet, RI income, RC-B
